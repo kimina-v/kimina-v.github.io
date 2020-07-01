@@ -35,11 +35,11 @@ comments: true
 about_stub: >
     Keep this sentence less than 13 words or it won't look good.
 
-about_footer: true
+about_footer: false
 
-twitter_username: AnkitSultana
-github_username: yourgithub
-facebook_id: yourusername
+twitter_username: 
+github_username: kimina-v
+facebook_id: 
 
 favicon: true
 favicon_location: "images/favicon.ico"
@@ -51,7 +51,7 @@ tracking_id: UA-69243698-7 # GA Tracking ID
 
 # Social Stuff | open graph and twitter cards
 og_image: "images/accent.png" # This will show in facebook thumbnails
-twitter_image: "http://ankitsultana.com/images/accent.png?1234" # This will show in twitter cards
+twitter_image:
 
 ####################################
 ####################################
