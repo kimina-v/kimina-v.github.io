@@ -1,0 +1,54 @@
+# Build settings
+permalink: /blog/:year/:title/
+markdown: kimina
+highlighter: pygments
+plugins: [jekyll-paginate-v2]
+
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: "/page/:num/"
+
+comments: true
+
+source: source
+destination: _site
+sass:
+  sass_dir: _sass
+  style: compressed # expanded
+
+# SEO settings
+title: KIMINA
+description: "My own space"
+keywords: "Jekyll, theme, free, download, SEO, blog, web"
+url: https://imina-v.github.io
+baseurl: "/"
+
+google_analytics: UA-52446115-1
+repo: http://github.com/nandomoreirame/end2end
+disqus_shortname: "nandothemes"
+disqus_site_shortname: "nandothemes"
+
+# Author settings
+author:
+  name: Inhwa Kim
+  job: UI Developer
+  bio: "My own space"
+  thumb: /images/kimina.jpg
+  email: lblbdldl.me@gmail.com
+  url: https://imina-v.github.io
+  github: https://github.com/kimina-v
+  twitter: 
+  facebook: 
+  linkedin: 
+
+# navbar pages
+navbar:
+  - slug: about
+    title: About
+  - slug: icons
+    title: Icons
+  - slug: blog
+    title: Blog
+
+exclude: ["config.rb", "src", "Gemfile", "Gemfile.lock", "package.json","README.md", "Rakefile"]
