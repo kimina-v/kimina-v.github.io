@@ -1,22 +1,6 @@
 <footer>
-    {% include paginate.html %}
-    {% include suggestion.html %}
-    {% if page.url == "/about" or paginator.total_pages == 1 or page.url == "/404" %}
-        <div class="container" style="text-align: center; margin-bottom: 20px">
-            <a target="_blank" class="button" href="https://twitter.com/{{ site.twitter_username }}">
-                Follow me on twitter
-            </a>
-        </div>
-    {% endif %}
     <hr />
     <div class="user-footer">
-        <div class="copyright alignable pull-left">
-            {% if site.copyright %}
-                <h2> &copy;{{ site.copyright }}</h2>
-            {% else %}
-                <h2> &copy;{{ site.title }}</h2>
-            {% endif %}
-        </div>
         <div class="alignable pull-right">
             <a href="mailto:{{ site.email }}" class="button">
                 mail
@@ -26,8 +10,6 @@
     <div style="clear:both"></div>
     <hr />
     <div class="theme-footer">
-        <p class="alignable pull-left" style="display: inline-block">
-            Built with <a href="http://jekyllrb.com/" class="different-highlight underline">Jekyll</a> and <a href="http://ankitsultana.com/accent/" class="different-highlight underline">accent</a>
-        </p>
+        <p class="alignable pull-left" style="text-align:center;">© 2020 kimina-v. All rights reserved.</p>
     </div>
 </footer>
