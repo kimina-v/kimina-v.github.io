@@ -129,6 +129,8 @@ a:hover {
 .wrapper {
     min-height: 100%;
     margin-bottom: -$footer-size;
+    width:1300px;
+    margin:0 auto;
 }
 .wrapper:after {
     content: "";
