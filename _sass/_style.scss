@@ -129,7 +129,7 @@ a:hover {
 .wrapper {
     min-height: 100%;
     margin-bottom: -$footer-size;
-    width:1300px;
+    max-width: $full-width;
     margin:0 auto;
 }
 .wrapper:after {
@@ -268,6 +268,8 @@ hr {
     font-size: 15px;
     color: $light-color;
     padding: $base-spacing;
+    max-width: $full-width;
+    margin:0 auto;
 }
 .copyright {
     color: $accent-color;
