@@ -1,44 +1,91 @@
-<div class="container">
-    <hr />
-    {% if site.about_footer %}
-        {% if page.profile_picture %}
-            {% assign profile_picture = page.profile_picture %}
-        {% else %}
-            {% assign profile_picture = site.profile_picture %}
-        {% endif %}
-        {% if profile_picture %}
-            <div id="img-about">
-                <img class="about-img pull-left" src="{{ profile_picture }}">
+---
+layout: default
+---
+<div class="container content" style="text-align: center">
+    <div class="about-project">
+        <div class="page-title">Project</div>
+        <div class="project-group">
+            <div class="project-title">2014.07 ~ <strong>freelancer</strong></div>
+            <div class="project-content">
+                <ul>
+                    <li>2020.06 ~ 2021.05 <strong>신세계 면세점 리뉴얼 구축 PRJ</strong></li>
+                    <li>2019.03 ~ 2020.05 <strong>하이마트 운영</strong></li>
+                    <li>2020.01 ~ 2020.02 <strong>가천대 길병원 리뉴얼</strong></li>
+                    <li>2018.10 ~ 2019.01 <strong>리바트 신규 구축(윌리엄스소노마/포터리반/포터리반키즈/웨스트엘룸)</strong></li>
+                    <li>2018.05 ~ 2018.07 <strong>상명대학교 리뉴얼 프로젝트 참여</strong></li>
+                    <li>2018.03 ~ 2018.04 <strong>롯데슈퍼 기가지니 연동</strong></li>
+                    <li>2017.12 ~ 2017.12 <strong>고평창 앱, pc</strong></li>
+                    <li>2017.09 ~ 2017.09 <strong>CJ 프레시웨이 앱</strong></li>
+                    <li>2017.08 ~ 2017.09 <strong>K shopping 관리자페이지</strong></li>
+                    <li>2017.08 ~ 2017.08 <strong>canonstudy 반응형 웹</strong></li>
+                    <li>2017.07 ~ 2017.08 <strong>국민건강보험 pc</strong></li>
+                    <li>2017.07 ~ 2017.07 <strong>kbsworld_festival 모바일</strong></li>
+                    <li>2017.05 ~ 2017.05 <strong>what's_pide 반응형 웹</strong></li>
+                    <li>2017.05 ~ 2017.05 <strong>KBS WORLD 반응형 웹 (영문, 중국어 버전)</strong></li>
+                    <li>2017.03 ~ 2017.03 <strong>에코솔루텍 pc</strong></li>
+                    <li>2017.03 ~ 2017.03 <strong>auto company pc</strong></li>
+                    <li>2017.03 ~ 2017.03 <strong>commax pc</strong></li>
+                    <li>2017.03 ~ 2017.03 <strong>home staytion 관리자 페이지</strong></li>
+                    <li>2017.02 ~ 2017.02 <strong>에이포스테크놀러지 pc</strong></li>
+                    <li>2017.02 ~ 2017.02 <strong>참사랑 선교원 반응형웹</strong></li>
+                    <li>2016.10 ~ 2016.11 <strong>강원랜드 하이원 앱</strong></li>
+                    <li>2016.08 ~ 2016.10 <strong>국방부 신규 구축 및 리뉴얼 PRJ</strong></li>
+                    <li>2015.12 ~ 2016.06 <strong>롯데홈쇼핑</strong></li>
+                    <li>2015.07 ~ 2015.11 <strong>MG손해보험 웹접근성 인증마크 리뉴얼</strong></li>
+                    <li>2015.06 ~ 2015.06 <strong>BMW MINI MOBILE</strong></li>
+                    <li>2015.04 ~ 2015.04 <strong>Ubay PC</strong></li>
+                    <li>2015.01 ~ 2015.03 <strong>KORES (IE9이상 지원 CSS3 사용)</strong></li>
+                    <li>2014.12 ~ 2015.01 <strong>CJ모바일 My hello 고도화</strong></li>
+                    <li>2014.12 <strong>웨이브히어링</strong></li>
+                    <li>2014.11 <strong>4방8방앱</strong></li>
+                    <li>2014.10 ~ 2014.11 <strong>흥국생명 웹접근성 인증마크 리뉴얼</strong></li>
+                    <li>2014.04 <strong>hcn(현대서초방송)</strong></li>
+                    <li>2014.01 <strong>9to</strong></li>
+                    <li>2013.02 <strong>fashion insight collection</strong></li>
+                    <li>2012.11 <strong>O-Phone</strong></li>
+                    <li>2012.08 <strong>VK-POP</strong></li>
+                    <li>2012.07 <strong>Bremen Photo</strong></li>
+                    <li>2012.07 <strong>METALWORKS</strong></li>
+                    <li>2011.11 <strong>EZ torrents</strong></li>
+                    <li>2011.11 <strong>ngpcorp</strong></li>
+                    <li>2011.08 <strong>Truefriend</strong></li>
+                    <li>2011.07 <strong>영업폭탄</strong></li>
+                    <li>2011.07 <strong>PENCIL</strong></li>
+                </ul>
             </div>
-        {% else %}
-            <div class="no-image" id="img-about">
-            </div>
-        {% endif %}
-        <div class="about-stub">
-            {% if page.author_site %}
-                {% assign author_site = page.author_site %}
-            {% else %}
-                {% assign author_site = "about" %}
-            {% endif %}
-            <a class="different-highlight" href="{{ author_site }}">
-                <h2 style="font-family: Montserrat">
-                    {% if page.author %}
-                        {{ page.author }}
-                    {% else %}
-                        {{ site.author }}
-                    {% endif %}
-                </h2>
-            </a>
-            {% if page.about_stub %}
-                <p id="about-description" style="margin-top: 4px;">
-                    {{ page.about_stub }}
-                </p>
-            {% else %}
-                <p id="about-description" style="margin-top: 4px;">
-                    {{ site.about_stub }}
-                </p>
-            {% endif %}
         </div>
-    {% endif %}
+        <div class="project-group">
+            <div class="project-title">2013.05 ~ 2014.06 <strong>afreeca TV</strong></div>
+            <div class="project-content">
+            <ul>
+                <li>게임센터 구축 및 운영</li>
+                    <li>신규 프로젝트 구축, 개선 및 운영</li>
+                    <li>이벤트 페이지 작업</li>
+                    <li>방송대상 페이지 작업</li>
+                </ul>
+            </div>
+        </div>
+        <div class="project-group">
+            <div class="project-title">2011.11 ~ 2013.03 <strong>iMBC</strong></div>
+            <div class="project-content">
+                <ul>
+                    <li>드라마/예능/시사/라디오 프로그램 홈페이지 구축</li>
+                    <li>MBC 뉴스 다시보기 리뉴얼</li>
+                    <li>Before &amp; After 구축</li>
+                    <li>회사 내 신규 프로젝트 구축</li>
+                </ul>
+            </div>
+        </div>
+        <div class="project-group">
+            <div class="project-title">2010.09 ~ 2011.10 <strong>Shift works</strong></div>
+            <div class="project-content">
+                <ul>
+                    <li>회사 홈페이지 구축 및 운영</li>
+                    <li>회사 내 신규 보안프로그램 사이트 구축 및 어드민 페이지 구축</li>
+                    <li>회사 내 신규 프로젝트 구축</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
-<div style="clear:both"></div>
+
