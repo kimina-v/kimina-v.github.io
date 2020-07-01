@@ -209,6 +209,12 @@ footer {
     min-height: 70px;
     //background-color: $accent-color;
 }
+    .navbar .logo{
+        border:1px solid $light-color;
+        display:inline-block;
+        border-radius:4px;
+        padding:2px;
+    }
     .navbar .alignable{
         padding:.3em 0;
     }
