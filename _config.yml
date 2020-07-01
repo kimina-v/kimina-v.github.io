@@ -37,7 +37,6 @@ about_stub: >
 
 about_footer: false
 
-twitter_username: 
 github_username: kimina-v
 facebook_id: 
 
@@ -51,7 +50,6 @@ tracking_id: UA-69243698-7 # GA Tracking ID
 
 # Social Stuff | open graph and twitter cards
 og_image: "images/accent.png" # This will show in facebook thumbnails
-twitter_image:
 
 ####################################
 ####################################
