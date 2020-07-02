@@ -86,4 +86,5 @@ html[xmlns*=""] body:last-child ＃header{width:100px}
 body:first-of-type ＃header{width:100px}
 {% endhighlight %}
 
-[class_naming]https://uipac.com/451
+link
+[class-naming](https://uipac.com/451)

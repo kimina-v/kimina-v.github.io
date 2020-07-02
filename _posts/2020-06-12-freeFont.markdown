@@ -60,5 +60,4 @@ font-family: 'Nanum Myeongjo', serif;
 {% highlight bash %}
 @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
 font-family: 'Nanum Pen Script', serif;
-
 {% endhighlight %}

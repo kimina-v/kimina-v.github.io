@@ -41,7 +41,8 @@ HTML 플러그인이란 웹 브라우저의 표준 기능을 확장해 주는 �
 
 플러그인 종류 <code class="code">Java Applet</code>, <code class="code">Flash Player</code>, <code class="code">Pdf Reader</code> 등등...
 
-link [출처_새로비]https://engkimbs.tistory.com/673
-link [출처_Z]https://www.zerocho.com/category/jQuery/post/57b1aca87e1bdb1500a68110
-link [출처_TCPS]http://tcpschool.com/html/html5_multimedia_plugins
+link 
+[출처-새로비](https://engkimbs.tistory.com/673)
+[출처-Z](https://www.zerocho.com/category/jQuery/post/57b1aca87e1bdb1500a68110)
+[출처-TCPS](http://tcpschool.com/html/html5_multimedia_plugins)
 
