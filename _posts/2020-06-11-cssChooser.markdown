@@ -1,6 +1,6 @@
 ---
+title: css 선택자
 ---
-## css 선택자
 
 <div class="code-title">전체 선택자</div> 
 

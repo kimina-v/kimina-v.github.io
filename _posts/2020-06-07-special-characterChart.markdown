@@ -1,7 +1,6 @@
 ---
+title: 특수문자코드표
 ---
-
-## 특수문자코드표
 
 <ul class="list-chart">
     <li>＆amp; = ＆</li>

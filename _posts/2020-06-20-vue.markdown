@@ -1,7 +1,6 @@
 ---
-title: title tsst 
+title: vue.js
 ---
-## vue.js
 
 <div class="post-stitle">vue.js 란?</div>
 <div class="title-desc">사용자 인터페이스를 만들기 위한 <strong>프로그레시브 프레임워크</strong><br>다른 라이브러리나 기존 프로젝트와의 통합이 매우 쉽다.</div>

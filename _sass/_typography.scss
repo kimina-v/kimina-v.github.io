@@ -21,11 +21,11 @@
         font-size: $base-font-size;
     }
     .post-title {
-        // margin-top: 0.1em;
-        // font-size: 40px;
-        // margin-bottom: $base-spacing;
-        // font-family: 'Montserrat';
-        // color: $accent-color;
+        margin-top: 0.1em;
+        font-size: 40px;
+        margin-bottom: $base-spacing;
+        font-family: 'Montserrat';
+        color: #330;
         display:none;
     }
     h1 {
@@ -33,8 +33,6 @@
     }
     h2 {
         font-size: 32px;
-        margin-top:0;
-        color:#333300;
     }
     h3 {
         font-size: 29px;

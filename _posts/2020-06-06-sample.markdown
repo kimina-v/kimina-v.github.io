@@ -1,9 +1,8 @@
 ---
+title: Sample Page
 ---
 
-## This is <span class="capsule">Sample Page</span>.
-
-list
+### list
 
 1. num list1
 2. num list2
@@ -16,7 +15,7 @@ list
 
 1. link [accent](http://ankitsultana.com/accent/documentation.html)
 
-code
+### code
 
 {% highlight bash %}
 console.log("Hello kimina.");
@@ -24,7 +23,7 @@ console.log("Hello kimina.");
 
 ---
 
-title 
+### title 
 
 # Header 1
 
@@ -40,12 +39,16 @@ title
 
 h1 title
 
+### text style
+
 > left line text box
 >
 > text-box ☺
 
 
-table 1
+기본 텍스트 p
+
+### table 1
 
 size |  material    |  color
 ---- |  ------------|  ------------
@@ -53,7 +56,7 @@ size |  material    |  color
 10   | hemp canvas  | natural
 11   | glass        | transparent
 
-table2
+### table2
 
 <table>
   <thead>
@@ -82,14 +85,14 @@ table2
   </tbody>
 </table>
 
-img 
+### img 
 
 ![Large example image](http://placehold.it/800x400 "Large example image")
 ![Medium example image](http://placehold.it/400x200 "Medium example image")
 ![Small example image](http://placehold.it/200x200 "Small example image")
 ![example image](images/example.png)
 
-my style
+### my style
 
 <div class="post-stitle">Post stitle</div>
 <div class="group-title">Group title</div>

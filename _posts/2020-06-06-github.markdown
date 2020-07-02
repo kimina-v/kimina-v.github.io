@@ -1,6 +1,6 @@
 ---
+title: github
 ---
-## github
 
 <ul>
     <li>git config --global user.name “user nsme”</li>
