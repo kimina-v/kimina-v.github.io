@@ -22,5 +22,6 @@ EX) <span class="bg-yl">www.example-url.com/resources?name1=value1&name2=value2<
     <li>생성, 수정, 삭제에 사용 가능 (용도에 맞는 메소드 사용 권장)</li>
 </ul>
 
+<hr style="margin-top:30px;">
 link 
 [출처_hongsii](https://hongsii.github.io/2017/08/02/what-is-the-difference-get-and-post/)

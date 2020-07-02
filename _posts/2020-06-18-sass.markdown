@@ -411,7 +411,6 @@ Sass <code class="code">@import</code는 기본적으로 Sass 파일을 가져�
 <div class="bg-yl font-sm">이밖에, SCSS는 javascript처럼 연산, 인수, 논리, 확장, 함수, 조건과 반복 등 사용하여 작업 가능.</div>
 
 
-
-
+<hr style="margin-top:30px;">
 link 
 [출처_heropy](https://heropy.blog/2018/01/31/sass/)

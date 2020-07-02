@@ -15,5 +15,6 @@ title: github
     <li><code class="language-plaintext highlighter-rouge">git push origin master</code> 커밋된 파일 적용</li>
 </ul>
 
+<hr style="margin-top:30px;">
 link 
 [출처-site](https://recoveryman.tistory.com/321)
