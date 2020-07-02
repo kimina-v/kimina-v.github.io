@@ -5,9 +5,7 @@ url: "http://kimina-v.github.io"
 baseurl: "/"
 
 # This will show up at the top of index page
-site_heading: >
-    <span class="faded">셋팅 중</span>
-# My own space
+site_heading: My own space
 email: lblbdldl@email.com
 author: kimina
 # This description will show up in google search results
