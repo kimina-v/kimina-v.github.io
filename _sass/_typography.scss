@@ -1,7 +1,9 @@
 @import "syntax_highlighting";
 @import "table";
+@import 'https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:300,400)';
 
 .content {
+    font-family:"Raleway";
     hr {
         margin: $base-spacing 0;
     }
@@ -19,17 +21,20 @@
         font-size: $base-font-size;
     }
     .post-title {
-        margin-top: 0.1em;
-        font-size: 40px;
-        margin-bottom: $base-spacing;
-        font-family: 'Montserrat';
-        color: $accent-color;
+        // margin-top: 0.1em;
+        // font-size: 40px;
+        // margin-bottom: $base-spacing;
+        // font-family: 'Montserrat';
+        // color: $accent-color;
+        display:none;
     }
     h1 {
         font-size: 35px;
     }
     h2 {
         font-size: 32px;
+        margin-top:0;
+        color:#333300;
     }
     h3 {
         font-size: 29px;
@@ -44,7 +49,7 @@
         font-size: 20px;
     }
     p {
-        font-size: 19px;
+        font-size: 15px;
         margin: $base-spacing/3 0;
         font-weight: lighter;
     }
@@ -119,7 +124,7 @@
         list-style-type: decimal;
     }
     li {
-      font-size: 19px;
+      font-size: 15px;
       font-weight: lighter;
       margin: 0.8em 0em 0.8em 0.5em;
     }

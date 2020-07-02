@@ -1,24 +1,24 @@
 ---
 ---
-VScode setting
+## VScode Setting
 
 <div class="post-stitle">setting.json 검색</div>
 
 {<br>
-"window.zoomLevel": 0, //창의 확대/축소 수준 조정 기본 0<br>
-"editor.wordWrap": "on", // ‘on’ 코드 자동줄바꿈/’off’ 줄바꿈안함<br>
-"editor.fontFamily": "Consolas", //글꼴 패밀리<br>
-"editor.lineNumbers": "on", //줄 번호 표시 여부<br>
-"window.closeWhenEmpty": true, //마지막 편집기 닫을때 창도 닫을지 여부 제어<br>
-"editor.mouseWheelZoom": true, // Ctrl키 누르고 있을때 마우스 휠로 줌/아웃<br>
-"editor.minimap.enabled": false, //미니맵 표시여부 제어<br>
-"files.autoSave": "afterDelay", // 자동저장 제어 1000ms 후 파일 저장<br>
-"editor.cursorStyle": "line", //커서 스타일<br>
-"editor.tabSize": 4, //탭 한개에 해당하는 공백 수<br>
-"workbench.colorTheme": "Visual Studio Dark", //테마<br>
-"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe", // window에서 터미널에 사용하는 셸의 경로<br>
-"workbench.iconTheme": "vscode-icons",<br>
-"files.encoding": "euckr", //icon 테마를 vscode_icons 확장 프로그램 사용<br>
+    "window.zoomLevel": 0, //창의 확대/축소 수준 조정 기본 0<br>
+    "editor.wordWrap": "on", // ‘on’ 코드 자동줄바꿈/’off’ 줄바꿈안함<br>
+    "editor.fontFamily": "Consolas", //글꼴 패밀리<br>
+    "editor.lineNumbers": "on", //줄 번호 표시 여부<br>
+    "window.closeWhenEmpty": true, //마지막 편집기 닫을때 창도 닫을지 여부 제어<br>
+    "editor.mouseWheelZoom": true, // Ctrl키 누르고 있을때 마우스 휠로 줌/아웃<br>
+    "editor.minimap.enabled": false, //미니맵 표시여부 제어<br>
+    "files.autoSave": "afterDelay", // 자동저장 제어 1000ms 후 파일 저장<br>
+    "editor.cursorStyle": "line", //커서 스타일<br>
+    "editor.tabSize": 4, //탭 한개에 해당하는 공백 수<br>
+    "workbench.colorTheme": "Visual Studio Dark", //테마<br>
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe", // window에서 터미널에 사용하는 셸의 경로<br>
+    "workbench.iconTheme": "vscode-icons",<br>
+    "files.encoding": "euckr", //icon 테마를 vscode_icons 확장 프로그램 사용<br>
 }
 
 <div class="post-stitle">추천확장 프로그램</div>
