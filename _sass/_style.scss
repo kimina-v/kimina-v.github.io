@@ -13,9 +13,6 @@ body {
     height: 100%;
     overflow: auto;
 }
-.site-name {
-    color: $accent-color;
-}
 .faded {
     color: $light-color;
     font-weight: lighter;
@@ -152,6 +149,7 @@ footer {
 
 .site-name {
     font-size: 35px;
+    color: $point-color;
 }
 .intro {
     text-align: center;
