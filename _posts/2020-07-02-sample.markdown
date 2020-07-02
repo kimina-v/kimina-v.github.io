@@ -87,4 +87,4 @@ img
 ![Large example image](http://placehold.it/800x400 "Large example image")
 ![Medium example image](http://placehold.it/400x200 "Medium example image")
 ![Small example image](http://placehold.it/200x200 "Small example image")
-![example image](images/kimina.jpg)
+![example image](images/example.png)
