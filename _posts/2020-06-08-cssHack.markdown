@@ -1,6 +1,6 @@
 ---
 ---
-CSS Hack
+## CSS Hack
 
 <div class="code-title">IE6 : </div>
 <div class="title-desc">프로퍼티의 가장 앞부분에 언더스코어(_)룰 붙이면 IE6에서만 적용</div>

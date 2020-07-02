@@ -1,6 +1,6 @@
 ---
 ---
-WAI-ARIA
+## WAI-ARIA
 
 <div class="post-stitle">WAI-ARIA란?</div>
 사용자 인터페이스 구성 요소의 접근성을 증가시키는 방법에 대해 규정한 W3C가 출판한 기술 사양

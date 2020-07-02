@@ -1,6 +1,7 @@
 ---
 ---
-Sass SCSS
+
+## Sass SCSS
 
 <div class="post-stitle">Sass 와 SCSS의 차이</div>
 Sass(Syntactically Awesome Style Sheets)의 3버전에서 새롭게 등장한 SCSS는 CSS 구문과 완전히 호환되도록 새로운 구문을 도입해 만든 Sass의 모든 기능을 지원하는 CSS의 상위집합이다.<br>간당한 차이로는 {}(중괄호)와 ;(세미콜론)의 유무이다.

@@ -1,7 +1,7 @@
 ---
 ---
 
-This is <span class="capsule">Sample Page</span>.
+## This is <span class="capsule">Sample Page</span>.
 
 list
 
