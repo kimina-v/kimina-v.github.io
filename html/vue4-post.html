@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>vue.js sample</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/vs2015.min.css">
+    <link rel="stylesheet" href="../css/another-post.css">
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    <div class="page-title">vue.js</div>
+
+    <div class="title">양방향 데이터 바인딩 <strong>v-model</strong></div>
+
+    <div class="group-wrap">
+        <div class="group">
+            <div class="s-title">EX1</div>
+<pre>
+<span class="code-title">JS</span>
+    <code class="js">
+        var app = new Vue({
+            el:"#app", 
+            data:{
+               name: "kimina"
+            }
+        })
+    </code>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app">
+            &lt;input type="text" v-model="name">
+            {{ name }}  
+        &lt;/div>  
+    </code>
+</pre>
+
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app">
+                    <input type="text" v-model="name">
+                    {{ name }}
+                </div>
+                <script>
+                    var app3 = new Vue({
+                        el:"#app", 
+                        data:{
+                        name: "kimina"
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="title">조건부 렌더링 <strong>v-if</strong></div>
+
+    <div class="group-wrap">
+        <div class="group">
+            <div class="s-title">EX1</div>
+<pre>
+<span class="code-title">JS</span>
+    <code class="js">
+        var app = new Vue({
+            el:"#app2", 
+            data:{
+               dog: true
+            }
+        })
+    </code>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app2">
+            &lt;p v-if="dog">강아지가 좋아 ❤&lt;/p>
+            &lt;p v-else>무슨소리 고양이가 좋아❤&lt;/p>
+            &lt;button v-on:click="dog = !god">반대&lt;/button>
+        &lt;/div>  
+    </code>
+</pre>
+
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app2">
+                    <div class="inline-list">
+                        <span v-if="dog">강아지가 좋아 ❤</span>
+                        <span v-else>무슨소리 고양이가 좋아❤</span>
+                        <button v-on:click="dog = !dog" class="button">반대</button>
+                    </div>
+                </div>
+                <script>
+                    var app3 = new Vue({
+                        el:"#app2", 
+                        data:{
+                            dog: true
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+        
+        <div class="group">
+            <div class="s-title">EX2</div>
+            <div class="page-desc">template 활용한 예제</div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app3">
+            &lt;p v-if="dog">강아지가 좋아 ❤&lt;/p>
+            &lt;p v-else>무슨소리 고양이가 좋아❤&lt;/p>
+            &lt;button c-on:click="dog = !god">반대&lt;/button>
+            &lt;template v-if="dog">
+                &lt;p>강아지는 귀여워&lt;/p>
+                &lt;p>집에 오면 강아지는 날 반겨줘&lt;/p>
+                &lt;p>강아지는 가족이야&lt;/p>
+            &lt;/template>
+            &lt;template v-else>
+                &lt;p>고양이도 귀여워&lt;/p>
+                &lt;p>고양이는 시크한 매력이 있어&lt;/p>
+                &lt;p>고양이도 가족이야&lt;/p>
+            &lt;/template>
+        &lt;/div>  
+    </code>
+</pre>
+
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app3">
+                    <span v-if="dog">강아지가 좋아 ❤</span>
+                    <span v-else>무슨소리 고양이가 좋아❤</span>
+                    <button v-on:click="dog = !dog" class="button">반대</button>
+                    <template v-if="dog">
+                        <p>강아지는 귀여워</p>
+                        <p>집에 오면 강아지는 날 반겨줘</p>
+                        <p>강아지는 가족이야</p>
+                    </template>
+                    <template v-else>
+                        <p>고양이도 귀여워</p>
+                        <p>고양이는 시크한 매력이 있어</p>
+                        <p>고양이도 가족이야</p>
+                    </template>
+                </div>
+                <script>
+                    var app3 = new Vue({
+                        el:"#app3", 
+                        data:{
+                            dog: true
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="title">v-show</div>
+    <div class="page-desc"><code class="code">v-if</code> 디렉티브와 비슷한 역할을 한다.</div>
+
+    <div class="group-wrap">
+        <div class="group">
+            <div class="s-title">EX1</div>
+<pre>
+<span class="code-title">JS</span>
+    <code class="js">
+        var app = new Vue({
+            el:"#app4", 
+            data:{
+               dog: false
+            }
+        })
+    </code>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app4">
+            &lt;p v-if="dog">강아지가 좋아❤&lt;/p>
+            &lt;p v-show="dog">귀여운 댕댕이&lt;/p>  
+        &lt;/div>  
+    </code>
+</pre>
+
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app4">
+                    <p v-if="dog">강아지가 좋아❤</p>
+                    <p v-show="dog">귀여운 댕댕이</p>
+                </div>
+                <script>
+                    var app3 = new Vue({
+                        el:"#app4", 
+                        data:{
+                            dog: false
+                        }
+                    })
+                </script>
+            </div>
+            <div class="text">결과 확인을 위해 개발자도구에서 확인.<br><code class="code">v-if</code> : 조건에 따라 아예 코드를 지운다.<br><code class="code">v-show</code> : 코드는 있지만, 스타일로 <span class="bg-gn">display:none</span>처리한다.</div>
+        </div>
+    </div>
+
+    <div class="title">리스트 렌더링 <strong>v-for</strong></div>
+
+    <div class="group-wrap">
+        <div class="group">
+            <div class="s-title">EX1</div>
+<pre>
+<span class="code-title">JS</span>
+    <code class="js">
+        var app = new Vue({
+            el:"#app5", 
+            data:{
+               list: ['사과','복숭아','딸기','오렌지','수박']
+            }
+        })
+    </code>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app5">
+            &lt;h1>과일 종류&lt;h1>  
+            &lt;ul>
+                &lt;li v-for="item in list"{{ item }}>&lt;/li>
+            &lt;/ul>
+        &lt;/div>  
+    </code>
+</pre>
+
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app5">
+                    <div class="inline-list">
+                        <h1>과일 리스트</h1>
+                        <ul>
+                            <li v-for="item in list">{{ item }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <script>
+                    var app3 = new Vue({
+                        el:"#app5", 
+                        data:{
+                            list: ['사과','복숭아','딸기','오렌지','수박']
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="s-title">EX2</div>
+            <div class="page-desc">v-for내 현재 index 값을 알아보자</div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app6">
+            &lt;h1>과일 종류&lt;h1>  
+            &lt;ul>
+                &lt;li v-for="(item, i) in list">{{ item }} ({{ i }})&lt;/li>
+            &lt;/ul>
+        &lt;/div>  
+    </code>
+</pre>
+
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app6">
+                    <div class="inline-list">
+                        <h1>과일 리스트</h1>
+                        <ul>
+                            <li v-for="(item, i) in list">{{ item }} ({{ i }})</li>
+                        </ul>
+                    </div>
+                </div>
+                <script>
+                    var app3 = new Vue({
+                        el:"#app6", 
+                        data:{
+                            list: ['사과','복숭아','딸기','오렌지','수박']
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="title">string이 아닌 object의 반복</div>
+
+    <div class="group-wrap">
+        <div class="group">
+            <div class="s-title">EX1</div>
+<pre>
+<span class="code-title">JS</span>
+    <code class="js">
+        var app = new Vue({
+            el:"#app7", 
+            data:{
+                travelList:[
+                    {name: '강릉', distance: '차로 3시간'},
+                    {name: '부산', distance: '차로 5시간'},
+                    {name: '춘천', distance: '차로 2시간'},
+                    {name: '타이베이', distance: '비행기로 3시간'},
+                    {name: '마닐라', distance: '비행기로 5시간'},
+                    {name: '스페인', distance: '비행기로 17시간'},
+                ]
+            }
+        })
+    </code>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app7">
+            &lt;h1>여행지 리스트&lt;/h1>
+            &lt;ul>
+                &lt;li v-for="city in travelList">{{ city }}&lt;/li>
+            &lt;/ul> 
+        &lt;/div>  
+    </code>
+</pre>
+
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app7">
+                    <h1>여행지 리스트</h1>
+                    <ul>
+                        <li v-for="city in travelList">{{ city }}</li>
+                    </ul>
+                </div>
+                <script>
+                    var app3 = new Vue({
+                        el:"#app7", 
+                        data:{
+                            travelList:[
+                                {name: '강릉', distance: '차로 3시간'},
+                                {name: '부산', distance: '차로 5시간'},
+                                {name: '춘천', distance: '차로 2시간'},
+                                {name: '타이베이', distance: '비행기로 3시간'},
+                                {name: '마닐라', distance: '비행기로 5시간'},
+                                {name: '스페인', distance: '비행기로 17시간'},
+                            ]
+                        }
+                    })
+                </script>
+            </div>
+            <div class="texT"><span class="bg-gn">object</span>가 그대로 렌더링 된다. 우리가 원하는 결과 값을 얻이 위해서는 <span class="bg-gn">city.속성</span>으로 써주면 된다.</div>
+
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app7">
+            &lt;h1>여행지 리스트&lt;/h1>
+            &lt;ul>
+                &lt;li v-for="city in travelList">
+                    {{ city.name }} ~ {{ city.distance }}
+                &lt;/li>
+            &lt;/ul> 
+        &lt;/div>  
+    </code>
+</pre>
+
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app8">
+                    <h1>여행지 리스트</h1>
+                    <ul>
+                        <li v-for="city in travelList">
+                            {{ city.name }} ~ {{ city.distance }}
+                        </li>
+                    </ul>
+                </div>
+                <script>
+                    var app3 = new Vue({
+                        el:"#app8", 
+                        data:{
+                            travelList:[
+                                {name: '강릉', distance: '차로 3시간'},
+                                {name: '부산', distance: '차로 5시간'},
+                                {name: '춘천', distance: '차로 2시간'},
+                                {name: '타이베이', distance: '비행기로 3시간'},
+                                {name: '마닐라', distance: '비행기로 5시간'},
+                                {name: '스페인', distance: '비행기로 17시간'},
+                            ]
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+    
+    <a href="vue3-post.html" class="prev-link">Prev post</a>
+    <a href="vue5-post.html" class="next-link">Next post</a>
+</body>
+</html>

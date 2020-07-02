@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>vue.js sample</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/vs2015.min.css">
+    <link rel="stylesheet" href="../css/another-post.css">
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    <div class="page-title">vue.js</div>
+    <div class="page-desc">사용자 인터페이스를 만들기 위한 <strong>프로그레시브 프레임워크</strong><br>다른 라이브러리나 기존 프로젝트와의 통합이 매우 쉽다.</div>
+    
+    <div class="title">vue.js 정보저장소 <strong>data</strong></div>
+
+    <div class="group-wrap">
+        <div class="group">
+            <div class="s-title">EX1</div> 
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app">
+            {{ title }}
+        &lt;/div>  
+    </code>
+<span class="code-title">JS</span>
+    <code class="js">
+        new Vue({
+            el:"#app", // el :  Vue가 새롭게 정의될 때, 해당 Vue가 적용될 요소를 지정해주는 역할
+            data:{ // data : 해당 VueJS에서 사용할 정보들을 선언해주는 역할
+                title:"Hello kimina world!"
+            }
+        })
+    </code>
+</pre>
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app">
+                    {{ title }}
+                </div>
+                <script>
+                    new Vue({
+                        el:"#app",
+                        data:{
+                            
+                            title:"Hello kimina world!"
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="title">vue.js 함수저장소 <strong>methods</strong></div>
+
+    <div class="group-wrap">
+        <div class="group">
+            <div class="s-title">EX1</div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app2">
+            &lt;p>{{ title }}&lt;/p>
+            &lt;p>{{ howAreYou() }}&lt;/p>
+        &lt;/div>  
+    </code>
+<span class="code-title">JS</span>
+    <code class="js">
+        var app2 = new Vue({
+            el:"#app2", 
+            data:{
+                title:"Hello kimina world!"
+            },
+            methods:{
+                howAreYou: function(){
+                    retuen "기분 어때?"
+                }
+            }
+        })
+    </code>
+</pre>
+            <div class="code-desc">methods 내에 howAreYou()라는 함수를 선언</div>
+
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app2">
+                    <p>{{ title }}</p>
+                    <p>{{ howAreYou() }}</p>
+                </div>
+                <script>
+                    var app2 = new Vue({
+                        el:"#app2", 
+                        data:{
+                            title:"Hello kimina world!"
+                        },
+                        methods:{
+                            howAreYou: function(){
+                                return "기분 어때?"
+                            }
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="title">vue를 지칭하는 단어 <strong>this</strong></div>
+
+    <div class="group-wrap">
+        <div class="group">
+            <div class="s-title">EX1</div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app3">
+            &lt;p>{{ sayHello() }}&lt;/p>
+            &lt;p>{{ howAreYou() }}&lt;/p>
+        &lt;/div>  
+    </code>
+<span class="code-title">JS</span>
+    <code class="js">
+        var app2 = new Vue({
+            el:"#app3", 
+            data:{
+                title:"Hello kimina world!"
+            },
+            methods:{
+                howAreYou: function(){
+                    retuen "기분 어때?"
+                },
+                sayHello: function(){
+                    retuen this.title
+                }
+            }
+        })
+    </code>
+</pre>
+            <div class="code-desc">methods 내에 howAreYou()라는 함수를 선언</div>
+
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app3">
+                    <p>{{ sayHello() }}</p>
+                    <p>{{ howAreYou() }}</p>
+                </div>
+                <script>
+                    var app3 = new Vue({
+                        el:"#app3", 
+                        data:{
+                            title:"Hello kimina world!"
+                        },
+                        methods:{
+                            howAreYou: function(){
+                                return "기분 어때?"
+                            },
+                            sayHello: function(){
+                                return this.title // vue에 정의된 title이라는 값을 가져와라
+                            }
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+    
+    <a href="vue2-post.html" class="next-link">Next post</a>
+</body>
+</html>

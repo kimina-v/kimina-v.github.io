@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>vue.js sample</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/vs2015.min.css">
+    <link rel="stylesheet" href="../css/another-post.css">
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    <div class="page-title">vue.js</div>
+
+    <div class="title">클래스와 스타일 바인딩</div>
+
+<pre class="code-box">
+    <code>
+        v-bind:class="클래스명"
+        v-bind:class="{ 클래스명: 조건 }"
+    </code>
+</pre>
+
+    <div class="group-wrap">
+        <div class="group">
+            <div class="s-title">EX1</div>
+            <div class="result-box">
+                <div id="app" class="demo-box">
+                    <div class="demo">1</div>
+                    <div class="demo">2</div>
+                    <div class="demo">3</div>
+                </div>
+            </div>
+            <style>
+                .demo-box .demo{width:100px;height:100px;background:#eee;display:inline-block;margin:10px;}
+            </style>
+            <script>
+                var app = new Vue({
+                    el:"#app"
+                })
+            </script>
+            <div class="text">각각의 div를 빨강, 초록, 노랑으로 바꾸기.</div>
+        </div>
+
+        <div class="group">
+<pre>
+<span class="code-title">JS</span>
+    <code class="js">
+        var app = new Vue({
+            el:"#app", 
+            data:{
+                attachRed: false,
+                color: 'green'
+            },
+            computed:{
+                duvClasses: function(){
+                    return{
+                        red: this.attachRed,
+                        green: !this.attachRed
+                    }
+                }
+            }
+        })
+    </code>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app2" class="demo-box">
+            &lt;div class="demo"@click="attachRed = !attachRed":class="{red: attachRed, green: !attachRed}">1 &lt;/div>
+            &lt;div class="demo":class="color">2 &lt;/div>
+            &lt;div class="demo":class="divClass">3 &lt;div>
+            &lt;div>2번 상자의 색:  &lt;input type="text" v-model="color"> &lt;/div>
+        &lt;/div> 
+    </code>
+<span class="code-title">CSS</span>
+    <code class="css">
+        .demo-box .red{background:#f00;}
+        .demo-box .green{background:#390;}
+        .demo-box .blue{background:#03f;}
+    </code>
+</pre>
+
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app2" class="demo-box">
+                    <div class="demo" @click="attachRed = !attachRed" :class="{red: attachRed, green: !attachRed}">1</div>
+                    <div class="demo" :class="color" :style="{height: myHeight}">2</div>
+                    <div class="demo" :class="divClasses">3</div>
+                    <div>2번 상자의 색: <input type="text" v-model="color"></div>
+                </div>
+                <style>
+                    .demo-box .red{background:#f00;}
+                    .demo-box .green{background:#390;}
+                    .demo-box .blue{background:#03f;}
+                </style>
+                <script>
+                    var app = new Vue({
+                        el:"#app2", 
+                        data:{
+                            attachRed: false,
+                            color: 'green'
+                        },
+                        computed:{
+                            divClasses: function(){
+                                return{
+                                    red: this.attachRed,
+                                    green: !this.attachRed
+                                }
+                            },
+                            myHeight: function(){
+                                return this.attachRed ? "50px" : "200px"
+                            }
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+
+    
+    <a href="vue3-post.html" class="prev-link">Prev post</a>
+    <a href="vue5-post.html" class="next-link">Next post</a>
+</body>
+</html>

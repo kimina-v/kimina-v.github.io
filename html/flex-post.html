@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>css flex sample</title>
+    <link rel="stylesheet" href="../css/another-post.css">
+</head>
+<body>
+<div class="page-title">CSS flex</div>
+    <div class="page-content">
+        <div class="title">display</div>
+        <style>
+            .display .item ~ .item{margin-left:10px;}
+            .flex-display{width:240px;}
+            .flex-inline{display:inline-flex;}
+        </style>
+        <div class="display flex-box">
+            <div class="group">
+                <div class="code-title">display:flex</div>
+                <div class="flex-sample-box">
+                    <div class="flex-display flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                    </div>
+                    <div class="flex-display flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">display:inline-flex</div>
+                <div class="flex-sample-box">
+                    <div class="flex-inline flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                    </div>
+                    <div class="flex-inline flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="title">flex-flow</div>
+        <style>
+            .flex-flow .item{margin:5px;}
+            .flex-flow-row{flex-flow:row wrap;}
+            .flex-direction-row{flex-direction:row wrap nowrap;max-width:300px;}
+            .flex-flow-row-reverse{flex-flow:row-reverse;}
+            .flex-flow-row-nowrap{flex-flow:row nowrap;max-width:300px;}
+            .flex-flow-row-reverse-nowrap{flex-flow:row-reverse nowrap;max-width:300px;}
+            .flex-flow-column{flex-flow:column;}
+            .flex-flow-column-reverse{flex-flow:column-reverse;}
+            .flex-flow-column-wrap{flex-flow:column wrap;width:250px;height:250px;}
+            .flex-flow-column-wrap-reverse{flex-flow:column wrap-reverse;width:250px;height:250px;}
+        </style>
+        <div class="flex-flow flex-box">
+            <div class="group">
+                <div class="code-title">flex-flow:row wrap</div>
+                <div class="flex-sample-box">
+                    <div class="flex-flow-row flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">flex-direction:row wrap</div>
+                <div class="flex-sample-box">
+                    <div class="flex-direction-row flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">flex-flow:row-nowrap</div>
+                <div class="flex-sample-box">
+                    <div class="flex-flow-row-nowrap flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">flex-flow:row-reverse</div>
+                <div class="flex-sample-box">
+                    <div class="flex-flow-row-reverse flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">flex-flow:row-reverse nowrap</div>
+                <div class="flex-sample-box">
+                    <div class="flex-flow-row-reverse-nowrap flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">flex-flow:column</div>
+                <div class="flex-sample-box">
+                    <div class="flex-flow-column flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">flex-flow:column-reverse</div>
+                <div class="flex-sample-box">
+                    <div class="flex-flow-column-reverse flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">flex-flow:column wrap</div>
+                <div class="flex-sample-box">
+                    <div class="flex-flow-column-wrap flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">flex-flow:column wrap-reverse</div>
+                <div class="flex-sample-box">
+                    <div class="flex-flow-column-wrap-reverse flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="title">flex-wrap</div>
+        <style>
+            .flex-wrap .item{margin:10px;}
+            .flex-wrap-nowrap{flex-wrap:nowrap;width:360px;}
+            .flex-wrap-wrap{flex-wrap:wrap;width:300px;}
+            .flex-wrap-reverse{flex-wrap:wrap-reverse;width:300px;}
+        </style>
+        <div class="flex-wrap flex-box">
+            <div class="group">
+                <div class="code-title">flex-wrap:nowrap</div>
+                <div class="flex-sample-box">
+                    <div class="flex-wrap-nowrap flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">flex-wrap:wrap</div>
+                <div class="flex-sample-box">
+                    <div class="flex-wrap-wrap flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">flex-wrap:wrap-reverse</div>
+                <div class="flex-sample-box">
+                    <div class="flex-wrap-reverse flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="title">justify-content</div>
+        <style>
+            .justify-content-start{justify-content:flex-start;width:550px;}
+            .justify-content-end{justify-content:flex-end;width:550px;}
+            .justify-content-center{justify-content:center;width:550px;}
+            .justify-content-space-between{justify-content:space-between;width:600px;}
+            .justify-content-space-around{justify-content:space-around;width:600px;}
+        </style>
+        <div class="justify-content flex-box">
+            <div class="group">
+                <div class="code-title">justify-content:flex-start</div>
+                <div class="flex-sample-box">
+                    <div class="justify-content-start flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">justify-content:flex-end</div>
+                <div class="flex-sample-box">
+                    <div class="justify-content-end flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">justify-content:center</div>
+                <div class="flex-sample-box">
+                    <div class="justify-content-center flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">justify-content:space-between</div>
+                <div class="flex-sample-box">
+                    <div class="justify-content-space-between flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">justify-content:space-around</div>
+                <div class="flex-sample-box">
+                    <div class="justify-content-space-around flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="title">align-content</div>
+        <style>
+            .align-content .item{margin:0;}
+            .align-content-stretch{flex-wrap:wrap;align-content:stretch;width:250px;height:250px;}
+            .align-content-stretch .item{width:auto;height:auto;}
+            .align-content-flex-start{flex-wrap:wrap;align-content:flex-start;width:250px;height:250px;}
+            .align-content-flex-end{flex-wrap:wrap;align-content:flex-end;width:250px;height:250px;}
+            .align-content-center{flex-wrap:wrap;align-content:center;width:250px;height:250px;}
+            .align-content-space-between{flex-wrap:wrap;align-content:space-between;width:250px;height:250px;}
+            .align-content-space-around{flex-wrap:wrap;align-content:space-around;width:250px;height:250px;}
+        </style>
+        <div class="align-content flex-box">
+            <div class="group">
+                <div class="code-title">align-content:stretch</div>
+                <div class="flex-sample-box">
+                    <div class="align-content-stretch flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">align-content:flex-start</div>
+                <div class="flex-sample-box">
+                    <div class="align-content-flex-start flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">align-content:flex-end</div>
+                <div class="flex-sample-box">
+                    <div class="align-content-flex-end flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">align-content:center</div>
+                <div class="flex-sample-box">
+                    <div class="align-content-center flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">align-content:space-between</div>
+                <div class="flex-sample-box">
+                    <div class="align-content-space-between flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">align-content:space-around</div>
+                <div class="flex-sample-box">
+                    <div class="align-content-space-around flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="title">align-items</div>
+        <style>
+            .align-items .item{margin:0;line-height:auto;}
+            .align-items .item:nth-child(1){font-size:20px;}
+            .align-items .item:nth-child(2){font-size:13px;}
+            .align-items .item:nth-child(3){font-size:22px;}
+            .align-items .item:nth-child(4){font-size:18px;}
+            .align-items .item:nth-child(5){font-size:15px;}
+            .align-items .item:nth-child(6){font-size:12px;}
+            .align-items-stretch{flex-wrap:wrap;align-items:stretch;width:250px;height:250px;}
+            .align-items-stretch .item{width:auto;height:auto;}
+            .align-items-start{flex-wrap:wrap;align-items:flex-start;width:250px;height:250px;}
+            .align-items-end{flex-wrap:wrap;align-items:flex-end;width:250px;height:250px;}
+            .align-items-center{flex-wrap:wrap;align-items:center;width:250px;height:250px;}
+            .align-items-baseline{flex-wrap:wrap;align-items:baseline;width:250px;height:250px;}
+        </style>
+        <div class="align-items flex-box">
+            <div class="group">
+                <div class="code-title">align-items:stretch</div>
+                <div class="flex-sample-box">
+                    <div class="align-items-stretch flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">align-items:start</div>
+                <div class="flex-sample-box">
+                    <div class="align-items-start flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">align-items:end</div>
+                <div class="flex-sample-box">
+                    <div class="align-items-end flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">align-items:center</div>
+                <div class="flex-sample-box">
+                    <div class="align-items-center flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="code-title">align-items:baseline</div>
+                <div class="flex-sample-box">
+                    <div class="align-items-baseline flex-container">
+                        <div class="item">item1</div>
+                        <div class="item">item2</div>
+                        <div class="item">item3</div>
+                        <div class="item">item4</div>
+                        <div class="item">item5</div>
+                        <div class="item">item6</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="post-s-title">Flex Items</div>
+        <div class="title">order</div>
+        <style>
+            .flex-order .item{line-height:30px;}
+            .flex-order-basic{}
+            .flex-order-basic .item:nth-child(1){order:0;}
+            .flex-order-basic .item:nth-child(2){order:17;}
+            .flex-order-basic .item:nth-child(3){order:-1;}
+            .flex-order-basic .item:nth-child(4){order:3;}
+            .flex-order-basic .item:nth-child(5){order:1;}
+            .flex-order-basic .item:nth-child(6){order:1;}
+        </style>
+        <div class="flex-order flex-box">
+            <div class="group">
+                <div class="code-title">order</div>
+                <div class="flex-sample-box">
+                    <div class="flex-order-basic flex-container">
+                        <div class="item">item1<br>order:0</div>
+                        <div class="item">item2<br>order:17</div>
+                        <div class="item">item3<br>order:-1</div>
+                        <div class="item">item4<br>order:3</div>
+                        <div class="item">item5<br>order:1</div>
+                        <div class="item">item6<br>order:1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="title">flex</div>
+        <style>
+            .item-flex{}
+            .item-flex .item:nth-child(1){flex-grow:1;flex-shrink:1;flex-basis:11;}
+            .item-flex .item:nth-child(2){flex-grow:5;flex-shrink:5;flex-basis:1;}
+            .item-flex .item:nth-child(3){flex-grow:1;flex-shrink:2;flex-basis:1;}
+            .item-flex .item:nth-child(4){flex-grow:4;flex-shrink:1;flex-basis:10px;}
+            .item-flex .item:nth-child(5){flex-grow:3;flex-shrink:3;flex-basis:0;}
+            .item-flex .item:nth-child(6){flex-grow:1;flex-shrink:1;flex-basis:50px;}
+        </style>
+        <div class="flex-item-flex">
+            <div class="flex-sample-box">
+                <div class="item-flex flex-container">
+                    <div class="item">item1</div>
+                    <div class="item">item2</div>
+                    <div class="item">item3</div>
+                    <div class="item">item4</div>
+                    <div class="item">item5</div>
+                    <div class="item">item6</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

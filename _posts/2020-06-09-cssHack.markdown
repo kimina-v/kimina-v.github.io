@@ -1,0 +1,87 @@
+CSS Hack
+
+<div class="code-title">IE6 : </div>
+<div class="title-desc">프로퍼티의 가장 앞부분에 언더스코어(_)룰 붙이면 IE6에서만 적용</div>
+{% highlight bash %}
+＃header {_width:100px}
+{% endhighlight %}
+
+<div class="code-title">IE6 : </div>
+<div class="title-desc">셀렉트 앞에 *html을 붙이면 IE6에서만 적용</div>
+{% highlight bash %}
+*html ＃header {width:100px}
+{% endhighlight %}
+
+<div class="code-title">IE6 : </div>
+<div class="title-desc">속성앞에 #삽입 IE6이하 버전에서만 적용</div>
+{% highlight bash %}
+＃header {＃width:100px}
+{% endhighlight %}
+
+<div class="code-title">IE7 : </div>
+<div class="title-desc">셀렉트 앞에 *+html body 또는 *:first-child+html 을 붙이면 IE7 or Opera 에서 적용</div>
+{% highlight bash %}
+*+html body ＃header {width:100px} /* IE7, OPERA 적용 */ *:first-child+html ＃header {width:100px} /* IE7 적용 */
+{% endhighlight %}
+
+<div class="code-title">IE7 : </div>
+<div class="title-desc">프로퍼티의 가장 앞부분에 언더스코어(*)를 붙이면 IE7에서만 적용</div>
+{% highlight bash %}
+＃header {*width:100px} 
+{% endhighlight %}
+
+<div class="code-title">IE7 : </div>
+<div class="title-desc">프로퍼티의 가장 앞부분에 닷(.)를 붙이면 IE6, 7에서만 적용</div>
+{% highlight bash %}
+＃header {.width:100px}
+{% endhighlight %}
+
+<div class="code-title">IE8 : </div>
+<div class="title-desc">프로퍼티의 속성값 앞부분에 (/*＼**/)를 붙이면 IE8에서만 적용</div>
+{% highlight bash %}
+＃header {width:/*＼**/100px} 
+{% endhighlight %}
+
+<div class="code-title">IE8,IE9,IE10 : </div>
+<div class="title-desc">프로퍼티의 속성값 뒷부분에 \0/IE8 를 붙이면 IE8, \0/IE9 를 붙이면 IE9,  \0/IE8+9 를 붙이면 IE8과 IE9 적용</div>
+{% highlight bash %}
+＃header{width:100px \0/IE8;/*IE8적용*/width:150px \0/IE9;/*IE9적용*/ height:50px  \0/IE8+9;/*IE8+9적용*/}
+{% endhighlight %}
+
+<div class="code-title">IE 9+10 : </div>
+<div class="title-desc">셀렉트 앞에 @media screen and (min-width:0\0){} 를 감싸면 적용</div>
+{% highlight bash %}
+@media screen and (min-width:0\0){＃header{width:100px}}
+{% endhighlight %}
+
+<div class="code-title">IE 10 hack : </div>
+<div class="title-desc">셀렉트 앞에 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {} 를 감싸면 적용</div>
+{% highlight bash %}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {＃header{width:100px}}
+{% endhighlight %}
+
+<div class="code-title">FireFox : </div>
+<div class="title-desc">셀렉트 앞에 @-moz-document url-prefix() {}를 감싸면 적용</div>
+{% highlight bash %}
+@-moz-document url-prefix() {＃header {width:100px}}
+{% endhighlight %}
+
+<div class="code-title">Chorme : </div>
+<div class="title-desc">셀렉트 앞에 @media screen and (-webkit-min-device-pixel-ratio:0){}를 감싸면 적용</div>
+{% highlight bash %}
+@media screen and (-webkit-min-device-pixel-ratio:0){＃header {width:100px}}
+{% endhighlight %}
+
+<div class="code-title">Safari : </div>
+<div class="title-desc">프로퍼티의 속성값 앞에 html[xmlns*=""] body:last-child {}를 감싸면 적용</div>
+{% highlight bash %}
+html[xmlns*=""] body:last-child ＃header{width:100px}
+{% endhighlight %}
+
+<div class="code-title">Opera :</div> 
+<div class="title-desc">프로퍼티의 속성값 앞에 body:first-of-type #header {}를 감싸면 적용</div>
+{% highlight bash %}
+body:first-of-type ＃header{width:100px}
+{% endhighlight %}
+
+[class_naming]https://uipac.com/451

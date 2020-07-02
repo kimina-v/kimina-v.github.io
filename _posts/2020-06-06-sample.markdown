@@ -1,0 +1,152 @@
+---
+---
+
+This is <span class="capsule">Sample Page</span>.
+
+list
+
+1. num list1
+2. num list2
+3. num list3
+
+* dot list1
+* dot list2
+* dot list3
+
+
+1. link [accent](http://ankitsultana.com/accent/documentation.html)
+
+code
+
+{% highlight bash %}
+console.log("Hello kimina.");
+{% endhighlight %}
+
+---
+
+title 
+
+# Header 1
+
+## Header 2
+
+### Header 3
+
+#### Header 4
+
+##### Header 5
+
+###### Header 6
+
+h1 title
+
+> left line text box
+>
+> text-box ☺
+
+
+table 1
+
+size |  material    |  color
+---- |  ------------|  ------------
+9    | leather      | brown
+10   | hemp canvas  | natural
+11   | glass        | transparent
+
+table2
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Rank</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cookie</td>
+      <td>#69</td>
+      <td>169</td>
+    </tr>
+    <tr>
+      <td>Buther</td>
+      <td>#70</td>
+      <td>169</td>
+    </tr>
+    <tr>
+      <td>Stuart</td>
+      <td>#71</td>
+      <td>168</td>
+    </tr>
+  </tbody>
+</table>
+
+img 
+
+![Large example image](http://placehold.it/800x400 "Large example image")
+![Medium example image](http://placehold.it/400x200 "Medium example image")
+![Small example image](http://placehold.it/200x200 "Small example image")
+![example image](images/example.png)
+
+my style
+
+<div class="post-stitle">Post stitle</div>
+<div class="group-title">Group title</div>
+<div class="code-title">Code title</div>
+<div class="notice-title">notice title</div>
+<div class="blick-title">blick title</div>
+<div class="box-title">box title</div>
+<div class="result-title">result title</div>
+<div class="title-desc">title desc</div>
+<div class="desc-text">desc text</div>
+<div class="kimina-text">kimina text</div>
+<div class="box-line">
+    <p>box line p</p>
+</div>
+<div class="table-title">table title</div>
+<table class="table-row" style="width:100%">
+    <colgroup>
+        <col stlye="width:30%">
+        <col stlye="width:70%">
+    </colgroup>
+    <tbody>
+        <tr>
+            <th>th</th>
+            <td>td</td>
+        </tr>
+        <tr>
+            <th>th</th>
+            <td>td</td>
+        </tr>
+        <tr>
+            <th>th</th>
+            <td>td</td>
+        </tr>
+        <tr>
+            <th>th</th>
+            <td>td</td>
+        </tr>
+        <tr>
+            <th>th</th>
+            <td>td</td>
+        </tr>
+    </tbody>
+</table>
+<ul class="list-chart">
+    <li>list chart1</li>
+    <li>list chart2</li>
+    <li>list chart3</li>
+    <li>list chart4</li>
+    <li>list chart5</li>
+    <li>list chart6</li>
+</ul>
+<br>
+<br>
+<code class="language-plaintext highlighter-rouge">코드</code>
+<br>
+<br>
+<span class="bg-yl">노란 배경 텍스트</span>
+<br>
+<br>
+<span class="bg-gn">초록 배경 텍스트</span>

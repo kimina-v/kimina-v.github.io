@@ -1,0 +1,416 @@
+Sass SCSS
+
+<div class="post-stitle">Sass 와 SCSS의 차이</div>
+Sass(Syntactically Awesome Style Sheets)의 3버전에서 새롭게 등장한 SCSS는 CSS 구문과 완전히 호환되도록 새로운 구문을 도입해 만든 Sass의 모든 기능을 지원하는 CSS의 상위집합이다.<br>간당한 차이로는 {}(중괄호)와 ;(세미콜론)의 유무이다.
+
+Sass
+{% highlight bash %}
+.list
+  width: 100px
+  float: left
+  li
+    color: red
+    background: url("./image.jpg")
+    &:last-child
+      margin-right: -10px
+{% endhighlight %}
+
+SCSS
+{% highlight bash %}
+.list {
+  width: 100px;
+  float: left;
+  li {
+    color: red;
+    background: url("./image.jpg");
+    &:last-child {
+      margin-right: -10px;
+    }
+  }
+}
+{% endhighlight %}
+Sass는 선택자의 유효범위를 '들여쓰기'로 구분하고, SCSS는 {}로 범위 구분
+
+Mixins(‘믹스인’은 재사용 가능한 기능을 만드는 방식의 의미합니다)은 Sass에서 단축 구문으로 사용
+
+Sass
+{% highlight bash %}
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  border-radius:         $radius
+
+.box
+  +border-radius(10px)
+{% endhighlight %}
+
+SCSS
+{% highlight bash %}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.box { @include border-radius(10px); }
+{% endhighlight %}
+Sass는 =와 + 기호로 Mixins 기능을 사용,<br>
+SCSS는 @mixin과 @include로 기능을 사용.<br>
+Sass는 좀 더 간결하고 작성하기 편리하며, {}나 ;를 사용하지 않아도 되니 코드가 훨씬 깔끔해고,<br>
+SCSS는 인라인 코드(한 줄 작성)를 작성할 수 있고, CSS와 유사한 문법을 가지기 때문에 코드 통합이 훨씬 쉽다.
+
+<div class="post-stitle">compiler</div>
+웹에서 직접 동작할 수 없으므로 CSS로 컴파일러 해야한다.<br>
+visual studio 사용자는 확장 프로그램 easy Sass 설치 하면, min.css / .css 둘다 생성해줌
+
+<div class="post-stitle">변수</div>
+
+<div class="bg-yl">$변수이름: 속성값;</div>
+
+SCSS
+{% highlight bash %}
+$size100:100px;
+$defaultColor:＃666;
+$url-images: "/assets/images/";
+
+.box{
+  width:$size100;
+  height:$size100;
+  color:$defaulColor;
+  background:url($url-images + "bg.jpg");
+}
+{% endhighlight %}
+
+Compile to
+{% highlight bash %}
+.box{
+  width:100px;
+  height:100px;
+  color:＃666;
+  background:url("/assets/images/bg.jpg");
+}
+{% endhighlight %}
+
+<div class="post-stitle">중첩</div>
+SCSS
+{% highlight bash %}
+.section {
+  width: 100％;
+  .list {
+    padding: 20px;
+    li {
+      float: left;
+    }
+  }
+}
+{% endhighlight %}
+
+Compile to
+{% highlight bash %}
+.section {
+  width: 100％;
+}
+.section .list {
+  padding: 20px;
+}
+.section .list li {
+  float: left;
+}
+{% endhighlight %}
+
+<div class="post-stitle">상위 선택자 참조</div>
+
+SCSS
+{% highlight bash %}
+.btn {
+  position: absolute;
+  &.active {
+    color: red;
+  }
+}
+
+.list {
+  li {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.fs {
+  &-small { font-size: 12px; }
+  &-medium { font-size: 14px; }
+  &-large { font-size: 16px; }
+}
+{% endhighlight %} 
+
+Compile to
+{% highlight bash %}
+.btn {
+  position: absolute;
+}
+.btn.active {
+  color: red;
+}
+.list li:last-child {
+  margin-right: 0;
+}
+
+.fs-small {
+  font-size: 12px;
+}
+.fs-medium {
+  font-size: 14px;
+}
+.fs-large {
+  font-size: 16px;
+}
+{% endhighlight %} 
+
+<div class="post-stitle">중첩 벗어나기 / 특정변수</div>
+SCSS
+{% highlight bash %}
+.list {
+  $w: 100px;
+  $h: 50px;
+  li {
+    width: $w;
+    height: $h;
+  }
+  @at-root .box {
+    width: $w;
+    height: $h;
+  }
+}
+{% endhighlight %} 
+
+Compile to
+{% highlight bash %}
+.list li {
+  width: 100px;
+  height: 50px;
+}
+.box {
+  width: 100px;
+  height: 50px;
+}
+{% endhighlight %} 
+
+<div class="post-stitle">특정변수 에러</div>
+ $w, $h는 .list 안에서 설정 된 변수이기 때문에, .list 밖에서는 사용 할 수 없다.
+
+{% highlight bash %}
+.list {
+  $w: 100px;
+  $h: 50px;
+  li {
+    width: $w;
+    height: $h;
+  }
+}
+
+# Error
+.box {
+  width: $w;
+  height: $h;
+}
+
+.box1 {
+  $color: ＃111;
+  background: $color;
+}
+# Error
+.box2 {
+  background: $color;
+}
+{% endhighlight %} 
+
+<div class="post-stitle">중첩된 속성</div>
+SCSS
+{% highlight bash %}
+.box {
+  font: {
+    weight: bold;
+    size: 10px;
+    family: sans-serif;
+  };
+  margin: {
+    top: 10px;
+    left: 20px;
+  };
+  padding: {
+    bottom: 40px;
+    right: 30px;
+  };
+}
+{% endhighlight %} 
+
+Compile to
+{% highlight bash %}
+.box {
+  font-weight: bold;
+  font-size: 10px;
+  font-family: sans-serif;
+  margin-top: 10px;
+  margin-left: 20px;
+  padding-bottom: 40px;
+  padding-right: 30px;
+}
+{% endhighlight %} 
+
+<div class="post-stitle">변수 재 할당</div>
+SCSS
+{% highlight bash %}
+$red: ＃f00;
+$blue: ＃00f;
+
+$color-primary: $blue;
+$color-danger: $red;
+
+.box {
+  color: $color-primary;
+  background: $color-danger;
+}
+{% endhighlight %}
+
+CSS
+{% highlight bash %}
+.box {
+  color: ＃00f;
+  background: ＃f00;
+}
+{% endhighlight %}
+
+<div class="post-stitle">!global 전역변수 만들기</div>
+
+`!global` 플래그를 사용하면 변수의 유효범위를 전역(Global)로 설정
+
+SCSS
+{% highlight bash %}
+.box1 {
+  $color: ＃111 !global;
+  background: $color;
+}
+.box2 {
+  background: $color;
+}
+{% endhighlight %}
+
+CSS
+{% highlight bash %}
+.box1 {
+  background: ＃111;
+}
+.box2 {
+  background: ＃111;
+}
+{% endhighlight %}
+
+대신 기존에 사용하던 같은 이름의 변수가 있을 경우 값이 덮어져 사용될 수 있다.
+
+SCSS
+{% highlight bash %}
+$color: ＃000;
+.box1 {
+  $color: ＃111 !global;
+  background: $color;
+}
+.box2 {
+  background: $color;
+}
+.box3 {
+  $color: ＃222;
+  background: $color;
+}
+{% endhighlight %}
+
+CSS
+{% highlight bash %}
+.box1 {
+  background: ＃111;
+}
+.box2 {
+  background: ＃111;
+}
+.box3 {
+  background: ＃222;
+}
+{% endhighlight %}
+
+<div class="post-stitle">!default 초깃값 설정</div>
+
+`!default` 플래그는 할당되지 않은 변수의 초깃값을 설정<br>즉, 할당되어있는 변수가 있다면 변수가 기존 할당 값을 사용
+
+SCSS
+{% highlight bash %}
+$color-primary: red;
+
+.box {
+  $color-primary: blue !default;
+  background: $color-primary;
+}
+{% endhighlight %}
+
+CSS
+{% highlight bash %}
+.box {
+  background: red;
+}
+{% endhighlight %}
+
+: 외부 Sass(SCSS) 라이브러리 변수 이름이 같으면 작성한 코드의 변수들이 덮어쓰기 되는 문제가 있을 수 있기 때문에 사용.
+(반대로 작성된 Sass(SCSS) 라이브러리가 다른 사용자 코드의 변수들을 덮어씌울 수 있음)
+
+{% highlight bash %}
+# _config.scss
+$color-active: red;
+
+# main.scss
+@import 'config';
+
+$color-active: blue !default;
+
+.box {
+  background: $color-active;  #/ red
+}
+{% endhighlight %}
+
+<div class="post-stitle">import 가져오기</div>
+
+`@import` 로 외부에서 가져온 Sass 파일은 모두 단일 CSS 출력 파일로 병합.<br>
+또한, 가져온 파일에 정의된 모든 변수 또는 Mixins 등을 주 파일에서 사용 가능.
+
+Sass `@import`는 기본적으로 Sass 파일을 가져오지만, CSS `@import` 규칙으로 컴파일되는 몇 가지 상황으로는,
+
+- 파일 확장자가 `.css`일 떄<br>
+- 파일 이름이 `http://`로 시작하는 경우
+- `url()`이 붙었을 경우
+- 미디어쿼리가 있는 경우
+
+`@import` 규칙대로 컴파일
+
+{% highlight bash %}
+@import "hello.css";
+@import "http://hello.com/hello";
+@import url(hello);
+@import "hello" screen;
+{% endhighlight %} 
+
+<div class="post-stitle">여러 파일 가져오기</div>
+
+`,` 로 구문
+
+{% highlight bash %}
+@import "header", "footer";
+{% endhighlight %} 
+
+<div class="bg-yl font-sm">이밖에, SCSS는 javascript처럼 연산, 인수, 논리, 확장, 함수, 조건과 반복 등 사용하여 작업 가능.</div>
+
+
+
+
+link [출처_heropy]
+
+[출처_heropy]:https://heropy.blog/2018/01/31/sass/

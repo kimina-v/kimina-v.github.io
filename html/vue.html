@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>vue.js sample</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/vs2015.min.css">
+    <link rel="stylesheet" href="../css/another-post.css">
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    <div class="page-title">vue.js</div>
+    <div class="page-desc">사용자 인터페이스를 만들기 위한 <strong>프로그레시브 프레임워크</strong><br>다른 라이브러리나 기존 프로젝트와의 통합이 매우 쉽다.</div>
+    
+    <div class="title">선언적 렌더링</div>
+
+    <div class="group-wrap">
+        <div class="group">
+            <div class="s-title">EX1</div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app">
+            {{ message }}
+        &lt;/div>  
+    </code>
+<span class="code-title">JS</span>
+    <code class="js">
+        new Vue({
+            el:"#app", // el :  Vue가 새롭게 정의될 때, 해당 Vue가 적용될 요소를 지정해주는 역할
+            data:{ // data : 해당 VueJS에서 사용할 정보들을 선언해주는 역할
+                message:"Hello kimina world!"
+            }
+        })
+    </code>
+</pre>
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app">
+                    {{ message }}
+                </div>
+            </div>
+            <script>
+                new Vue({
+                    el:"#app",
+                    data:{
+                        message:"Hello kimina world!"
+                    }
+                })
+            </script>
+        </div>
+
+        <div class="group">
+            <div class="s-title">EX1-1</div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app-1">
+            &lt;app-text>&lt;/app-text>
+        &lt;/div> 
+    </code>
+<span class="code-title">JS</span>
+    <code class="js">
+        var appText = {
+            template:"&lt;p>hello vue&lt;/p>"
+        };
+        var app1 = new Vue({
+            el:"#app-1",
+            components:{
+                "app-text":appText
+            }
+        });
+    </code>
+</pre>
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app-1">
+                    <app-text></app-text>
+                </div>
+                <script>
+                    var appText = {
+                        template:"<p>hello vue</p>"
+                    };
+                    
+                    var app1 = new Vue({
+                        el:"#app-1",
+                        components:{
+                            "app-text":appText
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+        
+        <div class="group">
+            <div class="s-title">EX2</div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;span v-bind:title="message">mouseOver시 동적 바인딩 된 title 확인 가능.&lt;/span>
+    </code>
+<span class="code-title">JS</span>
+    <code class="js">
+        var app2 = new Vue({
+            el:"#app-2",
+            data:{
+                message:"지금 시각은 " + new Date() + " 입니다."
+            }
+        })
+    </code>
+</pre>
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app-2">
+                    <span v-bind:title="message">mouseOver시 동적 바인딩 된 title 확인 가능.</span>
+                </div>
+                <script>
+                    var app2 = new Vue({
+                        el:"#app-2",
+                        data:{
+                            message:"지금 시각은 " + new Date() + " 입니다."
+                        }
+                    })
+                </script>
+            </div>
+            <p class="desc-text">: console에 app2.message = "안녕 kimina" 입력 시, title 속성 업데이트</p>
+            <div class="text"><code class="code">v-</code> :vue에서 제공하는 특수속성. 렌더링 된 DOM에 특수한 반응형 동작을 한다.<br>따라서, <code class="code">v-bind</code>로 title 속성을 vue 인스턴스의 message 속성으로 최신 상태 유지.</div>
+        </div>
+    </div>
+    
+    <div class="title">조건문과 반복문</div>
+    <div class="group-wrap">
+        <div class="group">
+            <div class="s-title">EX1</div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app-3">
+            &lt;p v-if="seen">요기있다!&lt;/p>
+        &lt;/div>
+    </code>
+<span class="code-title">JS</span>
+    <code class="js">
+        var app3 = new Vue({
+            el:"#app-3",
+            data:{
+                seen:true
+            }
+        })
+    </code>
+</pre>
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app-3">
+                    <p v-if="seen">요기있다!</p>
+                </div>
+                <script>
+                    var app3 = new Vue({
+                        el:"#app-3",
+                        data:{
+                            seen:true
+                        }
+                    })
+                </script>
+            </div>
+            <p class="desc-text">: console에 app3.seen = false 입력 시, 텍스트 사라짐.</p>
+            <div class="text">텍스트 속성뿐 아니라 DOM의 구조에도 데이터를 바인딩 할 수 있음을 보여준다. <br>또한 vue엘리번트가 vue에 삽입/업데이트/제거 될 때자동으로 트렌지션 효과를 적요할 수 있는 강력한 전환 효과 시스템 제공.</div>
+        </div>
+        <div class="group">
+            <div class="s-title">EX2</div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app-4">
+            &lt;ol>
+                &lt;li v-for="todo in todos">
+                {{ todo.text }}
+                &lt;/li>
+            &lt;/ol>
+        &lt;/div>
+    </code>
+<span class="code-title">JS</span>
+    <code class="js">
+        var app4 = new Vue({
+            el:"#app-4",
+            data:{
+                todos:[
+                    { text:"javascript" },
+                    { text:"Vue" },
+                    { text:"sass" }
+                ]
+            }
+        })
+    </code>
+</pre>
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app-4">
+                    <ol>
+                        <li v-for="todo in todos">
+                            {{ todo.text }}
+                        </li>
+                    </ol>
+                </div>
+                <script>
+                    var app4 = new Vue({
+                        el:"#app-4",
+                        data:{
+                            todos:[
+                                { text:"javascript" },
+                                { text:"Vue" },
+                                { text:"sass" }
+                            ]
+                        }
+                    })
+                </script>
+            </div>
+            <div class="desc-text">: console 창에 app4.todos.push({ text:'aria' }) 입력, 목록에 새 항목 추가됨.</div>
+        </div>
+    </div>
+
+    <div class="title">사용자 입력 핸들링</div>
+    <div class="group-wrap">
+        <div class="group">
+            <div class="s-title">EX1</div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app-5">
+            &lt;span>{{ message }}&lt;/span>
+            &lt;button v-on:click="reverseMessage">메시지 뒤집기&lt;/button>
+        &lt;/div>
+    </code>
+<span class="code-title">JS</span>
+    <code class="js">
+        var app5 = new Vue({
+            el:"#app-5",
+            data:{
+                message:"안녕하세요. kimina 입니다."
+            },
+            methods:{
+                reverseMessage:function(){
+                    this.message = this.message.split("").reverse().join("")
+                }
+            }
+        })
+    </code>
+</pre>
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app-5">
+                    <span>{{ message }}</span>
+                    <button v-on:click="reverseMessage">메시지 뒤집기</button>
+                </div>
+                <script>
+                    var app5 = new Vue({
+                        el:"#app-5",
+                        data:{
+                            message:"안녕하세요. kimina 입니다."
+                        },
+                        methods:{
+                            reverseMessage:function(){
+                                this.message = this.message.split("").reverse().join("")
+                            }
+                        }
+                    })
+                </script>
+            </div>
+            
+            <div class="info-title">알고가기</div>
+            <div class="desc">
+                reverse() :반전된 배열<br>
+                join() :배열을 하나의 문자열로
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="s-title">EX2</div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app-6">
+            &lt;span>{{ message }}&lt;/span>
+            &lt;input v-model="message">
+        &lt;/div>
+    </code>
+<span class="code-title">JS</span>
+    <code class="js">
+        var app6 = new Vue({
+            el:"#app-6",
+            data:{
+                message:"Hello kimina."
+            }
+        })
+    </code>
+</pre>
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app-6">
+                    <span>{{ message }}</span>
+                    <input v-model="message">
+                </div>
+                <script>
+                    var app6 = new Vue({
+                        el:"#app-6",
+                        data:{
+                            message:"Hello kimina."
+                        }
+                    })
+                </script>
+            </div>
+            <div class="desc-text">
+                : <code class="code">v-model</code> 양식에 대한 입력과 앱 상태를 양방향으로 바인딩하는 디렉티브.
+            </div>
+        </div>
+    </div>
+
+    <div class="title">컴포넌트를 사용한 작성방법</div>
+    <div class="group-wrap">
+        <div class="group">
+            <div class="s-title">EX1</div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app-7">
+            &lt;ol>
+                &lt;todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id">&lt;/todo-item>
+            &lt;/ol>
+        &lt;/div>
+    </code>
+<span class="code-title">JS</span>
+    <code class="js">
+        Vue.component("todo-item", {
+            props:["todo"],
+            template:"〈li〉{{ todo.text }}〈/li〉"
+        })
+
+        var app7 = new Vue({
+            el:"#app-7",
+            data:{
+                groceryList:[
+                    { id:0, text:"vegetables" },
+                    { id:1, text:"cheese" },
+                    { id:2, text:"Whatever else hunams are supposed to eat."}
+                ]
+            }
+        })
+    </code>
+</pre>
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app-7">
+                    <ol>
+                        <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id"></todo-item>
+                    </ol>
+                </div>
+                <script>
+                    Vue.component("todo-item", {
+                        props:["todo"],
+                        template:"<li>{{ todo.text }}</li>"
+                    })
+
+                    var app7 = new Vue({
+                        el:"#app-7",
+                        data:{
+                            groceryList:[
+                                { id:0, text:"vegetables" },
+                                { id:1, text:"cheese" },
+                                { id:2, text:"Whatever else hunams are supposed to eat."},
+                                { id:3, text:"hi bye mama" },
+                                { id:4, text:"where is nose?" }
+                            ]
+                        }
+                    })
+                    
+                </script>
+            </div>
+        </div>
+    </div>
+    
+    <div class="title">Vue 인스턴스 만들기</div>      
+    <div class="group-wrap">
+        <div class="group">
+            <div class="s-title">EX1</div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;a href="javascript:;" class="bind">bind&lt;a>
+        &lt;a href="javascript:;" class="click">click&lt;/a>
+    </code>
+<span class="code-title">JS</span>
+    <code class="js">
+        $('.bind').bind('click', function(){
+            alert('bind! click!');
+        });
+        $('.click').click(function(){
+            alert('click! click!');
+        });
+    </code>
+</pre>
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <a href="javascript:;" class="bind">bind</a>
+                <a href="javascript:;" class="click">click</a>
+                <script>
+                    $('.bind').bind('click', function(){
+                        alert('bind! click!');
+                    });
+                    $('.click').click(function(){
+                        alert('click! click!');
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+    <a href="vue2-post.html" class="next-link">Next post</a>
+</body>
+</html>

@@ -1,0 +1,22 @@
+---
+title:  "github"
+date:   2020-06-11
+categories: [git_branch, git, github]
+tags: [git_branch, git, github]
+---
+<ul>
+    <li>git config --global user.name “user nsme”</li>
+    <li>git config --global user.email “user email”</li>
+    <li>git clone https://github.com/user/user link.git</li>
+    <li>git remote set-url origin https://user@github.com/user/user link.git</li>
+</ul>
+
+<ul>
+    <li><code class="language-plaintext highlighter-rouge">git add .</code> 수정 혹인 추가된 파일 올리기 (. 은 모든 파일 또는 모든 내용을 의미함)</li>
+    <li><code class="language-plaintext highlighter-rouge">git commit -m '수정 내용 입력'</code> 올린 파일 커밋</li>
+    <li><code class="language-plaintext highlighter-rouge">git push origin master</code> 커밋된 파일 적용</li>
+</ul>
+
+link [출처_site]
+
+[출처_site]:https://recoveryman.tistory.com/321

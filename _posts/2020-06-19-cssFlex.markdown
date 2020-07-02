@@ -1,0 +1,52 @@
+CSS flex
+
+
+<div class="post-stitle">flex</div>
+<div class="title-desc"><code class="language-plaintext highlighter-rouge">table</code>, <code class="language-plaintext highlighter-rouge">float</code>, <code class="language-plaintext highlighter-rouge">inline-block</code> 보다 더 쉽게 레이아웃 구성.<br> Container와 Items 으로 적용하는 속성으로 구분된 두가지 개념으로 나뉨.</div>
+
+<div class="post-stitle">Flex Container</div>
+<div class="code-title">display</div>
+
+display:flex 와 display:inline-flex로 Flex Container 속성 정의
+
+<div class="code-title">flex-flow</div>
+
+flex-direction, flex-wrap 의 단축 속성.
+
+`flex-direction` : item 주 축을 설정 row , row-reverse , column, column-reverse 사용.
+
+`flex-wrap` : item의 여러 줄 묶음을 성정 nowrap, wrap, wrap-reverse 사용.
+
+<div class="code-title">justify-content</div>
+
+정렬방법 설정 하는 속성으로 flex-start, flex-end, center, space-between, space-around 사용.
+
+<div class="code-title">align-content</div>
+
+`flex-wrap` 속성을 통해 items가 2줄이상이고, 여백이 있을 경우 사용 가능. stretch():눌려서 채움), flex-start, flex-end, center, space-between, space-around 사용.
+
+<div class="noti-tex bg-ylt">items가 한 줄일 경우 align-items 속성 사용.</div>
+
+<div class="code-title">align-items</div>
+
+`align-items` 사용을 위해 <span class="bg-yl">align-content 속성을 기본값인 stretch로 설정</span> 후 사용. stretch, flex-start, flex-end, center, baseline 사용.
+
+<div class="post-stitle">Flex itmes</div>
+
+<div class="code-title">order</div>
+
+item의 순서 설정. 음수 허용되고 숫자가 클 수로 뒤로간다. 
+
+<div class="code-title">flex</div>
+
+item의 너비 설정의 flex-grow, flex-shrunk, flex-basis의 단축 속성.<br>
+사용 방법 : <br>
+flex: 증가너비 감소너비 기본너비; (px과 같은 단위값이 들어가는 경우, 기본너비가 된다.) 
+
+<span class="bg-yl">flex-grow:0, flex-shrunk:1,  flex-basis:auto 기본값이다.</span>
+
+<a href="https://kimina-v.github.io/html/flex-post.html" target="_blank" class="post-link">테스트 확인하기</a>
+
+
+[참고_heropy]https://heropy.blog/2018/11/24/css-flexible-box/
+[참고_moz]https://developer.mozilla.org/ko/docs/Web/CSS/flex

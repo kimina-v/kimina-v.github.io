@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>vue.js sample</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/vs2015.min.css">
+    <link rel="stylesheet" href="../css/another-post.css">
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    <div class="page-title">vue.js</div>
+
+    <div class="title">HTML 속성에 접근 <strong>v-bind</strong></div>
+    <div class="page-desc">HTML 속성에 접근하려면, 디렉티브를 사용해야 한다.</div>    
+    <div class="info-title">디렉티브란? <code class="code">v-</code> 접두사가 붙는것이 특징.</div>
+
+    <div class="group-wrap">
+        <div class="group">
+            <div class="s-title">EX1</div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app">
+            &lt;a v-bind:href="link">링크&lt;/a>
+        &lt;/div>  
+    </code>
+<span class="code-title">JS</span>
+    <code class="js">
+        var app = new Vue({
+            el:"#app", 
+            data:{
+                link:"http://kimina-v.github.io"
+            },
+            methods:{
+            }
+        })
+    </code>
+</pre>
+            <div class="code-desc">methods 내에 howAreYou()라는 함수를 선언</div>
+
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app">
+                    <a v-bind:href="link" class="link">링크</a>
+                </div>
+                <script>
+                    var app3 = new Vue({
+                        el:"#app", 
+                        data:{
+                            link:"http://kimina-v.github.io"
+                        },
+                        methods:{
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+        
+        <div class="group">
+            <div class="s-title">약어</div>
+            <div class="page-desc">자주 사용되는 <span class="bg-gn">v-bind</span>와 <span class="bg-gn">v-on</span>에 대해 특별한 약어 제공</div>
+            <div class="xs-title">v-bind 약어 <strong>:</strong></div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        // 전체 문법
+        &lt;a v-bind:href="url">.......&lt;/a>
+
+        // 약어 
+        &lt;a :href="url">.......&lt;/a>
+    </code>
+</pre>
+        <div class="xs-title">v-on 약어 <strong>@</strong></div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+    // 전체 문법
+    &lt;a v-on:click="doSomething">.......&lt;/a>
+
+    // 약어 
+    &lt;a @click="doSomething">.......&lt;/a>
+    </code>
+</pre>
+        </div>
+    </div>
+
+    <div class="title">일회성 디렉티브 <strong>v-once</strong></div>
+
+    <div class="group-wrap">
+        <div class="group">
+            <div class="s-title">EX1</div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app2">
+            &lt;h1>{{ title }}&lt;/h1>
+            &lt;p>{{ sayHello() }}&lt;/p>
+        &lt;/div>  
+    </code>
+<span class="code-title">JS</span>
+    <code class="js">
+        var app2 = new Vue({
+            el:"#app2", 
+            data:{
+                title:"Hello kimina world!"
+            },
+            methods:{
+                sayHello: function(){
+                    this.title = "Have a good time"
+                    return this.title
+                }
+            }
+        })
+    </code>
+</pre>
+            <div class="code-desc">methods 내에 howAreYou()라는 함수를 선언</div>
+
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app2">
+                    <h1>{{ title }}</h1>
+                    <p>{{ sayHello() }}</p>
+                </div>
+                <script>
+                    var app3 = new Vue({
+                        el:"#app2", 
+                        data:{
+                            title:"Hello kimina world!"
+                        },
+                        methods:{
+                            sayHello: function(){
+                                this.title = "Have a good time"
+                                return this.title
+                            }
+                        }
+                    })
+                </script>
+            </div>
+            <div class="text"><span class="bg-gn">{{ title }}</span>은 변경 되기 전 값이 출력되고, <span class="bg-gn">{{ sayHello() }}</span>는 변경이 된 이후 값으로 출력되도록 할 떄 사용되는 것이 <code class="code">v-once</code>디렉티브 이다.</div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app3">
+            &lt;h1 v-once>{{ title }}&lt;/h1>
+            &lt;p>{{ sayHello() }}&lt;/p>
+        &lt;/div>  
+    </code>
+<span class="code-title">JS</span>
+    <code class="js">
+        var app2 = new Vue({
+            el:"#app3", 
+            data:{
+                title:"Hello kimina world!"
+            },
+            methods:{
+                sayHello: function(){
+                    this.title = "Have a good time"
+                    return this.title
+                }
+            }
+        })
+    </code>
+</pre>
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app3">
+                    <h1 v-once>{{ title }}</h1>
+                    <p>{{ sayHello() }}</p>
+                </div>
+                <script>
+                    var app3 = new Vue({
+                        el:"#app3", 
+                        data:{
+                            title:"Hello kimina world!"
+                        },
+                        methods:{
+                            sayHello: function(){
+                                this.title = "Have a good time"
+                                return this.title
+                            }
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="title">HTML코드를 직접 넣어주는 <strong>v-html</strong></div>
+
+    <div class="group-wrap">
+        <div class="group">
+            <div class="s-title">EX1</div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app4">
+            &lt;p v-html="aLinkToMedium">&lt;/p>
+        &lt;/div>  
+    </code>
+<span class="code-title">JS</span>
+    <code class="js">
+        var app2 = new Vue({
+            el:"#app4", 
+            data:{
+                aLinkToMedium: " &lt;a href='http://kimina-v.github.io' class='link'>kimina-v &lt;/a>"
+            }
+        })
+    </code>
+</pre>
+
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app4">
+                    <p v-html="aLinkToMedium"></p>
+                </div>
+                <script>
+                    var app3 = new Vue({
+                        el:"#app4", 
+                        data:{
+                            aLinkToMedium: "<a href='http://kimina-v.github.io' class='link'>kimina-v</a>"
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="title">이벤트 리스터 <strong>v-on</strong></div>
+
+    <div class="group-wrap">
+        <div class="group">
+            <div class="s-title">EX1</div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app5">
+            &lt;p v-html="aLinkToMedium">&lt;/p>
+        &lt;/div>  
+    </code>
+<span class="code-title">JS</span>
+    <code class="js">
+        var app2 = new Vue({
+            el:"#app5", 
+            data:{
+                aLinkToMedium: " &lt;a href='http://kimina-v.github.io' class='link'>kimina-v &lt;/a>"
+            }
+        })
+    </code>
+</pre>
+
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app5">
+                    <p v-html="aLinkToMedium"></p>
+                </div>
+                <script>
+                    var app3 = new Vue({
+                        el:"#app5", 
+                        data:{
+                            aLinkToMedium: "<a href='http://kimina-v.github.io' class='link'>kimina-v</a>"
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+    
+    <a href="vue-post.html" class="prev-link">Prev post</a>
+    <a href="vue3-post.html" class="next-link">Next post</a>
+</body>
+</html>
