@@ -413,6 +413,4 @@ Sass <code class="code">@import</code는 기본적으로 Sass 파일을 가져�
 
 
 
-link [출처_heropy]
-
-[출처_heropy]:https://heropy.blog/2018/01/31/sass/
+link [출처_heropy]https://heropy.blog/2018/01/31/sass/

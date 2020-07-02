@@ -50,5 +50,5 @@ flex: 증가너비 감소너비 기본너비; (px과 같은 단위값이 들어�
 <a href="https://kimina-v.github.io/html/flex-post.html" target="_blank" class="post-link">테스트 확인하기</a>
 
 
-[참고_heropy]https://heropy.blog/2018/11/24/css-flexible-box/
-[참고_moz]https://developer.mozilla.org/ko/docs/Web/CSS/flex
+link [참고_heropy]https://heropy.blog/2018/11/24/css-flexible-box/
+link [참고_moz]https://developer.mozilla.org/ko/docs/Web/CSS/flex
