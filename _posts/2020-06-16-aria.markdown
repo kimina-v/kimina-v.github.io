@@ -1,3 +1,5 @@
+---
+---
 WAI-ARIA
 
 <div class="post-stitle">WAI-ARIA란?</div>
@@ -50,7 +52,7 @@ WAI-ARIA
 <div class="code-title">tablist 사용 예</div>
 
 {% highlight bash %}
-# tablist를 사용한 탭메뉴 예시 
+// tablist를 사용한 탭메뉴 예시 
 <div class="tab_wrap">
     # 탭메뉴 
     # role="tablist"을 사용하여 탭메뉴 역할 부여 
@@ -64,7 +66,7 @@ WAI-ARIA
            # 3. aria-seleceted="{boolen}"를 사용하여 해당 탭이 선택유무 명시
            # 4. 초점을 받지 못하는 li요소에 tabindex="0"을 사용하여 초점을 받게함
  
-   # 탭메뉴 본문 
+   // 탭메뉴 본문 
     <div class="tab_content">           
         <section role="tabpanel" id="section1" aria-labelledby="tab1">탭메뉴1의 본문<／section>
         <section role="tabpanel" id="section2" aria-labelledby="tab2">탭메뉴2의 본문<／section>

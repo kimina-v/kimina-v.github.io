@@ -1,9 +1,11 @@
+---
+---
 GET VS POST
 
 <div class="post-stitle">GET</div>
 <ul>
-    <li>데이터값이 기존 URL 뒤에 <code class="language-plaintext highlighter-rouge">?</code>를 붙여 구분</li>
-    <li>파라미터가 여러개일 경우 <code class="language-plaintext highlighter-rouge">&</code>로 구분</li>
+    <li>데이터값이 기존 URL 뒤에 <code class="code">?</code>를 붙여 구분</li>
+    <li>파라미터가 여러개일 경우 <code class="code">&</code>로 구분</li>
     <li>URL 형식에 맞지 않는 데이터는 인코딩이 반드시 필요</li>
     <li>전송하는 데이터량에 제한이 있음</li>
     <li>디테일하게 페이지를 링크할 수 있음</li>

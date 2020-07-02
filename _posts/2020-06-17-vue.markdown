@@ -1,3 +1,5 @@
+---
+---
 vue.js
 
 <div class="post-stitle">vue.js 란?</div>
@@ -27,7 +29,6 @@ vue.js
 <p class="code-dsec">인스턴스가 생성될 때, 초기화 자업 수행</p>
 <div class="code-title">라이프싸이클 초기화 외에도 개발자가 의도하는 커스텀 로직</div>
 
-``` ruby
     new Vue({
         data: {
             a:1
@@ -36,7 +37,7 @@ vue.js
             console.log("a is: " + this.a) # this = vm 
         }
     })
-``` -->
+-->
 
 원활한 vue test를 위한 <a href="https://kimina-v.github.io/html/vue-post.html" target="_blank" class="post-link">vue post</a> 페이지 
 

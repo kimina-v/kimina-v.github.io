@@ -1,3 +1,5 @@
+---
+---
 CSS Hack
 
 <div class="code-title">IE6 : </div>

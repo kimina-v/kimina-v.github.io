@@ -1,3 +1,5 @@
+---
+---
 작업 참고
 
 <div class="blind">
@@ -34,8 +36,8 @@
 
 <div class="post-stitle">== vs =--</div>
 
-`==` : 값만 비교
-`===` : 값과 타입을 비교
+<code class="code">==</code> : 값만 비교
+<code class="code">===</code> : 값과 타입을 비교
 
 {% highlight bash %}
 if(undefined == null) {

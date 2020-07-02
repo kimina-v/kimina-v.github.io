@@ -1,3 +1,5 @@
+---
+---
 프레임워크와 라이브러리 그리고 플러그인
 
 <div class="post-stitle">프레임워크(Framework)</div>
@@ -5,7 +7,7 @@
 쉽게 말해 장난감 키트가 제공해주는 일정한 부품들과 틀을 가지고 메뉴얼에 포함된 규약을 지키면서 만들어야 할 것이다.<br>
 따라서, <strong><u>장난감 키트를 제공해주는 제조사 = 프레임워크 제공 프로그램</u></strong>
 
-프레임워크 종류로는 `Spring`, `Django`, `Ruby on Rails` 등등...
+프레임워크 종류로는 <code class="code">Spring</code>, <code class="code">Django</code>, <code class="code">Ruby on Rails</code> 등등...
 
 <div class="post-stitle">라이브러리(Library)</div>
 소프트웨어를 개발하기 쉽게 어떤 기능을 제공하는 도구<br>
@@ -13,9 +15,9 @@
 프레임워크에 제공하는 요소와 그것을 사용하기 위한 규약을 지키면 그밖에 나머지는 어떤 라이브러리 가져다 써도 무관하다.
 
 라이브러리의 종류로는<br>
-`Python`에서 `Datetime`, `Pandas`, `Beautifulsoup` ..., <br>
-`Java`에서는 `Guava`, `Apache common library`, ... <br>
-`C++` 에서는 `STL` 등등
+<code class="code">Python</code>에서 <code class="code">Datetime</code>, <code class="code">Pandas</code>, <code class="code">Beautifulsoup</code> ..., <br>
+<code class="code">Java</code>에서는 <code class="code">Guava</code>, <code class="code">Apache common library</code>, ... <br>
+<code class="code">C++</code> 에서는 <code class="code">STL</code> 등등
 
 <div class="notice-title">요약</div>
 <ul>
@@ -29,7 +31,7 @@
 기존의 기능을 확장할 수 있게 도와주는 프로그램.<br>
 jQuery 플러그인은 주로 메소드로 많이 사용.
 
-jQuery 플러그인 종류 `modal`, `datepicker` 등등....
+jQuery 플러그인 종류 <code class="code">modal</code>, <code class="code">datepicker</code> 등등....
 
 
 <div class="post-stitle">HTML 플러그인</div>
@@ -37,7 +39,7 @@ HTML 플러그인이란 웹 브라우저의 표준 기능을 확장해 주는 �
 플러그인은 object 요소나 embed 요소를 사용하여 HTML 문서에 추가
 
 
-플러그인 종류 `Java Applet`, `Flash Player`, `Pdf Reader` 등등...
+플러그인 종류 <code class="code">Java Applet</code>, <code class="code">Flash Player</code>, <code class="code">Pdf Reader</code> 등등...
 
 [출처_새로비]https://engkimbs.tistory.com/673
 [출처_Z]https://www.zerocho.com/category/jQuery/post/57b1aca87e1bdb1500a68110

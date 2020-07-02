@@ -1,9 +1,7 @@
 ---
-title:  "github"
-date:   2020-06-11
-categories: [git_branch, git, github]
-tags: [git_branch, git, github]
 ---
+github
+
 <ul>
     <li>git config --global user.name “user nsme”</li>
     <li>git config --global user.email “user email”</li>
@@ -17,6 +15,4 @@ tags: [git_branch, git, github]
     <li><code class="language-plaintext highlighter-rouge">git push origin master</code> 커밋된 파일 적용</li>
 </ul>
 
-link [출처_site]
-
-[출처_site]:https://recoveryman.tistory.com/321
+[출처_site]https://recoveryman.tistory.com/321

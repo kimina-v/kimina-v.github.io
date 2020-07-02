@@ -1,3 +1,5 @@
+---
+---
 Sass SCSS
 
 <div class="post-stitle">Sass 와 SCSS의 차이</div>
@@ -285,7 +287,7 @@ CSS
 
 <div class="post-stitle">!global 전역변수 만들기</div>
 
-`!global` 플래그를 사용하면 변수의 유효범위를 전역(Global)로 설정
+<code class="code">!global</code 플래그를 사용하면 변수의 유효범위를 전역(Global)로 설정
 
 SCSS
 {% highlight bash %}
@@ -341,7 +343,7 @@ CSS
 
 <div class="post-stitle">!default 초깃값 설정</div>
 
-`!default` 플래그는 할당되지 않은 변수의 초깃값을 설정<br>즉, 할당되어있는 변수가 있다면 변수가 기존 할당 값을 사용
+<code class="code">!default</code 플래그는 할당되지 않은 변수의 초깃값을 설정<br>즉, 할당되어있는 변수가 있다면 변수가 기존 할당 값을 사용
 
 SCSS
 {% highlight bash %}
@@ -379,17 +381,17 @@ $color-active: blue !default;
 
 <div class="post-stitle">import 가져오기</div>
 
-`@import` 로 외부에서 가져온 Sass 파일은 모두 단일 CSS 출력 파일로 병합.<br>
+<code class="code">@import</code 로 외부에서 가져온 Sass 파일은 모두 단일 CSS 출력 파일로 병합.<br>
 또한, 가져온 파일에 정의된 모든 변수 또는 Mixins 등을 주 파일에서 사용 가능.
 
-Sass `@import`는 기본적으로 Sass 파일을 가져오지만, CSS `@import` 규칙으로 컴파일되는 몇 가지 상황으로는,
+Sass <code class="code">@import</code는 기본적으로 Sass 파일을 가져오지만, CSS <code class="code">@import</code 규칙으로 컴파일되는 몇 가지 상황으로는,
 
-- 파일 확장자가 `.css`일 떄<br>
-- 파일 이름이 `http://`로 시작하는 경우
-- `url()`이 붙었을 경우
+- 파일 확장자가 <code class="code">.css</code일 떄<br>
+- 파일 이름이 <code class="code">http://</code>로 시작하는 경우
+- <code class="code">url()</code>이 붙었을 경우
 - 미디어쿼리가 있는 경우
 
-`@import` 규칙대로 컴파일
+<code class="code">@import</code> 규칙대로 컴파일
 
 {% highlight bash %}
 @import "hello.css";
@@ -400,7 +402,7 @@ Sass `@import`는 기본적으로 Sass 파일을 가져오지만, CSS `@import` 
 
 <div class="post-stitle">여러 파일 가져오기</div>
 
-`,` 로 구문
+<code class="code">,</code> 로 구문
 
 {% highlight bash %}
 @import "header", "footer";
