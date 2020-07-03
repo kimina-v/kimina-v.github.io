@@ -384,7 +384,7 @@ $color-active: blue !default;
 <code class="code">@import</code> 로 외부에서 가져온 Sass 파일은 모두 단일 CSS 출력 파일로 병합.<br>
 또한, 가져온 파일에 정의된 모든 변수 또는 Mixins 등을 주 파일에서 사용 가능.
 
-Sass <code class="code">@import</code>는 기본적으로 Sass 파일을 가져오지만, CSS <code class="code">@import</code 규칙으로 컴파일되는 몇 가지 상황으로는,
+Sass <code class="code">@import</code>는 기본적으로 Sass 파일을 가져오지만, CSS <code class="code">@import</code> 규칙으로 컴파일되는 몇 가지 상황으로는,
 
 - 파일 확장자가 <code class="code">.css</code>일 떄<br>
 - 파일 이름이 <code class="code">http://</code>로 시작하는 경우
