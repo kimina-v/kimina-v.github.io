@@ -402,7 +402,7 @@ hr {
         font-size:1.35em;
         color:#222;
         font-weight:bold;
-        &::before{
+        &:before{
             content:"√ ";
         }
     }
