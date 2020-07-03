@@ -633,4 +633,7 @@ hr {
 
 
  /* dark */
- .dark{background:#000;}
+ .dark{
+     background:url($url-img+"cover.jpg");
+     background-size:100% auto;
+}
