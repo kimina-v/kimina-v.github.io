@@ -398,7 +398,7 @@ hr {
  .blog-content{
     .post-stitle{
         display:block;
-        margin:1.5em 0 1em;
+        margin:1.5em 0 .7em;
         font-size:1.35em;
         color:#222;
         font-weight:bold;
@@ -408,6 +408,9 @@ hr {
     }
     .post-stitle ~ .post-stitle{
         margin-top:2.2em;
+    }
+    .post-stitle + .list{
+        padding-top:0;
     }
     .group-title{
         font-weight:bold;
@@ -627,3 +630,7 @@ hr {
         border-radius:3px;
     }
  }
+
+
+ /* dark */
+ .dark{background:#000;}
