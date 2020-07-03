@@ -287,7 +287,7 @@ CSS
 
 <div class="post-stitle">!global 전역변수 만들기</div>
 
-<code class="code">!global</code 플래그를 사용하면 변수의 유효범위를 전역(Global)로 설정
+<code class="code">!global</code> 플래그를 사용하면 변수의 유효범위를 전역(Global)로 설정
 
 SCSS
 {% highlight bash %}
@@ -343,7 +343,7 @@ CSS
 
 <div class="post-stitle">!default 초깃값 설정</div>
 
-<code class="code">!default</code 플래그는 할당되지 않은 변수의 초깃값을 설정<br>즉, 할당되어있는 변수가 있다면 변수가 기존 할당 값을 사용
+<code class="code">!default</code> 플래그는 할당되지 않은 변수의 초깃값을 설정<br>즉, 할당되어있는 변수가 있다면 변수가 기존 할당 값을 사용
 
 SCSS
 {% highlight bash %}
