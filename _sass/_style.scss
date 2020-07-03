@@ -391,6 +391,11 @@ hr {
             font-size:.95em;
         }
     }
+ }
+
+/* blog
+ * * * * * * * * * * */
+ .blog-content{
     .post-stitle{
         display:block;
         margin:1.5em 0 1em;
@@ -404,11 +409,6 @@ hr {
     .post-stitle ~ .post-stitle{
         margin-top:2.2em;
     }
- }
-
-/* blog
- * * * * * * * * * * */
- .blog-content{
     .group-title{
         font-weight:bold;
         font-size:1.1em;
