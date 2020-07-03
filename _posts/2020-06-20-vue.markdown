@@ -43,8 +43,8 @@ title: vue.js
 
 
 <hr style="margin-top:30px;">
-link
-[참고1](https://medium.com/@hozacho/맨땅에-vuejs-리스트-462d88047893)
-[참고2](https://kr.vuejs.org/v2/guide/index.html)
+link : 
+[참고1](https://medium.com/@hozacho/맨땅에-vuejs-리스트-462d88047893), 
+[참고2](https://kr.vuejs.org/v2/guide/index.html), 
 [vue_강의](https://www.inflearn.com/course/vue-pwa-vue-js-기본/#description)
 

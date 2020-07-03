@@ -23,5 +23,5 @@ EX) <span class="bg-yl">www.example-url.com/resources?name1=value1&name2=value2<
 </ul>
 
 <hr style="margin-top:30px;">
-link 
+link : 
 [출처_hongsii](https://hongsii.github.io/2017/08/02/what-is-the-difference-get-and-post/)

@@ -455,6 +455,6 @@ title: WAI-ARIA
 </ul>
 
 <hr style="margin-top:30px;">
-link 
-[출처-eatdesinglove](https://eatdesignlove.github.io/post/first-WAI-ARIA)
+link : 
+[출처-eatdesinglove](https://eatdesignlove.github.io/post/first-WAI-ARIA), 
 [출차-맑은](https://www.biew.co.kr/36)

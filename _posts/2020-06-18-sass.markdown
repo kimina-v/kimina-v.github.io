@@ -412,5 +412,5 @@ Sass <code class="code">@import</code는 기본적으로 Sass 파일을 가져�
 
 
 <hr style="margin-top:30px;">
-link 
+link  : 
 [출처_heropy](https://heropy.blog/2018/01/31/sass/)
