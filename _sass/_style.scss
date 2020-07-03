@@ -311,7 +311,7 @@ hr {
      font-weight:bold;
      margin-bottom:0.5em;
      position:relative;
-     ::before{
+     &::before{
          content:"";
          width:4px;
          height:.7em;
@@ -372,7 +372,7 @@ hr {
         padding-right:8px;
         display:inline-block;
         border-bottom:1px solid #555;
-        ::after{
+        &::after{
             content: "";
             width:0px;
             height:0px;
@@ -397,7 +397,7 @@ hr {
         font-size:1.35em;
         color:#222;
         font-weight:bold;
-        ::before{
+        &::before{
             content:"√ ";
         }
     }
@@ -423,7 +423,7 @@ hr {
         display:block;
         font-weight:bold;
         color:#000;
-        ::before{
+        &::before{
             content:" ";
             width:4px;
             height:4px;
@@ -436,7 +436,7 @@ hr {
     }
     .blick-title{
         font-size:1.1em;
-        ::before{
+        &::before{
             content:" ";
             display:inline-block;
             width:2px;
@@ -453,16 +453,16 @@ hr {
         font-weight:bold;
         margin-bottom:.5em;
         line-height:1.4;
-        + .title-desc{
-            margin:-.2em 0 .5em;
-            font-size:.9em;
-            line-height:1.4;
-        }
+    }
+    .code-title + .title-desc{
+        margin:-.2em 0 .5em;
+        font-size:.9em;
+        line-height:1.4;
     }
     .result-title{
         font-size:1.05em;
         font-weight:bold;
-        ::before{
+        &::before{
             content:"※ ";
             font-size:.5em;
             vertical-align:top;
@@ -485,7 +485,7 @@ hr {
         position:relative;
         border-bottom:1px solid #555;
         padding-right:8px;
-        ::after{
+        &::after{
             content:"";
             width: 0px;
             height: 0px;
@@ -503,7 +503,7 @@ hr {
     }
     .noti-text{
         margin-bottom:1em;
-        ::before{
+        &::before{
             content:"! "
         }
     }
