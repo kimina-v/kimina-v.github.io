@@ -347,15 +347,16 @@ hr {
         background:#1b5e20;
         content:"";
         position:absolute;
-        top:6px;
+        top:3px;
         left:0;
     }
 }
-.kimina-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 2px solid transparent;
+.content{
+    .kimina-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
 }
 
 /* project
