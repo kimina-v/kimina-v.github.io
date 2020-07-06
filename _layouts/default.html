@@ -62,7 +62,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
         $('.btn-dark').on('click',function(){
-            $(this).parent('body').addClass('dark');
+            $(this).parent('body').toggleClass('dark');
             if($('body').hasClass('dark')){
                 $('.btn-dark').html('라이트모드');
             }else{
