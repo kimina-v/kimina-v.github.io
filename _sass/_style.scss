@@ -634,8 +634,13 @@ hr {
 
  /* dark */
  .darkmode--activated{
-     .wrapper *{
-         color:#fff;
+     .wrapper{
+         .pate-title{
+             color:#Fff;
+         }
+        .project-title{
+            color:#fff;
+        }
      }
      .button{
          background:none;
