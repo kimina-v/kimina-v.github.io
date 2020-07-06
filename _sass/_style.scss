@@ -650,9 +650,10 @@ hr {
     }
     .darkmode-toggle{
         border-radius:50%;
-        background:url($url-img/ico-dark.png) 50% 50%;
+        background-position:50% 50%;
+        background:url($url-img/ico-dark.png);
     }
     .darkmode-toggle.darkmode-toggle--white{
-        background:url($url-img/ico-light.png) 50% 50%;
+        background:#323232 url($url-img/ico-light.png);
     }
 }
