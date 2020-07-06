@@ -635,7 +635,13 @@ hr {
  /* dark */
  .dark{
      background:#222;
-     *{
+     hr{
+         border-top-color:#ddd;
+     }
+     .wrapper *{
          color:#fff;
+     }
+     .button{
+         background:none;
      }
 }
