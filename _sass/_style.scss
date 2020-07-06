@@ -321,6 +321,12 @@ hr {
          display:inline-block;
         }
     }
+.darkmode-toggle{
+    border-radius:50%;
+    background-position:50% 50%;
+    background:url($url-img/ico-dark.png);
+}
+    
     
 /* about
  * * * * * * * * * * */
@@ -631,7 +637,6 @@ hr {
     }
  }
 
-
  /* dark */
  .darkmode--activated{
     .wrapper{
@@ -647,11 +652,6 @@ hr {
     }
     .underline{
         border-bottom-color:#fff;
-    }
-    .darkmode-toggle{
-        border-radius:50%;
-        background-position:50% 50%;
-        background:url($url-img/ico-dark.png);
     }
     .darkmode-toggle.darkmode-toggle--white{
         background:#323232 url($url-img/ico-light.png);
