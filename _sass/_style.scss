@@ -634,14 +634,13 @@ hr {
 
  /* dark */
  .darkmode--activated{
-     background:#222;
-     hr{
-         border-top-color:#ddd;
-     }
      .wrapper *{
          color:#fff;
      }
      .button{
          background:none;
+     }
+     .underline{
+         border-bottom-color:#fff;
      }
 }
