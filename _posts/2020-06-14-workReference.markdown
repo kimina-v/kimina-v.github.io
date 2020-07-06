@@ -65,3 +65,9 @@ color:transparent; # 추가.
 text-indent:100%;white-space:nowrap;overflow:hidden; # 추가
 
 {% endhighlight %}
+
+<!-- function 방식 onClick="myFunction()"
+function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark");
+} -->
