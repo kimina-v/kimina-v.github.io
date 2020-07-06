@@ -648,11 +648,11 @@ hr {
     .underline{
         border-bottom-color:#fff;
     }
-    // .darkmode-toggle.darkmode-toggle--white{
-    //     background:url($url-img+"/ico-dark.png") 50% 50%;
-    //     border-radius:50%;;
-    // }
-    // .darkmode-toggle{
-    //     background:url($url-img+"/ico-light.png") 50% 50%;
-    // }
+    .darkmode-toggle{
+        border-radius:50%;
+        background:url($url-img+"/ico-dark.png") 50% 50%;
+    }
+    .darkmode-toggle.darkmode-toggle--white{
+        background:url($url-img+"/ico-light.png") 50% 50%;
+    }
 }
