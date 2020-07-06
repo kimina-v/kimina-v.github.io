@@ -634,18 +634,25 @@ hr {
 
  /* dark */
  .darkmode--activated{
-     .wrapper{
-         .pate-title{
-             color:#Fff;
-         }
+    .wrapper{
+        .pate-title{
+            color:#Fff;
+        }
         .project-title{
             color:#fff;
         }
-     }
-     .button{
-         background:none;
-     }
-     .underline{
-         border-bottom-color:#fff;
-     }
+    }
+    .button{
+        background:none;
+    }
+    .underline{
+        border-bottom-color:#fff;
+    }
+    .darkmode-laye{
+        background:url($url-img+"/ico-dark.png") 50% 50%;
+        border-radius:50%;;
+    }
+    .darkmode-layer.darkmode-layer--expanded{
+        background:url($url-img+"/ico-light.png") 50% 50%;
+    }
 }
