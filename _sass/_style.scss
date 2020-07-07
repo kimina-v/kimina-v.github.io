@@ -323,7 +323,7 @@ hr {
     }
 .darkmode-toggle{
     border-radius:50%;
-    background:url($url-imgico-dark.png);
+    // background:url($url-imgico-dark.png);
     background-position:50% 50%;
 }
     
@@ -653,7 +653,7 @@ hr {
     .underline{
         border-bottom-color:#fff;
     }
-    .darkmode-toggle.darkmode-toggle--white{
-        background:#323232 url($url-imgico-light.png);
-    }
+    // .darkmode-toggle.darkmode-toggle--white{
+    //     background:#323232 url($url-imgico-light.png);
+    // }
 }
