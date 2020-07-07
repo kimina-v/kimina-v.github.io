@@ -1,0 +1,97 @@
+---
+title: 템플릿 엔진 Pug(Jade)
+---
+
+<div class="post-stitle">Pug의 장점</div>
+
+* HTML을 간단하게 표현.
+* 마크업 문법보다 코드량이 적다.
+* JS연산 결과를 쉽게 보여줄 수 있다.
+* 정적인 부분과 동적인 부분을 따로 할 수 있다.
+* 타 Express Engine보다 Google Trend 수치가 높다.
+
+<div class="post-stitle">Pug 문법 특징</div>
+
+* 열고 닫는 태그가 없다. 
+* 들여쓰리고 종속성을 구별.
+* ID와 Class 선언한 태그사용 시 CSS 선택자 사용.
+* 태그 선언 없이 ID,Class만 선언 시 div 태그 사용.
+* 태그 속성은 ()괄호 사용.
+* 여러줄 사용 시 |사용.
+* script나 css로 태그 사용 시 끝에 .사용.
+* 템플릿 안에서 javascript 사용 시 앞에 -사용.
+
+<div class="post-stitle">Pug 사용 예</div>
+
+{% highlight bash %}
+doctype html
+html(lang='ko')
+    head
+        title Pug tutorial
+        style.
+            .title {
+                color: blue;
+            }
+        script.
+            console.log('This is log');
+    body
+        #header
+            h1.title Header
+        #main
+            div Main
+            ul
+                - var items = [1, 2, 3, 4, 5]
+                each item in items
+                    li= item
+            pre
+                | This is
+                | multiline
+        #footer
+            p Footer
+{% endhighlight %}
+
+<div class="code-title">HTML로 변환</div>
+
+{% highlight bash %}
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <title>Pug tutorial</title>
+    <style>
+        .title {
+            color: blue;
+        }
+    </style>
+    <script>
+        console.log('This is log');
+    </script>
+    </head>
+    <body>
+        <div id="header">
+            <h1 class="title">Header</h1>
+        </div>
+        <div id="main">
+            <div>Main</div>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+            <pre>
+                This is
+                multiline
+            </pre>
+        </div>
+        <div id="footer">
+            <p>Footer</p>
+        </div>
+    </body>
+</html>
+{% endhighlight %}
+
+
+<hr style="margin-top:30px;">
+link : 
+[출처](https://iseongho.github.io/posts/node-template-engine-pug/)
