@@ -319,12 +319,12 @@ hr {
          background:#088;
          margin-right:10px;
          display:inline-block;
-        }
     }
-    .blind{
-        display:none;
-    }
-    
+}
+.blind{
+    display:none;
+}
+
 /* about
  * * * * * * * * * * */
 .about-content{
@@ -633,21 +633,3 @@ hr {
         border-radius:3px;
     }
  }
-
- /* dark */
- .darkmode--activated{
-    .wrapper{
-        .pate-title{
-            color:#Fff;
-        }
-        .project-title{
-            color:#fff;
-        }
-    }
-    .button{
-        background:none;
-    }
-    .underline{
-        border-bottom-color:#fff;
-    }
-}
