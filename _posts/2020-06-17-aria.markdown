@@ -454,8 +454,6 @@ title: WAI-ARIA
     <li>모든 브라우저와 보조기기가 WAI-ARIA를 지원하지 않기 때문에 지원하는 브라우저와 기기 정보를 확인하고 적용</li>
 </ul>
 
-aria 예제 <a href="https://yongbeomkim.github.io/html/html-web-aria/" target="_blank">참고사이트</a>
-
 <hr style="margin-top:30px;">
 link : 
 [출처-eatdesinglove](https://eatdesignlove.github.io/post/first-WAI-ARIA), 
