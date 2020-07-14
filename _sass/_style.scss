@@ -392,8 +392,21 @@ hr {
         margin:1em 0 0;
         li{
             font-size:.95em;
+            strong{
+                cursor:pointer;
+            }
+            &:hover{
+                color:$accent-color;
+            }
         }
     }
+    .detail{
+        font-size:.9em;
+        color:$light-color;
+        line-height:20px;
+        margin-top:10px;
+    }
+
  }
 
 /* blog
