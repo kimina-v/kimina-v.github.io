@@ -402,13 +402,26 @@ hr {
     }
     .detail{
         margin-top:10px;
+        position:relative;
+        padding-left:20px;
         p{
             font-size:.9em;
             color:$light-color;
             line-height:20px;
             margin:0;
         }
-        p ~ p{margin-top:3px;}
+        p ~ p{
+            margin-top:3px;
+        }
+        &:after{
+            width:5px;
+            height:100%;
+            background:#777;
+            position:absolute;
+            top:0;
+            left:0;
+            content:"";
+        }
     }
 
  }
