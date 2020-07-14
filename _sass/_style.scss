@@ -394,17 +394,20 @@ hr {
             font-size:.95em;
             strong{
                 cursor:pointer;
-            }
-            &:hover{
-                color:$accent-color;
+                &:hover{
+                    color:$accent-color;
+                }
             }
         }
     }
     .detail{
-        font-size:.9em;
-        color:$light-color;
-        line-height:20px;
         margin-top:10px;
+        p{
+            font-size:.9em;
+            color:$light-color;
+            line-height:20px;
+            margin:0;
+        }
     }
 
  }

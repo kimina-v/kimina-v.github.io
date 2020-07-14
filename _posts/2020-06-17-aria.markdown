@@ -459,8 +459,4 @@ aria 예제 <a href="https://yongbeomkim.github.io/html/html-web-aria/" target="
 <hr style="margin-top:30px;">
 link : 
 [출처-eatdesinglove](https://eatdesignlove.github.io/post/first-WAI-ARIA), 
-<<<<<<< HEAD
 [출처-맑은](https://www.biew.co.kr/36)
-=======
-[출처-맑은](https://www.biew.co.kr/36)
->>>>>>> 0de201eae42740117d0ed7ebfda8e7bdbfa99979
