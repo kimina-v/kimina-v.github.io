@@ -390,12 +390,15 @@ hr {
     }
     .project-content{
         margin:1em 0 0;
-        li{
-            font-size:.95em;
-            strong{
-                cursor:pointer;
-                &:hover{
-                    color:$accent-color;
+        ul{
+            padding-right:0;
+            li{
+                font-size:.95em;
+                strong{
+                    cursor:pointer;
+                    &:hover{
+                        color:$accent-color;
+                    }
                 }
             }
         }
