@@ -28,19 +28,36 @@
         table tr th:nth-child(2){border-right:2psolid #999}
         table tr td:last-child{border-right:none;}
         table tr:last-child *{border-bottom:none;}
-        div{padding:50px;}
+        .group{padding:50px;}
+        .group ~ .group{border-top:1px solid #ddd;}
+        .title{cursor:pointer;}
         .c{color:#f09;font-weight:bold;}
         .n{color:#f00;font-weight:bold;text-align:left;padding-left:10px;}
         .n span{font-size:12px;color:#333;display:inline-block;margin-left:10px;}
+        .num{text-align:right;margin-top:-38px;padding-bottom:20px;}
+        .num > div, .total > div{display:inline-block;}
+        .num span, .total span{font-weight:bold;display:inline-block;margin-left:5px;}
+        .total{text-align:center;}
     </style>
-    <script>
-        $('.toggle > p').on('click',function(){
-            $(this).siblings(table).slideToggle();
-        })
-    </script>
-    <div class="middle toggle">
-        <p>맞는</p>
-        <table>
+    <div class="total">
+        <div class="t-top">TOP:<span></span></div>
+        <div class="t-bottom">BOTTOM:<span></span></div>
+        <div class="t-skirt">SKIRT:<span></span></div>
+        <div class="t-jumper">JUMPER:<span></span></div>
+        <div class="t-ops">OPS:<span></span></div>
+        <div class="t-set">SET:<span></span></div>
+    </div>
+    <div class="middle group">
+        <p class="title">맞는</p>
+        <div class="num m-num">
+            <div class="n-top">TOP:<span></span></div>
+            <div class="n-bottom">BOTTOM:<span></span></div>
+            <div class="n-skirt">SKIRT:<span></span></div>
+            <div class="n-jumper">JUMPER:<span></span></div>
+            <div class="n-ops">OPS:<span></span></div>
+            <div class="n-set">SET:<span></span></div>
+        </div>
+        <table class="list">
             <colgorup>
                 <col style="width:20%" span="5">
             </colgorup>
@@ -269,6 +286,13 @@
                     <td>4y</td>
                     <td></td>
                 </tr>
+                <tr class="jumper">
+                    <th>봄/가을/초겨울</th>
+                    <th>로디니</th>
+                    <td>재규어 점퍼</td>
+                    <td>116</td>
+                    <td></td>
+                </tr>
                 <tr class="bottom">
                     <th>봄/여름/가을</th>
                     <th>타오 바지</th>
@@ -279,7 +303,7 @@
                 <tr class="skirt">
                     <th>봄/여름/가을</th>
                     <th>보보 롱치마</th>
-                    <td>채리</td>
+                    <td>체리</td>
                     <td>4</td>
                     <td></td>
                 </tr>
@@ -287,6 +311,13 @@
                     <th>봄/여름/가을</th>
                     <th>보보 롱치마</th>
                     <td>사선</td>
+                    <td>4</td>
+                    <td></td>
+                </tr>
+                <tr class="skirt">
+                    <th>봄/여름/가을</th>
+                    <th>울프 롱치마</th>
+                    <td></td>
                     <td>4</td>
                     <td></td>
                 </tr>
@@ -342,9 +373,17 @@
             </tbody>
         </table>
     </div>
-    <div class="large toggle">
-        <p>큰</p>
-        <table>
+    <div class="large group">
+        <p class="title">큰</p>
+        <div class="num b-num">
+            <div class="n-top">TOP:<span></span></div>
+            <div class="n-bottom">BOTTOM:<span></span></div>
+            <div class="n-skirt">SKIRT:<span></span></div>
+            <div class="n-jumper">JUMPER:<span></span></div>
+            <div class="n-ops">OPS:<span></span></div>
+            <div class="n-set">SET:<span></span></div>
+        </div>
+        <table class="list">
             <colgorup>
                 <col style="width:20%" span="5">
             </colgorup>
@@ -450,16 +489,21 @@
                 <tr class="ops">
                     <th>겨율</th>
                     <th>휴고 ops</th>
-                    <td>연노렁?</td>
+                    <td>악어</td>
                     <td>6y</td>
                     <td></td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div class="sell toggle">
-        <p>판매</p>
-        <table>
+    <div class="sell group">
+        <p class="title">판매</p>
+        <div class="num s-num">
+            <div class="n-total">TOTAL:<span></span></div>
+            <div class="n-sel">SEL:<span></span></div>
+            <div class="n-remain">REMAIN:<span></span></div>
+        </div>
+        <table class="list">
             <colgorup>
                 <col style="width:20%" span="5">
             </colgorup>
@@ -705,36 +749,97 @@
             </tbody>
         </table>
     </div>
-    <div class="list toggle">
-        <p>기타</p>
-        <ul>
-            <li>게스 청반바지</li>
-            <li>나이키 핑크 반바지</li>
-            <li>조던 상하 셋트 + 레깅스</li>
-            <li>자라 떙땡이 반바지</li>
-            <li>남대문 꽃롱블라우스</li>
-            <li>남대문 꽃원피스</li>
-            <li>남대문 나시원피스</li>
-            <li>남대문 꽃 나시원피스</li>
-            <li>남대문 샤 원피스</li>
-            <li>은진 나시</li>
-            <li>성매 치마</li>
-            <li>아디다스 불꽃티</li>
-            <li>남대문 청반바지</li>
-            <li>남대문 청치마</li>
-            <li>갭 핑크멜빵치마</li>
-            <li>폴로 셔츠 (핑크/데님)</li>
-            <li>폴로 긴팔 (파랑/네이비)</li>
-            <li>폴로 반팔 네이비</li>
-            <li>자라 흰펀칭 나시/바지</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+    <div class="etc group">
+        <p class="title">기타</p>
+        <div class="num e-num">
+            <div class="n-top">TOP:<span></span></div>
+            <div class="n-bottom">BOTTOM:<span></span></div>
+            <div class="n-skirt">SKIRT:<span></span></div>
+            <div class="n-jumper">JUMPER:<span></span></div>
+            <div class="n-ops">OPS:<span></span></div>
+            <div class="n-set">SET:<span></span></div>
+        </div>
+        <ul class="list">
+            <li class="top">게스 청반바지</li>
+            <li class="bottom">나이키 핑크 반바지</li>
+            <li class="set">조던 상하 셋트 + 레깅스</li>
+            <li class="bottom">자라 떙땡이 반바지</li>
+            <li class="ops">남대문 꽃롱블라우스</li>
+            <li class="ops">남대문 꽃원피스</li>
+            <li class="ops">남대문 나시원피스</li>
+            <li class="ops">남대문 꽃 나시원피스</li>
+            <li class="ops">남대문 샤 원피스</li>
+            <li class="top">은진 나시</li>
+            <li class="skirt">성매 치마</li>
+            <li class="top">아디다스 불꽃티</li>
+            <li class="bottom">남대문 청반바지</li>
+            <li class="bottom">남대문 청치마</li>
+            <li class="skiry">갭 핑크멜빵치마</li>
+            <li class="top">폴로 셔츠 (핑크/데님)</li>
+            <li class="top">폴로 긴팔 (파랑/네이비)</li>
+            <li class="top">폴로 반팔 네이비</li>
+            <li class="set">자라 흰펀칭 나시/바지</li>
         </ul>
     </div>
+    <script>
+        $(function(){
+            $('.group .title').on('click',function(){
+                $(this).siblings('.list').toggle();
+            });
+            //middle
+            var mnTop = $('.middle .top').length;
+            $('.m-num .n-top span').html(mnTop);
+            var mnBottom = $('.middle .bottom').length;
+            $('.m-num .n-bottom span').html(mnBottom);
+            var mnSkirt = $('.middle .skirt').length;
+            $('.m-num .n-skirt span').html(mnSkirt);
+            var mnJumper = $('.middle .jumper').length;
+            $('.m-num .n-jumper span').html(mnJumper);
+            var mnOps = $('.middle .ops').length;
+            $('.m-num .n-ops span').html(mnOps);
+            var mnSet = $('.middle .set').length;
+            $('.m-num .n-set span').html(mnSet);
+            //large
+            var bnTop = $('.large .top').length;
+            $('.b-num .n-top span').html(bnTop);
+            var bnBottom = $('.large .bottom').length;
+            $('.b-num .n-bottom span').html(bnBottom);
+            var bnSkirt = $('.large .skirt').length;
+            $('.b-num .n-skirt span').html(bnSkirt);
+            var bnJumper = $('.large .jumper').length;
+            $('.b-num .n-jumper span').html(bnJumper);
+            var bnOps = $('.large .ops').length;
+            $('.b-num .n-ops span').html(bnOps);
+            var bnSet = $('.large .set').length;
+            $('.b-num .n-set span').html(bnSet);
+            //sel
+            var total = $('.sell tr').length;
+            $('.s-num .n-total span').html(total);
+            var sel = $('.sell .c').length;
+            $('.s-num .n-sel span').html(sel);
+            $('.s-num .n-remain span').html(Number(total-sel));
+            //etc
+            var enTop = $('.etc .top').length;
+            $('.e-num .n-top span').html(enTop);
+            var enBottom = $('.etc .bottom').length;
+            $('.e-num .n-bottom span').html(enBottom);
+            var enSkirt = $('.etc .skirt').length;
+            $('.e-num .n-skirt span').html(enTop);
+            var enJumper = $('.etc .jumper').length;
+            $('.e-num .n-jumper span').html(enTop);
+            var enOps = $('.etc .ops').length;
+            $('.e-num .n-ops span').html(enTop);
+            var enSet = $('.etc .set').length;
+            $('.e-num .n-set span').html(enTop);
+            //total
+            $('.total .t-top span').html(Number(mnTop+bnTop+enTop))
+            $('.total .t-bottom span').html(Number(mnBottom+bnBottom+enBottom))
+            $('.total .t-skirt span').html(Number(mnSkirt+bnSkirt+enSkirt))
+            $('.total .t-jumper span').html(Number(mnJumper+bnJumper+enJumper))
+            $('.total .t-ops span').html(Number(mnOps+bnOps+enOps))
+            $('.total .t-set span').html(Number(mnSet+bnSet+enSet))
+        });
+    </script>
 </body>
 
 </html>
