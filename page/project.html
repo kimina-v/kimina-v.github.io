@@ -9,35 +9,35 @@ layout: default
             <div class="project-content">
                 <ul>
                     <!-- <li>2020.06 ~ 2021.05 <strong>신세계 면세점 리뉴얼 구축 PRJ</strong></li> -->
-                    <li>2019.03 ~ 2020.05 <strong>하이마트 운영</strong>
+                    <li>2019.03 ~ 2020.05 <strong class="detail-view">하이마트 운영</strong>
                         <div class="detail">
                             <p>모바일 주문서 개편, 장바구니 개편, 기획전 템플릿 리뉴얼, 홈케어 서비스 리뉴얼 등 리뉴얼, 개편 및 운영유지보수</p>
                             <p>PC 대/중/소/세 카테고리 개편, 상단 GNB 공통 개편, 기획전 템플릿 리뉴얼, 홈케어 서비스 리뉴얼 등 리뉴얼, 개편 및 운영유지보수</p>
                         </div>
                     </li>
-                    <li>2020.01 ~ 2020.02 <strong>가천대 길병원 리뉴얼</strong>
+                    <li>2020.01 ~ 2020.02 <strong class="detail-view">가천대 길병원 리뉴얼</strong>
                         <div class="detail">
                             <p>진료과/의료진, 진료예약, 고객서비스, 회원가입, 장례식장 홈페이지</p>
                         </div>
                     </li>
-                    <li>2018.10 ~ 2019.01 <strong>리바트 신규 구축(윌리엄스소노마/포터리반/포터리반키즈/웨스트엘룸)</strong>
+                    <li>2018.10 ~ 2019.01 <strong class="detail-view">리바트 신규 구축(윌리엄스소노마/포터리반/포터리반키즈/웨스트엘룸)</strong>
                         <div class="detail">
                             <p>서브 페이지 공통 가이드 작업, PC/MOBILE 60% 페이지 작업</p>
                         </div>
                     </li>
-                    <li>2018.05 ~ 2018.07 <strong>상명대학교 리뉴얼 프로젝트 참여</strong>
+                    <li>2018.05 ~ 2018.07 <strong class="detail-view">상명대학교 리뉴얼 프로젝트 참여</strong>
                         <div class="detail">
                             <p>예술디자인대학원, 상명행복어린이집, 상명수련원, 국제언어문화교육원, 학생상담센터, 박물관, 발전기금팀 등 작업</p>
                         </div>
                     </li>
                     <li>2018.03 ~ 2018.04 <strong>롯데슈퍼 기가지니 연동</strong></li>
-                    <li>2017.12 ~ 2017.12 <strong>고평창 앱, pc</strong>
+                    <li>2017.12 ~ 2017.12 <strong class="detail-view">고평창 앱, pc</strong>
                         <div class="detail">
                             <p>오픈 전 작업 오류개선</p>
                         </div>
                     </li>
                     <li>2017.09 ~ 2017.09 <strong>CJ 프레시웨이 앱</strong></li>
-                    <li>2017.08 ~ 2017.09 <strong>K shopping 관리자페이지</strong>
+                    <li>2017.08 ~ 2017.09 <strong class="detail-view">K shopping 관리자페이지</strong>
                         <div class="detail">
                             <p>가이드 및 페이지 작업 50%</p>
                         </div>
@@ -50,7 +50,7 @@ layout: default
                     <li>2017.03 ~ 2017.03 <strong>에코솔루텍 pc</strong></li>
                     <li>2017.03 ~ 2017.03 <strong>auto company pc</strong></li>
                     <li>2017.03 ~ 2017.03 <strong>commax pc</strong></li>
-                    <li>2017.03 ~ 2017.03 <strong>home staytion 관리자 페이지</strong>
+                    <li>2017.03 ~ 2017.03 <strong class="detail-view">home staytion 관리자 페이지</strong>
                         <div class="detail">
                             <p>추가 페이지 작업 및 오류개선</p>
                         </div>
@@ -58,7 +58,7 @@ layout: default
                     <li>2017.02 ~ 2017.02 <strong>에이포스테크놀러지 pc</strong></li>
                     <li>2017.02 ~ 2017.02 <strong>참사랑 선교원 반응형웹</strong></li>
                     <li>2016.10 ~ 2016.11 <strong>강원랜드 하이원 앱</strong></li>
-                    <li>2016.08 ~ 2016.10 <strong>국방부 신규 구축 및 리뉴얼 PRJ</strong>
+                    <li>2016.08 ~ 2016.10 <strong class="detail-view">국방부 신규 구축 및 리뉴얼 PRJ</strong>
                         <div class="detail">
                             <p>함께 뜁시다, 생도마당, 무기고/탄약고, 창조국방 신규</p>
                             <p>조삽본부 인트라넷/인터넷, 전비테세검열단 메인 리뉴얼</p>
@@ -124,4 +124,11 @@ layout: default
         </div>
     </div>
 </div>
+<script>
+    $(function(){
+        $('.detail-view').on('click', function(){
+            $(this).next('.detail').slideToggle();
+        })
+    });
+</script>
 

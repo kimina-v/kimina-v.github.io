@@ -395,15 +395,18 @@ hr {
             li{
                 font-size:.95em;
                 strong{
-                    cursor:pointer;
-                    &:hover{
-                        color:$accent-color;
+                    &.detail-view{
+                        cursor:pointer;
+                        &:hover{
+                            color:$accent-color;
+                        }
                     }
                 }
             }
         }
     }
     .detail{
+        display:none;
         margin-top:10px;
         position:relative;
         padding-left:20px;
