@@ -125,10 +125,11 @@ layout: default
     </div>
 </div>
 <script>
-    $(function(){
-        $('.detail-view').on('click', function(){
+    var pj_toggle(){
+         $('.detail-view').on('click', function(){
             $(this).next('.detail').slideToggle();
-        })
-    });
+        });
+    };
+    pj_toggle();
 </script>
 
