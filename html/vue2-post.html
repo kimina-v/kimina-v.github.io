@@ -136,7 +136,7 @@
                                 return this.title
                             }
                         }
-                    })
+                    }) 
                 </script>
             </div>
             <div class="text"><span class="bg-gn">{{ title }}</span>은 변경 되기 전 값이 출력되고, <span class="bg-gn">{{ sayHello() }}</span>는 변경이 된 이후 값으로 출력되도록 할 떄 사용되는 것이 <code class="code">v-once</code>디렉티브 이다.</div>
@@ -237,15 +237,22 @@
 <span class="code-title">HTML</span>
     <code class="html">
         &lt;div id="app5">
-            &lt;p v-html="aLinkToMedium">&lt;/p>
+            {{ number }}
+            &lt;button v-on:click="rollDice">주사위 던지기&lt;/button>
         &lt;/div>  
     </code>
 <span class="code-title">JS</span>
     <code class="js">
-        var app2 = new Vue({
-            el:"#app5", 
-            data:{
-                aLinkToMedium: " &lt;a href='http://kimina-v.github.io' class='link'>kimina-v &lt;/a>"
+        var app5 = new Vue({
+            el: "#app5", 
+            data: {
+                number: 0,
+            },
+            methods:{
+                rollDice: function(){
+                    let N = Math.floor(Math.random()*6)+1;
+                    this.number = N;
+                }
             }
         })
     </code>
@@ -254,13 +261,68 @@
             <span class="code-title">결과</span>
             <div class="result-box">
                 <div id="app5">
-                    <p v-html="aLinkToMedium"></p>
+                    {{ number }} 
+                    <button v-on:click="rollDice">주사위 던지기</button>
                 </div>
                 <script>
-                    var app3 = new Vue({
-                        el:"#app5", 
-                        data:{
-                            aLinkToMedium: "<a href='http://kimina-v.github.io' class='link'>kimina-v</a>"
+                    var app5 = new Vue({
+                        el: "#app5", 
+                        data: {
+                            number: 0,
+                        },
+                        methods:{
+                            rollDice: function(){
+                                let N = Math.floor(Math.random()*6)+1;
+                                this.number = N;
+                            }
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+        
+        <div class="group">
+            <div class="s-title">EX2</div>
+<pre>
+<span class="code-title">HTML</span>
+    <code class="html">
+        &lt;div id="app6">
+            &lt;p>{{ count }}&lt;/p>
+            &lt;button v-on:click="addCount(2)">2를 더해줘&lt;/button>
+        &lt;/div>
+    </code>
+<span class="code-title">JS</span>
+    <code class="js">
+        var app6 = new Vue({
+            el: "#app6", 
+            data: {
+                count: 0,
+            },
+            methods:{
+                addCount(number) {
+                    this.count = this.count + number
+                }
+            }
+        })
+    </code>
+</pre>
+
+            <span class="code-title">결과</span>
+            <div class="result-box">
+                <div id="app6">
+                    <span>{{ count }}</span>
+                    <button v-on:click="addCount(2)">2를 더해줘</button>
+                </div>
+                <script>
+                    var app6 = new Vue({
+                        el: "#app6", 
+                        data: {
+                            count: 0,
+                        },
+                        methods:{
+                            addCount(number) {
+                                this.count = this.count + number
+                            }
                         }
                     })
                 </script>

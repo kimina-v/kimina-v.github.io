@@ -12,50 +12,6 @@
     
     <script>hljs.initHighlightingOnLoad();</script>
     <div class="page-title">vue.js</div>
-
-    <div class="title">Directive에 JS코드 넣기</div>
-
-    <div class="group-wrap">
-        <div class="group">
-            <div class="s-title">EX1</div>
-            <div class="page-desc">버튼 클릭시 클릭한 횟수가 +1씩 증가하는 application을 만들어보자.<br>클릭한 횟수 저장 변수 <span class="bg-gn">count</span></div>
-<pre>
-<span class="code-title">JS</span>
-    <code class="js">
-        var app = new Vue({
-            el:"#app", 
-            data:{
-               count: 0 // 클릭 횟수 저장 변수
-            }
-        })
-    </code>
-<span class="code-title">HTML</span>
-    <code class="html">
-        &lt;div id="app">
-            {{ count }} // 클릭 수
-            &lt;button v-on:click="count ++">Click!&lt;/button>    
-        &lt;/div>  
-    </code>
-</pre>
-
-            <span class="code-title">결과</span>
-            <div class="result-box">
-                <div id="app">
-                    {{ count }}
-                    <button v-on:click="count ++" class="button">Click!</button>
-                </div>
-                <script>
-                    var app3 = new Vue({
-                        el:"#app", 
-                        data:{
-                            count: 0
-                        }
-                    })
-                </script>
-            </div>
-        </div>
-    </div>
-
     <div class="title">{{ mustache }}에 JS코드 넣기</div>
 
     <div class="group-wrap">
