@@ -32,7 +32,7 @@
     <code class="html">
         &lt;div id="app2">
             {{ count * 3  }}
-            &lt;button v-on:click="count ++">Click!&lt;/button>    
+            &lt;button v-on:click="count ++">Click!&lt;/button>
         &lt;/div>  
     </code>
 </pre>
@@ -79,7 +79,8 @@
             <span class="code-title">결과</span>
             <div class="result-box">
                 <div id="app3">
-                    {{ count * 3 > 10 ? "10보다 큽니다." : "10보다 작거나 같습니다."}}
+                    {{ count * 2 }} : 
+                    {{ count * 2 > 10 ? "10보다 큽니다." : "10보다 작거나 같습니다."}}
                     <button v-on:click="count ++" class="button">Click!</button>
                 </div>
                 <script>
@@ -127,6 +128,7 @@
             <span class="code-title">결과</span>
             <div class="result-box">
                 <div id="app4">
+                    {{ count*3 }} : 
                     {{ isLargerThanTen }}
                     <button v-on:click="count ++" class="button">Click!</button>
                 </div>
@@ -247,7 +249,6 @@
             &lt;span>second count : {{ secondCount }}&lt;/span>
             &lt;span>computed: {{ double }}&lt;/span>
             &lt;span>methods : {{ triple() }}&lt;/span>
-            &lt;button v-on:click="count ++">Click!&lt;/button>    
             &lt;button v-on:click="count ++">Click!&lt;/button>    
             &lt;button v-on:click="secondCount ++">Click!&lt;/button>    
         &lt;/div>  
