@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>반응형</title>
+<meta http-equiv="Cache-Control" content="NO-Cache">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<style>
+    /* reset */
+    body{margin:0;padding:0}
+    ul{list-style:none;padding:0;margin:0}
+
+    body{background:skyblue}
+    ul{font-size:0;width:100%;}
+    li{display:inline-block;width:25%;box-sizing:border-box;padding:8px;/* %로도 가능 */background:burlywood}
+    img{display:block;width:100%}
+    @media screen and (min-width: 769px) {
+   /* 기준을 모바일로 잡을 시 데스크탑에서 사용될 스타일 작석 */
+    }
+    @media screen and (max-width: 1000px) {
+   /* 기준점을 어디에다 두냐에 따라 추가로 사이즈 더 잡기 가능 */
+        body{background:lightseagreen}
+    }
+
+    @media screen and (max-width: 768px) {
+   /* 기준을 데스크탑으로 잡을 시 모바일에서 사용될 스타일 작석 */
+        body{background:pink}
+        li{padding:4px}
+    }
+
+    @media screen and (max-width: 380px) {
+   /* 모바일 하위버전 한번 더 잡고 싶을 때 */
+        body{background:yellowgreen}
+        li{display:block;width:100%}
+    }
+
+
+
+</style>
+</head>
+
+<body class="">
+	<div class="content">
+        <ul>
+            <li><img src="@dior_visual.jpg" alt=""></li>
+            <li><img src="@dior_visual.jpg" alt=""></li>
+            <li><img src="@dior_visual.jpg" alt=""></li>
+            <li><img src="@dior_visual.jpg" alt=""></li>
+        </ul>
+    </div>
+	
+</body>
+</html>
