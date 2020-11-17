@@ -1,0 +1,11 @@
+-moz-appearance:none; /* Firefox */
+-webkit-appearance:none; /* Safari and Chrome */
+appearance:none;
+
+ 
+
+하지만 ie에서는 적용되지 않는 것 같아 찾아보니 아래와 같이 하면 화살표가 사라집니다.
+select::-ms-expand {display:none}
+
+
+https://blog.naver.com/wook2124/221945093099
