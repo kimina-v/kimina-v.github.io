@@ -1,10 +1,10 @@
 @charset "utf-8";
-
+/* 
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
-@font-face {font-family:'TmonMonsori';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');font-weight:normal;font-style:normal;}
-
+@font-face {font-family:'TmonMonsori';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');font-weight:normal;font-style:normal;} */
+/*'Spoqa Han Sans',*/
 body,html,header,footer,aside,nav,section,article,details,figure,figcaption,menu,div,dl,dd,ol,ul,li,form,fieldset,legend,iframe,table,caption,thead,tfoot,tbody,tr,th,td,h1,h2,h3,h4,h5,h6,dt,summary,input,textarea,button,select,datalist,img,embed,object,canvas,audio,video,meter,progress,keygen,a,label,output,dialog,address,blockquote,p,pre,span,b,strong,i,em,dfn,var,u,ins,s,del,q,mark,small,sub,sup,abbr,bdi,bdo,cite,time,rp,rt,code,kbd,samp,acronym,big,frame,frameset,noframes,tt,map,option,hr,*{border:0;padding:0;margin:0;color:inherit;font-size:inherit;line-height:inherit;vertical-align:top}
-body{font-family:'Spoqa Han Sans','맑은고딕',Malgun Gothic,dotum,'돋음', arial, sans-serif; font-size:12px;overflow-y:auto;letter-spacing:-1.2px}
+body{font-family:'맑은고딕',Malgun Gothic,dotum,'돋음', arial, sans-serif;font-size:16px;overflow-y:auto;letter-spacing:-1.2px;color:#505050}
 header,footer,aside,nav,section,article,details,summary,figure,figcaption,menu,command{display:block}
 applet,basefont,dir,strike{display:none}
 q,blockquote{quotes:none;content:none}
@@ -15,6 +15,7 @@ th,td{text-align:center;vertical-align:middle}
 address{font-style:normal}
 label{display:inline-block;*zoom:1}
 a{text-decoration:none;}
+select::-ms-expand{display:none}
 
 a:hover, a:active, a:focus{text-decoration:none;}
 
@@ -25,24 +26,43 @@ a:hover, a:active, a:focus{text-decoration:none;}
 em{font-style:normal;}
 img{max-width:100%;}
 .eng{font-family:'tahoma', arial sans-serif;}
-.t_monsori{font-family:'TmonMonsori';}
-strong,th,h1,h2,h3,h4,h5{}
+/* .t_monsori{font-family:'TmonMonsori';} */
 fieldset {margin:0;padding:0;border:0;font-size:100%;}
 legend {overflow:hidden;position:absolute;top:0;left:-10000%;width:1px;height:1px;font-size:0;line-height:0;text-indent:-10000px;}
 
-.png24 {tmp:expression(setPng24(this));}
 table td a{text-decoration:none;}
 table td a:hover, table td a:active, table td a:focus{text-decoration:none;}
 table th a{text-decoration:none;}
 table th a:hover, table th a:active, table th a:focus{text-decoration:none;}
 
 /* guide */
-.header{height:87px;border-bottom:1px solid #e2e2e2;}
-.inner{width:1280px;margin:0 auto;}
+.header{height:84px;border-bottom:1px solid #e2e2e2;}
+.inner{width:1280px;margin:0 auto;position:relative}
+h1{padding-top:21px}
+.gnb{position:absolute;top:23px;left:292px}
+.gnb li{display:inline-block;padding:0 20px;line-height:35px;}
+.gnb a{font-size:20px;color:#2a2a2a;font-weight:bold}
+.gnb a:hover{color:#f47420;border-bottom:2px solid #f47420}
+.util{position:absolute;right:0;top:32px}
+.util .btn_apply{display:inline-block;padding-right:12px;position:relative;line-height:23px;margin-right:144px;font-size:17px;color:#f26522;font-weight:bold;}
+.util .btn_apply:after{content:"";width:7px;height:15px;background:url(../images/ico_arr.png) no-repeat;position:absolute;top:5px;right:0;}
+.util .link{margin-left:20px}
+.footer{background:#303030;height:139px;color:#fff;font-size:14px;line-height:27px;}
+.footer .foot_logo{position:absolute;left:5px;top:49px;}
+.footer .address{display:inline-block;padding:45px 0 0 158px}
+.footer .address span{display:block;}
+.footer .another{display:inline-block;margin:46px 0 0 65px}
+.footer .another > a ~ a{margin-left:32px;}
+.footer .no{position:absolute;top:58px;right:6px;padding-left:23px;background:url(../images/foot_no.png) no-repeat 0 50%}
 
-
-
-
-
-
-
+/* common */
+.searchWrap{height:123px;box-shadow:0 2px 5px rgba(171,174,174,.2);background:#fff;font-size:0}
+.searchWrap .select{display:inline-block;margin:0 25px 0 30px;line-height:123px}
+.searchWrap select{font-size:16px;color:#404040;width:90px;height:30px;border:2px solid #404040;border-radius:15px;padding:0 20px 0 16px;vertical-align:middle;appearance:none;background:url(../images/bg_select.png) no-repeat 85% 50%;}
+.searchWrap .input{display:inline-block;position:relative;font-size:18px;color:#555;width:712px;line-height:123px;padding-right:38px;margin-right:45px;}
+.searchWrap .input:after{content:"";width:36px;height:36px;position:absolute;top:41px;right:0;background:url(../images/ico_search02.png) no-repeat;}
+.searchWrap .input input{display:block;width:100%;outline:none}
+.searchWrap .detail_search{background:#404040;line-height:123px;width:170px;color:#dfdfdf;font-size:18px}
+.searchWrap .detail_search span{display:inline-block;background:url(../images/ico_search.png) no-repeat 100% 50%;padding-right:50px;}
+.searchWrap .entry_language{background:#2d2d2d;line-height:123px;width:170px;color:#dfdfdf;font-size:18px}
+.searchWrap .entry_language span{display:inline-block;background:url(../images/ico_language.png) no-repeat 100% 50%;padding-right:40px;}

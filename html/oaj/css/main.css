@@ -2,5 +2,32 @@
 
 @import url(common.css);
 
+.main_front{background:url(../images/main_bg.jpg) no-repeat 50% 0;font-size:0;position:relative;height:993px;}
+.main_front .left{padding-top:100px;width:342px;height:870px;display:inline-block;box-sizing:border-box}
+.main_front .subTit{display:block;font-size:18px;color:#000;font-weight:300;line-height:30px}
+.main_front .subTit .font_r{font-size:22px;color:#2a2e43;font-weight:400;}
+.main_front .title{display:inline-block;font-weight:normal;margin-top:48px;font-size:140px;color:#2a2e43;line-height:1;padding-bottom:32px;border-bottom:2px solid #3db166;font-weight:100}
+.main_front .left .desc{display:block;font-size:18px;color:#636363;line-height:36px;margin-top:65px}
+.main_front .right{position:relative;width:935px;height:870px;display:inline-block;box-sizing:border-box;padding:188px 0 0 32px}
+.main_front .right > .txt{display:block;font-size:140px;color:#fff;font-weight:300;text-transform:uppercase;line-height:1}
+.main_front .right .btns{position:absolute;top:120px;right:2px;}
+.main_front .right .btns a{display:block;position:relative;width:230px;height:203px;color:#fff;border-radius:20px;box-shadow:0 38px 40px rgba(0,0,0,.29);padding:40px 0 0 35px;box-sizing:border-box}
+.main_front .right .btns a:after{content:"";position:absolute;top:40px;right:27px;width:58px;height:58px;background:url(../images/btn_ico01.png) no-repeat}
+.main_front .right .btns a:nth-child(1){background:#003a63}
+.main_front .right .btns a:nth-child(2){background:#05122c;}
+.main_front .right .btns a:nth-child(3){background:#382288}
+.main_front .right .btns a ~ a{margin-top:36px}
+.main_front .right .btns a strong{display:block;font-size:40px;line-height:58px;font-weight:300;text-transform:uppercase;}
+.main_front .right .btns a > span{font-size:18px;line-height:28px;display:block;margin-top:10px}
+.main_front .btn_apply{position:absolute;top:639px;left:3px;width:434px;height:99px;line-height:99px;color:#fff;box-shadow:0 38px 40px rgba(0,0,0,.29);background:#18974e;border-radius:50px;font-size:28px;font-weight:300;box-sizing:border-box;padding:0 74px 0 51px;}
+.main_front .btn_apply span{display:block;position:relative;}
+.main_front .btn_apply span:after{content:"";position:absolute;top:38px;right:0;width:32px;height:25px;background:url(../images/btn_apply.png) no-repeat 100% 50%;}
+
+
+
+
+
+
+
 
 

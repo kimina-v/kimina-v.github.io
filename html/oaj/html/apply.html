@@ -4,34 +4,47 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+<link rel="stylesheet" type="text/css" href="../css/contents.css"/>
 <script type="text/javascript" src="../js/jquery-3.5.1.min.js" ></script>
 </head>
 <body>
     <div class="header">
         <div class="inner">
-            <h1><a href="javascript:;"><img src="../images/logo.png" alt="riss oaj"></a></h1>
+            <h1><a href="#none"><img src="../images/logo.png" alt="riss oaj"></a></h1>
             <ul class="gnb">
-                <li><a href="javascript:;">OAJ</a></li>
-                <li><a href="javascript:;">검색</a></li>
-                <li><a href="javascript:;">참여학회</a></li>
-                <li><a href="javascript:;">데이터연계</a></li>
+                <li><a href="#none">OAJ</a></li>
+                <li><a href="#none">검색</a></li>
+                <li><a href="#none">참여학회</a></li>
+                <li><a href="#none">데이터연계</a></li>
             </ul>
             <div class="util">
-                <a href="javascript:;" class="btn_apply">참여신청</a>
-                <a href="javascript:;" class="login"></a>
-                <a href="javascript:;" class="link"></a>
+                <a href="#none" class="btn_apply">참여신청</a>
+                <a href="#none" class="login"></a>
+                <a href="#none" class="link"></a>
             </div>
         </div>
     </div>
 
     <div class="front">
         <div class="inner">
-            <h2 class="page_title"></h2>
+            <h2 class="page_title">참여신청</h2>
             <div class="location">
                 <a href="index.html" class="home">홈</a>
-                <span></span>
-                <span class="on"></span>
+                <span class="on">참여신청</span>
+            </div>
+            <div class="searchWrap">
+                <div class="select">
+                    <select>
+                        <option>전체</option>
+                        <option>전체</option>
+                        <option>전체</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="제목,키워드 등 원하시는 자료의 검색어를 입력하세요.">
+                </div>
+                <button class="detail_search"><span>상세검색</span></button>
+                <button class="entry_language"><span>다국어입력</span></button>
             </div>
         </div>
     </div>
@@ -39,62 +52,68 @@
     <div class="content">
         <div class="inner">
             <h2 class="title">참여신청</h2>
-            <p class="page_desc">RISS OAJ 참여하기 위해서는 아래  참여 신청서, 자료 조사서 양식을 다운로드하여 작성하신 후 파일을 업로드해주세요.</p>
-            <p class="warning_text">등록할 학술지가 RISS에서 서비스가 되고 있지 않은 경우 메타데이터 양식을 다운로드하여 원문과 같이 파일을 업로드해주세요.</p>
-            <div class="btn_group">
-                <a href="javascript:;" class="down_paper btn_down"><span>참여 신청서 양식 다운로드</span></a>
-                <a href="javascript:;" class="down_data btn_down"><span>자료 조사서 양식 다운로드</span></a>
-                <a href="javascript:;" class="down_metadata btn_down"><span>메타데이터 양식 다운로드</span></a>
+            <div class="section">
+                <p class="page_desc">RISS OAJ 참여하기 위해서는 아래  참여 신청서, 자료 조사서 양식을 다운로드하여 작성하신 후 파일을 업로드해주세요.</p>
+                <p class="warning_text">등록할 학술지가 RISS에서 서비스가 되고 있지 않은 경우 메타데이터 양식을 다운로드하여 원문과 같이 파일을 업로드해주세요.</p>
+                <div class="btn_group">
+                    <a href="#none" class="down_paper btn_down"><span>참여 신청서 양식 다운로드</span></a>
+                    <a href="#none" class="down_data btn_down"><span>자료 조사서 양식 다운로드</span></a>
+                    <a href="#none" class="down_metadata btn_down"><span>메타데이터 양식 다운로드</span></a>
+                </div>
+                <div class="customer_info">
+                    <span class="blick_text">문의 : RISS 국내학술지 운영팀</span>
+                    <span class="tel">02-6271-0224</span>
+                    <a href="mailto:article@riss.kr" class="mail">article@riss.kr</a>)
+                </div>
+                <h3 class="blick_title">파일 업로드</h3>
+                <div class="table_row">
+                    <table>
+                        <colgroup>
+                            <col style="width:275px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>참여신청서</th>
+                                <td>
+                                    <div class="inp_file">
+                                        <span class="file_root">파일경로 / 파일명</span>
+                                        <label class="btn_file" for="file01"><input type="file" id="file01"><span>찾아보기</span></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>자료조사서</th>
+                                <td>
+                                    <div class="inp_file">
+                                        <span class="file_root">파일경로 / 파일명</span>
+                                        <label class="btn_file" for="file02"><input type="file" id="file02"><span>찾아보기</span></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>메타데이터</th>
+                                <td>
+                                    <div class="inp_file">
+                                        <span class="file_root">파일경로 / 파일명</span>
+                                        <label class="btn_file" for="file03"><input type="file" id="file03"><span>찾아보기</span></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>원문</th>
+                                <td>
+                                    <div class="inp_file">
+                                        <span class="file_root">파일경로 / 파일명</span>
+                                        <label class="btn_file" for="file04"><input type="file" id="file04"><span>찾아보기</span></label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a href="#none" class="apply_sand">신청 완료</a>
             </div>
-            <div class="customer_info">
-                <span class="blick_text">문의 : RISS 국내학술지 운영팀</span>
-                <span class="tel">02-6271-0224</span>
-                <a href="mailto:article@riss.kr" class="mail">article@riss.kr</a>)
-            </div>
-            <h3 class="blick_title">파일 업로드</h3>
-            <div class="table_row">
-                <table>
-                    <colgroup>
-                        <col style="width:275px">
-                        <col>
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th>참여신청서</th>
-                            <td>
-                                <div class="inp_file">
-                                    <input type="file">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>자료조사서</th>
-                            <td>
-                                <div class="inp_file">
-                                    <input type="file">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>메타데이터</th>
-                            <td>
-                                <div class="inp_file">
-                                    <input type="file">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>원문</th>
-                            <td>
-                                <div class="inp_file">
-                                    <input type="file">
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <a href="javascript:;" class="apply_sand">신청 완료</a>
         </div>
     </div>
 
@@ -103,11 +122,13 @@
             <span class="foot_logo">
                 <img src="../images/logo_keris.png" alt="keris">
             </span>
-            <span class="address">41061 대구광역시 동구 동내로 64(동내동1119) KERIS빌딩</span>
-            <span class="copy">Copyright© KERIS. ALL RIGHTS RESERVED</span>
+            <div class="address">
+                <span>41061 대구광역시 동구 동내로 64(동내동1119) KERIS빌딩</span>
+                <span>Copyright© KERIS. ALL RIGHTS RESERVED</span>
+            </div>
             <span class="another">
-                <a href="javascript:;"><img src="../images/foot_logo01.png" alt="">교육부</a>
-                <a href="javascript:;"><img src="../images/foot_logo02.png" alt=""></a>
+                <a href="#none"><img src="../images/foot_logo01.png" alt=""></a>
+                <a href="#none"><img src="../images/foot_logo02.png" alt=""></a>
             </span>
             <span class="no">저작물 게시중단요청</span>
         </div>
