@@ -30,6 +30,7 @@ img{max-width:100%;}
 .t_monsori{font-family:'TmonMonsori';}
 fieldset {margin:0;padding:0;border:0;font-size:100%;}
 legend {overflow:hidden;position:absolute;top:0;left:-10000%;width:1px;height:1px;font-size:0;line-height:0;text-indent:-10000px;}
+button{cursor:pointer}
 
 table td a{text-decoration:none;}
 table td a:hover, table td a:active, table td a:focus{text-decoration:none;}
@@ -60,9 +61,10 @@ h1{padding-top:21px}
 .searchWrap{height:123px;box-shadow:0 2px 5px rgba(171,174,174,.2);background:#fff;font-size:0}
 .searchWrap .select{display:inline-block;margin:0 25px 0 30px;line-height:123px}
 .searchWrap .select select{font-size:16px;color:#404040;padding:0 39px 0 6px;background:url(../images/bg_select.png) no-repeat 85% 50%;height:30px;line-height:30px;border:2px solid #404040;border-radius:15px;min-width:90px;padding:0 20px 0 16px;box-sizing:border-box;vertical-align:middle;position:relative;top:-2px}
-.searchWrap .input{display:inline-block;position:relative;font-size:18px;color:#555;width:712px;line-height:123px;padding-right:38px;margin-right:45px;}
-.searchWrap .input:after{content:"";width:36px;height:36px;position:absolute;top:41px;right:0;background:url(../images/ico_search02.png) no-repeat;}
-.searchWrap .input input{display:block;width:100%;outline:none}
+.searchWrap .input{display:inline-block;position:relative;font-size:18px;color:#555;width:795px;line-height:123px;}
+.searchWrap .input input{display:inline-block;width:712px;outline:none}
+.searchWrap .input .btn_search{display:inline-block;background:none;width:80px;text-align:left;}
+.searchWrap .input .btn_search img{vertical-align:middle}
 .searchWrap .detail_search{background:#404040;line-height:123px;width:170px;color:#dfdfdf;font-size:18px}
 .searchWrap .detail_search span{display:inline-block;background:url(../images/ico_search.png) no-repeat 100% 50%;padding-right:50px;}
 .searchWrap .entry_language{background:#2d2d2d;line-height:123px;width:170px;color:#dfdfdf;font-size:18px}

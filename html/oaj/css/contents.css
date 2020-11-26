@@ -121,9 +121,16 @@ h3.s_title{font-size:26px;color:#000;font-weight:bold}
 .academic_list > li{padding:30px 0 30px 20px;border-bottom:1px solid #efefef;position:relative;}
 .academic_list .list_title{display:inline-block;margin-top:17px;line-height:30px;font-size:20px;color:#000;font-weight:bold}
 .academic_list .list_title:hover{text-decoration:underline}
-.academic_list .inlie_list{margin-top:20px}
+.academic_list .dot_list{margin-top:20px}
+.academic_list .dot_list.inline_list > li{display:inline-block}
+.academic_list .dot_list.inline_list > li ~ li{margin-left:30px}
 .academic_list .badge{display:inline-block;margin:15px 0 0 13px}
 .academic_list .btn_view{position:absolute;right:5px;bottom:22px;height:44px;line-height:44px;padding:0  24px 0 43px;background:#bebebe url(../images/ico_plus.png) no-repeat 17px 50%;border-radius:22px;color:#fff;font-weight:bold}
+
+.oaj_content .academic_list > li{border-bottom:none;}
+.academic_list .list_item{position:relative;border-bottom:1px solid #efefef;padding-bottom:20px}
+.academic_list .view_content{padding:15px 25px 0;}
+.academic_list .view_content
 
 .txt_link, .txt_link:hover{text-decoration:underline}
 
@@ -185,6 +192,19 @@ h3.s_title{font-size:26px;color:#000;font-weight:bold}
 .society_list > li .badge{display:block;margin-top:26px;}
 .society_list > li .dot_list_small{margin-top:30px}
 
+.society_detail{text-align:center;padding:90px 215px 30px;}
+.society_detail .title{display:block;font-size:34px;color:#000;font-weight:bold}
+.society_detail .eng_title{display:block;font-size:18px;color:#000;font-weight:bold}
+.society_detail p{margin-top:20px}
+.society_detail .link_home{display:inline-block;margin-top:20px}
+
+.boxLine{margin-top:80px;border:1px solid #e2e2e2;padding:0 55px 70px}
+.boxLine .line_title{display:block;text-align:center;position:relative;top:-22px;}
+.boxLine .line_title > span{display:inline-block;width:130px;height:44px;line-height:44px;text-align:center;font-size:18px;color:#fff;font-weight:bold;background:#5dab54;border-radius:22px;z-index:5;position:relative}
+.boxLine .academic_list .dot_list{margin-top:10px}
+.boxLine .academic_list > li{padding-bottom:20px}
+.boxLine .academic_list > li ~ li{padding-top:20px}
+
 /* search */
 .search_option{background:#449e8c;padding:35px 49px 35px 65px;}
 .group_item{overflow:hidden;}
@@ -206,7 +226,7 @@ h3.s_title{font-size:26px;color:#000;font-weight:bold}
 
 .dot_list_xsmall{margin-top:15px}
 .dot_list_xsmall > li{background:url(../images/ico_blick.png) no-repeat 7px 50%;padding-left:17px;font-size:14px;line-height:30px;color:#000;position:relative;}
-.dot_list_xsmall > li .del{position:absolute;right:0;top:3px;}
+.dot_list_xsmall > li .del{position:absolute;right:0;top:50%;margin-top:-11px}
 .detail_sorting .reset{position:absolute;top:-3px;right:0;background:url(../images/ico_reset.png) no-repeat 0 50%;line-height:24px;padding-left:30px;font-size:14px;color:#585858;}
 
 .scroll_area{overflow-y:auto;height:120px;margin-top:25px;}
@@ -268,3 +288,11 @@ h3.s_title{font-size:26px;color:#000;font-weight:bold}
 .view_info > div em{font-size:18px;color:#8d8d8d;display:block;line-height:23px;}
 .view_info > div strong{font-size:40px;line-height:1;display:block;margin-top:30px;color:#000}
 
+.search_word{border:1px solid #d7d7d7;padding:10px 20px 20px;margin-top:-1px}
+.search_word li{color:#ef671f;overflow:hidden;line-height:32px;position:relative;}
+.search_word li span{width:85px;overflow:hidden;}
+.search_word li a{position:absolute;top:50%;right:0;transform:translateY(-50%)}
+.search_word .btn_sgroup{border-top:1px solid #d7d7d7;margin-top:10px;padding:20px 20px 0;font-size:0;text-align:center;}
+.search_word .btn_sgroup .btn_small{display:inline-block;height:27px;line-height:27px;color:#fff;padding:0 16px;font-size:13px;box-sizing:border-box;text-align:center;}
+.search_word .btn_sgroup .btn_small.btn_black{background:#282828;width:72px}
+.search_word .btn_sgroup .btn_small.btn_gray{background:#a9a9a9;margin-left:14px;width:78px}
