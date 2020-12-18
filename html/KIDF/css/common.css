@@ -25,8 +25,6 @@ a:hover, a:active, a:focus{text-decoration:none;}
 
 em{font-style:normal;}
 img{max-width:100%;}
-.eng{font-family:'tahoma', arial sans-serif;}
-.t_monsori{font-family:'TmonMonsori';}
 fieldset {margin:0;padding:0;border:0;font-size:100%;}
 legend {overflow:hidden;position:absolute;top:0;left:-10000%;width:1px;height:1px;font-size:0;line-height:0;text-indent:-10000px;}
 button{cursor:pointer}
@@ -36,5 +34,22 @@ table td a:hover, table td a:active, table td a:focus{text-decoration:none;}
 table th a{text-decoration:none;}
 table th a:hover, table th a:active, table th a:focus{text-decoration:none;}
 
+/* 공통 */
+.textHidden{font-size:0;line-height:0;text-indent:-99999em}
+
+.layerMenu{display:none}
+
+.inner{padding:0 20px;}
+.header{height:85px;background:rgba(0,0,0,.3)}
+.header h1{padding-top:29px;width:135px;}
+.header h1 img{display:block;width:100%}
+.header .inner .gnb{display:none}
+.header .util a{display:inline-block;font-size:12px;padding-left:10px;background:url(../images/blick_member.png) no-repeat 0 50%;background-size:9px auto;color:#9c9c9c}
+.header .allMenu{position:absolute;width:31px;height:26px;background:url(../images/allMenu.png) no-repeat;background-size:100% auto;}
+
 @media screen and(min-width:1600px){
+
+    .header{height:142px}
+    .header h1{padding-top:45px;}
+    .header .inner .gnb{display:block}
 }
