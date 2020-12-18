@@ -6,7 +6,7 @@
 .main_front .left{padding-top:100px;width:342px;height:870px;display:inline-block;box-sizing:border-box}
 .main_front .subTit{display:block;font-size:18px;color:#000;font-weight:300;line-height:30px}
 .main_front .subTit .font_r{font-size:22px;color:#2a2e43;font-weight:400;}
-.main_front .title{display:inline-block;font-weight:normal;margin-top:48px;font-size:140px;color:#2a2e43;line-height:1;padding-bottom:32px;border-bottom:2px solid #3db166;font-weight:100}
+.main_front .left .title{display:inline-block;font-weight:normal;margin-top:48px;font-size:140px;color:#2a2e43;line-height:1;padding-bottom:32px;border-bottom:2px solid #3db166;font-weight:100}
 .main_front .left .desc{display:block;font-size:18px;color:#636363;line-height:36px;margin-top:65px}
 .main_front .right{position:relative;width:935px;height:870px;display:inline-block;box-sizing:border-box;padding:188px 0 0 32px}
 .main_front .right > .txt{display:block;font-size:140px;color:#fff;font-weight:300;text-transform:uppercase;line-height:1}
@@ -55,7 +55,8 @@
 .main_content{overflow:hidden;padding:50px 0 80px;}
 .scholarship_thesis{float:left;width:824px;position:relative;}
 .scholarship_thesis .title{color:#2a2a2a;font-weight:bold;font-size:24px;}
-.scholarship_thesis .flag{display:inline-block;}
+/* 201209 수정 */
+/* .scholarship_thesis .flag{display:inline-block;}
 .scholarship_thesis .flag > span{display:inline-block;padding:0 18px;height:31px;line-height:31px;color:#fff;text-transform:uppercase;color:#fff;font-weight:bold;}
 .scholarship_thesis .flag > span ~ span{margin-left:2px;}
 .scholarship_thesis .flag .blue{background:#2a5daa}
@@ -67,8 +68,30 @@
 .scholarship_thesis li .info{margin-top:18px;display:block}
 .scholarship_thesis li .info > span{display:inline-block;font-size:18px;color:#555;}
 .scholarship_thesis li .info > span ~ span{margin-left:16px;padding-left:18px;position:relative;}
-.scholarship_thesis li .info > span ~ span:after{width:1px;height:15px;background:#b7b7b7;content:"";position:absolute;top:7px;left:0;}
+.scholarship_thesis li .info > span ~ span:after{width:1px;height:15px;background:#b7b7b7;content:"";position:absolute;top:7px;left:0;} */
 .scholarship_thesis .more{position:absolute;top:-8px;right:0;}
+.scholarship_thesis ul{margin-top:28px}
+.scholarship_thesis .btn_view.on{background:#414141 url(../images/ico_x.png) no-repeat 17px 50%}
+.scholarship_thesis .list_item{position:relative;border-bottom:1px solid #efefef;padding-bottom:20px}
+.scholarship_thesis .view_content{padding:15px 25px 0;}
+.scholarship_thesis > ul > li{padding:30px 0 30px 20px;border-bottom:1px solid #efefef;position:relative;}
+.scholarship_thesis .list_title{display:block;margin-top:17px;line-height:30px;font-size:20px;color:#000;font-weight:bold}
+.scholarship_thesis .list_title:hover{text-decoration:underline}
+.scholarship_thesis .dot_list{margin-top:20px}
+.scholarship_thesis .dot_list.inline_list > li{display:inline-block}
+.scholarship_thesis .dot_list.inline_list > li ~ li{margin-left:30px}
+.scholarship_thesis .btn_view{position:absolute;right:5px;bottom:22px;height:44px;line-height:44px;padding:0  24px 0 43px;background:#bebebe url(../images/ico_plus.png) no-repeat 17px 50%;border-radius:22px;color:#fff;font-weight:bold}
+
+.badge{font-size:0}
+.badge > span{display:inline-block;padding:0 15px;height:32px;line-height:32px;color:#fff;font-size:12px;border-radius:16px;text-align:center;box-sizing:border-box;min-width:73px;}
+.badge > span ~ span{margin-left:7px;}
+.badge > span.green{background:#5dab54}
+.badge > span.brown{background:#847a6f}
+.badge > span.black{background:#000}
+
+.dot_list > li{position:relative;line-height:33px;padding-left:20px;font-size:18px;color:#3b3b3b}
+.dot_list > li:after{content:"";width:4px;height:4px;background:url(../images/ico_blick03.png) no-repeat;position:absolute;left:0;top:13px;}
+/* //201209 수정 */
 
 .main_content .banner{float:right;}
 .main_content .banner a{display:block;position:relative;}
@@ -76,6 +99,4 @@
 .main_content .banner .context{position:absolute;top:50px;left:30px;}
 .main_content .banner .context .title{color:#fff;display:block;font-size:28px;font-weight:bold;line-height:1;text-transform:uppercase;}
 .main_content .banner .context .text{display:block;margin-top:12px;color:#fff;line-height:1;}
-
-
 
