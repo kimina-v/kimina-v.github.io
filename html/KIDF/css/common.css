@@ -3,7 +3,7 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 body,html,header,footer,aside,nav,section,article,details,figure,figcaption,menu,div,dl,dd,ol,ul,li,form,fieldset,legend,iframe,table,caption,thead,tfoot,tbody,tr,th,td,h1,h2,h3,h4,h5,h6,dt,summary,input,textarea,button,select,datalist,img,embed,object,canvas,audio,video,meter,progress,keygen,a,label,output,dialog,address,blockquote,p,pre,span,b,strong,i,em,dfn,var,u,ins,s,del,q,mark,small,sub,sup,abbr,bdi,bdo,cite,time,rp,rt,code,kbd,samp,acronym,big,frame,frameset,noframes,tt,map,option,hr,*{border:0;padding:0;margin:0;color:inherit;font-size:inherit;line-height:inherit;vertical-align:top}
-body{font-family:'Noto Sans KR','∏º¿∫∞ÌµÒ',Malgun Gothic,dotum,'µ∏øÚ', arial, sans-serif;font-size:16px;overflow-y:auto;color:#000}
+body{font-family:'Noto Sans KR','ÎßëÏùÄÍ≥†Îîï',Malgun Gothic,dotum,'ÎèãÏõÄ', arial, sans-serif;font-size:16px;overflow-y:auto;color:#000}
 header,footer,aside,nav,section,article,details,summary,figure,figcaption,menu,command{display:block}
 applet,basefont,dir,strike{display:none}
 q,blockquote{quotes:none;content:none}
@@ -49,7 +49,8 @@ table th a:hover, table th a:active, table th a:focus{text-decoration:none;}
 .header .util a ~ a{margin-left:15px}
 .header .allMenu{position:absolute;top:30px;right:20px;width:31px;height:26px;background:url(../images/allMenu.png) no-repeat;background-size:100% auto;}
 
-.layerMenu{display:block;position:absolute;top:-1000%;left:0;width:100%;transition:.5s;display:table;text-align:center;min-height:410px}
+.layerMenu{position:absolute;top:-410px;left:0;width:100%;transition:.5s;text-align:center;min-height:410px;z-index:1000}
+.layerMenu .inner{display:table;width:100%;min-height:410px;}
 .layerMenu .logo{display:none}
 .layerMenu .gnb{display:table-cell;width:40%;background:#fff;font-size:14px;padding-top:3px}
 .layerMenu .gnb li{padding:20px 0;}
@@ -129,7 +130,7 @@ table th a:hover, table th a:active, table th a:focus{text-decoration:none;}
     .header .util a ~ a{margin-left:40px}
     .header .allMenu{top:60px;right:0;width:52px;height:30px;}
 
-    .layerMenu{width:100%;background:url(../images/bg_allmenu.png) no-repeat 50% 0;text-align:left;min-height:538px;box-shadow:0 5px 5px rgba(0,0,0,.6);z-index:1000}
+    .layerMenu{width:100%;background:url(../images/bg_allmenu.png) no-repeat 50% 0;text-align:left;min-height:538px;box-shadow:0 5px 5px rgba(0,0,0,.6);top:-538px}
     .layerMenu .inner{height:538px}
     .layerMenu .logo{padding-top:44px;display:inline-block}
     .layerMenu .gnb{display:inline-block;width:auto;background:none;padding:60px 0 46px;margin-left:25px;font-size:0}
