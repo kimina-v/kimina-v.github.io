@@ -2,6 +2,8 @@
 
 @import url(common.css);
 
+input[type="text"]{border:1px solid #cbcbcb}
+
 .container .inner{padding-bottom:50px}
 
 .location{padding:25px 0 0;margin:0 -10px;font-size:0;}
@@ -14,11 +16,19 @@
 .location .locationMenu .selectBox:after{content:"";position:absolute;top:-1px;right:0;width:32px;height:32px;line-height:34px;text-align:center;border:1px solid #d7d7d7;border-radius:50%;background:url(../images/ico_menu.png) no-repeat 50% 50%;background-size:12px auto;}
 
 .pageTitle{margin-top:23px;position:relative;font-size:24px;padding-left:17px;}
-.pageTitle:after{content:"";width:4px;height:25px;background:#f00;position:absolute;top:0;left:0}
+.pageTitle:after{content:"";width:4px;height:25px;background:#f00;position:absolute;top:3px;left:0}
 
 .sTitle{position:relative;padding-left:10px;font-size:12px;line-height:20px;margin-top:30px}
 .sTitle:after{content:"";width:3px;height:3px;background:#767676;border-radius:50%;position:absolute;top:7px;left:0;}
 .sTitle ~ .sTitle{margin-top:45px}
+
+.blickText{position:relative;font-size:12px;line-height:18px;margin-top:30px}
+.blickText:before{content:"※";display:inline-block;margin-right:8px}
+.blickText ~ .blickText{margin-top:20px}
+
+.pointColor{color:#f00}
+.ness{display:inline-block;}
+.ness:before{content:"*";display:inline-block;margin-right:4px}
 
 .dotList{margin-top:25px}
 .dotList > li{position:relative;padding-left:10px;font-size:12px;line-height:20px;}
@@ -32,20 +42,77 @@
 .dashList > li:after{content:"";width:5px;height:1px;background:#707070;position:absolute;left:0;top:12px;}
 .dashList > li ~ li{margin-top:7px;}
 
+.blickList > li{position:relative;font-size:12px;line-height:18px}
+.blickList > li ~ li{margin-top:4px}
+.blickList > li:before{content:"※";display:inline-block;margin-right:8px}
+
 .columList > li{overflow:hidden;}
 .columList > li em{float:left}
 .columList > li .text{float:left;width:calc(100% - 48px)}
 .columList > li .tableMix{clear:both;padding-top:7px}
 
+.infoBox{background:#f1f1f1;margin-top:24px;border-radius:25px;padding:15px 24px;}
+.infoBox figure{width:60px;height:60px;display:inline-block;}
+.infoBox .title{color:#f00;font-size:16px;font-weight:bold;line-height:60px;display:inline-block;margin-left:10px;}
+.infoBox .blickList{margin-top:10px}
+
+.stepList{font-size:0;margin-top:30px}
+.stepList li{display:inline-block;width:25%;position:relative}
+.stepList li ~ li:after{content:"";width:27px;height:9px;position:absolute;top:25px;left:-13px;background:url(../images/bg_step.png) no-repeat;background-size:100% auto}
+.stepList li span{display:block;margin-top:10px;text-align:center;font-size:11px;color:#4f4f4f}
+.stepList li i{display:block;position:relative;width:60px;height:60px;margin:0 auto}
+.stepList li i:after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:url(../images/step_img.png) no-repeat;background-size:120px auto}
+.stepList li:nth-child(2) i:after{background-position:0 -60px}
+.stepList li:nth-child(3) i:after{background-position:0 -120px}
+.stepList li:nth-child(4) i:after{background-position:0 -180px}
+.stepList li.on:nth-child(1) i:after{background-position:-60px 0}
+.stepList li.on:nth-child(2) i:after{background-position:-60px -60px}
+.stepList li.on:nth-child(3) i:after{background-position:-60px -120px}
+.stepList li.on:nth-child(4) i:after{background-position:-60px -180px}
+
+.defaultSelectBox{display:inline-block;}
+.defaultSelectBox select{display:inline-block;height:20px;line-height:20px;background:url(../images/bg_select.png) no-repeat 96% 50%;background-size:17px auto;padding:0 30px 0 10px}
+
 .dwPDF{display:inline-block;padding-right:20px;color:#f00;font-weight:bold;background:url(../images/ico_pdf.png) no-repeat 100% 50%;background-size:13px auto;}
 
+.rdoList{}
+.rdoList li{display:inline-block;}
+.rdoList li input{position:absolute;opacity:0}
+.rdoList li label{position:relative;padding-left:20px;}
+.rdoList li label:after{content:"";position:absolute;top:calc(50% - 6px);left:0;width:12px;height:12px;background:url(../images/ico_radio.png) no-repeat;background-size:12px auto}
+.rdoList li input:checked + label:after{background-position:0 -12px}
+.rdoList li ~ li{margin-left:54px}
+
 .tableMix table{border-top:2px solid #1b1b1b}
-.tableMix th{background:#f6f6f6;line-height:16px;padding:10px 0;border-bottom:1px solid #d1d1d1;}
+.tableMix th{background:#f6f6f6;line-height:16px;padding:10px 0;border-bottom:1px solid #d1d1d1;font-size:14px}
 .tableMix th ~ th{border-left:1px solid #d1d1d1;}
-.tableMix td{text-align:center;border-left:1px solid #d1d1d1;border-bottom:1px solid #d1d1d1}
+.tableMix td{text-align:center;border-left:1px solid #d1d1d1;border-bottom:1px solid #d1d1d1;font-size:14px}
 
 .tableScroll{overflow-x:auto;}
 .tableScroll table{min-width:1100px}
+
+.listTable > ul{border-top:2px solid #1b1b1b}
+.listTable > ul > li{display:table;width:100%;}
+.listTable > ul > li .listTh{background:#f6f6f6;line-height:16px;padding:10px 0;border-bottom:1px solid #d1d1d1;font-size:14px;text-align:center;display:table-cell;width:40%;font-weight:bold}
+.listTable > ul > li .listTd{display:table-cell;width:60%;padding-left:10px;box-sizing:border-box;border-bottom:1px solid #d1d1d1;font-size:14px;border-left:1px solid #d1d1d1;vertical-align:middle;}
+
+.listTable .listTable > ul{border:0}
+.listTable.col2.thSizeOption .listTh{width:25%}
+.listTable.col2.thSizeOption .listTd{width:75%}
+
+.listRowTable{}
+.listRowTable > ul{border-top:2px solid #1b1b1b;}
+.listRowTable > ul > li{display:table;width:100%}
+.listRowTable > ul > li ~ li{border-left:1px solid #d1d1d1}
+.listRowTable > ul > li .listTh{display:table-cell;width:25%;background:#f6f6f6;line-height:16px;padding:10px 0;border-bottom:1px solid #d1d1d1;font-size:14px;text-align:center;width:40%;font-weight:bold}
+.listRowTable > ul > li .listTd{display:table-cell;width:75%;padding-left:10px;box-sizing:border-box;border-bottom:1px solid #d1d1d1;font-size:14px;border-left:1px solid #d1d1d1;vertical-align:middle;}
+
+.tdTextLeft table td, .tdTextLeft .listTd{text-align:left;padding-left:15px !important;}
+.tdTextLeft .defaultSelectBox{margin-left:-10px}
+
+.tableFront{}
+.tableFront .btnDel{width:13px;height:13px;background:url(../images/btnDel.png) no-repeat;background-size:100% auto}
+.tableFront .btnAdd{padding-left:20px;}
 
 @media screen and (min-width: 1600px) {
     .container .inner{padding:48px 0 100px;box-sizing:border-box;}
@@ -66,7 +133,8 @@
     .sTitle{margin-top:30px;padding-left:20px;font-size:16px;line-height:34px;}
     .sTitle:after{width:5px;height:5px;border-radius:50%;top:12px;}
     .sTitle ~ .sTitle{margin-top:45px}
-    .sTitle ~ .tableMix{margin-left:22px}
+
+    .blickText{font-size:16px}
 
     .dotList{margin-top:55px}
     .dotList > li{padding-left:20px;font-size:16px;line-height:34px;}
@@ -79,13 +147,64 @@
     .dashList > li{padding-left:20px;font-size:16px;line-height:34px;}
     .dashList > li:after{width:10px;top:19px;}
     .dashList > li ~ li{margin-top:10px;}
+    
+    .blickList > li{font-size:16px;line-height:24px}
+    .blickList > li ~ li{margin-top:8px}
 
     .columList > li .text{width:calc(100% - 93px)}
     .columList > li .tableMix{padding-top:0}
+    .columList .tableMix{margin-left:22px}
+    
+    .infoBox{margin-top:40px;position:relative;border-radius:50px;padding:30px 48px 30px 235px;}
+    .infoBox figure{width:174px;height:174px;position:absolute;top:30px;left:48px}
+    .infoBox .title{font-size:36px;line-height:auto;margin-left:0;}
+    .infoBox .blickList{margin-top:20px}
+
+    .stepList{margin-top:60px}
+    .stepList li ~ li:after{width:76px;height:28px;top:100px;left:-38px;}
+    .stepList li span{margin-top:15px;font-size:20px;line-height:1.2}
+    .stepList li i{width:194px;height:193px}
+    .stepList li i:after{background-size:388px auto}
+    .stepList li:nth-child(2) i:after{background-position:0 -193px}
+    .stepList li:nth-child(3) i:after{background-position:0 -386px}
+    .stepList li:nth-child(4) i:after{background-position:0 -579px}
+    .stepList li.on:nth-child(1) i:after{background-position:-194px 0}
+    .stepList li.on:nth-child(2) i:after{background-position:-194px -193px}
+    .stepList li.on:nth-child(3) i:after{background-position:-194px -386px}
+    .stepList li.on:nth-child(4) i:after{background-position:-194px -579px}
+
+    .defaultSelectBox select{min-width:230px;height:30px;line-height:30px;background-size:22px auto;padding:0 35px 0 15px}
 
     .dwPDF{padding-right:40px;background-size:26px auto;}
 
+    .rdoList li label{padding-left:35px;}
+    .rdoList li label:after{background-size:24px auto}
+    .rdoList li input:checked + label:after{top:calc(50% - 12px);background-position:0 -24px}
+    .rdoList li ~ li{margin-left:108px}
+
     .tableMix table{border-top:3px solid #1b1b1b}
-    .tableMix th{line-height:30px;padding:15px 0;}
+    .tableMix th{line-height:30px;padding:13px 0;font-size:16px}
+    .tableMix td{line-height:30px;padding:13px 0;font-size:16px}
+
+    .listTable{}
+    .listTable > ul{border-top:3px solid #1b1b1b;display:table;width:100%}
+    .listTable > li{font-size:0;}
+    .listTable > ul > li .listTh{display:inline-block;font-size:16px;line-height:30px;padding:13px 0;box-sizing:border-box}
+    .listTable > ul > li .listTd{display:inline-block;font-size:16px;line-height:30px;padding:13px 0}
+    .listTable > ul > li .listTd input[type="text"]{height:30px;line-height:30px;box-sizing:border-box;padding-left:15px;width:85%}
+
+    .listTable.col2 > ul > li{display:table-cell;width:50%;font-size:0}
+    .listTable.col2 > ul > li ~ li{border-left:1px solid #d1d1d1}
+    .listTable.col2.thSizeOption .listTh, .listTable.col2.thSizeOption .listTd{width:50%}
+
+    .listRowTable{}
+    .listRowTable > ul{border-top:3px solid #1b1b1b;display:table;width:100%}
+    .listRowTable > ul > li{display:table-cell;}
+    .listRowTable > ul > li .listTh{display:block;font-size:16px;line-height:30px;padding:13px 0;box-sizing:border-box}
+    .listRowTable > ul > li .listTd{display:inline-block;font-size:16px;line-height:30px;padding:13px 0}
+
+    .tdTextLeft table td, .tdTextLeft .listTd{padding-left:30px !important;}
+    .tdTextLeft .defaultSelectBox{margin-left:-15px}
+
 
 }
