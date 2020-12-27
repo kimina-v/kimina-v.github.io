@@ -21,12 +21,14 @@
         <a href="#title">타이틀</a>
         <a href="#list">리스트</a>
         <a href="#table">테이블</a>
+        <a href="#button">버튼</a>
     </div>
     <div class="guideContent">
         <div id="base" class="groupWrap">
             <p class="guideTitle">기본</p>
             <p>- header/전체메뉴layer/location/footer 에 대한 최종본은 layout.html에만 적용 예정</p>
         </div>
+
         <div id="title" class="groupWrap">
             <div class="group">
                 <p class="guideTitle">타이틀</p>
@@ -54,6 +56,29 @@
                     <li>3. 최종 합격자 발표 시간은 해당 발표일 <b>10:00</b>임</li>
                     <li>4. 천재지변, 응시인원 증가 등 부득이한 경우에는 시행일정을 검정 시행 기관장이 조정할 수 있음.</li>
                 </ul>
+            </div>
+
+
+            <div class="group">
+                <div class="infoImportant">
+                    <span class="important">확인요망!</span>
+                    <div class="context">
+                        <strong class="pointColor">! 결제를 위한 모듈을 다운 중이거나, 모듈을 설치하지 않았습니다.</strong>
+                        <ul class="dashList">
+                            <li>Internet Explorer 8 이하버전 지원불가(인터넷 브라우저 버전9 또는 10으로 업그레이드 진행)</li>
+                            <li>접속하신 브라우저가 Chrome, safari, Firefox경우 지원불가(PC 바탕화면에 설치되어 있는 Internet Explorer로 접속)</li>
+                            <li>LG U+전자결제를 위한 Active X수동 설치</li>
+                        </ul>
+                        <div class="down">[ <a href="#">설치파일 다운로드</a> ]</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="importantText">
+                    <span class="important">확인요망!</span>
+                    <p>텍스트 들어감</p>
+                </div>
             </div>
         </div>
         
@@ -134,6 +159,144 @@
                 </div>
             </div>
 
+            <div class="group">
+                <p class="guideTitle">모바일 생략 테이블 (등록일, 조회 생략)</p>
+                <div class="tableList">
+                    <div class="tblHeader">
+                        <span class="num">번호</span>
+                        <span class="sort">첨부</span>
+                        <span class="title">제목</span>
+                        <span class="date">등록일</span>
+                        <span class="hits">조회</span>
+                    </div>
+                    <div class="tblBody">
+                        <div class="tblItem">
+                            <span class="num">10</span>
+                            <span class="sort"><span class="flag flagBlack">성적</span></span>
+                            <span class="title"><a href="#" class="secret">비밀글입니다.</a></span>
+                            <span class="date">2020.12.03</span>
+                            <span class="hits">2131</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <p class="groupTitle">모바일 - 테이블 2칸 / PC - 테이블 4칸</p>
+                <div class="listTable tdTextLeft">
+                    <ul>
+                        <li>
+                            <em class="listTh" style="width:25%"><span class="ness">종목명</span></em>
+                            <div class="listTd" style="width:75%">서비스ㆍ경험디자인 기사 제1회 필기시험</div>
+                        </li>
+                        <li>
+                            <div class="listTable col2 thSizeOption">
+                                <ul>
+                                    <li>
+                                        <em class="listTh"><span class="ness">장애여부</span></em>
+                                        <div class="listTd">
+                                            <ul class="rdoList">
+                                                <li><input type="radio" id="rdo21" name="rdo2"><label for="rdo21">해당없음</label></li>
+                                                <li><input type="radio" id="rdo22" name="rdo2"><label for="rdo22">해당</label></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <em class="listTh"><span class="ness">장애상세명</span></em>
+                                        <div class="listTd">
+                                            <div class="inp"><input type="text"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="group">
+                <p class="groupTitle">모바일 - 가로테이블 / PC - 세로테이블</p>
+
+                <div class="listRowTable col4 tdTextLeft">
+                    <ul>
+                        <li>
+                            <em class="listTh">학교구분</em>
+                            <div class="listTd">
+                                <div class="defaultSelectBox lined">
+                                    <select>
+                                        <option>선택하세요</option>
+                                        <option>선택하세요</option>
+                                        <option>선택하세요</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <em class="listTh">학교명</em>
+                            <div class="listTd">
+                                <div class="defaultSelectBox">
+                                    <select>
+                                        <option>선택하세요</option>
+                                        <option>선택하세요</option>
+                                        <option>선택하세요</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <em class="listTh">전공명</em>
+                            <div class="listTd">
+                                <div class="defaultSelectBox">
+                                    <select>
+                                        <option>선택하세요</option>
+                                        <option>선택하세요</option>
+                                        <option>선택하세요</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <em class="listTh">학위</em>
+                            <div class="listTd">
+                                <div class="defaultSelectBox lined">
+                                    <select>
+                                        <option>선택하세요</option>
+                                        <option>선택하세요</option>
+                                        <option>선택하세요</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="button" class="groupWrap">
+            <div class="group">
+                <p class="guideTitle">버튼</p>
+
+                <div class="btnArea">
+                    <button type="button" class="btn btnRed">회원가입하기</button>
+                    <button type="button" class="btn btnBlack">취소</button>
+                    <button type="button" class="btn btnDefault">취소</button>
+                </div>
+
+                <div class="tableMix">
+                    <a href="#" class="tblBtn paperBtn01">원서확인</a>
+                    <a href="#" class="tblBtn paperBtn02">원서출력</a>
+                    <a href="#" class="tblBtn paperBtn03">접수취소</a>
+                    <a href="#" class="tblBtn paperBtn04">실기접수</a>
+                    <a href="#" class="tblBtn paperBtn05">접수하기</a>
+                </div>
+
+                <p class="guideTitle">플래그</p>
+
+                <div class="tableMix">
+                    <span class="btnFlag">결제취소</span>
+                </div>
+            </div>
         </div>
 
     </div>
