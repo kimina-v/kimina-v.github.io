@@ -398,27 +398,30 @@ input.sizeFull{width:97%}
     .tableMix .btnFlag{width:117px;height:30px;line-height:30px;font-size:14px;border-radius:15px;background:#000 url(../images/btn_ico05.png) no-repeat 14px 50%;;}
     .tableMix.tdLeft td{padding-left:30px}
     .tableMix td input[type="text"], .tableMix td input[type="password"]{height:30px;line-height:30px;padding-left:16px}
+    .tableMix td .inpText{margin-top:6px;font-size:14px}
+    .tableMix td .defaultSelectBox select{height:30px;line-height:30px;min-width:85px}
+    .tableMix td .mixText{line-height:30px;margin-right:10px}
+    .tableMix td .tblBtn02{padding:0 16px;height:30px;line-height:30px;margin-left:12px}
+    .tableMix td .inpSizeXS{width:85px}
+    .tableMix td .inpSizeXL{width:90%}
+    /* 
+    .tableMix td .inpSizeS{width:100px}
+    .tableMix td .inpSizeSM{width:75px}
+    .tableMix td .inpSizeM{width:130px}
+    .tableMix td .inpSizeL{width:140px} */
+
+    .tableMix td .birth .group{display:inline-block;margin-top:0;line-height:30px;font-size:16px}
+    .tableMix td .birth .defaultSelectBox{width:85px;}
+    .tableMix td .tel .tblBtn02{margin:0 0 0 12px}
+    .tableMix td .chk input{top:7px}
+    .tableMix td .email .inp ~ .inp{margin-top:0}
+    .tableMix td .email .defaultSelectBox{margin-top:0;width:158px}
 
     /* 
-    .tableMix td input[type="text"], .tableMix td input[type="password"]{height:24px;line-height:24px;padding-left:10px;box-sizing:border-box;}
-    .tableMix td .inpText{margin-top:4px;font-size:13px}
-    .tableMix td .defaultSelectBox select{border:1px solid #cbcbcb;height:24px;line-height:24px}
-    .tableMix td .mixText{display:inline-block;line-height:24px;margin-right:8px}
-    .tableMix td .inp{display:inline-block}
-    .tableMix td .inp input{width:100%}
-    .tableMix td .tblBtn02{background:#000;display:inline-block;padding:0 12px;color:#fff;height:24px;line-height:24px;margin-left:8px}
-    .tableMix td .inpSizeXS{width:55px}
-    .tableMix td .inpSizeSM{width:75px}
-    .tableMix td .inpSizeS{width:100px}
-    .tableMix td .inpSizeM{width:130px}
-    .tableMix td .inpSizeL{width:140px}
-    .tableMix td .group{margin-top:6px;line-height:24px;font-size:13px}
+      .tableMix td .group{margin-top:6px;line-height:24px;font-size:13px}
     .tableMix td .chk{margin-top:6px;padding-left:20px;position:relative;}
     .tableMix td .chk input{position:absolute;top:2px;left:0;width:15px;height:15px}
-    .tableMix td .email .inp ~ .inp{margin-top:6px}
-    .tableMix td .email .defaultSelectBox{margin-top:6px;width:158px}
     .tableMix td .defaultSelectBox select{width:100%;padding-right:15px}
-    .tableMix td .tel .tblBtn02{margin:6px 0 0}
     .tableMix td .birth .defaultSelectBox{width:100px;} */
 
     /* li테이블 */
