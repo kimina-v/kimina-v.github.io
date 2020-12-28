@@ -191,7 +191,6 @@ table th a:hover, table th a:active, table th a:focus{text-decoration:none;}
     .front .search input[type="text"]{height:56px;width:605px;border-radius:31px 0 0 31px;padding-left:38px;border-width:3px;font-size:20px}
     .front .search .btnSearch{width:68px;height:62px;border-radius:31px;background-size:34px auto}
 
-
     .rulesWrap{height:68px;line-height:68px;}
     .rulesWrap li{margin:0 22px;}
     .rulesWrap li a{font-size:16px}

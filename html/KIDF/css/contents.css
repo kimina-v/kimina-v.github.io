@@ -2,8 +2,7 @@
 
 @import url(common.css);
 
-input[type="text"]{border:1px solid #cbcbcb}
-input[type="password"]{border:1px solid #cbcbcb}
+input[type="text"],input[type="password"]{border:1px solid #cbcbcb}
 
 .container .inner{padding-bottom:50px}
 
@@ -119,7 +118,6 @@ p ~ p{margin-top:6px}
 .dwPDF{display:inline-block;padding-right:20px;color:#f00;font-weight:bold;background:url(../images/ico_pdf.png) no-repeat 100% 50%;background-size:13px auto;}
 
 /* radio */
-.rdoList{}
 .rdoList li{display:inline-block;}
 .rdoList li input{position:absolute;opacity:0}
 .rdoList li label{position:relative;padding-left:20px;}
@@ -141,8 +139,8 @@ p ~ p{margin-top:6px}
 .tblTitle + .tableMix{margin-top:15px}
 
 .tableFront{position:relative;margin-top:25px}
-.tableFront .btnDel{text-indent:-999999em;width:13px;height:13px;background:url(../images/btnDel.png) no-repeat;background-size:100% auto}
-.tableFront .btnAdd{background:url(../images/ico_add.png) no-repeat 0 50%;background-size:13px auto;padding-left:15px;position:absolute;top:-40px;right:0;font-size:12px}
+.tableFront .btnDel{text-indent:-999999em;width:18px;height:18px;background:url(../images/btnDel.png) no-repeat;background-size:100% auto}
+.tableFront .btnAdd{background:url(../images/ico_add.png) no-repeat 0 50%;background-size:18px auto;padding-left:22px;position:absolute;top:-40px;right:0;font-size:12px}
 
 .listNum{margin-top:25px}
 .listNum .num{font-size:14px;color:#6f6f6f;}
@@ -201,7 +199,6 @@ p ~ p{margin-top:6px}
 .listTable.col2.thSizeOption .listTd{width:75%}
 
 /* li테이블  row형 */
-.listRowTable{}
 .listRowTable > ul{border-top:2px solid #1b1b1b;}
 .listRowTable > ul > li{display:table;width:100%}
 .listRowTable > ul > li ~ li{border-left:1px solid #d1d1d1}
@@ -225,7 +222,7 @@ p ~ p{margin-top:6px}
 .tableList .num{width:15%;text-align:center;}
 .tableList .title{width:70%;border-left:1px solid #d1d1d1;}
 .tableList .file, .tableList .sort{width:15%;border-left:1px solid #d1d1d1;text-align:center}
-.tableList .tblHeader span{text-align:center;background:#f6f6f6;line-height:16px;padding:10px 0;border-bottom:1px solid #d1d1d1;font-size:14px;text-align:center;font-weight:bold}
+.tableList .tblHeader span{text-align:center;background:#f6f6f6;line-height:16px;padding:10px 0;border-bottom:1px solid #d1d1d1;font-size:14px;font-weight:bold}
 .tableList .tblItem > *{box-sizing:border-box;border-bottom:1px solid #d1d1d1;font-size:14px;vertical-align:middle;padding:6px 0;}
 .tableList .tblItem .title{padding-left:15px}
 .tableList .tblItem .title a{display:block;width:90%;}
@@ -296,9 +293,24 @@ input.sizeFull{width:97%}
     .sTitle{margin-top:30px;padding-left:20px;font-size:16px;line-height:34px;}
     .sTitle:after{width:5px;height:5px;border-radius:50%;top:12px;}
     .sTitle ~ .sTitle{margin-top:45px}
+    .sTitle .num{padding:0 15px;height:24px;line-height:24px;border-radius:12px;font-size:14px;vertical-align:middle;}
 
     .blickText{font-size:16px}
 
+    .fontSM{font-size:16px}
+
+    /* 여백 */
+    .topBlank{margin-top:30px}
+    .topBlankM{margin-top:45px}
+    p ~ p{margin-top:8px}
+
+    /* flag */
+    .flag{border-radius:15px;font-size:14px;height:30px;line-height:30px;padding:0 14px}
+
+    .paperNum{display:inline-block;}
+    .paperNum ~ .paperNum{margin:0 0 0 15px}
+    .paperNum span{display:inline-block;padding:0 15px;height:26px;line-height:26px;border-radius:8px}
+    
     /* list */
     .dotList{margin-top:55px}
     .dotList > li{padding-left:20px;font-size:16px;line-height:34px;}
@@ -344,19 +356,72 @@ input.sizeFull{width:97%}
 
     /* button */
     .dwPDF{padding-right:40px;background-size:26px auto;}
-
     /* radio */
     .rdoList li label{padding-left:35px;}
-    .rdoList li label:after{background-size:24px auto}
-    .rdoList li input:checked + label:after{top:calc(50% - 12px);background-position:0 -24px}
+    .rdoList li label:after{background-size:24px auto;width:24px;height:24px;top:calc(50% - 12px);}
+    .rdoList li input:checked + label:after{background-position:0 -24px;}
     .rdoList li ~ li{margin-left:108px}
 
+    /* checkbox */
+    .chkBox{margin-top:30px}
+    .chkBox input[type="checkbox"]{margin-right:10px;width:18px;height:18px}
+    .chkBox.fontSM input[type="checkbox"]{width:18px;height:18px;position:relative;top:2px}
+
     /* table */
+    /* 테이블 상단 */
+    .listNum{margin-top:40px}
+    .listNum .num{font-size:16px;line-height:46px;display:inline-block;}
+    .listNum .side{float:right;}
+    .listNum .search{margin-top:0;width:320px;height:46px;line-height:44px;background-position:22px 50%;padding-left:40px;}
+    .listNum .search input{border:none;width:calc(100% - 110px)}
+    .listNum .search button{position:absolute;top:0;right:0;width:75px;text-align:center;}
+
+    .tableFront{margin:40px 0 15px}
+    .tableFront .btnDel{width:26px;height:26px;}
+    .tableFront .btnAdd{background-size:26px auto;padding-left:30px;position:absolute;top:-40px;right:0;font-size:15px;line-height:28px}
+
+
+    .tdTextLeft table td, .tdTextLeft .listTd{padding-left:30px !important;}
+    .tdTextLeft .defaultSelectBox{margin-left:-15px}
+
+    /* 테이블 기본 */
     .tableMix table{border-top:3px solid #1b1b1b}
     .tableMix th{line-height:30px;padding:13px 0;font-size:16px}
     .tableMix td{line-height:30px;padding:13px 0;font-size:16px}
+    .tableMix .tblBtn{width:117px;text-align:center;height:30px;line-height:30px;font-size:14px;margin:0 auto;border-radius:15px;padding:0 14px 0 42px}
+    .tableMix .tblBtn ~ .tblBtn{margin-top:7px}
+    .tableMix .tblBtn.paperBtn01{background:#f00 url(../images/btn_ico01.png) no-repeat 14px 50%;;color:#fff;}
+    .tableMix .tblBtn.paperBtn02{background:url(../images/btn_ico02.png) no-repeat 14px 50%;color:#585858;border:1px solid #c0c0c0;}
+    .tableMix .tblBtn.paperBtn03{background:#5c5c5c url(../images/btn_ico03.png) no-repeat 14px 50%;;color:#fff;}
+    .tableMix .tblBtn.paperBtn04{background:#f00 url(../images/btn_ico04.png) no-repeat 14px 50%;;color:#fff;}
+    .tableMix .tblBtn.paperBtn05{background:#000 url(../images/btn_ico06.png) no-repeat 14px 50%;}
+    .tableMix .btnFlag{width:117px;height:30px;line-height:30px;font-size:14px;border-radius:15px;background:#000 url(../images/btn_ico05.png) no-repeat 14px 50%;;}
+    .tableMix.tdLeft td{padding-left:30px}
+    .tableMix td input[type="text"], .tableMix td input[type="password"]{height:30px;line-height:30px;padding-left:16px}
 
-    .listTable{}
+    /* 
+    .tableMix td input[type="text"], .tableMix td input[type="password"]{height:24px;line-height:24px;padding-left:10px;box-sizing:border-box;}
+    .tableMix td .inpText{margin-top:4px;font-size:13px}
+    .tableMix td .defaultSelectBox select{border:1px solid #cbcbcb;height:24px;line-height:24px}
+    .tableMix td .mixText{display:inline-block;line-height:24px;margin-right:8px}
+    .tableMix td .inp{display:inline-block}
+    .tableMix td .inp input{width:100%}
+    .tableMix td .tblBtn02{background:#000;display:inline-block;padding:0 12px;color:#fff;height:24px;line-height:24px;margin-left:8px}
+    .tableMix td .inpSizeXS{width:55px}
+    .tableMix td .inpSizeSM{width:75px}
+    .tableMix td .inpSizeS{width:100px}
+    .tableMix td .inpSizeM{width:130px}
+    .tableMix td .inpSizeL{width:140px}
+    .tableMix td .group{margin-top:6px;line-height:24px;font-size:13px}
+    .tableMix td .chk{margin-top:6px;padding-left:20px;position:relative;}
+    .tableMix td .chk input{position:absolute;top:2px;left:0;width:15px;height:15px}
+    .tableMix td .email .inp ~ .inp{margin-top:6px}
+    .tableMix td .email .defaultSelectBox{margin-top:6px;width:158px}
+    .tableMix td .defaultSelectBox select{width:100%;padding-right:15px}
+    .tableMix td .tel .tblBtn02{margin:6px 0 0}
+    .tableMix td .birth .defaultSelectBox{width:100px;} */
+
+    /* li테이블 */
     .listTable > ul{border-top:3px solid #1b1b1b;display:table;width:100%}
     .listTable > li{font-size:0;}
     .listTable > ul > li .listTh{display:inline-block;font-size:16px;line-height:30px;padding:13px 0;box-sizing:border-box}
@@ -367,15 +432,48 @@ input.sizeFull{width:97%}
     .listTable.col2 > ul > li ~ li{border-left:1px solid #d1d1d1}
     .listTable.col2.thSizeOption .listTh, .listTable.col2.thSizeOption .listTd{width:50%}
 
-    .listRowTable{}
+    /* li테이블  row형 */
     .listRowTable > ul{border-top:3px solid #1b1b1b;display:table;width:100%}
     .listRowTable > ul > li{display:table-cell;}
-    .listRowTable > ul > li .listTh{display:block;font-size:16px;line-height:30px;padding:13px 0;box-sizing:border-box}
-    .listRowTable > ul > li .listTd{display:inline-block;font-size:16px;line-height:30px;padding:13px 0}
+    .listRowTable > ul > li .listTh{display:block;font-size:16px;line-height:30px;padding:15px 0;box-sizing:border-box;width:100%}
+    .listRowTable > ul > li .listTd{display:block;font-size:16px;line-height:30px;padding:15px 0;width:100%;border-left:0}
+    .listRowTable.col4 > ul > li{width:25%}
 
-    .tdTextLeft table td, .tdTextLeft .listTd{padding-left:30px !important;}
-    .tdTextLeft .defaultSelectBox{margin-left:-15px}
+    /* 공지사항, 이의신청 */
+    .tableList{margin-top:30px;border-top:3px solid #1b1b1b;}
+    .tableList .tblHeader > span.date, .tableList .tblHeader > span.hits, .tblBody .tblItem > span.date, .tblBody .tblItem > span.hits{display:table-cell;width:10%}
+    .tableList .num{width:10%;}
+    .tableList .title{width:60%;}
+    .tableList .file, .tableList .sort{width:10%;}
+    .tableList .tblHeader span{line-height:20px;padding:15px 0;font-size:16px;}
+    .tableList .tblItem > *{font-size:16x;padding:12px 0;}
+    .tableList .tblItem .title{padding-left:25px}
+    .tableList .tblItem .secret{padding-left:25px;background-size:16px auto}
+    .tableList .tblItem .date, .tableList .tblItem .hits{text-align:center}
+    .tableList .fileItem{width:25px;height:25px;background:url(../images/ico_file.png) no-repeat 50% 50%;background-size:25px auto}
 
+    /* M - 더보기 P - 페이징 */
+    .more{display:none}
+
+    .paging{display:block;margin-top:50px;text-align:center;font-size:0}
+    .paging > *{display:inline-block;font-size:16px;margin:0 16px;}
+    .paging .first{width:24px;height:24px;background:url(../images/btn_first.png) no-repeat 50% 50%;background-size:100% auto;text-indent:-9999em;}
+    .paging .prev{width:24px;height:24px;background:url(../images/btn_prev.png) no-repeat 50% 50%;background-size:100% auto;text-indent:-9999em;}
+    .paging .next{width:24px;height:24px;background:url(../images/btn_next.png) no-repeat 50% 50%;background-size:100% auto;text-indent:-9999em;}
+    .paging .last{width:24px;height:24px;background:url(../images/btn_last.png) no-repeat 50% 50%;background-size:100% auto;text-indent:-9999em;}
+    .paging strong{padding-bottom:10px;color:#fa0303;border-bottom:1px solid #fa0303}
+
+    /* 자격검정절차안내 */
+    .infoStep{margin-top:50px;background:url(../images/bg_step02.png) no-repeat;}
+    .infoStep > li{height:263px;}
+    .infoStep > li ~ li{margin-top:-45px;padding-top:0;border-top:0}
+    .infoStep > li > em{display:inline-block;position:relative;line-height:263px;width:237px;text-align:center;font-size:26px;font-weight:bold;color:#fff;}
+    .infoStep > li > em:after{width:225px;height:1px;border-top:3px dashed #cfcfcf;content:"";position:absolute;top:0;left:calc(50% + 5px)}
+    .infoStep > li ~ li > em:after{left:calc(50% + 48px);top:20px;width:190px}
+    .infoStep > li > em span{position:absolute;top:0;right:-145px;width:50px;height:50px;line-height:50px;border-radius:25px;margin-right:0;font-size:22px;z-index:10}
+    .infoStep > li ~ li > em span{top:19px}
+    .infoStep > li .dashList{display:inline-block;margin:22px 0 0 160px}
+    .infoStep > li ~ li .dashList{margin-top:45px}
 
     /* POPUP */
     .popup.result{width:868px;height:586px;padding-top:216px}
