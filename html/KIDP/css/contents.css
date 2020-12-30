@@ -301,7 +301,7 @@ p ~ p{margin-top:6px}
 .realCheckingWrap .group .form .item label{display:inline-block;text-align:right;margin-right:8px;width:90px;}
 .realCheckingWrap .group .form .item{line-height:30px}
 .realCheckingWrap .group .form .item ~ .item{margin-top:7px}
-.realCheckingWrap .group .form .item input{border:1px solid #cdcdcd;border-radius:15px;height:30px;line-height:30px;width:190px}
+.realCheckingWrap .group .form .item input{border:1px solid #cdcdcd;border-radius:15px;height:30px;line-height:30px;width:190px;padding-left:20px;box-sizing:border-box}
 .realCheckingWrap .group .form .item.personNum input{width:85px}
 .realCheckingWrap .group .form .item.personNum .dash{display:inline-block;width:8px;height:1px;background:#cbcbcb;position:relative;top:16px;margin:0 2px}
 .realCheckingWrap ~ .blickList{margin-top:25px}
@@ -347,7 +347,7 @@ input.sizeFull{width:97%}
   .printBottom .sign{width:85px}
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1600px) {
     .container .inner{padding:48px 0 100px;box-sizing:border-box;}
 
     .section{padding-left:88px}
@@ -459,7 +459,7 @@ input.sizeFull{width:97%}
     .listNum .num{font-size:16px;line-height:46px;display:inline-block;}
     .listNum .side{float:right;}
     .listNum .search{margin-top:0;width:320px;height:46px;line-height:44px;background-position:22px 50%;padding-left:40px;}
-    .listNum .search input{border:none;width:calc(100% - 110px)}
+    .listNum .search input{border:none;width:calc(100% - 110px);vertical-align:middle}
     .listNum .search button{position:absolute;top:0;right:0;width:75px;text-align:center;}
 
     .tableFront{margin:40px 0 15px}

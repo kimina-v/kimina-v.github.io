@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js" ></script>
+<script type="text/javascript" src="../js/ui.js" ></script>
+
+</head>
+<body>
+    <div class="header">
+        <h1><img src="../images/logo.png" alr="kidp로고"></h1>
+        <ul class="gnb">
+            <li><a href="#" class="on">자격검정안내</a>
+                <ul class="depth">
+                    <li><a href="#" class="on">일정관리</a></li>
+                    <li><a href="#">시험장관리</a></li>
+                    <li><a href="#">고사장배치도관리 및 출력</a></li>
+                </ul>
+            </li>
+            <li><a href="#">접수현황관리</a>
+                <ul class="depth">
+                    <li><a href="#">일정관리</a></li>
+                    <li><a href="#">시험장관리</a></li>
+                    <li><a href="#">고사장배치도관리 및 출력</a></li>
+                </ul>
+            </li>
+            <li><a href="#">원서관리</a>
+                <ul class="depth">
+                    <li><a href="#">일정관리</a></li>
+                    <li><a href="#">시험장관리</a></li>
+                    <li><a href="#">고사장배치도관리 및 출력</a></li>
+                </ul>
+            </li>
+            <li><a href="#">합격자관리</a>
+                <ul class="depth">
+                    <li><a href="#">일정관리</a></li>
+                    <li><a href="#">시험장관리</a></li>
+                    <li><a href="#">고사장배치도관리 및 출력</a></li>
+                </ul>
+            </li>
+            <li><a href="#">통계관리</a>
+                <ul class="depth">
+                    <li><a href="#">일정관리</a></li>
+                    <li><a href="#">시험장관리</a></li>
+                    <li><a href="#">고사장배치도관리 및 출력</a></li>
+                </ul>
+            </li>
+            <li><a href="#">인원관리</a>
+                <ul class="depth">
+                    <li><a href="#">일정관리</a></li>
+                    <li><a href="#">시험장관리</a></li>
+                    <li><a href="#">고사장배치도관리 및 출력</a></li>
+                </ul>
+            </li>
+            <li><a href="#">권한관리</a>
+                <ul class="depth">
+                    <li><a href="#">일정관리</a></li>
+                    <li><a href="#">시험장관리</a></li>
+                    <li><a href="#">고사장배치도관리 및 출력</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="util">
+            <p><b>홍길동</b>님 안녕하세요</p>
+            <a href="#" class="logout"><img src="../images/bg_logout.png" alt=""></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="location">
+            <a href="#">홈</a>
+            <span>시험일정관리</span>
+            <span>시험장관리</span>
+        </div>
+            <div class="content">
+            <h3 class="pageTitle">시험장관리</h3>
+
+            <div class="detailSearch">
+                <em class="title">상세검색</em>
+                <div class="searchWrap">
+                    <div class="searchItem">
+                        <em>년도</em>
+                        <div class="inp"><input type="text"></div>
+                    </div>
+                    <div class="searchItem">
+                        <em>회차</em>
+                        <div class="inp"><input type="text"></div>
+                    </div>
+                    <div class="searchItem">
+                        <em>지역</em>
+                        <div class="select">
+                            <select>
+                                <option>서울</option>
+                                <option>경기</option>
+                                <option>강원</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="searchItem">
+                        <em>시험장명</em>
+                        <div class="select">
+                            <select>
+                                <option>서울대</option>
+                                <option>연세대</option>
+                                <option>고려대</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="searchItem">
+                        <em>등급</em>
+                        <div class="select">
+                            <select>
+                                <option>등급</option>
+                                <option>등급</option>
+                                <option>등급</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="titFront">
+                <a href="#" class="down">엑셀 다운로드</a>
+                <div class="sideBtn">
+                    <a herf="#" class="btn btnDefault">조회</a>
+                    <a herf="#" class="btn btnRed">신규</a>
+                    <a herf="#" class="btn btnBlack">삭제</a>
+                    <a herf="#" class="btn btnDefault">수정</a>
+                </div>
+            </div>
+            <div class="tableCol">
+                <table>
+                    <colgroup>
+                        <col stlye="">
+                        <col stlye="">
+                        <col stlye="">
+                        <col stlye="">
+                        <col stlye="">
+                        <col stlye="">
+                        <col stlye="">
+                        <col stlye="">
+                        <col stlye="">
+                        <col stlye="">
+                        <col stlye="">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>년도</th>
+                            <th>회차</th>
+                            <th>지역</th>
+                            <th>응시지역코드</th>
+                            <th>시험장명</th>
+                            <th>시험실명</th>
+                            <th>등급</th>
+                            <th>수용인원</th>
+                            <th>오</th>
+                            <th>열</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>2020</td>
+                            <td>1</td>
+                            <td>서울</td>
+                            <td>11</td>
+                            <td>강북중학교</td>
+                            <td>1실</td>
+                            <td>기사</td>
+                            <td>500명</td>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>2020</td>
+                            <td>1</td>
+                            <td>서울</td>
+                            <td>11</td>
+                            <td>강북중학교</td>
+                            <td>1실</td>
+                            <td>기사</td>
+                            <td>500명</td>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>2020</td>
+                            <td>1</td>
+                            <td>서울</td>
+                            <td>11</td>
+                            <td>강북중학교</td>
+                            <td>1실</td>
+                            <td>기사</td>
+                            <td>500명</td>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>2020</td>
+                            <td>1</td>
+                            <td>서울</td>
+                            <td>11</td>
+                            <td>강북중학교</td>
+                            <td>1실</td>
+                            <td>기사</td>
+                            <td>500명</td>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>COPYRIGHT <b>© KIDP</b> ALL RIGHTS RESERVED.</p>
+    </div>
+</body>
+</html>

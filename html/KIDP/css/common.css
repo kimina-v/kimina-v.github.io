@@ -30,6 +30,8 @@ table td a:hover, table td a:active, table td a:focus{text-decoration:none;}
 table th a{text-decoration:none;}
 table th a:hover, table th a:active, table th a:focus{text-decoration:none;}
 
+body{background:#fff}
+
 .blind{position:absolute;width:0;height:0;left:0;top:0;font-size:0;line-height:0;overflow:hidden}
 .hidden{width:0;height:0;font-size:0;line-height:0;overflow:hidden;visibility:hidden}
 .textHidden{font-size:0;line-height:0;text-indent:-99999em}
