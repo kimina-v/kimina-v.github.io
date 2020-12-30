@@ -28,6 +28,9 @@ table td a:hover, table td a:active, table td a:focus{text-decoration:none;}
 table th a{text-decoration:none;}
 table th a:hover, table th a:active, table th a:focus{text-decoration:none;}
 
+input[type="text"], input[type="password"]{border:1px solid #e3e3e3;height:28px;line-height:28px;padding-left:10px}
+select{border:1px solid #e3e3e3;height:30px;line-height:30px;padding-left:10px}
+
 .blind{position:absolute;width:0;height:0;left:0;top:0;font-size:0;line-height:0;overflow:hidden}
 .hidden{width:0;height:0;font-size:0;line-height:0;overflow:hidden;visibility:hidden}
 .textHidden{font-size:0;line-height:0;text-indent:-99999em}
@@ -84,8 +87,27 @@ table th a:hover, table th a:active, table th a:focus{text-decoration:none;}
 
 .titFront + .tableCol{margin-top:14px}
 
-.tableCol{border-top:1px solid #1b1b1b;}
+.tableCol table{border-top:1px solid #1b1b1b;}
 .tableCol thead th{background:#f8f8f8;border;border-bottom:1px solid #d1d1d1;font-size:14px;color:#252525;padding:10px 0;line-height:20px}
 .tableCol thead th ~ th{border-left:1px solid #d1d1d1;}
 .tableCol tbody td{border-bottom:1px solid #d1d1d1;font-size:14px;color:#555;font-weight:500;padding:10px 0;line-height:20px}
 .tableCol tbody td ~ td{border-left:1px solid #d1d1d1}
+
+.tableRow{margin-top:45px}
+.tableRow table{border-top:1px solid #1b1b1b;}
+.tableRow tbody th{text-align:left;padding:10px 0 10px 10px;background:#f8f8f8;border;border-bottom:1px solid #d1d1d1;font-size:14px;color:#252525;line-height:20px}
+.tableRow tbody td{text-align:left;padding:5px 0 5px 10px;border-bottom:1px solid #d1d1d1;border-left:1px solid #d1d1d1;font-size:14px;color:#555;font-weight:500;line-height:30px}
+.tableRow tbody td ~ td{border-left:1px solid #d1d1d1}
+.tableRow input[type="password"], .tableRow input[type="text"]{width:237px}
+.tableRow .birth select{width:85px;}
+.tableRow .birth select ~ select{width:60px}
+.tableRow .birth span{display:inline-block;padding:0 10px 0 5px}
+.tableRow .zipCode input[type="text"]{width:75px}
+.tableRow .btnTbl{display:inline-block;margin-left:2px;padding:0 13px;height:30px;line-height:30px;color:#fff;background:#959595}
+.tableRow .item{margin-top:5px}
+.tableRow .tel select{width:60px}
+.tableRow .tel input{width:48px}
+.tableRow .tel span{display:inline-block;}
+.tableRow .chk input{vertical-align:middle;margin-right:5px}
+
+.tblInfoText{display:inline-block;margin-left:10px}

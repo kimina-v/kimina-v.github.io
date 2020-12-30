@@ -72,150 +72,118 @@
     <div class="container">
         <div class="location">
             <a href="#">홈</a>
-            <span>시험일정관리</span>
-            <span>시험장관리</span>
+            <span>인원관리</span>
+            <span>회원관리</span>
+            <span>회원정보수정</span>
         </div>
-            <div class="content">
-            <h3 class="pageTitle">시험장관리</h3>
-
-            <div class="detailSearch">
-                <em class="title">상세검색</em>
-                <div class="searchWrap">
-                    <div class="searchItem">
-                        <em>년도</em>
-                        <div class="inp"><input type="text"></div>
-                    </div>
-                    <div class="searchItem">
-                        <em>회차</em>
-                        <div class="inp"><input type="text"></div>
-                    </div>
-                    <div class="searchItem">
-                        <em>지역</em>
-                        <div class="select">
-                            <select>
-                                <option>서울</option>
-                                <option>경기</option>
-                                <option>강원</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="searchItem">
-                        <em>시험장명</em>
-                        <div class="select">
-                            <select>
-                                <option>서울대</option>
-                                <option>연세대</option>
-                                <option>고려대</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="searchItem">
-                        <em>등급</em>
-                        <div class="select">
-                            <select>
-                                <option>등급</option>
-                                <option>등급</option>
-                                <option>등급</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="titFront">
-                <a href="#" class="down">엑셀 다운로드</a>
-                <div class="sideBtn">
-                    <a herf="#" class="btn btnDefault">조회</a>
-                    <a herf="#" class="btn btnRed">신규</a>
-                    <a herf="#" class="btn btnBlack">삭제</a>
-                    <a herf="#" class="btn btnDefault">수정</a>
-                </div>
-            </div>
-            <div class="tableCol">
+        <div class="content">
+            <h3 class="pageTitle">회원정보수정</h3>
+            <div class="tableRow">
+                <div class="tableTop">( <span class="pointColor">*</span> ) 필수입력 사항입니다.</div>
                 <table>
                     <colgroup>
-                        <col stlye="">
-                        <col stlye="">
-                        <col stlye="">
-                        <col stlye="">
-                        <col stlye="">
-                        <col stlye="">
-                        <col stlye="">
-                        <col stlye="">
-                        <col stlye="">
-                        <col stlye="">
-                        <col stlye="">
+                        <col style="width:160px">
+                        <col>
                     </colgroup>
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>년도</th>
-                            <th>회차</th>
-                            <th>지역</th>
-                            <th>응시지역코드</th>
-                            <th>시험장명</th>
-                            <th>시험실명</th>
-                            <th>등급</th>
-                            <th>수용인원</th>
-                            <th>오</th>
-                            <th>열</th>
-                        </tr>
-                    </thead>
                     <tbody>
                         <tr>
-                            <td><input type="checkbox"></td>
-                            <td>2020</td>
-                            <td>1</td>
-                            <td>서울</td>
-                            <td>11</td>
-                            <td>강북중학교</td>
-                            <td>1실</td>
-                            <td>기사</td>
-                            <td>500명</td>
-                            <td>5</td>
-                            <td>5</td>
+                            <th>이름</th>
+                            <td>뽀로로</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox"></td>
-                            <td>2020</td>
-                            <td>1</td>
-                            <td>서울</td>
-                            <td>11</td>
-                            <td>강북중학교</td>
-                            <td>1실</td>
-                            <td>기사</td>
-                            <td>500명</td>
-                            <td>5</td>
-                            <td>5</td>
+                            <th>아이디</th>
+                            <td>id0123</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox"></td>
-                            <td>2020</td>
-                            <td>1</td>
-                            <td>서울</td>
-                            <td>11</td>
-                            <td>강북중학교</td>
-                            <td>1실</td>
-                            <td>기사</td>
-                            <td>500명</td>
-                            <td>5</td>
-                            <td>5</td>
+                            <th><span class="ness">신규비밀번호</span></th>
+                            <td><input type="password"><span class="tblInfoText">5~12자의 문자, 숫자를 입력하세요.</span></td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox"></td>
-                            <td>2020</td>
-                            <td>1</td>
-                            <td>서울</td>
-                            <td>11</td>
-                            <td>강북중학교</td>
-                            <td>1실</td>
-                            <td>기사</td>
-                            <td>500명</td>
-                            <td>5</td>
-                            <td>5</td>
+                            <th><span class="ness">신규비밀번호 확인</span></th>
+                            <td><input type="password"><span class="tblInfoText">신규 비밀번호를 다시 한번 입력하세요.</span></td>
+                        </tr>
+                        <tr>
+                            <th>생년월인</th>
+                            <td>
+                                <div class="birth">
+                                    <select>
+                                        <option>1999</option>
+                                    </select>
+                                    <span>년</span>
+                                    <select>
+                                        <option>1</option>
+                                    </select>
+                                    <span>월</span>
+                                    <select>
+                                        <option>1</option>
+                                    </select>
+                                    <span>일</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><span class="ness">집주소</span></th>
+                            <td>
+                                <div class="zipCode">
+                                    <input type="text" readonly>
+                                    <a href="#" class="btnTbl">우편번호검색</a>
+                                </div>
+                                <div class="adress">
+                                    <div class="item"><input type="text"><span class="tblInfoText">[기본주소]</span></div>
+                                    <div class="item"><input type="text"><span class="tblInfoText">[나머지주소]</span></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><span class="ness">집전화</span></th>
+                            <td>
+                                <div class="tel">
+                                    <select>
+                                        <option>02</option>
+                                    </select>
+                                    <input type="text">
+                                    <span>-</span>
+                                    <input type="text">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><span class="ness">핸드폰</span></th>
+                            <td>
+                                <div class="tel">
+                                    <select>
+                                        <option>010</option>
+                                    </select>
+                                    <input type="text">
+                                    <span>-</span>
+                                    <input type="text">
+                                </div>
+                                <p class="chk"><input type="checkbox" id="chk1"><label for="chk1">SMS 수신 동의 (원서접수 일정, 경쟁률 안내 등)</label></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><span class="ness">이메일</span></th>
+                            <td>
+                                <div class="email">
+                                    <input type="text">
+                                    <span>@</span>
+                                    <input type="text">
+                                    <select>
+                                        <option>직접입력</option>
+                                    </select>
+                                    <p class="chk"><input type="checkbox" id="chk2"><label for="chk2">e-mail 수신 동의(사용자 공지/알림 및 임시비밀번호 발송시 활용) </label></p>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+
+            <div class="btnArea">
+                <button type="btn btnDefault">비밀번호 초기화</button>
+                <button type="btn btnDefault">수정 정보 저장</button>
+                <button type="btn btnDefault">저장 취소</button>
+                <button type="btn btnDefault">비회원탈퇴(삭제)</button>
             </div>
         </div>
     </div>
