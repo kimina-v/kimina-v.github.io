@@ -16,61 +16,76 @@
         <div class="popupCont scheduleModify">
             <div class="group">
                 <em class="title">전형일정 등록</em>
-                <table>
+                <table class="formTable">
                     <colgroup>
                         <col style="width:153px">
-                        <col style="width:250px">
-                        <col style="width:153px">
-                        <col style="width:250px">
-                        <col style="width:153px">
+                        <col style="width:76px">
+                        <col style="width:170px">
+                        <col style="width:74px">
+                        <col style="width:86px">
+                        <col style="width:205px">
+                        <col style="width:42px">
+                        <col style="width:169px">
                         <col>
                     </colgroup>
                     <tbody>
                         <tr>
                             <th>_전형년도</th>
-                            <td>2021</td>
-                            <th>_전형명</th>
-                            <td colspan="3">2021년 제1회 실기 전형</td>
+                            <td colspan="2">2021</td>
+                            <th colspan="2">_전형명</th>
+                            <td colspan="5">2021년 제1회 실기 전형</td>
                         </tr>
                         <tr>
                             <th>_응시등급</th>
-                            <td>
+                            <td colspan="2">
                                 <div class="select">
                                     <select>
                                         <option>응시등급 선택</option>
                                     </select>
                                 </div>
                             </td>
-                            <th>_시험일시</th>
-                            <td>
+                            <th colspan="2">_시험일시</th>
+                            <td colspan="2">
                                 <div class="inp"><input type="text"></div>
                             </td>
                             <th>_합격자발표일시</th>
-                            <td>
+                            <td colspan="2">
                                 <div class="inp"><input type="text"></div>
                             </td>
                         </tr>
+                        <!-- 필기일 경우-->
+                        <tr>
+                            <th colspan="2">_응시자격 서류제출 시작일시</th>
+                            <td colspan="2">
+                                <div class="inp"><input type="text"></div>
+                            </td>
+                            <th colspan="2" class="otBlank">_응시자격 서류제출 마감일시</th>
+                            <td colspan="4">
+                                <div class="inp"><input type="text"></div>
+                            </td>
+                        </tr>
+                        <!-- //필기일 경우-->
                         <tr>
                             <th>_모집시작일시</th>
-                            <td>
+                            <td colspan="2">
                                 <div class="inp"><input type="text"></div>
                             </td>
-                            <th>_모집종료일시</th>
-                            <td>
+                            <th colspan="2">_모집종료일시</th>
+                            <td colspan="2">
                                 <div class="inp"><input type="text"></div>
                             </td>
-                            <th>_결제시작일시</th>
+                            <th colspan="2">_결제시작일시</th>
                             <td>
                                 <div class="inp"><input type="text"></div>
                             </td>
                         </tr>
                         <tr>
                             <th>_결제종료일시</th>
-                            <td>
+                            <td colspan="2">
                                 <div class="inp"><input type="text"></div>
                             </td>
-                            <th>_전형료</th>
-                            <td colspan="3">
+                            <th colspan="2">_전형료</th>
+                            <td colspan="5">
                                 <div class="inp pay"><input type="text"></div><span class="txt">원</span>
                             </td>
                         </tr>
@@ -120,11 +135,74 @@
             </div>
             
             <div class="group toggle">
-                <div class="toggleBtn">
+                <a href="#" class="toggleBtn">
                     <em class="title">시험장배치</em>
                     <button class="add"><span>시험장추가</span></button>
-                </div>
+                </a>
                 <div class="toggleCont">
+                    <div class="testRoomSearch">
+                        <div class="item">시험장 검색 : 지역
+                            <div class="select">
+                                <select style="width:246px">
+                                    <option>전체</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="item">시험장명
+                            <div class="inp"><input type="text"></div>
+                        </div>
+                        <button class="search">검색</button>
+                        <button class="chkAdd"><span>선택한 시험장가</span></button>
+                    </div>
+                    <div class="trListTable">
+                        <table>
+                            <colgroup>
+                                <col style="width:55px">
+                                <col style="width:90px">
+                                <col>
+                                <col style="width:145px" span="3">
+                                <col style="width:140px" span="2">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>지역</th>
+                                    <th>시험장명</th>
+                                    <th>수용인원</th>
+                                    <th>시험실명</th>
+                                    <th>시험실 수용인원</th>
+                                    <th>줄수</th>
+                                    <th>열수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="3"><input type="checkbox"></td>
+                                    <td rowspan="3">전국</td>
+                                    <td rowspan="3">서울중헉교</td>
+                                    <td rowspan="3">30</td>
+                                    <td>1반</td>
+                                    <td>10</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>2반</td>
+                                    <td>10</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>3반</td>
+                                    <td>10</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="testRoom">
                     <span class="item">서울고등학교1 <button class="del"><span>시험장삭제</span></button></span>
                 </div>
             </div>
@@ -135,5 +213,17 @@
         </div>
     </div>
     <div class="dimm"></div>
+    <script>
+    $(function(){
+        $('.scheduleModify .toggleBtn').on('click',function(){
+            $(this).toggleClass('true');
+            if($(this).hasClass('true')){
+                $(this).next('.toggleCont').show().next('.testRoom').hide();
+            } else{
+                $(this).next('.toggleCont').hide().next('.testRoom').show();
+            }
+        });
+    });
+    </script>
 </body>
 </html>

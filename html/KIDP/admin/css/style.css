@@ -160,14 +160,14 @@ select{border:1px solid #e3e3e3;height:30px;line-height:30px;padding-left:10px}
 .popTR_register .trAdd span:after{content:"";position:absolute;top:11px;right:0;width:15px;height:15px;border-radius:50%;background:#fff;z-index:5;}
 .popTR_register .trAdd span:before{content:"+";position:absolute;top:0;right:0;width:15px;height:15px;color:#393939;z-index:10}
 
-.popP_datilInfo{width:320px;padding-bottom:13px}
-.popP_datilInfo .list li{display:table;width:100%}
-.popP_datilInfo .list li ~ li{margin-top:9px}
-.popP_datilInfo .list li .title{display:table-cell;width:109px;vertical-align:middle;line-height:20px;}
-.popP_datilInfo .list li .text{display:table-cell;width:calc(100% - 109px)}
-.popP_datilInfo .list li .line{display:inline-block;width:160px;border-bottom:1px solid #d1d1d1;height:35px;line-height:35px}
-.popP_datilInfo .selectBox{width:100%}
-.popP_datilInfo .selectBox select{display:block;width:100%;height:38px;line-height:38px;}
+.popTR_register2{width:320px;padding-bottom:13px}
+.popTR_register2 .list li{display:table;width:100%}
+.popTR_register2 .list li ~ li{margin-top:9px}
+.popTR_register2 .list li .title{display:table-cell;width:109px;vertical-align:middle;line-height:20px;}
+.popTR_register2 .list li .text{display:table-cell;width:calc(100% - 109px)}
+.popTR_register2 .list li .line{display:inline-block;width:160px;border-bottom:1px solid #d1d1d1;height:35px;line-height:35px}
+.popTR_register2 .selectBox{width:100%}
+.popTR_register2 .selectBox select{display:block;width:100%;height:38px;line-height:38px;}
 
 .btnBox{margin-top:28px;text-align:center;}
 .btnBox.alignRight{text-align:right;padding-right:18px;margin-top:14px}
@@ -261,14 +261,16 @@ select{border:1px solid #e3e3e3;height:30px;line-height:30px;padding-left:10px}
 .scheduleModify .group .inp{display:inline-block;width:250px;height:37px}
 .scheduleModify .group .inp.pay{width:220px}
 .scheduleModify .group .inp input{width:100%;height:37px;line-height:37px;box-sizing:border-box}
-.scheduleModify .group table{margin:25px 0 35px}
-.scheduleModify .group th{text-align:left;color:#252525;padding-left:28px}
-.scheduleModify .group td{text-align:left;line-height:25px;padding:4px 0;}
-.scheduleModify .group td .txt{line-height:37px;display:inline-block}
+.scheduleModify .group .formTable{margin:25px 0 35px}
+.scheduleModify .group .formTable th{text-align:left;color:#252525;padding-left:28px}
+.scheduleModify .group .formTable td{text-align:left;line-height:25px;padding:4px 0;}
+.scheduleModify .group .formTable td .txt{line-height:37px;display:inline-block}
+.scheduleModify .group .formTable th.otBlank{padding-left:90px}
 
 .scheduleModify .group .chkList{margin:22px 0  49px 30px;}
 .scheduleModify .group .chkList li{display:inline-block;}
 .scheduleModify .group .chkList li ~ li{margin-left:48px}
+.scheduleModify .group .formTable select{width:250px;height:37px}
 .scheduleModify .group .chkList input{opacity:0;position:absolute}
 .scheduleModify .group .chkList label{display:inline-block;line-height:26px;position:relative;padding-left:36px;color:#252525;font-size:16px;}
 .scheduleModify .group .chkList label:after{width:26px;height:26px;content:"";position:absolute;top:0;left:0;background:url(../images/icoChk.png) no-repeat 0 0}
@@ -278,9 +280,75 @@ select{border:1px solid #e3e3e3;height:30px;line-height:30px;padding-left:10px}
 .scheduleModify .group .chkList.col6 li{width:calc((100% - 30px)/6)}
 .scheduleModify .group .chkList.col6 li ~ li{margin-left:0}
 .scheduleModify .group .chkList.col6 li:nth-child(6) ~ li{margin-top:10px}
+.scheduleModify .group.toggle{}
+.scheduleModify .group .toggleBtn{position:relative;display:block}
+.scheduleModify .group .toggleBtn:after{content:"";width:17px;height:10px;background:url(../images/toggleArr.png) no-repeat;position:absolute;top:17px;right:36px;transition:.5s}
+.scheduleModify .group .toggleBtn.true:after{transform:rotate(180deg);transition:.5s}
+.scheduleModify .group .toggleBtn .add{position:absolute;top:8px;right:80px;display:inline-block;border-radius:15px;line-height:30px;padding:0 27px;background:#fff;font-size:16px;color:#393939;}
+.scheduleModify .group .toggleBtn .add span{display:inline-block;position:relative;padding-right:18px}
+.scheduleModify .group .toggleBtn .add span:after{content:"+";color:#fff;background:#393939;border-radius:50%;width:14px;height:14px;position:absolute;top:6px;right:0;line-height:14px;text-align:center;}
+.scheduleModify .group .toggleCont{display:none}
+.scheduleModify .group .testRoomSearch{padding:21px 30px 24px}
+.scheduleModify .group .testRoomSearch .item{line-height:36px;display:inline-block}
+.scheduleModify .group .testRoomSearch .item ~ .item{margin-left:23px}
+.scheduleModify .group .testRoomSearch .item .select{display:inline-block;margin-left:7px}
+.scheduleModify .group .testRoomSearch .item .select select{height:36px}
+.scheduleModify .group .testRoomSearch .item .inp{margin-left:7px;width:415px}
+.scheduleModify .group .testRoomSearch input[type="text"]{height:36px;line-height:34px;padding-left:10px;width:403px}
+.scheduleModify .group .testRoomSearch .search{display:inline-block;width:66px;text-align:center;line-height:36px;background:#000;font-size:16px;color:#fff}
+.scheduleModify .group .testRoomSearch .chkAdd{display:inline-block;margin-left:20px;border-radius:18px;line-height:30px;padding:0 18px 0 28px;background:#393939;font-size:14px;color:#fff;}
+.scheduleModify .group .testRoomSearch .chkAdd span{display:inline-block;position:relative;padding-right:18px}
+.scheduleModify .group .testRoomSearch .chkAdd span:after{content:"+";color:#393939;background:#fff;border-radius:50%;width:14px;height:14px;position:absolute;top:11px;right:0;line-height:14px;text-align:center;}
+.scheduleModify .group .trListTable{padding:0 30px}
+.scheduleModify .group .trListTable table{border-top:1px solid #1b1b1b;}
+.scheduleModify .group .trListTable th{border-bottom:1px solid #d1d1d1;line-height:40px;font-size:14px;color:#252525}
+.scheduleModify .group .trListTable th ~ th,
+.scheduleModify .group .trListTable td ~ td{border-left:1px solid #d1d1d1}
+.scheduleModify .group .trListTable td{vertical-align:middle;text-align:center;border-bottom:1px solid #d1d1d1;line-height:40px;font-size:14px;color:#555}
+.scheduleModify .group .testRoom{padding:26px 30px 0}
+.scheduleModify .group .testRoom .item{font-size:16px;color:#555;line-height:30px;display:inline-block;}
+.scheduleModify .group .testRoom .item .del{display:inline-block;margin-left:15px;padding:0 24px;background:#393939;font-size:14px;color:#fff;border-radius:15px}
+.scheduleModify .group .testRoom .item .del span{display:inline-block;position:relative;padding-right:18px;line-height:30px;}
+.scheduleModify .group .testRoom .item .del span:after{content:"x";color:#393939;background:#fff;width:14px;height:14px;border-radius:50%;text-align:center;line-height:14px;position:absolute;top:8px;right:0;}
 
+.popP_datilInfo{width:1002px}
+.popP_datilInfo .popupCont{overflow:hidden;}
+.popP_datilInfo figure{display:inline-block;width:120px;height:154px;border:1px solid #e6e6e6;box-sizing:border-box}
+.popP_datilInfo .infoTable{width:780px;float:right}
+.popP_datilInfo .infoTable th{text-align:left;vertical-align:middle;line-height:36px;}
+.popP_datilInfo .infoTable td{padding:5px 0;line-height:36px;min-height:36px}
+.popP_datilInfo .infoTable td.line{border-bottom:1px solid #d1d1d1}
+.popP_datilInfo .infoTable .inp{width:160px}
+.popP_datilInfo .infoTable .inp input{height:36px;width:100%;box-sizing:border-box;border-radius:2px;}
+.popP_datilInfo .infoTable .select{width:160px}
+.popP_datilInfo .infoTable .select select{width:100%;height:36px}
+.popP_datilInfo .infoTable tr th ~ th{padding-left:30px}
 
+.popP_datilInfo .infoTable .rdoList{}
+.popP_datilInfo .infoTable .rdoList li{display:inline-block;}
+.popP_datilInfo .infoTable .rdoList li ~ li{margin-left:10px}
+.popP_datilInfo .infoTable .rdoList input{opacity:0;position:absolute}
+.popP_datilInfo .infoTable .rdoList label{display:inline-block;line-height:36px;position:relative;padding-left:30px;font-size:16px;}
+.popP_datilInfo .infoTable .rdoList label:after{width:26px;height:26px;content:"";position:absolute;top:5px;left:0;background:url(../images/radio.png) no-repeat 0 -26px}
+.popP_datilInfo .infoTable .rdoList input:checked + label:after{background-position:0 0}
+.popP_datilInfo .infoTable .tBlank th,
+.popP_datilInfo .infoTable .tBlank td{padding-top:40px}
+.popP_datilInfo .infoTable .address .btnZipCode{display:inline-block;width:75px;text-align:center;background:#393939;line-height:36px;color:#fff;font-size:14px;}
+.popP_datilInfo .infoTable .address .inp{margin-left:5px;width:234px;display:inline-block;}
+.popP_datilInfo .infoTable .address .inp.zipCode{display:inline-block;width:108px;margin-left:7px}
 
-
+.popSMS{width:570px;padding-bottom:18px}
+.popSMS .popupCont{padding-left:30px;padding-right:30px}
+.popSMS .box{width:250px;display:inline-block;}
+.popSMS .box em{background:#efefef;height:36px;line-height:36px;display:block;text-align:center;font-size:16px;color:#252525}
+.popSMS .box em span{color:#a50000}
+.popSMS .box.smsCont{margin-left:4px}
+.popSMS .to .scrollArea{border:1px solid #e3e3e3;border-radius:2px;width:250px;height:290px;box-sizing:border-box;padding:15px 10px;overflow-y:auto;background:#fff;margin-top:1px}
+.popSMS .to ul li{line-height:20px;color:#252525;font-size:16px;overflow:hidden;}
+.popSMS .to ul li ~ li{margin-top:9px}
+.popSMS .to ul li .del{float:right}
+.popSMS .smsCont .inner{border:1px solid #e3e3e3;border-radius:2px;width:250px;height:290px;box-sizing:border-box;background:#fff;margin-top:1px}
+.popSMS .smsCont textarea{width:100%;height:246px;resize:none;outline:none;padding:15px;box-sizing:border-box;}
+.popSMS .smsCont .byte{border-top:1px solid #efefef;padding-top:3px;line-height:37px;text-align:right;padding-right:15px;color:#a50000;}
 
 
