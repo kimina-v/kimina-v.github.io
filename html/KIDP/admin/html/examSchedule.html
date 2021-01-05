@@ -11,135 +11,129 @@
 
 </head>
 <body>
-    <div class="header">
-        <h1><img src="../images/logo.png" alr="kidp로고"></h1>
-        <ul class="gnb">
-            <li><a href="#" class="on">자격검정안내</a>
-                <ul class="depth">
-                    <li><a href="#" class="on">일정관리</a></li>
-                    <li><a href="#">시험장관리</a></li>
-                    <li><a href="#">고사장배치도관리 및 출력</a></li>
-                </ul>
-            </li>
-            <li><a href="#">접수현황관리</a>
-                <ul class="depth">
-                    <li><a href="#">일정관리</a></li>
-                    <li><a href="#">시험장관리</a></li>
-                    <li><a href="#">고사장배치도관리 및 출력</a></li>
-                </ul>
-            </li>
-            <li><a href="#">원서관리</a>
-                <ul class="depth">
-                    <li><a href="#">일정관리</a></li>
-                    <li><a href="#">시험장관리</a></li>
-                    <li><a href="#">고사장배치도관리 및 출력</a></li>
-                </ul>
-            </li>
-            <li><a href="#">합격자관리</a>
-                <ul class="depth">
-                    <li><a href="#">일정관리</a></li>
-                    <li><a href="#">시험장관리</a></li>
-                    <li><a href="#">고사장배치도관리 및 출력</a></li>
-                </ul>
-            </li>
-            <li><a href="#">통계관리</a>
-                <ul class="depth">
-                    <li><a href="#">일정관리</a></li>
-                    <li><a href="#">시험장관리</a></li>
-                    <li><a href="#">고사장배치도관리 및 출력</a></li>
-                </ul>
-            </li>
-            <li><a href="#">인원관리</a>
-                <ul class="depth">
-                    <li><a href="#">일정관리</a></li>
-                    <li><a href="#">시험장관리</a></li>
-                    <li><a href="#">고사장배치도관리 및 출력</a></li>
-                </ul>
-            </li>
-            <li><a href="#">권한관리</a>
-                <ul class="depth">
-                    <li><a href="#">일정관리</a></li>
-                    <li><a href="#">시험장관리</a></li>
-                    <li><a href="#">고사장배치도관리 및 출력</a></li>
-                </ul>
-            </li>
-        </ul>
-        <div class="util">
-            <p><b>홍길동</b>님 안녕하세요</p>
-            <a href="#" class="logout"><img src="../images/bg_logout.png" alt=""></a>
-        </div>
-    </div>
-    <div class="container">
-        <div class="location">
-            <a href="#">홈</a>
-            <span>시험일정관리</span>
-            <span>시험장관리</span>
-        </div>
-            <div class="content">
-            <h3 class="pageTitle"></h3>
-        </div>
-    </div>
-    <div class="footer">
-        <p>COPYRIGHT <b>© KIDP</b> ALL RIGHTS RESERVED.</p>
-    </div>
     <div class="popup examSchedule">
-        <div class="popTitle">시험일정 등록(수정)</div>
-        <div class="popCont scheduleModify">
+        <h2>시험일정 등록(수정)</h2>
+        <div class="popupCont scheduleModify">
             <div class="group">
                 <em class="title">전형일정 등록</em>
                 <table>
                     <colgroup>
-                        <col style="width:">
-                        <col style="width:">
-                        <col style="width:">
-                        <col style="width:">
-                        <col style="width:">
+                        <col style="width:153px">
+                        <col style="width:250px">
+                        <col style="width:153px">
+                        <col style="width:250px">
+                        <col style="width:153px">
                         <col>
                     </colgroup>
                     <tbody>
                         <tr>
-                            <th></th>
-                            <td></td>
-                            <th></th>
-                            <td colspan="4"></td>
+                            <th>_전형년도</th>
+                            <td>2021</td>
+                            <th>_전형명</th>
+                            <td colspan="3">2021년 제1회 실기 전형</td>
                         </tr>
                         <tr>
-                            <th></th>
-                            <td></td>
-                            <th></th>
-                            <td></td>
-                            <th></th>
-                            <td></td>
+                            <th>_응시등급</th>
+                            <td>
+                                <div class="select">
+                                    <select>
+                                        <option>응시등급 선택</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <th>_시험일시</th>
+                            <td>
+                                <div class="inp"><input type="text"></div>
+                            </td>
+                            <th>_합격자발표일시</th>
+                            <td>
+                                <div class="inp"><input type="text"></div>
+                            </td>
                         </tr>
                         <tr>
-                            <th></th>
-                            <td></td>
-                            <th></th>
-                            <td></td>
-                            <th></th>
-                            <td></td>
+                            <th>_모집시작일시</th>
+                            <td>
+                                <div class="inp"><input type="text"></div>
+                            </td>
+                            <th>_모집종료일시</th>
+                            <td>
+                                <div class="inp"><input type="text"></div>
+                            </td>
+                            <th>_결제시작일시</th>
+                            <td>
+                                <div class="inp"><input type="text"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>_결제종료일시</th>
+                            <td>
+                                <div class="inp"><input type="text"></div>
+                            </td>
+                            <th>_전형료</th>
+                            <td colspan="3">
+                                <div class="inp pay"><input type="text"></div><span class="txt">원</span>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+
             <div class="groupMix">
                 <div class="group">
-                    <em class="title">전형일정 등록</em>
+                    <em class="title">제출서류 선택</em>
                     <ul class="chkList">
                         <li><input type="checkbox" id="chk1"><label for="chk1">학교생활기록부</lable></li>
-                        <li><input type="checkbox" id="chk2"><label for="chk2">학교생활기록부</lable></li>
+                        <li><input type="checkbox" id="chk2"><label for="chk2">개인정보 제공이용 동의서</lable></li>
                     </ul>
                 </div>
                 <div class="group">
-                    <em class="title">전형일정 등록</em>
+                    <em class="title">제출증명서 선택</em>
                     <ul class="chkList">
-                        <li><input type="checkbox" id="chk1"><label for="chk1">학교생활기록부</lable></li>
-                        <li><input type="checkbox" id="chk2"><label for="chk2">학교생활기록부</lable></li>
+                        <li><input type="checkbox" id="chk21"><label for="chk21">성적증명서</lable></li>
+                        <li><input type="checkbox" id="chk22"><label for="chk22">졸업증명서</lable></li>
                     </ul>
                 </div>
             </div>
+            
+            <div class="group">
+                <em class="title">응시지역 선택</em>
+                <ul class="chkList col6">
+                    <li><input type="checkbox" id="chk1"><label for="chk1">전국</lable></li>
+                    <li><input type="checkbox" id="chk2"><label for="chk2">서울특별시</lable></li>
+                    <li><input type="checkbox" id="chk2"><label for="chk2">부산광역시</lable></li>
+                    <li><input type="checkbox" id="chk2"><label for="chk2">대구광역시</lable></li>
+                    <li><input type="checkbox" id="chk2"><label for="chk2">인천광역시</lable></li>
+                    <li><input type="checkbox" id="chk2"><label for="chk2">광주광역시</lable></li>
+                    <li><input type="checkbox" id="chk2"><label for="chk2">대전광역시</lable></li>
+                    <li><input type="checkbox" id="chk2"><label for="chk2">울산광역시</lable></li>
+                    <li><input type="checkbox" id="chk2"><label for="chk2">세종특별자치시</lable></li>
+                    <li><input type="checkbox" id="chk2"><label for="chk2">경기도</lable></li>
+                    <li><input type="checkbox" id="chk2"><label for="chk2">강원도</lable></li>
+                    <li><input type="checkbox" id="chk2"><label for="chk2">충청북도</lable></li>
+                    <li><input type="checkbox" id="chk2"><label for="chk2">충청남도</lable></li>
+                    <li><input type="checkbox" id="chk2"><label for="chk2">전라북도</lable></li>
+                    <li><input type="checkbox" id="chk2"><label for="chk2">전라남도</lable></li>
+                    <li><input type="checkbox" id="chk2"><label for="chk2">경상북도</lable></li>
+                    <li><input type="checkbox" id="chk2"><label for="chk2">경상남도</lable></li>
+                    <li><input type="checkbox" id="chk2"><label for="chk2">제주도</lable></li>
+                </ul>
+            </div>
+            
+            <div class="group toggle">
+                <div class="toggleBtn">
+                    <em class="title">시험장배치</em>
+                    <button class="add"><span>시험장추가</span></button>
+                </div>
+                <div class="toggleCont">
+                    <span class="item">서울고등학교1 <button class="del"><span>시험장삭제</span></button></span>
+                </div>
+            </div>
+        </div>
+        <div class="btnBox">
+            <button class="btn btnRed">등록</button>
+            <button class="btn btnDefault">닫기</button>
         </div>
     </div>
-    <div class="dim"></div>
+    <div class="dimm"></div>
 </body>
 </html>
