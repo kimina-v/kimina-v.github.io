@@ -2,14 +2,56 @@
 
 @import url(common.css);
 
-.mainContent{padding-top:35px}
-.mainContent .testSchedule .tit{font-size:22px;color:#000}
+.container{padding:35px 0 60px}
+.testSchedule{position:relative}
+.testSchedule .tit{font-size:22px;color:#000}
+.testSchedule .desc{color:#6a6a6a;font-size:13px;margin-top:15px}
+.testSchedule .stit{font-size:15px;color:#000;padding-bottom:3px;border-bottom:1px solid #000;margin-top:20px;display:inline-block}
+.testSchedule .stitDesc{color:#5c5c5c;font-size:12px;margin-top:10px;}
+.testSchedule > ul{border-top:1px solid #d3d3d3}
+.testSchedule > ul > li{display:table;width:100%;border-bottom:1px solid #d3d3d3;}
+.testSchedule > ul > li em{display:table-cell;vertical-align:middle;padding-left:8px;font-size:12px;color:#666;width:120px;}
+.testSchedule > ul > li em > .blick{display:inline-block;padding-left:7px;background:url(../images/main_list_blick.png) no-repeat 0 5px;line-height:15px;background-size:3px auto}
+.testSchedule > ul > li > div{display:table-cell;width:calc(100% - 120px);font-weight:bold;font-size:14px;color:#000;padding:5px 0;line-height:18px;}
+.testSchedule > ul > li .timeOorder{margin:18px 0 14px}
+.testSchedule .timeOorder li ~ li{margin-top:5px;}
+.testSchedule .timeOorder li span{display:inline-block;padding:0 8px;color:#fff;background:#f60f23;border-radius:9px;height:18px;line-height:18px;margin-right:8px}
+.testSchedule .allSchedule{position:absolute;top:0;right:0;height:26px;line-height:26px;width:100px;padding-left:13px;border:1px solid #bdbdbd;border-radius:13px;font-size:11px;}
+.testSchedule .allSchedule span{padding-right:22px;display:inline-block;position:relative;}
+.testSchedule .allSchedule span:after{content:"";width:18px;height:18px;background:#bdbdbd url(../images/ico_schedule.png) no-repeat 50% 50%;background-size:9px auto;position:absolute;top:4px;right:0;border-radius:9px}
+.testSchedule .btnGroup{margin-top:25px;font-size:0;text-align:center;}
+.testSchedule .btnGroup .btn{margin:0;font-size:12px;padding:0 14px}
+.testSchedule .btnGroup .btn span{background:url(../images/btn_ico.png) no-repeat 100% 50%;display:inline-block;padding-right:25px;background-size:12px auto}
+
+.quickMenu{margin-top:18px;text-align:center;font-size:0;}
+.quickMenu .item{display:inline-block;width:126px;height:108px;border-radius:12px;font-size:12px;color:#fff;font-weight:bold;margin:9px 10px;box-sizing:border-box;padding-top:80px}
+.quickMenu .item:hover{background-color:#f00}
+.quickMenu .item01{background:#282828 url(../images/ico_quick_01.png) no-repeat;background-size:100% auto}
+.quickMenu .item02{background:#474445 url(../images/ico_quick_02.png) no-repeat;background-size:100% auto}
+.quickMenu .item03{background:#828282 url(../images/ico_quick_03.png) no-repeat;background-size:100% auto}
+.quickMenu .item04{background:#000 url(../images/ico_quick_04.png) no-repeat;background-size:100% auto}
+
+.customerArea{margin-top:50px}
+.customerArea .tit{font-size:16px;color:#000;border-bottom:1px solid #ddd;padding-bottom:10px;}
+.customerArea ul{margin-top:13px}
+.customerArea li{padding-left:7px;background:url(../images/main_list_blick.png) no-repeat 0 5px;line-height:15px;overflow:hidden;line-height:16px;background-size:3px auto}
+.customerArea li a{color:#444;font-size:12px;text-overflow:ellipsis;white-space:nowrap;overflow: hidden;display:inline-block;max-width:55%}
+.customerArea li .date{float:right;color:#444;font-size:12px;}
+.customerArea li ~ li{margin-top:10px}
+.customerArea .group{position:relative}
+.customerArea .group ~ .group{margin-top:40px}
+.customerArea .more{color:#6a6a6a;font-size:11px;position:absolute;top:8px;right:0;}
+.customerArea .more:before{content:"+";display:inline-block;margin-right:5px}
 
 @media screen and (min-width:800px) {
 
 }
 
 @media screen and (min-width: 1600px) {
-    
+
+    .container{}
+    .container .inner{position:relative;padding:403px 401px 0 0;width:1600px;margin:0 auto;box-sizing:border-box}
+    .testSchedule{position:absolute;top:0;right:0;width:410px;border-left:1px solid #dcdcdc}
+    .quickMenu{position:absolute;top:128px}
 
 }
