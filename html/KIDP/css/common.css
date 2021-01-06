@@ -167,7 +167,7 @@ body{background:#fff}
     .layerMenu .allMenuClose{width:31px;height:16px;background:url(../images/ico_arrT.png) no-repeat;background-size:100% auto;position:absolute;right:inherit;left:50%;margin-left:766px;bottom:50px}
 
     .front{position:relative;height:538px;}
-    .front:after{content:"";width:609px;height:396px;background:#f00;position:absolute;top:142px;left:50%;margin-left:390px}
+    .front:after{content:"";width:calc((100vw - 1600px) / 2);height:396px;background:#f00;position:absolute;top:142px;right:0}/*left:50%;margin-left:390px*/
     .front .inner{min-width:auto;width:100%}
     .front img.mVisual{display:none}
     .front img.pVisual{display:block}
@@ -179,7 +179,7 @@ body{background:#fff}
     .front .visual .bx-controls-direction .bx-prev.disabled{background-position:0 -116px;}
     .front .visual .bx-controls-direction .bx-next{left:50%;margin-left:238px;right:inheirt;background-position:-60px 0}
     .front .visual .bx-controls-direction .bx-next.disabled{background-position:-60px -116px;}
-    .front .login{position:absolute;top:142px;left:50%;margin-left:390px;z-index:10;width:410px;padding:25px 0 0 48px;box-sizing:border-box}
+    .front .login{position:absolute;top:142px;left:50%;margin-left:390px;z-index:10;width:410px;padding:25px 0 0 48px;box-sizing:border-box;background:#f00;height:396px}
     .front .login .title{width:209px;height:43px}
     .front .login .inp{display:block;width:100%}
     .front .login .inp ~ .inp{margin:12px 0 0}
