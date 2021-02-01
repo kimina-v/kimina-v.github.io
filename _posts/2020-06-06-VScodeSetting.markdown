@@ -19,6 +19,51 @@ title: VScode Setting
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe", // window에서 터미널에 사용하는 셸의 경로<br>
     "workbench.iconTheme": "vscode-icons",<br>
     "files.encoding": "euckr", //icon 테마를 vscode_icons 확장 프로그램 사용<br>
+    "editor.wordWrap": "on",<br>
+    "editor.fontSize": 17,<br>
+    "window.zoomLevel": -1,<br>
+    "files.autoSave": "onFocusChange",<br>
+    "editor.tabCompletion": "on",<br>
+    "editor.detectIndentation": false,<br>
+    "git.autofetch": false,<br>
+    "liveSassCompile.settings.formats":[<br>
+        // This is Default.<br>
+        // {<br>
+        //     "format": "expanded",<br>
+        //     "extensionName": ".css",<br>
+        //     "savePath": "~/../dist/"<br>
+        // },<br>
+        // You can add more<br>
+        {<br>
+            "format": "compressed",<br>
+            "extensionName": ".min.css",<br>
+            "savePath": "~/../"<br>
+        }<br>
+    ],<br>
+    "liveSassCompile.settings.generateMap": false,<br>
+    "diffEditor.ignoreTrimWhitespace": false,<br>
+    "vsicons.associations.fileDefault.file": null,<br>
+    "editor.renderWhitespace": "all",<br>
+    "gitlens.currentLine.dateFormat": "YYYY MM DD mm:ss",<br>
+    // //"gitlens.defaultDateShortFormat": "YYYY MM DD",<br>
+    "gitlens.defaultDateFormat": "YYYY MM DD mm:ss",<br>
+    "gitlens.defaultDateStyle": "absolute",<br>
+    "auto-close-tag.activationOnLanguage": [<br>
+        "javascript",<br>
+        "HTML (EEx)",<br>
+        "HTML (Eex)"<br>
+    ],<br>
+    "vsicons.associations.folderDefault.folder_light": null,<br>
+    "liveServer.settings.donotShowInfoMsg": true,<br>
+    "liveSassCompile.settings.includeItems": [<br>
+        "scss/*.scss"<br>
+    ]<br>
+    // "workbench.statusBar.visible": true,<br>
+    // "liveSassCompile.settings.excludeList": [<br>
+    //     "**/node_modules/**",<br>
+    //     ".vscode/**"<br>
+    // ],<br>
+    // "liveSassCompile.settings.autoprefix": []<br>
 }
 
 <div class="post-stitle">추천확장 프로그램</div>
