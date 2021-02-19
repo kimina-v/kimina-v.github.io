@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js" ></script>
+<script type="text/javascript" src="../js/ui.js" ></script>
+
+</head>
+<body>
+
+    <div class="popup popP_datilInfo">
+        <h2>원서세부정보</h2>
+        <div class="popupCont">
+            <figure>
+                <img src="../images/p_default.png" alt="">
+            </figure>
+            <div class="infoTable">
+                <table>
+                    <colgroup>
+                        <col>
+                        <col style="width:165px">
+                        <col style="width:100px">
+                        <col style="width:165px">
+                        <col style="width:100px">
+                        <col style="width:165px">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>수험번호</th>
+                            <td class="line"></td>
+                            <th>성명</th>
+                            <td class="line"></td>
+                            <th>아이디</th>
+                            <td class="line"></td>
+                        </tr>
+                        <tr>
+                            <th>접수번호</th>
+                            <td class="line"></td>
+                            <th>이메일</th>
+                            <td>
+                                <div class="inp"><input type="text" value="id@mail.com"></div>
+                            </td>
+                            <th>생년월일</th>
+                            <td class="line"></td>
+                        </tr>
+                        <tr>
+                            <th>국적 </th>
+                            <td>
+                                <ul class="rdoList">
+                                    <li><input type="radio" id="r1" name="r"><label for="r1">내국인</label></li>
+                                    <li><input type="radio" id="r2" name="r"><label for="r2">외국인</label></li>
+                                </ul>
+                            </td>
+                            <th>장애유무</th>
+                            <td>
+                                <ul class="rdoList">
+                                    <li><input type="radio" id="r21" name="r2"><label for="r21">해당없음</label></li>
+                                    <li><input type="radio" id="r22" name="r2"><label for="r22">해당</label></li>
+                                </ul>
+                            </td>
+                            <th>핸드폰</th>
+                            <td>
+                                <div class="inp"><input type="text" value="010-1212-2222"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>장애상세명</th>
+                            <td class="line" colspan="5"></td>
+                        </tr>
+                        <tr class="tBlank">
+                            <th>주소</th>
+                            <td colspan="5">
+                                <div class="address">
+                                    <button class="btnZipCode">주소검색</button>
+                                    <div class="inp zipCode"><input type="text" value="23423" readonly></div>
+                                    <div class="inp"><input type="text" value="서울시" readonly></div>
+                                    <div class="inp"><input type="text" value="상세주소"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>접수년도</th>
+                            <td>
+                                <div class="inp"><input type="text" value="2021"></div>
+                            </td>
+                            <th>회차</th>
+                            <td>
+                                <div class="select">
+                                    <select>
+                                        <option>1</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <th>등급</th>
+                            <td>
+                                <div class="select">
+                                    <select>
+                                        <option>기사</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>시험장</th>
+                            <td>
+                                <div class="select">
+                                    <select>
+                                        <option>서울대</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <th>시험명</th>
+                            <td class="line" colspan="3"></td>
+                        </tr>
+                        <tr>
+                            <th>결제상태</th>
+                            <td>
+                                <div class="select">
+                                    <select>
+                                        <option>결제완료</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <th>결제일자</th>
+                            <td class="line"></td>
+                            <th>결제수단</th>
+                            <td>
+                                <div class="select">
+                                    <select>
+                                        <option>핸드폰</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>접수상태</th>
+                            <td>
+                                <div class="select">
+                                    <select>
+                                        <option>접수중</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <th>서류심사</th>
+                            <td>
+                                <div class="select">
+                                    <select>
+                                        <option>심사중</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <th>시험결과</th>
+                            <td>
+                                <div class="select">
+                                    <select>
+                                        <option>합격</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btnBox alignRight">
+            <button class="btn btnRed sizeM">정보수정</button>
+            <button class="btn btnDefault">닫기</button>
+        </div>
+        <button class="popupClose">닫기</button>
+    </div>
+    <div class="dimm"></div>
+</body>
+</html>
