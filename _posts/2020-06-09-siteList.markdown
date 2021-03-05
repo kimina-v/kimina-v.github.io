@@ -16,3 +16,4 @@ title: Site List
 +  [color-code](https://htmlcolorcodes.com/)
 +  [highlight.js](https://cdnjs.com/libraries/highlight.js)
 +  [rem게산](https://offroadcode.com/rem-calculator)
++  [CSS말줄임 표현](https://velog.io/@decody/Text-truncation-with-only-CSS)
