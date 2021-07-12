@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi"/>
+	<title>V2G</title>
+	<!-- css , script libs -->
+	<link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/common.css">
+	<link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/layout.css">
+	<link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/content.css">
+	<link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/menu.css">
+	<link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/sub/building.css">
+	<link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/sub/monitoring.css">
+
+	<link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/jquery-ui/1.11.0.custom/jquery-ui.min.css">
+	<script language="JavaScript" type="text/javascript" charset="utf-8" src="http://101.1.49.233/v2g.web/WEB/scripts/jquery/jquery-1.10.2.js"></script>
+	<script language="JavaScript" type="text/javascript" charset="utf-8" src="http://101.1.49.233/v2g.web/WEB/scripts/jquery-ui/jquery-ui-1.10.4.custom.js"></script>
+
+	
+	<link rel="stylesheet" type="text/css" href="../css/v2g.css"><!-- 21.07.16 추가 -->
+</head>
+<body>
+ <!-- scroll="no" -->
+<div id="layout-container">
+	<div id="layout-header">
+		<div id="logo_area">
+			<div class="logo"></div>
+			<!-- <div class="divider"></div> 21.07.16 제거 -->
+			<div class="title">JEJU V2G Platform</div><!-- 21.07.16 텍스트 변경 -->
+		</div>
+		<div id="date_area">
+			<div class="date"></div>
+			<div class="dayOfWeek"></div>
+			<div class="time"></div>
+			<div class="divider"></div>
+		</div>
+		<div id="logout_area" onclick="logoutbtn_click();">
+			<div class="logout_img"></div>
+			<div class="logout_title">Logout</div>
+		</div>
+	</div>
+	<div id="layout-body-left">
+		<div id="layout-gnb">
+			<span style="color:#fff;font-size:24px">lnb 영역</span>
+		</div>
+	</div>
+	<div id="layout-body-right">
+		<!-- 21.07.16 컨텐츠 영역 -->
+		<div class="realtime-status">
+			<div class="top-area">
+				<div class="left-area">
+					<div class="box-area arbitrage">
+						<div class="title-area">Arbitrage 현황
+							<div class="flag"><span class="item-maximun">최대부하</span></div>
+						</div>
+						<div class="cont-area">
+							<ul class="status-list">
+								<li>
+									<em>금일 충전량</em>
+									<strong>146<span>kWh</span></strong>
+									<span>전주동일대비 <span class="minus">-25%</span></span>
+								</li>
+								<li>
+									<em>금일 방전량</em>
+									<strong>146<span>kWh</span></strong>
+									<span>전주동일대비 <span class="plus">5%</span></span>
+								</li>
+								<li>
+									<em>요금 절감 효과</em>
+									<strong>146<span>kWh</span></strong>
+									<span>전주동일대비 <span class="plus">5%</span></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="box-area charge">
+						<div class="title-area">충전요금현황</div>
+						<div class="cont-area">
+							<ul class="status-list">
+								<li>
+									<em>전기차충전요금</em>
+									<strong>146<span>원/kWh</span></strong>
+								</li>
+								<li>
+									<em>빌딩기준요금</em>
+									<strong>123,123<span>원</span></strong>
+								</li>
+								<li>
+									<em>절감 금액</em>
+									<strong>146,444<span>원</span></strong>
+								</li>
+							</ul>
+						</div>
+					</div> 
+				</div>
+				<div class="right-area">
+					<div class="box-area peak">
+						<div class="title-area">전력Peak 현황
+							<div class="flag"><span class="item-warning">주의</span></div>
+							<div class="side">
+								<a href="#">다운로드</a>
+							</div>
+						</div>
+						<div class="graph-area">그래프 영역</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom-area">
+				<div class="open-status">
+					<div class="summary">
+						<p>제주도청 V2G 개통 현황</p>
+						<img src="">
+						<ul class="status-list">
+							<li>
+								<em>금일 충전량</em>
+								<strong>146<span>kWh</span></strong>
+								<span>전주동일대비 <span class="minus">-25%</span></span>
+							</li>
+							<li>
+								<em>금일 방전량</em>
+								<strong>146<span>kWh</span></strong>
+								<span>전주동일대비 <span class="plus">5%</span></span>
+							</li>
+						</ul>
+					</div>
+					<div class="cont-area">
+						<div class="open-status-list">
+							<div class="item ing">
+								<em class="item-counter">A0001</em>
+								<div class="detail">
+									<span class="car-info">
+										<i></i>
+										<span class="number">12가2345</span>
+									</span>
+									<ul class="detail-list">
+										<li><em>모드</em><span>충전</span></li>
+										<li><em>SOC</em><span>55%</span></li>
+										<li><em>전량</em><span>10kWh</span></li>
+										<li><em>출력</em><span>4.3kW</span></li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="item standby">
+								<em class="item-counter">A0002</em>
+								<div class="detail">
+									<span class="car-info">
+										<i></i>
+										<span class="number">12가2345</span>
+									</span>
+									<ul class="detail-list">
+										<li><em>모드</em><span>충전</span></li>
+										<li><em>SOC</em><span>55%</span></li>
+										<li><em>전량</em><span>10kWh</span></li>
+										<li><em>출력</em><span>4.3kW</span></li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="item bin">
+								<em class="item-counter">A0003</em>
+								<div class="detail">
+									<span class="car-info">
+										<i></i>
+										<span class="number">12가2345</span>
+									</span>
+									<ul class="detail-list">
+										<li><em>모드</em><span>-</span></li>
+										<li><em>SOC</em><span>-</span></li>
+										<li><em>전량</em><span>-</span></li>
+										<li><em>출력</em><span>-</span></li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="item bin">
+								<em class="item-counter">A0004</em>
+								<div class="detail">
+									<span class="car-info">
+										<i></i>
+										<span class="number">12가2345</span>
+									</span>
+									<ul class="detail-list">
+										<li><em>모드</em><span>-</span></li>
+										<li><em>SOC</em><span>-</span></li>
+										<li><em>전량</em><span>-</span></li>
+										<li><em>출력</em><span>-</span></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="item ing">
+								<em class="item-counter">A0005</em>
+								<div class="detail">
+									<span class="car-info">
+										<i></i>
+										<span class="number">12가2345</span>
+									</span>
+									<ul class="detail-list">
+										<li><em>모드</em><span>충전</span></li>
+										<li><em>SOC</em><span>55%</span></li>
+										<li><em>전량</em><span>10kWh</span></li>
+										<li><em>출력</em><span>4.3kW</span></li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="item standby">
+								<em class="item-counter">A0006</em>
+								<div class="detail">
+									<span class="car-info">
+										<i></i>
+										<span class="number">12가2345</span>
+									</span>
+									<ul class="detail-list">
+										<li><em>모드</em><span>충전</span></li>
+										<li><em>SOC</em><span>55%</span></li>
+										<li><em>전량</em><span>10kWh</span></li>
+										<li><em>출력</em><span>4.3kW</span></li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="item ing">
+								<em class="item-counter">A0007</em>
+								<div class="detail">
+									<span class="car-info">
+										<i></i>
+										<span class="number">12가2345</span>
+									</span>
+									<ul class="detail-list">
+										<li><em>모드</em><span>충전</span></li>
+										<li><em>SOC</em><span>55%</span></li>
+										<li><em>전량</em><span>10kWh</span></li>
+										<li><em>출력</em><span>4.3kW</span></li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="item standby">
+								<em class="item-counter">A0008</em>
+								<div class="detail">
+									<span class="car-info">
+										<i></i>
+										<span class="number">12가2345</span>
+									</span>
+									<ul class="detail-list">
+										<li><em>모드</em><span>충전</span></li>
+										<li><em>SOC</em><span>55%</span></li>
+										<li><em>전량</em><span>10kWh</span></li>
+										<li><em>출력</em><span>4.3kW</span></li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="item ing">
+								<em class="item-counter">A0009</em>
+								<div class="detail">
+									<span class="car-info">
+										<i></i>
+										<span class="number">12가2345</span>
+									</span>
+									<ul class="detail-list">
+										<li><em>모드</em><span>충전</span></li>
+										<li><em>SOC</em><span>55%</span></li>
+										<li><em>전량</em><span>10kWh</span></li>
+										<li><em>출력</em><span>4.3kW</span></li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="item standby">
+								<em class="item-counter">A0010</em>
+								<div class="detail">
+									<span class="car-info">
+										<i></i>
+										<span class="number">12가2345</span>
+									</span>
+									<ul class="detail-list">
+										<li><em>모드</em><span>충전</span></li>
+										<li><em>SOC</em><span>55%</span></li>
+										<li><em>전량</em><span>10kWh</span></li>
+										<li><em>출력</em><span>4.3kW</span></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="item trouble">
+								<em class="item-counter">A0011</em>
+								<div class="detail">
+									<p>고장접수<br>시스템 점검중</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //21.07.16 컨텐츠 영역 -->
+	</div>
+</div>
+</body>
+</html>
