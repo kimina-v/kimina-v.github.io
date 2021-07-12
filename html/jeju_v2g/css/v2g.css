@@ -30,13 +30,14 @@
 .realtime-status .open-status{border:1px solid #c7c7c7;margin-top:20px;height:395px;font-size:0;background:#fff}
 .realtime-status .open-status .open-status-summary{width:280px;height:395px;border-right:1px solid #c7c7c7;display:inline-block;text-align:center;background:#f8f8f8;padding-top:39px;box-sizing:border-box}
 .realtime-status .open-status .open-status-summary > img{display:inline-block;margin:20px 0 24px}
-.realtime-status .open-status .cont-area{width:calc(100% - 281px);display:inline-block;vertical-align:top;padding:90px 0 0 73px}
+.realtime-status .open-status .cont-area{width:calc(100% - 281px);display:inline-block;vertical-align:top;padding-top:90px;text-align:center}
 .realtime-status .open-status .status-list{font-size:0}
 .realtime-status .open-status .status-list li{width:50%;box-sizing:border-box}
 .realtime-status .open-status .status-list li:first-child{border-right:1px solid #c7c7c7}
 .realtime-status .open-status .status-list li .txt > span{display:block;text-align:center;font-weight:bold}
 .realtime-status .open-status .stit{font-size:16px;font-weight:600}
-.realtime-status .open-status-list .item{width:125px;display:inline-block;text-align:center}
+/* .realtime-status .open-status-list{white-space:nowrap} */
+.realtime-status .open-status-list .item{width:125px;display:inline-block;text-align:center;vertical-align:top}
 .realtime-status .open-status-list .item ~ .item{margin-left:-5px}
 .realtime-status .open-status-list .item .item-counter{display:inline-block;position:relative;width:65px;height:40px;border-radius:3px;background:#e5e5e5;font-size:14px;color:000;font-weight:bold;padding-top:15px;box-sizing:border-box}
 .realtime-status .open-status-list .item .item-counter:after{content:"";position:absolute;top:-15px;left:calc(50% - 15px);display:inline-block;width:30px;height:31px}
@@ -46,7 +47,7 @@
 {background:url(../img/ico-plug-black.png)}
 .realtime-status .open-status-list .item.discharge .item-counter:after{background:url(../img/ico-plug-orange.png) no-repeat 50% 50%}
 .realtime-status .open-status-list .item.trouble .item-counter:after{background:url(../img/ico-plug-gray.png) no-repeat 50% 50%}
-.realtime-status .open-status-list .detail{margin-top:14px;border:5px solid #e5e5e5;border-bottom:0;position:relative;text-align:left}
+.realtime-status .open-status-list .detail{margin-top:14px;border:5px solid #e5e5e5;border-bottom:0;position:relative;text-align:left;height:178px}
 .realtime-status .open-status-list .detail:before{position:absolute;content:"";width:5px;height:14px;background:#e5e5e5;top:-19px;left:calc(50% - 2.5px)}
 .realtime-status .open-status-list .item i{display:block;width:52px;height:38px;margin:15px auto 12px}
 .realtime-status .open-status-list .item.ing i{background:url(../img/ico-car-green.png) no-repeat 50% 50%}
@@ -54,7 +55,7 @@
 .realtime-status .open-status-list .item.bin i{background:url(../img/ico-car-gray.png) no-repeat 50% 50%}
 {background:url(../img/ico-car-black.png)}
 .realtime-status .open-status-list .item.discharge i{background:url(../img/ico-car-orange.png) no-repeat 50% 50%}
-/* .realtime-status .open-status-list .item.trouble i{background:url(../img/ico-car-gray.png) no-repeat 50% 50%} */
+.realtime-status .open-status-list .item.trouble .detail{padding-top:95px;font-size:13px;color:000;background:url(../img/icon_warning.png) no-repeat 50% 52px;text-align:center}
 .realtime-status .open-status-list .car-info{text-align:center;display:block}
 .realtime-status .open-status-list .car-info .number{display:inline-block;font-size:13px;color:#fff;background:#111;line-height:21px;border-radius:11px;padding:0 9px;font-weight:bold}
 .realtime-status .open-status-list .detail-list{margin-left:20px;font-size:13px;color:#000;line-height:18px;margin-top:10px}
