@@ -1,11 +1,61 @@
 @charset "utf-8"; 
-@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-/* reset */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0}
-ul, ol{list-style:none}
-em{font-style:normal}
-body{font-family:"Noto Sans KR"}
+/* dashboard */
+.realtime-status .top-area{font-size:0}
+.realtime-status .left-area{width:530px;display:inline-block}
+.realtime-status .box-area{border:1px solid #c7c7c7;background:#fff}
+.realtime-status .box-area.charge{margin-top:20px}
+.realtime-status .box-area .title-area{background:#f8f8f8;border-bottom:1px solid #c7c7c7;line-height:45px;padding-left:20px;font-size:16px;color:#000;font-weight:600}
+.realtime-status .box-area .title-area .side{float:right}
+.realtime-status .flag{display:inline-block;vertical-align:1px;margin-left:7px}
+.realtime-status .flag > span{display:inline-block;padding:0 15px;height:22px;line-height:22px;border-radius:11px;font-size:13px;color:#fff}
+.realtime-status .flag > span.item-maximun{background:#f05959}
+.realtime-status .flag > span.item-warning{background:#f8b551}
+.realtime-status .left-area .cont-area{padding:28px 30px 26px}
+.realtime-status .status-list li{display:inline-block}
+.realtime-status .status-list li:nth-child(1){width:170px}
+.realtime-status .status-list li:nth-child(2){width:180px}
+.realtime-status .status-list li em{font-size:14px;color:#000;display:block;font-weight:600}
+.realtime-status .status-list li strong{display:block;font-size:28px;color:#000;line-height:1;margin:10px 0 5px}
+.realtime-status .status-list li strong span{font-size:14px;font-weight:normal;display:inline-block;margin-left:9px}
+.realtime-status .status-list li .txt{font-size:13px;color:#ccc;display:block}
+.realtime-status .status-list li .txt .minus{color:#1caae2}
+.realtime-status .status-list li .txt .minus:after{content:"";display:inline-block;width:0;height:0;border-top:7px solid #1caae2;border-left:5px solid transparent;border-right:5px solid transparent;margin-left:5px}
+.realtime-status .status-list li .txt .plus{color:#f00}
+.realtime-status .status-list li .txt .plus:after{content:"";display:inline-block;width:0;height:0;border-bottom:7px solid #f00;border-left:5px solid transparent;border-right:5px solid transparent;margin-left:5px}
 
-/* header*/
-#logo_area .logo{background:url(../img/logo.png) no-repeat 50% 50%}
+.realtime-status .right-area{display:inline-block;width:calc(100% - 550px);margin-left:20px;vertical-align:top}
+.realtime-status .graph-area{height:321px}
+
+.realtime-status .open-status{border:1px solid #c7c7c7;margin-top:20px;height:395px;font-size:0;background:#fff}
+.realtime-status .open-status .open-status-summary{width:280px;height:395px;border-right:1px solid #c7c7c7;display:inline-block;text-align:center;background:#f8f8f8;padding-top:39px;box-sizing:border-box}
+.realtime-status .open-status .open-status-summary > img{display:inline-block;margin:20px 0 24px}
+.realtime-status .open-status .cont-area{width:calc(100% - 281px);display:inline-block;vertical-align:top;padding:90px 0 0 73px}
+.realtime-status .open-status .status-list{font-size:0}
+.realtime-status .open-status .status-list li{width:50%;box-sizing:border-box}
+.realtime-status .open-status .status-list li:first-child{border-right:1px solid #c7c7c7}
+.realtime-status .open-status .status-list li .txt > span{display:block;text-align:center;font-weight:bold}
+.realtime-status .open-status .stit{font-size:16px;font-weight:600}
+.realtime-status .open-status-list .item{width:125px;display:inline-block;text-align:center}
+.realtime-status .open-status-list .item ~ .item{margin-left:-5px}
+.realtime-status .open-status-list .item .item-counter{display:inline-block;position:relative;width:65px;height:40px;border-radius:3px;background:#e5e5e5;font-size:14px;color:000;font-weight:bold;padding-top:15px;box-sizing:border-box}
+.realtime-status .open-status-list .item .item-counter:after{content:"";position:absolute;top:-15px;left:calc(50% - 15px);display:inline-block;width:30px;height:31px}
+.realtime-status .open-status-list .item.ing .item-counter:after{background:url(../img/ico-plug-green.png) no-repeat 50% 50%}
+.realtime-status .open-status-list .item.standby .item-counter:after,
+.realtime-status .open-status-list .item.bin .item-counter:after{background:url(../img/ico-plug-black.png) no-repeat 50% 50%}
+{background:url(../img/ico-plug-black.png)}
+.realtime-status .open-status-list .item.discharge .item-counter:after{background:url(../img/ico-plug-orange.png) no-repeat 50% 50%}
+.realtime-status .open-status-list .item.trouble .item-counter:after{background:url(../img/ico-plug-gray.png) no-repeat 50% 50%}
+.realtime-status .open-status-list .detail{margin-top:14px;border:5px solid #e5e5e5;border-bottom:0;position:relative;text-align:left}
+.realtime-status .open-status-list .detail:before{position:absolute;content:"";width:5px;height:14px;background:#e5e5e5;top:-19px;left:calc(50% - 2.5px)}
+.realtime-status .open-status-list .item i{display:block;width:52px;height:38px;margin:15px auto 12px}
+.realtime-status .open-status-list .item.ing i{background:url(../img/ico-car-green.png) no-repeat 50% 50%}
+.realtime-status .open-status-list .item.standby i{background:url(../img/ico-car-black.png) no-repeat 50% 50%}
+.realtime-status .open-status-list .item.bin i{background:url(../img/ico-car-gray.png) no-repeat 50% 50%}
+{background:url(../img/ico-car-black.png)}
+.realtime-status .open-status-list .item.discharge i{background:url(../img/ico-car-orange.png) no-repeat 50% 50%}
+/* .realtime-status .open-status-list .item.trouble i{background:url(../img/ico-car-gray.png) no-repeat 50% 50%} */
+.realtime-status .open-status-list .car-info{text-align:center;display:block}
+.realtime-status .open-status-list .car-info .number{display:inline-block;font-size:13px;color:#fff;background:#111;line-height:21px;border-radius:11px;padding:0 9px;font-weight:bold}
+.realtime-status .open-status-list .detail-list{margin-left:20px;font-size:13px;color:#000;line-height:18px;margin-top:10px}
+.realtime-status .open-status-list .detail-list em{color:#aaa;margin-right:8px}

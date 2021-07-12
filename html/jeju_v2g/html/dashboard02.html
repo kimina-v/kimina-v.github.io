@@ -7,9 +7,9 @@
 	<title>V2G</title>
 	<!-- css , script libs -->
 	<link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/common.css">
-	<link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/layout.css">
+	<!-- <link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/layout.css"> 21.07.16 새로운 css로 교체 -->
 	<link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/content.css">
-	<link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/menu.css">
+	<!-- <link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/menu.css">  21.07.16 새로운 css로 교체 -->
 	<link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/sub/building.css">
 	<link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/sub/monitoring.css">
 
@@ -18,6 +18,8 @@
 	<script language="JavaScript" type="text/javascript" charset="utf-8" src="http://101.1.49.233/v2g.web/WEB/scripts/jquery-ui/jquery-ui-1.10.4.custom.js"></script>
 
 	
+	<link rel="stylesheet" type="text/css" href="../css/layout.css"><!-- 21.07.16 추가 -->
+	<link rel="stylesheet" type="text/css" href="../css/menu.css"><!-- 21.07.16 추가 -->
 	<link rel="stylesheet" type="text/css" href="../css/v2g.css"><!-- 21.07.16 추가 -->
 </head>
 <body>
@@ -49,7 +51,7 @@
 		<!-- 21.07.16 컨텐츠 영역 -->
 		<div class="profitability-total">
 			<div class="psge-title">Dashboard  수익성 종합</div>
-            <div class="">
+            <div class="top-area">
                 <div class="item">
                     <i></i>
                     <em>빌딩요금 예상 요금 절감액</em>
@@ -66,9 +68,58 @@
                     <strong>2,343,232<span>원</span></strong>
                 </div>
             </div>
-            <div class="">
+            <div class="bottom-area">
                 <div class="arbitrage">
-                    
+					<div class="title">Arbitrage</div>
+                    <div class="result">
+						<em>요금절감</em>
+						<strong>1,845,234<span>원</span></strong>
+					</div>
+					<div class="detail">
+						<div class="item">
+							<em class="tit-green">충전량</em>
+							<strong>47,234<span>kWh</span></strong>
+						</div>
+						<div class="item">
+							<em class="tit-orange">방전량</em>
+							<strong>47,234<span>kWh</span></strong>
+						</div>
+					</div>
+                </div>
+                <div class="peak">
+					<div class="title">Peak</div>
+					<div class="in-section">
+						<div class="result">
+							<em>빌딩요금기준<br>요금절감</em>
+							<strong>1,845,234<span>원</span></strong>
+						</div>
+						<div class="detail">
+							<div class="item">
+								<em class="tit">요금적용전력 <span>(2021.08.23)</span></em>
+								<strong>47,234<span>kWh</span></strong>
+							</div>
+							<div class="item">
+								<em class="tit">감축Peak전력</em>
+								<strong>234<span>kWh</span></strong>
+							</div>
+						</div>
+					</div>
+					<div class="in-section">
+						<div class="result">
+							<em>실제V2G효과</em>
+							<strong>1,845,234<span>원</span></strong>
+						</div>
+						<div class="detail">
+							<div class="item">
+								<em class="tit">요금적용전력 <span>(2021.08.23)</span></em>
+								<strong>47,234<span>kWh</span></strong>
+							</div>
+							<div class="item">
+								<em class="tit">감축Peak전력</em>
+								<strong>234<span>kWh</span></strong>
+							</div>
+						</div>
+					</div>
                 </div>
             </div>
 		</div>

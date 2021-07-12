@@ -1,0 +1,33 @@
+/*******************************************************
+ * Navigation
+ *******************************************************/
+#layout-gnb div{box-sizing:border-box}
+#layout-gnb-menu A{text-decoration:none}
+#layout-gnb-menu A.sel{color:#fff}
+#layout-gnb-menu A:hover{color:#fff}
+#layout-gnb-menu A.menu_lv3.sel{border-left:none}
+
+.dropdown-btn{display:block;cursor:pointer;height:60px;line-height:60px;font-size:16px}
+.dropdown-btn.menu_lv1{height:60px;line-height:60px;padding-left:56px;color:#e5eaf2}
+.dropdown-btn.menu_lv2{height:45px;line-height:45px;padding-left:25px;background-color:#009e75;font-size:16px;color:rgba(255, 255, 255, 0.49);border-bottom:1px solid #3c5c8f}
+.dropdown-btn.menu_lv3{height:40px;line-height:40px;padding-left:40px;background-color:#009e75;font-size:14px;color:#ddd}
+.dropdown-container{display:none;background-color:#009e75}
+.dropdown-container.close{display:none}
+.dropdown-container.open{display:block}
+
+.dropdown-btn.menu_lv1 .fa-caret-down{float:right;margin:12px 12px 0px 0px;width:24px;height:24px;background:url(../../../images/web/gnb/ic_arr_dn_w.png) no-repeat;background-size:24px}
+.dropdown-btn.menu_lv1.sel .fa-caret-down{float:right;margin:12px 12px 0px 0px;width:24px;height:24px;background:url(../../../images/web/gnb/ic_arr_up_w.png) no-repeat;background-size:24px}
+#layout-gnb-menu > a{background-position:20px 22px}
+#layout-gnb-menu .icon1{background:url(../../../images/web/gnb/menu_ic_01_nor.png) no-repeat;background-size:24px}
+#layout-gnb-menu .icon2{background:url(../../../images/web/gnb/menu_ic_02_nor.png) no-repeat;background-size:24px}
+#layout-gnb-menu .icon3{background:url(../../../images/web/gnb/menu_ic_03_nor.png) no-repeat;background-size:24px}
+#layout-gnb-menu .icon4{background:url(../../../images/web/gnb/menu_ic_04_nor.png) no-repeat;background-size:24px}
+#layout-gnb-menu .icon5{background:url(../../../images/web/gnb/menu_ic_05_nor.png) no-repeat;background-size:24px}
+#layout-gnb-menu .icon6{background:url(../../../images/web/gnb/menu_ic_06_nor.png) no-repeat;background-size:24px}
+
+#layout-gnb-menu .icon1.sel{background:url(../../../images/web/gnb/menu_ic_01_sel.png) no-repeat;background-size:24px}
+#layout-gnb-menu .icon2.sel{background:url(../../../images/web/gnb/menu_ic_02_sel.png) no-repeat;background-size:24px}
+#layout-gnb-menu .icon3.sel{background:url(../../../images/web/gnb/menu_ic_03_sel.png) no-repeat;background-size:24px}
+#layout-gnb-menu .icon4.sel{background:url(../../../images/web/gnb/menu_ic_04_sel.png) no-repeat;background-size:24px}
+#layout-gnb-menu .icon5.sel{background:url(../../../images/web/gnb/menu_ic_05_sel.png) no-repeat;background-size:24px}
+#layout-gnb-menu .icon6.sel{background:url(../../../images/web/gnb/menu_ic_06_sel.png) no-repeat;background-size:24px}
