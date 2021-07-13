@@ -1,11 +1,14 @@
 @charset "utf-8"; 
 
+/* common */
+.btn-down{width:30px;height:30px;text-indent:-9999em;background:url(../img/btn_down.png) no-repeat 50% 50%;position:absolute;top:10px;right:5px}
+
 /* dashboard */
 .realtime-status .top-area{font-size:0}
 .realtime-status .left-area{width:530px;display:inline-block}
 .realtime-status .box-area{border:1px solid #c7c7c7;background:#fff}
 .realtime-status .box-area.charge{margin-top:20px}
-.realtime-status .box-area .title-area{background:#f8f8f8;border-bottom:1px solid #c7c7c7;line-height:45px;padding-left:20px;font-size:16px;color:#000;font-weight:600}
+.realtime-status .box-area .title-area{background:#f8f8f8;border-bottom:1px solid #c7c7c7;line-height:45px;padding-left:20px;font-size:16px;color:#000;font-weight:600;position:relative}
 .realtime-status .box-area .title-area .side{float:right}
 .realtime-status .flag{display:inline-block;vertical-align:1px;margin-left:7px}
 .realtime-status .flag > span{display:inline-block;padding:0 15px;height:22px;line-height:22px;border-radius:11px;font-size:13px;color:#fff}
@@ -28,7 +31,7 @@
 .realtime-status .graph-area{height:321px}
 
 .realtime-status .open-status{border:1px solid #c7c7c7;margin-top:20px;height:395px;font-size:0;background:#fff}
-.realtime-status .open-status .open-status-summary{width:280px;height:395px;border-right:1px solid #c7c7c7;display:inline-block;text-align:center;background:#f8f8f8;padding-top:39px;box-sizing:border-box}
+.realtime-status .open-status .open-status-summary{width:280px;height:393px;border-right:1px solid #c7c7c7;display:inline-block;text-align:center;background:#f8f8f8;padding-top:39px;box-sizing:border-box}
 .realtime-status .open-status .open-status-summary > img{display:inline-block;margin:20px 0 24px}
 .realtime-status .open-status .cont-area{width:calc(100% - 281px);display:inline-block;vertical-align:top;padding-top:90px;text-align:center}
 .realtime-status .open-status .status-list{font-size:0}
@@ -44,7 +47,6 @@
 .realtime-status .open-status-list .item.ing .item-counter:after{background:url(../img/ico-plug-green.png) no-repeat 50% 50%}
 .realtime-status .open-status-list .item.standby .item-counter:after,
 .realtime-status .open-status-list .item.bin .item-counter:after{background:url(../img/ico-plug-black.png) no-repeat 50% 50%}
-{background:url(../img/ico-plug-black.png)}
 .realtime-status .open-status-list .item.discharge .item-counter:after{background:url(../img/ico-plug-orange.png) no-repeat 50% 50%}
 .realtime-status .open-status-list .item.trouble .item-counter:after{background:url(../img/ico-plug-gray.png) no-repeat 50% 50%}
 .realtime-status .open-status-list .detail{margin-top:14px;border:5px solid #e5e5e5;border-bottom:0;position:relative;text-align:left;height:178px}
@@ -53,10 +55,59 @@
 .realtime-status .open-status-list .item.ing i{background:url(../img/ico-car-green.png) no-repeat 50% 50%}
 .realtime-status .open-status-list .item.standby i{background:url(../img/ico-car-black.png) no-repeat 50% 50%}
 .realtime-status .open-status-list .item.bin i{background:url(../img/ico-car-gray.png) no-repeat 50% 50%}
-{background:url(../img/ico-car-black.png)}
 .realtime-status .open-status-list .item.discharge i{background:url(../img/ico-car-orange.png) no-repeat 50% 50%}
-.realtime-status .open-status-list .item.trouble .detail{padding-top:95px;font-size:13px;color:000;background:url(../img/icon_warning.png) no-repeat 50% 52px;text-align:center}
+.realtime-status .open-status-list .item.trouble .detail{padding-top:95px;font-size:13px;color:#000;background:url(../img/icon_warning.png) no-repeat 50% 52px;text-align:center}
 .realtime-status .open-status-list .car-info{text-align:center;display:block}
 .realtime-status .open-status-list .car-info .number{display:inline-block;font-size:13px;color:#fff;background:#111;line-height:21px;border-radius:11px;padding:0 9px;font-weight:bold}
 .realtime-status .open-status-list .detail-list{margin-left:20px;font-size:13px;color:#000;line-height:18px;margin-top:10px}
 .realtime-status .open-status-list .detail-list em{color:#aaa;margin-right:8px}
+
+/* summary-group */
+.summary-group{margin:20px -10px 0;font-size:0;}
+.summary-group .item{display:inline-block;margin:0 10px;height:110px;border:1px solid #c7c7c7;box-sizing:border-box;padding:25px 0 20px 110px;background:#fff;color:#000;position:relative}
+.summary-group .item:first-child:nth-last-child(3),
+.summary-group .item:first-child:nth-last-child(3) ~ .item{width:calc(100%/3 - 20px)}
+.summary-group .item:first-child:nth-last-child(4),
+.summary-group .item:first-child:nth-last-child(4) ~ .item{width:calc(25% - 20px)}
+.summary-group i{position:absolute;top:25px;left:30px}
+.summary-group em{display:block;font-size:14px;font-weight:600}
+.summary-group strong{display:inline-block;font-size:28px;line-height:1;margin-top:6px}
+.summary-group strong ~ strong{margin-left:20px}
+.summary-group strong span{font-size:14px;font-weight:normal}
+
+.profitability-total .bottom-area{font-size:0;margin:20px -10px 0;color:#000}
+.profitability-total .bottom-area > div{border:1px solid #c7c7c7;height:345px;margin:0 10px;display:inline-block;background:#fff;vertical-align:top}
+.profitability-total .arbitrage{width:calc(100%/3 - 20px)}
+.profitability-total .peak{width:calc((100%/3)*2 - 20px);font-size:0}
+.profitability-total .bottom-area .title{height:44px;border-bottom:1px solid #c7c7c7;font-size:16px;font-weight:600;color:#000;line-height:44px;padding-left:22px;background:#f8f8f8}
+.profitability-total .bottom-area .result{display:table;width:calc(100% - 135px);margin:59px 65px 59px 70px;table-layout:fixed;height:70px}
+.profitability-total .bottom-area .result i{display:table-cell;width:70px;text-align:center;vertical-align:middle}
+.profitability-total .bottom-area .result em{display:table-cell;width:120px;font-size:18px;font-weight:600;vertical-align:middle}
+.profitability-total .bottom-area .result strong{display:table-cell;text-align:right;font-size:36px}
+.profitability-total .bottom-area .result strong span{font-size:14px;font-weight:normal}
+.profitability-total .bottom-area .detail{background:#f8f8f8;height:110px;padding:25px 0;text-align:center;box-sizing:border-box}
+.profitability-total .bottom-area .detail .item{width:50%;display:inline-block}
+.profitability-total .bottom-area .detail .item ~ .item{border-left:1px solid #c7c7c7}
+.profitability-total .bottom-area .detail .item .tit{color:#777;font-size:14px;font-weight:600;display:block}
+.profitability-total .bottom-area .detail .item .tit span{color:#999}
+.profitability-total .bottom-area .detail .item .tit.tit-green{color:#009e75}
+.profitability-total .bottom-area .detail .item .tit.tit-orange{color:#eb6100}
+.profitability-total .bottom-area .detail .item strong{display:block;font-size:28px}
+.profitability-total .bottom-area .detail .item strong span{font-weight:normal;font-size:14px}
+.profitability-total .bottom-area .in-section{width:50%;box-sizing:border-box;display:inline-block}
+.profitability-total .bottom-area .in-section ~ .in-section{border-left:1px solid #c7c7c7}
+.profitability-total .bottom-area .in-section .detail .item{width:60%}
+.profitability-total .bottom-area .in-section .detail .item ~ .item{width:40%}
+
+/* EV 현황 */
+.car-info-list{margin-top:20px;overflow-x:auto}
+.car-info-list .status-table{width:100%;white-space:nowrap;table-layout:fixed;background:#fff;border:1px solid #c7c7c7}
+.car-info-list .status-table thead th{border-bottom:1px solid #c7c7c7}
+.car-info-list .status-table th{vertical-align:middle;background:#f8f8f8}
+.car-info-list .status-table th ~ th{border-left:1px solid #c7c7c7}
+.car-info-list .status-table th span{display:block;padding:40px 0 12px;color:#000;font-size:13px;position:relative}
+.car-info-list .status-table th span:after{width:27px;height:28px;content:"";position:absolute;top:8px;left:calc(50% - 13px)}
+.car-info-list .status-table th .ing:after{background:url(../img/ico-plug-green.png) no-repeat;background-size:100% auto}
+.car-info-list .status-table th .standby:after{background:url(../img/ico-plug-black.png) no-repeat;background-size:100% auto}
+.car-info-list .status-table th .discharge:after{background:url(../img/ico-plug-orange.png) no-repeat;background-size:100% auto}
+.car-info-list .status-table td{border-left:1px solid #c7c7c7;text-align:center;line-height:34px}

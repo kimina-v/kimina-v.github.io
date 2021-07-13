@@ -32,13 +32,13 @@
 			<div class="title">JEJU V2G Platform</div><!-- 21.07.16 텍스트 변경 -->
 		</div>
 		<div id="date_area">
-			<div class="date"></div>
-			<div class="dayOfWeek"></div>
-			<div class="time"></div>
-			<div class="divider"></div>
+			<div class="date">2021.07.12</div>
+			<div class="dayOfWeek">MON</div>
+			<div class="time">17:46:17</div>
+			<!-- <div class="divider"></div> 21.07.16 제거 -->
 		</div>
 		<div id="logout_area" onclick="logoutbtn_click();">
-			<div class="logout_img"></div>
+			<!-- <div class="logout_img"></div> 21.07.16 제거 -->
 			<div class="logout_title">Logout</div>
 		</div>
 	</div>
@@ -49,21 +49,31 @@
 	</div>
 	<div id="layout-body-right">
 		<!-- 21.07.16 컨텐츠 영역 -->
+		<div id="title_area">
+			<div class="category_area">
+				<span class="title first">Dashboard</span>
+				<span class="title"><!-- 21.07.16 제거 &nbsp;|&nbsp; -->수익성 종합</span>
+			</div>
+			<div class="title_button_area"></div>
+		</div>
+		<div id="search_area">
+			<span style="color:#000;font-size:24px">검색 영역</span>
+		</div>
+
 		<div class="profitability-total">
-			<div class="psge-title">Dashboard  수익성 종합</div>
-            <div class="top-area">
+            <div class="summary-group">
                 <div class="item">
-                    <i></i>
+                    <i><img src="../img/icon01.png" alt=""></i>
                     <em>빌딩요금 예상 요금 절감액</em>
                     <strong>2,343,232<span>원</span></strong>
                 </div>
                 <div class="item">
-                    <i></i>
+                    <i><img src="../img/icon02.png" alt=""></i>
                     <em>실질 V2G요금 절감액</em>
                     <strong>2,343,232<span>원</span></strong>
                 </div>
                 <div class="item">
-                    <i></i>
+                    <i><img src="../img/icon03.png" alt=""></i>
                     <em>충전감축요금</em>
                     <strong>2,343,232<span>원</span></strong>
                 </div>
@@ -72,16 +82,17 @@
                 <div class="arbitrage">
 					<div class="title">Arbitrage</div>
                     <div class="result">
+						<i><img src="../img/set-icon01.png" alt=""></i>
 						<em>요금절감</em>
 						<strong>1,845,234<span>원</span></strong>
 					</div>
 					<div class="detail">
 						<div class="item">
-							<em class="tit-green">충전량</em>
+							<em class="tit tit-green">충전량</em>
 							<strong>47,234<span>kWh</span></strong>
 						</div>
 						<div class="item">
-							<em class="tit-orange">방전량</em>
+							<em class="tit tit-orange">방전량</em>
 							<strong>47,234<span>kWh</span></strong>
 						</div>
 					</div>
@@ -90,6 +101,7 @@
 					<div class="title">Peak</div>
 					<div class="in-section">
 						<div class="result">
+							<i><img src="../img/set-icon02.png" alt=""></i>
 							<em>빌딩요금기준<br>요금절감</em>
 							<strong>1,845,234<span>원</span></strong>
 						</div>
@@ -106,6 +118,7 @@
 					</div>
 					<div class="in-section">
 						<div class="result">
+							<i><img src="../img/set-icon03.png" alt=""></i>
 							<em>실제V2G효과</em>
 							<strong>1,845,234<span>원</span></strong>
 						</div>
