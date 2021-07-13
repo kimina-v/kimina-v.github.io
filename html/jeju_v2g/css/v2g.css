@@ -69,6 +69,8 @@
 .summary-group .item:first-child:nth-last-child(3) ~ .item{width:calc(100%/3 - 20px)}
 .summary-group .item:first-child:nth-last-child(4),
 .summary-group .item:first-child:nth-last-child(4) ~ .item{width:calc(25% - 20px)}
+.summary-group .item:first-child:nth-last-child(5),
+.summary-group .item:first-child:nth-last-child(5) ~ .item{width:calc(20% - 20px)}
 .summary-group i{position:absolute;top:25px;left:30px}
 .summary-group em{display:block;font-size:14px;font-weight:600}
 .summary-group strong{display:inline-block;font-size:28px;line-height:1;margin-top:6px}
@@ -111,3 +113,25 @@
 .car-info-list .status-table th .standby:after{background:url(../img/ico-plug-black.png) no-repeat;background-size:100% auto}
 .car-info-list .status-table th .discharge:after{background:url(../img/ico-plug-orange.png) no-repeat;background-size:100% auto}
 .car-info-list .status-table td{border-left:1px solid #c7c7c7;text-align:center;line-height:34px}
+
+.ev-wrap .operate_ev_area{margin-top:20px}
+.ev-wrap .operate_ev_area .table_box .table_area.ev{table-layout:fixed;width:100%}
+.ev-wrap .operate_ev_area .table_box .table_area tr th:last-child, 
+.ev-wrap .operate_ev_area .table_box .table_area tr td:last-child{border-right-width:1px}
+.ev-wrap .operate_ev_area .table_box .table_area.ev thead th{width:3%}
+.ev-wrap .operate_ev_area .table_box .table_area.ev thead th:first-child{width:11%}
+.ev-wrap .operate_ev_area .table_box .table_area.ev thead th:last-child{width:17%}
+.ev-wrap .operate_ev_area .table_box .table_area.ev tbody:before{line-height:42px}
+.ev-wrap .operate_ev_area .table_box .table_area.ev tbody td{height:47px}
+.ev-wrap .operate_ev_area .table_box .table_area tbody td div.plugout{border-color:#666}
+.ev-wrap .operate_ev_area .ico-ing{padding-top:61px;background:url(../img/ico-car-green.png) no-repeat 50% 20px}
+.ev-wrap .operate_ev_area .ico-standby{padding-top:61px;background:url(../img/ico-car-black.png) no-repeat 50% 20px}
+.ev-wrap .operate_ev_area .ico-discharge{padding-top:61px;background:url(../img/ico-car-orange.png) no-repeat 50% 20px}
+
+.graph-area-ev{height:450px;border:1px solid #c7c7c7;margin-top:20px}
+.ev-wrap .tableDataArea{margin-top:20px}
+.ev-wrap .table_box.anal_ev .data_list_table_scroll{width:100%;table-layout:fixed}
+.ev-wrap .table_box.anal_ev .data_list_table_scroll thead th{background:#e5eaf2}
+.ev-wrap .table_box.anal_ev .data_list_table_scroll tbody th{background:#fff}
+.ev-wrap .table_box.anal_ev .data_list_table_scroll tbody tr.even th,
+.ev-wrap .table_box.anal_ev .data_list_table_scroll tbody tr.even td{background:#eaeaea}

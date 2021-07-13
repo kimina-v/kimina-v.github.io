@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi"/>
+	<title>V2G</title>
+	<!-- css , script libs -->
+	<link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/common.css">
+	<!-- <link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/layout.css"> 21.07.16 새로운 css로 교체 -->
+	<link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/content.css">
+	<!-- <link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/menu.css">  21.07.16 새로운 css로 교체 -->
+	<link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/sub/building.css">
+	<link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/web/base/sub/monitoring.css">
+
+	<link rel="stylesheet" type="text/css" href="http://101.1.49.233/v2g.web/WEB/css/jquery-ui/1.11.0.custom/jquery-ui.min.css">
+	<script language="JavaScript" type="text/javascript" charset="utf-8" src="http://101.1.49.233/v2g.web/WEB/scripts/jquery/jquery-1.10.2.js"></script>
+	<script language="JavaScript" type="text/javascript" charset="utf-8" src="http://101.1.49.233/v2g.web/WEB/scripts/jquery-ui/jquery-ui-1.10.4.custom.js"></script>
+
+	
+	<link rel="stylesheet" type="text/css" href="../css/layout.css"><!-- 21.07.16 추가 -->
+	<link rel="stylesheet" type="text/css" href="../css/menu.css"><!-- 21.07.16 추가 -->
+	<link rel="stylesheet" type="text/css" href="../css/v2g.css"><!-- 21.07.16 추가 -->
+</head>
+<body>
+ <!-- scroll="no" -->
+<div id="layout-container">
+	<div id="layout-header">
+		<div id="logo_area">
+			<div class="logo"></div>
+			<!-- <div class="divider"></div> 21.07.16 제거 -->
+			<div class="title">JEJU V2G Platform</div><!-- 21.07.16 텍스트 변경 -->
+		</div>
+		<div id="date_area">
+			<div class="date">2021.07.12</div>
+			<div class="dayOfWeek">MON</div>
+			<div class="time">17:46:17</div>
+			<!-- <div class="divider"></div> 21.07.16 제거 -->
+		</div>
+		<div id="logout_area" onclick="logoutbtn_click();">
+			<!-- <div class="logout_img"></div> 21.07.16 제거 -->
+			<div class="logout_title">Logout</div>
+		</div>
+	</div>
+	<div id="layout-body-left">
+		<div id="layout-gnb">
+			<span style="color:#fff;font-size:24px">lnb 영역</span>
+		</div>
+	</div>
+	<div id="layout-body-right">
+		<!-- 21.07.16 컨텐츠 영역 -->
+		<div id="title_area">
+			<div class="category_area">
+				<span class="title">EV</span><!-- 21.07.16 first 클래스 제거 -->
+				<span class="title"><!-- 21.07.16 제거 &nbsp;|&nbsp; -->EV 운전분석</span>
+			</div>
+			<div class="title_button_area"></div>
+		</div>
+		<div id="search_area">
+			<span style="color:#000;font-size:24px">검색 영역</span>
+		</div>
+
+		<div class="ev-wrap">
+            <div class="summary-group">
+                <div class="item">
+                    <i><img src="../img/icon08.png" alt=""></i>
+                    <em>금일 계획 방전량</em>
+                    <strong>23 <span>kWh</span></strong>
+                </div>
+                <div class="item">
+                    <i><img src="../img/icon08.png" alt=""></i>
+                    <em>금일 실제 방전량</em>
+                    <strong>23 <span>kWh</span></strong>
+                </div>
+                <div class="item">
+                    <i><img src="../img/icon09.png" alt=""></i>
+                    <em>계획 대비 실적</em>
+                    <strong>11.0 <span>%</span></strong>
+                </div>
+                <div class="item">
+                    <i><img src="../img/icon10.png" alt=""></i>
+                    <em>금일 참여율</em>
+                    <strong>11.0 <span>%</span></strong>
+                </div>
+            </div>
+            
+            <div class="mainDataArea">
+                <div class="inner_area">
+                    <div class="chart_area_block">
+                        <div class="graph-area-ev"><span style="color:#000;font-size:20px;text-align:center;">그래프영역</span></div>
+                    </div>
+                    <div class="tableDataArea">
+                        <div class="local_search_area">
+                            <div class="localSearchBox right">
+                                <button class="excel_btn"></button>
+                            </div>
+                        </div>
+                        <div class="table_box anal_ev">
+                            <table class="data_list_table_scroll">
+                                <!-- 21.07.16 추가 -->
+                                <colgroup>
+                                    <col style="width:10%">
+                                    <col style="width:6%">
+                                    <col style="width:3.5%" span="24">
+                                </colgroup>
+                                <!-- //21.07.16 추가 -->
+                                <thead>
+                                    <tr class="fixedHeaderFirst">
+                                        <!-- 21.07.16 수정 -->
+                                        <th colspan="2">EV ID</th>
+                                        <th>0시</th>
+                                        <th>1시</th>
+                                        <th>2시</th>
+                                        <th>3시</th>
+                                        <th>4시</th>
+                                        <th>5시</th>
+                                        <th>6시</th>
+                                        <th>7시</th>
+                                        <th>8시</th>
+                                        <th>9시</th>
+                                        <th>10시</th>
+                                        <th>11시</th>
+                                        <th>12시</th>
+                                        <th>13시</th>
+                                        <th>14시</th>
+                                        <th>15시</th>
+                                        <th>16시</th>
+                                        <th>17시</th>
+                                        <th>18시</th>
+                                        <th>19시</th>
+                                        <th>20시</th>
+                                        <th>21시</th>
+                                        <th>22시</th>
+                                        <th>23시</th>
+                                        <!-- //21.07.16 수정 -->
+                                    </tr>
+                                </thead>
+                                <tbody class="mid">
+                                    <tr>
+                                        <th rowspan="2">전체</th>
+                                        <th>계획</th>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                    </tr>
+                                    <tr>
+                                        <th>실제</th>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                    </tr>
+
+                                    <tr class="even"><!-- 21.07.16 class 추가 -->
+                                        <th rowspan="2">11로 3432</th>
+                                        <th>계획</th>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                    </tr>
+                                    <tr class="even"><!-- 21.07.16 class 추가 -->
+                                        <th>실제</th>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th rowspan="2">11로 3432</th>
+                                        <th>계획</th>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                    </tr>
+                                    <tr>
+                                        <th>실제</th>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                    </tr>
+                                    
+                                    <tr class="even"><!-- 21.07.16 class 추가 -->
+                                        <th rowspan="2">11로 3432</th>
+                                        <th>계획</th>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                    </tr>
+                                    <tr class="even"><!-- 21.07.16 class 추가 -->
+                                        <th>실제</th>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+		</div>
+		<!-- //21.07.16 컨텐츠 영역 -->
+	</div>
+</div>
+</body>
+</html>
