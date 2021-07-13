@@ -114,6 +114,7 @@
 .car-info-list .status-table th .discharge:after{background:url(../img/ico-plug-orange.png) no-repeat;background-size:100% auto}
 .car-info-list .status-table td{border-left:1px solid #c7c7c7;text-align:center;line-height:34px}
 
+.ev-wrap{padding-bottom:20px}
 .ev-wrap .operate_ev_area{margin-top:20px}
 .ev-wrap .operate_ev_area .table_box .table_area.ev{table-layout:fixed;width:100%}
 .ev-wrap .operate_ev_area .table_box .table_area tr th:last-child, 
@@ -129,7 +130,7 @@
 .ev-wrap .operate_ev_area .ico-discharge{padding-top:61px;background:url(../img/ico-car-orange.png) no-repeat 50% 20px}
 
 .graph-area-ev{height:450px;border:1px solid #c7c7c7;margin-top:20px}
-.ev-wrap .tableDataArea{margin-top:20px}
+.ev-wrap .tableDataArea{margin-top:20px;height:auto}
 .ev-wrap .table_box.anal_ev .data_list_table_scroll{width:100%;table-layout:fixed}
 .ev-wrap .table_box.anal_ev .data_list_table_scroll thead th{background:#e5eaf2}
 .ev-wrap .table_box.anal_ev .data_list_table_scroll tbody th{background:#fff}

@@ -7,11 +7,11 @@ em{font-style:normal}
 body{font-family:"Noto Sans KR"}
 table,th,td{border:0;border-collapse:collapse;border-spacing:0}
 
-html{width:100%;height:100%;min-width:1920px;/* min-height:960px; */}
+html{width:100%;height:100%;min-width:1920px;/* min-height:960px; */overflow-x:auto}
 body{overflow-y:auto;overflow-X:hidden;width:100%;height:100%;font-size:14px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:normal;letter-spacing:normal;color:#333}
 
 #layout-container{width:100%;height:100%;min-width:1280px;display:block}
-#layout-header{width:100%;height:70px;position:relative;font-size:18px;color:#4c4c4e;background-color:#fff;vertical-align:middle}
+#layout-header{z-index:99;width:100%;height:70px;position:fixed;top:0;left:0;font-size:18px;color:#4c4c4e;background-color:#fff;vertical-align:middle}
 #logo_area{height:70px;padding-top:17px;box-sizing:border-box}
 #logo_area .logo{display:inline-block;width:80px;height:34px;margin:0 15px 0 36px;background:url(../img/logo.png) no-repeat 50% 50%}
 #logo_area .title{display:inline-block;height:34px;font-size:21px;color:#000;line-height:34px;font-weight:bold;vertical-align:top}
@@ -24,19 +24,20 @@ body{overflow-y:auto;overflow-X:hidden;width:100%;height:100%;font-size:14px;fon
 .logout_img{float:left;width:24px;height:30px;margin-right:4px;background:url(../../../images/web/header/logout.png) no-repeat center;background-size:24px 25px;}
 .logout_title{float:left;letter-spacing:-0.4px;color:#4f5f6f;font-size:12px;text-transform:uppercase;height:30px;line-height:30px;border:1px solid #4f5f6f;width:80px;text-align:center}
 
-#layout-body-left{float:left;width:225px;height:calc(100% - 64px);position:relative;border:0px}
+#layout-body-left{left:0;top:70px;width:225px;height:calc(100% - 64px);position:fixed;border:0px}
 #layout-gnb{position:relative;width:225px;height:100%;background-color:#001334}
 #layout-gnb-menu{position:relative;width:225px;height:100%;overflow-y:auto}
 
-#layout-body-right{float:left;width:calc(100% - 225px);height:calc(100% - 70px);position:relative;border:0px;box-shadow:inset 0 2px 8px #dfdfdf;background:#f4f4f4;padding:30px 40px 0 30px}
+#layout-body-right{top:70px;left:225px;width:calc(100% - 225px);height:calc(100% - 70px);position:relative;border:0px;box-shadow:inset 0 2px 8px #dfdfdf;background:#f4f4f4;padding:30px 40px 20px 30px}
 #layout-contents{position:relative;display:block;width:100%;height:100%}
 #contents_area{position:relative;box-sizing:border-box;width:100%;height:100%;}
 #contents_top_area{position:relative;width:calc(100% - 56px);min-width:1280px;margin:0 auto}
-#title_area{height:72px;}
-#title_area .title{font-size:21px;font-weight:600}
+#title_area{height:40px;}
+#title_area .category_area{padding-top:0}
+#title_area .title{font-size:21px;font-weight:600;line-height:1;height:21px}
 #title_area .title ~ .title{margin-left:10px;position:relative;padding-left:13px}
-#title_area .title ~ .title:before{position:absolute;top:8px;left:0;width:3px;height:21px;background:#000;content:""}
-#search_area{height:92px;margin:0;box-sizing:border-box;border:1px solid #c6c6c6;border-top:2px solid #4c6ea7;background-color:#ffffff}
+#title_area .title ~ .title:before{position:absolute;top:0;left:0;width:3px;height:21px;background:#000;content:""}
+#search_area{height:86px;margin:0;box-sizing:border-box;border:1px solid #c6c6c6;border-top:2px solid #4c6ea7;background-color:#ffffff}
 #contents_bottom_area{width:calc(100% - 56px);min-width:1280px;height:calc(100% - 204px);margin:0 auto;margin-top:20px;margin-bottom:20px}
 #list_area, #form_area{position:relative;float:left;width:100%;height:calc(100% - 28px);padding-bottom:50px;box-sizing:border-box;border:1px solid #cdcdcd;background:#fff;}
 #list_area.half, #form_area.half{width:49.6%;}

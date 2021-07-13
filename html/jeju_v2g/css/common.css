@@ -1,0 +1,250 @@
+body{background:#f4f4f4}
+div{box-sizing:border-box} 
+.ui-front{z-index:2000} /* modal */
+
+.blind{overflow:hidden;position:absolute;top:0;left:0;width:0;height:0;visibility:hidden}
+
+input[type=text], input[type=password], textarea{padding:5px 10px 5px 6px;border:1px solid #cdcdcd;color:#000;vertical-align:top}
+input[type=text], input[type=password]{height:20px}
+input[type=text]:disabled{color:#cdcdcd;background:#fff}
+
+input[type=password]{width:178px}
+
+input[type="radio"], input[type="checkbox"]{overflow:hidden;position:absolute;top:0;left:0;width:0;height:0;visibility:hidden}
+input[type="radio"] + label, input[type="checkbox"] + label, input[type="checkbox"] + input[type="hidden"] + label{display:inline-block;height:20px;padding-left:20px;background-repeat:no-repeat;background-position:center left;background-size:20px 20px;cursor:pointer;vertical-align:middle}
+
+input[type="radio"] + label{background-image:url(../../../images/web/contents/form_radio_off.png)}
+input[type="radio"]:checked + label{background-image:url(../../../images/web/contents/form_radio_on.png)}
+
+input[type="checkbox"] + label, input[type="checkbox"] + input[type="hidden"] + label{background-image:url(../../../images/web/contents/chkbox_nochk.png)}
+input[type="checkbox"]:checked + label, input[type="checkbox"]:checked + input[type="hidden"] + label{background-image:url(../../../images/web/contents/chkbox_chk.png)}
+input[type="checkbox"] + label.part{background-image:url(../../../images/web/contents/chkbox_multichk.png)}
+
+input[type=text].engOnly{ime-mode:disabled;-webkit-ime-mode :disabled;-moz-ime-mode :disabled;-ms-ime-mode:disabled} /* chrome ë™ìž‘ X */
+
+input[type=text].calendarinput{background:url(../../../images/web/contents/icon_calendar.png) no-repeat 95% center ;background-size:20px 20px}
+input[type=text].monthCalendarinput{background:url(../../../images/web/contents/icon_calendar.png) no-repeat 95% center ;background-size:20px 20px}
+
+
+select{height:32px;padding-left:10px;border:1px solid #cdcdcd;border-radius:0;line-height:32px;vertical-align:top;cursor:pointer;background:url(../../../images/web/contents/icon_arr_dn.png) no-repeat;background-size:20px 20px;background-position:right 5px center;z-index:10;-webkit-appearance:none;-moz-appearance:none;appearance:none;font-size:14px;}
+select:disabled{color:#cdcdcd}
+
+select::-ms-expand{display:none;/* for IE10, 11 */}
+
+select option{color:#343433}
+
+button{border:0;outline:none;vertical-align:top;letter-spacing:normal}
+
+.nowrap{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;word-break:break-all}
+
+/*.searchBox .data.mid{border-left:solid 1px #cdcdcd}*/
+.formBtn{box-sizing:border-box;width:100px;height:36px; padding:0px 23px 0px 48px;line-height:36px;color:#fff;text-align:left;background-color:#4c6ea7;background-repeat:no-repeat;background-position:23px 8px;background-size:20px;border-radius:3px}
+.formBtn.add{float:right;width:80px;padding:0 0 0 38px;margin:7px 16px 0 0;background-image:url(../../../images/web/contents/icon_plus.png);background-position:13px 8px;background-color:#fff;color:#4c6ea7;border:1px solid #4c6ea7}
+.formBtn.edit{padding:10px 14px 10px 40px;background-image:url(../../../images/web/contents/icon_edit.png);background-position:10px;background-color:#fff;color:#343433}
+.formBtn.insert{background-image:url(../../../images/web/contents/icon_chk.png)}
+.formBtn.update{background-image:url(../../../images/web/contents/icon_edit.png)}
+.formBtn.delete{background-image:url(../../../images/web/contents/icon_trash.png);background-color:#ff4800}
+.formBtn.confirm{background-image:url(../../../images/web/contents/icon_chk.png)}
+.formBtn.close{background-image:url(../../../images/web/contents/icon_close.png)}
+.formBtn.cancel.popup{background-image:url(../../../images/web/contents/icon_close.png);background-color:#fff;border:solid 1px #cdcdcd;height:36px;color:#343433}
+
+.formBtn.etc{background-image:none;background-color:#fff;color:#4c6ea7;border:1px solid #4c6ea7;padding:0;text-align:center}
+
+.formBtn.useYn{background-position:0px;padding:8px;width:100px;text-align:center}
+
+.formBtn.add.popup, .formBtn.update.popup{height:36px;border:solid 1px #cdcdcd;border-radius:3px;padding:7px 14px 7px 40px;background-color:#fff;color:#343433}
+.formBtn.update.popup{background-image:url(../../../images/web/contents/icon_b_edit.png);background-position:10px}
+
+.formBtn.smsSend{background-image:url(../../../images/web/contents/icon_w_message.png)}
+.formBtn.complete{background-image:url(../../../images/web/contents/icon_chk.png)}
+.formBtn.error{background-image:url(../../../images/web/contents/icon_w_no.png)}
+.formBtn.list.popup{padding:0 14px 0 40px;background-image:url(../../../images/web/contents/icon_b_list.png);background-position:10px;background-color:#fff;color:#343433;border-radius:3px;border:solid 1px #cdcdcd;height:36px}
+
+.formBtn.innerList{background-image:none;background-color:#fff;color:#2bb7b3;border:1px solid #2bb7b3;padding:0;text-align:center;width:80px;height:30px}
+
+.editor.update.mini{height:32px;width:32px;border:solid 1px #cdcdcd;border-radius:3px;background-color:#fff;color:#343433;background-image:url(../../../images/web/contents/icon_b_edit.png);background-size:32px}
+.editor.confirm.mini{width:60px;height:30px;border-radius:3px;background-color:#fff;border:solid 1px #4c6ea7;text-align:center;cursor:pointer;color:#4c6ea7}
+
+.formBtn.mini {background-image:none;background-color:#fff;color:#4c6ea7;height:28px;line-height:28px;margin-top:2px;width:80px;border:1px solid #4c6ea7;padding:0;text-align:center}
+.formBtn.mini.sel{background-color:#4c6ea7;color:#fff}
+
+
+.switch{display:inline-block;height:20px;vertical-align:middle}
+.switch.load{width:34px;background:url(../../../images/web/contents/switch_off.png) no-repeat center left;background-size:100% 100%;cursor:pointer}
+.switch.checked{background-image:url(../../../images/web/contents/switch_on.png)}
+.switch + label{display:inline-block;vertical-align:middle;color:#a0a0a0}
+.switch.checked + label{color:#343433}
+.switch input[type=radio]:not(old){margin:0px;padding:0px;opacity:inherit;width:auto}
+
+.select_spot{display:inline-block;border:1px solid #cdcdcd;vertical-align:top;overflow:hidden}
+.select_spot span{display:block;float:left;width:160px}
+.select_spot span.child{border-left:1px solid #cdcdcd}
+.select_spot select{width:100%;border:0}
+
+img.icon_weath{width :20px;height :20px;vertical-align:sub}
+
+/*******************************************************
+ * Insert, Update, Detail Form
+ *******************************************************/
+ #form_bottom_area{letter-spacing:0.45em}
+
+.formTableTop{box-sizing:border-box;width:100%;height:50px;line-height:50px;border-bottom:1px solid #c6c6c6;color:#00091a;font-size:18px;   padding-left:16px}
+
+.formTable{width:100%;table-layout:fixed}
+.formTable tr{}
+.formTable tr.file{height:50px}
+.formTable th, .formTable td{padding:8px 10px;border-bottom:1px solid #cdcdcd;font-weight:normal;text-align:left;color:#000;line-height:32px;vertical-align:top}
+.formTable th{color:#888888;font-weight:bold}
+.formTable th .essential{color:#ec1c24;vertical-align:middle}
+.formTable td + th{border-left:1px solid #cdcdcd}
+.formTable tr.file th, .formTable tr.file td{padding-bottom:0}
+.formTable tr.location th, .formTable tr.location td{line-height:40px;padding-bottom:0}
+
+.formTable th .red{width:7px;height:20px;font-size:14px;color:#ff5841}
+.formTable td p{line-height:32px}
+
+.formTable input[type=text]{min-width:178px}
+.formTable input[type=text].selectinput{min-width:158px;padding-right:30px;cursor:pointer}
+.formTable input[type=text].width20{min-width:20px}
+.formTable input[type=text].title{box-sizing:border-box;width:100%;height:32px}
+.formTable textarea{box-sizing:border-box;width:100%;height:92px}
+
+.formTable textarea.row8, .formTable textarea[rows='8']{height:140px}
+.formTable textarea.row14, .formTable textarea[rows='14']{height:236px}
+.formTable textarea.row20, .formTable textarea[rows='20']{height:332px}
+
+.formTable select{min-width:200px}
+.formTable select.time{min-width:auto}
+
+.formTable .select_spot span{width:200px}
+
+.formTable .appendselectBtn{width:32px;height:32px;border:solid 1px #cdcdcd;border-radius:3px;background:url(../../../images/web/contents/icon_t_search.png) no-repeat center;background-size:20px}
+.formTable .removeselectBtn{width:32px;height:32px;border:0;margin-left:-32px;background:url(../../../images/web/contents/btn_cancel.png) no-repeat center; background-size:20px}
+
+.formTable input.calendarinput{min-width:158px;padding-right:30px;background:url(../../../images/web/contents/icon_calendar.png) no-repeat 97% 50%;background-size:20px 20px;cursor:pointer}
+.formTable span.errors{display:block;line-height:32px;color:#ec1c24}
+
+.formTable input.subject + span{font-size:20px;color:#444}
+.formTable pre{line-height:32px}
+
+.formTable button.tableBtn{min-width:80px;height:32px;border:solid 1px #cdcdcd;border-radius:3px;padding:5px}
+
+.formTable tr.subTitle td{border-bottom:0;padding:19px 15px 9px 15px}
+.formTable tr.subTitle td h6{font-size:15px;line-height:22px;color:#FF5841}
+
+/*******************************************************
+ * Search Form
+ *******************************************************/
+#search_area .searchForm{box-sizing:border-box;position:relative;width:100%}
+#search_area .searchForm:after{content:" ";display:block;clear:both}
+#search_area .searchForm form{line-height:93px;letter-spacing:0.45em}
+
+.searchBox{display:inline-block;height:93px;width:180px;vertical-align:top;letter-spacing:normal;box-sizing:border-box}
+.searchBox:first-child{margin-left:6px}
+.searchBox div{box-sizing:border-box}
+.searchBox .label{position:relative;width:180px;height:36px;line-height:36px;padding-left:10px;text-align:left;font-size:14px;color:#555555}
+.searchBox .data{position:relative;width:180px;height:36px;line-height:36px;padding-left:0px;margin-left:10px;margin-right:10px;border:solid 0px #d1d2d4;z-index:10}
+.searchBox .data.radioBtnArea{width:253px}
+
+.searchBox input[type=text]{box-sizing:border-box;width:160px;height:36px;padding-left:6px;border:none;background-color:#fff;border:solid 1px #d1d2d4}
+.searchBox select{width:160px;height:36px;/* padding:9px 30px 9px 10px;*/}
+.searchBox input[type="radio"] + label{padding:9px 8px 9px 33px;background-position:left 8px center;line-height:19px}
+.searchBox span.text{display:inline-block;width:160px;height:36px;padding-left:6px;background-color:#fff;border:solid 1px #d1d2d4;box-sizing:border-box;line-height:36px}
+
+.searchBtnArea{position:absolute;top:16px;right:16px;width:70px;height:61px;border-radius:4px;background-color:#254061}
+.searchBtnArea button.searchBtn{width:70px;height:61px;left:23px;top:9px;background:url(../../../images/web/contents/icon_search.png) no-repeat;background-size:20px 20px;background-position:23px 9px} 
+.searchBtnArea button.searchBtn .searchText{padding-top:18px;color:#fff;margin:auto;font-size:14px} 
+
+.searchBox.searchDate .data{width:100%}
+.searchBox.searchDateType{width:360px}
+.searchBox.searchDateType .data{width:100%}
+.searchBox.gigan{width:360px}
+.searchBox.gigan .data{width:100%}
+
+.disabled_bg{display:none;position:absolute;top:0px;left:0px;width:100%;height:100%;background-color:rgba(255, 255, 255, 0.5)}
+
+.searchForm .removeselectBtn{position:relative;right:5px;top:10px;width:20px;height:20px;border:0;background:url(../../../images/web/contents/icon-t-close.png) no-repeat center;background-size:20px;margin-left:-15px}
+/*******************************************************
+ * Search List
+ *******************************************************/ 
+.listTableTop{box-sizing:border-box;width:100%;height:50px;border-bottom:1px solid #c6c6c6}
+
+.listTable{width:100%}
+.listTable.fixed{table-layout:fixed}
+.listTable thead tr th, .listTable tbody tr td{height:20px;border-bottom:1px solid #c6c6c6;border-right:1px solid #c6c6c6;padding:10px} 
+.listTable thead tr th:last-child{border-right:0px solid #c6c6c6}
+.listTable thead tr th{color:#666;font-weight:normal;text-align:center;background-color:#f8f8f8};
+.listTable tbody tr{cursor:pointer}
+.listTable tbody tr td{color:#000;text-align:center;border-right:#c6c6c6}
+.listTable tbody tr td:last-child{border-right:0px solid #c6c6c6}
+.listTable tbody tr:hover td{background-color:#4c6ea7;color:#fff;cursor:pointer}
+.listTable tbody tr.sel td{background-color:#4c6ea7;color:#fff;border-right:0px solid #c6c6c6}
+
+span.indcColor{display:inline-block;width:20px;height:20px;vertical-align:middle}
+
+.list_top_btn_area{width:100%;height:44px;line-height:44px;border-bottom:1px solid #c6c6c6}
+.list_top_btn_area ul{margin:8px 12px 8px 0px;float:right;height:28px}
+.list_top_btn_area ul li{height:28px}
+.list_top_btn_area ul li .excel_btn{margin:0px;padding:0px}
+/*******************************************************
+ * Search pager
+ *******************************************************/
+.page_area{height:30px;margin-top:0px;margin-right:20px;text-align:center}
+.page_button_area{float:left;display:inline-block;width:520px;height:30px}
+.page_area button{ width:30px;height:30px;background-color:#fff;background-repeat:no-repeat;background-position:center;background-size:20px}
+
+.page_area button.first{background-image:url(../../../images/web/contents/icon_start.png)}
+.page_area button.prev{background-image:url(../../../images/web/contents/icon_prev.png)}
+.page_area button.next{background-image:url(../../../images/web/contents/icon_next.png);margin-left:-10px}
+.page_area button.last{background-image:url(../../../images/web/contents/icon_end.png)}
+
+.page_area .page{display:inline-block;text-align:center}
+.page_area .page .pageBox{float:left;width:30px;height:30px;color:#343433;background-color:transparent;text-align:center;line-height:30px;margin-right:10px;cursor:pointer}
+.page_area .page .pageBox:hover{color:#343433;background-color:#EEE}
+.page_area .page .pageBox.sel{color:#fff;background-color:#4c6ea7}
+.page_area .page input[type=text]{width:35px}
+.page_area .rowCountText{float:left;position:absolute;right:200px;width:120px;line-height:30px;height:30px}
+.page_area .page_count{float:left;position:absolute;right:120px;line-height:30px;padding-left:15px}
+.page_area .page_count select{width:70px}
+.page_area .info{float:right;line-height:30px}
+
+/* tree */
+.tree #list_area{padding:51px 0 0 0}
+
+/* 
+.tree #list_area{padding:41px 0 0 0}
+#tree_header_area{position:absolute;left:0;top:0;width:100%;height:40px;border-bottom:1px solid #cdcdcd}
+#tree_header_area .left{float:left;box-sizing:border-box;width:50%;padding:0 40px;color:#a0a0a0;background:url(../../../images/web/contents/icon_b_search.png) no-repeat;background-size:20px 20px;background-position:10px center}
+#tree_header_area .left input[type=text]{width:300px;padding:10px;border:0;line-height:20px}
+#tree_header_area .right{float:right;width:50%;text-align:right;letter-spacing:-1em}
+#tree_header_area .right button{display:inline-block;width:40px;height:40px;background-repeat:no-repeat;background-position:center;background-color:#fff}
+#tree_header_area .right button#keywordCancelBtn{display:none;background-image:url(../../../images/web/contents/btn_cancel.png);background-size:18px 18px}
+#tree_header_area .right button#expandBtn{background-image:url(../../../images/web/contents/folder_allopen.png);background-size:24px 24px;border-left:1px solid #cdcdcd}
+#tree_header_area .right button#collapseBtn{background-image:url(../../../images/web/contents/folder_allclose.png);background-size:24px 24px;border-left:1px solid #cdcdcd}
+ */
+#tree_header_area{position:absolute;left:0;top:0;width:100%;height:50px;border-bottom:1px solid #c6c6c6}
+
+#tree_header_area .left{float:left;box-sizing:border-box;padding:5px 40px 5px 10px;color:#a0a0a0}
+#tree_header_area .left input[type=text]{float:left;box-sizing:border-box;width:300px;height:40px;padding:10px;border:0;line-height:20px;border:1px solid #cdcdcd}
+#tree_header_area .left button{float:left;display:inline-block;width:40px;height:40px;background-repeat:no-repeat;background-position:center;background-color:#fff}
+#tree_header_area .left button.popuptreeSearch{background-image:url(../../../images/web/contents/icon_search.png);background-size:24px 24px;border-radius:4px;background-color:#2bb7b3;margin-left:2px} 
+#tree_header_area .left button.popuptreeSearch .searchText{display:none}
+#tree_header_area .right{float:right;text-align:right;letter-spacing:-1em}
+#tree_header_area .right button{display:inline-block;width:40px;height:50px;background-repeat:no-repeat;background-position:center}
+#tree_header_area .right button#keywordCancelBtn{display:none;background-image:url(../../../images/web/contents/btn_cancel.png);background-size:18px 18px}
+#tree_header_area .right button#expandBtn{background-image:url(../../../images/web/contents/folder_allopen.png);background-size:24px 24px;border-left:0px solid #cdcdcd}
+#tree_header_area .right button#collapseBtn{background-image:url(../../../images/web/contents/folder_allclose.png);background-size:24px 24px;border-left:0px solid #cdcdcd}
+#tree_header_area .insert{float:right;text-align:right;letter-spacing:-1em;margin-left:10px}
+
+/************************************************************
+ *
+ *
+ *
+ *
+ *
+************************************************************/
+
+.alarmEventpopup.ui-dialog{border:0;border-radius:10px;box-shadow:0 2px 10px 0 rgba(0, 0, 0, 0.2)}
+.alarmEventpopup .ui-dialog-titlebar{display:none}
+.chart_box *{font-size:12px;color:#343433}
+#logTable select{width:100px}
