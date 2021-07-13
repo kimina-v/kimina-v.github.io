@@ -224,9 +224,176 @@
                 </table>
             </div>
 
-            
-
-
+            <div id="mainInnerArea" class="operate_ev_area">
+                <div class="legend_area">
+                    <ul>
+                        <li><div class="legend_icon standby"></div>대기</li>
+                        <li><div class="legend_icon charge"></div>V2G 충전</li>
+                        <li><div class="legend_icon discharge"></div>V2G 방전</li>
+                        <li><div class="legend_icon dr"></div>DR응동</li>
+                        <li><div class="legend_icon error"></div>오류</li>
+                        <li><div class="legend_icon plugin"></div>PLUG-IN</li>
+                        <li><div class="legend_icon plugout"></div>PLUG-OUT</li>
+                    </ul>
+                    <div class="btn_area">
+                        <button class="excel_btn"></button>
+                    </div>
+                </div>
+                
+                <div class="table_box">
+                    <table class="table_area ev" id="table_data">
+                        <colgroup>
+                            <col width="6%">
+                            <col width="5%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="3%">
+                            <col width="9%">
+                            <col width="8%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th rowspan="3" colspan="2" scope="col" width="11%">EV ID</th>
+                                <th id="loadHour_00" width="3%" class="hour">0시</th>
+                                <th id="loadHour_01" width="3%" class="hour">1시</th>
+                                <th id="loadHour_02" width="3%" class="hour">2시</th>
+                                <th id="loadHour_03" width="3%" class="hour">3시</th>
+                                <th id="loadHour_04" width="3%" class="hour">4시</th>
+                                <th id="loadHour_05" width="3%" class="hour">5시</th>
+                                <th id="loadHour_06" width="3%" class="hour">6시</th>
+                                <th id="loadHour_07" width="3%" class="hour">7시</th>
+                                <th id="loadHour_08" width="3%" class="hour">8시</th>
+                                <th id="loadHour_09" width="3%" class="hour">9시</th>
+                                <th id="loadHour_10" width="3%" class="hour">10시</th>
+                                <th id="loadHour_11" width="3%" class="hour">11시</th>
+                                <th id="loadHour_12" width="3%" class="hour">12시</th>
+                                <th id="loadHour_13" width="3%" class="hour">13시</th>
+                                <th id="loadHour_14" width="3%" class="hour">14시</th>
+                                <th id="loadHour_15" width="3%" class="hour">15시</th>
+                                <th id="loadHour_16" width="3%" class="hour">16시</th>
+                                <th id="loadHour_17" width="3%" class="hour">17시</th>
+                                <th id="loadHour_18" width="3%" class="hour">18시</th>
+                                <th id="loadHour_19" width="3%" class="hour">19시</th>
+                                <th id="loadHour_20" width="3%" class="hour">20시</th>
+                                <th id="loadHour_21" width="3%" class="hour">21시</th>
+                                <th id="loadHour_22" width="3%" class="hour">22시</th>
+                                <th id="loadHour_23" width="3%" class="hour last">23시</th>
+                                <th rowspan="3" width="9%">출차시 용량(SOC)<br/>/총용량 kWh</th>
+                                <th rowspan="3" width="8%">상태</th>
+                            </tr>
+                            <tr class="gap">
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                <th width="3%"></th>
+                                </tr>
+                            </tr>
+                            <tr class="blank">
+                                <th colspan="24"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyData">
+                            <tr>
+                                <th rowspan="2">C_임3941</th>
+                                <th>계획</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><div class="wait plugin">60.8</div></td>
+                                <td><div class="discharge">55.8</div></td>
+                                <td><div class="discharge">50.8</div></td>
+                                <td><div class="charge">60.8</div></td>
+                                <td><div class="discharge">55.8</div></td>
+                                <td><div class="discharge">50.8</div></td>
+                                <td><div class="discharge">45.8</div></td>
+                                <td><div class="discharge">40.8</div></td>
+                                <td><div class="charge plugout">50.8</div></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td rowspan="2">57.6(90%)/64</td>
+                                <td rowspan="2" id="alrm_18"></td>
+                            </tr>
+                            <tr>
+                                <th>실적</th>
+                                <td><div class="wait">60.8</div></td>
+                                <td><div class="wait">60.8</div></td>
+                                <td><div class="wait">60.8</div></td>
+                                <td><div class="wait">60.8</div></td>
+                                <td><div class="wait">60.8</div></td>
+                                <td><div class="wait">60.8</div></td>
+                                <td><div class="wait">60.8</div></td>
+                                <td><div class="wait">60.8</div></td>
+                                <td><div class="wait">60.8</div></td>
+                                <td><div class="wait">60.8</div></td>
+                                <td><div class="discharge">57.0</div></td>
+                                <td><div class="discharge">52.5</div></td>
+                                <td><div class="charge">60.2</div></td>
+                                <td><div class="discharge">59.5</div></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>	
 
 		</div>
 		<!-- //21.07.16 컨텐츠 영역 -->
