@@ -116,6 +116,7 @@
 
 .ev-wrap{padding-bottom:20px}
 .ev-wrap .operate_ev_area{margin-top:20px}
+.ev-wrap .operate_ev_area .table_box{height:100%}
 .ev-wrap .operate_ev_area .table_box .table_area.ev{table-layout:fixed;width:100%}
 .ev-wrap .operate_ev_area .table_box .table_area tr th:last-child, 
 .ev-wrap .operate_ev_area .table_box .table_area tr td:last-child{border-right-width:1px}
@@ -147,7 +148,8 @@
 .ev-wrap .contribution-table .operate_ev_area.tpye02 .table_box .table_area thead th:first-child{width:150px}
 
 .graph-area-ev{height:450px;border:1px solid #c7c7c7;margin-top:20px}
-.ev-wrap .tableDataArea{margin-top:20px;height:auto}
+.ev-wrap .tableDataArea{margin-top:20px;height:auto;border:1px solid #d7d7d7}
+.ev-wrap .local_search_area{border:none}
 .ev-wrap .table_box.anal_ev .data_list_table_scroll{width:100%;table-layout:fixed}
 .ev-wrap .table_box.anal_ev .data_list_table_scroll thead th{background:#e5eaf2}
 .ev-wrap .table_box.anal_ev .data_list_table_scroll tbody th{background:#fff}
