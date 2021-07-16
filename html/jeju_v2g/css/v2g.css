@@ -14,7 +14,7 @@
 .realtime-status .flag > span{display:inline-block;padding:0 15px;height:22px;line-height:22px;border-radius:11px;font-size:13px;color:#fff}
 .realtime-status .flag > span.item-maximun{background:#f05959}
 .realtime-status .flag > span.item-warning{background:#f8b551}
-.realtime-status .left-area .cont-area{padding:28px 30px 26px}
+.realtime-status .left-area .cont-area{padding:33px 30px 31px}
 .realtime-status .status-list li{display:inline-block}
 .realtime-status .status-list li:nth-child(1){width:170px}
 .realtime-status .status-list li:nth-child(2){width:180px}
