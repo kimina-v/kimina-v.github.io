@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+		<script>include.headTab();</script>
+
+		<div class="content-area">
+			<div class="top-title-area">
+				<h2 class="tit-page">주문상세<span class="tit-id-num">(ID:1108012)</span></h2>
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="check-101-11" class="checkbox-favor" name="check-item-1"><label for="check-101-11"><span class="blind">즐겨찾기</span></label>
+                </div>
+
+				<div class="page-guide">
+					<ol class="breadcrumb">
+						<li><a href="#" title="메인페이지 이동"><i class="ico-bl-home"></i><span class="blind">Home</span></a></li>
+						<li><span>1Depth</span></li>
+						<li><span>2Depth</span></li>
+						<li class="current"><span>현재페이지</span></li>
+					</ol>
+				</div><!--// page-guide -->
+			</div><!--// page-title-area -->
+
+			<div class="cnt-title-area">
+                <h3 class="tit-cnt">주문자정보</h3>
+            </div>
+
+			<div class="board-form mt15">
+				<table>
+					<caption>정보</caption>
+					<colgroup>
+						<col class="w-col-tit"><col class="w-col-cnt"><col class="w-col-tit"><col class="w-col-cnt">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"><span class="in-tb">사이트/주문번호</span></th>
+							<td><div class="in-tb">랭킹닭컴 / 20215021V00FFC</div></td>
+							<th scope="row"><span class="in-tb">주문일시</span></th>
+							<td><div class="in-tb">2021.05.11 14:00:00</div></td>
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">주문자/회원등급/그룹</span></th>
+							<td><div class="in-tb">홍길* (hong3**/닭대리) / 오렌지멤버스</div></td>
+							<th scope="row"><span class="in-tb">휴대폰번호</span></th>
+							<td><div class="in-tb">01012**56**</div></td>
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">이메일</span></th>
+							<td><div class="in-tb">aaa***@mail.com</div></td>
+							<th scope="row"><span class="in-tb">주문상태</span></th>
+							<td>
+								<div class="input-group">
+									<span class="input-group-txt">배송준비중</span>
+									<div class="input-group-form">
+										<button type="button" class="btn-form btn-default"><span>배송보류</span></button>
+									</div>
+								</div>
+								<div class="input-group">
+									<span class="input-group-txt">배송준비중/배송보류</span>
+									<div class="input-group-form">
+										<button type="button" class="btn-form btn-default"><span>배송보류해제</span></button>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">주문상품</h3>
+            </div>
+
+			<div class="board-option">
+				<div class="left-area">
+					<div class="page-info">총 <strong class="text-primary">1,000</strong>건</div>
+				</div>
+				<div class="right-area">
+					<div class="btn-group">
+						<!--2021-07-13 수정 취소처리=>취소요청-->
+						<button type="button" class="btn-func btn-default"><span>취소요청</span></button>
+						<!--//2021-07-13 수정 취소처리=>취소요청-->
+						<button type="button" class="btn-func btn-default"><span>교환처리</span></button>
+						<button type="button" class="btn-func btn-default"><span>반품처리</span></button>
+					</div>
+				</div>
+			</div>
+
+            <div class="board-list scroll-table vm-table total-table mt10">
+                <table>
+                    <caption>목록</caption>
+                    <colgroup>
+                        <col class="w-col-check">
+                        <col style="width:100px;">
+                        <col style="width:100px;">
+                        <col style="width:100px;">
+                        <col>
+                        <col style="width:70px;">
+                        <col span="2" style="width:100px;">
+                        <col style="width:90px;">
+                        <col style="width:100px;">
+                        <col style="width:100px;">
+                        <col style="width:120px;">
+                        <col style="width:140px;">
+                    </colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="list-check">
+								<div class="custom-checkbox single">
+									<input type="checkbox" class="checkbox" name="check-item-300"><label for="check-all"><span class="blind">모두 선택</span></label>
+								</div><!-- 모두 선택 addClass ui-check-all -->
+							</th>
+							<th scope="col"><span class="in-tb">입점사</span></th>
+							<th scope="col"><span class="in-tb">상품코드</span></th>
+							<th scope="col"><span class="in-tb">이미지</span></th>
+							<th scope="col"><span class="in-tb">상품명/옵션</span></th>
+							<th scope="col"><span class="in-tb">수량</span></th>
+							<th scope="col"><span class="in-tb">상품금액</span></th>
+							<th scope="col"><span class="in-tb">할인금액</span></th>
+							<th scope="col"><span class="in-tb">배송비</span></th>
+							<th scope="col"><span class="in-tb">총주문금액</span></th>
+							<th scope="col"><span class="in-tb">배송방법</span></th>
+							<th scope="col"><span class="in-tb">운송장번호</span></th>
+							<th scope="col"><span class="in-tb">주문상태</span></th>
+						</tr>
+					</thead>                    
+					<tbody>
+                        <tr>
+							<td class="list-check">
+								<div class="custom-checkbox single">
+									<input type="checkbox" id="check-c1" class="checkbox" name="check-item-300"><label for="check-c1"><span class="blind">선택</span></label>
+								</div>
+							</td>
+                            <td class="text-center"><div class="in-tb">맛있닭</div></td>
+                            <td class="text-center"><div class="in-tb">KJD111</div></td>
+							<td class="text-center">
+								<a href="#none" class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></a>
+							</td>                            
+							<td class="text-left">
+								<a href="#none" class="in-tb">맛있닭 소프트 닭 안심살 </a>
+								<div>오리지널 10팩(1팩당 1,390원)</div>
+							</td>
+                            <td class="text-center"><div class="in-tb">1</div></td>
+                            <td class="text-right"><div class="in-tb">20,000</div></td><!-- [Dev] 20210706 숫자 정렬 클래스 수정 -->
+                            <td class="text-right"><div class="in-tb">2,500</div></td><!-- [Dev] 20210706 숫자 정렬 클래스 수정 -->
+                            <td class="text-right"><div class="in-tb">선물<br/>2,500</div></td><!-- [Dev] 20210706 숫자 정렬 클래스 수정 -->
+                            <td class="text-right"><div class="in-tb">10,000</div></td><!-- [Dev] 20210706 숫자 정렬 클래스 수정 -->
+                            <td class="text-center"><div class="in-tb">일반배송</div></td>
+                            <td class="text-center"><a href="#none" class="in-tb">CJ대한통운<br>111222333</a></td>
+                            <td class="text-center">
+								<div>상품준비중</div>
+								<a href="#none" class="in-tb">[변경내역 3건]</a>
+							</td>
+					    </tr>
+						<tr class="inner-table">
+							<td colspan="13" >
+								<div class="board-list">
+									<table>
+										<caption>목록</caption>
+										<colgroup>
+											<col style="width:33%"><col style="width:33%"><col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col"><span class="in-tb">처리일시</span></th>
+												<th scope="col"><span class="in-tb">진행상태</span></th>
+												<th scope="col"><span class="in-tb">처리자</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-center"><div class="in-tb">2021.05.11 14:00:00</div></td>
+												<td class="text-center"><div class="in-tb">승인대기</div></td>
+												<td class="text-center"><div class="in-tb">BATCH</div></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+                        <tr>
+							<td class="list-check">
+								<div class="custom-checkbox single">
+									<input type="checkbox" id="check-c1" class="checkbox" name="check-item-300"><label for="check-c1"><span class="blind">선택</span></label>
+								</div>
+							</td>
+                            <td class="text-center"><div class="in-tb">맛있닭</div></td>
+                            <td class="text-center"><div class="in-tb">KJD111</div></td>
+							<td class="text-center">
+								<a href="#none" class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></a>
+							</td>                            
+							<td class="text-left">
+								<a href="#none"  class="in-tb">잇메이트 스위트 칠리소스 100g </a>
+							</td>
+                            <td class="text-center"><div class="in-tb">1</div></td>
+                            <td class="text-right"><div class="in-tb">20,000</div></td>
+                            <td class="text-right"><div class="in-tb">2,500</div></td>
+                            <td class="text-right"><div class="in-tb">선물<br/>2,500</div></td>
+                            <td class="text-right"><div class="in-tb">10,000</div></td>
+                            <td class="text-center"><a href="#none" class="in-tb">특급배송</a></td>
+                            <td class="text-center"><a href="#none" class="in-tb">CJ대한통운<br>111222333</a></td>
+                            <td class="text-center">
+								<div>입금완료</div>
+								<a href="#none" class="in-tb">[변경내역 3건]</a>
+							</td>
+					    </tr>
+                        <tr>
+							<td class="list-check">
+								<div class="custom-checkbox single">
+									<input type="checkbox" id="check-c1" class="checkbox" name="check-item-300"><label for="check-c1"><span class="blind">선택</span></label>
+								</div>
+							</td>
+                            <td class="text-center"><div class="in-tb">맛있닭</div></td>
+                            <td class="text-center"><div class="in-tb">KJD111</div></td>
+							<td class="text-center">
+								<a href="#none" class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></a>
+							</td>                            
+							<td class="text-left">
+								<a href="#none"  class="in-tb">맛있닭 소프트 닭 안심살 훈제맛있닭 소프트 닭 안심살 훈제맛있닭 소프트 닭 안심살 훈제</a>
+								<div>오리지널 10팩(1팩당 1,390원)</div>
+							</td>
+                            <td class="text-center"><div class="in-tb">1</div></td>
+                            <td class="text-right"><div class="in-tb">20,000</div></td>
+                            <td class="text-right"><div class="in-tb">2,500</div></td>
+                            <td class="text-right"><div class="in-tb">선물<br/>2,500</div></td>
+                            <td class="text-right"><div class="in-tb">10,000</div></td>
+                            <td class="text-center"><div class="in-tb">일반배송</div></td>
+                            <td class="text-center"><a href="#none" class="in-tb">CJ대한통운<br>111222333</a></td>
+                            <td class="text-center">
+								<div>상품준비중</div>
+								<a href="#none" class="in-tb">[변경내역 3건]</a>
+							</td>
+					    </tr>
+						<tr class="inner-table">
+							<td colspan="13" >
+								<div class="board-list">
+									<table>
+										<caption>목록</caption>
+										<colgroup>
+											<col style="width: 33%"><col style="width: 33%"><col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col"><span class="in-tb">처리일시</span></th>
+												<th scope="col"><span class="in-tb">진행상태</span></th>
+												<th scope="col"><span class="in-tb">처리자</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-center"><div class="in-tb">2021.05.11 14:00:00</div></td>
+												<td class="text-center"><div class="in-tb">승인대기</div></td>
+												<td class="text-center"><div class="in-tb">BATCH</div></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<tfoot>
+							<tr class="total">
+								<th colspan="5"><div class="in-tb">합계</div></th>
+								<td><div class="in-tb text-center">2</div></td>
+								<td><div class="in-tb text-center">30,000</div></td>
+								<td><div class="in-tb text-center">5,000</div></td>
+								<td><div class="in-tb text-center">22,000</div></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						<tfoot>
+				    </tbody>
+                </table>
+            </div>
+			<!--2021-07-13 수정 영수증보기 추가-->
+			<div class="cnt-title-area mt40">
+				<h3 class="tit-cnt">결제정보</h3>
+				<div class="right-info">
+					<button type="button" class="btn-func btn-default"><span>영수증보기</span></button>
+				</div>
+			</div>
+			<!--//2021-07-13 수정 영수증보기 추가-->
+			<div class="board-form mt15">
+				<table>
+					<caption>정보</caption>
+					<colgroup>
+						<col class="w-col-tit"><col class="w-col-cnt"><col class="w-col-tit"><col class="w-col-cnt">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"><span class="in-tb">상품금액</span></th>
+							<td><div class="in-tb">30,000원</div></td>
+							<th scope="row"><span class="in-tb">총 배송비</span></th>
+							<td><div class="in-tb">2,500원</div></td>
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">쿠폰할인</span></th>
+							<td>
+								<div class="in-tb"><!-- 할인금액이 다른경우 그리드 체크 -->
+									<ul class="coupon-list">
+										<li>-10,000원 / 닭가슴살 안심 10& 상품할인 쿠폰</li>
+										<li>-2,000원 / 닭가슴살 안심 10& 상품할인 쿠폰</li>
+									</ul>
+								</div>
+							</td>
+							<th scope="row"><span class="in-tb">사용적립금</span></th>
+							<td><div class="in-tb">0원</div></td>
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">총 주문금액</span></th>
+							<td><div class="in-tb">25,000원</div></td>
+							<th scope="row"><span class="in-tb">적립예정 적립금</span></th>
+							<td><div class="in-tb">505원</div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- [Dev] 결제수단 case  : order/BO-CM-OD-011-case.html 참고 -->
+			<div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">결제수단</h3>
+            </div>	
+
+			<div class="board-form mt15">
+				<table>
+					<caption>정보</caption>
+					<colgroup>
+						<col class="w-col-tit"><col class="w-col-cnt"><col class="w-col-tit"><col class="w-col-cnt">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"><span class="in-tb">결제방법</span></th>
+							<td><div class="in-tb">신용카드</div></td>
+							<th scope="row"><span class="in-tb">카드/은행</span></th>
+							<td><div class="in-tb">삼성카드 1234-1234-****-1234</div></td>
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">할부개월수</span></th>
+							<td><div class="in-tb">무이자</div></td>
+							<th scope="row"><span class="in-tb">결제일시</span></th>
+							<td><div class="in-tb">2021.05.11 14:00:00</div></td>
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">결제상태</span></th>
+							<td colspan="3"><div class="in-tb">결제완료</div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- 배송지 변경 전 -->
+			<div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">배송지정보</h3>
+				<span class="desc">(주문상태-’배송준비중 이후 수정 불가)</span>
+				<div class="right-info">
+					<button type="button" class="btn-func btn-default"><span>배송지변경</span></button>
+				</div>
+            </div>	
+
+			<div class="board-form mt15">
+				<table>
+					<caption>정보</caption>
+					<colgroup>
+						<col class="w-col-tit"><col class="w-col-cnt"><col class="w-col-tit"><col class="w-col-cnt">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"><span class="in-tb">수취인명</span></th>
+							<td><div class="in-tb">홍길*</div></td>
+							<th scope="row"><span class="in-tb">휴대폰번호</span></th>
+							<td><div class="in-tb">01000**56**</div></td>
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">배송지주소</span></th>
+							<td colspan="3"><div class="in-tb">01234 / 서울시 oo구 oo로 12번길 18, 3층(oo빌딩)</div></td><!-- [Dev] 20210706 텍스트 수정 -->
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">배송메세지</span></th>
+							<td><div class="in-tb">문 앞에 놓아주세요.</div></td>
+							<th scope="row"><span class="in-tb">최종수정일</span></th>
+							<td><div class="in-tb">2021.05.11 14:00:00</div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!--// 배송지 변경전 -->
+
+			<!-- 배송지 변경 시 -->
+			<div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">배송지정보</h3>
+				<span class="desc">(주문상태-’상품준비중’까지 변경가능)</span>
+				<div class="right-info">
+					<!-- <button type="button" class="btn-func btn-default"><span>배송지변경</span></button> [Dev] 20210706 삭제, 필수항목 문구 삽입-->
+					<span class="text-guide-sm2"><i class="es"><em class="blind">필수입력</em></i>는 필수항목입니다.</span>
+				</div>
+            </div>	
+
+			<div class="board-form mt15">
+				<table>
+					<caption>정보입력</caption>
+					<colgroup>
+						<col class="w-col-tit"><col class="w-col-cnt"><col class="w-col-tit"><col class="w-col-cnt">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"><span class="in-tb">수취인명</span></th>
+							<!--2021-07-13 수정 인풋박스로교체-->
+							<td><input type="text" class="input-text w300" value="홍길동"></td>							
+							<th scope="row"><span class="in-tb">휴대폰번호</span></th>
+							<td><input type="text" class="input-text w300" value="01012345678"></td>
+							<!--//2021-07-13 수정 인풋박스로교체-->
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">배송지주소</span></th>
+							<td colspan="3">
+								<div class="input-group">
+									<input type="text" class="input-text w140" disabled>
+									<span class="input-group-btn">
+										<button type="button" class="btn-form btn-grey"><span>우편번호 찾기</span></button>
+									</span>
+								</div>	
+								<div class="input-group w-full">
+									<div class="input-group-cell">
+										<!--2021-07-13 수정 리드온리제거-->
+										<input type="text" class="input-text" value="서울시 OO구 OO로 123" >
+										<!--//2021-07-13 수정 리드온리제거-->
+									</div>									
+									<div class="input-group-cell">
+										<input type="text" class="input-text">
+									</div>									
+								</div>						
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">배송메세지</span></th>
+							<td>
+								<!--2021-07-13 수정 배송메세지수정불가-->
+								<div class="in-tb">문앞에놓아주세요</div>
+								<!--//2021-07-13 수정 배송메세지수정불가-->
+							</td>
+							<th scope="row"><span class="in-tb">최종수정일</span></th>
+							<td><div class="in-tb">2021.05.11 14:00:00</div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!--// 배송지 변경 -->
+
+			<div class="btn-bottom-area mt40">
+				<div class="mainly">
+                    <button type="button" class="btn-basic-md btn-primary"><span>저장</span></button>
+					<button type="button" class="btn-basic-md btn-default"><span>취소</span></button>
+                </div>
+			</div>
+
+			<div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">관리자 메모</h3>
+            </div>	
+			<div class="board-list mt15">
+				<table>
+					<caption>목록</caption>
+					<colgroup>
+						<col style="width:15%;"><col><col style="width:8%;"><col style="width:20%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"><span class="in-tb">구분</span></th>
+							<th scope="col"><span class="in-tb">내용</span></th>
+							<th scope="col"><span class="in-tb">등록자</span></th>
+							<th scope="col"><span class="in-tb">등록일시</span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="text-center"><div class="in-tb">관리자</div></td>
+							<td class="text-left">
+								<!--2021-07-13 수정 파일첨부추가-->
+								<div class="in-tb">
+									<div>입력된 메모 내용 모두 노출</div>
+									<div class="mt10">
+										<a href="#" class="link-txt">1234.jpg</a>
+									</div>
+									<div class="mt5">
+										<a href="#" class="link-txt">첨부파일명.jpg</a>
+									</div>
+								</div>
+								<!--//2021-07-13 수정 파일첨부추가-->
+							</td>
+							<td class="text-center"><div class="in-tb">관리자</div></td>
+							<td class="text-center"><div class="in-tb">2021.00.00 14:00:00</div></td>
+						</tr>
+						<tr>
+							<td class="text-center"><div class="in-tb">관리자/구매자공유</div></td>
+							<td class="text-left"><div class="in-tb">입력된 메모 내용 모두 노출</div></td>
+							<td class="text-center"><div class="in-tb">관리자</div></td>
+							<td class="text-center"><div class="in-tb">2021.00.00 14:00:00</div></td>
+						</tr>
+						<tr class="no-data">
+							<td colspan="4">
+								<div class="message-area">
+									<i class="ico-img-excl"></i>
+									<p class="txt">등록된 내용이 없습니다.</p>
+								</div>							
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="board-form mt50">
+				<table>
+					<caption>입력</caption>
+					<colgroup>
+						<col class="w-col-tit"><col class="w-col-cnt">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"><span class="in-tb">구분<i class="es"><em class="blind">필수입력</em></i></span></th>
+							<td>
+								<select class="select w200">
+									<option>선택</option>
+									<option>관리자</option>
+									<option>관리자/구매자공유</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">내용</span></th>
+							<td>
+								<div class="textarea-count-box">
+									<textarea id="" class="textarea" placeholder="내용입력"></textarea>
+									<div class="txt-cnt"><em>0</em>/<span class="limit-txt">500</span>자</div>
+								</div>
+							</td>
+						</tr>
+						<!--2021-07-13 수정 파일첨부추가-->
+						<tr>
+							<th scope="row"><span class="in-tb">파일첨부</span></th>
+							<td>
+								<div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+									<label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+									<!-- 파일 없을 경우
+										<div class="upload-name"><span class="txt"></span></div> 
+									-->
+									<div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+									<input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+								</div>
+								<p class="txt-warning"><i class="ico-excl"></i>JPG, GIF,PNG 파일만 업로드해 주세요.</p>
+							</td>
+						</tr>
+						<!--//2021-07-13 수정 파일첨부추가-->
+					</tbody>
+				</table>
+			</div>
+
+			<div class="btn-bottom-area mt40">
+				<div class="mainly">
+                    <button type="button" class="btn-basic-md btn-primary"><span>저장</span></button>
+					<button type="button" class="btn-basic-md btn-default"><span>취소</span></button>
+                </div>
+			</div>
+
+			<div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">결제이력</h3>
+            </div>	
+
+			<div class="board-list mt15">
+				<table>
+					<caption>목록</caption>
+					<colgroup>
+						<col><col style="width:14%;"><col style="width:16%;"><col style="width:14%;"><col style="width:14%;"><col style="width:16%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"><span class="in-tb">결제일시</span></th>
+							<th scope="col"><span class="in-tb">결제수단</span></th>
+							<th scope="col"><span class="in-tb">카드/은행명</span></th>
+							<th scope="col"><span class="in-tb">승인번호</span></th>
+							<th scope="col"><span class="in-tb">결제금액</span></th>
+							<th scope="col"><span class="in-tb">결제상태</span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="text-center"><div class="in-tb">2021.05.00 14:00:00</div></td>
+							<td class="text-center"><div class="in-tb">신용카드</div></td>
+							<td class="text-center"><div class="in-tb">삼성</div></td>
+							<td class="text-center"><div class="in-tb">00000000</div></td>
+							<td class="text-right"><div class="in-tb">20,500</div></td><!-- [Dev] 20210706 숫자 정렬 클래스 수정 -->
+							<td class="text-center"><div class="in-tb">카드 결제 성공</div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="btn-bottom-area mt40">
+				<div class="mainly">
+                    <button type="button" class="btn-basic-md btn-primary"><span>목록</span></button>
+                </div>
+			</div>
+
+		</div><!--// content-area -->
+
+		<button type="button" class="btn-gotop"><span class="blind">위로</span></button>
+		
+	</section>
+	<!--// ========== 컨텐츠 영역 :: container ========== -->
+</div><!--// wrap -->
+<!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->
+<script>
+    $(function() {    
+        txt_cnt();    
+    }); 
+</script>
+<!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->
+
+</body>
+</html>

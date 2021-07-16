@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+		<script>include.headTab();</script>
+
+		<div class="content-area">
+			<div class="top-title-area">
+				<h2 class="tit-page">브랜드 등록<span class="tit-id-num">(ID:1108012)</span></h2>
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="check-101-11" class="checkbox-favor" name="check-item-1"><label for="check-101-11"><span class="blind">즐겨찾기</span></label>
+                </div>
+				<div class="page-guide">
+					<ol class="breadcrumb">
+						<li><a href="#" title="메인페이지 이동"><i class="ico-bl-home"></i><span class="blind">Home</span></a></li>
+						<li><span>1Depth</span></li>
+						<li><span>2Depth</span></li>
+						<li class="current"><span>현재페이지</span></li>
+					</ol>					
+				</div><!--// page-guide -->
+			</div><!--// page-title-area -->
+
+			<div class="cnt-title-area">
+				<h3 class="tit-cnt">기본정보</h3>
+				<!-- [Dev] 0702 수정 -->
+				<div class="right-info mt10">
+					<spanc class="text-guide-sm2"><i class="es"><em class="blind">필수입력</em></i>는 필수항목입니다.
+				</spanc></div><!--// [Dev] 0702 수정 -->
+			</div>
+
+			<div class="board-form mt10">	
+				<table>
+					<caption>정보입력</caption>
+					<colgroup>
+						<col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"><span class="in-tb">등록 사이트<i class="es"><em class="blind">필수입력</em></i></span></th>
+							<td colspan="3">
+								<div class="input-group-form">
+									<select class="select w200">
+										<option value="">랭킹닭컴</option>
+									</select>
+								</div>		
+							</td>							
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">브랜드 코드</span></th>
+							<td>
+								<div class="in-tb">브랜드 코드 출력</div>
+							</td>
+							<th scope="row"><span class="in-tb">입점사</span></th>
+							<td>
+								<div class="input-group">
+									<input type="text" class="input-text w300" disabled />
+									<span class="input-group-btn">
+										<button type="button" class="btn-form btn-grey"><span>입점사 검색</span></button>
+									</span>
+								</div><!--// input-group -->
+							</td>
+						</tr>	
+						<tr>
+							<th scope="row"><span class="in-tb">브랜드 명<i class="es"><em class="blind">필수입력</em></i></span></th>
+							<td>
+								<div class="input-group w-full">
+									<input type="text" class="input-text" placeholder="브랜드 명 입력" />
+								</div><!--// input-group -->
+							</td>
+							<th scope="row"><span class="in-tb">상태</span></th>
+							<td>
+								<div class="form-inline-group">
+									<div class="custom-radio">
+										<input type="radio" id="radio-1-1" class="radio" name="radio-item-1" checked=""><label for="radio-1-1">사용</label>
+									</div>
+									<div class="custom-radio">
+										<input type="radio" id="radio-1-2" class="radio" name="radio-item-1"><label for="radio-1-2">사용안함</label>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<span class="in-tb">브랜드 서브 명<i class="es"><em class="blind">필수입력</em></i></span><!-- [Dev] 0702 수정 -->
+							</th>
+							<td colspan="3">
+								<div class="input-group w-full">
+									<input type="text" class="input-text" placeholder="브랜드 서브 명 입력" />
+								</div><!--// input-group -->
+							</td>
+						</tr>	
+						<tr>
+							<th scope="row">
+								<span class="in-tb">카테고리<i class="es"><em class="blind">필수입력</em></i></span></span><!-- [Dev] 0702 수정 -->
+							</th>
+							<td>
+								<div class="input-group-form">
+									<select class="select w200">
+										<option value="">대분류</option>
+									</select>
+								</div>
+							</td>
+							<th scope="row"><span class="in-tb">담당MD</span></th>
+							<td>
+								<div class="in-tb">담당MD 출력</div>
+							</td>
+						</tr>	
+						<tr>
+							<th scope="row"><span class="in-tb">브랜드 해시태그</span></th><!-- [Dev] 0702 수정 -->
+							<td colspan="3">
+								<div class="input-group w-full">
+									<input type="text" class="input-text" placeholder="브랜드 해시태그 입력(#포함해서 입력)" /><!-- [Dev] 0702 수정 : placeholder -->
+								</div><!--// input-group -->
+							</td>
+						</tr>	
+					</tbody>
+				</table>		
+			</div><!--// board-form -->
+
+			<div class="cnt-title-area mt60">
+				<h3 class="tit-cnt">이미지 정보</h3>
+				<div class="right-info">※ 이미지 파일은 JPG, GIF,PNG  파일만 업로드 가능합니다.</div>
+			</div>
+			<!-- [Dev] 0702 수정 : 테이블 th : 텍스트 변경  -->
+			<div class="board-form mt10">	
+				<table>
+					<caption>정보입력</caption>
+					<colgroup>
+						<col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"><span class="in-tb">로고 이미지1(공통)</span></th>
+							<td>
+								<div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+									<label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+									<!-- 파일 없을 경우
+										<div class="upload-name"><span class="txt"></span></div> 
+									-->
+									<div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+									<input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+								</div>
+							</td>							
+							<th scope="row"><span class="in-tb">로고 이미지2(공통)</span></th>
+							<td>
+								<div class="filebox">
+									<label for="ex-filename" class="btn-form btn-default"><span>파일 선택</span></label> 
+									<div class="upload-name"><span class="txt"></span></div>
+									<input type="file" id="ex-filename" class="upload-hidden" value=""> 
+								</div>
+							</td>							
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">브랜드 이미지1(공통)</span></th>
+							<td>
+								<div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+									<label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+									<!-- 파일 없을 경우
+										<div class="upload-name"><span class="txt"></span></div> 
+									-->
+									<div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+									<input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+								</div>
+							</td>							
+							<th scope="row"><span class="in-tb">브랜드 이미지2(공통)</span></th>
+							<td>
+								<div class="filebox">
+									<label for="ex-filename" class="btn-form btn-default"><span>파일 선택</span></label> 
+									<div class="upload-name"><span class="txt"></span></div>
+									<input type="file" id="ex-filename" class="upload-hidden" value=""> 
+								</div>
+							</td>							
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">브랜드 이미지2(공통)</span></th>
+							<td>
+								<div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+									<label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+									<!-- 파일 없을 경우
+										<div class="upload-name"><span class="txt"></span></div> 
+									-->
+									<div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+									<input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+								</div>
+							</td>
+							<th scope="row"><span class="in-tb">관련 기획전(PC)</span></th>
+							<td>
+								<div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+									<label for="ex-filename" class="btn-form btn-default"><span>파일 선택</span></label> 
+									<!-- 파일 없을 경우
+										<div class="upload-name"><span class="txt"></span></div> 
+									-->
+									<div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+									<input type="file" id="ex-filename3" class="upload-hidden" value=""> 
+								</div>
+							</td>
+						</tr>	
+						
+						<tr>
+							<th scope="row"><span class="in-tb">로고 이미지1(PC)</span></th>
+							<td>
+								<div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+									<label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+									<!-- 파일 없을 경우
+										<div class="upload-name"><span class="txt"></span></div> 
+									-->
+									<div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+									<input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+								</div>
+							</td>							
+							<th scope="row"><span class="in-tb">로고 이미지2(PC)</span></th>
+							<td>
+								<div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+									<label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+									<!-- 파일 없을 경우
+										<div class="upload-name"><span class="txt"></span></div> 
+									-->
+									<div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+									<input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+								</div>
+							</td>							
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">브랜드 이미지1(PC)</span></th>
+							<td>
+								<div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+									<label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+									<!-- 파일 없을 경우
+										<div class="upload-name"><span class="txt"></span></div> 
+									-->
+									<div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+									<input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+								</div>
+							</td>
+							<th scope="row"><span class="in-tb">브랜드 이미지2(PC)</span></th>
+							<td>
+								<div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+									<label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+									<!-- 파일 없을 경우
+										<div class="upload-name"><span class="txt"></span></div> 
+									-->
+									<div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+									<input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+								</div>
+							</td>
+						</tr>	
+
+						<tr>
+							<th scope="row"><span class="in-tb">브랜드 이미지2(PC)</span></th>
+							<td>
+								<div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+									<label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+									<!-- 파일 없을 경우
+										<div class="upload-name"><span class="txt"></span></div> 
+									-->
+									<div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+									<input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+								</div>
+							</td>
+							<th scope="row"><span class="in-tb">관련 기획전(PC)</span></th>
+							<td>
+								<div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+									<label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+									<!-- 파일 없을 경우
+										<div class="upload-name"><span class="txt"></span></div> 
+									-->
+									<div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+									<input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+								</div>
+							</td>							
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">로고 이미지1(Mobile)</span></th>
+							<td>
+								<div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+									<label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+									<!-- 파일 없을 경우
+										<div class="upload-name"><span class="txt"></span></div> 
+									-->
+									<div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+									<input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+								</div>
+							</td>
+							<th scope="row"><span class="in-tb">로고 이미지2(Mobile)</span></th>
+							<td>
+								<div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+									<label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+									<!-- 파일 없을 경우
+										<div class="upload-name"><span class="txt"></span></div> 
+									-->
+									<div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+									<input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+								</div>
+							</td>
+						</tr>	
+						<tr>
+							<th scope="row"><span class="in-tb">브랜드 이미지1(Mobile)</span></th>
+							<td>
+								<div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+									<label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+									<!-- 파일 없을 경우
+										<div class="upload-name"><span class="txt"></span></div> 
+									-->
+									<div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+									<input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+								</div>
+							</td>	
+							<th scope="row"><span class="in-tb">브랜드 이미지2(Mobile)</span></th>
+							<td>
+								<div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+									<label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+									<!-- 파일 없을 경우
+										<div class="upload-name"><span class="txt"></span></div> 
+									-->
+									<div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+									<input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+								</div>
+							</td>							
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">브랜드 이미지2(Mobile)</span></th>
+							<td>
+								<div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+									<label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+									<!-- 파일 없을 경우
+										<div class="upload-name"><span class="txt"></span></div> 
+									-->
+									<div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+									<input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+								</div>
+							</td>
+							<th scope="row"><span class="in-tb">관련 기획전(Mobile)</span></th>
+							<td>
+								<div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+									<label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+									<!-- 파일 없을 경우
+										<div class="upload-name"><span class="txt"></span></div> 
+									-->
+									<div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+									<input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+								</div>
+							</td>
+						</tr>	
+					</tbody>
+				</table>		
+			</div><!--// board-form -->
+
+			<div class="cnt-title-area mt60">
+				<h3 class="tit-cnt">브랜드 소개 정보</h3>
+			</div>
+			<div class="board-form mt10">	
+				<table>
+					<caption>정보입력</caption>
+					<colgroup>
+						<col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th class="vt-mid" scope="row"><span class="in-tb">내용</span></th>
+							<td colspan="3">
+								<div style="width: 100%;height:300px;">브랜드 소개 정보 입력하는 영역</div>
+							</td>							
+						</tr>						
+					</tbody>
+				</table>		
+			</div><!--// board-form -->
+
+			<!-- [Dev] 0702 수정 : 위치 변경-->
+			<div class="cnt-title-area mt60">
+				<h3 class="tit-cnt">브랜드 추천상품</h3>
+			</div><!--// [Dev] 0702 수정 -->
+
+			<!-- [Dev/Pub] 20210621 수정 : board-option, board-list, btn-area 감싸는 div 추가  -->
+			<div class="board-movable-wrap">
+				<div class="board-option mt10"><!-- scroll시 class fixed add 됨 -->
+					<div class="left-area"><!-- [Dev] 0702 수정 -->
+						<div class="page-info">총  <strong class="text-primary">1,000</strong>건</div>
+					</div><!--// left-area -->
+					<div class="right-area">					
+						<div class="btn-lst vertical-t">
+							<button type="button" class="btn-func btn-default move all first-row"><span>최상</span></button>
+							<div class="btn-set">
+								<button type="button" class="btn-mv-up move all up-row"><i class="ico-arr-up"></i><span class="blind">위로</span></button>
+								<div class="mv-box">
+									<input type="text" class="step" name="step" value="1" class="input-text">
+									<span class="input-group-txt txt">칸 이동</span>
+								</div>
+								<button type="button" class="btn-mv-down move all down-row"><i class="ico-arr-down"></i><span class="blind">아래로</span></button>
+							</div>
+							<button type="button" class="btn-func btn-default move all last-row"><span>최하</span></button>
+						</div>
+						<button type="button" class="btn-func btn-default ml10"><span>상품 추가</span></button>
+					</div><!--// right-area -->
+				</div>
+
+				<div class="board-list movable-row mt10">
+					<table>
+						<caption>목록</caption>
+						<colgroup>
+							<col class="w-col-check">
+							<col style="width:110px;">
+							<col style="width:140px;">
+							<col style="width:120px;">
+							<col style="width:auto;">
+							<col style="width:120px;">
+							<col style="width:90px;">
+							<col style="width:90px;">
+						</colgroup>
+						<thead>
+						<tr>
+							<th scope="col" class="list-check">
+								<div class="custom-checkbox single">
+									<input type="checkbox" id="check-all" class="checkbox ui-check-all" name="check-item-101"><label for="check-all"><span class="blind">모두 선택</span></label>
+								</div><!-- 모두 선택 addClass ui-check-all -->
+							</th>
+							<th scope="col"><span class="in-tb">상품코드</span></th>
+							<th scope="col"><span class="in-tb">ERP 코드</span></th>
+							<th scope="col"><span class="in-tb">브랜드 명</span></th>
+							<th scope="col"><span class="in-tb">상품명</span></th>
+							<th scope="col"><span class="in-tb">온라인 판매가</span></th>
+							<th scope="col"><span class="in-tb">판매상태</span></th>
+							<th scope="col"><span class="in-tb">전시 여부</span></th>
+						</tr>
+						</thead>
+						<tbody>
+							<tr class="movable" id="3">
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">ROM691</div></td>
+								<td class="text-center"><div class="in-tb">2100324</div></td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td class="text-left"><div class="in-tb">스팀 닭가슴살 마늘맛3</div></td>
+								<td class="text-center"><div class="in-tb">19,900</div></td>
+								<td class="text-center"><div class="in-tb">정상</div></td>
+								<td class="text-center"><div class="in-tb">전시</div></td>
+							</tr>
+							<tr class="movable" id="2">
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">ROM691</div></td>
+								<td class="text-center"><div class="in-tb">2100324</div></td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td class="text-left"><div class="in-tb">스팀 닭가슴살 마늘맛2</div></td>
+								<td class="text-center"><div class="in-tb">19,900</div></td>
+								<td class="text-center"><div class="in-tb">정상</div></td>
+								<td class="text-center"><div class="in-tb">전시</div></td>
+							</tr>
+							<tr class="movable" id="1">
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">ROM691</div></td>
+								<td class="text-center"><div class="in-tb">2100324</div></td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td class="text-left"><div class="in-tb">스팀 닭가슴살 마늘맛1</div></td>
+								<td class="text-center"><div class="in-tb">19,900</div></td>
+								<td class="text-center"><div class="in-tb">정상</div></td>
+								<td class="text-center"><div class="in-tb">전시</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="btn-area mt10">
+					<div class="left">
+						<button type="button" class="btn-option btn-default"><span>선택 삭제</span></button>
+					</div>
+				</div>
+			</div>
+			<!--// [Dev/Pub] 20210621 수정 : board-option, board-list, btn-area 감싸는 div 추가  -->
+
+			<div class="cnt-title-area mt60">
+				<h3 class="tit-cnt">관련 기획전</h3>
+			</div>
+			<div class="board-form mt10">	
+				<table>
+					<caption>정보입력</caption>
+					<colgroup>
+						<col class="w-col-tit"><col class="w-col-cnt"><col class="w-col-tit"><col class="w-col-cnt">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th class="vt-mid" scope="row"><span class="in-tb">기획전</span></th>
+							<td colspan="3">
+								<button type="button" class="btn-form btn-grey"><span>기획전 검색</span></button>
+							</td>							
+						</tr>						
+					</tbody>
+				</table>		
+			</div>
+			<div class="page-info mt30">총 <strong class="text-primary">0</strong>건</div>
+			<div class="board-list mt10">
+				<table>
+					<caption>목록</caption>
+					<colgroup>
+						<col style="width:110px;">
+						<col style="width:auto;">
+						<col style="width:400px;">
+						<col style="width:100px;">
+						<col style="width:100px;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th scope="col"><span class="in-tb">채널구분</span></th>
+						<th scope="col"><span class="in-tb">기획전 명</span></th>
+						<th scope="col"><span class="in-tb">진행기간</span></th>
+						<th scope="col"><span class="in-tb">전시 여부</span></th>
+						<th scope="col"><span class="in-tb">상태</span></th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="text-center"><div class="in-tb">Mobile</div></td>
+							<td class="text-left"><div class="in-tb">3월 이달의 특가</div></td>
+							<td class="text-center"><div class="in-tb">2021.02.28 17:00 ~ 2021.03.31 17:00</div></td>
+							<td class="text-center"><div class="in-tb">전시</div></td>
+							<td class="text-center"><div class="in-tb">진행중</div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- [Dev] 0702 수정 : 위치 변경-->
+			<div class="cnt-title-area mt60">
+				<h3 class="tit-cnt">인기 상품</h3>
+			</div><!--// [Dev] 0702 수정 -->
+
+			<!-- [Dev/Pub] 20210621 수정 : board-option, board-list, btn-area 감싸는 div 추가  -->
+			<div class="board-movable-wrap mt10"><!-- [Dev] 0702 수정 : mt10 -->
+				<div class="board-option"><!-- scroll시 class fixed add 됨 --><!-- [Dev] 0702 수정 : mt 클래스 삭제  -->
+					<div class="left-area"><!-- [Dev] 0702 수정 -->
+						<div class="page-info">총  <strong class="text-primary">1,000</strong>건</div>
+					</div><!--// [Dev] 0702 수정 -->					
+					<div class="right-area">					
+						<div class="btn-lst vertical-t">
+							<button type="button" class="btn-func btn-default move all first-row"><span>최상</span></button>
+							<div class="btn-set">
+								<button type="button" class="btn-mv-up move all up-row"><i class="ico-arr-up"></i><span class="blind">위로</span></button>
+								<div class="mv-box">
+									<input type="text" class="step" name="step" value="1" class="input-text">
+									<span class="input-group-txt txt">칸 이동</span>
+								</div>
+								<button type="button" class="btn-mv-down move all down-row"><i class="ico-arr-down"></i><span class="blind">아래로</span></button>
+							</div>
+							<button type="button" class="btn-func btn-default move all last-row"><span>최하</span></button>
+						</div>
+						<button type="button" class="btn-func btn-default ml10"><span>상품 추가</span></button>
+					</div><!--// right-area -->
+				</div>
+
+				<div class="board-list movable-row mt10">
+					<table>
+						<caption>목록</caption>
+						<colgroup>
+							<col class="w-col-check">
+							<col style="width:110px;">
+							<col style="width:140px;">
+							<col style="width:120px;">
+							<col style="width:auto;">
+							<col style="width:120px;">
+							<col style="width:90px;">
+							<col style="width:90px;">
+						</colgroup>
+						<thead>
+						<tr>
+							<th scope="col" class="list-check">
+								<div class="custom-checkbox single">
+									<input type="checkbox" id="check-all" class="checkbox ui-check-all" name="check-item-101"><label for="check-all"><span class="blind">모두 선택</span></label>
+								</div><!-- 모두 선택 addClass ui-check-all -->
+							</th>
+							<th scope="col"><span class="in-tb">상품코드</span></th>
+							<th scope="col"><span class="in-tb">ERP 코드</span></th>
+							<th scope="col"><span class="in-tb">브랜드 명</span></th>
+							<th scope="col"><span class="in-tb">상품명</span></th>
+							<th scope="col"><span class="in-tb">온라인 판매가</span></th>
+							<th scope="col"><span class="in-tb">판매상태</span></th>
+							<th scope="col"><span class="in-tb">전시 여부</span></th>
+						</tr>
+						</thead>
+						<tbody>
+							<tr class="movable" id="3">
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">ROM691</div></td>
+								<td class="text-center"><div class="in-tb">2100324</div></td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td class="text-left"><div class="in-tb">스팀 닭가슴살 마늘맛3</div></td>
+								<td class="text-center"><div class="in-tb">19,900</div></td>
+								<td class="text-center"><div class="in-tb">정상</div></td>
+								<td class="text-center"><div class="in-tb">전시</div></td>
+							</tr>
+							<tr class="movable" id="2">
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">ROM691</div></td>
+								<td class="text-center"><div class="in-tb">2100324</div></td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td class="text-left"><div class="in-tb">스팀 닭가슴살 마늘맛2</div></td>
+								<td class="text-center"><div class="in-tb">19,900</div></td>
+								<td class="text-center"><div class="in-tb">정상</div></td>
+								<td class="text-center"><div class="in-tb">전시</div></td>
+							</tr>
+							<tr class="movable" id="1">
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">ROM691</div></td>
+								<td class="text-center"><div class="in-tb">2100324</div></td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td class="text-left"><div class="in-tb">스팀 닭가슴살 마늘맛1</div></td>
+								<td class="text-center"><div class="in-tb">19,900</div></td>
+								<td class="text-center"><div class="in-tb">정상</div></td>
+								<td class="text-center"><div class="in-tb">전시</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="btn-area mt10">
+					<div class="left">
+						<button type="button" class="btn-option btn-default"><span>선택 삭제</span></button>
+					</div>
+				</div>
+			</div>
+			<!--// [Dev/Pub] 20210621 수정 : board-option, board-list, btn-area 감싸는 div 추가  -->
+			
+			<!-- [Dev] 0702 수정 : 위치 변경-->
+			<div class="cnt-title-area mt60">
+				<h3 class="tit-cnt">리뷰</h3>
+			</div><!--// [Dev] 0702 수정 -->
+
+
+			<div class="board-movable-wrap mt10"><!-- [Dev] 0702 수정 : mt10 -->
+				<div class="board-option"><!-- scroll시 class fixed add 됨 --><!-- [Dev] 0702 수정 : mt 클래스 삭제  -->
+					<div class="left-area"><!-- [Dev] 0702 수정 -->
+						<div class="page-info">총  <strong class="text-primary">10</strong>건</div>
+					</div><!--// [Dev] 0702 수정 -->					
+					<div class="right-area">					
+						<div class="btn-lst vertical-t">
+							<button type="button" class="btn-func btn-default move all first-row"><span>최상</span></button>
+							<div class="btn-set">
+								<button type="button" class="btn-mv-up move all up-row"><i class="ico-arr-up"></i><span class="blind">위로</span></button>
+								<div class="mv-box">
+									<input type="text" class="step" name="step" value="1" class="input-text">
+									<span class="input-group-txt txt">칸 이동</span>
+								</div>
+								<button type="button" class="btn-mv-down move all down-row"><i class="ico-arr-down"></i><span class="blind">아래로</span></button>
+							</div>
+							<button type="button" class="btn-func btn-default move all last-row"><span>최하</span></button>
+						</div>
+						<button type="button" class="btn-func btn-default ml10"><span>리뷰 검색</span></button>
+					</div><!--// right-area -->
+				</div>
+
+				<div class="board-list movable-row mt10 vm-table">
+					<table>
+						<caption>목록</caption>
+						<colgroup>
+							<col class="w-col-check">
+							<col style="width:110px;">
+							<col style="width:120px;">
+							<col style="width:380px;">
+							<col style="width:auto;">
+						</colgroup>
+						<thead>
+						<tr>
+							<th scope="col" class="list-check">
+								<div class="custom-checkbox single">
+									<input type="checkbox" id="check-all" class="checkbox ui-check-all" name="check-item-101"><label for="check-all"><span class="blind">모두 선택</span></label>
+								</div><!-- 모두 선택 addClass ui-check-all -->
+							</th>
+							<th scope="col"><span class="in-tb">상품코드</span></th>
+							<th scope="col"><span class="in-tb">브랜드 명</span></th>
+							<th scope="col"><span class="in-tb">상품명</span></th>
+							<th scope="col"><span class="in-tb">리뷰 내용</span></th>
+						</tr>
+						</thead>
+						<tbody>
+							<tr class="movable" id="3">
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">ROM691</div></td>
+								<td class="text-center"><div class="in-tb">2100324</div></td>
+								<td class="text-left"><div class="in-tb">스팀 닭가슴살 마늘맛3</div></td>
+								<td class="text-left"><div class="in-tb">이것은 진리!!! 샐러드와 함께 곁들여 먹으면 내가 지금 하고 있는게 다이어트 식단이</div></td>
+							</tr>
+							<tr class="movable" id="2">
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">ROM691</div></td>
+								<td class="text-center"><div class="in-tb">2100324</div></td>
+								<td class="text-left"><div class="in-tb">스팀 닭가슴살 마늘맛2</div></td>
+								<td class="text-left"><div class="in-tb">이것은 진리!!! 샐러드와 함께 곁들여 먹으면 내가 지금 하고 있는게 다이어트 식단이</div></td>
+							</tr>
+							<tr class="movable" id="1">
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">ROM691</div></td>
+								<td class="text-center"><div class="in-tb">2100324</div></td>
+								<td class="text-left"><div class="in-tb">스팀 닭가슴살 마늘맛1</div></td>
+								<td class="text-left"><div class="in-tb">이것은 진리!!! 샐러드와 함께 곁들여 먹으면 내가 지금 하고 있는게 다이어트 식단이</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="btn-area mt10">
+					<div class="left">
+						<button type="button" class="btn-option btn-default"><span>선택 삭제</span></button>
+					</div>
+				</div>
+			</div>
+			<!--// [Dev/Pub] 20210621 수정 : board-option, board-list, btn-area 감싸는 div 추가  -->
+
+			<!--//리뷰탭-->
+			<div class="btn-area mt40">
+				<button type="button" class="btn-basic-md btn-primary"><span>등록</span></button>
+				<button type="button" class="btn-basic-md btn-default"><span>취소</span></button>
+			</div>
+
+		</div><!--// content-area -->
+
+		<button type="button" class="btn-gotop"><span class="blind">위로</span></button>
+		
+	</section>
+	<!--// ========== 컨텐츠 영역 :: container ========== -->
+</div><!--// wrap -->
+</body>
+</html>

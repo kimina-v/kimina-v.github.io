@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+
+</head>  
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+		<script>include.headTab();</script>
+
+		<div class="content-area">
+			<div class="top-title-area">
+				<h2 class="tit-page">쿠폰 조회<span class="tit-id-num">(ID:1108012)</span></h2>
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="check-101-11" class="checkbox-favor" name="check-item-1"><label for="check-101-11"><span class="blind">즐겨찾기</span></label>
+                </div>
+
+				<div class="page-guide">
+					<ol class="breadcrumb">
+						<li><a href="#" title="메인페이지 이동"><i class="ico-bl-home"></i><span class="blind">Home</span></a></li>
+						<li><span>쿠폰관리</span></li>
+						<li class="current"><span>쿠폰조회</span></li>
+					</ol>
+				</div><!--// page-guide -->
+			</div><!--// page-title-area -->
+
+			<!-- 검색영역 -->
+			<div class="input-group-wrap search-type">
+				<fieldset>
+					<legend>검색</legend>
+					<div class="input-group w-full">
+						<div class="input-group-form">
+							<select class="select">
+								<option value="">선택</option>
+								<option value="">랭킹닭컴</option>
+								<option value="">피키다이어트</option>
+								<option value="">개근질 마트</option>
+								<option value="">에이드</option>
+							</select>
+						</div>
+						<div class="input-group-form">
+							<select class="select">
+								<option value="">쿠폰코드</option>
+								<option value="">쿠폰명</option>
+							</select>
+						</div>
+						<label for="item1-1" class="blind">검색</label>
+						<input type="text" id="item1-1" class="input-text" placeholder="검색어를 입력하세요.(쿠폰코드는 comma(,)로 구분)">
+						<span class="input-group-btn">
+							<button type="button" class="btn-icon-search" title="검색"><span class="blind">검색</span></button>
+						</span>  
+						<span class="input-group-btn">
+							<button type="button" class="btn-search-detail"><span>상세검색</span><i class="ico-arrfill-toggle"></i></button>
+						</span>
+					</div><!--// input-group -->
+				</fieldset>
+			</div><!--// input-group-wrap | 검색영역 -->
+
+			<!-- 상세검색영역 -->
+			<div class="searh-detail-area ui-toggle-content">
+				<div class="board-form">	
+					<table>
+						<caption>정보입력</caption>
+						<colgroup>
+							<col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row"><span class="in-tb">기간</span></th>
+								<td colspan="3">
+									<div class="input-group">
+                                        <div class="input-group-form">
+                                            <select class="select">
+                                                <option value="">선택</option>
+                                                <option value="">발급시작일</option>
+                                                <option value="">발급종료일</option>
+                                                <option value="">사용시작일</option>
+                                                <option value="">사용종료일</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group datepicker-group">
+                                            <input type="text" id="" class="input-text datepicker">
+                                            <span class="input-group-txt">~</span>
+                                            <input type="text" id="" class="input-text datepicker">
+                                        </div><!--// input-group -->	
+                                        <span class="input-group-gap"></span>
+                                        <div class="input-group-form">		
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-102" class="checkbox" name="check-item-1" checked><label for="check-102"> 전체</label>
+                                            </div>	
+                                        </div>		
+                                    </div>
+								</td>
+							</tr>
+							<tr>
+                                <th scope="row"><span class="in-tb">대상</span></th>
+                                <td colspan="3">
+									<!-- 등급 -->
+									<div class="input-group">
+										<div class="input-group-txt"><strong>등급</strong></div>
+										<span class="input-group-gap"></span>
+										<div class="form-inline-group">	
+											<div class="custom-checkbox">
+												<input type="checkbox" id="check-201-all" class="checkbox" name="check-item-2" checked><label for="check-201-all"> 전체</label>
+											</div>						
+											<div class="custom-checkbox">
+												<input type="checkbox" id="check-201" class="checkbox" name="check-item-2"><label for="check-201"> 닭대리</label>
+											</div>
+											<div class="custom-checkbox">
+												<input type="checkbox" id="check-202" class="checkbox" name="check-item-2"><label for="check-202"> 닭과장</label>
+											</div>
+											<div class="custom-checkbox">
+												<input type="checkbox" id="check-203" class="checkbox" name="check-item-2"><label for="check-203"> 닭차장</label>
+											</div>
+											<div class="custom-checkbox">
+												<input type="checkbox" id="check-204" class="checkbox" name="check-item-2"><label for="check-204"> 닭부장</label>
+											</div>
+											<div class="custom-checkbox">
+												<input type="checkbox" id="check-205" class="checkbox" name="check-item-2"><label for="check-205"> 닭사장</label>
+											</div>
+											<div class="custom-checkbox">
+												<input type="checkbox" id="check-206" class="checkbox" name="check-item-2"><label for="check-206"> 닭회장</label>
+											</div>
+										</div>
+									</div><!--// 등급 -->
+									<!-- 그룹 -->
+									<div class="input-group">
+										<div class="input-group-txt"><strong>그룹</strong></div>
+										<span class="input-group-gap"></span>
+										<div class="form-inline-group">	
+											<div class="custom-checkbox">
+												<input type="checkbox" id="check-301-all" class="checkbox" name="check-item-3" checked><label for="check-301-all"> 전체</label>
+											</div>
+											<div class="custom-checkbox">
+												<input type="checkbox" id="check-301" class="checkbox" name="check-item-3"><label for="check-301"> 일반</label>
+											</div>
+											<div class="custom-checkbox">
+												<input type="checkbox" id="check-302" class="checkbox" name="check-item-3"><label for="check-302"> 오렌지멤버스</label>
+											</div>
+											<div class="custom-checkbox">
+												<input type="checkbox" id="check-303" class="checkbox" name="check-item-3"><label for="check-303"> 사업자회원</label>
+											</div>
+											<div class="custom-checkbox">
+												<input type="checkbox" id="check-3034" class="checkbox" name="check-item-3"><label for="check-304"> 임직원</label>
+											</div>
+										</div>
+									</div><!--// 그룹 -->
+                                </td>
+                              </tr>
+							  <tr>
+								<th scope="row"><span class="in-tb">결제수단</span></th>
+								<td>
+									<div class="form-inline-group">
+										<div class="custom-radio">
+											<input type="radio" id="radio-113-1" class="radio" name="radio-item-113" checked=""><label for="radio-113-1">모든결제</label>
+										</div>
+										<div class="custom-radio">
+											<input type="radio" id="radio-113-2" class="radio" name="radio-item-113" ><label for="radio-113-2">현금결제</label>
+										</div>
+                                    </div>
+								</td>
+								<th scope="row"><span class="in-tb">사용채널</span></th>
+								<td>
+									<div class="form-inline-group">
+										<div class="custom-checkbox">
+											<input type="checkbox" id="check-2-1" class="checkbox" name="check-item-12"><label for="check-2-1"> 공통</label>
+										</div>
+										<div class="custom-checkbox">
+											<input type="checkbox" id="check-2-2" class="checkbox" name="check-item-12"><label for="check-2-2"> PC</label>
+										</div>
+										<div class="custom-checkbox">
+											<input type="checkbox" id="check-2-3" class="checkbox" name="check-item-12"><label for="check-2-3"> Mobile Web</label>
+										</div>
+										<div class="custom-checkbox">
+											<input type="checkbox" id="check-2-4" class="checkbox" name="check-item-12"><label for="check-2-4"> Mobile APP</label><!-- [Dev] 0716 수정 : 텍스트 수정 -->
+										</div>
+								    </div>
+								</td>							
+							</tr>
+							<tr>
+								<th scope="row"><span class="in-tb">쿠폰유형</span></th>
+								<td>
+									<div class="input-group-form">
+										<select class="select w140">
+											<option value="">전체</option>
+											<option value="">상품쿠폰</option>
+											<option value="">장바구니쿠폰</option>
+											<option value="">난수쿠폰</option>
+											<option value="">키워드쿠폰</option>
+										</select>
+									</div>
+								</td>	
+								<th scope="row"><span class="in-tb">쿠폰종류</span></th>
+								<td>
+									<div class="input-group-form">
+										<select class="select w140">
+											<option value="">전체</option>
+											<option value="">일반</option>
+											<option value="">관리자CS</option>
+										</select>
+									</div>
+								</td>		
+							</tr>
+							<tr>		
+								<th scope="row"><span class="in-tb">발급방식</span></th>
+								<td>
+									<div class="input-group-form">
+										<select class="select w140">
+											<option value="">전체</option>
+											<option value="">다운로드</option>
+											<option value="">자동발급</option>
+											<option value="">수동발급</option>
+										</select>
+									</div>
+								</td>		
+								<th scope="row"><span class="in-tb">발급상태</span></th>
+								<td>
+									<div class="form-inline-group">
+										<div class="custom-radio">
+											<input type="radio" id="radio-12-1" class="radio" name="radio-item-12" checked=""><label for="radio-12-1">전체</label>
+										</div>
+										<div class="custom-radio">
+											<input type="radio" id="radio-12-2" class="radio" name="radio-item-21"><label for="radio-12-2">예정</label>
+										</div>
+										<div class="custom-radio">
+											<input type="radio" id="radio-12-3" class="radio" name="radio-item-21"><label for="radio-2-3">진행</label>
+										</div>
+										<div class="custom-radio">
+											<input type="radio" id="radio-12-3" class="radio" name="radio-item-21"><label for="radio-12-3">만료</label>
+										</div>
+								    </div>
+								</td>			
+							</tr>
+							<tr>		
+								<th scope="row"><span class="in-tb">주문취소 복원여부</span></th>
+								<td>
+									<div class="form-inline-group">
+										<div class="custom-radio">
+											<input type="radio" id="radio-3-1" class="radio" name="radio-item-3" checked=""><label for="radio-3-1">전체</label>
+										</div>
+										<div class="custom-radio">
+											<input type="radio" id="radio-3-2" class="radio" name="radio-item-3"><label for="radio-3-2">복원</label>
+										</div>
+										<div class="custom-radio">
+											<input type="radio" id="radio-3-3" class="radio" name="radio-item-3"><label for="radio-3-3">불가</label>
+										</div>
+								    </div>
+								</td>			
+								<th scope="row"><span class="in-tb">쿠폰사용여부</span></th>
+								<td>
+									<div class="form-inline-group">
+										<div class="custom-radio">
+											<input type="radio" id="radio-5-1" class="radio" name="radio-item-5" checked=""><label for="radio-5-1">전체</label>
+										</div>
+										<div class="custom-radio">
+											<input type="radio" id="radio-5-2" class="radio" name="radio-item-5"><label for="radio-5-2">사용</label>
+										</div>
+										<div class="custom-radio">
+											<input type="radio" id="radio-5-3" class="radio" name="radio-item-5"><label for="radio-5-3">미사용</label>
+										</div>
+								    </div>
+								</td>	
+							</tr>
+							<tr>		
+								<th scope="row"><span class="in-tb">관리자</span></th>
+								<td colspan="3">
+									<div class="input-group">
+										<input type="text" class="input-text w200"  placeholder="관리자명 출력" />
+										<span class="input-group-btn">
+											<button type="button" class="btn-form btn-grey"><span>관리자 검색</span></button>
+										</span>
+									</div><!--// input-group -->
+								</td>
+							</tr>
+						</tbody>
+					</table>		
+				</div><!--// board-form -->
+				<div class="btn-area">
+					<button type="button" class="btn-basic-md btn-primary"><span>검색</span></button>
+					<button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
+				</div>
+			</div>
+			<!--// 상세검색영역 -->
+
+			<div class="board-option mt60">
+				<div class="left-area">
+					<div class="page-info">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div>
+				</div><!--// left-area -->
+				<div class="right-area">
+					<button type="button" class="btn-func btn-default"><span>일괄변경</span></button>
+					<button type="button" class="btn-func btn-default"><span>쿠폰지급</span></button>
+					<button type="button" class="btn-func btn-default"><span>쿠폰 일괄회수</span></button>
+					<button type="button" class="btn-func btn-default"><span>쿠폰회수</span></button>
+					<button type="button" class="btn-func btn-default"><span>쿠폰등록</span></button>
+				</div><!--// right-area -->
+			</div>
+
+			<!-- 목록 -->
+			<div class="board-list scroll-table vm-table mt10">
+				<table>
+					<caption>목록</caption>
+					<colgroup>
+						<col class="w-col-check" />
+						<col class="w-col-num" />
+						<col style="width:100px" />
+						<col style="width:500px" />
+						<col style="width:140px" />
+						<col style="width:200px" />
+						<col style="width:120px" />
+						<col style="width:120px" />
+						<col style="width:120px" />
+						<col style="width:100px" />
+						<col style="width:160px" />
+						<col style="width:160px" />
+						<col style="width:190px" />
+						<col style="width:220px" />
+						<col style="width:120px" />
+						<col style="width:120px" />
+						<col style="width:140px" />
+						<col style="width:120px" />
+						<col style="width:100px" />
+					</colgroup>
+					<thead>
+					<tr>
+						<th scope="col" class="list-check">
+							<div class="custom-checkbox single">
+								<input type="checkbox" id="check-all" class="checkbox ui-check-all" name="check-item-101"><label for="check-all"><span class="blind">모두 선택</span></label>
+							</div><!-- 모두 선택 addClass ui-check-all -->
+						</th>
+						<th scope="col"><span class="in-tb">순번</span></th>
+						<th scope="col"><span class="in-tb">쿠폰코드</span></th>
+						<th scope="col"><span class="in-tb">쿠폰명</span></th>
+						<th scope="col"><span class="in-tb">할인</span></th>
+						<th scope="col"><span class="in-tb">사용조건</span></th>
+						<th scope="col"><span class="in-tb">결제수단</span></th>
+						<th scope="col"><span class="in-tb">쿠폰유형</span></th>
+						<th scope="col"><span class="in-tb">쿠폰종류</span></th>
+						<th scope="col"><span class="in-tb">사용채널</span></th>
+						<th scope="col"><span class="in-tb">발급방식</span></th>
+						<th scope="col"><span class="in-tb">대상</span></th>
+						<th scope="col"><span class="in-tb">발급기간</span></th>
+						<th scope="col"><span class="in-tb">사용기간</span></th>
+						<th scope="col"><span class="in-tb">발급상태</span></th>
+						<th scope="col"><span class="in-tb">주문취소복원</span></th>
+						<th scope="col"><span class="in-tb">사용여부</span></th>
+						<th scope="col"><span class="in-tb">관리자</span></th>
+						<th scope="col"><span class="in-tb">등록일</span></th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="list-check">
+								<div class="custom-checkbox single">
+									<input type="checkbox" id="check-1022" class="checkbox" name="check-item-111"><label for="check-1022"><span class="blind">모두 선택</span></label>
+								</div>
+							</td>
+							<td class="text-center"><div class="in-tb">2</div></td>
+							<td class="text-center"><div class="in-tb">1234567</div></td>
+							<td class="text-left"><a href="#none" class="in-tb">LG U+_2021년 7월 신규멤버 2천원 할인</a></td>
+							<td class="text-center"><div class="in-tb">2,000원 할인</div></td>
+							<td class="text-center"><div class="in-tb">-</div></td>
+							<td class="text-center"><div class="in-tb">모든결제</div></td>
+							<td class="text-center"><div class="in-tb">상품쿠폰</div></td>
+							<td class="text-center"><div class="in-tb">회원가입</div></td>
+							<td class="text-center"><div class="in-tb">공통</div></td>
+							<td class="text-center"><div class="in-tb">다운로드</div></td>
+							<td class="text-center"><div class="in-tb">등급 전체<br/>그룹 오렌지멤버스</div></td>
+							<td class="text-center"><div class="in-tb">2021.07.01~2021.07.31</div></td>
+							<td class="text-center"><div class="in-tb">2021.07.01~2021.07.31</div></td>
+							<td class="text-center"><div class="in-tb">예정</div></td>
+							<td class="text-center"><div class="in-tb">복원</div></td>
+							<td class="text-center"><div class="in-tb">사용</div></td>
+							<td class="text-center"><div class="in-tb">관리자ID 이름출력</div></td>
+							<td class="text-center"><div class="in-tb">2021.05.30 17:00</div></td>
+						</tr>
+						<tr>
+							<td class="list-check">
+								<div class="custom-checkbox single">
+									<input type="checkbox" id="check-1022-1" class="checkbox" name="check-item-111"><label for="check-1022-1"><span class="blind">모두 선택</span></label>
+								</div>
+							</td>
+							<td class="text-center"><div class="in-tb">1</div></td>
+							<td class="text-center"><div class="in-tb">1234567</div></td>
+							<td class="text-left"><a href="#none" class="in-tb">맛있닭 소프트 닭 안심살 카레 신상품 10%할인</a></td>
+							<td class="text-center"><div class="in-tb">10% 할인</div></td>
+							<td class="text-center"><div class="in-tb">최소 결제금액 50,000원, 최대 할인금액 5,000원</div></td>
+							<td class="text-center"><div class="in-tb">현금결제</div></td>
+							<td class="text-center"><div class="in-tb">주문서쿠폰</div></td>
+							<td class="text-center"><div class="in-tb">생일</div></td>
+							<td class="text-center"><div class="in-tb">Mobile Web <br />Mobile APP</div></td>
+							<td class="text-center"><div class="in-tb">자동발급</div></td>
+							<td class="text-center"><div class="in-tb">등급 닭대리 닭과장<br/>그룹 오렌지멤버스</div></td>
+							<td class="text-center"><div class="in-tb">2021.07.01~2021.07.31</div></td>
+							<td class="text-center"><div class="in-tb">2021.07.01~2021.07.31  토,일</div></td>
+							<td class="text-center"><div class="in-tb">상태 출력</div></td>
+							<td class="text-center"><div class="in-tb">환불여부 출력</div></td>
+							<td class="text-center"><div class="in-tb">사용여부 출력</div></td>
+							<td class="text-center"><div class="in-tb">관리자ID 이름출력</div></td>
+							<td class="text-center"><div class="in-tb">2021.05.30 17:00</div></td>
+						</tr>
+						<tr class="no-data">
+							<td colspan="19">
+								<div class="message-area">
+									<i class="ico-img-excl"></i>
+									<p class="txt">내역이 없습니다.</p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!--// board-list | 목록 -->
+
+			<div class="pagination mt20">
+				<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>
+				<a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a>
+				<a href="#" class="current"><span>1</span></a>
+				<a href="#"><span>2</span></a>
+				<a href="#"><span>3</span></a>
+				<a href="#"><span>4</span></a>
+				<a href="#"><span>5</span></a>
+				<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
+				<a href="#" class="btn-page last" title="마지막"><span class="blind">마지막</span></a>
+			</div><!--// pagination -->
+		</div><!--// content-area -->
+
+		<button type="button" class="btn-gotop"><span class="blind">위로</span></button>
+		
+	</section>
+	<!--// ========== 컨텐츠 영역 :: container ========== -->
+</div><!--// wrap -->
+
+
+</body>
+</html>

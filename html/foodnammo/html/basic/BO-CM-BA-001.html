@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+		<script>include.headTab();</script>
+	
+		<div class="content-area">
+			<div class="top-title-area">
+				<h2 class="tit-page">기본정보설정<span class="tit-id-num">(ID:1108012)</span></h2>
+				<div class="custom-checkbox">
+					<input type="checkbox" id="check-101-11" class="checkbox-favor" name="check-item-1"><label for="check-101-11"><span class="blind">즐겨찾기</span></label>
+				</div>
+				<div class="page-guide">
+					<ol class="breadcrumb">
+						<li><a href="#" title="메인페이지 이동"><i class="ico-bl-home"></i><span class="blind">Home</span></a></li>
+						<li><span>기본정보관리</span></li>
+						<li class="current"><span>기본정보설정</span></li>
+					</ol>
+				</div><!--// page-guide -->
+			</div><!--// page-title-area -->
+            <div class="cnt-title-area">
+                <h3 class="tit-cnt">기본정보</h3>
+            </div>
+            <div class="board-form mt10">	
+                <table>
+                    <caption>기본정보입력</caption>
+                    <colgroup>
+                        <col style="width:228px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><span class="in-tb">사이트</span></th>
+                            <td>
+                                <div class="input-group-form">
+                                    <select class="select w140">
+                                        <option value="">랭킹닭컴</option>
+                                        <option value="">피키다이어트</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>						
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">주문설정</h3>
+            </div>
+            <div class="board-form mt10">	
+                <table>
+                    <caption>주문설정입력</caption>
+                    <colgroup>
+                        <col style="width:228px">
+                        <col style="width:auto">
+                        <col style="width:228px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><span class="in-tb">장바구니 유지</span></th>
+                            <td>
+                                <div class="input-group">
+                                    <input type="text" class="input-text w140" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">일</div>
+                                </div>
+                            </td>
+                            <th scope="row"><span class="in-tb">역마진 결제 허용</span></th>
+                            <td>
+                                <div class="form-inline-group">
+                                    <div class="custom-radio">
+                                        <input type="radio" id="radio-51-1" class="radio" name="radio-item-51" checked=""><label for="radio-51-1">허용</label>
+                                    </div>
+                                    <div class="custom-radio">
+                                        <input type="radio" id="radio-51-2" class="radio" name="radio-item-51"><label for="radio-51-2">허용안함</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>	
+                        <tr>
+                            <th scope="row"><span class="in-tb">최대할인율</span></th>
+                            <td>
+                                <div class="input-group">
+                                    <input type="text" class="input-text w140" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">%</div>
+                                </div>
+                            </td>
+                            <th scope="row"><span class="in-tb">Mobile App 구매추가 적립률</span></th>
+                            <td>
+                                <div class="input-group">
+                                    <input type="text" class="input-text w140" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">%</div>
+                                </div>
+                            </td>
+                        </tr>	
+                        <tr>
+                            <th scope="row"><span class="in-tb">배송완료 자동처리</span></th>
+                            <td>
+                                <div class="input-group">
+                                    <div class="input-group-txt">배송중 상태에서</div>
+                                    <input type="text" class="input-text w140" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">일</div>
+                                </div>
+                            </td>
+                            <th scope="row"><span class="in-tb">구매확정 자동처리</span></th>
+                            <td>
+                                <div class="input-group">
+                                    <div class="input-group-txt">배송완료 상태에서</div>
+                                    <input type="text" class="input-text w140" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">일</div>
+                                </div>
+                            </td>
+                        </tr>	
+                        <tr>
+                            <th scope="row"><span class="in-tb">교환완료 자동처리</span></th>
+                            <td colspan="3">
+                                <div class="input-group">
+                                    <div class="input-group-txt">교환배송중 상태에서</div>
+                                    <input type="text" class="input-text w140" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">일</div>
+                                </div>
+                            </td>
+                        </tr>						
+                    </tbody>
+                </table>		
+            </div>
+
+            <div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">발신설정</h3>
+            </div>
+            <div class="board-form mt10">	
+                <table>
+                    <caption>발신설정입력</caption>
+                    <colgroup>
+                        <col style="width:228px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><span class="in-tb">SMS 발신번호</span></th>
+                            <td>
+                                <div class="input-group">
+                                    <input type="text" class="input-text" placeholder="숫자 입력">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn-plus" title="추가"><i class="ico-plus-bold"></i><span class="blind">추가</span></button>
+                                    </span>
+                                </div>
+
+                                <div class="input-group">
+                                    <input type="text" class="input-text" placeholder="숫자 입력">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn-minus" title="삭제"><i class="ico-minus-bold"></i><span class="blind">삭제</span></button>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">무료수신거부번호</span></th>
+                            <td>
+                                <input type="text" class="input-text" placeholder="숫자 입력">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">회원설정</h3>
+            </div>
+            <div class="board-form mt10">	
+                <table>
+                    <caption>회원설정입력</caption>
+                    <colgroup>
+                        <col style="width:228px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><span class="in-tb">로그인 실패 접근 제한</span></th>
+                            <td>
+                                <div class="input-group">
+                                    <input type="text" class="input-text w140" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">회</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">비밀번호변경 유지기간</span></th>
+                            <td>
+                                <div class="input-group">
+                                    <input type="text" class="input-text w140" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">일</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">로그인세션 유지기간</span></th>
+                            <td>
+                                <div class="input-group">
+                                    <input type="text" class="input-text w140" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">분</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">탈퇴 후 재가입 제한</span></th>
+                            <td>
+                                <div class="input-group">
+                                    <input type="text" class="input-text w140" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">일</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">휴면회원 전환기간</span></th>
+                            <td>
+                                <div class="input-group">
+                                    <input type="text" class="input-text w140" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">일</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">회원 SNS로그인 설정</h3>
+            </div>
+            <div class="board-form mt10">	
+                <table>
+                    <caption>회원SNS로그인설정입력</caption>
+                    <colgroup>
+                        <col style="width:228px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><span class="in-tb">네이버</span></th>
+                            <td>
+                                <div class="form-inline-group">
+                                    <div class="custom-radio">
+                                        <input type="radio" id="radio-11-1" class="radio" name="radio-item-11" checked=""><label for="radio-11-1">사용</label>
+                                    </div>
+                                    <div class="custom-radio">
+                                        <input type="radio" id="radio-11-2" class="radio" name="radio-item-11"><label for="radio-11-2">미사용</label>
+                                    </div>
+                                </div>
+                                <div class="input-table-group">
+                                    <div class="input-table-row">
+                                        <label for="" class="input-table-cell input-table-txt type2">Client name</label>
+                                        <div class="input-table-cell">
+                                            <input type="text" class="input-text w300" placeholder="Client name 입력">
+                                        </div>
+                                    </div>
+                                    <div class="input-table-row">
+                                        <label for="" class="input-table-cell input-table-txt type2">Client ID</label>
+                                        <div class="input-table-cell">
+                                            <input type="text" class="input-text w300" placeholder="Client name 입력">
+                                        </div>
+                                    </div>
+                                    <div class="input-table-row">
+                                        <label for="" class="input-table-cell input-table-txt type2">Client Secret</label>
+                                        <div class="input-table-cell">
+                                            <input type="text" class="input-text w300" placeholder="Client name 입력">
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">애플</span></th>
+                            <td>
+                                <div class="form-inline-group">
+                                    <div class="custom-radio">
+                                        <input type="radio" id="radio-21-1" class="radio" name="radio-item-21" checked=""><label for="radio-21-1">사용</label>
+                                    </div>
+                                    <div class="custom-radio">
+                                        <input type="radio" id="radio-21-2" class="radio" name="radio-item-21"><label for="radio-21-2">미사용</label>
+                                    </div>
+                                </div>
+                                <div class="input-table-group">
+                                    <div class="input-table-row">
+                                        <label for="" class="input-table-cell input-table-txt type2">Client name</label>
+                                        <div class="input-table-cell">
+                                            <input type="text" class="input-text w300" placeholder="Client name 입력">
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">페이스북</span></th>
+                            <td>
+                                <div class="form-inline-group">
+                                    <div class="custom-radio">
+                                        <input type="radio" id="radio-31-1" class="radio" name="radio-item-31" checked=""><label for="radio-31-1">사용</label>
+                                    </div>
+                                    <div class="custom-radio">
+                                        <input type="radio" id="radio-31-2" class="radio" name="radio-item-31"><label for="radio-31-2">미사용</label>
+                                    </div>
+                                </div>
+                                <div class="input-table-group">
+                                    <div class="input-table-row">
+                                        <label for="" class="input-table-cell input-table-txt type2">Apple ID</label>
+                                        <div class="input-table-cell">
+                                            <input type="text" class="input-text w300" placeholder="Apple ID 입력">
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">카카오톡</span></th>
+                            <td>
+                                <div class="form-inline-group">
+                                    <div class="custom-radio">
+                                        <input type="radio" id="radio-31-1" class="radio" name="radio-item-31" checked=""><label for="radio-31-1">사용</label>
+                                    </div>
+                                    <div class="custom-radio">
+                                        <input type="radio" id="radio-31-2" class="radio" name="radio-item-31"><label for="radio-31-2">미사용</label>
+                                    </div>
+                                </div>
+                                <div class="input-table-group">
+                                    <div class="input-table-row">
+                                        <label for="" class="input-table-cell input-table-txt type2">JavaScript Key</label>
+                                        <div class="input-table-cell">
+                                            <input type="text" class="input-text w300" placeholder="JavaScript Key 입력">
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">정책쿠폰</h3>
+            </div>
+            <div class="board-form mt10">	
+                <table>
+                    <caption>정책쿠폰설정</caption>
+                    <colgroup>
+                        <col style="width:228px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><span class="in-tb">회원가입</span></th>
+                            <td>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn-form btn-grey"><span>쿠폰 검색</span></button>
+                                </span>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">엠버서더</span></th>
+                            <td>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn-form btn-grey"><span>쿠폰 검색</span></button>
+                                </span>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">APP 다운로드</span></th>
+                            <td>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn-form btn-grey"><span>쿠폰 검색</span></button>
+                                </span>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">신제품</span></th>
+                            <td>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn-form btn-grey"><span>쿠폰 검색</span></button>
+                                </span>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">생일</span></th>
+                            <td>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn-form btn-grey"><span>쿠폰 검색</span></button>
+                                </span>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">휴면복귀</span></th>
+                            <td>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn-form btn-grey"><span>쿠폰 검색</span></button>
+                                </span>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">휴면예정</span></th>
+                            <td>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn-form btn-grey"><span>쿠폰 검색</span></button>
+                                </span>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">정책적립금</h3>
+            </div>
+            <div class="board-form mt10">	
+                <table>
+                    <caption>정책적립금설정</caption>
+                    <colgroup>
+                        <col style="width:228px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><span class="in-tb">회원가입</span></th>
+                            <td>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn-form btn-grey"><span>쿠폰 검색</span></button>
+                                </span>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">가입 추천인</span></th>
+                            <td>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn-form btn-grey"><span>쿠폰 검색</span></button>
+                                </span>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">가입 피추천인</span></th>
+                            <td>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn-form btn-grey"><span>쿠폰 검색</span></button>
+                                </span>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">엠버서더</span></th>
+                            <td>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn-form btn-grey"><span>쿠폰 검색</span></button>
+                                </span>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">상품구매</span></th>
+                            <td>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn-form btn-grey"><span>쿠폰 검색</span></button>
+                                </span>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">상품 일반후기</span></th>
+                            <td>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn-form btn-grey"><span>쿠폰 검색</span></button>
+                                </span>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">상품 포토후기</span></th>
+                            <td>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn-form btn-grey"><span>쿠폰 검색</span></button>
+                                </span>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">상품 냉장고후기</span></th>
+                            <td>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn-form btn-grey"><span>쿠폰 검색</span></button>
+                                </span>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">앱 소식알림 동의</span></th>
+                            <td>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn-form btn-grey"><span>쿠폰 검색</span></button>
+                                </span>
+                                <div class="input-inline-group">
+                                    <label for="" class="input-group-txt">쿠폰코드 출력</label>
+                                    <button type="button" class="btn-del-xs" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">차감적립금</h3>
+            </div>
+            <div class="board-form mt10">	
+                <table>
+                    <caption>차감적립금 입력</caption>
+                    <colgroup>
+                        <col style="width:228px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>	
+                        <tr>
+                            <th scope="row"><span class="in-tb">식단상담</span></th>
+                            <td>
+                                <div class="input-group">
+                                    <input type="text" class="input-text w140" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">P</div>
+                                </div>
+                            </td>
+                        </tr>						
+                    </tbody>
+                </table>		
+            </div>
+
+            <div class="btn-area mt20">
+                <button type="button" class="btn-basic-md btn-primary"><span>저장</span></button>
+                <button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
+            </div>
+
+            <div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">변경 내역</h3>
+            </div>
+
+            <div class="board-option mt60">
+                <div class="left-area">
+                    <div class="page-info">
+                        <ul class="info-txt-list">
+                            <li>총 <strong class="text-primary">3</strong>건</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="board-list mt10">
+                <table>
+                    <caption>변경 내역</caption>
+                    <colgroup>
+                        <col style="width:50%" span="2">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col"><span class="in-tb">관리자</span></th>
+                        <th scope="col"><span class="in-tb">등록일시</span></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center"><div class="in-tb">관리자ID 이름출력</div></td>
+                            <td class="text-center"><div class="in-tb">YYYY.MM.DD HH:MM</div></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><div class="in-tb">관리자ID 이름출력</div></td>
+                            <td class="text-center"><div class="in-tb">YYYY.MM.DD HH:MM</div></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><div class="in-tb">관리자ID 이름출력</div></td>
+                            <td class="text-center"><div class="in-tb">YYYY.MM.DD HH:MM</div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+		</div><!--// content-area -->
+
+	</section>
+	<!--// ========== 컨텐츠 영역 :: container ========== -->
+</div><!--// wrap -->
+</body>
+</html>

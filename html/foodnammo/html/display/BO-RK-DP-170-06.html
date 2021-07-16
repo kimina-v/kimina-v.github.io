@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">		
+		<div class="head-tab">
+			<ul>
+				<li class="current"><a href="#"><span>상품등록</span></a></li>
+				<li><a href="#"><span>ERP상품검색</span></a></li>
+				<li><a href="#"><span>상품검색</span></a></li>
+				<li><a href="#"><span>상품미리보기</span></a></li>
+				<li><a href="#"><span>옵션세트검색</span></a></li>
+				<li><a href="#"><span>ERP상품검색</span></a></li>
+				<li><a href="#"><span>상품검색</span></a></li>
+				<li><a href="#"><span>상품미리보기</span></a></li>
+				<li><a href="#"><span>옵션세트검색</span></a></li>
+			</ul>
+			<button type="button" class="btn-head-tab" title="전체보기"><i class="ico-arr-toggle"></i><span class="blind">전체보기</span></button>
+		</div><!--// head-tab -->
+
+		<div class="content-area">
+			<div class="top-title-area">
+				<h2 class="tit-page">타이틀</h2>
+				<div class="page-guide">
+					<ol class="breadcrumb">
+						<li><a href="#" title="메인페이지 이동"><i class="ico-bl-home"></i><span class="blind">Home</span></a></li>
+						<li><span>1Depth</span></li>
+						<li><span>2Depth</span></li>
+						<li class="current"><span>현재페이지</span></li>
+					</ol>
+					<div class="custom-checkbox">
+						<input type="checkbox" id="check-101-11" class="checkbox-favor" name="check-item-1"><label for="check-101-11"><span class="blind">즐겨찾기</span></label>
+					</div>
+				</div><!--// page-guide -->
+			</div><!--// page-title-area -->
+		</div><!--// content-area -->
+
+		<div class="bottom-btn-area">
+			<div class="btn-area">
+
+			</div>
+		</div><!--// bottom-btn-area -->
+	</section>
+	<!--// ========== 컨텐츠 영역 :: container ========== -->
+
+    <!--
+        * 팝업 버튼에 ui-open-pop 클래스, 팝업 ID 작성 필요
+        ex) <a href="#popupSample-01" class=".... ui-open-pop"> ~ </a>
+        ex) <button type="button" data-layer="#popupSample-02" class="... ui-open-pop"> ~ </button>
+    -->
+    <!-- ========== 팝업 영역 ========== -->
+    <div class="layer-wrap" id="popup-sample-01" style="display:block;">
+        <div class="layer-pop">
+            <div class="layer-inner layer-lg">
+                <div class="layer-head">
+                    <h4 class="layer-title">신규 브랜드 등록</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="in-content">
+                            <div class="board-form">
+                                <table>
+                                    <caption>검색</caption>
+                                    <colgroup>
+                                        <col class="w-col-tit2" /><col class="w-col-cnt" /><col class="w-col-tit2" /><col class="w-col-cnt" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><span class="in-tb">등록 사이트</span></th>
+                                            <td colspan="3">
+                                                <div class="input-group-form">
+                                                    <select class="select w140">
+                                                        <option value="">랭킹닭컴</option>
+                                                    </select>
+                                                </div>
+                                            </td>                                                               
+                                        </tr>    
+                                        <tr>
+                                            <th scope="row"><span class="in-tb">브랜드</span></th>
+                                            <td colspan="3"> 
+                                                <div class="input-group">
+													<input type="text" class="input-text w300" disabled>
+													<span class="input-group-btn">
+														<button type="button" class="btn-form btn-grey"><span>브랜드 검색</span></button>
+													</span>
+												</div>
+                                            </td>                                            
+                                        </tr>                                         
+                                    </tbody>
+                                </table>
+                            </div><!--// board-form -->
+
+                            <div class="board-option mt30">
+								<div class="left-area"></div><!--// left -->
+								<div class="right-area">
+									<button type="button" class="btn-func btn-default"><span>상품추가</span></button>
+								</div>
+							</div>
+                            <div class="board-list mt10">
+                                <table>
+                                    <caption>목록</caption>
+                                    <colgroup>
+                                        <col class="w-col-check">
+                                        <col width="90px" />
+                                        <col width="90px" />
+                                        <col width="90px" />
+                                        <col style="width: auto;" />                                        
+                                        <col width="110px" />
+                                        <col width="80px" />
+                                        <col width="80px" />
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th scope="col" class="list-check">
+                                            <div class="custom-checkbox single">
+                                                <input type="checkbox" id="check-all" class="checkbox ui-check-all" name="check-item-101"><label for="check-all"><span class="blind">모두 선택</span></label>
+                                            </div><!-- 모두 선택 addClass ui-check-all -->
+                                        </th>
+                                        <th scope="col"><span class="in-tb">상품코드</span></th>
+                                        <th scope="col"><span class="in-tb">ERP 코드</span></th>
+                                        <th scope="col"><span class="in-tb">브랜드 명</span></th>
+                                        <th scope="col"><span class="in-tb">상품명</span></th>
+                                        <th scope="col"><span class="in-tb">온라인 판매가</span></th>
+                                        <th scope="col"><span class="in-tb">판매상태</span></th>
+                                        <th scope="col"><span class="in-tb">전시여부</span></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>         
+                                            <td class="list-check">
+                                                <div class="custom-checkbox single">
+                                                    <input type="checkbox" id="check-110" class="checkbox" name="check-item-101"><label for="check-110"><span class="blind">선택</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center"><div class="in-tb">RMO699</div></td>
+                                            <td class="text-center"><div class="in-tb">2100000</div></td>
+                                            <td class="text-center"><div class="in-tb">맛있닭</div></td>
+                                            <td class="text-center"><div class="in-tb">스팀 닭가슴살 마늘맛</div></td>
+                                            <td class="text-center"><div class="in-tb">19,900</div></td>
+                                            <td class="text-center"><div class="in-tb">정상</div></td>
+                                            <td class="text-center"><div class="in-tb">전시</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div><!--// board-list -->   
+                            <div class="btn-area mt10">
+								<div class="left">
+									<button type="button" class="btn-option btn-default"><span>선택 삭제</span></button>
+								</div>
+							</div>
+                        </div>
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn-basic-md btn-primary ui-close-pop"><span>확인</span></button>
+                            <button type="button" class="btn-basic-md btn-default ui-close-pop"><span>취소</span></button>
+                        </div>
+                    </div>
+                </div><!--// layer-body  -->
+                <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-white"></i><span class="blind">닫기</span></button>
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample-01 -->
+</div><!--// wrap -->
+</body>
+</html>

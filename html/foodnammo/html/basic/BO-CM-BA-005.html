@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+		<script>include.headTab();</script>
+	
+		<div class="content-area">
+			<div class="top-title-area">
+				<h2 class="tit-page">배송그룹 등록<span class="tit-id-num">(ID:1108012)</span></h2>
+				<div class="custom-checkbox">
+					<input type="checkbox" id="check-101-11" class="checkbox-favor" name="check-item-1"><label for="check-101-11"><span class="blind">즐겨찾기</span></label>
+				</div>
+				<div class="page-guide">
+					<ol class="breadcrumb">
+						<li><a href="#" title="메인페이지 이동"><i class="ico-bl-home"></i><span class="blind">Home</span></a></li>
+						<li><span>기본정보관리</span></li>
+						<li class="current"><span>이용약관 등록</span></li>
+					</ol>
+				</div><!--// page-guide -->
+			</div><!--// page-title-area -->
+
+            <div class="cnt-title-area">
+                <h3 class="tit-cnt">기본정보</h3>
+                <div class="right-info mt10">
+                  <spanc class="text-guide-sm2"><i class="es"><em class="blind">필수입력</em></i>는 필수항목입니다.
+                </spanc></div>
+            </div>
+            <div class="board-form mt10">	
+				<table>
+					<caption>기본정보입력</caption>
+					<colgroup>
+						<col class="w-col-tit"><col class="w-col-cnt"><col class="w-col-tit"><col class="w-col-cnt">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"><span class="in-tb">사이트</span></th>
+							<td colspan="3">
+								<div class="input-group-form">
+									<select class="select w140">
+										<option value="">랭킹닭컴</option>
+                                        <option value="">피키다이어트</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">배송그룹명<i class="es"><em class="blind">필수입력</em></i></span></th>
+							<td>
+								<input type="text" class="input-text w571" placeholder="배송그룹명 입력">
+							</td>
+							<th scope="row"><span class="in-tb">상용여부<i class="es"><em class="blind">필수입력</em></i></span></th>
+							<td>
+								<div class="form-inline-group">
+									<div class="custom-radio">
+										<input type="radio" id="radio-1-1" class="radio" name="radio-item-1" checked=""><label for="radio-1-1">사용</label>
+									</div>
+									<div class="custom-radio">
+										<input type="radio" id="radio-1-2" class="radio" name="radio-item-1"><label for="radio-1-2">미사용</label>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">기본배송비<i class="es"><em class="blind">필수입력</em></i></span></th>
+							<td>
+                                <div class="input-group">
+                                    <input type="text" class="input-text w140" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">일</div>
+                                </div>
+							</td>
+							<th scope="row"><span class="in-tb">입점사명</span></th>
+							<td>
+                                <div class="in-tb">등록된 관리자의 입점사명 출력</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">무료배송 가능금액</span></th>
+							<td colspan="3">
+                                <div class="input-group">
+                                    <div class="input-group-txt">총 주문금액(할인전)</div>
+                                    <input type="text" class="input-text w140" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">원 이상</div>
+                                </div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">특급배송 가능여부</span></th>
+							<td>
+								<div class="form-inline-group">
+									<div class="custom-radio">
+										<input type="radio" id="radio-2-1" class="radio" name="radio-item-2" checked=""><label for="radio-2-1">가능</label>
+									</div>
+									<div class="custom-radio">
+										<input type="radio" id="radio-2-2" class="radio" name="radio-item-2"><label for="radio-2-2">불가능</label>
+									</div>
+								</div>
+							</td>
+							<th scope="row"><span class="in-tb">특급배송비 무료금액</span></th>
+							<td>
+                                <div class="input-group">
+                                    <div class="input-group-txt">총 주문금액(할인전)</div>
+                                    <input type="text" class="input-text w140" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">원 이상</div>
+                                </div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><span class="in-tb">관리자</span></th>
+							<td>
+                                <div class="in-tb">관리다ID 이름출력</div>
+							</td>
+							<th scope="row"><span class="in-tb">등록일</span></th>
+							<td>
+                                <div class="in-tb">2021.03.04 08:00</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>		
+			</div>
+
+            <div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">보냉재/일회용품 설정</h3>
+            </div>
+            <div class="board-form mt10">	
+                <table>
+                    <caption>보냉재/일회용품설정</caption>
+                    <colgroup>
+                        <col class="w-col-tit"><col class="w-col-cnt">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><span class="in-tb">아이스팩 사용</span></th>
+                            <td>
+								<div class="form-inline-group">
+									<div class="custom-radio">
+										<input type="radio" id="radio-3-1" class="radio" name="radio-item-3" checked=""><label for="radio-3-1">사용</label>
+									</div>
+									<div class="custom-radio">
+										<input type="radio" id="radio-3-2" class="radio" name="radio-item-3"><label for="radio-3-2">미사용</label>
+									</div>
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn-form btn-grey"><span>싱품 검색</span></button>
+                                    </span>
+                                    <div class="input-inline-group">
+                                        <label for="" class="input-group-txt">상품명 출력</label>
+                                        <button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                    </div>
+								</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">드라이아이스 사용</span></th>
+                            <td>
+								<div class="form-inline-group">
+									<div class="custom-radio">
+										<input type="radio" id="radio-4-1" class="radio" name="radio-item-4" checked=""><label for="radio-4-1">사용</label>
+									</div>
+									<div class="custom-radio">
+										<input type="radio" id="radio-4-2" class="radio" name="radio-item-4"><label for="radio-4-2">미사용</label>
+									</div>
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn-form btn-grey"><span>상품 검색</span></button>
+                                    </span>
+                                    <div class="input-inline-group">
+                                        <label for="" class="input-group-txt">상품명 출력</label>
+                                        <button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                    </div>
+								</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">배송안내 정보</h3>
+            </div>
+            <div class="sub-tab mt10">
+                <ul>
+                    <li class="current"><a href="#none"><span>상세설명(PC)</span></a></li>
+                    <li><a href="#none"><span>상세설명(Mobile)</span></a></li>
+                </ul>
+            </div>
+            <div class="text-editor-area">
+                에디터 영역
+            </div>
+
+            <div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">도서산간 배송정보</h3>
+                <div class="right-info">
+                    <button type="button" class="btn-func btn-default"><span>지역 등록</span></button>
+                </div>
+            </div>
+            <div class="board-list mt10">
+				<table>
+					<caption>이용약관 조회결과 목록</caption>
+					<colgroup>
+						<col style="width:auto">
+						<col style="width:230px" span="2">
+					</colgroup>
+					<thead>
+					<tr>
+						<th scope="col"><span class="in-tb">지역<i class="es"><em class="blind">필수입력</em></i></span></th>
+						<th scope="col"><span class="in-tb">배송비</span></th>
+						<th scope="col"><span class="in-tb">사용여부</span></th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="text-left adrr-text"><div class="in-tb">799-811  경북 울릉군 서면 도동1길 5-3  지번 남서리 43</div></td>
+							<td class="text-center">
+                                <div class="input-group">
+                                    <input type="text" class="input-text w-full text-center" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">원</div>
+                                </div>
+                            </td>
+							<td class="text-center">
+                                <div class="input-group-form">
+									<select class="select w140">
+										<option value="">사용</option>
+                                        <option value="">미사용</option>
+									</select>
+								</div>
+                            </td>
+						</tr>
+						<tr>
+							<td class="text-left adrr-text"><div class="in-tb">799-811  경북 울릉군 서면 도동1길 5-3  지번 남서리 43</div></td>
+							<td class="text-center">
+                                <div class="input-group">
+                                    <input type="text" class="input-text w-full text-center" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">원</div>
+                                </div>
+                            </td>
+							<td class="text-center">
+                                <div class="input-group-form">
+									<select class="select w140">
+										<option value="">사용</option>
+                                        <option value="">미사용</option>
+									</select>
+								</div>
+                            </td>
+						</tr>
+						<tr>
+							<td class="text-left adrr-text"><div class="in-tb">799-811  경북 울릉군 서면 도동1길 5-3  지번 남서리 43</div></td>
+							<td class="text-center">
+                                <div class="input-group">
+                                    <input type="text" class="input-text w-full text-center" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">원</div>
+                                </div>
+                            </td>
+							<td class="text-center">
+                                <div class="input-group-form">
+									<select class="select w140">
+										<option value="">사용</option>
+                                        <option value="">미사용</option>
+									</select>
+								</div>
+                            </td>
+						</tr>
+						<tr>
+							<td class="text-left adrr-text"><div class="in-tb">799-811  경북 울릉군 서면 도동1길 5-3  지번 남서리 43</div></td>
+							<td class="text-center">
+                                <div class="input-group">
+                                    <input type="text" class="input-text w-full text-center" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">원</div>
+                                </div>
+                            </td>
+							<td class="text-center">
+                                <div class="input-group-form">
+									<select class="select w140">
+										<option value="">사용</option>
+                                        <option value="">미사용</option>
+									</select>
+								</div>
+                            </td>
+						</tr>
+						<tr>
+							<td class="text-left adrr-text"><div class="in-tb">799-811  경북 울릉군 서면 도동1길 5-3  지번 남서리 43</div></td>
+							<td class="text-center">
+                                <div class="input-group">
+                                    <input type="text" class="input-text w-full text-center" value="" placeholder="숫자 입력">
+                                    <div class="input-group-txt">원</div>
+                                </div>
+                            </td>
+							<td class="text-center">
+                                <div class="input-group-form">
+									<select class="select w140">
+										<option value="">사용</option>
+                                        <option value="">미사용</option>
+									</select>
+								</div>
+                            </td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+            <div class="btn-area mt20">
+                <button type="button" class="btn-basic-md btn-primary"><span>등록</span></button>
+                <button type="button" class="btn-basic-md btn-default"><span>취소</span></button>
+            </div>
+		</div><!--// content-area -->
+
+	</section>
+	<!--// ========== 컨텐츠 영역 :: container ========== -->
+</div><!--// wrap -->
+</body>
+</html>

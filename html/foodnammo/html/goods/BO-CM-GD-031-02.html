@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">		
+		<script>include.headTab();</script>
+
+		<div class="content-area">
+			<div class="top-title-area">
+				<h2 class="tit-page">추가옵션그룹 등록<span class="tit-id-num">(ID:1108012)</span></h2>
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="check-101-11" class="checkbox-favor" name="check-item-1"><label for="check-101-11"><span class="blind">즐겨찾기</span></label>
+                </div>
+				<div class="page-guide">
+					<ol class="breadcrumb">
+						<li><a href="#" title="메인페이지 이동"><i class="ico-bl-home"></i><span class="blind">Home</span></a></li>
+						<li><span>1Depth</span></li>
+						<li><span>2Depth</span></li>
+						<li class="current"><span>현재페이지</span></li>
+					</ol>					
+				</div><!--// page-guide -->
+			</div><!--// page-title-area -->
+
+			<div class="board-option">
+				<div class="left-area">
+					<em class="text-guide-sm">도움말</em>
+					<button type="button" class="btn-icon-mark"><i class="ico-quest"></i><span class="blind">도움말</span></button>
+				</div>
+				<!-- [Dev] 0702 수정 -->
+				<div class="right-area">
+					<div class="text-guide-sm2">
+						<i class="es"><em class="blind">필수입력</em></i>는 필수항목입니다.
+					</div>
+					</div><!--//ev] 0702 수정 -->
+			</div>
+
+			<div class="board-form mt10">	
+				<table>
+					<caption>정보입력</caption>
+					<colgroup>
+						<col style="width: 230px;"><col class="w-col-cnt"><col style="width: 230px;"><col class="w-col-cnt">
+					</colgroup>
+					<tbody>
+						<tr>
+							<!-- [Dev] 0702 수정 -->
+							<th scope="row"><span class="in-tb">등록 사이트</span></th>
+							<td>
+								<select class="select w140">
+									<option value="">랭킹닭컴</option>
+								</select>							
+							</td>
+							<th scope="row"><span class="in-tb">옵션 구분</span></th>
+							<td>
+								<div class="in-tb">추가 옵션</div>
+							</td>
+						</tr><!--// [Dev] 0702 수정 -->
+                        <tr>
+							<th scope="row">
+								<span class="in-tb">추가 옵션 그룹명<i class="es"><em class="blind">필수입력</em></i></span><!-- [Dev] 0702 수정 -->
+							</th>
+							<td>
+								<input type="text" class="input-text w-full" placeholder="추가 옵션 그룹명 입력">
+							</td>
+                            <th scope="row"><span class="in-tb">옵션 코드</span></th>
+							<td>
+								<div class="in-tb">옵션 코드 출력</div>
+							</td>
+						</tr>	
+                        
+						<tr>
+							<th scope="row">
+								<span class="in-tb">FO 노출 추가 옵션 타이틀명<i class="es"><em class="blind">필수입력</em></i></span><!-- [Dev] 0702 수정 -->
+							</th>
+							<td colspan="3">
+								<input type="text" class="input-text w-full" placeholder="FO 노출 추가 옵션 그룹명 입력">
+							</td>
+						</tr>	
+					</tbody>
+				</table>		
+			</div><!--// board-form -->
+
+			<!-- [Dev/Pub] 20210621 수정 : board-option, board-list, btn-area 감싸는 div 추가  -->
+			<div class="board-movable-wrap">
+				<div class="board-option mt30"><!-- scroll시 class fixed add 됨 -->
+					<div class="left-area">
+						<div class="page-info">추가 옵션 목록 (총 <strong class="text-primary">3</strong>개)</div>
+					</div><!--// left-area -->
+					<div class="right-area">					
+						<div class="btn-lst vertical-t">
+							<button type="button" class="btn-func btn-default move all first-row"><span>최상</span></button>
+							<div class="btn-set">
+								<button type="button" class="btn-mv-up move all up-row"><i class="ico-arr-up"></i><span class="blind">위로</span></button>
+								<div class="mv-box">
+									<input type="text" id="step" name="step" value="1" class="input-text">
+									<span class="input-group-txt txt">칸 이동</span>
+								</div>
+								<button type="button" class="btn-mv-down move all down-row"><i class="ico-arr-down"></i><span class="blind">아래로</span></button>
+							</div>
+							<button type="button" class="btn-func btn-default move all last-row"><span>최하</span></button>
+						</div>
+						<button type="button" class="btn-func btn-default ml10"><span>상품 추가</span></button>
+					</div><!--// right-area -->
+				</div>
+			
+				<div class="board-list movable-row vm-table mt10">
+					<table>
+						<caption>목록</caption>
+						<colgroup>
+							<col class="w-col-check">
+							<col style="width:auto;">
+							<col span="2" style="width:270px">
+							<col style="width:110px">
+							<col style="width:110px">
+							<col style="width:160px">
+							<col style="width:140px">
+						</colgroup>
+						<thead>
+						<tr>
+							<th scope="col" class="list-check">
+								<div class="custom-checkbox single">
+									<input type="checkbox" id="check-all" class="checkbox ui-check-all" name="check-item-101"><label for="check-all"><span class="blind">모두 선택</span></label>
+								</div><!-- 모두 선택 addClass ui-check-all -->
+							</th>
+							<th scope="col"><span class="in-tb">추가 상품명</span></th>
+							<th scope="col"><span class="in-tb">추가 금액</span></th>
+							<th scope="col"><span class="in-tb">옵션재고</span></th>
+							<th scope="col"><span class="in-tb">판매상태</span></th>
+							<th scope="col"><span class="in-tb">전시여부</span></th>
+							<th scope="col"><span class="in-tb">상품코드</span></th>
+							<th scope="col"><span class="in-tb">ERP 코드</span></th>
+						</tr>
+						</thead>
+						<tbody>
+							<tr class="movable" id="3">
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-item100" class="checkbox" name="check-item-101"><label for="check-item100"><span class="blind">선택</span></label>
+									</div><!-- 모두 선택 addClass ui-check-all -->
+								</td>
+								<td class="text-center"><div class="in-tb">레몬 갈릭</div></td>
+								<td class="text-center"><input type="text" class="input-text w-full" placeholder="숫자 입력"></td>
+								<td class="text-center"><input type="text" class="input-text w-full" placeholder="숫자 입력"></td>
+								<td class="text-center"><div class="in-tb">정상</div></td>
+								<td class="text-center">
+									<select class="select w-full">
+										<option value="">전시</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">PROM691</div></td>
+								<td class="text-center"><div class="in-tb">ERP 코드 출력</div></td>
+							</tr>
+							<tr class="movable" id="2">
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-item101" class="checkbox" name="check-item-101"><label for="check-item101"><span class="blind">선택</span></label>
+									</div><!-- 모두 선택 addClass ui-check-all -->
+								</td>
+								<td class="text-center"><div class="in-tb">레몬 갈릭</div></td>
+								<td class="text-center"><input type="text" class="input-text w-full" placeholder="숫자 입력"></td>
+								<td class="text-center"><input type="text" class="input-text w-full" placeholder="숫자 입력"></td>
+								<td class="text-center"><div class="in-tb">정상</div></td>
+								<td class="text-center">
+									<select class="select w-full">
+										<option value="">전시</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">PROM691</div></td>
+								<td class="text-center"><div class="in-tb">ERP 코드 출력</div></td>
+							</tr>
+							<tr  class="movable" id="1">
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-item101" class="checkbox" name="check-item-101"><label for="check-item101"><span class="blind">선택</span></label>
+									</div><!-- 모두 선택 addClass ui-check-all -->
+								</td>
+								<td class="text-center"><div class="in-tb">오리엔탈</div></td>
+								<td class="text-center"><input type="text" class="input-text w-full" placeholder="숫자 입력"></td>
+								<td class="text-center"><input type="text" class="input-text w-full" placeholder="숫자 입력"></td>
+								<td class="text-center"><div class="in-tb">정상</div></td>
+								<td class="text-center">
+									<select class="select w-full">
+										<option value="">전시</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">PROM691</div></td>
+								<td class="text-center"><div class="in-tb">ERP 코드 출력</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="btn-area mt10">
+					<div class="left">
+						<button type="button" class="btn-option btn-default"><span>선택 삭제</span></button>
+					</div>
+				</div>
+			</div>
+			<!--// [Dev/Pub] 20210621 수정 : board-option, board-list, btn-area 감싸는 div 추가  -->
+
+			<div class="btn-bottom-area">
+				<div class="center">
+					<button type="button" class="btn-basic-md btn-primary"><span>등록</span></button>
+					<button type="button" class="btn-basic-md btn-default"><span>취소</span></button>
+				</div>
+			</div>
+
+		</div><!--// content-area -->
+
+		<div class="bottom-btn-area">
+			<div class="btn-area">
+
+			</div>
+		</div><!--// bottom-btn-area -->
+	</section>
+	<!--// ========== 컨텐츠 영역 :: container ========== -->
+</div><!--// wrap -->
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+		<script>include.headTab();</script>
+
+		<div class="content-area">
+			<div class="top-title-area">
+				<h2 class="tit-page">SMS/알림톡 템플릿 관리</h2>
+				<div class="page-guide">
+					<ol class="breadcrumb">
+						<li><a href="#" title="메인페이지 이동"><i class="ico-bl-home"></i><span class="blind">Home</span></a></li>
+						<li><span>1Depth</span></li>
+						<li><span>2Depth</span></li>
+						<li class="current"><span>현재페이지</span></li>
+					</ol>
+					<div class="custom-checkbox">
+						<input type="checkbox" id="check-101-11" class="checkbox-favor" name="check-item-1"><label for="check-101-11"><span class="blind">즐겨찾기</span></label>
+					</div>
+				</div><!--// page-guide -->
+			</div><!--// page-title-area -->
+
+			<!-- 검색영역 -->
+			<div class="input-group-wrap search-type w140">
+				<fieldset>
+					<legend>검색</legend>
+					<div class="input-group w-full">
+                        <div class="input-group-form">
+							<select class="select">
+								<option value="">랭킹닭컴</option>
+							</select>
+						</div>
+					</div><!--// input-group -->
+				</fieldset>
+			</div><!--// input-group-wrap | 검색영역 -->			
+            <div class="board-option mb10">
+                <div class="right-area">
+                    <button type="button" class="btn-func btn-default"><span>저장</span></button>
+                </div><!--// right-area -->
+            </div>
+            <div class="board-list no-tr-bg">
+                <table>
+                    <caption>목록</caption>
+                    <colgroup>
+                        <col style="width:250px;">
+                        <col style="width:calc(50% - 125px);">
+                        <col style="width:calc(50% - 125px);">
+                    </colgroup>
+                    <thead>
+                    <tr>                           
+                        <th scope="col"><span class="in-tb">발송항목</span></th>
+                        <th scope="col"><span class="in-tb">SMS메세지 설정</span></th>
+                        <th scope="col"><span class="in-tb">알림톡 메세지 설정</span></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>       
+                            <th class="vt-mid">
+                                <span class="in-tb">신규회원가입</span>
+                            </th>                         
+                            <td class="text-center vt-mid">
+                                <div class="textarea-count-box batch-content">
+                                    <textarea id="" class="textarea" placeholder="내용입력"></textarea>
+                                </div>
+                            </td>
+                            <td class="text-center vt-mid">
+                                <div class="textarea-count-box batch-content">
+                                    <textarea id="" class="textarea" placeholder="내용입력"></textarea>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>       
+                            <th class="vt-mid">
+                                <span class="in-tb">주문완료</span>
+                            </th>                         
+                            <td class="text-center vt-mid">
+                                <div class="textarea-count-box batch-content">
+                                    <textarea id="" class="textarea" placeholder="내용입력"></textarea>
+                                </div>
+                            </td>
+                            <td class="text-center vt-mid">
+                                <div class="textarea-count-box batch-content">
+                                    <textarea id="" class="textarea" placeholder="내용입력"></textarea>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>       
+                            <th class="vt-mid">
+                                <span class="in-tb">입금완료</span>
+                            </th>                         
+                            <td class="text-center vt-mid">
+                                <div class="textarea-count-box batch-content">
+                                    <textarea id="" class="textarea" placeholder="내용입력"></textarea>
+                                </div>
+                            </td>
+                            <td class="text-center vt-mid">
+                                <div class="textarea-count-box batch-content">
+                                    <textarea id="" class="textarea" placeholder="내용입력"></textarea>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>			
+		</div><!--// content-area -->
+
+		<button type="button" class="btn-gotop"><span class="blind">위로</span></button>
+		
+	</section>
+	<!--// ========== 컨텐츠 영역 :: container ========== -->
+</div><!--// wrap -->
+</body>
+</html>

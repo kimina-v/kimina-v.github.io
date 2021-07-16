@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+		<script>include.headTab();</script>
+
+		<div class="content-area">
+			<div class="top-title-area">
+				<h2 class="tit-page">메뉴관리</h2>
+				<div class="page-guide">
+					<ol class="breadcrumb">
+						<li><a href="#" title="메인페이지 이동"><i class="ico-bl-home"></i><span class="blind">Home</span></a></li>
+						<li><span>1Depth</span></li>
+						<li><span>2Depth</span></li>
+						<li class="current"><span>현재페이지</span></li>
+					</ol>
+					<div class="custom-checkbox">
+						<input type="checkbox" id="check-101-11" class="checkbox-favor" name="check-item-1"><label for="check-101-11"><span class="blind">즐겨찾기</span></label>
+					</div>
+				</div><!--// page-guide -->
+			</div><!--// page-title-area -->
+
+			<!-- 검색영역 -->
+			<div class="input-group-wrap search-type">
+				<fieldset>
+					<legend>검색</legend>
+					<div class="input-group w-full">
+						<div class="input-group-form">
+							<select class="select">
+								<option value="">메뉴ID</option>
+								<option value="">메뉴명</option>
+							</select>
+						</div>
+						<label for="item1-1" class="blind">검색</label>
+						<input type="text" id="item1-1" class="input-text" placeholder="검색어를 입력하세요.">
+						<span class="input-group-btn">
+							<button type="button" class="btn-icon-search" title="검색"><span class="blind">검색</span></button>
+						</span>  
+						<span class="input-group-btn">
+							<button type="button" class="btn-search-detail"><span>상세검색</span><i class="ico-arrfill-toggle"></i></button>
+						</span>
+					</div><!--// input-group -->
+				</fieldset>
+			</div><!--// input-group-wrap | 검색영역 -->
+
+			<!-- 상세검색영역 -->
+			<div class="searh-detail-area ui-toggle-content mb30">
+				<div class="board-form">	
+					<table>
+						<caption>정보입력</caption>
+						<colgroup>
+							<col class="w-col-tit"><col />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row"><span class="in-tb">사용여부</span></th>
+								<td>
+                                    <div class="form-inline-group">
+										<div class="custom-radio">
+											<input type="radio" id="radio-1-1" class="radio" name="radio-item-1" checked=""><label for="radio-1-1">전체</label>
+										</div>
+										<div class="custom-radio">
+											<input type="radio" id="radio-1-2" class="radio" name="radio-item-1"><label for="radio-1-2">사용</label>
+										</div>
+										<div class="custom-radio">
+											<input type="radio" id="radio-1-3" class="radio" name="radio-item-1"><label for="radio-1-3">미사용</label>
+										</div>
+									</div>								
+                                </td>                                
+							</tr>
+						</tbody>
+					</table>		
+				</div><!--// board-form -->
+				<div class="btn-area">
+					<button type="button" class="btn-basic-md btn-primary"><span>검색</span></button>
+					<button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
+				</div>
+			</div>
+			<!--// 상세검색영역 -->
+
+            <!--그리드페이지-->
+            <!--
+                왼쪽 테이블의 크기가 페이지별로 몇가지 크기를 가지고 변할수있습니다.
+                변하는 width값을 grid-page-wrap에 추가해주시면 됩니다.
+            -->
+			<div class="grid-page-wrap"><!-- 디자인 반영시 width값에 대한 클래스 필요 -->
+				<div class="grid-left-area">
+					<div class="cnt-title-area">
+						<h3 class="tit-cnt">메뉴</h3>					
+					</div>
+					<div class="sc-table">
+						<h4>영업</h4>
+						<ul class="tree-menu">
+							<li>
+								<a href="#">매출실적</a>
+								<ul class="tree-menu-depth">
+									<li><a href="#">중분류1-1</a>
+										<ul class="tree-menu-depth">
+											<li><a href="#">소분류1-1-1</a>
+												<ul class="tree-menu-depth">
+													<li><a href="#">세분류1-1-1-1</a></li>
+													<li><a href="#">세분류1-1-1-2</a></li>
+													<li><a href="#">세분류1-1-1-3</a></li>
+												</ul>
+											</li>
+											<li><a href="#">소분류1-1-2</a>
+												<ul class="tree-menu-depth">
+													<li><a href="#">세분류1-1-2-1</a></li>
+													<li><a href="#">세분류1-1-2-2</a></li>
+													<li><a href="#">세분류1-1-2-3</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">중분류1-2</a>
+										<ul class="tree-menu-depth">
+											<li><a href="#">소분류1-2-1</a>
+												<ul class="tree-menu-depth">
+													<li><a href="#">세분류1-2-1-1</a></li>
+													<li><a href="#">세분류1-2-1-2</a></li>
+													<li><a href="#">세분류1-2-1-3</a></li>
+												</ul>
+											</li>
+											<li><a href="#">소분류1-2-2</a>
+												<ul class="tree-menu-depth">
+													<li><a href="#">세분류1-2-2-1</a></li>
+													<li><a href="#">세분류1-2-2-2</a></li>
+													<li><a href="#">세분류1-2-2-3</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">이벤트관리</a>
+								<ul class="tree-menu-depth">
+									<li><a href="#">중분류2-1</a>
+										<ul class="tree-menu-depth">
+											<li><a href="#">소분류2-1-1</a>
+												<ul class="tree-menu-depth">
+													<li><a href="#">세분류2-1-1-1</a></li>
+													<li><a href="#">세분류2-1-1-2</a></li>
+													<li><a href="#">세분류2-1-1-3</a></li>
+												</ul>
+											</li>
+											<li><a href="#">소분류2-1-2</a>
+												<ul class="tree-menu-depth">
+													<li><a href="#">세분류2-1-2-1</a></li>
+													<li><a href="#">세분류2-1-2-2</a></li>
+													<li><a href="#">세분류2-1-2-3</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">중분류2-2</a>
+										<ul class="tree-menu-depth">
+											<li><a href="#">소분류2-2-1</a>
+												<ul class="tree-menu-depth">
+													<li><a href="#">세분류2-2-1-1</a></li>
+													<li><a href="#">세분류2-2-1-2</a></li>
+													<li><a href="#">세분류2-2-1-3</a></li>
+												</ul>
+											</li>
+											<li><a href="#">소분류2-2-2</a>
+												<ul class="tree-menu-depth">
+													<li><a href="#">세분류2-2-2-1</a></li>
+													<li><a href="#">세분류2-2-2-2</a></li>
+													<li><a href="#">세분류2-2-2-3</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<script>
+					$(function(){
+						$('.tree-menu a').on('click',function(e){
+							e.preventDefault();
+							$('.tree-menu a').removeClass('on');
+							$(this).addClass('on');
+							if($(this).siblings('ul').hasClass('open')){
+								$(this).removeClass('on').siblings('ul').removeClass('open');
+							} else{
+								$(this).siblings('ul').addClass('open')
+							}
+						});
+					});
+				</script>
+
+				<div class="grid-right-area">
+					<div class="cnt-title-box">
+                        <div class="cnt-left-area">
+                            <h3 class="tit-cnt">메뉴목록</h3>
+                            <div class="page-info">매출실적 - 총 <strong class="text-primary">3</strong>개</div>
+                        </div>
+                        <div class="cnt-right-area">
+                            <button type="button" class="btn-func btn-default"><span>신규</span></button>
+                            <button type="button" class="btn-func btn-default"><span>삭제</span></button>
+                        </div>
+                    </div>
+
+					<div class="sc-table">
+						<div class="div-head-scroll right-head-tb mt10">
+							<table class="tbl-head">
+								<colgroup>
+									<col class="w-col-check">
+									<col class="w-col-num">
+									<col style="width: 140px;">
+									<col style="width: 180px;">
+									<col style="width: 65px;">
+									<col style="width: 140px;">
+									<col style="width: 140px;">
+									<col style="width: 90px;">
+									<col style="width: 140px;">
+									<col style="width: 240px;">
+									<col style="width: 140px;">
+									<col style="width: 15px;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="col" class="list-check">
+											<div class="custom-checkbox single">
+												<input type="checkbox" id="check-all" class="checkbox ui-check-all" name="check-item-101"><label for="check-all"><span class="blind">모두 선택</span></label>
+											</div>
+										</th>
+										<th scope="col" class="list-num"><span class="in-tb">NO</span></th>
+										<th scope="col"><span class="in-tb">메뉴ID</span></th>
+										<th scope="col"><span class="in-tb">메뉴명</span></th>
+										<th scope="col"><span class="in-tb">정렬</span></th>
+										<th scope="col"><span class="in-tb">상위메뉴ID</span></th>
+										<th scope="col"><span class="in-tb">상위메뉴명</span></th>
+										<th scope="col"><span class="in-tb">사용여부</span></th>
+										<th scope="col"><span class="in-tb">프로그램ID</span></th>
+										<th scope="col"><span class="in-tb">메뉴PATH</span></th>
+										<th scope="col"><span class="in-tb">비고</span></th>
+										<th></th>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="div-body-scroll right-body-tb">
+							<table class="tbl-body">
+								<colgroup>
+									<col class="w-col-check">
+									<col class="w-col-num">
+									<col style="width: 140px;">
+									<col style="width: 180px;">
+									<col style="width: 65px;">
+									<col style="width: 140px;">
+									<col style="width: 140px;">
+									<col style="width: 90px;">
+									<col style="width: 140px;">
+									<col style="width: 240px;">
+									<col style="width: 140px;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<td class="text-center list-check">
+											<div class="custom-checkbox single">
+												<input type="checkbox" id="check-301" class="checkbox" name="check-item-101"><label for="check-301"><span class="blind">선택</span></label>
+											</div>
+										</td>
+										<td class="text-center list-num"><div class="in-tb">1</div></td>
+										<td class="text-center"><div class="in-tb">M00135</div></td>
+										<td class="text-center"><div class="in-tb">상품스케쥴링목록</div></td>
+										<td class="text-center"><div class="in-tb">9</div></td>
+										<td class="text-center"><div class="in-tb">M00135</div></td>
+										<td class="text-center"><div class="in-tb">묶음상품관리</div></td>
+										<td class="text-center"><div class="in-tb">Y</div></td>
+										<td class="text-center"><div class="in-tb">P00065</div></td>
+										<td class="text-center"><div class="in-tb">묶음상품관리 / 묶음상품등록</div></td>
+										<td class="text-center"><div class="in-tb">-</div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div><!--// content-area -->
+
+		<button type="button" class="btn-gotop"><span class="blind">위로</span></button>
+		
+	</section>
+	<!--// ========== 컨텐츠 영역 :: container ========== -->
+</div><!--// wrap -->
+</body>
+</html>

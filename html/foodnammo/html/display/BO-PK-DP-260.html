@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+		<script>include.headTab();</script>
+
+		<div class="content-area">
+			<div class="top-title-area">
+				<h2 class="tit-page">전시 카테고리 관리</h2>
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="check-101-11" class="checkbox-favor" name="check-item-1"><label for="check-101-11"><span class="blind">즐겨찾기</span></label>
+                </div>
+
+				<div class="page-guide">
+					<ol class="breadcrumb">
+						<li><a href="#" title="메인페이지 이동"><i class="ico-bl-home"></i><span class="blind">Home</span></a></li>
+						<li><span>1Depth</span></li>
+						<li><span>2Depth</span></li>
+						<li class="current"><span>현재페이지</span></li>
+					</ol>
+				</div><!--// page-guide -->
+			</div><!--// page-title-area -->
+
+            <div class="exhibition-category-wrap">
+                <div class="ec-left-area">
+                    <div class="top-btn-box text-right">
+                        <button type="button" class="btn-form btn-default"><span>등록</span></button>
+                        <button type="button" class="btn-form btn-default"><span>삭제</span></button>
+                    </div>
+                    <div class="file-tree-wrap">
+                        <div class="file-tree-box">
+                            파일트리구조 삽입위치
+                        </div>
+                        <div class="btn-area mt40">
+                            <button type="button" class="btn-basic-md btn-primary"><span>저장</span></button>
+                            <button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ec-right-area">
+                    <div class="cnt-title-area">
+                        <h3 class="tit-cnt">카테고리 정보</h3>
+                        <div class="right-info mt10">
+                          <spanc class="text-guide-sm2"><i class="es"><em class="blind">필수입력</em></i>는 필수항목입니다.
+                        </spanc></div>
+                    </div>
+                    <div class="board-form mt15">	
+                        <table>
+                            <caption>정보입력</caption>
+                            <colgroup>
+                                <col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><span class="in-tb">상위 카테고리</span></th>
+                                    <td>
+                                        <div class="in-tb">상위 카테고리 명 출력</div>
+                                    </td>
+                                    <th scope="row"><span class="in-tb">카테고리 명<i class="es"><em class="blind">필수입력</em></i></span></th>
+                                    <td>
+                                        <input type="text" id="" class="input-text w-full" value="" placeholder="카테고리 명을 입력">
+                                    </td>
+                                </tr>	
+                                <tr>
+                                    <th scope="row"><span class="in-tb">노출순서</span></th>
+                                    <td>
+                                        <input type="text" id="" class="input-text w90" value="" placeholder="숫자 입력">
+                                    </td>
+                                    <th scope="row"><span class="in-tb">사용 여부</span></th>
+                                    <td>
+                                        <div class="form-inline-group">
+                                            <div class="custom-radio">
+                                                <input type="radio" id="radio-1-1" class="radio" name="radio-item-1" checked=""><label for="radio-1-1">사용</label>
+                                            </div>
+                                            <div class="custom-radio">
+                                                <input type="radio" id="radio-1-2" class="radio" name="radio-item-1" checked=""><label for="radio-1-2">미사용</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>	                                   
+                                <tr>
+                                    <th scope="row"><span class="in-tb">PC 전시여부</span></th>
+                                    <td>
+                                        <div class="form-inline-group">
+                                            <div class="custom-radio">
+                                                <input type="radio" id="radio-11-1" class="radio" name="radio-item-11" checked=""><label for="radio-11-1">미전시</label>
+                                            </div>
+                                            <div class="custom-radio">
+                                                <input type="radio" id="radio-11-2" class="radio" name="radio-item-11" checked=""><label for="radio-11-2">전시</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <th scope="row"><span class="in-tb">Mobile 전시여부</span></th>
+                                    <td>
+                                        <div class="form-inline-group">
+                                            <div class="custom-radio">
+                                                <input type="radio" id="radio-2-1" class="radio" name="radio-item-2" checked=""><label for="radio-2-1">미전시</label>
+                                            </div>
+                                            <div class="custom-radio">
+                                                <input type="radio" id="radio-2-2" class="radio" name="radio-item-2" checked=""><label for="radio-2-2">전시</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><span class="in-tb">외부 연동 설정</span></th>
+                                    <td colspan="3">
+                                        <div class="form-inline-group">
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-102" class="checkbox" name="check-item-1" checked=""><label for="check-102"> 외부 연동제외</label>
+                                            </div>
+                                        </div>
+                                    </td>                                    
+                                </tr>
+                                <tr>
+                                    <th scope="row"><span class="in-tb">인기 태그</span></th>
+                                    <td colspan="3">
+                                        <input type="text" id="" class="input-text w-full" value="" placeholder="인기 태그 입력(comma(,) 로 구분)">
+                                    </td>                                    
+                                </tr>
+                            </tbody>
+                        </table>		
+                    </div><!--// board-form -->
+
+                    <div class="cnt-title-area mt40">
+                        <h3 class="tit-cnt">접근차단 정보</h3>                        
+                    </div>
+                    <div class="board-form mt10">	
+                        <table>
+                            <caption>정보입력</caption>
+                            <colgroup>
+                                <col class="w-col-tit"><col class="w-col-cnt" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><span class="in-tb">회원등급<i class="es"><em class="blind">필수입력</em></i></span></th>
+                                    <td>
+                                        <div class="form-inline-group">
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-101" class="checkbox" name="check-item-1" checked=""><label for="check-101"> 전체</label>
+                                            </div>
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-102" class="checkbox" name="check-item-1"><label for="check-102"> 닭대리</label>
+                                            </div>
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-103" class="checkbox" name="check-item-1"><label for="check-103"> 닭과장</label>
+                                            </div>
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-104" class="checkbox" name="check-item-1"><label for="check-104"> 닭차장</label>
+                                            </div>
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-105" class="checkbox" name="check-item-1"><label for="check-105"> 닭부장</label>
+                                            </div>
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-106" class="checkbox" name="check-item-1"><label for="check-106"> 닭사장</label>
+                                            </div>
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-107" class="checkbox" name="check-item-1"><label for="check-107"> 닭회장</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>	
+                                <tr>
+                                    <th scope="row"><span class="in-tb">회원그룹<i class="es"><em class="blind">필수입력</em></i></span></th>
+                                    <td>
+                                        <div class="form-inline-group">
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-201" class="checkbox" name="check-item-2" checked=""><label for="check-201"> 일반</label>
+                                            </div>
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-202" class="checkbox" name="check-item-2"><label for="check-202"> 사업자</label>
+                                            </div>
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-203" class="checkbox" name="check-item-2"><label for="check-203"> 오렌지 멤버스</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>	
+                            </tbody>
+                        </table>		
+                    </div><!--// board-form -->
+
+                    <div class="cnt-title-area mt40">
+                        <h3 class="tit-cnt">이미지 정보</h3>                        
+                    </div>
+                    <div class="board-form mt10">	
+                        <table>
+                            <caption>정보입력</caption>
+                            <colgroup>
+                                <col class="w-col-tit"><col class="w-col-cnt" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><span class="in-tb">PC 이미지1</span></th>
+                                    <td>
+                                        <div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+                                            <label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+                                            <!-- 파일 없을 경우
+                                                <div class="upload-name"><span class="txt"></span></div> 
+                                            -->
+                                            <div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+                                            <input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+                                        </div>
+                                    </td>
+                                </tr>	
+                                <tr>
+                                    <th scope="row"><span class="in-tb">PC 이미지2</span></th>
+                                    <td>
+                                        <div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+                                            <label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+                                            <!-- 파일 없을 경우
+                                                <div class="upload-name"><span class="txt"></span></div> 
+                                            -->
+                                            <div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+                                            <input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><span class="in-tb">Mobile 이미지1</span></th>
+                                    <td>
+                                        <div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+                                            <label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+                                            <!-- 파일 없을 경우
+                                                <div class="upload-name"><span class="txt"></span></div> 
+                                            -->
+                                            <div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+                                            <input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><span class="in-tb">Mobile 이미지2</span></th>
+                                    <td>
+                                        <div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
+                                            <label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+                                            <!-- 파일 없을 경우
+                                                <div class="upload-name"><span class="txt"></span></div> 
+                                            -->
+                                            <div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+                                            <input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>		
+                    </div><!--// board-form -->
+                    <div class="btn-area mt40">
+                        <button type="button" class="btn-basic-md btn-primary"><span>저장</span></button>
+                        <button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+
+            
+
+		</div><!--// content-area -->
+
+		<button type="button" class="btn-gotop"><span class="blind">위로</span></button>
+		
+	</section>
+	<!--// ========== 컨텐츠 영역 :: container ========== -->
+</div><!--// wrap -->
+<script>
+$(function() {    
+    function file_tree_h(){
+        var file_tree_height = $(window).height() - $(".file-tree-wrap").offset().top - 40;
+        $(".file-tree-wrap").height(file_tree_height);
+    }
+    file_tree_h();
+    $( window ).resize(file_tree_h);
+}); 
+</script>
+</body>
+</html>

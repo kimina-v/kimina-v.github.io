@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+		<script>include.headTab();</script>
+
+		<div class="content-area">
+			<div class="top-title-area">
+				<h2 class="tit-page">성분랭킹</h2>
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="check-101-11" class="checkbox-favor" name="check-item-1"><label for="check-101-11"><span class="blind">즐겨찾기</span></label>
+                </div>
+
+				<div class="page-guide">
+					<ol class="breadcrumb">
+						<li><a href="#" title="메인페이지 이동"><i class="ico-bl-home"></i><span class="blind">Home</span></a></li>
+						<li><span>1Depth</span></li>
+						<li><span>2Depth</span></li>
+						<li class="current"><span>현재페이지</span></li>
+					</ol>
+				</div><!--// page-guide -->
+			</div><!--// page-title-area -->
+
+			
+
+			<!-- 상세검색영역 -->
+			<div class="searh-detail-area ui-toggle-content">
+				<div class="board-form">	
+					<table>
+						<caption>정보입력</caption>
+						<colgroup>
+							<col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row"><span class="in-tb">등록 사이트</span></th>
+								<td>
+									<div class="input-group-form">
+										<select class="select w140">
+											<option value="">랭킹닭컴</option>
+										</select>
+									</div>
+								</td>
+								<th scope="row"><span class="in-tb">베스트 상품 유형</span></th>
+								<td>
+									<div class="input-group-form">
+										<select class="select w140">
+											<option value="">판매킹</option>
+                                            <option value="">별별랭킹</option>
+                                            <option value="">알뜰킹</option>
+											<option value="" selected>성분 랭킹</option>
+										</select>
+									</div>
+								</td>
+                            </tr>	                           
+                            <tr>
+								<th scope="row"><span class="in-tb">전시 카테고리</span></th>
+								<td>
+									<div class="input-group">
+                                        <div class="input-group-cell w140">
+                                            <select class="select">
+                                                <option value="">대분류</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group-cell w140">
+                                            <select class="select" disabled>
+                                                <option value="">중분류</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group-cell w140">
+                                            <select class="select" disabled>
+                                                <option value="">소분류</option>
+                                            </select>
+                                        </div>
+                                    </div>
+								</td>
+								<th scope="row"><span class="in-tb">대상기간</span></th>
+								<td>
+									<div class="input-group-form">
+										<select class="select w140">
+											<option value="">단백질</option>
+										</select>
+									</div>
+								</td>
+                            </tr>	
+						</tbody>
+					</table>		
+				</div><!--// board-form -->
+				<div class="btn-area">
+					<button type="button" class="btn-basic-md btn-primary"><span>검색</span></button>
+					<button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
+				</div>
+			</div>
+			<!--// 상세검색영역 -->
+			<div class="board-movable-wrap mt60">
+				<div class="board-option">
+					<div class="left-area">
+						<div class="page-info">총  <strong class="text-primary">1,000</strong>건</div>
+					</div>
+					<div class="right-area">					
+						<div class="btn-lst vertical-t">
+							<button type="button" class="btn-func btn-default move all first-row"><span>최상</span></button>
+							<div class="btn-set">
+								<button type="button" class="btn-mv-up move all up-row"><i class="ico-arr-up"></i><span class="blind">위로</span></button>
+								<div class="mv-box">
+									<input type="text" class="step" name="step" value="1">
+									<span class="input-group-txt txt">칸 이동</span>
+								</div>
+								<button type="button" class="btn-mv-down move all down-row"><i class="ico-arr-down"></i><span class="blind">아래로</span></button>
+							</div>
+							<button type="button" class="btn-func btn-default move all last-row"><span>최하</span></button>
+						</div>
+					</div><!--// right-area -->
+				</div>
+
+				<div class="board-list movable-row mt10">
+					<table>
+						<caption>목록</caption>
+						<colgroup>
+							<col class="w-col-check">
+							<col class="w-col-num">
+                            <col style="width:120px;">
+							<col style="width:auto;">
+							<col style="width:120px;">
+                            <col style="width:120px;">
+                            <col style="width:130px;">
+                            <col style="width:130px;">
+                            <col style="width:130px;">
+							<col style="width:120px;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-all" class="checkbox ui-check-all" name="check-item-101"><label for="check-all"><span class="blind">모두 선택</span></label>
+									</div><!-- 모두 선택 addClass ui-check-all -->
+								</th>
+								<th scope="col" class="list-num"><span class="in-tb">순위</span></th>
+                                <th scope="col"><span class="in-tb">성분 유형</span></th>
+								<th scope="col"><span class="in-tb">상품명</span></th>
+                                <th scope="col"><span class="in-tb">브랜드</span></th>
+								<th scope="col"><span class="in-tb">판매가</span></th>
+                                <th scope="col"><span class="in-tb">단백질</span></th>
+                                <th scope="col"><span class="in-tb">칼로리</span></th>
+                                <th scope="col"><span class="in-tb">나트륨</span></th>
+								<th scope="col"><span class="in-tb">판매</span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="movable" id="3">
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">10</div></td>
+                                <td class="text-center"><div class="in-tb">단백질</div></td>
+								<td class="text-left"><div class="in-tb">맛있닭 닭가슴살 스테이크 오리지널3</div></td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td class="text-center"><div class="in-tb">57,542</div></td>
+								<td class="text-center"><div class="in-tb">24g</div></td>
+                                <td class="text-center"><div class="in-tb">180kcal</div></td>
+                                <td class="text-center"><div class="in-tb">25mg</div></td>
+								<td class="text-center"><div class="in-tb">38,661</div></td>
+							</tr>
+                            <tr class="movable" id="2">
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">10</div></td>
+                                <td class="text-center"><div class="in-tb">단백질</div></td>
+								<td class="text-left"><div class="in-tb">맛있닭 닭가슴살 스테이크 오리지널2</div></td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td class="text-center"><div class="in-tb">57,542</div></td>
+								<td class="text-center"><div class="in-tb">24g</div></td>
+                                <td class="text-center"><div class="in-tb">180kcal</div></td>
+                                <td class="text-center"><div class="in-tb">25mg</div></td>
+								<td class="text-center"><div class="in-tb">38,661</div></td>
+							</tr>
+                            <tr class="movable" id="1">
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">10</div></td>
+                                <td class="text-center"><div class="in-tb">단백질</div></td>
+								<td class="text-left"><div class="in-tb">맛있닭 닭가슴살 스테이크 오리지널1</div></td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td class="text-center"><div class="in-tb">57,542</div></td>
+								<td class="text-center"><div class="in-tb">24g</div></td>
+                                <td class="text-center"><div class="in-tb">180kcal</div></td>
+                                <td class="text-center"><div class="in-tb">25mg</div></td>
+								<td class="text-center"><div class="in-tb">38,661</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="btn-area mt10">
+					<div class="left">
+						<button type="button" class="btn-option btn-default"><span>선택 삭제</span></button>
+					</div>
+				</div>
+			</div>
+            <div class="btn-area">
+                <button type="button" class="btn-basic-md btn-primary"><span>저장</span></button>
+                <button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
+            </div>
+		</div><!--// content-area -->
+
+		<button type="button" class="btn-gotop"><span class="blind">위로</span></button>
+		
+	</section>
+	<!--// ========== 컨텐츠 영역 :: container ========== -->
+</div><!--// wrap -->
+</body>
+</html>

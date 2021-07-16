@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">		
+		<script>include.headTab();</script>
+
+		<div class="content-area">
+			<div class="top-title-area">
+				<h2 class="tit-page">타이틀</h2>
+				<div class="page-guide">
+					<ol class="breadcrumb">
+						<li><a href="#" title="메인페이지 이동"><i class="ico-bl-home"></i><span class="blind">Home</span></a></li>
+						<li><span>1Depth</span></li>
+						<li><span>2Depth</span></li>
+						<li class="current"><span>현재페이지</span></li>
+					</ol>
+					<div class="custom-checkbox">
+						<input type="checkbox" id="check-101-11" class="checkbox-favor" name="check-item-1"><label for="check-101-11"><span class="blind">즐겨찾기</span></label>
+					</div>
+				</div><!--// page-guide -->
+			</div><!--// page-title-area -->
+		</div><!--// content-area -->
+
+		<div class="bottom-btn-area">
+			<div class="btn-area">
+
+			</div>
+		</div><!--// bottom-btn-area -->
+	</section>
+	<!--// ========== 컨텐츠 영역 :: container ========== -->
+</div><!--// wrap -->
+
+<!--
+	* 팝업 버튼에 ui-open-pop 클래스, 팝업 ID 작성 필요
+	ex) <a href="#popupSample-01" class=".... ui-open-pop"> ~ </a>
+	ex) <button type="button" data-layer="#popupSample-02" class="... ui-open-pop"> ~ </button>
+-->
+<!-- ========== 팝업 영역 ========== -->
+<div class="layer-wrap" id="popup-sample-01" style="display:block;">
+	<div class="layer-pop">
+		<div class="layer-inner layer-xlg">
+			<div class="layer-head">
+				<h4 class="layer-title">사용자 수정</h4>
+			</div><!--// layer-head  -->
+
+			<div class="layer-body">
+				<div class="layer-content">
+					<div class="in-content">
+						<h3 class="tit-cnt">상세정보</h3>
+						<div class="board-form mt10">
+							<table>
+								<caption>정보 입력</caption>
+								<colgroup>
+									<col style="width:150px;"><col class="w-col-cnt"><col style="width:150px;"><col class="w-col-cnt">
+								</colgroup>								
+								<tbody>
+									<tr>
+										<th scope="row"><span class="in-tb">사용자ID</span></th>
+										<td><div class="in-tb">ID</div></td>
+										<th scope="row" rowspan="5"><span class="in-tb">사진</span></th>
+										<td rowspan="5">
+											<div class="profile-photo-box">
+												<div class="btn-box">
+													<label for="photo-file" class="btn-form btn-default"><span>파일 선택</span></label> 
+													<input type="file" id="photo-file" class="upload-hidden" value=""> 
+												</div>
+												<div id="preview" class="photo"><img src="../../images/img_profile_empty.png" alt=""></div><!-- 이미지 영역 -->
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row"><span class="in-tb">사용자명</span></th>
+										<td><input type="text" class="input-text w-full" value="" placeholder="사용자명 입력" /></td>
+									</tr>
+									<tr>
+										<th scope="row"><span class="in-tb">비밀번호</span></th>
+										<td>
+											<div class="input-group-form">
+                                                <button type="button" class="btn-form btn-default"><span>비밀번호 초기화</span></button>
+                                            </div>
+										</td>                                
+									</tr>
+									<tr>
+										<th scope="row"><span class="in-tb">사용여부</span></th>
+										<td>
+											<div class="form-inline-group">
+												<div class="custom-radio">
+													<input type="radio" id="radio-2-1" class="radio" name="radio-item-2" checked=""><label for="radio-2-1">사용</label>
+												</div>
+												<div class="custom-radio">
+													<input type="radio" id="radio-2-2" class="radio" name="radio-item-2" ><label for="radio-2-2">미사용</label>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row"><span class="in-tb">사용자그룹</span></th>
+										<td>
+											<select class="select w-full">
+												<option>시스템메뉴만</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row"><span class="in-tb">휴면여부</span></th>
+										<td>
+											<div class="form-inline-group">
+												<div class="custom-radio">
+													<input type="radio" id="radio-5-1" class="radio" name="radio-item-5" checked=""><label for="radio-5-1">예</label>
+												</div>
+												<div class="custom-radio">
+													<input type="radio" id="radio-5-2" class="radio" name="radio-item-5" ><label for="radio-5-2">아니오</label>
+												</div>
+											</div>
+										</td>
+										<th scope="row"><span class="in-tb">닉네임</span></th>
+										<td>
+											<input type="text" class="input-text w-full" placeholder="닉네임 입력" />
+										</td>
+									</tr>
+									<tr>
+										<th scope="row"><span class="in-tb">이메일</span></th>
+										<td>
+											<input type="text" class="input-text w-full" placeholder="이메일 입력" />
+										</td>
+										<th scope="row"><span class="in-tb">핸드폰번호</span></th>
+										<td><input type="text" class="input-text w-full" placeholder="핸드폰번호 입력" /></td>
+									</tr>
+									<tr>
+										<th scope="row"><span class="in-tb">소속</span></th>
+										<td>
+											<select class="select w-full">
+												<option>IT팀</option>
+											</select>
+										</td>
+										<th scope="row"><span class="in-tb">전화번호</span></th>
+										<td><input type="text" class="input-text w-full" placeholder="전화번호 입력" /></td>
+									</tr>
+									<tr>
+										<th scope="row"><span class="in-tb">직급</span></th>
+										<td>
+											<select class="select w-full">
+												<option>사원</option>
+											</select>
+										</td>
+										<th scope="row"><span class="in-tb">회사구분</span></th>
+										<td>
+											<div class="form-inline-group">
+												<div class="custom-radio">
+													<input type="radio" id="radio-3-1" class="radio" name="radio-item-3" checked=""><label for="radio-3-1">자사</label>
+												</div>
+												<div class="custom-radio">
+													<input type="radio" id="radio-3-2" class="radio" name="radio-item-3" ><label for="radio-3-2">입점사</label>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row"><span class="in-tb">입점사명</span></th>
+										<td colspan="3"><div class="in-tb">00 회사</div></td>
+									</tr>
+									<tr>
+										<th scope="row"><span class="in-tb">주소</span></th>
+										<td colspan="3"><input type="text" class="input-text w-full" placeholder="주소 입력" /></td>
+									</tr>
+									<tr>
+										<th scope="row"><span class="in-tb">마스킹여부</span></th>
+										<td colspan="3">
+											<div class="form-inline-group">
+												<div class="custom-checkbox">
+													<input type="checkbox" id="check-102-1" class="checkbox" name="check-item-1" checked=""><label for="check-102-1"> 이름</label>
+												</div>
+												<div class="custom-checkbox">
+													<input type="checkbox" id="check-102-2" class="checkbox" name="check-item-1"><label for="check-102-2"> ID</label>
+												</div>
+												<div class="custom-checkbox">
+													<input type="checkbox" id="check-102-3" class="checkbox" name="check-item-1"><label for="check-102-3"> 이메일</label>
+												</div>
+												<div class="custom-checkbox">
+													<input type="checkbox" id="check-102-4" class="checkbox" name="check-item-1"><label for="check-102-4"> 생년월일</label>
+												</div>
+												<div class="custom-checkbox">
+													<input type="checkbox" id="check-102-5" class="checkbox" name="check-item-1"><label for="check-102-5"> 성별</label>
+												</div>
+												<div class="custom-checkbox">
+													<input type="checkbox" id="check-102-6" class="checkbox" name="check-item-1"><label for="check-102-6"> 나이</label>
+												</div>
+												<div class="custom-checkbox">
+													<input type="checkbox" id="check-102-7" class="checkbox" name="check-item-1"><label for="check-102-7"> 전화번호</label>
+												</div>
+												<div class="custom-checkbox">
+													<input type="checkbox" id="check-102-8" class="checkbox" name="check-item-1"><label for="check-102-8"> 핸드폰번호</label>
+												</div>
+												<div class="custom-checkbox">
+													<input type="checkbox" id="check-102-9" class="checkbox" name="check-item-1"><label for="check-102-9"> 주소</label>
+												</div>
+												<div class="custom-checkbox">
+													<input type="checkbox" id="check-102-10" class="checkbox" name="check-item-1"><label for="check-102-10"> IP</label>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<h3 class="tit-cnt mt30">관리 사이트</h3>
+						<div class="board-form mt10">
+							<table>
+								<caption>입력</caption>
+								<colgroup><col class="w-col-tit"><col /></colgroup>
+								<tbody>
+									<tr>
+										<th scope="row"><span class="in-tb">관리 사이트</span></th>
+										<td>
+											<div class="form-inline-group">
+												<div class="custom-checkbox">
+													<input type="checkbox" id="check-202-1" class="checkbox" name="check-item-2" checked=""><label for="check-202-1"> 랭킹닭컴</label>
+												</div>
+												<div class="custom-checkbox">
+													<input type="checkbox" id="check-202-2" class="checkbox" name="check-item-2"><label for="check-202-2"> 피키다이어트</label>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+		
+					</div>
+				</div><!--// layer-content -->
+
+				
+				<div class="layer-bottom">
+					<div class="btn-area">
+						<button type="button" class="btn-basic-md btn-primary ui-close-pop"><span>등록</span></bottom>
+						<button type="button" class="btn-basic-md btn-default ui-close-pop"><span>취소</span></bottom>
+					</div>
+				</div><!--// layer-bottom :: 팝업 하단 버튼 영역 -->
+			</div><!--// layer-body  -->
+			
+			<button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-white"></i><span class="blind">닫기</span></button>
+		</div>
+	</div><!--// layer-pop  -->
+</div><!--// layer-pop-wrap #popup-sample-01 -->
+</body>
+</html>

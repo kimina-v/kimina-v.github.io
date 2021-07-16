@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+		<script>include.headTab();</script>
+
+		<div class="content-area">
+			<div class="top-title-area">
+				<h2 class="tit-page">역마진 주문조회<span class="tit-id-num">(ID:1108012)</span></h2>
+				<div class="custom-checkbox">
+					<input type="checkbox" id="check-101-11" class="checkbox-favor" name="check-item-1"><label for="check-101-11"><span class="blind">즐겨찾기</span></label>
+				</div>
+				<div class="page-guide">
+					<ol class="breadcrumb">
+						<li><a href="#" title="메인페이지 이동"><i class="ico-bl-home"></i><span class="blind">Home</span></a></li>
+						<li><span>1Depth</span></li>
+						<li><span>2Depth</span></li>
+						<li class="current"><span>현재페이지</span></li>
+					</ol>
+				</div><!--// page-guide -->
+			</div><!--// page-title-area -->
+
+			<!-- 검색영역 -->
+			<div class="input-group-wrap search-type">
+				<fieldset>
+					<legend>검색</legend>
+					<div class="input-group w-full">
+						<div class="input-group-form">
+							<select class="select">
+								<option value="">랭킹닭컴</option>
+                                <option value="">피키다이어트</option>
+                                <option value="">개근질마트</option>
+                                <option value="">에이드</option>
+							</select>
+						</div>
+						<div class="input-group-form">
+							<select class="select">
+								<option value="">선택</option>
+								<option value="">주문번호</option>
+                                <option value="">회원ID</option>
+                                <option value="">주문자명</option>
+                                <option value="">수취인명</option>
+                                <option value="">전화번호</option>
+                                <option value="">수취인전화번호</option>
+                                <option value="">이메일</option>
+                                <option value="">상품코드</option>
+							</select>
+						</div>
+						<label for="item1-1" class="blind">검색</label>
+						<input type="text" id="item1-1" class="input-text" placeholder="검색어를 입력하세요.(상품코드, ERP 코드는 comma(,)로 구분)">
+						<span class="input-group-btn">
+							<button type="button" class="btn-icon-search" title="검색"><span class="blind">검색</span></button>
+						</span>  
+						<span class="input-group-btn">
+							<button type="button" class="btn-search-detail"><span>상세검색</span><i class="ico-arrfill-toggle"></i></button>
+						</span>
+					</div><!--// input-group -->
+				</fieldset>
+			</div><!--// input-group-wrap | 검색영역 -->
+
+			<!-- 상세검색영역 -->
+			<div class="searh-detail-area ui-toggle-content">
+				<div class="board-form">	
+					<table>
+						<caption>정보입력</caption>
+						<colgroup>
+							<col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row"><span class="in-tb">입점사</span></th>
+								<td colspan="3">
+									<div class="input-group">
+										<input type="text" class="input-text w300" disabled />
+										<span class="input-group-btn">
+											<button type="button" class="btn-form btn-grey"><span>입점사 검색</span></button>
+										</span>
+									</div><!--// input-group -->
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><span class="in-tb">검색기간</span></th>
+								<td colspan="3">
+                                    <div class="input-group-div">
+                                        <div class="input-group datepicker-group mr5">
+                                            <div class="input-group-form">
+                                                <select class="select w140">
+                                                    <option value="">주문일</option>
+                                                    <option value="">입금일</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="input-text datepicker">
+                                            <span class="input-group-txt">~</span>
+                                            <input type="text" class="input-text datepicker">
+                                        </div>
+                                        <div class="input-group">
+                                            <button type="button" class="btn-sq btn-default"><span>오늘</span></button>
+                                            <button type="button" class="btn-sq btn-default"><span>어제</span></button>
+                                            <button type="button" class="btn-sq btn-default"><span>전달</span></button>
+                                            <button type="button" class="btn-sq btn-default"><span>1개월</span></button>
+                                            <button type="button" class="btn-sq btn-default"><span>3개월</span></button>
+                                            <button type="button" class="btn-sq btn-default"><span>6개월</span></button>
+                                        </div>
+                                    </div>                                    
+								</td>
+							</tr>
+                            
+                            <tr>
+								<th scope="row"><span class="in-tb">대상</span></th>
+								<td colspan="3">
+                                    <!-- 구분 -->
+                                    <div class="input-group">
+                                        <div class="input-group-txt"><strong>구분</strong></div>
+                                        <span class="input-group-gap"></span>
+                                        <div class="form-inline-group">	
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-300" class="checkbox" name="check-item-3"><label for="check-300"> 전체</label>
+                                            </div>									
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-301" class="checkbox" name="check-item-3"><label for="check-301"> 비회원</label>
+                                            </div>
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-302" class="checkbox" name="check-item-3"><label for="check-302"> 회원</label>
+                                            </div>
+                                        </div>
+                                        <span class="input-group-gap"></span>
+                                        <div class="input-group-form">
+                                            <select class="select w140">
+                                                <option value="">선택</option>
+                                            </select>
+                                        </div>
+                                    </div><!--// 구분 -->
+                                    <!-- 회원그룹 -->
+                                    <div class="input-group">
+                                        <div class="input-group-txt"><strong>그룹</strong></div>
+                                        <span class="input-group-gap"></span>
+                                        <div class="form-inline-group">		
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-400" class="checkbox" name="check-item-4"><label for="check-400"> 전체</label>
+                                            </div>								
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-401" class="checkbox" name="check-item-4"><label for="check-401"> 일반</label>
+                                            </div>
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-402" class="checkbox" name="check-item-4"><label for="check-402"> 오렌지멤버스</label>
+                                            </div>
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-403" class="checkbox" name="check-item-4"><label for="check-403"> 사업자회원</label>
+                                            </div>
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-404" class="checkbox" name="check-item-4"><label for="check-404"> 임직원</label>
+                                            </div>
+                                        </div>
+                                    </div><!--// 회원그룹 -->                   
+								</td>
+							</tr>
+                            <tr>
+								<th scope="row"><span class="in-tb">주문채널</span></th>
+								<td colspan="3">
+                                    <div class="form-inline-group">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="check-501" class="checkbox" name="check-item-5" checked=""><label for="check-501"> 전체</label>
+                                        </div>
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="check-502" class="checkbox" name="check-item-5"><label for="check-502"> PC</label>
+                                        </div>
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="check-503" class="checkbox" name="check-item-5"><label for="check-503"> Mobile Web</label>
+                                        </div>
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="check-504" class="checkbox" name="check-item-5"><label for="check-504"> APP</label>
+                                        </div>
+                                    </div>                   
+								</td>
+							</tr>
+                            <tr>
+								<th scope="row"><span class="in-tb">배송방법</span></th>
+								<td colspan="3">
+                                    <div class="form-inline-group">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="check-101" class="checkbox" name="check-item-1" checked=""><label for="check-101"> 전체</label>
+                                        </div>
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="check-102" class="checkbox" name="check-item-1"><label for="check-102"> 일반배송</label>
+                                        </div>
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="check-103" class="checkbox" name="check-item-1"><label for="check-103"> 특급배송</label>
+                                        </div>
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="check-104" class="checkbox" name="check-item-1"><label for="check-104"> 새벽배송</label>
+                                        </div>
+                                    </div>                   
+								</td>
+							</tr>
+                            <tr>
+								<th scope="row"><span class="in-tb">유입경로</span></th>
+								<td colspan="3">
+                                    <div class="form-inline-group">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="check-604" class="checkbox" name="check-item-6"><label for="check-604"> 인플루언서</label>
+                                        </div>
+                                    </div>                   
+								</td>
+							</tr>											
+						</tbody>
+					</table>		
+				</div><!--// board-form -->
+				<div class="btn-area">
+					<button type="button" class="btn-basic-md btn-primary"><span>검색</span></button>
+					<button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>검색 초기화</span></button>
+				</div>
+			</div>
+			<!--// 상세검색영역 -->
+			
+			<div class="board-option mt60">
+				<div class="left-area">
+					<div class="page-info">총 <strong class="text-primary">1,000</strong>건 /19페이지</div>
+				</div><!--// left-area -->
+				<div class="right-area">
+					<button type="button" class="btn-func btn-default"><i class="ico-btn-xls"></i><span>엑셀 다운로드</span></button>
+				</div><!--// right-area -->
+			</div>
+
+			<!-- 목록 -->
+			<div class="board-list scroll-table mt10 vm-table">
+                <table>
+                    <caption>목록</caption>
+                    <colgroup>
+                        <col class="w-col-num">
+                        <col style="width:130px;">
+                        <col style="width:130px">
+                        <col style="width:150px;">
+                        <col style="width:160px;">
+                        <col style="width:150px;">                         
+                        <col style="width:100px;">
+                        <col style="width:250px;">
+                        <col style="width:100px;">
+                        <col style="width:120px;">
+                        <col style="width:110px;">
+                        <col style="width:120px;">
+                        <col style="width:120px;">
+                        <col style="width:120px;">
+                        <col style="width:110px;">
+                        <col style="width:110px;">
+                        <col style="width:110px;">
+                        <col style="width:110px;">
+                        <col style="width:120px;">
+                        <col style="width:120px;">
+                        <col style="width:100px;">
+                        <col style="width:100px;">
+                        <col style="width:120px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th rowspan="2" scope="col" class="list-num vt-mid"><span class="in-tb">순번</span></th>
+                            <th rowspan="2" class="vt-mid" scope="col"><span class="in-tb">사이트</span></th>
+                            <th rowspan="2" class="vt-mid" scope="col"><span class="in-tb">주문일시</span></th>
+                            <th rowspan="2" class="vt-mid" scope="col"><span class="in-tb">주문번호</span></th>
+                            <th rowspan="2" class="vt-mid" scope="col"><span class="in-tb">주문자/회원등급</span></th>
+                            <th rowspan="2" class="vt-mid" scope="col"><span class="in-tb">회원그룹</span></th>
+                            <th rowspan="2" class="vt-mid" scope="col"><span class="in-tb">입점사</span></th>
+                            <th rowspan="2" class="vt-mid" scope="col"><span class="in-tb">주문상품</span></th>
+                            <th rowspan="2" class="vt-mid" scope="col"><span class="in-tb">주문채널</span></th>
+                            <th rowspan="2" class="vt-mid" scope="col"><span class="in-tb">판매금액</span></th>
+                            <th rowspan="2" class="vt-mid" scope="col"><span class="in-tb">매입금액</span></th>
+                            <th rowspan="2" class="vt-mid" scope="col"><span class="in-tb">할인금액</span></th>
+                            <th rowspan="2" class="vt-mid" scope="col"><span class="in-tb">매출금액</span></th>
+                            <th rowspan="2" class="vt-mid" scope="col"><span class="in-tb">역마진금액</span></th>
+                            <th colspan="4" class="tb-bd-left tb-bd-bot vt-mid" scope="col"><span class="in-tb">할인금액 상세</span></th>
+                            <th colspan="2" class="tb-bd-left tb-bd-bot vt-mid" scope="col"><span class="in-tb">매출금액 상세</span></th>
+                            <th rowspan="2" class="tb-bd-left vt-mid" scope="col"><span class="in-tb">수량</span></th>
+                            <th rowspan="2" class="vt-mid" scope="col"><span class="in-tb">배송방법</span></th>
+                            <th rowspan="2" class="vt-mid" scope="col"><span class="in-tb">인플루언서</span></th>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="tb-bd-left vt-mid"><span class="in-tb">상품할인</span></th>
+                            <th scope="col" class="vt-mid" ><span class="in-tb">회원등급할인</span></th>
+                            <th scope="col" class="vt-mid" ><span class="in-tb">상품쿠폰</span></th>
+                            <th scope="col" class="vt-mid" ><span class="in-tb">마케팅쿠폰</span></th>
+                            <th scope="col" class="tb-bd-left vt-mid"><span class="in-tb">실 결제금액</span></th>
+                            <th scope="col" class="vt-mid" ><span class="in-tb">적립금</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center"><div class="in-tb">999</div></td>
+                            <td class="text-center"><div class="in-tb">피키다이어트</div></td>
+                            <td class="text-center"><div class="in-tb">2021.05.11<br>14:00:00</div></td>
+                            <td class="text-center"><a href="#" class="in-tb">20210511V00FEC</a></td>                            
+                            <td class="text-center"><a href="#" class="in-tb">홍길*<br>(hong3**/닭대리)</a></td>
+                            <td class="text-center"><div class="in-tb">오렌지멤버스</div></td>
+                            <td class="text-center"><div class="in-tb">맛있닭</div></td>
+                            <td class="text-center"><div class="in-tb elps-link">맛있닭 소프트 닭 안심살</div></td>
+                            <td class="text-center"><div class="in-tb">PC</div></td>
+                            <td class="text-center"><div class="in-tb">100,500</div></td>
+                            <td class="text-center"><div class="in-tb">100,500</div></td>
+                            <td class="text-center"><div class="in-tb">-100,500</div></td>
+                            <td class="text-center"><div class="in-tb">100,500</div></td>
+                            <td class="text-center"><div class="in-tb">-100,500</div></td>
+                            <td class="text-center"><div class="in-tb">-100,500</div></td>
+                            <td class="text-center"><div class="in-tb">-100,500</div></td>
+                            <td class="text-center"><div class="in-tb">-100,500</div></td>
+                            <td class="text-center"><div class="in-tb">-100,500</div></td>
+                            <td class="text-center"><div class="in-tb">100,500</div></td>
+                            <td class="text-center"><div class="in-tb">100,500</div></td>
+                            <td class="text-center"><div class="in-tb">99</div></td>
+                            <td class="text-center"><div class="in-tb">일반</div></td>
+                            <td class="text-center">
+                                <div class="in-tb">아이디</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+			<div class="pagination mt20">
+				<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>
+				<a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a>
+				<a href="#" class="current"><span>1</span></a>
+				<a href="#"><span>2</span></a>
+				<a href="#"><span>3</span></a>
+				<a href="#"><span>4</span></a>
+				<a href="#"><span>5</span></a>
+				<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
+				<a href="#" class="btn-page last" title="마지막"><span class="blind">마지막</span></a>
+			</div><!--// pagination -->
+		</div><!--// content-area -->
+
+		<button type="button" class="btn-gotop"><span class="blind">위로</span></button>
+		
+	</section>
+	<!--// ========== 컨텐츠 영역 :: container ========== -->
+</div><!--// wrap -->
+</body>
+</html>

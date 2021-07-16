@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+		<script>include.headTab();</script>
+
+		<div class="content-area">
+			<div class="top-title-area">
+				<h2 class="tit-page">회원그룹이력목록</h2>
+				<div class="page-guide">
+					<ol class="breadcrumb">
+						<li><a href="#" title="메인페이지 이동"><i class="ico-bl-home"></i><span class="blind">Home</span></a></li>
+						<li><span>회원관리</span></li>
+						<li><span>회원그룹관리</span></li>
+						<li class="current"><span>그룹이력조회</span></li>
+					</ol>
+					<div class="custom-checkbox">
+						<input type="checkbox" id="check-101-11" class="checkbox-favor" name="check-item-1"><label for="check-101-11"><span class="blind">즐겨찾기</span></label>
+					</div>
+				</div><!--// page-guide -->
+			</div><!--// page-title-area -->
+
+			<!-- 검색영역 -->
+			<div class="input-group-wrap search-type">
+				<fieldset>
+					<legend>검색</legend>
+					<div class="input-group w-full">
+						<div class="input-group-form">
+							<select class="select">
+								<option value="">랭킹닭컴</option>
+								<option value="">피키다이어트</option>
+								<option value="">개근질마트</option>
+								<option value="">에이드</option>
+							</select>
+						</div>
+						<div class="input-group-form">
+							<select class="select">
+								<option value="">2021년</option>
+							</select>
+						</div>
+						<label for="item1-1" class="blind">검색</label>
+						<input type="text" id="item1-1" class="input-text" placeholder="등급명 입력">
+						<span class="input-group-btn">
+							<button type="button" class="btn-icon-search" title="검색"><span class="blind">검색</span></button>
+						</span>  
+					</div><!--// input-group -->
+				</fieldset>
+			</div><!--// input-group-wrap | 검색영역 -->
+
+            <div class="board-option mt40">
+				<div class="left-area">
+					<div class="page-info">총 <strong class="text-primary">1,000</strong>건</div>
+				</div><!--// left-area -->
+			</div>
+			<!-- 목록 -->
+			<div class="board-list mt10">
+                <table>
+                    <caption>목록</caption>
+                    <colgroup>
+                        <col class="w-col-num">
+                        <col />
+                        <col style="width:13%;">
+                        <col style="width:13%;">
+                        <col style="width:13%;">
+                        <col style="width:13%;">
+                        <col style="width:13%;">
+                        <col style="width:13%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="list-num"><span class="in-tb">번호</span></th>
+                            <th scope="col"><span class="in-tb">사이트</span></th>
+                            <th scope="col"><span class="in-tb">일반</span></th>
+                            <th scope="col"><span class="in-tb">평생</span></th>
+                            <th scope="col"><span class="in-tb">오렌지멤버스</span></th>
+                            <th scope="col"><span class="in-tb">사업자</span></th>
+                            <th scope="col"><span class="in-tb">임직원</span></th>
+                            <th scope="col"><span class="in-tb">년월</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="list-num"><div class="in-tb">10</div></td>
+                            <td class="text-center"><div class="in-tb">랭킹닭컴</div></td>
+                            <td class="text-center"><div class="in-tb">1,759,000</div></td>
+                            <td class="text-center"><div class="in-tb">123,234</div></td>
+                            <td class="text-center"><div class="in-tb">123</div></td>
+                            <td class="text-center"><div class="in-tb">1,234</div></td>
+                            <td class="text-center"><div class="in-tb">1,234</div></td>
+                            <td class="text-center"><div class="in-tb">2021.05</div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+			<!-- //목록  -->
+		</div><!--// content-area -->
+
+		<button type="button" class="btn-gotop"><span class="blind">위로</span></button>
+		
+	</section>
+	<!--// ========== 컨텐츠 영역 :: container ========== -->
+</div><!--// wrap -->
+</body>
+</html>

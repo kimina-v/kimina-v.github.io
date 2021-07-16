@@ -1,0 +1,17 @@
+.icon-list{font-size: 0; margin-top: -10px;}
+.icon-list:after{content:''; display:block; clear:both;}
+.icon-list li{float: left; padding-top:10px;}
+.icon-list li:last-child{margin-right: 0;}
+.icon-list .custom-checkbox,
+.icon-list .thmb, 
+.icon-list input {display: inline-block; vertical-align: middle; margin-right:10px; text-align: center;}
+.icon-list .thmb{background-color: #f65f24; overflow: hidden;}
+.icon-list .thmb img{width: 100%; height: 100%;}
+.icon-list input{width: 80px;}
+.icon-list.bdg li{margin-right: 62px;}
+.icon-list.bdg .thmb{width: 38px; height: 38px;}
+.icon-list.icon li{margin-right: 40px;}
+.icon-list.icon .thmb{width: 60px; height: 26px;}
+.preview-img-box {width: 100%; text-align: center; }
+.preview-img-box img{max-width: 100%;}
+ 

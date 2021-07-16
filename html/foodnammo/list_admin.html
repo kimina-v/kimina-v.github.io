@@ -1,0 +1,5018 @@
+
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="js/lib/jquery-3.5.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="_guide/common/pb_style.css">
+<script type="text/javascript" src="_guide/common/pb_list.js"></script>
+<title>퍼블리싱 작업 현황 | 랭킹닭컴 BO</title>
+<style type="text/css">
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:"MalGun Gothic"; color:#000; font-size:13px;}
+li{list-style: none;}
+a{color:inherit;}
+em{font-style: normal;}
+</style>
+</head>  
+<body>
+<div class="_pb-list-wrap">
+	<div class="_pb-list-header">
+		<h1>랭킹닭컴 BO - 퍼블리싱 작업 현황(Admin)</h1>
+
+		<!-- <ul class="_pb-site">
+			<li><a href="../rk/pc/list_pc.html">랭킹닭컴</a></li>
+			<li><a href="../pk/pc/list_pc.html">피키다이어트</a></li>
+			<li class="on"><a href="../admin/list_admin.html">ADMIN</a></li>
+		</ul> -->
+		<ul class="_pb-guide-tab">
+			<li class="on"><a href="../admin/list_admin.html">PC ver.</a></li>
+			<li><a href="_guide/index.html" target="_blank">퍼블리싱가이드(Admin)</a></li>
+		</ul>
+	</div>
+
+	<!-- <h2>Title</h2> -->
+
+	<div class="_pb-status-box">
+		<div class="_pb-status">
+			<ul>
+				<li><span class="page">0</span>/ <span class="total">00</span>P |</li>
+				<li><em class="percent-txt"><span class="percent">0</span>%</em> 진행</li>
+			</ul>
+			<div class="right">
+				<span class="dot-done">완료 (tr.done)</span>
+				<span class="dot-issue">이슈있음 (tr.issue)</span>
+				<span class="dot-ing">진행중 (tr.ing)</span>
+				<!-- <span class="dot-del">삭제 (tr.del)</span> -->
+			</div>
+		</div><!-- // _pb-status -->
+
+	    <ul class="_pb-status-wrap">
+	    	<li>
+	    		<a href="#menu0"><span class="menu-txt">대시보드(메인)</span> <span class="page-num">0</span> / <span class="page-total">00</span></a>
+	           	<div class="percent-txt"><span class="page-percent">0</span>%</div>
+	        </li><!-- // -->
+	      	<li>
+	    		<a href="#menu1"><span class="menu-txt">기본정보관리</span> <span class="page-num">0</span> / <span class="page-total">00</span></a>
+           		<div class="percent-txt"><span class="page-percent">0</span>%</div>
+	        </li><!-- // -->
+	        <li>
+	    		<a href="#menu2"><span class="menu-txt">상품관리</span> <span class="page-num">0</span> / <span class="page-total">00</span></a>
+           		<div class="percent-txt"><span class="page-percent">0</span>%</div>
+	        </li><!-- // -->
+	       <li>
+	    		<a href="#menu3"><span class="menu-txt">전시관리</span> <span class="page-num">0</span> / <span class="page-total">00</span></a>
+           		<div class="percent-txt"><span class="page-percent">0</span>%</div>
+	        </li><!-- // -->
+	        <li>
+	    		<a href="#menu4"><span class="menu-txt">주문관리</span> <span class="page-num">0</span> / <span class="page-total">00</span></a>
+           		<div class="percent-txt"><span class="page-percent">0</span>%</div>
+	        </li><!-- // -->
+	        <li>
+	    		<a href="#menu5"><span class="menu-txt">프로모션관리</span> <span class="page-num">0</span> / <span class="page-total">00</span></a>
+           		<div class="percent-txt"><span class="page-percent">0</span>%</div>
+	        </li><!-- // -->
+	        <li>
+	    		<a href="#menu6"><span class="menu-txt">회원관리</span> <span class="page-num">0</span> / <span class="page-total">00</span></a>
+           		<div class="percent-txt"><span class="page-percent">0</span>%</div>
+	        </li><!-- // -->
+	        <li>
+	    		<a href="#menu7"><span class="menu-txt">고객CRM</span> <span class="page-num">0</span> / <span class="page-total">00</span></a>
+           		<div class="percent-txt"><span class="page-percent">0</span>%</div>
+	        </li><!-- // -->
+	        <li>
+	    		<a href="#menu8"><span class="menu-txt">통계/정산</span> <span class="page-num">0</span> / <span class="page-total">00</span></a>
+           		<div class="percent-txt"><span class="page-percent">0</span>%</div>
+	        </li><!-- // -->
+			<li>
+	    		<a href="#menu9"><span class="menu-txt">시스템관리</span> <span class="page-num">0</span> / <span class="page-total">00</span></a>
+           		<div class="percent-txt"><span class="page-percent">0</span>%</div>
+	        </li><!-- // -->
+	    </ul>
+    </div>
+
+	<!-- <div class="list-toggle"><button type="button" class="_pb-toggle"><span>접기</span></button></div> -->
+	<div class="_pb-list-table">
+		<h3 class="_pb-dep1-title">대시보드(메인)</h3>
+		<button type="button" class="_pb-toggle off" title="접기"><span>접기</span></button>
+		<table>
+			<colgroup>
+				<col span="5" class="_pb-col-1" /><col class="_pb-col-2" /><col /><col class="_pb-col-3" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1Depth</th>
+					<th scope="col">2Depth</th>
+					<th scope="col">3Depth</th>
+					<th scope="col">4Depth</th>
+					<th scope="col">5Depth</th>
+					<th scope="col">File</th>
+					<th scope="col">Comment</th>
+					<th scope="col">완료일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="menu">
+					<td>대시보드</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">dashboard/BO-CM-DA-001.html</td>			
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>(팝업)관리자 공지사항 상세</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">dashboard/BO-CM-DA-020.html</td>			
+					<td class="comment"></td>
+					<td class="date confirm">06-23</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>(팝업)전체메뉴</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">dashboard/BO-CM-DA-010.html</td>			
+					<td class="comment"></td>
+					<td class="date confirm">06-23</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>(팝업)사용자 정보</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">dashboard/BO-CM-DA-012.html</td>			
+					<td class="comment"></td>
+					<td class="date confirm">06-23</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- // _pb-list-table :: 대시보드(메인) -->
+
+	<div class="_pb-list-table">
+		<h3 class="_pb-dep1-title">기본정보관리</h3>
+		<button type="button" class="_pb-toggle off" title="접기"><span>접기</span></button>
+		<table>
+			<colgroup>
+				<col span="5" class="_pb-col-1" /><col class="_pb-col-2" /><col /><col class="_pb-col-3" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1Depth</th>
+					<th scope="col">2Depth</th>
+					<th scope="col">3Depth</th>
+					<th scope="col">4Depth</th>
+					<th scope="col">5Depth</th>
+					<th scope="col">File</th>
+					<th scope="col">Comment</th>
+					<th scope="col">완료일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="menu done">
+					<td>기본정보관리</td>
+					<td>기본정보 설정</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-001.html</td>			
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>이용약관 관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-002.html</td>			
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>이용약관 등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-003.html</td>			
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>배송그룹관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-004.html</td>			
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>배송그룹등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-005.html</td>			
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>공휴일설정</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-006.html</td>			
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>특급배송 지역 설정</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-007.html</td>			
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>입점사 조회</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-010.html</td>			
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>입점요청조회</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-008.html</td>			
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>입점요청 상세</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-009.html</td>			
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>입점사 상세정보</td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-011.html</td>			
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(공통팝업)관리자 검색</td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-PU-012.html</td>			
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>				
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>검색창 광고 관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-012.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>리다이렉션 키워드 관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-013.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>인기검색어 관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-014.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>금직어 관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-015.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>단축 URL 생성</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-016.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>상품후기그룹 관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-017.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>냉장고그룹 관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-018.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>관리자 공지사항 관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-019.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>관리자 공지사항 등록</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-020.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>APP 관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-100.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>앱버전관리,스플래시 이미지 정보 관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-101.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>APP Push 관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-110.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>앱 푸시 등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">basic/BO-CM-BA-111.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- // _pb-list-table :: 기본정보관리 -->
+
+	<div class="_pb-list-table">
+		<h3 class="_pb-dep1-title">상품관리</h3>
+		<button type="button" class="_pb-toggle" title="접기"><span>접기</span></button>
+		<table>
+			<colgroup>
+				<col span="5" class="_pb-col-1" /><col class="_pb-col-2" /><col /><col class="_pb-col-3" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1Depth</th>
+					<th scope="col">2Depth</th>
+					<th scope="col">3Depth</th>
+					<th scope="col">4Depth</th>
+					<th scope="col">5Depth</th>
+					<th scope="col">File</th>
+					<th scope="col">Comment</th>
+					<th scope="col">완료일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="menu done">
+					<td>상품관리</td>
+					<td>상품조회</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-001.html</td>
+					<td class="comment">ver1.2 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)필수옵션재고변경</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-0010.html</td>
+					<td class="comment">ver1.2 반영</td>
+					<td class="date confirm">06-17</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>상품등록/수정</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-002.html</td>
+					<td class="comment">ver 1.2 반영 <div class="_pb-noti"></div></td>
+					<!--td class="comment">"상품정보공시" 영역 textarea 가이드 필요 <div class="_pb-noti"></div></td-->
+					<td class="date confirm">06-22</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)판매상태 변경이력</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-0012.html</td>
+					<td class="comment">ver 1.2 반영<div class="_pb-noti"></div></td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)상품명 변경 이력</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-0013.html</td>
+					<td class="comment">ver 1.2 반영<div class="_pb-noti"></div></td>
+					<td class="date confirm">06-18</td>
+				</tr>
+
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)기획전 보기</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-0021.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">05-10</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)쿠폰정보 보기</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-0022.html</td>
+					<td class="comment">ver1.2 반영</td>
+					<td class="date confirm">06-17</td>
+					</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)가격 변경이력</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-0023.html</td>
+					<td class="comment">ver1.2 반영</td>
+					<td class="date confirm">06-17</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)옵션 변경이력</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-0024.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)미리보기-상품상세</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-003.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">05-12</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>상품복사</td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-004.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">05-12</td>
+				</tr>
+				<!-- <tr class="">
+					<td></td>
+					<td></td>
+					<td>전시카테고리</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-005.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr> -->
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(공통팝업)일괄변경 : 전시여부,전시카테고리추가,전시카테고리제외,판매상태,사품명,적립금,판매정책,인플루언서,기획전,냉장고그룹화,입점사,재고,상품후기그룹화,연동상품명,배송그룹</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-001.html</td>
+					<td class="comment">ver1.2 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(공통팝업)입점사 검색</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-002.html</td>
+					<td class="comment">ver1.2 반영</td>
+					<td class="date confirm">06-17</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(공통팝업)브랜드 검색</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-003.html</td>
+					<td class="comment">ver1.2 반영</td>
+					<td class="date confirm">06-17</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(공통팝업)기획전 검색</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-014.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(공통팝업)상품후기그룹 검색</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-014-1.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(공통팝업)냉장고그룹 검색</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-014-2.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(공통팝업)상품비교 검색</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-014-3.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(공통팝업)배송그룹 검색</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-014-4.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)필수옵션그룹 검색</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-004.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)추가옵션그룹검색</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-004-2.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(공통팝업)ERP상품 검색</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-005.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(공통팝업)담당MD 검색</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-006.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(공통팝업)상품검색</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-010.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(공통팝업)상품검색-브랜드상품검색</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-010-01.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(공통팝업)리뷰검색</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-PU-029.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>상픔승인요청목록</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-010.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">05-12</td>
+					<!-- 페이지 삭제
+					<tr class="done">
+						<td></td>
+						<td>상픔승인요청목록(상세)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="file">goods/BO-CM-GD-010-2.html</td>
+						<td class="comment">ver 1.1 반영<div class="_pb-noti"></div></td>
+						<td class="date confirm">06-22</td>
+					</tr>-->
+					<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)상품승인/반려</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-011.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">05-12</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업) 승인요청 메모</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-011-2.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+
+				<tr class="done">
+					<td></td>
+					<td>묶음상품조회</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-020.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>묶음상품등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-021.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>옵션그룹관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-030.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<!-- <tr class="done">
+					<td></td>
+					<td></td>
+					<td>옵션그룹 등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-031.html</td>
+					<td class="comment">도움말 내용 필요</td>
+					<td class="date confirm">00-00</td>
+				</tr> -->
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>필수옵션그룹 등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-031-01.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>추가옵션그룹 등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-031-02.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>아이콘설정</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-040.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)썸네일 뱃지 설정</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-040-01.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)리스트 아이콘 설정</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-040-02.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>재입고 알림 신청 조회</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-050.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<!-- <tr class="">
+					<td></td>
+					<td>브랜드 관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-060.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr> -->
+				<tr class="done">
+					<td></td>
+					<td>브랜드 관리</td>
+					<td>브랜드 조회</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-061.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>브랜드 등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-062.html</td>
+					<td class="comment">ver 1.2 반영 <br /><p class="_pb-noti">[Dev/Pub] 주석 확인</p></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)브랜드 검색</td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-003.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)관리자 검색</td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-006.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>상품진열순서관리</td>
+					<td>[tab]전시카테고리</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-070.html</td>
+					<td class="comment">ver 1.2 반영<br /><p class="_pb-noti">[Dev/Pub] 주석 확인</p></td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[tab]브랜드</td>
+					<td><span style="background-color:chartreuse; font-size:11px;">브랜드 탭관련 테이블 정보 참고하세요.</span></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-070-02.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[tab]중량</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-070-03.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>상품정보고시 관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-080.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>상품정보고시 등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-081.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<!-- 삭제됨 : Ver1.1 삭제됨
+					tr class="ing">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)항목추가</td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-081-1.html</td>
+					<td class="comment"></td>
+					<td class="date confirm"></td>
+				</tr -->
+
+				<tr class="done">
+					<td></td>
+					<td>상품비교정보 리스트</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-090.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>상품비교정보 등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-091.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>상품스케줄링</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-GD-005.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(공통팝업)일괄변경 : 적립금,전시기간</td>
+					<td></td>
+					<td></td>
+					<td class="file">goods/BO-CM-U-001.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)옵션 추가정보 등록</td>
+					<td>_재고</td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-005-1.html</td>
+					<td class="comment">ver 1.2 반영</td>
+					<td class="date confirm">06-17</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- // _pb-list-table :: 상품관리 -->
+
+	<div class="_pb-list-table">
+		<h3 class="_pb-dep1-title">전시관리</h3>
+		<button type="button" class="_pb-toggle" title="접기"><span>접기</span></button>
+		<table>
+			<colgroup>
+				<col span="5" class="_pb-col-1" /><col class="_pb-col-2" /><col /><col class="_pb-col-3" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1Depth</th>
+					<th scope="col">2Depth</th>
+					<th scope="col">3Depth</th>
+					<th scope="col">4Depth</th>
+					<th scope="col">5Depth</th>
+					<th scope="col">File</th>
+					<th scope="col">Comment</th>
+					<th scope="col">완료일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="menu">
+					<td>전시관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file"></td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>랭킹닭컴 전시관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file"></td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)미리보기</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-101.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<!--페이지로변환
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)전시등록(공통)</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-031.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)전시등록(배너,배너+탭명)</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-031-02.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)전시등록(키워드)</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-031-03.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)전시등록(배너+브랜드)</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-031-04.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>				
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)전시등록(브랜드)</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-031-05.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)전시등록(배너+기획전)</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-031-06.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)전시등록(기획전)</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-031-07.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)전시등록(브랜드+상품)</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-031-08.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)전시등록(상품)</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-031-09.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)전시등록(배너+브랜드+상품)</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-031-10.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)전시등록(배너+HTML)</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-031-11.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>-->
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)상품검색</td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-010.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)브랜드 검색</td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-003.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)기획전 검색</td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-014.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)이벤트검색</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-103.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>스냅샷관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-010.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>팝업관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-020.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>팝업등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-021.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>전시영역 관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-039.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-005-01.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[액션배너]</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-005-02.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[키워드]</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-005-03.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[배너+브랜드]</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-005-04.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[브랜드]</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-005-05.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[배너+기획전]</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-005-06.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[기획전]</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-005-07.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[브랜드+상품]</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-005-08.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[상품]</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-005-09.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[배너+브랜드+상품]</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-005-10.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[배너+html]</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-005-11.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[html]</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-005-12.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>GNB관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-030.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)GNB등록 / 수정</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-102.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>	
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>실시간 랭킹</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-006.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>판매킹</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-007.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>별별랭킹</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-008.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>별별랭킹 등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-008-01.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>알뜰킹</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-009.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>성분랭킹</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-011.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>타임세일관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-012.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>타임세일등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-013.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>신제품관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-014.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>결제 수단별 안내 관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-015.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>결제 수단별 안내 등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-016.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>신용카드 행사 정보 관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-017.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>신용카드 행사 정보 등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-018.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>유의사항 관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-019.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>유의사항 등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-019-02.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>전시 카테고리 관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-240.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>브랜드 전시 관리[인기브랜드]</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-170-01.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>브랜드 전시 관리[MD추천브랜드]</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-170-02.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>브랜드 전시 관리[신규브랜드]</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-170-03.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>브랜드 전시 관리[인기 찜 브랜드]</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-170-04.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>브랜드 전시 관리[브랜드노출]</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-170-05.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[팝업]신규 브랜드 등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-170-06.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>전시관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-040.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>GNB 영역</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-041.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>최상단 TOP(띠) 배너</td>
+					<td class="file">display/BO-RK-DP-042.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>좌측 배너</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-050.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>우측 배너</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-060.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>메인전시</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-070.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>메인비주얼 영역</td>
+					<td class="file">display/BO-RK-DP-071.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>MD추천 영역</td>
+					<td class="file">display/BO-RK-DP-072.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>기획전 특가 상품</td>
+					<td class="file">display/BO-RK-DP-073.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>카테고리</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-080.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>베스트 배너</td>
+					<td class="file">display/BO-RK-DP-081.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>하단 배너</td>
+					<td class="file">display/BO-RK-DP-082.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>상품상세 영역</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-090.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>혜택정리</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-100.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>이달의 특가</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-110.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>1팩담기</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-120.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>특급배송</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-130.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>주문결제 영역</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-140.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>마이페이지</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-150.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>VIP 전용관</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-160.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>브랜드관</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-170.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>로그인</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-180.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업) 배너등록</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-190.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)상품조회</td>
+					<td class="file">display/BO-CM-PU-007.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)브랜드조회</td>
+					<td class="file">display/BO-CM-PU-003.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)기획전</td>
+					<td class="file">display/BO-CM-PU-008.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)이벤트</td>
+					<td class="file">display/BO-CM-PU-009.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>베스트상품상세 내역</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-201.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)상품검색</td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-007.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)상품조회</td>
+					<td></td>
+					<td class="file">display/BO-CM-PU-007.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>전시콘텐츠 관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-230.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				
+				<tr class="">
+					<td></td>
+					<td>피키다이어트 전시관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file"></td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>스냅샷관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-001.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)미리보기</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-PU-001.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>팝업관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-002.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>팝업등록</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-003.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시영역 관리</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-005.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-PU-005-01.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[액션배너]</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-PU-005-02.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[키워드]</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-PU-005-03.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[배너+브랜드]</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-PU-005-04.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[브랜드]</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-PU-005-05.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[배너+기획전]</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-PU-005-06.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[기획전]</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-PU-005-07.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[브랜드+상품]</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-PU-005-08.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[상품]</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-PU-005-09.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[배너+브랜드+상품]</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-PU-005-10.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[배너+html]</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-PU-005-11.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>전시등록[html]</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-PU-005-12.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>GNB관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-004.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)GNB등록</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-PU-003.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)이벤트 검색</td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-103.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)기획전 검색</td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-014.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)브랜드 검색</td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-003.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)상품 검색</td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-010-01.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+
+				
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>베스트상품관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-006.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">07-01</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업) 상품검색</td>
+					<td class="file">display/BO-PK-DP-PU-01.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">07-01</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>타임세일관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-008.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">07-01</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)관리자 검색</td>
+					<td></td>
+					<td class="file">basic/BO-CM-PU-012.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>타임세일등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-230.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">07-01</td>
+				</tr>
+
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>신제품관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-010.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">07-01</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업) 상품검색</td>
+					<td class="file">display/BO-PK-DP-PU-02.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">07-01</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>브랜드 전시 관리[인기브랜드]</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-170-01.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>브랜드 전시 관리[MD추천브랜드]</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-170-02.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>브랜드 전시 관리[신규브랜드]</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-170-03.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>브랜드 전시 관리[인기 찜 브랜드]</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-170-04.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>브랜드 전시 관리[브랜드노출]</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-170-05.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[팝업]신규 브랜드 등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-170-06.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)브랜드조회</td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-003.html</td>
+					<!-- <td class="file">promotion/BO-CM-PU-003.html</td> -->
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>전시콘텐츠 관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-250.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>결제수단별안내관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-012.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">07-01</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>결제수단별안내등록</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-013.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">07-01</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>신용카드행사정보관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-014.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">07-01</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>신용카드 행사정보 등록</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-015.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">07-01</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>안내/유의사항 관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-016.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">07-01</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>안내/유의사항 등록</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-017.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">07-01</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>전시카테고리관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-018.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>입점사 전시영역신청 조회</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-019.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>입점사 전시영역신청 </td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-020.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>[팝업]입점사 선정</td>
+					<td></td>
+					<td class="file">display/BO-PK-DP-PU-008.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>입점사 전시영역 신청내역</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-CM-VD-001.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>랭킹닭컴 - 입점사 광고구좌 관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-VD-010.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>랭킹닭컴 - 입점사 광고구좌 신청</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-VD-011.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>랭킹닭컴 - 입점사 광고구좌 등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-023.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[팝업]랭킹닭컴 - 입점사 선정</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-CM-GD-010.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>	
+
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>피키다이어트 - 입점사 광고구좌 관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-VD-010.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>피키다이어트 - 입점사 광고구좌 신청</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-VD-011.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>피키다이어트 - 입점사 광고구좌 등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-RK-DP-023.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[팝업]피키다이어트 - 입점사 선정</td>
+					<td></td>
+					<td></td>
+					<td class="file">display/BO-CM-GD-010.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>				
+			</tbody>
+		</table>
+	</div><!-- // _pb-list-table :: 전시관리 -->
+
+	<div class="_pb-list-table">
+		<h3 class="_pb-dep1-title">주문관리</h3>
+		<button type="button" class="_pb-toggle" title="접기"><span>접기</span></button>
+		<table>
+			<colgroup>
+				<col span="5" class="_pb-col-1" /><col class="_pb-col-2" /><col /><col class="_pb-col-3" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1Depth</th>
+					<th scope="col">2Depth</th>
+					<th scope="col">3Depth</th>
+					<th scope="col">4Depth</th>
+					<th scope="col">5Depth</th>
+					<th scope="col">File</th>
+					<th scope="col">Comment</th>
+					<th scope="col">완료일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="menu done">
+					<td>주문관리</td>
+					<td>주문목록</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-010.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-29</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[pop] 관리자메모등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-010-1.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-29</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[pop] 결제실패로그</td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-010-2.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-29</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>주문상세</td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-011.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-29</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>결제수단별 제공 정보 Case</td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-011-case.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-29</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[pop] 배송방법 변경</td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-013.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-30</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[pop] 배송조회</td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-012.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-29</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[pop] 취소처리</td>
+					<td>신용카드/휴대폰결제 당일 Case</td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-014-1.html</td>
+					<td class="comment"></td>
+					<td class="date confirm"></td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>무통장입금/휴대폰결제 익일 취소 Case</td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-014-2.html</td>
+					<td class="comment"></td>
+					<td class="date confirm"></td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>무통장 미입금 Case</td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-014-3.html</td>
+					<td class="comment"></td>
+					<td class="date confirm"></td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>사용적립금/쿠폰 없는 Case</td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-014-4.html</td>
+					<td class="comment"></td>
+					<td class="date confirm"></td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[pop] 교환처리</td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-015.html</td>
+					<td class="comment"></td>
+					<td class="date confirm"></td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>[pop] 할인 적용</td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-015-01.html</td>
+					<td class="comment"></td>
+					<td class="date confirm"></td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[pop] 반품처리</td>
+					<td>신용카드 case</td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-016-1.html</td>
+					<td class="comment"></td>
+					<td class="date confirm"></td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>무통장입금 case</td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-016-2.html</td>
+					<td class="comment"></td>
+					<td class="date confirm"></td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>취소/환불목록</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-020.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-29</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>취소/환불상세</td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-021.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-29</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>취소/환불상세</td>
+					<td>신용카드/휴대폰결제 당일 Case</td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-021-02.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-29</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>취소/환불상세</td>
+					<td>무통장입금/휴대폰결제 익일 취소 Case</td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-021-03.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-29</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>[pop] 환불보류</td>
+					<td></td>
+					<td class="file">order/BO-CM-PU-010.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>반품목록</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-030.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>반품상세</td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-031.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[pop] 반품승인-신용카드 케이스</td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-PU-011.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>				
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[pop] 반품승인-계좌환불 케이스</td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-PU-011-01.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[pop] 반품불가</td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-PU-011-02.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>교환목록</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-040.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>교환상세</td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-041.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[pop] 교환승인</td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-PU-012.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[pop] 교환불가</td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-PU-012-02.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>카카오톡 주문등록</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-009.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>역마진주문조회</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-060.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>운송장등록</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-090.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[pop] 운송장번호 등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-090-01.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[pop] 운송장번호 등록(배송그룹별 여러개)</td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-090-02.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[pop] 운송장번호 수정</td>
+					<td></td>
+					<td></td>
+					<td class="file">order/BO-CM-OD-090-03.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- // _pb-list-table :: 주문관리 -->
+
+	<div class="_pb-list-table">
+		<h3 class="_pb-dep1-title">프로모션관리</h3>
+		<button type="button" class="_pb-toggle" title="접기"><span>접기</span></button>
+		<table>
+			<colgroup>
+				<col span="5" class="_pb-col-1" /><col class="_pb-col-2" /><col /><col class="_pb-col-3" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1Depth</th>
+					<th scope="col">2Depth</th>
+					<th scope="col">3Depth</th>
+					<th scope="col">4Depth</th>
+					<th scope="col">5Depth</th>
+					<th scope="col">File</th>
+					<th scope="col">Comment</th>
+					<th scope="col">완료일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="menu done">
+					<td>프로모션관리</td>
+					<td>이벤트관리</td>
+					<td>이벤트조회</td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-011.html</td>
+					<td class="comment"><span class=" _pb-noti"></span></td>
+					<td class="date confirm">06-01<br><span class="_pb-noti">06-09</span></td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)전시상태일괄변경</td>
+					<td></td>
+					<td class="file" rowspan="2">promotion/BO-CM-PU-013.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-01</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)기간 일괄수정</td>
+					<td></td>
+					<!-- td class="file">promotion/BO-CM-PU-013.html</td-->
+					<td class="comment"></td>
+					<td class="date confirm">06-01</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)관리자 검색</td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-006.html</td>
+					<td class="comment">ver 1.1 반영</td>
+					<td class="date confirm">06-18</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>이벤트 등록</td>
+					<td>댓글/출췍/룰렛/선착순/퀴즈/숨은그림찾기</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-012.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-01<br><span class="_pb-noti">06-09</span><br/><span class="_pb-noti">06-10</span></td>
+				</tr>
+				<!-- 
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>댓글</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-013.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>포토댓글</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-014.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>출석체크</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-015.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>룰렛</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-016.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>구매왕</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-017.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>선착순</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-018.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>-->	
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(공통팝업) 쿠폰검색</td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PU-016.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-01<br/><span class="_pb-noti">06-10</span></td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(공통팝업) 적립금검색</td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PU-015.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-01<br/><span class="_pb-noti">06-10</span></td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>당첨자관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-019.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-01<br/><span class="_pb-noti">06-10</span></td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>당첨자 상세</td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-019-1.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-01<br/><span class="_pb-noti">06-10</span></td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[팝업]당첨SMS발송</td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-PU-010.html</td>
+					<td class="comment"></td>
+					<td class="date confirm"></td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>당첨자 발표</td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-019-2.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-0<br><span class="_pb-noti">06-09</span><br/><span class="_pb-noti">06-10</span></td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>[팝업]당첨혜택 지급</td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PU-019-1.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-01</td>
+				</tr>
+				<!-- <tr class="">
+					<td></td>
+					<td>기획전</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-020.html</td>
+					<td class="comment"><span class=" _pb-noti">설계서 없음</span></td>
+					<td class="date confirm">00-00</td>
+				</tr> -->
+				<tr class="done">
+					<td></td>
+					<td>기획전</td>
+					<td>기획전 조회</td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-021.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-01<br><span class="_pb-noti">06-09</span></td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)전시상태일괄변경</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PU-013.html</td>
+					<td class="comment">Page ID 체크 필요<br>BO-CM-PU-015는 이미 존재하는 ID</td>
+					<td class="date confirm">06-01</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)기간 일괄수정</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PU-013.html</td>
+					<td class="comment">Page ID 체크 필요<br>BO-CM-PU-016는 이미 존재하는 ID</td>
+					<td class="date confirm">06-01</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>기획전 등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-022.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)상품그룹등록</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-023.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)상품조회</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PU-007.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)상품그룹등록</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PU-007-1.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)상품그룹검색</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-PU-003.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)상품검색</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PU-007-2.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><del>(팝업)상품예외적용</del></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PU-007-3.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)브랜드조회</td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-003.html</td>
+					<!-- <td class="file">promotion/BO-CM-PU-003.html</td> -->
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)입점업체조회</td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-002.html</td>
+					<!-- <td class="file">promotion/BO-CM-PU-002.html</td> -->
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>댓글</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-024.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>기획전 댓글리스트</td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-025.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>쿠폰관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file"></td>
+					<td class="comment">v0.3반영</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>쿠폰조회</td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-009.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-30</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)쿠폰지급</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-PU-005.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-30</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)쿠폰회수</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-PU-006.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-30</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)관리자 지급</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PU-016.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)회원검색</td>
+					<td class="file">promotion/BO-CM-PU-017.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>쿠폰등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-010.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">07-01</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)쿠폰번호발행</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-PU-007.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-30</td>
+				</tr>
+				<!-- <tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)난수쿠폰발급</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PU-018.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr> -->
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)상품조회</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PU-007-01.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)브랜드조회</td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-003.html</td>
+					<!-- <td class="file">promotion/BO-CM-PU-003.html</td> -->
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)입점업체조회</td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-002.html</td>
+					<!-- <td class="file">promotion/BO-CM-PU-002.html</td> -->
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)상품검색</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PU-007-2.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>쿠폰사용현황</td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-033.html</td>
+					<td class="comment">ver0.3 반영</td>
+					<td class="date confirm">06-30</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)관리자 지급</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PU-016.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)회원검색</td>
+					<td class="file">promotion/BO-CM-PU-017.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>적립금조회</td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-013.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)일괄변경</td>
+					<td></td>
+					<td class="file">goods/BO-CM-PU-001.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)적립금 지급</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-PU-008.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)적립금 회수</td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-PU-009.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>적립금등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-014.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>적립금사용현황</td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-015.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>타임세일목록</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-050.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>타임세일등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">promotion/BO-CM-PM-051.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- // _pb-list-table :: 프로모션관리 -->
+
+	<div class="_pb-list-table">
+		<h3 class="_pb-dep1-title">회원관리</h3>
+		<button type="button" class="_pb-toggle" title="접기"><span>접기</span></button>
+		<table>
+			<colgroup>
+				<col span="5" class="_pb-col-1" /><col class="_pb-col-2" /><col /><col class="_pb-col-3" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1Depth</th>
+					<th scope="col">2Depth</th>
+					<th scope="col">3Depth</th>
+					<th scope="col">4Depth</th>
+					<th scope="col">5Depth</th>
+					<th scope="col">File</th>
+					<th scope="col">Comment</th>
+					<th scope="col">완료일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="menu done">
+					<td>회원관리</td>
+					<td>회원목록</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-001.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>발송결과</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-002.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)일괄처리_등급/그룹이동</td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-001-01.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)일괄처리_SMS발송</td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-001-02.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)일괄처리_PUSH발송</td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-001-03.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)일괄처리_이메일발송</td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-001-04.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(탭)회원상세정보</td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-010.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)관리자메모</td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-010-1.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)상담주의/ 블랙리스트 변경</td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-010-2.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(탭)주문내역</td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-011.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(탭)쿠폰내역</td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-012.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)쿠폰 지급</td>
+					<td></td>
+					<td class="file">member/BO-CM-PU-016.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)쿠폰 회수</td>
+					<td></td>
+					<td class="file">member/BO-CM-PU-016-02.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(탭)적립금내역</td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-013.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)적립금 지급</td>
+					<td></td>
+					<td class="file">member/BO-CM-PU-018.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(팝업)적립금 회수</td>
+					<td></td>
+					<td class="file">member/BO-CM-PU-018-02.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(탭)1:1문의 내역</td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-017.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(탭)관심브랜드내역</td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-018.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(탭)메시지 발송이력</td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-019.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(탭)리뷰내역</td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-014.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(탭)관심상품내역</td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-015.html</td>
+					<td class="comment">v1.0_회원관리 수정 완</td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(탭)장바구니내역</td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-016.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>(팝업)회원조회</td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-PU-017.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>회원등급관리</td>
+					<td>회원등급목록</td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-020.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-03</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>회원등급수정</td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-020-1.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-03</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)쿠폰조회</td>
+					<td></td>
+					<td class="file">member/BO-CM-PU-020.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-03</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>(공통팝업)적립금조회</td>
+					<td></td>
+					<td class="file">member/BO-CM-PU-021.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-03</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>회원등급이력목록</td>
+					<td>(tab)회원등급이력<br/>(tab)회원승급이력</td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-021.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-03</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>혜택</td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-022.html</td>
+					<td class="comment"><span class=" _pb-noti">설계서 없음</span></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>신제품 쿠폰</td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-022.html</td>
+					<td class="comment"><span class=" _pb-noti">설계서 없음</span></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>할인쿠폰</td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-022.html</td>
+					<td class="comment"><span class=" _pb-noti">설계서 없음</span></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>적립금(%) ( PC, Mobile-Web, Mobile-APP )</td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-022.html</td>
+					<td class="comment"><span class=" _pb-noti">설계서 없음</span></td>
+					<td class="date confirm">00-00</td>
+				</tr><tr class="done">
+					<td></td>
+					<td>회원그룹관리</td>
+					<td>조회목록</td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-030.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-03</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>그룹수정</td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-031.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-03</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>그룹이력조회</td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-033.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-03</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>혜택</td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-032.html</td>
+					<td class="comment"><span class=" _pb-noti">설계서 없음</span></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>신제품 쿠폰</td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-032.html</td>
+					<td class="comment"><span class=" _pb-noti">설계서 없음</span></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>할인쿠폰</td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-032.html</td>
+					<td class="comment"><span class=" _pb-noti">설계서 없음</span></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>적립금(%) ( PC, Mobile-Web, Mobile-APP )</td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-032.html</td>
+					<td class="comment"><span class=" _pb-noti">설계서 없음</span></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>탈퇴회원조회</td>
+					<td></td>
+					<td></td>
+					<td class="file">member/BO-CM-MM-040.html</td>
+					<td class="comment"><span class=" _pb-noti"></span></td>
+					<td class="date confirm">06-04</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- // _pb-list-table :: 회원관리 -->
+
+	<div class="_pb-list-table">
+		<h3 class="_pb-dep1-title">고객CRM</h3>
+		<button type="button" class="_pb-toggle" title="접기"><span>접기</span></button>
+		<table>
+			<colgroup>
+				<col span="5" class="_pb-col-1" /><col class="_pb-col-2" /><col /><col class="_pb-col-3" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1Depth</th>
+					<th scope="col">2Depth</th>
+					<th scope="col">3Depth</th>
+					<th scope="col">4Depth</th>
+					<th scope="col">5Depth</th>
+					<th scope="col">File</th>
+					<th scope="col">Comment</th>
+					<th scope="col">완료일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="menu">
+					<td>고객CRM</td>
+					<td>1:1문의관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">customer/BO-CM-CS-010.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>1:1 문의내역 조회</td>
+					<td></td>
+					<td></td>
+					<td class="file">customer/BO-CM-CS-011.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>(공통팝업)답변템플릿 선택</td>
+					<td></td>
+					<td></td>
+					<td class="file">customer/BO-CM-PU-019.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>상품후기관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">customer/BO-CM-CS-020.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>후기상세내역</td>
+					<td></td>
+					<td></td>
+					<td class="file">customer/BO-CM-CS-021.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>일반후기</td>
+					<td></td>
+					<td class="file">customer/BO-CM-CS-022.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>포토후기</td>
+					<td></td>
+					<td class="file">customer/BO-CM-CS-023.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>(공통팝업)상품조회</td>
+					<td></td>
+					<td></td>
+					<td class="file">customer/BO-CM-PU-007.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>(공통팝업)브랜드조회</td>
+					<td></td>
+					<td></td>
+					<td class="file">customer/BO-CM-PU-003.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>(공통팝업)입점업체</td>
+					<td></td>
+					<td></td>
+					<td class="file">customer/BO-CM-PU-002.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>냉동고 포토 서비스</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">customer/BO-CM-CS-030.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>냉동고 포토서비스상세</td>
+					<td></td>
+					<td></td>
+					<td class="file">customer/BO-CM-CS-031.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>답변템플릿관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">customer/BO-CM-CS-040.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>(팝업)머리글 등록(수정)</td>
+					<td></td>
+					<td></td>
+					<td class="file">customer/BO-CM-CS-041.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>(팝업)꼬리글 등록(수정)</td>
+					<td></td>
+					<td></td>
+					<td class="file">customer/BO-CM-CS-042.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>(팝업)답변내용 등록(수정)</td>
+					<td></td>
+					<td></td>
+					<td class="file">customer/BO-CM-CS-043.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>공지사항관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">customer/BO-CM-CS-050.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>공지사항입력</td>
+					<td></td>
+					<td></td>
+					<td class="file">customer/BO-CM-CS-051.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>자주하는질문관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">customer/BO-CM-CS-060.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>자주하는 질문 입력</td>
+					<td></td>
+					<td></td>
+					<td class="file">customer/BO-CM-CS-061.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- // _pb-list-table :: 고객CRM -->
+
+	<div class="_pb-list-table">
+		<h3 class="_pb-dep1-title">통계/정산</h3>
+		<button type="button" class="_pb-toggle" title="접기"><span>접기</span></button>
+		<table>
+			<colgroup>
+				<col span="5" class="_pb-col-1" /><col class="_pb-col-2" /><col /><col class="_pb-col-3" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1Depth</th>
+					<th scope="col">2Depth</th>
+					<th scope="col">3Depth</th>
+					<th scope="col">4Depth</th>
+					<th scope="col">5Depth</th>
+					<th scope="col">File</th>
+					<th scope="col">Comment</th>
+					<th scope="col">완료일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="menu">
+					<td>통계/정산</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-001.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>대사관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-010.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>정산관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-020.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>매출정산리스트</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-021.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>매출분석</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-030.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>실시간 매출 분석</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-031.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>상품</td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-031.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>브랜드</td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-031.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>입점업체</td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-031.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>기간별 매출 분석</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-032.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>상품</td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-032-2.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>브랜드</td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-032-3.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>입점업체</td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-032-4.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>결제수단별</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-033.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>마켓팅</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-040.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>이벤트</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-041.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>기획전</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-042.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>타임세일 매출 분석</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-043.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>인플루언서</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-044.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>엠버서더</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-045.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>쿠폰</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-046.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>적립금</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-047.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>예치금 분석</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-048.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>유입채널별 가입 분석</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-049.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>유입채널별 판매 분석</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-050.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>구매전환률 분석</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-051.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>상품</td>
+					<td> </td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-060.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>상품별 매출</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-061.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>브랜드별 매출</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-062.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>회원</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-070.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>실시간 시간대별 가입 분석</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-071.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>일자별 가입 분석</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-072.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>회원 상태별 분석</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-073.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>회원등급별 주문 분석</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-074.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>재구매 고객 분석</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-075.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>재방문 분석</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-076.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>접속분석</td>
+					<td>실시간 접속 분석</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-080.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>기간별 접속 분석 (통계데이터)</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-081.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>페이지별 접속 분석</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-082.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>이탈률 분석</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-083.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>운영분석</td>
+					<td>1:1문의 분석</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-090.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>검색어 분석</td>
+					<td></td>
+					<td></td>
+					<td class="file">statistics/BO-CM-ST-091.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- // _pb-list-table :: 통계/정산 -->
+
+	<div class="_pb-list-table">
+		<h3 class="_pb-dep1-title">시스템관리</h3>
+		<button type="button" class="_pb-toggle" title="접기"><span>접기</span></button>
+		<table>
+			<colgroup>
+				<col span="5" class="_pb-col-1" /><col class="_pb-col-2" /><col /><col class="_pb-col-3" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1Depth</th>
+					<th scope="col">2Depth</th>
+					<th scope="col">3Depth</th>
+					<th scope="col">4Depth</th>
+					<th scope="col">5Depth</th>
+					<th scope="col">File</th>
+					<th scope="col">Comment</th>
+					<th scope="col">완료일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="menu done">
+					<td>시스템관리</td>
+					<td>프로그램 관리(페이지관리)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-010.html</td>
+					<td class="comment"><span class=" _pb-noti"></span></td>
+					<td class="date confirm">06-10</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>프로그램등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-011.html</td>
+					<td class="comment"><span class=" _pb-noti"></span></td>
+					<td class="date confirm">06-10</td>
+				</tr>
+				<tr class="ing">
+					<td></td>
+					<td>메뉴관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-020.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>메뉴등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-021.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-10</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>사용자관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-030.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-10</td>
+				</tr>
+				<tr class="ing">
+					<td></td>
+					<td></td>
+					<td>사용자등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-031.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-10</td>
+				</tr>
+				<tr class="ing">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>수정</td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-031-2.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>입점사 사용자관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-035.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="ing">
+					<td></td>
+					<td></td>
+					<td>사용자등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-031.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="ing">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>수정</td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-031-2.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>사용자 그룹관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-040.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td> </td>
+					<td>사용자그룹등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-041.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>권한관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-050.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>그룹별 권한관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-051.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td> </td>
+					<td>(팝업)메뉴검색</td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-052.html</td>
+					<td class="comment"><span class=" _pb-noti"></span></td>
+					<td class="date confirm">06-10</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td> </td>
+					<td>(팝업)프로그램 검색</td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-012.html</td>
+					<td class="comment"><span class=" _pb-noti"></span></td>
+					<td class="date confirm">06-10</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>사용자 권한관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-053.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>사용자 권한 등록</td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-054.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>사용자별 권한조회</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-055.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>화면별 권한 사용자 조회</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-056.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>SMS/알림톡 템플릿 관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-060.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>템플릿 관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-061.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>이메일 템플릿 관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-070.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>이메일 템플릿 관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-071.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>이중화관리</td>
+					<td> </td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-080.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>LOG 관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-090.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>DB로그관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-091.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>사용자접속로그관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-092.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>사용자액션로그관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-093.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td>배치관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-100.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)배치등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-101.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)배치상세</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-101-01.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)배치이력</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-102.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="ing">
+					<td></td>
+					<td>코드관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-110.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)대분류 코드등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-PU-200.html</td>
+					<td class="comment"><span class=" _pb-noti"></span></td>
+					<td class="date confirm">06-10</td>
+				</tr>
+				<tr class="done">
+					<td></td>
+					<td></td>
+					<td>(팝업)중분류 코드등록</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-PU-201.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">06-10</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td>엑셀 다운로드</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-130.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="">
+					<td></td>
+					<td></td>
+					<td>엑셀다운로드 템플릿 관리</td>
+					<td></td>
+					<td></td>
+					<td class="file">system/BO-CM-SY-131.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- // _pb-list-table :: 시스템관리 -->
+	
+
+</div><!-- // _pb-list-wrap -->
+
+<button type="button" class="btn-gotop"><span>TOP</span></button>
+
+</body>
+</html>
