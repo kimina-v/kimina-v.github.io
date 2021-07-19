@@ -683,8 +683,8 @@ function gnbController() {
             $('.site-depth2 li').removeClass(activeClass);
             parent.addClass(activeClass);
            // addToheadTab($(this));
-            });
-        }
+        });
+    }
 
     function favoriteDestroy(isFavorite) {
         var favoriteMenu = $('#sub-panel-1').find('.site-depth2');
@@ -704,18 +704,22 @@ function gnbController() {
     }
 
     function favoriteEditEvent(subMenu) {
+        var favoriteMenu = subMenu.find('.site-depth2');
         favoriteEditBtn.on('click', function(){
             favoriteEditBtn.hide();
-            favoriteSaveBtn.show();           
-             var favoriteMenu = subMenu.find('.site-depth2');
+            favoriteSaveBtn.show();
             favoriteMenu.addClass('sortable');
             favoriteMenu.sortable();
             favoriteMenu.disableSelection();
+        })
 
-            favoriteSaveBtn.on('click', function(){
-                console.log('즐겨찾기 저장');
-                // favoriteDestroy(true);
-            })
+        favoriteSaveBtn.on('click', function(){
+            favoriteMenu.removeClass('sortable');
+            favoriteMenu.sortable('destroy');
+            console.log('즐겨찾기 저장');
+            favoriteEditBtn.show();
+            favoriteSaveBtn.hide();
+            // favoriteDestroy(true);
         })
     }
 
