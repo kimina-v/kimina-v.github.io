@@ -40,6 +40,14 @@ title: css 선택자
  div[data-role^=row] 
  div[data-role$=9]   
  div[data-role*=row] 
+
+ a[href] 속성이름에 해당되는 속성을 가진 태그 선택
+ a[href="~~"] 속성이 속성값이 변수인 태그를 선택
+ a[href~="~~"] 속성의 속성값이 변수를 포함하는 태그 선택
+ a[href^="http"] 속성의 속성값이 변수로 시작하는 태그를 선택
+ a[href$="com"] 속성의 속성값이 변수로 끝나는 요소 선택
+ a[href*="~~"] 속성의 속성값이 변수를 포함하는 태그 선택
+a[href|="http"] 속성의 속성값이 변수이거나 변수로 시작하는 태그 선택
 {% endhighlight %}
 
 <div class="code-title">동위 선택자</div> 

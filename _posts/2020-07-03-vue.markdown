@@ -39,7 +39,7 @@ title: vue.js
     })
 -->
 
-원활한 vue test를 위한 <a href="https://kimina-v.github.io/html/vue-post.html" target="_blank" class="post-link">vue post</a> 페이지 
+vue test를 위한 <a href="https://kimina-v.github.io/html/vue-post.html" target="_blank" class="post-link">vue post</a> 페이지 
 
 
 <hr style="margin-top:30px;">
