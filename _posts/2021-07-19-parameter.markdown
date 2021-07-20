@@ -11,7 +11,6 @@ title: 매개변수(parameter)
 <button id="contact">contact btn</button>
 
 //방법1
-
 function toAbout(){
     $('#about').on('click',function(){
         $('html, body').animate({scrollTop:$('.about').position().top},500);
