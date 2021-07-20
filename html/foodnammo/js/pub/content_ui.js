@@ -711,6 +711,20 @@ function gnbController() {
             favoriteMenu.addClass('sortable');
             favoriteMenu.sortable();
             favoriteMenu.disableSelection();
+            // subMenu.find('a').each(function(index, item){
+            //     var myTarget = $(this).parent('li');
+            //     var myText = myTarget.text();
+            //     // console.log(myText);
+            //     // var myHref = myTarget.children('a').attr('href');
+
+            //     myTarget.html('<span>'+myText+'</span>');
+            //     favoriteSaveBtn.on('click', function(){
+            //         console.log('즐겨찾기 저장');
+            //         // favoriteDestroy(true);
+            //         myTarget.html(item);
+            //     })
+            // })
+
         })
 
         favoriteSaveBtn.on('click', function(){
