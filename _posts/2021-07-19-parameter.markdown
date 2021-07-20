@@ -65,12 +65,34 @@ $(function(){
 html의 onclick을 사용하여 아래와 같이 더 줄일 수 있다.
 
 {% highlight bash %}
+//방법1
 <button id="about" onclick="toSection(this.id)">about btn</button>
 <button id="contact" onclick="toSection(this.id)">contact btn</button>
 function toSection(sectionName){
     $('html, body').animate({scrollTop:$('.'+sectionName).position().top},500);
 }
+
+//방법2
+<button id="about" onclick="toSection('.about')">about btn</button>
+<button id="contact" onclick="toSection('.contact')">contact btn</button>
+function toSection(sectionName){
+    $('html, body').animate({scrollTop:$(sectionName).position().top},500);
+}
 {% endhighlight %}
+
+<div class="post-stitle">onclick 여러개 넘기기</div>
+
+{% highlight bash %}
+<button id="about" onclick="toSection('.about','텍스트1',this.id)" data-id="id is about" data-name="name is about">about btn</button>
+<button id="contact" onclick="toSection('.contact','텍스트2',this.id)" data-id="id is contact" data-name="name is contact">contact btn</button>
+function toSection(sectionName,text,sectionId){
+    console.log(sectionName,text,sectionId);
+    var dataId = $('#'+id).data('id');
+    var dataName = $('#'+id).data('name');
+    console.log(sectionName,text,sectionId,dataId,dataName)
+}
+{% endhighlight %}
+
 
 <hr style="margin-top:30px;">
 link : 
