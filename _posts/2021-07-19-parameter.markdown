@@ -4,7 +4,7 @@ title: 매개변수(parameter)
 
 <div class="post-stitle">매개변수 넘기기</div>
 
-클릭 시 위치 이동 시킬 경우,
+예를 들어, 버튼 클릭 시 해당 영역으로 이동시킬 경우,
 
 {% highlight bash %}
 <button id="about">about btn</button>
