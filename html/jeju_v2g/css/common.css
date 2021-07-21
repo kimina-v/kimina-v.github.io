@@ -188,9 +188,9 @@ span.indcColor{display:inline-block;width:20px;height:20px;vertical-align:middle
 /*******************************************************
  * Search pager
  *******************************************************/
-.page_area{height:30px;margin-top:0px;margin-right:20px;text-align:center}
-.page_button_area{display:inline-block;width:520px;height:30px}
-.page_area button{ width:30px;height:30px;background-color:#fff;background-repeat:no-repeat;background-position:center;background-size:20px}
+.page_area{height:30px;margin-top:0px;margin-right:20px;text-align:right;white-space:nowrap}
+.page_button_area{display:inline-block;width:520px;height:30px;text-align:center;width:calc(100% - 300px)}
+.page_area button{width:30px;height:30px;background-color:#fff;background-repeat:no-repeat;background-position:center;background-size:20px}
 
 .page_area button.first{background-image:url(../../../images/web/contents/icon_start.png)}
 .page_area button.prev{background-image:url(../../../images/web/contents/icon_prev.png)}
@@ -202,10 +202,10 @@ span.indcColor{display:inline-block;width:20px;height:20px;vertical-align:middle
 .page_area .page .pageBox:hover{color:#343433;background-color:#EEE}
 .page_area .page .pageBox.sel{color:#fff;background-color:#4c6ea7}
 .page_area .page input[type=text]{width:35px}
-.page_area .rowCountText{float:left;position:absolute;right:200px;width:120px;line-height:30px;height:30px}
-.page_area .page_count{float:left;position:absolute;right:120px;line-height:30px;padding-left:15px}
+.page_area .rowCountText{display:inline-block;vertical-align:top;line-height:30px;height:30px}
+.page_area .page_count{line-height:30px;padding-left:15px;display:inline-block;position:relative;top:-1px;vertical-align:top}
 .page_area .page_count select{width:70px}
-.page_area .info{float:right;line-height:30px}
+.page_area .info{display:inline-block;vertical-align:top;margin-left:25px;line-height:30px}
 
 /* tree */
 .tree #list_area{padding:51px 0 0 0}
