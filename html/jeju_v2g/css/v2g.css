@@ -189,7 +189,7 @@
 
 .operate_ev_area .legend_area ul li{line-height:1}
 
-.intro{background:url(../img/bg_intro.png) no-repeat 50% 0;height:100%;min-width:1202px;min-height:1080px}
+.intro{background:url(../img/bg_intro.png) no-repeat 50% 0;height:100%;min-width:1202px;min-height:900px}
 .intro button{cursor:pointer}
 .intro .inner{width:1202px;margin:0 auto;position:relative;padding-top:263px;font-size:0}
 .intro .logo{font-size:30px;font-weight:bold;color:#000;margin-left:645px}
