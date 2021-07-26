@@ -188,3 +188,26 @@
 .ev-wrap #contents_bottom_area{margin:0;min-height:300px;background:#fff;width:auto}
 
 .operate_ev_area .legend_area ul li{line-height:1}
+
+.intro{background:url(../img/bg_intro.png) no-repeat 50% 0;height:100%;min-width:1202px;min-height:1080px}
+.intro button{cursor:pointer}
+.intro .inner{width:1202px;margin:0 auto;position:relative;padding-top:263px;font-size:0}
+.intro .logo{font-size:30px;font-weight:bold;color:#000;margin-left:645px}
+.intro .logo span{display:block;padding:22px 0 16px 168px;position:relative;background:url(../img/logo_jeju.png) no-repeat 0 0}
+.login-wrap{width:653px;padding:37px 93px 0 100px;display:inline-block;margin-left:548px;box-sizing:border-box}
+.login-wrap input[type="text"],
+.login-wrap input[type="password"]{display:block;width:100%;border:1px solid #c9c9c9;border-radius:4px;height:43px;line-height:43px;box-sizing:border-box;padding-left:20px;font-size:18px}
+.login-wrap input[type="password"]{margin-top:10px}
+.login-wrap input::placeholder{color:#ccc}
+.login-wrap .save-check{font-size:16px;color:#000;margin:20px 0 30px}
+.login-wrap .save-check label{position:relative;line-height:24px;padding-left:34px}
+.login-wrap .save-check label:before{content:"";width:24px;height:24px;position:absolute;top:0;left:0;background:url(../img/check.png) no-repeat 0 -24px}
+.login-wrap .save-check input:checked + label:before{background-position:0 0}
+.login-wrap .captcha-area{border-top:1px solid #c6c6c6;padding-top:25px}
+.login-wrap .captcha-area p{font-size:14px;color:#000;line-height:26px}
+.login-wrap .captcha-area .captcha{border:1px solid #c9c9c9;border-radius:3px;height:43px;line-height:43px;font-size:0;margin:13px 0}
+.login-wrap .captcha-area .captcha .captcha-draw{display:inline-block;width:calc(100% - 119px);height:41px;overflow:hidden}
+.login-wrap .captcha-area .captcha .captcha-draw img{display:inline-block;width:100%}
+.login-wrap .captcha-area .captcha button{width:119px;background:#fff;text-align:center;color:#666;height:41px;line-height:41px;display:inline-block}
+.login-wrap .captcha-area .captcha button span{display:inline-block;padding-left:30px;background:url(../img/ico_refresh.png) no-repeat 0 50%}
+.login-wrap .btn-login{display:block;width:100%;height:60px;line-height:60px;color:#fff;text-align:center;background:#009e75;margin-top:23px;font-size:18px}
