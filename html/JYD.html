@@ -14,16 +14,22 @@
         table tr th,
         table tr td{border-right:1px solid #ddd;border-bottom:1px solid #ddd;text-align:center;padding:10px;font-size:13px;background:#eee;}
         table tr.lined *{border-bottom:1.5px solid #000;}
+        .top,
         table tr.top th,
         table tr.top td{background:#fcf3cf;}
+        .skirt,
         table tr.skirt th,
         table tr.skirt td{background:#fad8d8;}
+        .bottom,
         table tr.bottom th,
         table tr.bottom td{background:#d4efdf;}
+        .jumper,
         table tr.jumper th,
         table tr.jumper td{background:#fbeee6;}
+        .ops,
         table tr.ops th,
         table tr.ops td{background:#d7bde2;}
+        .set,
         table tr.set th,
         table tr.set td{background:#eaf2f8;}
         table tr.ss th,
@@ -42,18 +48,49 @@
         .num{text-align:right;margin-top:-38px;padding-bottom:20px;}
         .num > div, .total > div{display:inline-block;}
         .num span, .total span{font-weight:bold;display:inline-block;margin-left:5px;}
-        .total{text-align:center;}
+        .total{display:inline-block;}
+        .info-wrap{display:inline-block;margin-left:100px}
+        .info-wrap span{display:inline-block;padding:4px 8px}
+        .comp{padding:50px}
         .comp table{display:none;}
+        .fixed-group{position:fixed;top:0;left:0;width:100%;background:#fff;padding:20px 50px;box-shadow:0 5px 10px rgba(0,0,0,0.4);}
         @media screen and (max-width: 768px) {
             *{font-size:11px !important;}
             .group{padding:10px;}
             .num{margin-top:-26px;}
         }
     </style>
-    <div class="middle gorup">
+    <div class="fixed-group">
+        <div class="total">
+            <div class="t-top">TOP:<span></span></div>
+            <div class="t-bottom">BOTTOM:<span></span></div>
+            <div class="t-skirt">SKIRT:<span></span></div>
+            <div class="t-jumper">JUMPER:<span></span></div>
+            <div class="t-ops">OPS:<span></span></div>
+            <div class="t-set">SET:<span></span></div>
+        </div>
+        <div class="info-wrap">
+            <span class="top">티/스웻</span>
+            <span class="bottom">바지</span>
+            <span class="skirt">치마</span>
+            <span class="jumper">점퍼</span>
+            <span class="ops">원피스</span>
+            <span class="set">셋트</span>
+        </div>
+    </div>
+    <div class="ss21 group">
         <p class="title">21 플래시</p>
-        
-        <table class="list sst">
+        <div class="ss21">
+            <div class="num s21-num">
+                <div class="s21-top">TOP:<span></span></div>
+                <div class="s21-bottom">BOTTOM:<span></span></div>
+                <div class="s21-skirt">SKIRT:<span></span></div>
+                <div class="s21-jumper">JUMPER:<span></span></div>
+                <div class="s21-ops">OPS:<span></span></div>
+                <div class="s21-set">SET:<span></span></div>
+            </div>
+        </div>
+        <table class="list">
             <colgroup>
                 <col style="width:20%" span="5">
             </colgroup>
@@ -63,7 +100,7 @@
                     <th>타오</th>
                     <td>팡크</td>
                     <td>os</td>
-                    <td>15dbfh</td>
+                    <td>15유로</td>
                 </tr>
                 <tr class="top">
                     <th>가을/겨울</th>
@@ -80,50 +117,50 @@
                     <td>22.5유로</td>
                 </tr>
                 <tr class="bottom">
-                    <th>ALL</th>
-                    <th>타오</th>
-                    <td>청</td>
-                    <td>4</td>
-                    <td></td>
-                </tr>
-                <tr class="bottom">
                     <th>가을/겨울</th>
-                    <th>타오</th>
+                    <th>타오 트레이닝</th>
                     <td>지퍼바지 카키</td>
                     <td>4</td>
                     <td>30유로</td>
                 </tr>
                 <tr class="bottom">
-                    <th>가을/겨울</th>
+                    <th>ALL</th>
                     <th>타오</th>
+                    <td>청바지</td>
+                    <td>4</td>
+                    <td>48,200</td>
+                </tr>
+                <tr class="bottom">
+                    <th>가을/겨울</th>
+                    <th>타오 트레이닝</th>
                     <td>꽃</td>
                     <td>4</td>
                     <td>25.5유로</td>
                 </tr>
                 <tr class="skirt">
                     <th>봄/여름</th>
-                    <th>타오 s</th>
+                    <th>타오 치마</th>
                     <td>데이지</td>
                     <td>4</td>
                     <td>27유로</td>
                 </tr>
                 <tr class="skirt">
                     <th>가을/겨울</th>
-                    <th>타오</th>
+                    <th>타오 치마</th>
                     <td>땡떙</td>
                     <td>6y</td>
                     <td>33유로</td>
                 </tr>
                 <tr class="skirt">
                     <th>가을/겨울</th>
-                    <th>타오</th>
+                    <th>타오 치마</th>
                     <td>플라워</td>
                     <td>8y</td>
                     <td>33유로</td>
                 </tr>
                 <tr class="ops">
                     <th>봄/여름/가을</th>
-                    <th>타오</th>
+                    <th>타오 원피스</th>
                     <td>사과</td>
                     <td>4</td>
                     <td>26,000</td>
@@ -131,27 +168,19 @@
                 <tr class="jumper">
                     <th>봄/가을</th>
                     <th>타오</th>
-                    <td>조끼</td>
+                    <td>초록 조끼</td>
                     <td>10</td>
                     <td>39유로</td>
                 </tr>
                 <tr class="jumper">
                     <th>후드집업</th>
-                    <th>타오</th>
+                    <th>타오 트레이닝</th>
                     <td>플라워</td>
                     <td>6</td>
                     <td>31.5유로</td>
                 </tr>
             </tbody>
         </table>
-    </div>
-    <div class="total">
-        <div class="t-top">TOP:<span></span></div>
-        <div class="t-bottom">BOTTOM:<span></span></div>
-        <div class="t-skirt">SKIRT:<span></span></div>
-        <div class="t-jumper">JUMPER:<span></span></div>
-        <div class="t-ops">OPS:<span></span></div>
-        <div class="t-set">SET:<span></span></div>
     </div>
     <div class="middle group">
         <p class="title">맞는</p>
@@ -186,21 +215,21 @@
                 </tr>
                 <tr class="top">
                     <th>봄/가을</th>
-                    <th>로디니</th>
+                    <th>로디니 티</th>
                     <td>고양이인어</td>
                     <td>104110</td>
                     <td>25,000</td>
                 </tr>
                 <tr class="top">
                     <th>봄/가을</th>
-                    <th>타오</th>
+                    <th>타오 티</th>
                     <td>보말</td>
                     <td>3y</td>
                     <td>34,000</td>
                 </tr>
                 <tr class="top">
                     <th>봄/가을</th>
-                    <th>타이니</th>
+                    <th>타이니 티</th>
                     <td>식빵</td>
                     <td>4y</td>
                     <td>23,700</td>
@@ -246,13 +275,6 @@
                     <td>화이트</td>
                     <td>6</td>
                     <td>70,500</td>
-                </tr>
-                <tr class="bottom">
-                    <th>가을</th>
-                    <th>타이니P</th>
-                    <td>흑청</td>
-                    <td>4</td>
-                    <td>51,720</td>
                 </tr>
                 <tr class="bottom">
                     <th>가을</th>
@@ -413,13 +435,6 @@
                     <td>50,000</td>
                 </tr>
                 <tr class="skirt">
-                    <th>여름</th>
-                    <th>루이스미샤 치마</th>
-                    <td>플리워</td>
-                    <td>3Y</td>
-                    <td>87,500</td>
-                </tr>
-                <tr class="skirt">
                     <th>봄/여름/가을</th>
                     <th>보보 롱치마</th>
                     <td>체리</td>
@@ -502,24 +517,10 @@
                 </tr>
                 <tr class="top">
                     <th>여름</th>
-                    <th>타오 반필</th>
-                    <td>오버핏 옐로우</td>
-                    <td>6</td>
-                    <td>33,000</td>
-                </tr>
-                <tr class="top">
-                    <th>여름</th>
                     <th>캐롤 반팔</th>
                     <td>밤비</td>
                     <td>10</td>
                     <td>44,000</td>
-                </tr>
-                <tr class="top">
-                    <th>여름</th>
-                    <th>타오 반팔</th>
-                    <td>보라</td>
-                    <td>10</td>
-                    <td>33,900</td>
                 </tr>
                 <tr class="top">
                     <th>여름</th>
@@ -611,20 +612,6 @@
                     <td>초록체크바지</td>
                     <td>6</td>
                     <td>75,000</td>
-                </tr>
-                <tr class="bottom">
-                    <th>여름</th>
-                    <th>타오 P</th>
-                    <td>팔콘</td>
-                    <td>6Y</td>
-                    <td>27,000</td>
-                </tr>
-                <tr class="bottom">
-                    <th>봄/가을</th>
-                    <th>B.D.J</th>
-                    <td>백조바지</td>
-                    <td>8Y</td>
-                    <td>18,000</td>
                 </tr>
                 <tr class="bottom">
                     <th>봄/가을</th>
@@ -920,7 +907,13 @@
                 <col style="width:20%" span="5">
             </colgroup>
             <tbody>
-                
+                <tr class="ss skirt">
+                    <th>여름</th>
+                    <th>루이스미샤 치마</th>
+                    <td>플리워</td>
+                    <td>3Y</td>
+                    <td>87,500</td>
+                </tr>
                 <tr class="fw top">
                     <th>겨울</th>
                     <th>타오</th>
@@ -975,7 +968,7 @@
                     <th>타오 치마</th>
                     <td>크리스마스</td>
                     <td>4Y</td>
-                    <td>82,000</td>
+                    <td>82,000 <span class="n">물빠짐</span></td>
                 </tr>
                 <tr class="fw skirt">
                     <th>겨울</th>
@@ -1096,13 +1089,6 @@
                     <td>드라코</td>
                     <td>8086</td>
                     <td>2 X</td>
-                </tr>
-                <tr class="ss">
-                    <th>여름</th>
-                    <th>루이스미샤</th>
-                    <td>오버롤</td>
-                    <td>4</td>
-                    <td>50,000 </td>
                 </tr>
                 <tr class="ss">
                     <th>봄/가을</th>
@@ -1230,15 +1216,49 @@
                 <col style="width:25%" span="4">
             </colgroup>
             <tbody>
-                <tr class="fw">
-                    <th>봄/가을</th>
+                <tr>
+                    <th>타오 P</th>
+                    <td>팔콘</td>
+                    <td>6Y</td>
+                    <td>27,000</td>
+                </tr>
+                <tr>
+                    <th>타오 반팔</th>
+                    <td>보라</td>
+                    <td>10</td>
+                    <td>33,900</td>
+                </tr>
+                <tr>
+                    <th>타오 반필</th>
+                    <td>오버핏 옐로우</td>
+                    <td>6</td>
+                    <td>33,000</td>
+                </tr>
+                <tr>
+                    <th>B.D.J</th>
+                    <td>백조바지</td>
+                    <td>8Y</td>
+                    <td>18,000</td>
+                </tr>
+                <tr>
+                    <th>루이스미샤</th>
+                    <td>오버롤</td>
+                    <td>4</td>
+                    <td>50,000 </td>
+                </tr>
+                <tr>
+                    <th>타이니P</th>
+                    <td>흑청</td>
+                    <td>4</td>
+                    <td>51,720</td>
+                </tr>
+                <tr>
                     <th>보보 긴팔</th>
                     <td>코끼리</td>
                     <td>18</td>
                     <td>(33,000) 2 X</td>
                 </tr>
-                <tr class="fw">
-                    <th>겨울</th>
+                <tr>
                     <th>보보</th>
                     <td>핑크 스웻</td>
                     <td>36</td>
@@ -1600,7 +1620,7 @@
             </tbody>
         </table>
     </div>
-    <div class="etc group">
+    <!-- <div class="etc group">
         <p class="title">기타</p>
         <div class="num e-num">
             <div class="n-top">TOP:<span></span></div>
@@ -1611,27 +1631,27 @@
             <div class="n-set">SET:<span></span></div>
         </div>
         <ul class="list" style="color:f2f2f2">
-            <!-- <li class="top">게스 청반바지</li> -->
-            <!-- <li class="bottom">나이키 핑크 반바지</li> -->
-            <!-- <li class="set">조던 상하 셋트 + 레깅스</li> -->
-            <!-- <li class="bottom">자라 떙땡이 반바지</li> -->
-            <!-- <li class="ops">남대문 꽃롱블라우스</li> -->
-            <!-- <li class="ops">남대문 꽃원피스</li> -->
-            <!-- <li class="ops">남대문 나시원피스</li> -->
-            <!-- <li class="ops">남대문 꽃 나시원피스</li> -->
-            <!-- <li class="ops">남대문 청바지</li> -->
-            <!-- <li class="top">은진 나시</li> -->
-            <li class="skirt">성매 치마</li>
-            <li class="top">아디다스 불꽃티</li>
-            <!-- <li class="bottom">남대문 청반바지</li> -->
-            <!-- <li class="bottom">남대문 청치마</li> -->
-            <!-- <li class="skiry">갭 핑크멜빵치마</li> -->
-            <li class="top">폴로 셔츠 (핑크/데님)</li>
-            <li class="top">폴로 긴팔 (파랑/네이비)</li>
-            <li class="top">폴로 반팔 네이비</li>
-            <li class="set">자라 흰펀칭 나시/바지</li>
+            <li>게스 청반바지</li>
+            <li>나이키 핑크 반바지</li>
+            <li>조던 상하 셋트 + 레깅스</li>
+            <li>자라 떙땡이 반바지</li>
+            <li>남대문 꽃롱블라우스</li>
+            <li>남대문 꽃원피스</li>
+            <li>남대문 나시원피스</li>
+            <li>남대문 꽃 나시원피스</li>
+            <li>남대문 청바지</li>
+            <li>은진 나시</li>
+            <li>성매 치마</li>
+            <li>아디다스 불꽃티</li>
+            <li>남대문 청반바지</li>
+            <li>남대문 청치마</li>
+            <li>갭 핑크멜빵치마</li>
+            <li>폴로 셔츠 (핑크/데님)</li>
+            <li>폴로 긴팔 (파랑/네이비)</li>
+            <li>폴로 반팔 네이비</li>
+            <li>자라 흰펀칭 나시/바지</li>
         </ul>
-    </div>
+    </div> -->
     <script>
         $(function(){
             $('.group .title').on('click',function(){
@@ -1641,6 +1661,9 @@
             // var complete = $('.sell').find('.c');
             // $(complete).closest('tr').addClass('hide');
             // $('.hide, .etc').hide();
+            $('.comp .title').on('click',function(){
+                $(this).siblings('.list').toggle();
+            })
 
             //middle
             var ssmnTop = $('.middle .sst .top').length;
@@ -1681,6 +1704,19 @@
             $('.b-num .n-ops span').html(bnOps);
             var bnSet = $('.large .set').length;
             $('.b-num .n-set span').html(bnSet);
+            //ss21
+            var bnTop = $('.ss21 .top').length;
+            $('.s21-num .s21-top span').html(bnTop);
+            var bnBottom = $('.ss21 .bottom').length;
+            $('.s21-num .s21-bottom span').html(bnBottom);
+            var bnSkirt = $('.ss21 .skirt').length;
+            $('.s21-num .s21-skirt span').html(bnSkirt);
+            var bnJumper = $('.ss21 .jumper').length;
+            $('.s21-num .s21-jumper span').html(bnJumper);
+            var bnOps = $('.ss21 .ops').length;
+            $('.s21-num .s21-ops span').html(bnOps);
+            var bnSet = $('.ss21 .set').length;
+            $('.s21-num .s21-set span').html(bnSet);
             //acc
             var anShoes = $('.acc .shoes').length;
             $('.a-num .n-shoes span').html(anShoes);
