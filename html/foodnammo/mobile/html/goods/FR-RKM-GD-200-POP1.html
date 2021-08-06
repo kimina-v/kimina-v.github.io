@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>   
+
+<body style="overflow:hidden">
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<header id="header" class="header">
+		<script>include.header();</script>
+	</header>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+       
+		<div class="content-wrap">
+			// 컨텐츠 영역
+		</div><!--// content-wrap -->
+ 
+		<!-- ## 사이드 배너 :: side-quick-area  -->
+		<!-- <script>include.sidequick();</script> -->
+		<!--// ## 사이드 배너 ::  side-quick-area  -->
+	 </section>
+	 <!--// ========== 컨텐츠 영역 :: container ========== -->
+	
+	<!-- ========== 공통 푸터 :: footer ========== -->
+	<script>include.footer();</script>
+	<!--// ========== 공통 푸터 :: footer ========== -->
+</div><!--// wrap -->
+
+<!--
+	* 팝업 버튼에 ui-open-pop 클래스, 팝업 ID 작성 필요
+	ex) <a href="#popupSample-01" class=".... ui-open-pop"> ~ </a>
+	ex) <button type="button" data-layer="#popupSample-02" class="... ui-open-pop"> ~ </button>
+-->
+<!-- ========== 팝업 영역 ========== -->
+<div class="layer-wrap full-type" id="popup-sample01" style="display:block"> 
+    <div class="layer-pop goods-detail-pop">
+        <div class="layer-inner">
+            <div class="left-detail-area">
+                <div class="detail-head-top">
+                    <h4 class="tit">자세히 보기</h4>
+                    <div class="detail-head-box">
+                        <div class="dropdown-box box-md w-full">
+                            <a href="#none" class="dropdown-value"><span>꿀조합 추가옵션♪</span></a>
+                            <div class="dropdown-list">
+                                <ul>
+                                    <li class="first"><a href="#">상품옵션선택</a></li>
+                                    <li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
+                                    <li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
+                                    <li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
+                                    <li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
+                                    <li><a href="#">5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원)</a></li>
+                                    <li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
+                                    <li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
+                                </ul>
+                            </div>
+                        </div><!--// dropdown-box -->
+                    </div>
+                </div><!--// detail-head-top -->
+                
+                <div class="inner-scroll-area">
+                    <img src="../../images/_samples/@sample_goods_detail.png">
+                    <img src="../../images/_samples/@sample_goods_detail.png">
+                </div><!--// inner-scroll-area -->
+
+                <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button>
+            </div><!--// left-detail-area -->
+
+            <div class="right-option-area">
+                <div class="option-select-area ui-fix-option">
+                    <strong class="tit">옵션선택</strong>
+                    <div class="dropdown-box box-md w-full">
+                        <a href="#none" class="dropdown-value"><span>상품옵션선택</span></a>
+                        <div class="dropdown-list">
+                            <ul>
+                                <li class="first"><a href="#">상품옵션선택</a></li>
+                                <li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
+                                <!-- 품절일 경우 li에 addClass disabled, 재입고알림 신청 추가  -->
+                                <!-- <li class="disabled">
+                                    <a href="#">5팩(1팩당 3,900원) (+0)</a>
+                                    <a href="#" class="text-primary">재입고알림 신청</a>
+                                </li> -->
+                                <!--// 품절일 경우 li에 addClass disabled, 재입고알림 신청 추가  -->
+                                <li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
+                                <li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
+                                <li><a href="#">5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원)</a></li>
+                                <li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
+                                <li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
+                            </ul>
+                        </div>
+                    </div><!--// dropdown-box -->
+                  
+                    <div class="selected-options ui-fix-option">
+                        <ul>
+                            <li class="option-box">
+                                <div class="inner">
+                                    <p class="goods-name">눈꽃달콤 아이스 꿀고구마 1팩</p>
+                                    <div class="qty-group">
+                                        <button type="button" class="btn-qty" title="빼기"><i class="ico-minus-bold"></i><span class="blind">빼기</span></button>
+                                        <input type="text" id="" class="input-qty" value="0">
+                                        <button type="button" class="btn-qty" title="더하기"><i class="ico-plus-bold"></i><span class="blind">더하기</span></button>
+                                    </div><!--// qty-group  -->
+                                    <div class="price">
+                                        <p><span>18,000</span>원</p>
+                                    </div>
+                                    <button type="button" class="btn-x-sm2" title="삭제"><i class="ico-x-grey2"></i><span class="blind">삭제</span></button>
+                                </div><!--// inner -->
+                            </li><!--// option-box -->
+                            <li class="option-box">
+                                <div class="inner">
+                                    <p class="goods-name">눈꽃달콤 아이스 꿀고구마 1팩</p>
+                                    <div class="qty-group">
+                                        <button type="button" class="btn-qty" title="빼기"><i class="ico-minus-bold"></i><span class="blind">빼기</span></button>
+                                        <input type="text" id="" class="input-qty" value="0">
+                                        <button type="button" class="btn-qty" title="더하기"><i class="ico-plus-bold"></i><span class="blind">더하기</span></button>
+                                    </div><!--// qty-group  -->
+                                    <div class="price">
+                                        <p><span>18,000</span>원</p>
+                                    </div>
+                                    <button type="button" class="btn-x-sm2" title="삭제"><i class="ico-x-grey2"></i><span class="blind">삭제</span></button>
+                                </div><!--// inner -->
+                            </li><!--// option-box -->
+                            <li class="option-box">
+                                <div class="inner">
+                                    <p class="goods-name">눈꽃달콤 아이스 꿀고구마 1팩</p>
+                                    <div class="qty-group">
+                                        <button type="button" class="btn-qty" title="빼기"><i class="ico-minus-bold"></i><span class="blind">빼기</span></button>
+                                        <input type="text" id="" class="input-qty" value="0">
+                                        <button type="button" class="btn-qty" title="더하기"><i class="ico-plus-bold"></i><span class="blind">더하기</span></button>
+                                    </div><!--// qty-group  -->
+                                    <div class="price">
+                                        <p><span>18,000</span>원</p>
+                                    </div>
+                                    <button type="button" class="btn-x-sm2" title="삭제"><i class="ico-x-grey2"></i><span class="blind">삭제</span></button>
+                                </div><!--// inner -->
+                            </li><!--// option-box -->
+                            <li class="option-box">
+                                <div class="inner">
+                                    <p class="goods-name">눈꽃달콤 아이스 꿀고구마 1팩</p>
+                                    <div class="qty-group">
+                                        <button type="button" class="btn-qty" title="빼기"><i class="ico-minus-bold"></i><span class="blind">빼기</span></button>
+                                        <input type="text" id="" class="input-qty" value="0">
+                                        <button type="button" class="btn-qty" title="더하기"><i class="ico-plus-bold"></i><span class="blind">더하기</span></button>
+                                    </div><!--// qty-group  -->
+                                    <div class="price">
+                                        <p><span>18,000</span>원</p>
+                                    </div>
+                                    <button type="button" class="btn-x-sm2" title="삭제"><i class="ico-x-grey2"></i><span class="blind">삭제</span></button>
+                                </div><!--// inner -->
+                            </li><!--// option-box -->
+                            <li class="option-box">
+                                <div class="inner">
+                                    <p class="goods-name">눈꽃달콤 아이스 꿀고구마 1팩</p>
+                                    <div class="qty-group">
+                                        <button type="button" class="btn-qty" title="빼기"><i class="ico-minus-bold"></i><span class="blind">빼기</span></button>
+                                        <input type="text" id="" class="input-qty" value="0">
+                                        <button type="button" class="btn-qty" title="더하기"><i class="ico-plus-bold"></i><span class="blind">더하기</span></button>
+                                    </div><!--// qty-group  -->
+                                    <div class="price">
+                                        <p><span>18,000</span>원</p>
+                                    </div>
+                                    <button type="button" class="btn-x-sm2" title="삭제"><i class="ico-x-grey2"></i><span class="blind">삭제</span></button>
+                                </div><!--// inner -->
+                            </li><!--// option-box -->
+                        </ul>
+                    </div><!--// selected-options -->
+                    <div class="total-area">
+                        <span class="txt">총 상품금액</span>
+                        <p class="price"><strong>18,000</strong>원</p>
+                        <div class="btn-area">
+                            <!-- <a href="#" class="btn-basic-lg  btn-primary-line w435"><span>재입고 알림 신청</span></a> -->
+                            <button type="button" class="btn-basic-lg  btn-primary-line" onclick="cartPopOpen(this);"><span>장바구니</span></button>
+                            <!-- 장바구니 이동 안내 팝업 -->
+                            <div class="cart-pop">
+                                <div class="inner-box">
+                                    <p clas="txt">장바구니에 추가하였습니다.<br>장바구니로 이동하시겠습니까?</p>
+                                    <div class="btns">
+                                        <button type="button" class="btn-basic-sm2 btn-default ui-cart-close" onclick="cartPopClose(this);"><span>아니오</span></button>
+                                        <a href="#" class="btn-basic-sm2 btn-primary-ex"><span>예</span></a>
+                                    </div>
+                                </div>
+                            </div><!--// cart-pop -->
+                            <!--// 장바구니 이동 안내 팝업 -->
+                            <a href="#" class="btn-basic-lg btn-primary-ex"><span>바로구매</span></a>
+                        </div><!--// btn-area -->
+                    </div><!--// total-area -->
+                </div>
+            </div><!--// right-option-area -->
+        </div><!--// layer-inner -->
+    </div><!--// layer-pop  -->
+</div><!--// layer-pop-wrap #main-event -->
+<!-- ========== 팝업 영역 ========== -->
+</body>
+</html>

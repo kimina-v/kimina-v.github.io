@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>   
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<header id="header" class="header">
+		<script>include.header();</script>
+	</header>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+       
+        <div class="join-container">
+            <div class="join-area">
+                <h2 class="join-title">회원가입</h2>
+                <fieldset class="form-group-area">
+                    <legend>회원가입 항목 작성</legend>
+                    <div class="form-group">
+                        <div class="form-head">
+                            <label for="item101" class="form-label">아이디<i class="es2"></i></label>
+                        </div><!--// form-head -->
+                        <div class="input-group type-lg w-full">
+                            <input type="text" id="item101" class="input-text" placeholder="아이디">
+                            <span class="input-group-btn"><button type="button"  class="btn-form btn-default"><span>중복확인</span></button></span>
+                            <!--
+                                <button type="button"  class="btn-form btn-default btn-valid"><span>중복확인</span></button>
+                            -->
+                        </div>
+                        <p class="valid">사용 가능한 아이디입니다.</p>
+                        <p class="valid error">사용 할 수 없는 아이디입니다.</p>
+                    </div><!--// form-group -->
+    
+                    <div class="form-group">
+                        <div class="form-head">
+                            <label for="item102" class="form-label">비밀번호<i class="es2"></i></label>
+                        </div><!--// form-head -->
+                        <div class="input-group type-lg w-full">
+                            <label for="item102" class="blind">비밀번호 입력</label>
+                            <input type="password" id="item102" class="input-text" placeholder="6 ~ 16자 영문, 숫자, 특수문자 1개 이상씩 혼용 필수">
+                        </div>
+                        <div class="input-group type-lg w-full">
+                            <label for="item103" class="blind">비밀번호 확인</label>
+                            <input type="password" id="item103" class="input-text" placeholder="비밀번호 확인">
+                        </div>
+                        <!-- 비밀번호 조건 : 조건에 부합하지 않을 경우 addclass error, 조건에 부합할 경우 변경없음 -->
+                        <p class="text-guide-sm">※ 특수문자는 !, @, #, $, %, ^, &, * 만 사용 가능.</p>
+                        <p class="text-guide-sm error">※ 6 ~ 16자 영문, 숫자, 특수문자 1개 이상씩 혼용 필수.</p>
+                        <!--// 비밀번호 조건 -->
+                        <p class="valid error">비밀번호가 일치하지 않습니다.</p>
+                    </div><!--// form-group -->
+                    
+                    <div class="form-group">
+                        <div class="form-head">
+                            <label for="item104" class="form-label">이름<i class="es2"></i></label>
+                        </div><!--// form-head -->
+                        <div class="input-group type-lg w-full">
+                            <input type="text" id="item104" class="input-text" placeholder="2자 이상 입력">
+                        </div>
+                        <p class="valid error">2자 이상 입력해주세요.</p>
+                    </div><!--// form-group -->
+    
+                    <div class="form-group">
+                        <div class="form-head">
+                            <label for="item104" class="form-label">닉네임<i class="es2"></i></label>
+                        </div><!--// form-head -->
+                        <div class="input-group type-lg w-full">
+                            <input type="text" id="item104" class="input-text" placeholder="한글 8자, 영문 16자 이내">
+                            <span class="input-group-btn"><button type="button"  class="btn-form btn-default"><span>중복확인</span></button></span>
+                        </div>
+                        <p class="valid">사용 가능한 닉네임입니다.</p>
+                        <p class="valid error">사용 할 수 없는 닉네임입니다.</p>
+                    </div><!--// form-group -->
+    
+                    <div class="form-group">
+                        <div class="form-head">
+                            <label for="item105" class="form-label">휴대전화<i class="es2"></i></label>
+                        </div><!--// form-head -->
+                        <div class="input-group type-lg w-full">
+                            <input type="text" id="item105" class="input-text checked" placeholder="휴대폰 인증">
+                            <!-- 인증완료시 addClass checked -->
+                        </div>
+                    </div><!--// form-group -->
+    
+                    <div class="form-group">
+                        <div class="form-head">
+                            <label for="item106" class="form-label">이메일<i class="es2"></i></label>
+                        </div><!--// form-head -->
+                        <div class="input-group type-lg w-full">
+                            <input type="text" id="item106" class="input-text" placeholder="이메일 주소">
+                            <div class="input-group-form">
+                                <div class="ui-select select-box w135" data-value="">
+                                    <a href="#none" title="선택" class="select-value"><span>직접입력</span></a>
+                                    <div class="select-list">
+                                        <ul>
+                                            <li data-name="1"><a href="#none"><span>gmail.com</span></a></li>
+                                            <li data-name="2"><a href="#none"><span>naver.com</span></a></li>
+                                            <li data-name="3"><a href="#none"><span>daum.net</span></a></li>
+                                            <li data-name="4"><a href="#none"><span>hanmail.net</span></a></li>
+                                            <li data-name="4"><a href="#none"><span>nate.com</span></a></li>
+                                            <li data-name="4"><a href="#none"><span>lycos.co.kr</span></a></li>
+                                            <li data-name="4"><a href="#none"><span>hotmail.com</span></a></li>
+                                            <li data-name="4"><a href="#none"><span>outlook.com</span></a></li>
+                                            <li data-name="4"><a href="#none"><span>korea.com</span></a></li>
+                                            <li data-name="4"><a href="#none"><span>yahoo.com</span></a></li>
+                                            <li data-name="4"><a href="#none"><span>dreamwiz.com</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--// form-group -->
+    
+                    <div class="form-group">
+                        <div class="form-head">
+                            <label for="item106" class="form-label">생년월일<i class="es2"></i></label>
+                        </div><!--// form-head -->
+                        <div class="input-group type-lg w-full">
+                            <div class="input-group-cell">
+                                <div class="ui-select select-box w135" data-value="">
+                                    <a href="#none" title="선택" class="select-value"><span>1995</span></a>
+                                    <div class="select-list">
+                                        <ul>
+                                            <li data-name="1"><a href="#none"><span>list 1</span></a></li>
+                                            <li data-name="2"><a href="#none"><span>list 2</span></a></li>
+                                            <li data-name="3"><a href="#none"><span>list 3</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group-cell">
+                                <div class="ui-select select-box w135" data-value="">
+                                    <a href="#none" title="선택" class="select-value"><span>07</span></a>
+                                    <div class="select-list">
+                                        <ul>
+                                            <li data-name="1"><a href="#none"><span>list 1</span></a></li>
+                                            <li data-name="2"><a href="#none"><span>list 2</span></a></li>
+                                            <li data-name="3"><a href="#none"><span>list 3</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group-cell">
+                                <div class="ui-select select-box w135" data-value="">
+                                    <a href="#none" title="선택" class="select-value"><span>20</span></a>
+                                    <div class="select-list">
+                                        <ul>
+                                            <li data-name="1"><a href="#none"><span>list 1</span></a></li>
+                                            <li data-name="2"><a href="#none"><span>list 2</span></a></li>
+                                            <li data-name="3"><a href="#none"><span>list 3</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--// form-group -->
+    
+                    <div class="form-group">
+                        <div class="form-head">
+                            <label for="item106" class="form-label">성별</label>
+                        </div><!--// form-head -->
+                        <ul class="form-horiz-list">
+                            <li>
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-1" class="radio" name="radio-item-1" checked="checked"><label for="radio-1">남자</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-2" class="radio" name="radio-item-1"><label for="radio-2">여자</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div><!--// form-group -->
+                </fieldset>
+    
+                <div class="form-group">
+                    <div class="form-head">
+                        <h3 class="form-label">약관동의</h3>
+                    </div><!--// form-head -->
+                   <div class="terms-toggle-box">
+                        <div class="box-head">
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="check-201" class="checkbox ui-check-all" name="check-item-1" checked=""><label for="check-201"> 전체동의</label>
+                            </div>
+                        </div><!--// box-head -->
+                        <ul class="terms-inner-list">
+                            <!-- 회원가입 약관동의 -->
+                            <li class="ui-toggle-slide">
+                                <div class="inner-flex">
+                                    <div class="custom-checkbox left-item1">
+                                        <input type="checkbox" id="check-202" class="checkbox" name="check-item-1" checked=""><label for="check-202">회원가입 약관동의 <span class="text-primary-sm">(필수)</span></label>
+                                    </div>
+                                    <button type="button" class="btn-box-link1 ui-slide-btn"><span>내용보기</span><i class="ico-arr-toggle"></i></button>
+                                </div><!--// inner-flex -->
+                                <div class="terms-inner-box ui-slide-content">
+                                    <!-- 내용 -->
+                                    제1조(목적).
+                                    이 약관은 주식회사 (주)푸드나무(이하 “회사”라 한다)가 
+                                    운영하는 랭킹닭컴 사이버 몰(이하 "몰"이라 한다)에서 
+                                    제공하는 인터넷 관련 서비스(이하 "서비스"라 한다)를 
+                                    이용함에 있어 사이버 몰과 이용자의 권리·의무 및 책임사항을 
+                                    규정함을 목적으로 합니다.
+                                    <!--// 내용 -->
+                                </div><!--// ui-slide-content -->
+                            </li><!--// ui-toggle-slide -->
+                            <!--// 회원가입 약관동의 -->
+    
+                            <!-- 개인정보처리방침 동의 -->
+                            <li class="ui-toggle-slide">
+                                <div class="inner-flex">
+                                    <div class="custom-checkbox left-item1">
+                                        <input type="checkbox" id="check-203" class="checkbox" name="check-item-1" checked=""><label for="check-203">개인정보처리방침 동의<span class="text-primary-sm">(필수)</span></label>
+                                    </div>
+                                    <button type="button" class="btn-box-link1 ui-slide-btn"><span>내용보기</span><i class="ico-arr-toggle"></i></button>
+                                </div><!--// inner-flex -->
+                                <div class="terms-inner-box ui-slide-content">
+                                    <!-- 내용 -->
+                                    제1조(목적).
+                                    이 약관은 주식회사 (주)푸드나무(이하 “회사”라 한다)가 
+                                    운영하는 랭킹닭컴 사이버 몰(이하 "몰"이라 한다)에서 
+                                    제공하는 인터넷 관련 서비스(이하 "서비스"라 한다)를 
+                                    이용함에 있어 사이버 몰과 이용자의 권리·의무 및 책임사항을 
+                                    규정함을 목적으로 합니다.
+                                    <!--// 내용 -->
+                                </div><!--// ui-slide-content -->
+                            </li><!--// ui-toggle-slide -->
+                            <!--// 개인정보처리방침 동의 -->
+                            <!-- 이메일수신동의, SMS 수신동의 -->
+                            <li>
+                                <div class="inner-flex">
+                                    <div class="custom-checkbox left-item1">
+                                        <input type="checkbox" id="check-204" class="checkbox" name="check-item-1"><label for="check-204">이메일수신동의<span class="text-guide-sm">(선택)</span></label>
+                                    </div>
+                                </div><!--// inner-flex -->
+                            </li>
+                            <li>
+                                <div class="inner-flex">
+                                    <div class="custom-checkbox left-item1">
+                                        <input type="checkbox" id="check-205" class="checkbox" name="check-item-1"><label for="check-205">SMS 수신동의 <span class="text-guide-sm">(선택)</span></label>
+                                    </div>
+                                </div><!--// inner-flex -->
+                            </li>
+                            <!--// 이메일수신동의, SMS 수신동의 -->
+                        </ul>
+                   </div><!--// terms-toggle-box-->
+    
+                   <ul class="bl-list-type2">
+                        <li>회원정보 수정에서 언제든지 수신거부 하실 수 있습니다.</li>
+                        <li>상품 구매정보는 수신동의 여부 관계없이 받아 보실 수 있습니다.</li>
+                    </ul>
+                </div><!--// form-group -->
+    
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="item107" class="form-label">추천아이디</label>
+                    </div><!--// form-head -->
+                    <div class="input-group type-lg w-full">
+                        <input type="text" id="item107" class="input-text" placeholder="아이디를 입력해주세요">
+                    </div>
+                </div><!--// form-group -->
+    
+                <div class="btn-bottom-area">
+                    <button type="button" class="btn-basic-lg2 btn-primary btn-dim"><span>회원가입</span></button><!-- 활성화시 removeClass btn-dim -->
+                </div><!--// btn-bottom-area -->
+            </div><!--// join-area -->
+        </div>
+        
+		<!-- ## 사이드 배너 :: side-quick-area  -->
+		<!-- <script>include.sidequick();</script> -->
+		<!--// ## 사이드 배너 ::  side-quick-area  -->
+	 </section>
+	 <!--// ========== 컨텐츠 영역 :: container ========== -->
+	
+	<!-- ========== 공통 푸터 :: footer ========== -->
+	<script>include.footer();</script>
+	<!--// ========== 공통 푸터 :: footer ========== -->
+</div><!--// wrap -->
+
+<!-- ========== 팝업 영역 ========== -->
+
+<!-- ========== 팝업 영역 ========== -->
+</body>
+</html>

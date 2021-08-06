@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>   
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<header id="header" class="header">
+		<script>include.header();</script>
+	</header>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">       
+		<div class="content-wrap benefits-md">
+            <div class="tab-menu bg-gray pt5">
+                <ul>
+                    <li class="current"><a href="#tab1-1"><span>MD추천</span></a></li>
+                    <li><a href="#tab1-2"><span>테마추천</span></a></li>
+                </ul>
+            </div>
+            <div class="benefits-md-view">
+                <div class="bmv-left">
+                    <select class="select w140">
+                        <option value="" selected="">7월 혜택보기</option>
+                        <option value="">6월 혜택보기</option>
+                        <option value="">5월 혜택보기</option>
+                    </select>
+                </div>
+                <div class="bmv-right">
+                    <button type="button" data-layer="#popupSample-01" class="ui-open-pop btn-basic-md2 btn-card"><i class="ico-btn-card"></i><span>카드뷰</span></button>
+                </div>
+            </div>
+            <a href="#" class="benefits-md-bnr">
+                <img src="../../images/img/benefits_md_01.png" alt="" />
+            </a>    
+            <a href="#" class="benefits-md-bnr">
+                <img src="../../images/img/benefits_md_02.png" alt="" />
+            </a>       
+            <a href="#" class="benefits-md-bnr">
+                <img src="../../images/img/benefits_md_03.png" alt="" />
+            </a>
+            <a href="#" class="benefits-md-bnr">
+                <img src="../../images/img/benefits_md_04.png" alt="" />
+            </a>    
+            <a href="#" class="benefits-md-bnr">
+                <img src="../../images/img/benefits_md_05.png" alt="" />
+            </a>   
+            <div class="md-qna-box bg-gray pt10">
+                <div class="md-qna-top">
+                    <span class="md-qna-tit">
+                        <img src="../../images/img/md-qna-tit.png" alt="" />
+                    </span>
+                    <span class="md-qna-desc">비방이나 양도 광고성, 욕설, 도배글, 개인정보가 포함된 글은 예고없이 삭제되거나 노출이 제한될 수 있습니다.</span>
+                </div>
+            </div>  
+            <ul class="md-qna-list">
+                <li>
+                    <div class="md-qna-questioner">
+                        <span class="md-qna-left">홍길동</span>
+                        <span class="md-qna-right">2021.07.23 10:51</span>
+                    </div>
+                    <div class="md-speech-bubble">
+                        <span class="md-qna-question">오렌지 멤버스를 가입하면<br>웰컴 기프트 상품은 무료인가요?</span>
+                        <span class="ico_md_qna"><img src="../../images/icon/ico_md_qna.png" alt="" /></span>
+                        <span class="md-qna-answer">
+                            <strong>MD</strong>
+안녕하세요 고객님~! 종민 MD입니다! 오렌지멤버스 웰컴 기프트는 오렌지멤버스 가입 시 3가지 세트 중 원하시는 1세트를 무료로 보내드립니다! 웰컴 기프트 외에도 오렌지멤버스의 다양한 혜택이 준비되어 있으니 앞으로 많은 관심 부탁드립니다! 더 궁금하신 사항이 있으시다면 1:1 문의 혹은, 고객센터(02-6405-8088)로 문의주시면 신속하게 답변 드리겠습니다~ 감사합니다!
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="md-qna-questioner">
+                        <span class="md-qna-left">멍멍냥냥</span>
+                        <span class="md-qna-right">2021.07.23 10:51</span>
+                    </div>
+                    <div class="md-speech-bubble">
+                        <span class="md-qna-question">카드할인 알려주세요</span>                        
+                    </div>
+                </li>
+            </ul>                                     
+		</div><!--// content-wrap --> 
+		<!-- ## 사이드 배너 :: side-quick-area  -->
+		<script>include.sidequick();</script>
+		<!--// ## 사이드 배너 ::  side-quick-area  -->
+        <!-- 하단 고정 메뉴 -->
+		 <script>include.bottomNav();</script>
+		 <!--// 하단 고정 메뉴 -->
+	 </section>
+	 <!--// ========== 컨텐츠 영역 :: container ========== -->
+	<div class="md-ask-fixed">
+        <div class="md-ask-box">
+            <input type="text" placeholder="MD에게 물어보세요" />
+            <a href="#">등록</a>
+        </div>
+    </div>
+	<!-- ========== 공통 푸터 :: footer ========== -->
+	<script>include.footer();</script>
+	<!--// ========== 공통 푸터 :: footer ========== -->
+    <div class="layer-wrap" id="popupSample-01" tabindex="0" style="display: none;">
+        <div class="layer-pop card-view-box">
+            <div class="layer-inner">
+                <div class="layer-body">
+                    <div class="swiper-container card-view-slide">
+                        <div class="swiper-wrapper">
+                          <a href="#" class="swiper-slide">
+                            <img src="../../images/img/benefits_md_01.png" alt="" />
+                          </a>
+                          <a href="#" class="swiper-slide">
+                            <img src="../../images/img/benefits_md_02.png" alt="" />
+                          </a>
+                        </div>                        
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <button type="button" class="btn-x-sm ui-close-pop" title="닫기"><i class="ico-x-normal"></i><span class="blind">닫기</span></button>
+            </div>
+        </div><!--// layer-pop  -->
+    </div>
+</div><!--// wrap -->
+
+<script>
+	$(function () {
+        $(window).scroll(function(){
+            if($(".benefits-md-view").offset().top < $(window).scrollTop()){
+                $(".benefits-md-view .bmv-right .btn-card").addClass("fixed-on");
+            }else{
+                $(".benefits-md-view .bmv-right .btn-card").removeClass("fixed-on");
+            }
+        })
+        /*카드뷰 슬라이드*/
+        var swiper = new Swiper(".card-view-slide", {
+            pagination: {
+            el: ".swiper-pagination",
+            },
+            observer: true,
+            observeParents: true,
+        });
+        
+	});
+</script>
+</body>
+</html>

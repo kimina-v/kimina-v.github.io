@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>   
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<header id="header" class="header">
+		<script>include.header();</script>
+	</header>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+       
+		<div class="content-wrap">
+
+			<div class="frame-full head-mypage">
+				<h2 class="blind">마이페이지</h2>
+				<div class="user-info-box">
+					<div class="inner">
+						<div class="column user-info">
+							<span class="img"><img src="../../images/img/img_mypage_user.png" alt="랭킹닭컴 마이페이지 이미지" /></span>
+							<div class="txt">							
+								<p class="greeting"><strong class="name">경탱이탱이땅땅땅</strong>님 반갑습니다.</p>
+								<ul class="sep-list type3">
+									<li>닭과장</li>
+									<li>1% 적립</li>
+								</ul>
+								<p class="level-tip">140,600원 더 구매 시, 닭차장 진급!</p>
+							</div>
+							<a href="#" class="btn-rud-sm btn-default-ex"><span>멤버십 혜택</span></a>
+						</div><!--// user-info -->
+						<dl class="column order">
+							<dt>주문/배송</dt>
+							<dd><strong class="num">3</strong>건</dd>
+						</dl><!--// order -->
+						<dl class="column coupon">
+							<dt>쿠폰</dt>
+							<dd><strong class="num">3</strong>개</dd>
+						</dl><!--// coupon -->
+						<dl class="column point">
+							<dt>포인트</dt>
+							<dd class="text-primary"><strong class="num">3,300P</strong></dd>
+						</dl><!--// point -->
+					</div><!--// inner -->
+				</div><!--// user-info-box -->
+			</div><!--// frame-full -->
+
+			<div class="frame-sm">
+				<div class="frame-left">
+					<div class="aside-mypage">
+						<nav class="aside-menu">
+							<ul class="menu-list">	
+								<li>
+									<a href="#" class="menu">주문관리</a>
+									<ul class="depth2">
+										<li><a href="#">주문내역</a></li><!-- 활성화될 경우 li에 addClass current  -->
+										<li><a href="#">취소/반품 내역</a></li>
+										<li><a href="#">재입고 알림 상품</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="menu">혜택관리</a>
+									<ul class="depth2">
+										<li class="current"><a href="#">쿠폰</a></li>
+										<li><a href="#">포인트</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="menu">활동관리</a>
+									<ul class="depth2">
+										<li><a href="#">최근 본 상품</a></li>
+										<li><a href="#">찜한상품</a></li>
+										<li><a href="#">관심브랜드</a></li>
+										<li><a href="#">1:1문의</a></li>
+										<li><a href="#">상품후기</a></li>
+										<li><a href="#">상품문의내역</a></li>
+										<li><a href="#">식단상담</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="menu">VIP전용관</a>
+								</li>
+								<li>
+									<a href="#" class="menu">오렌지멤버스</a>
+								</li>
+								<li>
+									<a href="#" class="menu">회원정보관리</a>
+									<ul class="depth2">
+										<li><a href="#">배송지 관리</a></li>
+										<li><a href="#">내 정보수정</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav><!--// menu-mypage -->
+					</div><!--// aside-mypage -->
+				</div><!--// frame-left -->
+
+				<div class="frame-right">
+					<div class="frame-cnt-inner">
+						<div class="menu-title-area">
+							<h3 class="title-menu">쿠폰</h3>
+						</div><!--// menu-title-area -->
+
+						<div class="box-grey-type3 coupon-box">
+							<fieldset>
+								<legend>쿠폰 번호 입력</legend>
+								<div class="input-group inline-type">
+									<label for="item-1" class="input-group-txt label">쿠폰번호를 입력해주세요</label>
+									<input type="text" id="item-1" class="input-text w220">
+									<span class="input-group-btn">
+										<button type="button" class="btn-form btn-grey2 w80"><span>쿠폰등록</span></button>
+									</span><!--// input-group-btn -->
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="board-list">
+							<table>
+								<caption>쿠폰 목록</caption>
+								<colgroup>
+									<col style="width:auto"><col style="width:120px"><col style="width:180px"><col style="width:120px"><col style="width:100px">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">쿠폰명</th>
+										<th scope="col">혜택</th>
+										<th scope="col">사용조건</th>
+										<th scope="col">유효기간</th>
+										<th scope="col">바로가기</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-left">[뉴페이스] 네이처엠 치즈품은 고구마</td>
+										<td class="text-center"><span class="text-primary">10% 할인</span></td>
+										<td class="text-center">
+											<div class="in-tb">
+												<p class="text-grey">30,000원 이상 구매</p>
+												<button type="button" class="btn-icon-mark ui-tooltip ui-hover"><i class="ico-info2"></i><span class="blind">안내</span></button>
+												<!-- 툴팁내용 -->
+												<div class="tooltip-box-blk ui-tooltipbox-bottom">
+													<div class="inner">
+														<p class="tip-message">특급배송 상품을 30,000원 이상 구매 시, 사용하실 수 있는 쿠폰입니다.</p>
+													</div>
+												</div>
+												<!--// 툴팁내용 -->
+											</div>
+										</td>
+										<td class="text-center">
+											22일 남음
+											<p class="text-grey">2020.04.30까지</p>
+										</td>
+										<td class="text-center">
+											<a href="#" class="btn-icon-link" title="바로가기"><span class="blind">바로가기</span></a>
+										</td>
+									</tr>
+									<tr>
+										<td class="text-left">[뉴페이스] 네이처엠 치즈품은 고구마</td>
+										<td class="text-center"><span class="text-primary">특급배송 무료</span></td>
+										<td class="text-center">
+											<div class="in-tb">
+												<button type="button" class="btn-icon-mark ui-tooltip ui-hover"><i class="ico-info2"></i><span class="blind">안내</span></button>
+												<!-- 툴팁내용 -->
+												<div class="tooltip-box-blk ui-tooltipbox-bottom">
+													<div class="inner">
+														<p class="tip-message">특급배송 상품을 30,000원 이상 구매 시, 사용하실 수 있는 쿠폰입니다.</p>
+													</div>
+												</div>
+												<!--// 툴팁내용 -->
+											</div>
+										</td>
+										<td class="text-center">
+											22일 남음
+											<p class="text-grey">2020.04.30까지</p>
+										</td>
+										<td class="text-center">
+											<a href="#" class="btn-icon-link" title="바로가기"><span class="blind">바로가기</span></a>
+										</td>
+									</tr>
+									<tr>
+										<td class="text-left">[뉴페이스] 네이처엠 치즈품은 고구마</td>
+										<td class="text-center"><span class="text-primary">특급배송 무료</span></td>
+										<td class="text-center">- </td>
+										<td class="text-center">
+											22일 남음
+											<p class="text-grey">2020.04.30까지</p>
+										</td>
+										<td class="text-center">
+											<a href="#" class="btn-icon-link" title="바로가기"><span class="blind">바로가기</span></a>
+										</td>
+									</tr>
+									<tr>
+										<td class="text-left">[뉴페이스] 네이처엠 치즈품은 고구마</td>
+										<td class="text-center"><span class="text-primary">10% 할인</span></td>
+										<td class="text-center">
+											<div class="in-tb">
+												<p class="text-grey">30,000원 이상 구매</p>
+												<button type="button" class="btn-icon-mark ui-tooltip ui-hover"><i class="ico-info2"></i><span class="blind">안내</span></button>
+												<!-- 툴팁내용 -->
+												<div class="tooltip-box-blk ui-tooltipbox-bottom">
+													<div class="inner">
+														<p class="tip-message">특급배송 상품을 30,000원 이상 구매 시, 사용하실 수 있는 쿠폰입니다.</p>
+													</div>
+												</div>
+												<!--// 툴팁내용 -->
+											</div>
+										</td>
+										<td class="text-center">
+											22일 남음
+											<p class="text-grey">2020.04.30까지</p>
+										</td>
+										<td class="text-center">
+											<a href="#" class="btn-icon-link" title="바로가기"><span class="blind">바로가기</span></a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!--// board-list -->
+
+						<div class="pagination">
+							<!-- <a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a> -->
+							<a href="#" class="on"><span>1</span></a>
+							<a href="#"><span>2</span></a>
+							<a href="#"><span>3</span></a>
+							<a href="#"><span>4</span></a>
+							<a href="#"><span>5</span></a>
+							<a href="#"><span>6</span></a>
+							<a href="#"><span>7</span></a>
+							<a href="#"><span>8</span></a>
+							<a href="#"><span>9</span></a>
+							<a href="#"><span>10</span></a>
+							<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
+						</div>
+
+						<div class="box-grey-type2">
+							<ul class="dot-list-type1">
+								<li>쿠폰은 현금으로 반환되지 않으며, 타인에게 양도할 수 없습니다.</li>
+								<li>유효기간이 만료된 쿠폰은 사용하실 수 없으며, 재 발행 되지 않습니다.</li>
+								<li>유효기간이 6개월이 지난 만료된 쿠폰은 삭제됩니다.</li>
+							</ul>
+						</div>
+
+					</div><!--// frame-cnt-inner -->
+				</div><!--// frame-sm -->
+			</div><!--// frame-right -->
+		</div><!--// content-wrap -->
+	 </section>
+	 <!--// ========== 컨텐츠 영역 :: container ========== -->
+	
+	<!-- ========== 공통 푸터 :: footer ========== -->
+	<script>include.footer();</script>
+	<!--// ========== 공통 푸터 :: footer ========== -->
+</div><!--// wrap -->
+
+<!-- ========== 팝업 영역 ========== -->
+
+<!-- ========== 팝업 영역 ========== -->
+</body>
+</html>

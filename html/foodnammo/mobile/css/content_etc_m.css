@@ -1,0 +1,24 @@
+/* 회사소개 */
+.company-intro-wrap{padding-top:70px;}
+.company-intro-wrap .inner{position:relative; width:1000px; margin:0 auto;}
+.company-family-site{overflow:hidden; position:absolute; bottom:50px; left:90px}
+.company-family-site > li{float:left; padding:20px}
+
+/* 이용약관 & 개인정보처리방침 (푸터메뉴) */
+.terms-content-wrap .inner{width:100%; margin:0 auto; background:#fff; padding:30px 20px;}
+.terms-content-wrap .tab-grid-span2 > li{text-align:center;}
+.terms-content-wrap .tab-grid-span2 > li a{padding:3px 0;}
+.terms-content-wrap .tab-content{margin-top:30px}
+.terms-form,
+.terms-form h2,.terms-form h3,.terms-form h4{font-size:13px; font-weight:400; line-height:1.8;}
+.terms-form h3 ~ .terms-tb{margin-top:20px;}
+.terms-form p ~ h3,
+.terms-form ul ~ h3,
+.terms-form ul ~ p{margin-top:30px;}
+.terms-form h3 + p{margin-top:0}
+.terms-tb{width:100%;}
+.terms-tb th,.terms-tb td{border:1px solid #333; padding:10px; vertical-align:middle; text-align:center;}
+.privacy-form h4{margin-top:20px;}
+/* 개인정보처리방침 팝업(배송업체/입점사) */
+.li-shipper li{padding:0 20px 10px;}
+

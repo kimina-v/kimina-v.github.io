@@ -1,0 +1,36 @@
+/*========================================================
+ 프로모션
+========================================================*/
+/* 이벤트 */
+.page-head ~ .event-list-wrap{margin-top:30px;}
+.view-list-top{position:relative; margin-bottom:20px;}
+.view-list-top .tit{display:inline-block; font-size:20px; font-weight:500; vertical-align:middle; margin-right:20px;}
+.view-list-top .sep-list{display:inline-block; vertical-align:middle;}
+.view-list-top .btn-option{position:absolute; top:0; right:0;}
+
+.event-item{position:relative; }
+.event-item .img{width:540px; height:170px; overflow:hidden; border-radius:3px;}
+.event-item .txt{padding-bottom:10px; margin-top:10px;}
+.event-item .txt .date{color:#999; font-size:14px; font-family:'Roboto';}
+.event-item .txt .tit{font-size:18px; font-weight:500;}
+
+.page-bottom{position:relative}
+.page-bottom .right-area{position:absolute; top:0; right:0;}
+.page-bottom .right-area .input-group-wrap{width:350px;}
+.page-bottom .pagination{padding:9px 0}
+
+.prev-list-bottom{border-bottom:1px solid #ccc;}
+.prev-list-bottom .prev-list-tb{display:table; width:100%; table-layout:fixed;}
+.prev-list-tb .list-tb-item{display:table-row}
+.prev-list-tb .list-tb-item .cla-cell{display:table-cell; width:130px; padding:20px 0; text-align:center; border-top:1px solid #ccc}
+.prev-list-tb .list-tb-item .tit-cell{display:table-cell; width:auto; padding:20px 0; border-top:1px solid #ccc}
+.prev-list-tb .list-tb-item .tit-cell > a{display:block; max-width:90%; color:#666}
+.prev-list-tb .list-tb-item .date-cell{display:table-cell; width:140px; padding:20px 0; text-align:center; border-top:1px solid #ccc}
+.prev-list-tb .list-tb-item .date-cell .date{color:#666;}
+.prev-list-tb .list-tb-item .cla-cell .txt{font-weight:700;}
+.prev-list-tb .list-tb-item .cla-cell [class*="ico-arrfill-"]{margin-left:10px;}
+.prev-list-tb .list-tb-item .cla-cell [class*="ico-arrfill-"]:after{border-width:5px 0 5px 6px;}
+
+.event-list-wrap ~ .page-bottom{margin-top:60px;}
+.prev-list-bottom ~ .page-bottom{margin-top:30px;}
+.view-content-area ~ .prev-list-bottom{margin-top:80px;}

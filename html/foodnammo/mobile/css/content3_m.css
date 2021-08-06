@@ -1,0 +1,142 @@
+/*보냉 팝업*/
+/* .coolant-pop-wrap{width:350px !important;} */
+.layer-pop.coolant-pop-wrap .layer-inner{min-height: auto;}
+.layer-pop.coolant-pop-wrap .layer-inner .coolant-pop-con{box-sizing: border-box;padding: 25px;}
+.layer-pop.coolant-pop-wrap .layer-inner .coolant-pop-con .top-noti{font-size: 13px; font-weight: 400; color: #fff; display: inline-block; width: auto;
+height: auto; background-color: #ff6001; text-align: center; line-height: 1; border-radius: 14px; margin-bottom: 20px;letter-spacing: -0.5px;box-sizing: border-box;padding: 5px 10px;}
+.layer-pop.coolant-pop-wrap .layer-inner .coolant-pop-con .top-big-txt{ font-size: 17px; color: #333; line-height: 27px; margin-bottom: 8px; font-weight: 500;}
+.layer-pop.coolant-pop-wrap .layer-inner .coolant-pop-con .top-txt{font-size: 13px; color: #666; line-height: 19px; word-break: keep-all;}
+.layer-pop.coolant-pop-wrap .chk-ice-layer{border: 1px solid #888; border-radius: 4px; height: 60px; line-height: 58px;width: 100%;margin-top:20px;padding-left: 20px;}
+.layer-pop.coolant-pop-wrap .chk-ice-layer .custom-checkbox{display: block; width: 100%; height: 100%;}
+.layer-pop.coolant-pop-wrap .chk-ice-layer .custom-checkbox input[type="checkbox"] + label{display: block; width: 100%; height: 100%; line-height:58px;}
+.layer-pop.coolant-pop-wrap .chk-ice-layer .custom-checkbox .checkbox-circle + label:before{top:50%; transform: translateY(-50%);}
+
+/*무이자 할부 안내 팝업*/
+.interest-free-wrap{width:777px !important;}
+.layer-pop.interest-free-wrap .layer-inner{min-height: auto;height: 500px;overflow-y: auto;box-sizing: border-box;padding: 25px;}
+.layer-pop.interest-free-wrap .layer-inner .ui-close-pop{ top: 44px; right: 44px;}
+
+/*개인정보 제3자 제공동의 팝업*/
+.privacy-agree-wrap{width:430px !important;height:480px !important;}
+.layer-pop.privacy-agree-wrap .layer-inner{min-height: auto;}
+.layer-pop.privacy-agree-wrap .layer-inner .privacy-agree-con{box-sizing: border-box;padding: 25px;}
+.layer-pop.privacy-agree-wrap .layer-inner .privacy-agree-con .tit-box{font-size: 16px;font-weight: 500;padding-bottom: 15px;border-bottom: 1px solid #707070;margin-bottom: 20px;}
+.layer-pop.privacy-agree-wrap .layer-inner .privacy-agree-con .txt-box{width: 100%;height: 360px; overflow-y: auto;font-size: 13px;}
+.layer-pop.privacy-agree-wrap .layer-inner .ui-close-pop{ top: 21px; right: 23px;}
+/* 20210601 오렌지멤버스 팝업 추가 */
+
+.txt-box h5,.txt-box h6{font-size: 13px; font-weight:400;}
+.txt-box .inner{line-height:1.8}
+.pop-table{table-layout:fixed; width:100%;}
+.pop-table td,.pop-table th{border: 1px solid #333; text-align: center; padding: 10px; vertical-align: middle;}
+.pop-table th{font-weight:500;}
+.txt-box .inner h6 + .pop-table,
+.txt-box .inner .pop-table + p,
+.txt-box .inner ul + p,
+.txt-box .inner ul + h6,
+.txt-box .inner p + h6{margin-top:20px;}
+
+
+/*결제대행서비스 이용 동의*/
+.layer-pop.privacy-agree-wrap .acc-box{width: 100%;height: 380px;overflow: hidden;padding-top: 1px;}
+.layer-pop.privacy-agree-wrap .acc-box .accordion-menu{width: 100%;height: 40px;box-sizing: border-box; border: 1px solid #ddd;font-size: 13px;font-weight: 400;color: #333;text-align: left;padding: 0 20px;margin-top: -1px;position: relative;}
+.layer-pop.privacy-agree-wrap .acc-box .accordion-menu.on{border-bottom: 0;}
+.layer-pop.privacy-agree-wrap .acc-box .accordion-menu i{display: block;position: absolute;top: 12px;right: 20px;z-index: 10;}
+.layer-pop.privacy-agree-wrap .acc-box .accordion-con{display:none;width: 100%;height: 220px;overflow-y: scroll;box-sizing: border-box; border: 1px solid #ddd;font-size: 12px;font-weight: 400;color: #333;text-align: left;border-top: 0;padding: 0 20px;}
+
+/*카드등록 팝업*/
+/* .card-registration-con{width: 510px !important;} 
+.card-registration-con .layer-inner{min-height: auto;}*/
+/* .card-registration-con .layer-inner .privacy-agree-con{box-sizing: border-box;} */
+.card-registration-con .top-box{width:100%; height:102px; overflow:hidden; position:relative; box-sizing: border-box; padding:28px 15px 0; background: #f1f1f1 url("../images/img/img_character_top.png") right bottom no-repeat; background-size:contain}
+.card-registration-con .top-box h4{ font-size: 24px;color:#333;font-weight: 400;line-height: 32.69PX;}
+.card-registration-con .top-box .top-txt{ color: #888;font-size: 15px;line-height: 20.43px; letter-spacing: -1px;margin-top:0px;}
+.card-registration-con .top-box img{display: block;position: absolute;z-index: 10;bottom: 0;right: 216PX;width: 80px;height: 80px;}
+.card-registration-con .mid-box{width: 100%;display: block;box-sizing: border-box;padding:20px 15px 20px;}
+.card-registration-con .mid-box .form-border-box{width: 100%;box-sizing: border-box;border:1px solid #ddd;padding: 8px 15px 8px 12px;}
+.card-registration-con .mid-box .form-border-box + .form-border-box{border-top:0;}
+.card-registration-con .mid-box .form-border-box .input-text{border:0; padding:0; }
+.card-registration-con .mid-box .form-border-box .input-group > .input-group-txt{padding:0 10px 0 0; }
+.card-registration-con .mid-box .form-border-box input[type="number"]::-webkit-outer-spin-button{-webkit-appearance: none; margin: 0;}
+.card-registration-con .mid-box .form-border-box input[type="number"]::-webkit-inner-spin-button{-webkit-appearance: none; margin: 0;}
+.card-registration-con .mid-box .input-group > .input-group-txt.rk-card-tag{width:85px;font-size: 14px;}
+.card-registration-con .mid-box .input-group > .input-group-txt.card{width: calc(100% - 120px);font-size: 16px;}
+.card-registration-con .mid-box .form-rk-agree{width: 100%;box-sizing: border-box;padding: 10px 15px 0;}
+.card-registration-con .mid-box .form-rk-agree .ckd-all-box{border-bottom: 1px solid #ddd;padding-bottom: 10px;box-sizing: border-box;width: 100%;font-size: 13px;}
+.card-registration-con .mid-box .form-rk-agree{width: 100%;box-sizing: border-box;padding:20px 0 0;}
+.card-registration-con .mid-box .input-group > .input-group-txt.rk-payment{font-size:17px;}
+.card-registration-con .mid-box .input-group > .input-group-txt .org-name{font-size: 16px;width: 292px;display: block;}
+.card-registration-con .mid-box .input-group > .select-box .select-value{border: 0;font-size: 16px;}
+.card-registration-con .mid-box .rk-card-noti{color: #93A0B5;font-size: 13px;margin-top:10px;}
+
+/* .card-registration-con .bot-box{width: 100%;box-sizing: border-box;padding: 30px 40px 40px;text-align: center;vertical-align: top;} */
+/* .card-registration-con .bot-box .btn-basic-xlg{min-width: 208px;}
+.card-registration-con .bot-box.btn-bottom-area > [class*="btn-"]:first-child{margin: 0;} */
+
+.card-registration-con .acc-box{width: 100%;height: auto;overflow: hidden;padding-top: 1px;}
+.card-registration-con .acc-box .acc-tit-box{width: 100%;height: auto;box-sizing: border-box; border: 0;font-size: 13px;font-weight: 400;color: #888;text-align: left;padding: 6px 0px;margin-top: 0px;position: relative;}
+.card-registration-con .acc-box .accordion-menu{position: absolute;display: block;width: 25px;height: 25px;top: 3px;right:-5px;z-index: 10;}
+.card-registration-con .acc-box .accordion-menu.on{border-bottom: 0;}
+.card-registration-con .acc-box .accordion-con{display:none;width:100%;height: 80px;overflow-y: scroll;box-sizing: border-box; border: 0;font-size: 11px;font-weight: 400;color: #666;text-align: left;border-top: 0; background:#f8f8f8; padding: 10px; margin-bottom: 10px;margin-right: 11px;}
+
+/* .card-registration-con .layer-inner .ui-close-pop{top:38px;right: 30px;} */
+
+/*카드등록 팝업 다음*/
+.card-registration-con.next .top-box{height: 102px;}
+.card-registration-con .mid-box .payment-details-area{width: 100%;}
+.card-regist-tb{display:table; width:100%; table-layout:fixed; border:1px solid #ddd; border-bottom:0}
+.card-regist-tb .row{display:table-row}
+.card-regist-tb .row .tit-cell{width:85px; display:table-cell; vertical-align:middle; border-bottom:1px solid #ddd; padding:20px 12px; font-size:14px;}
+.card-regist-tb .row .cnt-cell{width:auto; display:table-cell; vertical-align:middle; border-bottom:1px solid #ddd; padding:20px 12px; font-size:15px}
+.card-regist-tb .row .cnt-cell  img{height:20px}
+.card-regist-tb .row .cnt-cell .text-elps{display:inline-block; max-width:70%; vertical-align: top;}
+.card-regist-tb .row .cnt-cell .select{border:0; width:100%; margin:-10px 0; padding-left:0}
+
+.pw-box{border:1px solid #ddd; border-top:0; padding:20px 12px}
+.pw-box dt{margin-bottom:10px; font-size:14px;}
+.pw-box .input-group > .input-group-cell .input-text{border:0; background:#F5F5F5;}
+.pw-box .input-group > .input-group-cell:first-child{padding:0 4px 0 0;}
+.pw-box .input-group > .input-group-cell:last-child{padding:0 0 0 4px;}
+
+/*쿠폰선택 팝업*/
+/* .select-coupon-wrap{width:510px !important;height:490px !important;}
+.layer-pop.select-coupon-wrap .layer-inner{min-height: auto;height: 100%;    box-sizing: border-box;    padding: 0px;position: relative;}
+.layer-pop.select-coupon-wrap .layer-inner .select-coupon-con{width: 100%; height: 100%;}
+.layer-pop.select-coupon-wrap .layer-inner .select-coupon-con .board-list{box-sizing: border-box;padding:0 22px;border: 0;height: calc(100% - 250px);overflow-y: auto;}
+.layer-pop.select-coupon-wrap .layer-inner .select-coupon-con .tit-box{width: 100%;height: 102px;box-sizing: border-box;padding:28px 30px 0;background-color: #f1f1f1;}
+.layer-pop.select-coupon-wrap .layer-inner .select-coupon-con .tit-box .tit-txt{font-size: 24px;font-weight: 400; color: #333;letter-spacing: -0.04em;}
+.layer-pop.select-coupon-wrap .layer-inner .select-coupon-con .tit-box .noti-txt{font-size: 15px;margin-left: 0px;color: #888;letter-spacing: -0.04em;}
+
+.layer-pop.select-coupon-wrap .layer-inner .select-coupon-con .coupon-tit-box{font-size: 16px;line-height: 22px;letter-spacing: -1px;color:#333; }
+.layer-pop.select-coupon-wrap .layer-inner .select-coupon-con .coupon-date-box{font-size: 14px;color:#888;margin-top: 3px;}
+
+.layer-pop.select-coupon-wrap .ui-close-pop{top:30px;right: 30px;}
+.layer-pop.select-coupon-wrap .board-list table{border: 0;}
+.layer-pop.select-coupon-wrap .board-list table td{font-size: 13px;border: 0;padding:15px 8px;}
+.layer-pop.select-coupon-wrap .board-list table tr + tr td{border-top: 1px solid #ddd;}
+.btn-apply-coupon{padding: 0px 30px;display: block;height: 60px;margin-top: 20px;}
+.layer-pop.select-coupon-wrap .layer-inner .select-coupon-con .btn-basic-xlg > span{font-weight: 700;} */
+
+.layer-wrap.full-type .layer-head + .layer-body-bottom.couponselect-pop-area{position:relative; padding-top:160px;}
+.couponselect-pop-area .coupon-total-box{position:fixed; top:58px; left:0; width:100%; z-index: 1; background:#f8f8f8; padding:20px;}
+.coupon-total-box .inner{display:table; width:100%; table-layout:fixed;}
+.coupon-total-box .inner .cell{display:table-cell; vertical-align:top; text-align:center;}
+.coupon-total-box .inner .tit{font-size:12px; color:#333;}
+.coupon-total-box .inner .price{font-size:14px; font-weight:bold; margin-top:5px;}
+.couponselect-pop-area .inner-flex{padding:0 20px}
+.couponselect-pop-area .pop-sub-title{font-size:15px; color:#000; font-weight:bold;}
+.couponselect-pop-area .coupon-box-list{padding:0 20px; margin-top:10px}
+.couponselect-pop-area .coupon-box-list > .box-item{position:relative}
+.coupon-box-list .box-item + .box-item{margin-top:10px} 
+.coupon-box-list .box-item .custom-radio{display:block; height:100%;}
+.custom-radio .radio.type-box + label{display:block; height:100%; padding:20px 20px 20px 50px; border:1px solid #ddd; border-radius:4px;}
+.custom-radio .radio.type-box + label{cursor:pointer; vertical-align: top;}
+.custom-radio .radio.type-box + label:before{width:18px; height:18px; border:1px solid #ccc; top:50%; left:15px; margin-top:-9px}
+.custom-radio .radio.type-box:checked + label{border:1px solid #FF6001;}
+.custom-radio .radio.type-box:checked + label:after{top:50%; left:20px; width:8px; height:8px; margin-top:-4px}
+.custom-radio .radio.type-box + label > span{display:block;}
+.radio.type-box + label > .sale{font-weight:bold; font-size:16px; color:#ff6001; margin-bottom:7px;}
+.radio.type-box + label > .tit{font-size:13px; color:#333; margin-bottom:10px;}
+.radio.type-box + label > .desc,
+.radio.type-box + label > .date{font-size:12px; color:#888; line-height:16px}
+.couponselect-pop-area .coupon-box-list  ~ .inner-flex{margin-top:40px}

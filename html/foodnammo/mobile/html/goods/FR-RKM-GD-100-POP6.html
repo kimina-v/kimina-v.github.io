@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>   
+
+<body style="overflow:hidden">
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<header id="header" class="header">
+		<div class="header-top">
+			<div class="page-title-area">
+                <a href="#" class="btn-back"><i class="ico-arrows-back"></i><span class="blind">뒤로가기</span></a>
+				<h1 class="page-title">주문/결제</h1>
+			</div><!-- // page-title-area  -->
+		</div><!--// header-top -->
+	</header>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+       
+		<div class="content-wrap">
+			// 컨텐츠 영역
+		</div><!--// content-wrap -->
+ 
+		<!-- ## 사이드 배너 :: side-quick-area  -->
+		<!-- <script>include.sidequick();</script> -->
+		<!--// ## 사이드 배너 ::  side-quick-area  -->
+	 </section>
+	 <!--// ========== 컨텐츠 영역 :: container ========== -->
+	
+	<!-- ========== 공통 푸터 :: footer ========== -->
+	<!-- <script>include.footer();</script> -->
+	<!--// ========== 공통 푸터 :: footer ========== -->
+</div><!--// wrap -->
+
+<!--
+	* 팝업 버튼에 ui-open-pop 클래스, 팝업 ID 작성 필요
+	ex) <a href="#popupSample-01" class=".... ui-open-pop"> ~ </a>
+	ex) <button type="button" data-layer="#popupSample-02" class="... ui-open-pop"> ~ </button>
+-->
+<!-- ========== 팝업 영역 ========== -->
+<div class="layer-wrap full-type popup-coupon" id="popup-coupon" tabindex="0" style="display:block">
+    <div class="layer-pop">
+        <div class="layer-inner">
+            <div class="layer-head">
+				<h4 class="layer-pop-title">상품쿠폰 받기</h4>
+			</div>
+            <div class="coupon-summary">
+                <div class="origin-price">
+                    <em>상품금액</em>
+                    <strong>12,900원</strong>
+                </div>
+                <div class="sale-price">
+                    <em>할인금액</em>
+                    <strong>12,900원</strong>
+                </div>
+                <div class="coupon-price">
+                    <em>쿠폰적용가</em>
+                    <strong>12,900원</strong>
+                </div>
+            </div>
+            <div class="layer-small-head">
+                <h5>상품쿠폰</h5>
+                <div class="side">
+                    <button type="button" class="btn-basic-sm2 btn-navy"><span>전체 받기</span></button>
+                    <!-- 전체 받기 완료 후 btn-navy ->  btn-dim 로 클래스 변경 -->
+                </div>
+            </div>
+            <div class="layer-body">
+                <ul class="coupon-list">
+                    <li class="coupon-item custom-checkbox">
+                        <input type="checkbox" class="checkbox-circle" id="c01" name="c">
+                        <label for="c01">
+                            <em class="coupon-discount">10% <span>할인</span></em>
+                            <span class="coupon-name text-elps2">[뉴페이스]  맛있닭 소프트 닭 안심살카레</span>
+                            <span class="coupon-terms">20,000원 이상 구매 시 사용가능</span>
+                            <span class="coupon-expiration">2021.09.30 까지</span>
+                        </label>
+                        <a href="#" class="coupon-down"><span>쿠폰받기</span></a>
+                    </li>
+                    <li class="coupon-item custom-checkbox complete">
+                        <input type="checkbox" class="checkbox-circle" id="c02" name="c">
+                        <label for="c02">
+                            <em class="coupon-discount">10% <span>할인</span></em>
+                            <span class="coupon-name text-elps2">[뉴페이스]  맛있닭 소프트 닭 안심살카레</span>
+                            <span class="coupon-terms">20,000원 이상 구매 시 사용가능</span>
+                            <span class="coupon-expiration">2021.09.30 까지</span>
+                        </label>
+                        <a href="#" class="coupon-down"><span>받기완료</span></a>
+                    </li>
+                    <li class="coupon-item custom-checkbox complete">
+                        <input type="checkbox" class="checkbox-circle" id="c03" name="c">
+                        <label for="c03">
+                            <em class="coupon-discount">10% <span>할인</span></em>
+                            <span class="coupon-name text-elps2">[뉴페이스]  맛있닭 소프트 닭</span>
+                            <span class="coupon-terms">20,000원 이상 구매 시 사용가능</span>
+                            <span class="coupon-expiration">2021.09.30 까지</span>
+                        </label>
+                        <a href="#" class="coupon-down"><span>받기완료</span></a>
+                    </li>
+                    <li class="coupon-item custom-checkbox complete">
+                        <input type="checkbox" class="checkbox-circle" id="c04" name="c">
+                        <label for="c04">
+                            <em class="coupon-discount">10% <span>할인</span></em>
+                            <span class="coupon-name text-elps2">[뉴페이스]  맛있닭 소프트 닭</span>
+                            <span class="coupon-terms">20,000원 이상 구매 시 사용가능</span>
+                            <span class="coupon-expiration">2021.09.30 까지</span>
+                        </label>
+                        <a href="#" class="coupon-down"><span>받기완료</span></a>
+                    </li>
+                    <li class="coupon-item custom-checkbox complete">
+                        <input type="checkbox" class="checkbox-circle" id="c05" name="c">
+                        <label for="c05">
+                            <em class="coupon-discount">10% <span>할인</span></em>
+                            <span class="coupon-name text-elps2">[뉴페이스]  맛있닭 소프트 닭</span>
+                            <span class="coupon-terms">20,000원 이상 구매 시 사용가능</span>
+                            <span class="coupon-expiration">2021.09.30 까지</span>
+                        </label>
+                        <a href="#" class="coupon-down"><span>받기완료</span></a>
+                    </li>
+                </ul>
+			</div>
+            <div class="bottom-btn">
+                <button type="button" class="btn-basic-lg btn-primary">쿠폰적용</button>
+                <!-- 전체 받기 완료 후 btn-navy ->  btn-dim 로 클래스 변경 -->
+            </div>
+            <button type="button" class="btn-x-md ui-close-pop" title="닫기"><i class="ico-x-normal"></i><span class="blind">닫기</span></button>
+        </div>
+    </div><!--// layer-pop  -->
+</div>
+<!-- ========== 팝업 영역 ========== -->
+
+</body>
+</html>

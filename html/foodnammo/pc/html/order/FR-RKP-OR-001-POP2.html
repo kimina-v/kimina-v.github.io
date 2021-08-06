@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>   
+
+<body style="overflow:hidden">
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<header id="header" class="header">
+		<script>include.header();</script>
+	</header>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+       
+		<div class="content-wrap">
+			// 컨텐츠 영역
+		</div><!--// content-wrap -->
+ 
+		<!-- ## 사이드 배너 :: side-quick-area  -->
+		<!-- <script>include.sidequick();</script> -->
+		<!--// ## 사이드 배너 ::  side-quick-area  -->
+	 </section>
+	 <!--// ========== 컨텐츠 영역 :: container ========== -->
+	
+	<!-- ========== 공통 푸터 :: footer ========== -->
+	<script>include.footer();</script>
+	<!--// ========== 공통 푸터 :: footer ========== -->
+</div><!--// wrap -->
+
+<!--
+	* 팝업 버튼에 ui-open-pop 클래스, 팝업 ID 작성 필요
+	ex) <a href="#popupSample-01" class=".... ui-open-pop"> ~ </a>
+	ex) <button type="button" data-layer="#popupSample-02" class="... ui-open-pop"> ~ </button>
+-->
+<!-- ========== 팝업 영역 ========== -->
+<div class="layer-wrap" id="popup-sample01" style="display:block"> 
+	<div class="layer-pop dlv-addr-wrap">
+		<div class="layer-inner">
+			<div class="cont dlv-add">
+				<div class="top-box">
+					<h4>배송지 추가</h4>
+					<button type="button" class="btn-option btn-default-ex"><span> 배송지목록</span></button>
+				</div>
+				<div class="mid-box">
+					<div class="dlv-addr-table">
+						<table>
+							<caption>정보 입력</caption>
+							<colgroup>
+								<col style="width:100px"><col />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">받는분 <em class="es"><span class="blind">필수입력</span></em></th>
+									<td>
+										<input type="text" id="" class="input-text w270">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">주소 <em class="es"><span class="blind">필수입력</span></em></th>
+									<td>
+										<div class="input-group inline-type">
+											<input type="text" id="" class="input-text w165">
+											<span class="input-group-btn">
+												<a href="#" class="btn-ex-white"><span>우편번호 찾기</span></a>
+											</span>
+										</div><!--// input-group --> 
+										<input type="text" id="" class="input-text w-full">
+										<input type="text" id="" class="input-text w-full">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">휴대전화 <em class="es"><span class="blind">필수입력</span></em></th>
+									<td>
+										<div class="input-group w-full">
+											<div class="input-group-form">
+												<div class="select-box w135">
+													<a href="#none" title="휴대전화" class="select-value"><span>010</span></a>
+													<div class="select-list">
+														<ul>
+															<li><a href="#none"><span>010</span></a></li>
+															<li><a href="#none"><span>011</span></a></li>
+															<li><a href="#none"><span>016</span></a></li>
+															<li><a href="#none"><span>017</span></a></li>
+															<li><a href="#none"><span>018</span></a></li>
+															<li><a href="#none"><span>019</span></a></li>
+														</ul>
+													</div>
+												</div>
+											</div><!--// input-group-form -->
+											<input type="text" id="item1" value="" title="휴대전화번호" class="input-text">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">전화번호</th>
+									<td>
+										<input type="text" id="" class="input-text w-full">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"></th>
+									<td>
+										<div class="custom-checkbox">
+											<input type="checkbox" id="check-103" class="checkbox type2" name="check-item-1"><label for="check-103">기본배송지로 등록</label>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!--// dlv-addr-table -->
+
+				</div>
+				<div class="bot-box">
+					<button type="button" class="btn-basic-md btn-black"><span>확인</span></button><!-- [Dev] 20210525 수정 : btn-basic-xlg > btn-basic-md -->
+                </div>
+			</div>
+			<button type="button" class="btn-x-md ui-close-pop" title="닫기"><i class="ico-x-normal"></i><span class="blind">닫기</span></button>
+		</div><!--// layer-inner -->
+	</div><!--// layer-pop  -->
+</div><!--// layer-pop-wrap #main-event -->
+<!-- ========== 팝업 영역 ========== -->
+</body>
+</html>

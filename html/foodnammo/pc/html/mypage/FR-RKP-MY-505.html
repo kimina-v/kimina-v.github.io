@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>   
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<header id="header" class="header">
+		<script>include.header();</script>
+	</header>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+       
+		<div class="content-wrap">
+
+			<div class="frame-full head-mypage">
+				<h2 class="blind">마이페이지</h2>
+				<div class="user-info-box">
+					<div class="inner">
+						<div class="column user-info">
+							<span class="img"><img src="../../images/img/img_mypage_user.png" alt="랭킹닭컴 마이페이지 이미지" /></span>
+							<div class="txt">							
+								<p class="greeting"><strong class="name">경탱이탱이땅땅땅</strong>님 반갑습니다.</p>
+								<ul class="sep-list type3">
+									<li>닭과장</li>
+									<li>1% 적립</li>
+								</ul>
+								<p class="level-tip">140,600원 더 구매 시, 닭차장 진급!</p>
+							</div>
+							<a href="#" class="btn-rud-sm btn-default-ex"><span>멤버십 혜택</span></a>
+						</div><!--// user-info -->
+						<dl class="column order">
+							<dt>주문/배송</dt>
+							<dd><strong class="num">3</strong>건</dd>
+						</dl><!--// order -->
+						<dl class="column coupon">
+							<dt>쿠폰</dt>
+							<dd><strong class="num">3</strong>개</dd>
+						</dl><!--// coupon -->
+						<dl class="column point">
+							<dt>포인트</dt>
+							<dd class="text-primary"><strong class="num">3,300P</strong></dd>
+						</dl><!--// point -->
+					</div><!--// inner -->
+				</div><!--// user-info-box -->
+			</div><!--// frame-full -->
+
+			<div class="frame-sm">
+				<div class="frame-left">
+					<div class="aside-mypage">
+						<nav class="aside-menu">
+							<ul class="menu-list">	
+								<li>
+									<a href="#" class="menu">주문관리</a>
+									<ul class="depth2">
+										<li><a href="#">주문내역</a></li><!-- 활성화될 경우 li에 addClass current  -->
+										<li><a href="#">취소/반품 내역</a></li>
+										<li><a href="#">재입고 알림 상품</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="menu">혜택관리</a>
+									<ul class="depth2">
+										<li><a href="#">쿠폰</a></li>
+										<li><a href="#">포인트</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="menu">활동관리</a>
+									<ul class="depth2">
+										<li><a href="#">최근 본 상품</a></li>
+										<li><a href="#">찜한상품</a></li>
+										<li><a href="#">관심브랜드</a></li>
+										<li><a href="#">1:1문의</a></li>
+										<li class="current"><a href="#">상품후기</a></li>
+										<li><a href="#">상품문의내역</a></li>
+										<li><a href="#">식단상담</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="menu">VIP전용관</a>
+								</li>
+								<li>
+									<a href="#" class="menu">오렌지멤버스</a>
+								</li>
+								<li>
+									<a href="#" class="menu">회원정보관리</a>
+									<ul class="depth2">
+										<li><a href="#">배송지 관리</a></li>
+										<li><a href="#">내 정보수정</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav><!--// menu-mypage -->
+					</div><!--// aside-mypage -->
+				</div><!--// frame-left -->
+
+				<div class="frame-right">
+					<div class="frame-cnt-inner">
+						<div class="menu-title-area">
+							<h3 class="title-menu">상품후기</h3>
+						</div><!--// menu-title-area -->
+
+						<div class="board-list ui-toggle">
+							<div class="list-toggle-head">
+								<p class="title">작성 가능한 리뷰 <span class="text-primary">5건</span></p>
+								<div class="right">
+									<button type="button" class="ui-toggle-btn toggle-on"><i class="ico-arr-toggle"></i><span class="blind">열기</span></button><!-- 컨텐츠 비활설화시 removeClass toggle-on -->
+								</div>
+							</div>
+							<div class="ui-toggle-content"><!-- 컨텐츠 가려질 경우 addClass hide -->
+								<table class="sub-tb-list">
+									<caption>후기 목록</caption>
+									<colgroup>
+										<col style="width:auto"><col style="width:120px"><col style="width:90px">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">상품</th>
+											<th scope="col">작성가능기간</th>
+											<th scope="col">후기작성</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="text-left">
+												<div class="prd-info-area">
+													<div class="inner">
+														<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+														<div class="column tit">
+															<p class="order-num">20200318WB234F</p>
+															<p class="tit text-md"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+															<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+														</div><!--// column  -->
+													</div>
+												</div><!--// prd-info-area -->
+											</td>
+											<td class="text-center"><span class="text-num-md text-grey">2021.6.21</span></td>
+											<td class="text-center">
+												<a href="#" class="btn-option btn-primary-line"><i class="ico-btn-review"></i><span>후기작성</span></a>
+											</td>
+										</tr>
+										<tr>
+											<td class="text-left">
+												<div class="prd-info-area">
+													<div class="inner">
+														<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+														<div class="column tit">
+															<p class="order-num">20200318WB234F</p>
+															<p class="tit text-md"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+															<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+														</div><!--// column  -->
+													</div>
+												</div><!--// prd-info-area -->
+											</td>
+											<td class="text-center"><span class="text-num-md text-grey">2021.6.21</span></td>
+											<td class="text-center">
+												<a href="#" class="btn-option btn-primary-line"><i class="ico-btn-review"></i><span>후기작성</span></a>
+											</td>
+										</tr>
+										<tr>
+											<td class="text-left">
+												<div class="prd-info-area">
+													<div class="inner">
+														<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+														<div class="column tit">
+															<p class="order-num">20200318WB234F</p>
+															<p class="tit text-md"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+															<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+														</div><!--// column  -->
+													</div>
+												</div><!--// prd-info-area -->
+											</td>
+											<td class="text-center"><span class="text-num-md text-grey">2021.6.21</span></td>
+											<td class="text-center">
+												<a href="#" class="btn-option btn-primary-line"><i class="ico-btn-review"></i><span>후기작성</span></a>
+											</td>
+										</tr>
+										<tr>
+											<td class="text-left">
+												<div class="prd-info-area">
+													<div class="inner">
+														<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+														<div class="column tit">
+															<p class="order-num">20200318WB234F</p>
+															<p class="tit text-md"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+															<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+														</div><!--// column  -->
+													</div>
+												</div><!--// prd-info-area -->
+											</td>
+											<td class="text-center"><span class="text-num-md text-grey">2021.6.21</span></td>
+											<td class="text-center">
+												<a href="#" class="btn-option btn-primary-line"><i class="ico-btn-review"></i><span>후기작성</span></a>
+											</td>
+										</tr>
+										<tr>
+											<td class="text-left">
+												<div class="prd-info-area">
+													<div class="inner">
+														<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+														<div class="column tit">
+															<p class="order-num">20200318WB234F</p>
+															<p class="tit text-md"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+															<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+														</div><!--// column  -->
+													</div>
+												</div><!--// prd-info-area -->
+											</td>
+											<td class="text-center"><span class="text-num-md text-grey">2021.6.21</span></td>
+											<td class="text-center">
+												<a href="#" class="btn-option btn-primary-line"><i class="ico-btn-review"></i><span>후기작성</span></a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="pagination">
+									<!-- <a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a> -->
+									<a href="#" class="on"><span>1</span></a>
+									<a href="#"><span>2</span></a>
+									<a href="#"><span>3</span></a>
+									<a href="#"><span>4</span></a>
+									<a href="#"><span>5</span></a>
+									<a href="#"><span>6</span></a>
+									<a href="#"><span>7</span></a>
+									<a href="#"><span>8</span></a>
+									<a href="#"><span>9</span></a>
+									<a href="#"><span>10</span></a>
+									<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
+								</div>
+							</div>
+						</div><!--// board-list -->
+
+						<div class="board-list ui-toggle">
+							<div class="list-toggle-head">
+								<p class="title">작성 완료 리뷰 <span class="text-primary">71건</span></p>
+								<div class="right">
+									<button type="button" class="ui-toggle-btn toggle-on"><i class="ico-arr-toggle"></i><span class="blind">열기</span></button><!-- 컨텐츠 비활설화시 removeClass toggle-on -->
+								</div>
+							</div>
+							<div class="ui-toggle-content"><!-- 컨텐츠 가려질 경우 addClass hide -->
+								<table class="sub-tb-list">
+									<caption>후기 목록</caption>
+									<colgroup>
+										<col style="width:100px"><col style="width:auto"><col style="width:120px"><col style="width:90px">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" colspan="2">상품</th>
+											<th scope="col">작성일</th>
+											<th scope="col">후기작성</th>
+										</tr>
+									</thead>
+									<tbody>
+										<!-- 1 -->
+										<tr>
+											<td class="text-left" colspan="2">
+												<div class="prd-info-area">
+													<div class="inner">
+														<div class="column img">
+															<a href="#">
+																<img src="../../images/_samples/@sample_80x80.png" alt="상품이미지">
+																<span class="added">+1</span><!--// 사진이미지 1장 이상일 경우 -->
+															</a>
+														</div>
+														<div class="column tit">
+															<p class="order-num">20200318WB234F</p>
+															<p class="tit text-md"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+															<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+														</div><!--// column  -->
+													</div>
+												</div><!--// prd-info-area -->
+											</td>
+											<td class="text-center"><span class="text-num-md text-grey">2021.6.21</span></td>
+											<td class="text-center">
+												<em class="box-badge-default"><span>작성완료</span></em>
+											</td>
+										</tr>
+										<!-- 후기 상세 내용 -->
+										<tr class="review-detail-line">
+											<td class="text-left"></td>
+											<td class="text-left" colspan="3">
+												<div class="review-item ui-toggle">
+													<div class="post-info">
+														<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4</span></em>
+														<span class="badge-sm-primary">베스트리뷰</span>
+														<button type="button" class="ui-toggle-btn"><i class="ico-arr-toggle"></i><span class="blind">내용보기</span></button>
+													</div><!--// post-info -->
+
+													<div class="txt-area">
+														<p class="review">50팩 주문하려다가 일단 한번 먹어보고 주문하자는 생각에 10팩 주문했는데 토마토6개 치즈5개로 증정1개 잘 챙겨주셨네용 감사합니다 지금 새벽 3시30분인데 깜빡하구 택배정리안하고 잠들어가지구ㅋㅋ 자다일어나서 택배를 50팩 주문하려다가 일단 한번 먹어보고 주문하자는 생각에 10팩 주문했는데 토마토6개 치즈5개로 증정1개 잘 챙겨주셨네용 감사합니다 지금 새벽 3시30분인데 깜빡하구 택배정리안하고 잠들어가지구ㅋㅋ 자다일어나서 택배를</p>
+													</div><!--// txt-area -->
+
+													<div class="goods-review-detail ui-toggle-content hide">
+														<div class="review-eval-box">
+															<ul>
+																<li><em class="tit">맛</em><span class="txt">"최고에요"</span></li>
+																<li><em class="tit">신선도</em><span class="txt">"신선해요"</span></li>
+																<li><em class="tit">배송</em><span class="txt">"정말 빨라요"</span></li>
+															</ul>
+														</div>
+
+														<img src="../../images/_samples/@sample_540x540.png" alt="리뷰 이미지">
+
+														<!-- 답변 영역 -->
+														<div class="answer-box">
+															<div class="answerer-info">
+																<span class="img"><img src="../../images/_samples/@sample_chracter_32x32.png" alt="닭대리"></span>
+																<ul class="sep-list type3"> 
+																	<li><span class="name">닭대리</span></li>
+																	<li><span class="date">2021.04.13</span></li>
+																</ul>
+															</div><!--// answerer-info -->
+															<p class="answer-message">안녕하세요~ 닭대리입니닭(・・) 회원님의 소중한 후기 감사드립니다! 더 좋은 제품으로 보답할 수 있도록 노력하겠습니닭! 앞으로도 지속적인 사랑 부탁드리며! 행복한 일 가득한 하루되시길 바랍니닭❤</p>
+														</div><!--// answer-box || 답변 영역 -->
+													</div>
+
+
+												</div><!--// review-item -->
+											</td>
+										</tr>
+										<!--// 후기 상세 내용 -->
+										<!--// 1 -->
+
+										<!-- 2 -->
+										<tr>
+											<td class="text-left" colspan="2">
+												<div class="prd-info-area">
+													<div class="inner">
+														<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+														<div class="column tit">
+															<p class="order-num">20200318WB234F</p>
+															<p class="tit text-md"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+															<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+														</div><!--// column  -->
+													</div>
+												</div><!--// prd-info-area -->
+											</td>
+											<td class="text-center"><span class="text-num-md text-grey">2021.6.21</span></td>
+											<td class="text-center">
+												<em class="box-badge-default"><span>작성완료</span></em>
+											</td>
+										</tr>
+										<!--// 2 -->
+
+										<tr>
+											<td class="text-left" colspan="2">
+												<div class="prd-info-area">
+													<div class="inner">
+														<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+														<div class="column tit">
+															<p class="order-num">20200318WB234F</p>
+															<p class="tit text-md"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+															<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+														</div><!--// column  -->
+													</div>
+												</div><!--// prd-info-area -->
+											</td>
+											<td class="text-center"><span class="text-num-md text-grey">2021.6.21</span></td>
+											<td class="text-center">
+												<em class="box-badge-default"><span>작성완료</span></em>
+											</td>
+										</tr>
+										<tr>
+											<td class="text-left" colspan="2">
+												<div class="prd-info-area">
+													<div class="inner">
+														<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+														<div class="column tit">
+															<p class="order-num">20200318WB234F</p>
+															<p class="tit text-md"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+															<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+														</div><!--// column  -->
+													</div>
+												</div><!--// prd-info-area -->
+											</td>
+											<td class="text-center"><span class="text-num-md text-grey">2021.6.21</span></td>
+											<td class="text-center">
+												<em class="box-badge-default"><span>작성완료</span></em>
+											</td>
+										</tr>
+										<tr>
+											<td class="text-left" colspan="2">
+												<div class="prd-info-area">
+													<div class="inner">
+														<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+														<div class="column tit">
+															<p class="order-num">20200318WB234F</p>
+															<p class="tit text-md"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+															<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+														</div><!--// column  -->
+													</div>
+												</div><!--// prd-info-area -->
+											</td>
+											<td class="text-center"><span class="text-num-md text-grey">2021.6.21</span></td>
+											<td class="text-center">
+												<em class="box-badge-default"><span>작성완료</span></em>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="pagination">
+									<!-- <a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a> -->
+									<a href="#" class="on"><span>1</span></a>
+									<a href="#"><span>2</span></a>
+									<a href="#"><span>3</span></a>
+									<a href="#"><span>4</span></a>
+									<a href="#"><span>5</span></a>
+									<a href="#"><span>6</span></a>
+									<a href="#"><span>7</span></a>
+									<a href="#"><span>8</span></a>
+									<a href="#"><span>9</span></a>
+									<a href="#"><span>10</span></a>
+									<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
+								</div>
+							</div>
+						</div><!--// board-list -->
+					</div><!--// frame-cnt-inner -->
+				</div><!--// frame-right -->
+			</div><!--// frame-sm -->
+		</div><!--// content-wrap -->
+	 </section>
+	 <!--// ========== 컨텐츠 영역 :: container ========== -->
+	
+	<!-- ========== 공통 푸터 :: footer ========== -->
+	<script>include.footer();</script>
+	<!--// ========== 공통 푸터 :: footer ========== -->
+</div><!--// wrap -->
+
+<!-- ========== 팝업 영역 ========== -->
+
+<!-- ========== 팝업 영역 ========== -->
+</body>
+</html>
