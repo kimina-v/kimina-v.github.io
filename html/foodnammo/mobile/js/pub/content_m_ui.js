@@ -96,6 +96,12 @@ $(function () {
 
     //이미지 슬라이드
     if ($('.img-slide').length > 0) { imgSwiper ();}
+
+    //선물하기 홈 이미지 슬라이드
+    if ($('.img-default-slide').length > 0) { imgDefaultSlide ();}
+
+    //카테고리 스와이퍼 탭
+    if ($('.cate-tab-swiper').length > 0) { cateSwiperTab ();}
 });
 
 
@@ -1108,11 +1114,10 @@ function brandSwiperSlide () {
             observeParents: true,
             slidesPerGroup :1,
             slidesPerView : 1,
-            touchRatio: false,
-            watchOverflow: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+            touchRatio: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
             },
         }
 
@@ -1140,12 +1145,8 @@ function brandSwiperSlide () {
             observeParents: true,
             slidesPerGroup :1,
             slidesPerView : 1,
-            touchRatio: false,
+            touchRatio: true,
             watchOverflow: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
@@ -1356,4 +1357,93 @@ function imgSwiper () {
             prevEl: '.swiper-button-prev',
         }
     });
+}
+
+
+/****** 선물하기 img slide  ******/
+function imgDefaultSlide () {
+    var mainSwiper = new Swiper('.img-default-slide', {
+        slidesPerView : 1,
+        centeredSlides: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
+    });
+}
+
+/**** 카테고리 탭 *****/
+function cateSwiperTab(){
+    $('.cate-tab-swiper').each(function(index, element){
+        var $this = $(this);
+        $this.addClass('instance-' + index);
+        var cateSwiper = new Swiper('.instance-' + index, {
+            slidesPerView: 'auto',
+            observer: true,
+            observeParents: true
+        });
+        $this.find('.swiper-slide').click(function(e){
+            e.preventDefault();
+            $this.find('.swiper-slide').removeClass('swiper-slide-on');
+            $(this).addClass('swiper-slide-on');
+        })
+        
+        var $cateTabTarget = $this.find('.swiper-wrapper .swiper-slide a');
+        $cateTabTarget.click(function(){
+            cateSwiper.slideTo($(this).parent().index()-1)			
+        })
+
+    });
+}
+/*브랜드 상단 셀렉트 박스*/
+function bsbSelect() {
+    var bsb = document.querySelector(".brand-sort-box");
+    if(bsb){
+        var bsb_left = document.querySelectorAll(".bsb-left");
+        var tg_cls = 0;
+        var bsb_dim = document.querySelector(".bsb-dim");
+        var ui_select = document.querySelector(".ui-select");
+        var bsb_l = document.querySelector(".bsb-left");
+        var body = document.querySelector("body");
+        bsb_left.forEach(function(item,idx){
+            item.addEventListener("click",function(){
+                if(tg_cls){
+                    item.classList.remove('on');
+                    tg_cls = 0;
+                    bsb_dim.classList.remove('on');
+                    body.classList.remove('lock');
+                }else{
+                    item.classList.add('on');
+                    tg_cls = 1;
+                    bsb_dim.classList.add('on');
+                    body.classList.add('lock');
+                }
+            })
+        })
+
+        ui_select.addEventListener("click",function(){
+            if(bsb_l.classList.contains('on')){
+                bsb_l.classList.remove('on');
+                tg_cls = 0;
+            }
+            if(ui_select.classList.contains('on')){
+                bsb_dim.classList.remove('on');
+                body.classList.remove('lock');
+            }else{
+                bsb_dim.classList.add('on');
+                body.classList.add('lock');
+            }
+        })
+
+        body.addEventListener("click",function(){
+            if(ui_select.classList.contains('on')){
+                bsb_dim.classList.remove("on");
+                body.classList.remove('lock');
+            }
+            if(bsb_l.classList.contains('on')){
+                bsb_dim.classList.add("on");
+                body.classList.add('lock');
+            }
+        })        
+    }
 }

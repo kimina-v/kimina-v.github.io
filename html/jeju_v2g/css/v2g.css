@@ -82,6 +82,51 @@
 .summary-group.evc-type > .item{width:calc(100%/6 - 20px)}
 .summary-group.evc-type .summary-group{display:inline-block;width:calc(calc(100%/6)*5);margin:0}
 
+.summary-group-type2{border:1px solid #c7c7c7;font-size:0}
+.summary-group-type2 .summary-sgroup{width:50%;background:#fff;display:inline-block}
+.summary-sgroup ~ .summary-sgroup{border-left:1px solid #c7c7c7}
+.summary-sgroup .title{display:block;font-size:16px;color:#000;padding-left:20px;line-height:45px;height:45px;border-bottom:1px solid #c7c7c7} 
+.summary-sgroup > .item{text-align:center;height:143px;box-sizing:border-box;padding-top:36px;color:#000;font-size:0}
+.summary-sgroup > .item > *{display:inline-block;vertical-align:top;height:70px}
+.summary-sgroup > .item em{font-size:16px;line-height:70px}
+.summary-sgroup > .item .txt{text-align:right;min-width:220px}
+.summary-sgroup > .item .txt > span{display:block;font-size:14px;color:#999;margin-top:-25px}
+.summary-sgroup > .item strong{font-size:36px;line-height:70px}
+.summary-sgroup > .item strong span{font-size:14px;font-weight:normal}
+.summary-sgroup .detail{display:flex;background:#f8f8f8;height:84px}
+.summary-sgroup .detail .item{flex:1;box-sizing:border-box;padding:0 40px;position:relative}
+.summary-sgroup .detail .item ~ .item:before{content:"";width:1px;height:52px;background:#c7c7c7;position:absolute;left:0;top:15px}
+.summary-sgroup .detail .item > *{display:inline-block;vertical-align:top;line-height:84px}
+.summary-sgroup .detail .item em{font-size:14px;color:#777;width:40%}
+.summary-sgroup .detail .item .txt{width:60%;text-align:right}
+.summary-sgroup .detail .item strong{font-size:28px;height:84px}
+.summary-sgroup .detail .item strong span{font-size:14px;font-weight:normal}
+.summary-sgroup .detail .item .tit-green{color:#009e75}
+.summary-sgroup .detail .item .tit-orange{color:#eb6100}
+.summary-sgroup .detail .item:first-child:nth-last-child(3),
+.summary-sgroup .detail .item:first-child:nth-last-child(3) ~ .item{padding-right:30px}
+
+.total-summary{border:1px solid #c7c7c7;background:#fff;margin-top:20px;font-size:0;padding-right:20px}
+.total-summary > div{display:inline-block;width:50%}
+.total-summary .prj-reduction{text-align:center;line-height:70px;padding:30px 0;height:130px;vertical-align:top}
+.total-summary .prj-reduction .tit{font-size:21px;color:#000;margin-left:8px}
+.total-summary .prj-reduction .price{font-size:48px;color:#000;margin-left:50px}
+.total-summary .prj-reduction .price span{font-weight:normal;font-size:14px}
+.total-summary .prj-reduction > *{display:inline-block;vertical-align:top}
+.total-summary .prj-reduction > span{font-size:14px;color:#999;vertical-align:bottom;margin-left:8px}
+.total-summary .prj-reduction i img{vertical-align:middle}
+.total-summary .reduction-detail{padding:20px 0;font-size:0}
+.total-summary .reduction-detail .detail-item{background:#f8f8f8;display:inline-block;box-sizing:border-box;height:90px;line-height:90px;padding:0 40px 0 38px;text-align:right;position:relative}
+.total-summary .reduction-detail .detail-item:first-child{width:60%}
+.total-summary .reduction-detail .detail-item ~ .detail-item{width:40%}
+.total-summary .reduction-detail .detail-item ~ .detail-item:before{content:"";width:1px;height:40px;background:#c7c7c7;position:absolute;left:0;top:25px}
+.total-summary .reduction-detail .detail-item .tit{font-size:14px;color:#000;float:left}
+.total-summary .reduction-detail .detail-item .price{font-size:28px;color:#000;display:inline-block;line-height:90px;height:90px}
+.total-summary .reduction-detail .detail-item .price span{font-size:14px;font-weight:normal}
+.total-summary .reduction-detail .detail-item > span{font-size:14px;color:#999;margin-left:6px}
+
+.section-title{display:block;font-size:18px;color:#000;line-height:1;margin:40px 0 15px}
+
 .profitability-total .bottom-area{font-size:0;margin:20px -10px 0;color:#000}
 .profitability-total .bottom-area > div{border:1px solid #c7c7c7;height:345px;margin:0 10px;display:inline-block;background:#fff;vertical-align:top}
 .profitability-total .arbitrage{width:calc(100%/3 - 20px)}
