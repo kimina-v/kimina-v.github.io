@@ -457,6 +457,25 @@
 				</div><!--// left-area -->
 				<div class="right-area">
 					<div class="btn-group">
+						<!-- [Dev] 20210824 수정 : 업/다운로드 버튼들 드롭다운박스로 그룹화함 -->
+						<div class="btn-down-group">
+							<button type="button" class="btn-list-down ui-btn-group"><span>업로드</span><i class="ico-arrfill-toggle"></i></button>
+							<ul class="btn-down-list ui-btn-box">
+								<li><a href="#"><span>상품 업로드</span></button></a></li>
+								<li><a href="#"><span>옵션 업로드</span></button></a></li>
+								<li><a href="#"><span>정보고시 업로드</span></button></a></li>
+							</ul>	
+						</div><!--// btn-down-group -->
+						<div class="btn-down-group">
+							<button type="button" class="btn-list-down ui-btn-group"><span>다운로드</span><i class="ico-arrfill-toggle"></i></button>
+							<ul class="btn-down-list ui-btn-box">
+								<li><a href="#"><span>상품 양식 다운로드</span></button></a></li>
+								<li><a href="#"><span>옵션 양식 다운로드</span></button></a></li>
+								<li><a href="#"><span>정보고시 양식 다운로드</span></button></a></li>
+							</ul>	
+						</div><!--// btn-down-group -->
+						<!--// [Dev] 20210824 수정 : 업/다운로드 드롭다운박스로 그룹화함 -->
+
 						<button type="button" class="btn-func btn-default"><span>일괄변경</span></button>
 						<button type="button" class="btn-func btn-default"><span>상품등록</span></button>
 						<button type="button" class="btn-func btn-default"><i class="ico-btn-xls"></i><span>엑셀 다운로드</span></button>
@@ -464,187 +483,1400 @@
 				</div><!--// right-area -->
 			</div><!--// board-option -->
 
+			<!-- [Dev] 20210824 테이블 스크롤 이동
+				1. 전체를 감싸는 div.scrollbar-move-area 추가
+				2. 버튼 영역 추가 div.scroll-view-btns
+				3. 컨트롤 버튼 추가
+			-->
 			<!-- 목록 -->
-			<div class="board-list scroll-table resize-table vm-table mt10">
-				<table>
-					<caption>목록</caption>
-					<colgroup>
-						<col class="w-col-check" />
-						<col class="w-col-num" /><!--[Dev] 0702 수정 : 순번 추가 -->
-						<col style="width:100px" />
-						<col style="min-width:230px" />
-						<col style="width:130px" />
-						<col style="width:110px" />
-						<col style="width:95px" />
-						<col style="width:92px" />
-						<col style="width:120px" />
-						<col style="width:130px" />
-						<col style="width:200px" />
-						<col style="width:160px" />
-						<col style="width:95px" />
-						<col style="width:120px" />
-						<col style="width:120px" />
-						<col style="width:140px" />
-					</colgroup>
-					<thead>
-						<tr>
-							<th scope="col" class="list-check">
-								<div class="custom-checkbox single">
-									<input type="checkbox" id="check-all" class="checkbox ui-check-all" name="check-item-101"><label for="check-all"><span class="blind">모두 선택</span></label>
-								</div><!-- 모두 선택 addClass ui-check-all -->
-							</th>
-							<th class="list-num"><span class="in-tb">순번</span></th><!-- [Dev] 0702 추가 -->
-							<th scope="col"><span class="in-tb">상품 이미지</span></th>
-							<th scope="col" class="resize"><a href="#none" class="in-tb ui-th-toggle">상품명<i class="ico-arrfill-toggle"></i></a></th>
-							<th scope="col"><span class="in-tb">온라인 판매가</span></th>
-							<th scope="col">
-								<a href="#none" class="in-tb ui-th-toggle">판매가<i class="ico-arrfill-toggle"></i></a>
-							</th>
-							<th scope="col"><span class="in-tb">할인율</span></th>
-							<th scope="col">
-								<a href="#none" class="in-tb ui-th-toggle">적립율<i class="ico-arrfill-toggle"></i></a>
-							</th>
-							<th scope="col"><span class="in-tb">판매상태</span></th>
-							<th scope="col"><span class="in-tb">입점사</span></th>
-							<th scope="col"><span class="in-tb">기준 카테고리</span></th><!-- [Dev] 0702 수정 -->
-							<th scope="col"><span class="in-tb">판매정책</span></th>
-							<th scope="col"><span class="in-tb">재고</span></th>
-							<th scope="col"><span class="in-tb">배송속성</span></th>
-							<th scope="col"><span class="in-tb">배송그룹</span></th>
-							<th scope="col"><a href="#none" class="in-tb ui-th-toggle">등록일<i class="ico-arrfill-toggle"></i></a></th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="list-check">
-								<div class="custom-checkbox single">
-									<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-								</div>
-							</td>
-							<td class="list-num"><div class="in-tb">2</div></td><!-- [Dev] 0702 추가 -->
-							<td class="text-center">
-								<a href="#none" class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></a>
-							</td>
-							<td class="text-center">
-								<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
-							</td>
-							<td class="text-center"><div class="in-tb">25,000</div></td>
-							<td class="text-center">
-								<input type="text" class="input-text w-full text-center" value="19,900" />
-							</td>
-							<td class="text-center"><div class="in-tb">25%</div></td>
-							<td class="text-center">
-								<div class="input-group">
-									<input type="text" class="input-text w-full text-center" value="2" />
-									<div class="input-group-txt">%</div>
-								</div>
-							</td>
-							<td class="text-center">
-								<select class="select">
-									<option>전체</option>
-									<option>정상</option>
-									<option>품절</option>
-									<option>판매중지</option>
-									<option>강제품절</option>
-								</select>
-							</td>
-							<td class="text-center"><div class="in-tb">맛있닭</div></td>
-							<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
-							<td class="text-center">
-								<div class="option-lst">
-									<span class="txt-ico naver-pay">네이버페이</span>
-									<span class="txt-ico gift">선물하기</span>
-									<span class="txt-ico duty-free">면세상품</span>
-									<span class="txt-ico attached">개별판매 및 검색불가</span>
-									<span class="txt-ico fridge">냉장고</span>
-								</div>
-							</td>	
-							<td class="text-center"><a href="none" class="in-tb">(무제한)</a></td>
-							<td class="text-center">
-								<div class="option-lst">
-									<span class="txt-ico general">일반배송</span>
-									<span class="txt-ico regular">정기배송</span>
-								</div>
-							</td>
-							<td class="text-center"><div class="in-tb">AAA</div></td>
-							<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
-						</tr>
-						<tr>
-							<td class="list-check">
-								<div class="custom-checkbox single">
-									<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-								</div>
-							</td>
-							<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
-							<td class="text-center">
-								<a href="#none" class="prdimg"></a>
-							</td>
-							<td class="text-center">
-								<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
-							</td>
-							<td class="text-center"><div class="in-tb">25,000</div></td>
-							<td class="text-center">
-								<input type="text" class="input-text w-full text-center" value="19,900" />
-							</td>
-							<td class="text-center"><div class="in-tb">25%</div></td>
-							<td class="text-center">
-								<div class="input-group">
-									<input type="text" class="input-text w-full text-center" value="2" />
-									<div class="input-group-txt">%</div>
-								</div>
-							</td>
-							<td class="text-center">
-								<select class="select">
-									<option>전체</option>
-									<option>정상</option>
-									<option>품절</option>
-									<option>판매중지</option>
-									<option>강제품절</option>
-								</select>
-							</td>
-							<td class="text-center"><div class="in-tb">맛있닭</div></td>
-							<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
-							<td class="text-center">
-								<div class="option-lst">
-									<span class="txt-ico naver-pay">네이버페이</span>
-								</div>
-							</td>	
-							<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
-							<td class="text-center">
-								<div class="option-lst">
-									<span class="txt-ico geneal">일반배송</span>
-									<span class="txt-ico regular">정기배송</span>
-									<span class="txt-ico extra-area">도서산간배송</span>
-									<!--span class="txt-ico express">특급배송</span-->
-								</div>
-							</td>
-							<td class="text-center"><div class="in-tb">BBB</div></td>
-							<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
-						</tr>
-						<!-- 2021051 추가 : no data case -->
-						<tr class="no-data">
-							<td colspan="16"><!-- [Dev] 0702 수정 : olspan="16"  -->
-								<div class="message-area">
-									<i class="ico-img-excl"></i>
-									<p class="txt">데이터가 존재하지 않습니다.</p>
-								</div>
-							</td>
-						</tr>
-						<!--// 2021051 추가 : no data case -->
-					</tbody>
-				</table>
-			</div><!--// board-list | 목록 -->
+			<div class="scrollbar-move-area">
+				<div class="scroll-view-btns">
+					<div class="inner">
+						<button type="button" class="ui-scroll-move left btn-scroll-left"><span class="blind">왼쪽 이동</span></button>
+						<button type="button" class="ui-scroll-move right btn-scroll-right"><span class="blind">오른쪽 이동</span></button>
+					</div>
+				</div><!-- // scroll-view-btns -->
+				<button type="button" class="ui-scroll-move left pos-left"><span class="blind">왼쪽 이동</span></button>
+				<button type="button" class="ui-scroll-move right pos-right"><span class="blind">오른쪽 이동</span></button>
 
+				<div class="board-list scroll-table resize-table vm-table mt10">
+					<table>
+						<caption>목록</caption>
+						<colgroup>
+							<col class="w-col-check" />
+							<col class="w-col-num" /><!--[Dev] 0702 수정 : 순번 추가 -->
+							<col style="width:100px" />
+							<col style="min-width:230px" />
+							<col style="width:130px" />
+							<col style="width:110px" />
+							<col style="width:95px" />
+							<col style="width:92px" />
+							<col style="width:120px" />
+							<col style="width:130px" />
+							<col style="width:200px" />
+							<col style="width:160px" />
+							<col style="width:95px" />
+							<col style="width:120px" />
+							<col style="width:120px" />
+							<col style="width:140px" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-all" class="checkbox ui-check-all" name="check-item-101"><label for="check-all"><span class="blind">모두 선택</span></label>
+									</div><!-- 모두 선택 addClass ui-check-all -->
+								</th>
+								<th class="list-num"><span class="in-tb">순번</span></th><!-- [Dev] 0702 추가 -->
+								<th scope="col"><span class="in-tb">상품 이미지</span></th>
+								<th scope="col" class="resize"><a href="#none" class="in-tb ui-th-toggle">상품명<i class="ico-arrfill-toggle"></i></a></th>
+								<th scope="col"><span class="in-tb">온라인 판매가</span></th>
+								<th scope="col">
+									<a href="#none" class="in-tb ui-th-toggle">판매가<i class="ico-arrfill-toggle"></i></a>
+								</th>
+								<th scope="col"><span class="in-tb">할인율</span></th>
+								<th scope="col">
+									<a href="#none" class="in-tb ui-th-toggle">적립율<i class="ico-arrfill-toggle"></i></a>
+								</th>
+								<th scope="col"><span class="in-tb">판매상태</span></th>
+								<th scope="col"><span class="in-tb">입점사</span></th>
+								<th scope="col"><span class="in-tb">기준 카테고리</span></th><!-- [Dev] 0702 수정 -->
+								<th scope="col"><span class="in-tb">판매정책</span></th>
+								<th scope="col"><span class="in-tb">재고</span></th>
+								<th scope="col"><span class="in-tb">배송속성</span></th>
+								<th scope="col"><span class="in-tb">배송그룹</span></th>
+								<th scope="col"><a href="#none" class="in-tb ui-th-toggle">등록일<i class="ico-arrfill-toggle"></i></a></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">2</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+										<span class="txt-ico gift">선물하기</span>
+										<span class="txt-ico duty-free">면세상품</span>
+										<span class="txt-ico attached">개별판매 및 검색불가</span>
+										<span class="txt-ico fridge">냉장고</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="none" class="in-tb">(무제한)</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico general">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">AAA</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+									</div>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><div class="in-tb">25,000</div></td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
+									</div>
+								</td>
+								<td class="text-center">
+									<select class="select">
+										<option>전체</option>
+										<option>정상</option>
+										<option>품절</option>
+										<option>판매중지</option>
+										<option>강제품절</option>
+									</select>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+									</div>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico extra-area">도서산간배송</span>
+										<!--span class="txt-ico express">특급배송</span-->
+									</div>
+								</td>
+								<td class="text-center"><div class="in-tb">BBB</div></td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<!-- 2021051 추가 : no data case -->
+							<tr class="no-data">
+								<td colspan="16"><!-- [Dev] 0702 수정 : olspan="16"  -->
+									<div class="message-area">
+										<i class="ico-img-excl"></i>
+										<p class="txt">데이터가 존재하지 않습니다.</p>
+									</div>
+								</td>
+							</tr>
+							<!--// 2021051 추가 : no data case -->
+						</tbody>
+					</table>
+				</div><!--// board-list | 목록 -->
+			</div>
+
+			<!-- [Dev] 20210824 수정 : 상단 버튼 그룹으로 이동
 			<div class="btn-area mt10">
 				<div class="left">
 					<button type="button" class="btn-option btn-default"><i class="ico-btn-up"></i><span>상품 업로드</span></button>
-					<button type="button" class="btn-option btn-default"><i class="ico-btn-down"></i><span>상품 양식 다운로드</span></button>
-					<button type="button" class="btn-option btn-default"><i class="ico-btn-up"></i><span>옵션 업로드</span></button>
+					<button type="button" class="-option btn-default"><i class="ico-btn-down"></i><span>상품 양식 다운로드</span></button>
+					<button type="button" class="btnbtn-option btn-default"><i class="ico-btn-up"></i><span>옵션 업로드</span></button>
 					<button type="button" class="btn-option btn-default"><i class="ico-btn-down"></i><span>옵션 양식 다운로드</span></button>
 					<button type="button" class="btn-option btn-default"><i class="ico-btn-up"></i><span>정보고시 업로드</span></button>
 					<button type="button" class="btn-option btn-default"><i class="ico-btn-down"></i><span>정보고시 양식 다운로드</span></button>
 				</div>
-			</div>
+			</div> -->
 
 			<div class="pagination mt20">
 				<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>
