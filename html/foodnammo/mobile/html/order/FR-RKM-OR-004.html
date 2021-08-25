@@ -34,7 +34,8 @@
        
 		<div class="content-wrap type-bottom-btn">
 
-			<div class="order-payment-area">
+			<div class="order-payment-area gift-order">
+				<!-- 회원 -->
 				<div class="order-info ui-toggle-slide">
 					<div class="list-head inner-flex">
 						<h3 class="left-item1 title-list">주문자 정보</h3>
@@ -115,6 +116,101 @@
 						</div><!--// lineless-table -->
 					</div><!--// frame-inner -->
 				</div><!--// order-info -->
+				<!-- //회원 -->
+
+				<!-- 비회원 -->
+				<div class="order-info">
+					<div class="list-head inner-flex">
+						<h3 class="title-list left-item1">주문자 정보</h3>
+					</div><!--// list-head -->
+
+					<div class="frame-inner">
+						<div class="lineless-table type2">
+							<table>
+								<caption>정보 입력</caption>
+								<colgroup>
+									<col style="width:100px"><col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">이름 <em class="es"><span class="blind">필수입력</span></em></th>
+										<td>
+											<input type="text" title="받는 분 입력" class="input-text w-full">
+										</td>
+									</tr>
+									<tr> 
+										<th scope="row">휴대전화 <em class="es"><span class="blind">필수입력</span></em></th>
+										<td>
+											<div class="input-group w-full">
+												<div class="input-group-form">
+													<select class="select" id="select-item1">
+														<option value="">010</option>
+														<option value="">011</option>
+														<option value="">016</option>
+														<option value="">017</option>
+														<option value="">018</option>
+														<option value="">019</option>
+													</select>
+												</div>
+												<input type="text" value="" title="휴대전화번호" class="input-text">
+											</div>
+										</td>
+									</tr> 
+									<tr>
+										<th scope="row">이메일</th>
+										<td>
+											<input type="text" title="받는 분 입력" class="input-text w-full">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!--// lineless-table -->
+					</div><!--// frame-inner -->
+				</div><!--// order-info -->
+
+				<div class="order-info">
+					<div class="list-head inner-flex">
+						<h3 class="title-list left-item1">받는사람</h3>
+					</div><!--// list-head -->
+
+					<div class="frame-inner">
+						<div class="lineless-table type2">
+							<table>
+								<caption>정보 입력</caption>
+								<colgroup>
+									<col style="width:100px"><col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">받는분 <em class="es"><span class="blind">필수입력</span></em></th>
+										<td>
+											<input type="text" title="받는 분 입력" class="input-text w-full">
+										</td>
+									</tr>
+									<tr> 
+										<th scope="row">휴대전화 <em class="es"><span class="blind">필수입력</span></em></th>
+										<td>
+											<div class="input-group w-full">
+												<div class="input-group-form">
+													<select class="select" id="select-item1">
+														<option value="">010</option>
+														<option value="">011</option>
+														<option value="">016</option>
+														<option value="">017</option>
+														<option value="">018</option>
+														<option value="">019</option>
+													</select>
+												</div>
+												<input type="text" value="" title="휴대전화번호" class="input-text">
+											</div>
+										</td>
+									</tr> 
+								</tbody>
+							</table>
+						</div><!--// lineless-table -->
+					</div><!--// frame-inner -->
+				</div><!--// order-info -->
+				<!-- //비회원 -->
 
 				<div class="order-info">
 					<div class="list-head">
@@ -129,11 +225,18 @@
 						</div><!--// message-box -->
 					</div><!--// gift-card-box -->
 
-					<div class="gift-card-list">
-						<ul>
-							<li><a href="#"></a></li>
-						</ul>
-					</div><!--// gift-card-list -->
+					
+					<div class="cate-tab-swiper gift-card-list swiper-container">
+						<ul class="swiper-wrapper">
+							<!--swiper-slide-active 클래스 추가되면 이미지 변경-->
+							<li class="swiper-slide swiper-slide-on cate_0"><a href="#"><span class="txt">기본</span></a></li>
+							<li class="swiper-slide cate_1"><a href="#"><span class="txt">다이어트</span></a></li>
+							<li class="swiper-slide cate_2"><a href="#"><span class="txt">1인가구</span></a></li>
+							<li class="swiper-slide cate_3"><a href="#"><span class="txt">생일</span></a></li>
+							<li class="swiper-slide cate_4"><a href="#"><span class="txt">감사</span></a></li>
+							<li class="swiper-slide cate_5"><a href="#"><span class="txt">사랑</span></a></li>
+						</ul><!--// swiper-wrapper -->
+					</div><!--// swiper-container / gift-card-list -->
 				</div><!--// order-info -->
 
 				<div class="order-info">
@@ -281,57 +384,6 @@
 				</div><!--// order-info -->
 
 				<div class="order-info">
-					<div class="order-info-inner ui-toggle-slide">
-						<div class="list-head type2 inner-flex">
-							<h3 class="title-list left-item1">쿠폰/할인 사용</h3>
-							<div class="right-item1">
-								<span class="btn-link-txt2"><span>3장 / 3000P 보유</span><i class="ico-arr-toggle"></i></span>
-							</div>
-							<button type="button" class="btn-blank ui-slide-btn"><span class="blind">내용 보기</span></button>
-						</div><!--// list-head -->
-
-						<div class="ui-slide-content">
-							<ul class="order-point">
-								<li class="inner-flex">
-									<div class="tit-item">
-										<label for="item-point-1">포인트 사용</label>
-										<p class="point-guide">1,425P 보유</p>
-									</div>
-									<div class="cnt-item">
-										<div class="input-group-wrap box-type">
-											<div class="input-group">
-												<input type="text" id="item-point-1" class="input-text" />
-												<span class="input-group-btn">
-													<button type="button" class="btn-ex-grey"><span>전액사용</span></button>
-												</span>
-											</div><!--// input-group --> 
-										</div><!--// input-group-wrap --> 
-										<p class="text-guide-xs">* 포인트 사용은 2,000P 부터 사용 가능합니다.</p>
-									</div>
-								</li>
-								<li class="inner-flex">
-									<div class="tit-item">
-										<label for="item-point-2">쿠폰 사용</label>
-										<p class="point-guide">1장 사용가능</p>
-									</div>
-									<div class="cnt-item">
-										<div class="input-group-wrap box-type">
-											<div class="input-group">
-												<input type="text" id="item-point-2" class="input-text" />
-												<span class="input-group-btn">
-													<a href="#" class="btn-ex-grey"><span>쿠폰선택</span></a>
-												</span>
-											</div><!--// input-group --> 
-										</div><!--// input-group-wrap --> 
-									</div>
-								</li>
-							</ul>
-							<div class="order-point-total inner-flex">
-								<div class="left-item1">총 할인금액</div>
-								<div class="right-item1"><span class="num">2,350</span>원</div>
-							</div>
-						</div><!--// ui-slide-content -->
-					</div><!--// order-info-inner -->
 				
 					<div class="order-info-inner ui-toggle-slide">
 						<div class="list-head type2 inner-flex">

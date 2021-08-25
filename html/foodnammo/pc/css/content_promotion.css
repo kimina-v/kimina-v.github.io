@@ -22,10 +22,10 @@
 .prev-list-bottom{border-bottom:1px solid #ccc;}
 .prev-list-bottom .prev-list-tb{display:table; width:100%; table-layout:fixed;}
 .prev-list-tb .list-tb-item{display:table-row}
-.prev-list-tb .list-tb-item .cla-cell{display:table-cell; width:130px; padding:20px 0; text-align:center; border-top:1px solid #ccc}
+.prev-list-tb .list-tb-item .cla-cell{display:table-cell; width:100px; padding:20px 0; text-align:center; border-top:1px solid #ccc}
 .prev-list-tb .list-tb-item .tit-cell{display:table-cell; width:auto; padding:20px 0; border-top:1px solid #ccc}
 .prev-list-tb .list-tb-item .tit-cell > a{display:block; max-width:90%; color:#666}
-.prev-list-tb .list-tb-item .date-cell{display:table-cell; width:140px; padding:20px 0; text-align:center; border-top:1px solid #ccc}
+.prev-list-tb .list-tb-item .date-cell{display:table-cell; width:140px; padding:20px 0; text-align:center; border-top:1px solid #ccc; font-size:13px;}
 .prev-list-tb .list-tb-item .date-cell .date{color:#666;}
 .prev-list-tb .list-tb-item .cla-cell .txt{font-weight:700;}
 .prev-list-tb .list-tb-item .cla-cell [class*="ico-arrfill-"]{margin-left:10px;}

@@ -31,19 +31,17 @@
 			
 			<div class="page-head">
 				<div class="title-area">
-					<h2 class="tit">베스트 랭킹</h2>
+					<h2 class="tit">랭킹</h2>
 				</div><!--// title-area -->
+				<ul class="side-tab-menu">
+					<li class="current"><a href="#">실시간랭킹</a></li>
+					<li><a href="#">별별랭킹</a></li>
+					<li><a href="#">알뜰킹</a></li>
+					<li><a href="#">성분별랭킹</a></li>
+				</ul>
 			</div><!--// page-head -->
 
             <div class="frame-sm">
-                <div class="tab-menu">
-                    <ul>
-                        <li class="current"><a href="#"><span>판매킹</span></a></li>
-                        <li><a href="#"><span>별별랭킹</span></a></li>
-                        <li><a href="#"><span>알뜰킹</span></a></li>
-                    </ul>
-                </div><!--// tab-menu -->
-
 				<div class="ranking-swiper-tab swiper-container">
 					<ul class="swiper-wrapper">
 						<li class="swiper-slide"><div class="inner"><a href="#"><span class="img-cate-icon01"></span><span class="txt">전체</span></a></div></li><!-- 활성화시 addClass current -->
@@ -63,92 +61,102 @@
 					<button type="button" class="swiper-button-next"><i class="ico-arr-right"></i><span class="blind">다음</span></button>
 					<button type="button" class="swiper-button-prev"><i class="ico-arr-left"></i><span class="blind">이전</span></button>
 				</div><!--// swiper-container -->
+
+				<div class="sorting-tab-menu">
+					<ul>
+						<li class="current"><a href="#">실시간랭킹</a></li>
+						<li><a href="#">판매랭킹</a></li>
+					</ul> 
+				</div>
 				
 				<div class="rank-list-wrap">
 					<ol class="ranking-list">
 						<li class="rank-item">
-							<span class="number-rd-gold">1</span>
+							<span class="number-rd-empty">1</span>
 							<div class="prd-info-area">
 								<div class="inner">
 									<div class="column img w110 "><a href="#"><img src="../../images/_samples/@sample_200x200.png" alt="상품이미지"></a></div>
 									<div class="column tit">
-										<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+										<span class="prd-brand">잇메이트</span>
+										<p class="tit"><a href="#" class="text-elps2">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+										<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
+									</div><!--// column -->
+									<div class="column w110">
 										<ul class="price-item">
 											<li><span class="num2">19,500</span>원</li>
 										</ul>
 									</div><!--// column -->
-									<div class="column w110">
-										<span class="txt">1% 적립</span>
-									</div><!--// column -->
 									<div class="column w115">
-										<span class="txt">4.5점</span>
-										<div class="rating">
-											<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-										</div>
-									</div><!--// column -->
-									<div class="column w100">
-										<span class="txt">리뷰<br />4,550</span>
+										<span class="txt">1% 적립</span>
 									</div><!--// column -->
 									<div class="column w110">
 										<span class="txt"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></span>
+									</div><!--// column -->
+									<div class="column w110">
+										<div class="btn-mix-group">
+											<button type="button" class="btn-cart"><span>장바구니</span></button>
+											<button type="button" class="btn-newpage"><span>새창보기</span></button>
+										</div>
 									</div><!--// column -->
 								</div>
 							</div><!--// prd-info-area -->
 						</li><!--// rank-item -->
 						<li class="rank-item">
-							<span class="number-rd-silver">2</span>
+							<span class="number-rd-empty">2</span>
 							<div class="prd-info-area">
 								<div class="inner">
 									<div class="column img w110"><a href="#"><img src="../../images/_samples/@sample_200x200.png" alt="상품이미지"></a></div>
 									<div class="column tit">
-										<p class="tit"><a href="#">맛있닭 NEW 맛있닭 NEW 다이어트 도시락 5종 혼합 210g 다이어트 도시락 5종 혼합 210g</a></p>
+										<span class="prd-brand">잇메이트</span>
+										<p class="tit"><a href="#" class="text-elps2">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+										<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
+									</div><!--// column -->
+									<div class="column w110">
 										<ul class="price-item">
 											<li><span class="num2">19,500</span>원</li>
 										</ul>
 									</div><!--// column -->
-									<div class="column w110">
-										<span class="txt">1% 적립</span>
-									</div><!--// column -->
 									<div class="column w115">
-										<span class="txt">4.5점</span>
-										<div class="rating">
-											<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-										</div>
-									</div><!--// column -->
-									<div class="column w100">
-										<span class="txt">리뷰<br />4,550</span>
+										<span class="txt">1% 적립</span>
 									</div><!--// column -->
 									<div class="column w110">
 										<span class="txt"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></span>
+									</div><!--// column -->
+									<div class="column w110">
+										<div class="btn-mix-group">
+											<button type="button" class="btn-cart"><span>장바구니</span></button>
+											<button type="button" class="btn-newpage"><span>새창보기</span></button>
+										</div>
 									</div><!--// column -->
 								</div>
 							</div><!--// prd-info-area -->
 						</li><!--// rank-item -->
 						<li class="rank-item">
-							<span class="number-rd-bronze">3</span>
+							<span class="number-rd-empty">3</span>
 							<div class="prd-info-area">
 								<div class="inner">
 									<div class="column img w110"><a href="#"><img src="../../images/_samples/@sample_200x200.png" alt="상품이미지"></a></div>
 									<div class="column tit">
-										<p class="tit"><a href="#">맛있닭 NEW 맛있닭 NEW 다이어트 도시락 5종 혼합 210g 다이어트 도시락 5종 혼합 210g</a></p>
+										<span class="prd-brand">잇메이트</span>
+										<p class="tit"><a href="#" class="text-elps2">맛있닭 NEW 다이어트 도시락 5종 혼합 210g 맛있닭 NEW 다이어트 도시락 5종 혼합 210g 맛있닭 NEW 다이어트 도시락 5종 혼합 210g 맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+										<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
+									</div><!--// column -->
+									<div class="column w110">
 										<ul class="price-item">
 											<li><span class="num2">19,500</span>원</li>
 										</ul>
 									</div><!--// column -->
-									<div class="column w110">
-										<span class="txt">1% 적립</span>
-									</div><!--// column -->
 									<div class="column w115">
-										<span class="txt">4.5점</span>
-										<div class="rating">
-											<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-										</div>
-									</div><!--// column -->
-									<div class="column w100">
-										<span class="txt">리뷰<br />4,550</span>
+										<span class="txt">1% 적립</span>
 									</div><!--// column -->
 									<div class="column w110">
 										<span class="txt"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></span>
+									</div><!--// column -->
+									<div class="column w110">
+										<div class="btn-mix-group">
+											<button type="button" class="btn-cart"><span>장바구니</span></button>
+											<button type="button" class="btn-newpage"><span>새창보기</span></button>
+										</div>
 									</div><!--// column -->
 								</div>
 							</div><!--// prd-info-area -->
@@ -159,25 +167,26 @@
 								<div class="inner">
 									<div class="column img w110"><a href="#"><img src="../../images/_samples/@sample_200x200.png" alt="상품이미지"></a></div>
 									<div class="column tit">
-										<p class="tit"><a href="#">맛있닭 NEW 맛있닭 NEW 다이어트 도시락 5종 혼합 210g 다이어트 도시락 5종 혼합 210g</a></p>
+										<span class="prd-brand">잇메이트</span>
+										<p class="tit"><a href="#" class="text-elps2">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+										<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
+									</div><!--// column -->
+									<div class="column w110">
 										<ul class="price-item">
 											<li><span class="num2">19,500</span>원</li>
 										</ul>
 									</div><!--// column -->
-									<div class="column w110">
-										<span class="txt">1% 적립</span>
-									</div><!--// column -->
 									<div class="column w115">
-										<span class="txt">4.5점</span>
-										<div class="rating">
-											<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-										</div>
-									</div><!--// column -->
-									<div class="column w100">
-										<span class="txt">리뷰<br />4,550</span>
+										<span class="txt">1% 적립</span>
 									</div><!--// column -->
 									<div class="column w110">
 										<span class="txt"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></span>
+									</div><!--// column -->
+									<div class="column w110">
+										<div class="btn-mix-group">
+											<button type="button" class="btn-cart"><span>장바구니</span></button>
+											<button type="button" class="btn-newpage"><span>새창보기</span></button>
+										</div>
 									</div><!--// column -->
 								</div>
 							</div><!--// prd-info-area -->
@@ -188,31 +197,32 @@
 								<div class="inner">
 									<div class="column img w110"><a href="#"><img src="../../images/_samples/@sample_200x200.png" alt="상품이미지"></a></div>
 									<div class="column tit">
-										<p class="tit"><a href="#">맛있닭 NEW 맛있닭 NEW 다이어트 도시락 5종 혼합 210g 다이어트 도시락 5종 혼합 210g</a></p>
+										<span class="prd-brand">잇메이트</span>
+										<p class="tit"><a href="#" class="text-elps2">맛있닭 NEW 다이어트 도시락 5종 혼합 210g 맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+										<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
+									</div><!--// column -->
+									<div class="column w110">
 										<ul class="price-item">
 											<li><span class="num2">19,500</span>원</li>
 										</ul>
 									</div><!--// column -->
-									<div class="column w110">
-										<span class="txt">1% 적립</span>
-									</div><!--// column -->
 									<div class="column w115">
-										<span class="txt">4.5점</span>
-										<div class="rating">
-											<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-										</div>
-									</div><!--// column -->
-									<div class="column w100">
-										<span class="txt">리뷰<br />4,550</span>
+										<span class="txt">1% 적립</span>
 									</div><!--// column -->
 									<div class="column w110">
 										<span class="txt"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></span>
+									</div><!--// column -->
+									<div class="column w110">
+										<div class="btn-mix-group">
+											<button type="button" class="btn-cart"><span>장바구니</span></button>
+											<button type="button" class="btn-newpage"><span>새창보기</span></button>
+										</div>
 									</div><!--// column -->
 								</div>
 							</div><!--// prd-info-area -->
 						</li><!--// rank-item -->
 						<li class="rank-item-notice">
-							<div class="liner-box bg-darkorg ">
+							<div class="liner-box bg-mint">
 								<a href="#" class="btn-link-txt3"><i class="ico-bl-crown2"></i><span>판매랭킹, 어떻게 선정되고 있을까요?</span><i class="ico-arr-right"></i></a>
 							</div>
 						</li><!--// rank-item-notice -->
@@ -222,25 +232,26 @@
 								<div class="inner">
 									<div class="column img w110"><a href="#"><img src="../../images/_samples/@sample_200x200.png" alt="상품이미지"></a></div>
 									<div class="column tit">
-										<p class="tit"><a href="#">맛있닭 NEW 맛있닭 NEW 다이어트 도시락 5종 혼합 210g 다이어트 도시락 5종 혼합 210g</a></p>
+										<span class="prd-brand">잇메이트</span>
+										<p class="tit"><a href="#" class="text-elps2">맛있닭 NEW 다이어트 도시락 5종 혼합 210g 맛있닭 NEW 다이어트 도시락 5종 혼합 210g 맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+										<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
+									</div><!--// column -->
+									<div class="column w110">
 										<ul class="price-item">
 											<li><span class="num2">19,500</span>원</li>
 										</ul>
 									</div><!--// column -->
-									<div class="column w110">
-										<span class="txt">1% 적립</span>
-									</div><!--// column -->
 									<div class="column w115">
-										<span class="txt">4.5점</span>
-										<div class="rating">
-											<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-										</div>
-									</div><!--// column -->
-									<div class="column w100">
-										<span class="txt">리뷰<br />4,550</span>
+										<span class="txt">1% 적립</span>
 									</div><!--// column -->
 									<div class="column w110">
 										<span class="txt"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></span>
+									</div><!--// column -->
+									<div class="column w110">
+										<div class="btn-mix-group">
+											<button type="button" class="btn-cart"><span>장바구니</span></button>
+											<button type="button" class="btn-newpage"><span>새창보기</span></button>
+										</div>
 									</div><!--// column -->
 								</div>
 							</div><!--// prd-info-area -->

@@ -63,7 +63,7 @@
 
 			<div class="frame-sm">
 				<div class="frame-left">
-					<div class="aside-mypage">
+					<div class="aside-menu-wrap">
 						<nav class="aside-menu">
 							<ul class="menu-list">	
 								<li>
@@ -108,7 +108,10 @@
 								</li>
 							</ul>
 						</nav><!--// menu-mypage -->
-					</div><!--// aside-mypage -->
+						<div class="aside-link-box">
+							<a href="#"><i class="ico-bl-speaker"></i><span>고객의 소리</span><i class="ico-arr-right"></i></a>
+						</div>
+					</div><!--// aside-menu-wrap -->
 				</div><!--// frame-left -->
 
 				<div class="frame-right">
@@ -134,14 +137,14 @@
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">나이</div></th>
+										<th class="text-left" scope="row"><div class="in-tb">나이</div></th>
 										<td class="text-left">
                                             <div class="input-group inline-type">
                                                 <input type="text" id="item1" value="" title="" class="input-text w140">
                                                 <div class="input-group-txt">세</div>
                                             </div>
                                         </td>
-                                        <th class="text-left" scope="row"><div class="ib-tb">성별</div></th>
+                                        <th class="text-left" scope="row"><div class="in-tb">성별</div></th>
 										<td class="text-left">
                                             <div class="form-inline-list">
                                                 <div class="custom-radio">
@@ -154,14 +157,14 @@
                                         </td>
 									</tr>
 									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">키</div></th>
+										<th class="text-left" scope="row"><div class="in-tb">키</div></th>
 										<td class="text-left">
                                             <div class="input-group inline-type">
                                                 <input type="text" id="item2" value="" title="" class="input-text w140">
                                                 <div class="input-group-txt">cm</div>
                                             </div>
                                         </td>
-                                        <th class="text-left" scope="row"><div class="ib-tb">몸무게</div></th>
+                                        <th class="text-left" scope="row"><div class="in-tb">몸무게</div></th>
 										<td class="text-left">
                                             <div class="input-group inline-type">
                                                 <input type="text" id="item2" value="" title="" class="input-text w140">
@@ -170,7 +173,7 @@
                                         </td>
 									</tr>
                                     <tr>
-										<th class="text-left" scope="row"><div class="ib-tb">체지방</div></th>
+										<th class="text-left" scope="row"><div class="in-tb">체지방</div></th>
 										<td class="text-left" colspan="3">
                                             <div class="input-group inline-type">
                                                 <input type="text" id="item2" value="" title="" class="input-text w140">
@@ -184,7 +187,7 @@
                                         </td>
 									</tr>
                                     <tr>
-										<th class="text-left" scope="row"><div class="ib-tb">체형</div></th>
+										<th class="text-left" scope="row"><div class="in-tb">체형</div></th>
 										<td class="text-left" colspan="3">
                                             <div class="ui-select select-box w260" data-value="">
                                                 <a href="#none" title="체형 선택" class="select-value placeholder"><span>체형 선택</span></a><!-- [Dev] '선택' 등 안내 텍스트 있을 경우 addClass placeholder -->
@@ -203,7 +206,7 @@
                                         </td>
 									</tr>
                                     <tr>
-										<th class="text-left" scope="row"><div class="ib-tb">직업</div></th>
+										<th class="text-left" scope="row"><div class="in-tb">직업</div></th>
 										<td class="text-left" colspan="3">
                                             <div class="ui-select select-box w260" data-value="">
                                                 <a href="#none" title="직업 선택" class="select-value placeholder"><span>직업 선택</span></a><!-- [Dev] '선택' 등 안내 텍스트 있을 경우 addClass placeholder -->
@@ -223,7 +226,7 @@
                                         </td>
 									</tr>
                                     <tr>
-										<th class="text-left" scope="row"><div class="ib-tb">목적</div></th>
+										<th class="text-left" scope="row"><div class="in-tb">목적</div></th>
 										<td class="text-left" colspan="3">
                                             <div class="ui-select select-box w260" data-value="">
                                                 <a href="#none" title="목표 선택" class="select-value placeholder"><span>목표 선택</span></a><!-- [Dev] '선택' 등 안내 텍스트 있을 경우 addClass placeholder -->
@@ -254,7 +257,7 @@
 								</colgroup>
 								<tbody>
 									<tr>
-                                        <th class="text-left" scope="row"><div class="ib-tb">운동</div></th>
+                                        <th class="text-left" scope="row"><div class="in-tb">운동</div></th>
 										<td class="text-left">
                                             <div class="form-inline-list">
                                                 <div class="custom-radio">
@@ -267,7 +270,7 @@
                                         </td>
 									</tr>
 									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">하는운동</div></th>
+										<th class="text-left" scope="row"><div class="in-tb">하는운동</div></th>
 										<td class="text-left">
                                             <ul class="form-horiz-list">
 												<li>
@@ -329,7 +332,7 @@
                                         </td>
 									</tr>
 									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">운동량</div></th>
+										<th class="text-left" scope="row"><div class="in-tb">운동량</div></th>
 										<td class="text-left">
                                             <div class="input-group inline-type">
 												<div class="input-group-txt">일주일에</div>
@@ -356,7 +359,7 @@
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">하루몇끼</div></th>
+										<th class="text-left" scope="row"><div class="in-tb">하루몇끼</div></th>
 										<td class="text-left">
                                             <ul class="form-horiz-list">
 												<li>
@@ -388,7 +391,7 @@
                                         </td>
 									</tr>
 									<tr>
-                                        <th class="text-left" scope="row"><div class="ib-tb">식사시간 </div></th>
+                                        <th class="text-left" scope="row"><div class="in-tb">식사시간 </div></th>
 										<td class="text-left">
                                             <div class="form-inline-list">
                                                 <div class="custom-radio">
@@ -401,7 +404,7 @@
                                         </td>
 									</tr>
 									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">음식의 종류</div></th>
+										<th class="text-left" scope="row"><div class="in-tb">음식의 종류</div></th>
 										<td class="text-left">
                                             <div class="ui-select select-box w260" data-value="">
                                                 <a href="#none" title="음식 선택" class="select-value placeholder"><span>음식 선택</span></a><!-- [Dev] '선택' 등 안내 텍스트 있을 경우 addClass placeholder -->
@@ -428,7 +431,7 @@
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">내용</div></th>
+										<th class="text-left" scope="row"><div class="in-tb">내용</div></th>
 										<td class="text-left">
                                             <div class="textarea-box h125">
                                                 <textarea id="item-5" placeholder="내용을 입력하세요"></textarea>
@@ -436,7 +439,7 @@
                                         </td>
 									</tr>
 									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">파일첨부</div></th>
+										<th class="text-left" scope="row"><div class="in-tb">파일첨부</div></th>
 										<td class="text-left">
                                             <div class="filebox">
                                                 <label for="ex-filename" class="btn-file-label"><span>첨부파일</span></label> 

@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>   
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<header id="header" class="header">
+		<div class="header-top header-detail"><!-- [DEV] 상품상세 헤더-->
+			<div class="page-title-area">
+				<h1 class="page-title"><i class="head-logo"></i><span class="blind">랭킹닭컴</span></h1>
+			</div><!-- // page-title-area  -->
+		</div><!--// header-top -->
+	</header>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+       
+		<div class="content-wrap gift-accept">
+			<div class="gift-alarm"><strong>닭대리</strong>님이 보내신 선물이 도착했어요</div>
+			<div class="frame-accept-area">
+				<div class="accept-page-top">
+                    <em class="prod-name">[맛있닭]닭가슴살 육포 설날 선물세트</em>
+                    <figure><img src="../../images/_samples/@sample_270x270.jpg" alt=""></figure>
+                    <p class="gift-msg">안녕 :)</p>
+                </div><!--// result-page-top -->
+			</div>
+
+            <div class="order-info">
+                <div class="list-head inner-flex">
+                    <h3 class="title-list left-item1">배송지 정보</h3>
+                    <div class="right-item1">
+                        <p class="info-text"><i class="ico-info"></i>2월 7일 내 미입력 시 선물은 자동 취소됩니다.</p>
+                    </div>
+                </div><!--// list-head -->
+
+                <div class="frame-inner">
+                    <div class="lineless-table type2">
+                        <table>
+                            <caption>정보 입력</caption>
+                            <colgroup>
+                                <col style="width:85px"><col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">받는분 <em class="es"><span class="blind">필수입력</span></em></th>
+                                    <td>
+                                        <input type="text" title="받는 분 입력" class="input-text w-full">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">주소 <em class="es"><span class="blind">필수입력</span></em></th>
+                                    <td>
+                                        <div class="input-group">
+                                            <input type="text" title="기본주소" class="input-text" placeholder="">
+                                            <span class="input-group-btn">
+                                                <a href="#" class="btn-ex-white"><span>우편번호 찾기</span></a>
+                                            </span>
+                                        </div>
+                                        <input type="text" title="기본 주소" class="input-text w-full" placeholder="기본 주소">
+                                        <input type="text" title="상세 주소" class="input-text w-full" placeholder="상세 주소">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">휴대전화 <em class="es"><span class="blind">필수입력</span></em></th>
+                                    <td>
+                                        <div class="input-group w-full">
+                                            <div class="input-group-form">
+                                                <select class="select" id="select-item4">
+                                                    <option value="1">010</option>
+                                                    <option value="2">011</option>
+                                                    <option value="3">016</option>
+                                                    <option value="4">017</option>
+                                                    <option value="4">018</option>
+                                                    <option value="4">019</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" value="" title="휴대전화번호" class="input-text">
+                                        </div>
+                                    </td>
+                                </tr> 
+                            </tbody>
+                        </table>
+                    </div><!--// lineless-table -->
+                    <div class="delivery-comment">
+                        <div class="form-group">
+                            <div class="form-head">
+                                <label for="delivery-comment" class="form-label">배송 요청사항</label>
+                            </div><!--// form-head -->
+                            <div class="input-group w-full">
+                                <select class="select" id="delivery-comment">
+                                    <option value="">메세지를 선택해주세요</option>
+                                    <option value="">메세지를 선택해주세요</option>
+                                    <option value="">메세지를 선택해주세요</option>
+                                    <option value="">메세지를 선택해주세요</option>
+                                    <option value="">메세지를 선택해주세요</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delivery-time">
+                        <em class="tit">주말/공휴일 택배수령</em>
+                        <div class="side">
+                            <div class="custom-checkbox">
+								<input type="radio" id="check-201" class="checkbox-circle" name="check-item-1" checked="checked"><label for="check-201"> 가능</label>
+							</div>
+                            <div class="custom-checkbox">
+								<input type="radio" id="check-202" class="checkbox-circle" name="check-item-1"><label for="check-202"> 불가능</label>
+							</div>
+                        </div>
+                    </div>
+                    <div class="agree-area">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" id="check-101" class="checkbox" name="check-item-1"><label for="check-101"> 개인정보 수집/이용 동의</label>
+                        </div>
+                        <a href="#" class="side-link">자세히보기</a>
+                    </div>
+                </div><!--// frame-inner -->
+            </div>
+                    
+            <div class="btn-group-flex bnt-gift-accept">
+                <button type="button" class="btn-basic-lg btn-gray2"><span>선물거절</span></button>
+                <button type="button" class="btn-basic-lg btn-primary"><span>선물받기</span></button>
+            </div>
+
+            <div class="customer-info">
+                <p>선물 관련 문의사항은 고객센터로 연락주세요</p>
+                <a href="tel:02-6405-8088" class="tel">02-6405-8088</a>
+            </div>
+
+		</div><!--// content-wrap -->
+	 </section>
+	 <!--// ========== 컨텐츠 영역 :: container ========== -->
+	
+	<!-- ========== 공통 푸터 :: footer ========== -->
+	<script>include.footer();</script>
+	<!--// ========== 공통 푸터 :: footer ========== -->
+</div><!--// wrap -->
+
+<!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->
+<script>
+    $(function () {
+       //
+   }); 
+</script>
+<!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->
+</body>
+</html>

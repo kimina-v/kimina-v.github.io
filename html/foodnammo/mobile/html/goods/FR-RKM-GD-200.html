@@ -13,6 +13,7 @@
 <script>include.scripts();</script>
 <!--// ======================== CSS / JS ======================== -->
 <script>include.title();</script>
+<script src="../../js/pub/panzoom.min.js"></script>
 </head>   
 
 <body>
@@ -20,196 +21,358 @@
 	<!-- ========== 공통 헤더 :: header ========== -->
 	<script>include.skipNav();</script>
 	<header id="header" class="header">
-		<script>include.header();</script>
+		<div class="header-top header-detail"><!-- [DEV] 상품상세 헤더-->
+			<div class="page-title-area">
+                <a href="#" class="btn-back"><i class="ico-arrows-back"></i><span class="blind">뒤로가기</span></a>
+				<h1 class="page-title"><i class="head-logo"></i><span class="blind">랭킹닭컴</span></h1>
+				<div class="my-menu">
+					<ul>
+						<li><a href="#" class="btn-util-search" title="검색"><i class="ico-search-pop"></i></a></li>
+						<li><a href="#" class="btn-util-cart" title="장바구니"><span class="blind">장바구니</span><em class="count">1</em></a></li>
+					</ul>
+				</div>
+			</div><!-- // page-title-area  -->
+		</div><!--// header-top -->
 	</header>
 	<!--// ========== 공통 헤더 :: header ========== -->
 
 	<!-- ========== 컨텐츠 영역 :: container ========== -->
 	<section id="contents" class="container">
        
-		<div class="content-wrap">
-			<div class="goods-top-wrap frame-sm">
-				<div class="goods-img-area">
-					<div class="img"><img src="../../images/_samples/@sample_480x480.png" alt="맛있닭 닭가슴살 스테이크 오리지널 100g x 50팩 이미지" ></div>
-					<div class="refrig-bnr"><a href="#"><img src="../../images/img/img_refrig_bnr01.png" alt="지금 보고 있는 이 제품은 내 냉장고에 얼마나 들어갈까?" ></a></div>
-				</div><!--// goods-img -->
-				<div class="goods-info-area">
-					<h2 class="goods-tit">맛있닭 닭가슴살 스테이크 오리지널 100g x 50팩(5kg)</h2>
-					<div class="rating-div">
-						<em class="rating-point-md"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-						<span class="num">(1415)</span>
-					</div>
+		<div class="content-wrap goods-wrap">
+			<div class="goods-img-area">
+				<div class="img"><img src="../../images/_samples/@sample_480x480.png" alt="맛있닭 닭가슴살 스테이크 오리지널 100g x 50팩 이미지" ></div>
+			</div><!--// goods-img -->
+			<div class="goods-info-area">
+				<div class="brand-info">
+					<span class="flag">브랜드</span>
+					<a herf="#" class="arr-link text-guide-sm2">맛있닭</a>
+				</div>
+				<h2 class="goods-tit">맛있닭 닭가슴살 스테이크 오리지널 100g x 50팩(5kg)</h2>
+				<div class="rating">
+					<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
 					<!--
-						<em class="rating-point-md"><span class="point0"></span><span class="blind">별점0</span></em>
-						<em class="rating-point-md"><span class="point0-5"></span><span class="blind">별점0.5</span></em>
-						<em class="rating-point-md"><span class="point1"></span><span class="blind">별점1</span></em>
-						<em class="rating-point-md"><span class="point1-5"></span><span class="blind">별점1.5</span></em>
-						<em class="rating-point-md"><span class="point2"></span><span class="blind">별점2</span></em>
-						<em class="rating-point-md"><span class="point2-5"></span><span class="blind">별점2.5</span></em>
-						<em class="rating-point-md"><span class="point3"></span><span class="blind">별점3</span></em>
-						<em class="rating-point-md"><span class="point3-5"></span><span class="blind">별점3.5</span></em>
-						<em class="rating-point-md"><span class="point4"></span><span class="blind">별점4</span></em>
-						<em class="rating-point-md"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-						<em class="rating-point-md"><span class="point5"></span><span class="blind">별점5</span></em>
+						<em class="rating-point"><span class="point0"></span><span class="blind">별점0</span></em>
+						<em class="rating-point"><span class="point0-5"></span><span class="blind">별점0.5</span></em>
+						<em class="rating-point"><span class="point1"></span><span class="blind">별점1</span></em>
+						<em class="rating-point"><span class="point1-5"></span><span class="blind">별점1.5</span></em>
+						<em class="rating-point"><span class="point2"></span><span class="blind">별점2</span></em>
+						<em class="rating-point"><span class="point2-5"></span><span class="blind">별점2.5</span></em>
+						<em class="rating-point"><span class="point3"></span><span class="blind">별점3</span></em>
+						<em class="rating-point"><span class="point3-5"></span><span class="blind">별점3.5</span></em>
+						<em class="rating-point"><span class="point4"></span><span class="blind">별점4</span></em>
+						<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
+						<em class="rating-point"><span class="point5"></span><span class="blind">별점5</span></em>
 					-->
-					<div class="goods-price">
-						<p class="sale"><strong>28</strong>%</p>
-						<p class="price"><strong>18,000</strong>원</p>
-						<p class="origin"><span>24,000</span>원</p>
-					</div><!--// goods-price -->
-					<div class="orange-mem-box">
-						<a href="#" class="box-head"><i class="ico-bl-orgmem"></i><strong class="text-primary">오렌지멤버스 혜택</strong><i class="ico-arr-right"></i></a>
-						<ul class="sale-desc">
-							<li><span>멤버스 할인가</span><em class="price number"><strong>12,510</strong>원</em></li>
-							<li><span>멤버스 추가적립</span><em class="number"><strong>3%</strong></em></li>
-						</ul>
-					</div><!--// orange-mem-box -->
-					<div class="goods-coupon-box">
-						<span class="txt">첫 구매 <strong>10% 쿠폰</strong> 적용가</span>
-						<span class="num"><a href="#"><strong>11,910</strong>원<i class="ico-btn-download2"></i></a></span>
-					</div><!--// goods-coupon-box -->
-					<div class="dl-table-group">
-						<dl class="dl-row">
-							<dt>배송방법</dt>
-							<dd>
-								<div class="ui-toggle dlv-way-box">
-									<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em> <span class="dash">/</span> <em class="imgbadge-dlv-free"><span class="blind">무료배송</span></em>
-									<button type="button" class="ui-toggle-btn" title="자세히보기"><i class="ico-arr-toggle"></i><span class="blind">자세히보기</span></button>
-									<div class="ui-toggle-content hide">
-										<div class="dlv-tb-detail">
-											<table>
-												<colgroup>
-													<col style="width:24%">
-													<col style="width:36%">
-													<col style="width:40%">
-												</colgroup>
-												<thead>
-													<tr>
-														<th colspan="2" scope="col"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></th>
-														<th scope="col" class="border-left"><em class="imgbadge-dlv-free"><span class="blind">무료배송</span></em></th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<th scope="row">당일</td>
-														<td>
-															<strong>오후 1시</strong> 이전 주문 시<br><strong>오후 10시 전</strong> 도착
-														</td>
-														<td rowspan="6" class="border-left vt-mid text-center">
-															일반 택배 배송<br><strong>무료 상품</strong><br>(제주,도서산간 제외)		
-														</td>
-													</tr>
-													<tr>
-														<th scope="row">새벽</th>
-														<td>
-															<strong>오후 8시</strong> 이전 주문 시<br><strong>새벽 7시 전</strong> 도착
-														</td>
-													</tr>
-													<tr>
-														<td>5만원 이상</td>
-														<td><strong>무료</strong></td>
-													</tr>
-													<tr>
-														<td>5만원 이하</td>
-														<td><strong>+ 3000원</strong></td>
-													</tr>
-													<tr>
-														<td colspan="2">(서울, 경기, 인천 일부지역)</td>
-													</tr>
-												</tbody>
-											</table>
-										</div><!--// dlv-tb-detail -->
-									</div><!--// ui-toggle-content -->
-								</div><!--// dlv-way-box -->
-							</dd>
-						</dl><!--// dl-row -->
-						<dl class="dl-row">
-							<dt>적립혜택</dt>
-							<dd>1% 적립</dd>
-						</dl><!--// dl-row -->
-						<dl class="dl-row">
-							<dt>추가혜택</dt>
-							<dd>
-								<ul class="txt-list">
-									<li>10팩 당 1팩 추가 증정(맛 랜덤)</li>
-									<li>50팩 이상 구매 시, 소스 추가 증정(맛 랜덤)</li>
-								</ul>
-							</dd>
-						</dl><!--// dl-row -->
-					</div><!--// dl-table-group -->
-					<div class="option-select-area">
-						<strong class="tit">옵션선택</strong>
-						<div class="dropdown-box w-full">
-							<a href="#none" class="dropdown-value"><span>상품옵션선택</span></a>
-							<div class="dropdown-list">
-								<ul>
-									<li class="first"><a href="#">상품옵션선택</a></li>
-									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-									<!-- 품절일 경우 li에 addClass disabled, 재입고알림 신청 추가  -->
-									<li class="disabled">
-										<a href="#">5팩(1팩당 3,900원) (+0)</a>
-										<a href="#" class="text-primary">재입고알림 신청</a>
-									</li>
-									<!--// 품절일 경우 li에 addClass disabled, 재입고알림 신청 추가  -->
-									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-									<li class="disabled">
-										<a href="#">5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원) >5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원)</a>
-										<a href="#" class="text-primary">재입고알림 신청</a>
-									</li>
-									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-								</ul>
-							</div>
-						</div><!--// dropdown-box -->
-						<div class="dropdown-box w-full">
-							<a href="#none" class="dropdown-value"><span>꿀조합 추가옵션♪</span></a>
-							<div class="dropdown-list">
-								<ul>
-									<li class="first"><a href="#">상품옵션선택</a></li>
-									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-									<li><a href="#">5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원)</a></li>
-									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-								</ul>
-							</div>
-						</div><!--// dropdown-box -->
-						<div class="selected-options">
-							<ul>
-								
+					<span class="text-guide-sm">(1415)</span>
+				</div>
+				<!--
+					<em class="rating-point-md"><span class="point0"></span><span class="blind">별점0</span></em>
+					<em class="rating-point-md"><span class="point0-5"></span><span class="blind">별점0.5</span></em>
+					<em class="rating-point-md"><span class="point1"></span><span class="blind">별점1</span></em>
+					<em class="rating-point-md"><span class="point1-5"></span><span class="blind">별점1.5</span></em>
+					<em class="rating-point-md"><span class="point2"></span><span class="blind">별점2</span></em>
+					<em class="rating-point-md"><span class="point2-5"></span><span class="blind">별점2.5</span></em>
+					<em class="rating-point-md"><span class="point3"></span><span class="blind">별점3</span></em>
+					<em class="rating-point-md"><span class="point3-5"></span><span class="blind">별점3.5</span></em>
+					<em class="rating-point-md"><span class="point4"></span><span class="blind">별점4</span></em>
+					<em class="rating-point-md"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
+					<em class="rating-point-md"><span class="point5"></span><span class="blind">별점5</span></em>
+				-->
+				<div class="goods-price">
+					<p class="sale"><strong>28</strong>%</p>
+					<p class="price"><strong>18,000</strong>원</p>
+					<p class="origin"><span>24,000</span>원</p>
+					<div class="btn-util">
+						<button type="button" class="btn-icon-share" title="공유"><span class="blind">공유</span></button>
+						<div class="btn-icon-wish">
+							<input type="checkbox" id="wish01">
+							<label for="wish01">찜</label>
+						</div>
+						<button type="button" class="btn-icon-wish" title="공유"><span class="blind">공유</span></button>
+					</div>
+				</div><!--// goods-price -->
+				<div class="orange-mem-box">
+					<a href="#" class="box-head"><i class="ico-bl-orgmem"></i><strong class="text-primary">오렌지멤버스 혜택</strong><i class="ico-arr-right"></i></a>
+					<ul class="sale-desc">
+						<li><span>멤버스 할인가</span><em class="price number"><strong>12,510</strong>원</em></li>
+						<li><span>멤버스 추가적립</span><em class="number"><strong>3%</strong></em></li>
+					</ul>
+				</div>
+				
+				<!-- 다운 가능 쿠폰 -->
+				<a href="#" class="goods-coupon-box">
+					<span class="txt">총 5장의 쿠폰이 있습니다.</span>
+					<span class="icon-down"><i class="ico-btn-download2"></i></span>
+				</a>
+				<!-- //다운 가능 쿠폰 -->
+
+				<!-- 다운 완료 쿠폰 -->
+				<a href="#" class="goods-coupon-box complete"><!-- [Dev] 다운 완료 시 complete 추가 -->
+					<span class="txt">총 5장의 쿠폰이 있습니다.</span>
+					<span class="icon-down"><i class="ico-btn-download2"></i></span>
+				</a>
+				<!-- //다운 완료 쿠폰 -->
+
+				<hr class="divider">
+
+				<div class="table-group">
+					<div class="table-item">
+						<em>판매량</em>
+						<div class="td-item"><strong>276,519</strong> 팩 구매</div>
+					</div>
+					<div class="table-item">
+						<em>배송방법</em>
+						<div class="ui-toggle dlv-way-box td-item">
+							<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em> <span class="dash">/</span> <em class="imgbadge-dlv-free"><span class="blind">무료배송</span></em>
+							<button type="button" class="ui-toggle-btn" title="자세히보기"><i class="ico-arr-toggle"></i><span class="blind">자세히보기</span></button>
+							<div class="ui-toggle-content hide">
+								<div class="dlv-tb-detail">
+									<table>
+										<colgroup>
+											<col style="width:24%">
+											<col style="width:36%">
+											<col style="width:40%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th colspan="2" scope="col"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></th>
+												<th scope="col" class="border-left"><em class="imgbadge-dlv-free"><span class="blind">무료배송</span></em></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">당일</td>
+												<td>
+													<strong>오후 1시</strong> 이전 주문 시<br><strong>오후 10시 전</strong> 도착
+												</td>
+												<td rowspan="6" class="border-left vt-mid text-center">
+													일반 택배 배송<br><strong>무료 상품</strong><br>(제주,도서산간 제외)		
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">새벽</th>
+												<td>
+													<strong>오후 8시</strong> 이전 주문 시<br><strong>새벽 7시 전</strong> 도착
+												</td>
+											</tr>
+											<tr>
+												<td>5만원 이상</td>
+												<td><strong>무료</strong></td>
+											</tr>
+											<tr>
+												<td>5만원 이하</td>
+												<td><strong>+ 3000원</strong></td>
+											</tr>
+											<tr>
+												<td colspan="2">(서울, 경기, 인천 일부지역)</td>
+											</tr>
+										</tbody>
+									</table>
+								</div><!--// dlv-tb-detail -->
+							</div><!--// ui-toggle-content -->
+						</div><!--// dlv-way-box -->
+					</div>
+					<div class="table-item">
+						<em>적립혜택</em>
+						<div class="td-item">1% 적립</div>
+					</div>
+					<div class="table-item">
+						<em>추가혜택</em>
+						<div class="td-item">수량 별 증정품이 상이하오니, 자세한 내용은 상세페이지 상단을 참고해 주세요</div>
+					</div>
+				</div>
+				<div class="table-group">
+					<div class="table-item">
+						<em>상품구성</em>
+						<div class="td-item">
+							<ul class="txt-list">
+								<li>10팩 당 1팩 추가 증정(맛 랜덤)</li>
+								<li>50팩 이상 구매 시, 소스 추가 증정(맛 랜덤)</li>
 							</ul>
-						</div><!--// selected-options -->
-						<div class="total-area">
-							<span class="txt">총 상품금액</span>
-							<p class="price"><strong>18,000</strong>원</p>
-							
-							<div class="btn-area">
-								<a href="#" class="btn-basic-lg  btn-primary-line w435"><span>재입고 알림 신청</span></a>
-								<!-- <button type="button" class="btn-basic-lg  btn-primary-line" onclick="cartPopOpen(this);"><span>장바구니</span></button> -->
-								<!-- 장바구니 이동 안내 팝업 -->
-								<div class="cart-pop">
-									<div class="inner-box">
-										<p clas="txt">장바구니에 추가하였습니다.<br />장바구니로 이동하시겠습니까?</p>
-										<div class="btns">
-											<button type="button" class="btn-basic-sm2 btn-default ui-cart-close" onclick="cartPopClose(this);"><span>아니오</span></button>
-											<a href="#" class="btn-basic-sm2 btn-primary-ex"><span>예</span></a>
-										</div>
-									</div>
-								</div><!--// cart-pop -->
-								<!--// 장바구니 이동 안내 팝업 -->
-								<!-- <a href="#" class="btn-basic-lg btn-primary-ex"><span>바로구매</span></a> -->
-								<div class="custom-checkbox">
-									<input type="checkbox" id="check-2000" class="checkbox-wishbox" name="check-item-2000"><label for="check-2000">찜</label>
+						</div>
+					</div>
+				</div>
+				<div class="table-group">
+					<div class="table-item">
+						<em>공지사항</em>
+						<div class="td-item">추가옵션 스파클링 구매 시 개별 배송됩니다.</div>
+					</div>
+				</div>
+
+				<!-- 도서산간 + 배송비 아끼기 -->				
+				<div class="table-group">
+					<div class="table-item">
+						<em>판매량</em>
+						<div class="td-item"><strong>276,519</strong> 팩 구매</div>
+					</div>
+					<div class="table-item">
+						<em>배송방법</em>
+						<div class="td-item">2,000원 <span class="dash">/</span> 150,000원 이상 무료배송<br><a href="#" class="arr-link2">배송비 아끼기</a></div>
+					</div>
+					<div class="table-item">
+						<em>적립혜택</em>
+						<div class="td-item">1% 적립</div>
+					</div>
+					<div class="table-item">
+						<em>추가혜택</em>
+						<div class="td-item">수량 별 증정품이 상이하오니, 자세한 내용은 상세페이지 상단을 참고해 주세요</div>
+					</div>
+				</div>
+				<div class="table-group">
+					<div class="table-item">
+						<em>상품구성</em>
+						<div class="td-item">
+							<ul class="txt-list">
+								<li>10팩 당 1팩 추가 증정(맛 랜덤)</li>
+								<li>50팩 이상 구매 시, 소스 추가 증정(맛 랜덤)</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //도서산간 + 배송비 아끼기 -->
+			</div><!--// goods-info-area -->
+
+			<hr class="divider">
+
+			<div class="best-review-area">
+				<h3 class="goods-div-tit">베스트 구매후기</h3>
+				<div class="swiper-container best-review-slide">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="review-detail">
+								<div class="img">
+									<img src="../../images/_samples/@sample_100x100.png" alt="리뷰 이미지" />
+									<span class="added">+1</span>
 								</div>
-							</div><!--// btn-area -->
-						</div><!--// total-area -->
-					</div><!--// option-select-area -->
-				</div><!--// goods-info-area -->
-			</div><!--// goods-top-wrap -->
+								<div class="txt">
+									<em class="rating-point"><span class="point5"></span><span class="blind">별점5</span></em>
+									<!--
+										<em class="rating-point"><span class="point0"></span><span class="blind">별점0</span></em>
+										<em class="rating-point"><span class="point0-5"></span><span class="blind">별점0.5</span></em>
+										<em class="rating-point"><span class="point1"></span><span class="blind">별점1</span></em>
+										<em class="rating-point"><span class="point1-5"></span><span class="blind">별점1.5</span></em>
+										<em class="rating-point"><span class="point2"></span><span class="blind">별점2</span></em>
+										<em class="rating-point"><span class="point2-5"></span><span class="blind">별점2.5</span></em>
+										<em class="rating-point"><span class="point3"></span><span class="blind">별점3</span></em>
+										<em class="rating-point"><span class="point3-5"></span><span class="blind">별점3.5</span></em>
+										<em class="rating-point"><span class="point4"></span><span class="blind">별점4</span></em>
+										<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
+										<em class="rating-point"><span class="point5"></span><span class="blind">별점5</span></em>
+									-->
+									<ul class="sep-list type3">
+										<li><span class="name">ranking</span></li>
+										<li><span class="date">2021.04.13</span></li>
+									</ul>
+									<p class="detail text-elps2">
+										이런 시중에 파는 닭가슴살은 처음 사먹어봐서 약간 무슨 맛일까 걱정했는데 생각보다 맛있었어요 소스 안찍고 그냥 먹어도 저는 약간 짭짤하니 딱이였어요 헤헤 다이어트하려고 시킨건 이런 시중에 파는 닭가슴살은 처음 사먹어봐서 약간 무슨 맛일까 걱정했는데 생각보다 맛있었어요 소스 안찍고 그냥 먹어도 저는 약간 짭짤하니 딱이였어요 헤헤 다이어트하려고 시킨건
+									</p>
+								</div>
+								<a href="#" class="btn-blank"><span class="blind">리뷰 자세히 보기</span></a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="review-detail">
+								<div class="img">
+									<img src="../../images/_samples/@sample_100x100.png" alt="리뷰 이미지" />
+									<span class="added">+1</span>
+								</div>
+								<div class="txt">
+									<em class="rating-point"><span class="point5"></span><span class="blind">별점5</span></em>
+									<!--
+										<em class="rating-point"><span class="point0"></span><span class="blind">별점0</span></em>
+										<em class="rating-point"><span class="point0-5"></span><span class="blind">별점0.5</span></em>
+										<em class="rating-point"><span class="point1"></span><span class="blind">별점1</span></em>
+										<em class="rating-point"><span class="point1-5"></span><span class="blind">별점1.5</span></em>
+										<em class="rating-point"><span class="point2"></span><span class="blind">별점2</span></em>
+										<em class="rating-point"><span class="point2-5"></span><span class="blind">별점2.5</span></em>
+										<em class="rating-point"><span class="point3"></span><span class="blind">별점3</span></em>
+										<em class="rating-point"><span class="point3-5"></span><span class="blind">별점3.5</span></em>
+										<em class="rating-point"><span class="point4"></span><span class="blind">별점4</span></em>
+										<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
+										<em class="rating-point"><span class="point5"></span><span class="blind">별점5</span></em>
+									-->
+									<ul class="sep-list">
+										<li><span class="name">ranking</span></li>
+										<li><span class="date">2021.04.13</span></li>
+									</ul>
+									<p class="detail text-elps2">
+										이런 시중에 파는 닭가슴살은 처음 사먹어봐서 약간 무슨 맛일까 걱정했는데 생각보다 맛있었어요 소스 안찍고 그냥 먹어도 저는 약간 짭짤하니 딱이였어요 헤헤 다이어트하려고 시킨건 이런 시중에 파는 닭가슴살은 처음 사먹어봐서 약간 무슨 맛일까 걱정했는데 생각보다 맛있었어요 소스 안찍고 그냥 먹어도 저는 약간 짭짤하니 딱이였어요 헤헤 다이어트하려고 시킨건
+									</p>
+								</div>
+								<a href="#" class="btn-blank"><span class="blind">리뷰 자세히 보기</span></a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="review-detail">
+								<div class="img">
+									<img src="../../images/_samples/@sample_100x100.png" alt="리뷰 이미지" />
+									<span class="added">+1</span>
+								</div>
+								<div class="txt">
+									<em class="rating-point"><span class="point5"></span><span class="blind">별점5</span></em>
+									<!--
+										<em class="rating-point"><span class="point0"></span><span class="blind">별점0</span></em>
+										<em class="rating-point"><span class="point0-5"></span><span class="blind">별점0.5</span></em>
+										<em class="rating-point"><span class="point1"></span><span class="blind">별점1</span></em>
+										<em class="rating-point"><span class="point1-5"></span><span class="blind">별점1.5</span></em>
+										<em class="rating-point"><span class="point2"></span><span class="blind">별점2</span></em>
+										<em class="rating-point"><span class="point2-5"></span><span class="blind">별점2.5</span></em>
+										<em class="rating-point"><span class="point3"></span><span class="blind">별점3</span></em>
+										<em class="rating-point"><span class="point3-5"></span><span class="blind">별점3.5</span></em>
+										<em class="rating-point"><span class="point4"></span><span class="blind">별점4</span></em>
+										<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
+										<em class="rating-point"><span class="point5"></span><span class="blind">별점5</span></em>
+									-->
+									<ul class="sep-list type3">
+										<li><span class="name">ranking</span></li>
+										<li><span class="date">2021.04.13</span></li>
+									</ul>
+									<p class="detail text-elps2">
+										이런 시중에 파는 닭가슴살은 처음 사먹어봐서 약간 무슨 맛일까 걱정했는데 생각보다 맛있었어요 소스 안찍고 그냥 먹어도 저는 약간 짭짤하니 딱이였어요 헤헤 다이어트하려고 시킨건 이런 시중에 파는 닭가슴살은 처음 사먹어봐서 약간 무슨 맛일까 걱정했는데 생각보다 맛있었어요 소스 안찍고 그냥 먹어도 저는 약간 짭짤하니 딱이였어요 헤헤 다이어트하려고 시킨건
+									</p>
+								</div>
+								<a href="#" class="btn-blank"><span class="blind">리뷰 자세히 보기</span></a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="review-detail">
+								<div class="txt">
+									<em class="rating-point"><span class="point5"></span><span class="blind">별점5</span></em>
+									<!--
+										<em class="rating-point"><span class="point0"></span><span class="blind">별점0</span></em>
+										<em class="rating-point"><span class="point0-5"></span><span class="blind">별점0.5</span></em>
+										<em class="rating-point"><span class="point1"></span><span class="blind">별점1</span></em>
+										<em class="rating-point"><span class="point1-5"></span><span class="blind">별점1.5</span></em>
+										<em class="rating-point"><span class="point2"></span><span class="blind">별점2</span></em>
+										<em class="rating-point"><span class="point2-5"></span><span class="blind">별점2.5</span></em>
+										<em class="rating-point"><span class="point3"></span><span class="blind">별점3</span></em>
+										<em class="rating-point"><span class="point3-5"></span><span class="blind">별점3.5</span></em>
+										<em class="rating-point"><span class="point4"></span><span class="blind">별점4</span></em>
+										<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
+										<em class="rating-point"><span class="point5"></span><span class="blind">별점5</span></em>
+									-->
+									<ul class="sep-list type3">
+										<li><span class="name">ranking</span></li>
+										<li><span class="date">2021.04.13</span></li>
+									</ul>
+									<p class="detail text-elps2">
+										이런 시중에 파는 닭가슴살은 처음 사먹어봐서 약간 무슨 맛일까 걱정했는데 생각보다 맛있었어요 소스 안찍고 그냥 먹어도 저는 약간 짭짤하니 딱이였어요 헤헤 다이어트하려고 시킨건 이런 시중에 파는 닭가슴살은 처음 사먹어봐서 약간 무슨 맛일까 걱정했는데 생각보다 맛있었어요 소스 안찍고 그냥 먹어도 저는 약간 짭짤하니 딱이였어요 헤헤 다이어트하려고 시킨건
+									</p>
+								</div>
+								<a href="#" class="btn-blank"><span class="blind">리뷰 자세히 보기</span></a>
+							</div>
+						</div>
+					</div><!--// swiper-wrapper -->
+					<div class="swiper-pagination swiper-bnr-page"></div>
+				</div><!--// swiper-container -->
+				<a href="#" class="btn-basic-sm2 btn-default"><span class="arr-link">전체후기</span></a>
+			</div><!--// best-review-area -->
+
+			<hr class="divider">
 			
+			<div class="refrig-bnr"><a href="#popup-sample01" class="ui-open-pop"><img src="../../images/img/img_refrig_bnr02.png" alt="지금 보고 있는 이 제품은 내 냉장고에 얼마나 들어갈까?" ></a></div>
+
 			<!-- <div class="slide-area frame-sm">
 				<h3 class="goods-div-tit">다른 고객님들이 함께 본 상품</h3>
 				<div class="">
@@ -222,8 +385,8 @@
 				<div class="ui-goods-tab tab-detail">
 					<ul>
 						<li class="current"><a href="#detail-section01"><span>상품정보</span></a></li>
-						<li><a href="#detail-section02"><span>구매후기 4279</span></a></li>
-						<li><a href="#detail-section03"><span>상품문의 9</span></a></li>
+						<li><a href="#detail-section02"><span>구매후기 <span class="count">(4279)</span></span></a></li>
+						<li><a href="#detail-section03"><span>상품문의 <span class="count">(9)</span></span></a></li>
 						<li><a href="#detail-section04"><span>배송안내</span></a></li>
 					</ul>
 				</div><!--//tab-detail -->
@@ -231,211 +394,415 @@
 					<div class="goods-tab-area">
 						<div class="goods-detail">
 							<!-- 상품정보 -->
-							<div class="goods-detail-information" id="detail-section01">
+							<div id="detail-section01" class="goods-detail-information">
 								<h3 class="blind">상품정보</h3>
-								
-								<div class="goods-article">
-									<!-- 묶음 상품 목록 -->
-									<div class="goods-bundle-list">
-										<ul class="grid-area-span3">
-											<li class="colum">
-												<div class="inner-box">
-													<div class="img"><img src="../../images/_samples/@sample_240x240.png" alt="묶음상품이미지" /></div>
-													<div class="txt-area">
-														<span class="num">01</span>
-														<p class="tit text-elps2">맛있닭 닭가슴살 소시지 단백천하 오리지널 800g 맛있닭 닭가슴살 소시지 단백천하 오리지널 800g </p>
-														<p class="price"><em>16,500</em>원</p>
-													</div><!--// txt-area -->
-													<div class="hidden-box">
-														<div class="btns">
-															<a href="#" class="btn-icon-view"><span class="txt">상세보기</span></a>
-														</div>
-													</div><!--// hidden-box -->
-												</div><!--// inner-box -->
-											</li><!--// colum -->
-											<li class="colum">
-												<div class="inner-box">
-													<div class="img"><img src="../../images/_samples/@sample_240x240.png" alt="묶음상품이미지" /></div>
-													<div class="txt-area">
-														<span class="num">02</span>
-														<p class="tit text-elps2">맛있닭 </p>
-														<p class="price"><em>16,500</em>원</p>
-													</div><!--// txt-area -->
-													<div class="hidden-box">
-														<div class="btns">
-															<!-- 단품일 경우 바로담기 기능 추가 -->
-															<a href="#" class="btn-icon-view"><span class="txt">상세보기</span></a>
-															<a href="#" class="btn-icon-save"><span class="txt">담기</span></a>
-															<!--// 단품일 경우 바로담기 기능 추가 -->
-														</div>
-													</div><!--// hidden-box -->
-												</div><!--// inner-box -->
-											</li><!--// colum -->
-											<li class="colum">
-												<div class="inner-box">
-													<div class="img"><img src="../../images/_samples/@sample_240x240.png" alt="묶음상품이미지" /></div>
-													<div class="txt-area">
-														<span class="num">03</span>
-														<p class="tit text-elps2">맛있닭 닭가슴살 소시지 단백천하 오리지널 800g </p>
-														<p class="price"><em>16,500</em>원</p>
-													</div><!--// txt-area -->
-													<div class="hidden-box">
-														<div class="btns">
-															<a href="#" class="btn-icon-view"><span class="txt">상세보기</span></a>
-															<a href="#" class="btn-icon-save"><span class="txt">담기</span></a>
-														</div>
-													</div><!--// hidden-box -->
-												</div><!--// inner-box -->
-											</li><!--// colum -->
-											<li class="colum">
-												<div class="inner-box">
-													<div class="img"><img src="../../images/_samples/@sample_240x240.png" alt="묶음상품이미지" /></div>
-													<div class="txt-area">
-														<span class="num">04</span>
-														<p class="tit text-elps2">맛있닭 닭가슴살 소시지 단백천하 오리지널 800g 맛있닭 닭가슴살 소시지 단백천하 오리지널 800g </p>
-														<p class="price"><em>16,500</em>원</p>
-													</div><!--// txt-area -->
-													<div class="hidden-box">
-														<div class="btns">
-															<a href="#" class="btn-icon-view"><span class="txt">상세보기</span></a>
-														</div>
-													</div><!--// hidden-box -->
-												</div><!--// inner-box -->
-											</li><!--// colum -->
-											<li class="colum">
-												<div class="inner-box">
-													<div class="img"><img src="../../images/_samples/@sample_240x240.png" alt="묶음상품이미지" /></div>
-													<div class="txt-area">
-														<span class="num">05</span>
-														<p class="tit text-elps2">맛있닭 </p>
-														<p class="price"><em>16,500</em>원</p>
-													</div><!--// txt-area -->
-													<div class="hidden-box">
-														<div class="btns">
-															<a href="#" class="btn-icon-view"><span class="txt">상세보기</span></a>
-															<a href="#" class="btn-icon-save"><span class="txt">담기</span></a>
-														</div>
-													</div><!--// hidden-box -->
-												</div><!--// inner-box -->
-											</li><!--// colum -->
-											<li class="colum">
-												<div class="inner-box">
-													<div class="img"><img src="../../images/_samples/@sample_240x240.png" alt="묶음상품이미지" /></div>
-													<div class="txt-area">
-														<span class="num">06</span>
-														<p class="tit text-elps2">맛있닭 닭가슴살 소시지 단백천하 오리지널 800g </p>
-														<p class="price"><em>16,500</em>원</p>
-													</div><!--// txt-area -->
-													<div class="hidden-box">
-														<div class="btns">
-															<a href="#" class="btn-icon-view"><span class="txt">상세보기</span></a>
-															<a href="#" class="btn-icon-save"><span class="txt">담기</span></a>
-														</div>
-													</div><!--// hidden-box -->
-												</div><!--// inner-box -->
-											</li><!--// colum -->
-										</ul>
-									</div><!--// goods-bundle-list || 묶음 상품 목록 -->
-								</div><!--// goods-article -->
-
+								<div class="goods-bundle-content">
+									<div class="goods-bundle-info">
+										<span>상품이미지를 선택하시면<br><b>상세정보 확인</b> 하실 수 있습니다.</span>
+									</div>
+									<ul class="goods-bundle-list">
+										<li class="prod-item">
+											<a href="#" class="prod-img"><img src="../../images/_samples/@sample_240x240.png" alt=""></a>
+											<span class="prod-name">맛있닭 닭가슴살 소시지 단백천하 오리지널 800g</span>
+											<span class="price"><strong>16,000</strong>원</span>
+											<div class="option-btn">
+												<a href="#"><span>상세보기</span></a>
+											</div>
+										</li>
+										<li class="prod-item">
+											<a href="#" class="prod-img"><img src="../../images/_samples/@sample_240x240.png" alt=""></a>
+											<span class="prod-name">맛있닭 닭가슴살 소시지 단백천하 오리지널 800g</span>
+											<span class="price"><strong>16,000</strong>원</span>
+											<div class="option-btn">
+												<a href="#"><span>상세보기</span></a>
+												<a href="#" class="text-primary"><i class="ico-btn-cart"></i><span>담기</span></a>
+											</div>
+										</li>
+										<li class="prod-item">
+											<a href="#" class="prod-img"><img src="../../images/_samples/@sample_240x240.png" alt=""></a>
+											<span class="prod-name">맛있닭 닭가슴살 소시지 단백천하 오리지널 800g</span>
+											<span class="price"><strong>16,000</strong>원</span>
+											<div class="option-btn">
+												<a href="#"><span>상세보기</span></a>
+											</div>
+										</li>
+										<li class="prod-item">
+											<a href="#" class="prod-img"><img src="../../images/_samples/@sample_240x240.png" alt=""></a>
+											<span class="prod-name">맛있닭 닭가슴살 소시지 단백천하 오리지널 800g</span>
+											<span class="price"><strong>16,000</strong>원</span>
+											<div class="option-btn">
+												<a href="#"><span>상세보기</span></a>
+												<a href="#" class="text-primary"><i class="ico-btn-cart"></i><span>담기</span></a>
+											</div>
+										</li>
+										<li class="prod-item">
+											<a href="#" class="prod-img"><img src="../../images/_samples/@sample_240x240.png" alt=""></a>
+											<span class="prod-name">맛있닭 닭가슴살 소시지 단백천하 오리지널 800g</span>
+											<span class="price"><strong>16,000</strong>원</span>
+											<div class="option-btn">
+												<a href="#"><span>상세보기</span></a>
+											</div>
+										</li>
+										<li class="prod-item">
+											<a href="#" class="prod-img"><img src="../../images/_samples/@sample_240x240.png" alt=""></a>
+											<span class="prod-name">맛있닭 닭가슴살 소시지 단백천하 오리지널 800g</span>
+											<span class="price"><strong>16,000</strong>원</span>
+											<div class="option-btn">
+												<a href="#"><span>상세보기</span></a>
+												<a href="#" class="text-primary"><i class="ico-btn-cart"></i><span>담기</span></a>
+											</div>
+										</li>
+										<li class="prod-item">
+											<a href="#" class="prod-img"><img src="../../images/_samples/@sample_240x240.png" alt=""></a>
+											<span class="prod-name">맛있닭 닭가슴살 소시지 단백천하 오리지널 800g</span>
+											<span class="price"><strong>16,000</strong>원</span>
+											<div class="option-btn">
+												<a href="#"><span>상세보기</span></a>
+											</div>
+										</li>
+										<li class="prod-item">
+											<a href="#" class="prod-img"><img src="../../images/_samples/@sample_240x240.png" alt=""></a>
+											<span class="prod-name">맛있닭 닭가슴살 소시지 단백천하 오리지널 800g</span>
+											<span class="price"><strong>16,000</strong>원</span>
+											<div class="option-btn">
+												<a href="#"><span>상세보기</span></a>
+												<a href="#" class="text-primary"><i class="ico-btn-cart"></i><span>담기</span></a>
+											</div>
+										</li>
+										<li class="prod-item">
+											<a href="#" class="prod-img"><img src="../../images/_samples/@sample_240x240.png" alt=""></a>
+											<span class="prod-name">맛있닭 닭가슴살 소시지 단백천하 오리지널 800g</span>
+											<span class="price"><strong>16,000</strong>원</span>
+											<div class="option-btn">
+												<a href="#"><span>상세보기</span></a>
+											</div>
+										</li>
+										<li class="prod-item">
+											<a href="#" class="prod-img"><img src="../../images/_samples/@sample_240x240.png" alt=""></a>
+											<span class="prod-name">맛있닭 닭가슴살 소시지 단백천하 오리지널 800g</span>
+											<span class="price"><strong>16,000</strong>원</span>
+											<div class="option-btn">
+												<a href="#"><span>상세보기</span></a>
+												<a href="#" class="text-primary"><i class="ico-btn-cart"></i><span>담기</span></a>
+											</div>
+										</li>
+										<li class="prod-item">
+											<a href="#" class="prod-img"><img src="../../images/_samples/@sample_240x240.png" alt=""></a>
+											<span class="prod-name">맛있닭 닭가슴살 소시지 단백천하 오리지널 800g</span>
+											<span class="price"><strong>16,000</strong>원</span>
+											<div class="option-btn">
+												<a href="#"><span>상세보기</span></a>
+												<a href="#" class="text-primary"><i class="ico-btn-cart"></i><span>담기</span></a>
+											</div>
+										</li>
+									</ul>
+									<div class="btn-area">
+										<button type="button" class="btn-article-lg ui-all-content"><span>상품정보 더보기</span><i class="ico-arr-toggle"></i></button>
+									</div>
+								</div>
 							</div><!--// goods-detail-information || 상품정보 -->
+							<div style="font-weight:bold;font-size:20px;text-align:center;line-height:30px;padding:20px 0;background:#ff0">아래 내용 <br><a href="FR-RKM-GD-100.html" target="_black" style="display:inline-block;border-bottom:2px solid #333">FR-RKM-GD-100.html</a><br>와 동일</div>
 						</div><!--// goods-detail -->
 					</div><!--// goods-tab-area-->
 				</div><!--// frame-sm -->
 
-				<div class="option-select-fix">
-					<div class="inner-area">
-						<div class="option-select-area">
-							<strong class="tit">옵션선택</strong>
-							<div class="dropdown-box box-md w-full">
-								<a href="#none" class="dropdown-value"><span>상품옵션선택</span></a>
-								<div class="dropdown-list">
+				<div class="fixed-option">
+					<div class="option-btn">
+						<div class="btn-group">
+							<a href="#" class="btn-gift"><span>선물하기</span></a>
+							<a href="#" class="btn-buy"><span>구매하기</span></a>
+						</div>
+					</div>
+					<div class="option-wrap">
+						<!-- scroll area -->
+						<div class="scroll-area">
+							<div class="option-select">
+								<a href="#">상품옵션선택</a>
+								<div class="option-list">
 									<ul>
-										<li class="first"><a href="#">상품옵션선택</a></li>
-										<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-										<!-- 품절일 경우 li에 addClass disabled, 재입고알림 신청 추가  -->
-										<li class="disabled">
-											<a href="#">5팩(1팩당 3,900원) (+0)</a>
-											<a href="#" class="text-primary">재입고알림 신청</a>
-										</li>
-										<!--// 품절일 경우 li에 addClass disabled, 재입고알림 신청 추가  -->
-										<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-										<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-										<li class="disabled">
-											<a href="#">5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원) >5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원)</a>
-											<a href="#" class="text-primary">재입고알림 신청</a>
-										</li>
-										<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-										<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-									</ul>
-								</div>
-							</div><!--// dropdown-box -->
-							<div class="dropdown-box box-md w-full">
-								<a href="#none" class="dropdown-value"><span>꿀조합 추가옵션♪</span></a>
-								<div class="dropdown-list">
-									<ul>
-										<li class="first"><a href="#">상품옵션선택</a></li>
-										<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-										<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-										<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-										<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-										<li><a href="#">5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원)</a></li>
-										<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-										<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-									</ul>
-								</div>
-							</div><!--// dropdown-box -->
-							<div class="selected-options ui-fix-option">
-								<ul>
-									
-								</ul>
-							</div><!--// selected-options -->
-							<div class="total-area">
-								<span class="txt">총 상품금액</span>
-								<p class="price"><strong>18,000</strong>원</p>
-								<div class="btn-area">
-									<a href="#" class="btn-basic-lg  btn-primary-line w435"><span>재입고 알림 신청</span></a>
-									<!-- <button type="button" class="btn-basic-lg  btn-primary-line" onclick="cartPopOpen(this);"><span>장바구니</span></button> -->
-									<!-- 장바구니 이동 안내 팝업 -->
-									<div class="cart-pop">
-										<div class="inner-box">
-											<p clas="txt">장바구니에 추가하였습니다.<br>장바구니로 이동하시겠습니까?</p>
-											<div class="btns">
-												<button type="button" class="btn-basic-sm2 btn-default ui-cart-close" onclick="cartPopClose(this);"><span>아니오</span></button>
-												<a href="#" class="btn-basic-sm2 btn-primary-ex"><span>예</span></a>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li class="soldout"><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<div class="restock">
+												<button type="button" class="text-primary">재입고 알림 신청</button>
 											</div>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+									</ul>
+								</div>
+								<button type="button" class="sel-close"><span>셀렉트박스닫기</span></button>
+							</div>
+						
+							<div class="option-select">
+								<a href="#">상품옵션선택</a>
+								<div class="option-list">
+									<ul>
+										<li><a href="#">
+											<em>2222눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+									</ul>
+								</div>
+								<button type="button" class="sel-close"><span>셀렉트박스닫기</span></button>
+							</div>
+							
+							<div class="selected-option-area">
+								<div class="selected-option-item">
+									<em>혼합 100g X 100팩(고추30,마늘20,탄두리50)</em>
+									<div class="option-price">
+										<div class="quantity">
+											<button type="button" class="quantity-minus">수량빼기</button>
+											<input type="text" class="quantity-counter" value="1" readonly>
+											<button type="button" class="quantity-plus">수량더하기</button>
+										</div>
+										<div class="price-info">
+											<span class="origin-price"><del>18,200원</del></span>
+											<span class="sale-price"><strong>12,000</strong>원</span>
 										</div>
 									</div>
-									<!--// cart-pop -->
-									<!--// 장바구니 이동 안내 팝업 -->
-									<!-- <a href="#" class="btn-basic-lg btn-primary-ex"><span>바로구매</span></a> -->
-								</div><!--// btn-area -->
-							</div><!--// total-area -->
+									<a herf="#" class="item-del"><span>삭제</span></a>
+								</div>
+								<div class="selected-option-item">
+									<em>혼합 100g X 100팩(고추30,마늘20,탄두리50)</em>
+									<div class="option-price">
+										<div class="quantity">
+											<button type="button" class="quantity-minus">수량빼기</button>
+											<input type="text" class="quantity-counter" value="1" readonly>
+											<button type="button" class="quantity-plus">수량더하기</button>
+										</div>
+										<div class="price-info">
+											<span class="origin-price"><del>18,200원</del></span>
+											<span class="sale-price"><strong>12,000</strong>원</span>
+										</div>
+									</div>
+									<a herf="#" class="item-del"><span>삭제</span></a>
+								</div>
+								<div class="selected-option-item">
+									<em>혼합 100g X 100팩(고추30,마늘20,탄두리50)</em>
+									<div class="option-price">
+										<div class="quantity">
+											<button type="button" class="quantity-minus">수량빼기</button>
+											<input type="text" class="quantity-counter" value="1" readonly>
+											<button type="button" class="quantity-plus">수량더하기</button>
+										</div>
+										<div class="price-info">
+											<span class="origin-price"><del>18,200원</del></span>
+											<span class="sale-price"><strong>12,000</strong>원</span>
+										</div>
+									</div>
+									<a herf="#" class="item-del"><span>삭제</span></a>
+								</div>
+								<div class="selected-option-item">
+									<em>혼합 100g X 100팩(고추30,마늘20,탄두리50)</em>
+									<div class="option-price">
+										<div class="quantity">
+											<button type="button" class="quantity-minus">수량빼기</button>
+											<input type="text" class="quantity-counter" value="1" readonly>
+											<button type="button" class="quantity-plus">수량더하기</button>
+										</div>
+										<div class="price-info">
+											<span class="origin-price"><del>18,200원</del></span>
+											<span class="sale-price"><strong>12,000</strong>원</span>
+										</div>
+									</div>
+									<a herf="#" class="item-del"><span>삭제</span></a>
+								</div>
+							</div>
 						</div>
+						<!-- //scroll area -->
+						
+						<div class="price-info">
+							<div class="add-saving-point">
+								<a hef="#"><span>1500P 추가적립</span></a>
+							</div>
+							<div class="price-area">
+								<span class="total-price">총 <strong class="text-primary">48,400<span>원</span></strong></span>
+								<span class="saving-point">(500P적립)</span>
+							</div>
+						</div>
+
+						<div class="btn-group">
+							<a href="#" class="btn-cart"><span>장바구니</span></a>
+							<a href="#" class="btn-buy"><span>바로구매</span></a>
+						</div>
+						<!-- 재입고 버튼 --
+						<div class="btn-group">
+							<a href="#" class="btn-restock"><span>재입고 알림 신청</span></a>
+						</div>
+						-- //재입고 버튼 -->
+						<button class="btn-toggle"><span>닫기</span></button>
 					</div>
 				</div><!--// option-select-fix -->
 
 			</div><!--// goods-detail-wrap -->
 
 		</div><!--// content-wrap -->
- 
-		<!-- ## 사이드 배너 :: side-quick-area  -->
-		<script>include.sidequick();</script>
-		<!--// ## 사이드 배너 ::  side-quick-area  -->
 	 </section>
 	 <!--// ========== 컨텐츠 영역 :: container ========== -->
-	
+
 	<!-- ========== 공통 푸터 :: footer ========== -->
 	<script>include.footer();</script>
 	<!--// ========== 공통 푸터 :: footer ========== -->
 
-	
 </div><!--// wrap -->
 
+<!-- ========== 팝업 영역 ========== -->
+<div class="layer-wrap full-type img-zoom" id="img-zoom">
+    <div class="layer-pop">
+        <div class="layer-inner">
+            <div class="title">눈꽃덮밥 혼합 200g</div>
+            <div class="img-zoom-layer">
+                <div class="zoom-content" id="zoom-content">
+                    <div id="zoom-target" class="zoom-target">
+                        <img src="../../images/_samples/@sample_goods_detail.png">
+                        <img src="../../images/_samples/@sample_goods_detail.png">
+                    </div>
+                </div>
+                <div class="zoom-action">
+                    <button class="plus" onclick="imgZoomAction('plus');"><span>확대</span></button>
+                    <button class="minus" onclick="imgZoomAction('minus');"><span>축소</span></button>
+                </div>
+                <button class="zoom-close"><span>닫기</span></button>
+            </div>
+            <div class="zoom-info">
+                <p>이미지를 확대해서 보실 수 있어요</p>
+            </div>
+            <script type="text/javascript">
+                $(function(){
+                    imgZoom()
+                });
+				var panzoomFn = null;
+				    
+                function imgZoom() {
+                    var zoomLayer = document.getElementById('zoom-target');
+                    panzoomFn = panzoom(zoomLayer, {
+                        maxZoom: 4,
+                        minZoom: 1,
+                        zoomDoubleClickSpeed: 1,
+                        bounds: true,
+                        boundsPadding: 1
+                    });    
+           
+                }
+            
+                function imgZoomAction(method) {
+                    let cx = document.getElementById('zoom-content').clientWidth/2;
+                    let cy = document.getElementById('zoom-content').clientHeight/2;
+            
+                    let zoomBy = 0.5;
+                    if (method == 'plus') {
+                        zoomBy = 2;
+                    }
+                    panzoomFn.smoothZoom(cx, cy, zoomBy);
+                }
+            </script>
+            <button type="button" class="btn-x-md ui-close-pop" title="닫기"><i class="ico-x-normal"></i><span class="blind">닫기</span></button>
+        </div>
+    </div><!--// layer-pop  -->
+</div>
+<!-- ========== 팝업 영역 ========== -->
 <!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->
 <script>
 	$(function () {
-		
+		//하단 fix option
+		var opt = $('.option-wrap'),
+			optHei = opt.outerHeight(),
+			optPos = optHei - 70;
+
+			opt.css('min-height', optHei)
+			opt.css('bottom',-optPos+'px')
+
+		$('.btn-toggle').on('click',function(){
+			var $this = $(this),
+				fixed = $('.fixed-option'),
+				opt = $('.option-wrap'),
+				btn = $('.fixed-option .option-btn'),
+				optHei = opt.outerHeight();
+				
+			if($this.hasClass('open')){
+				$this.removeClass('open').children('sppan').text('열기')
+				opt.css('bottom',-optPos+'px')
+				fixed.css('height','70px');
+				btn.css('bottom','0');
+			}else{
+				$this.addClass('open').children('sppan').text('닫기')
+				opt.css('bottom','0')
+				fixed.css('height',optHei);
+				btn.css('bottom','-70px');
+			}
+
+			$('.option-select > a').on('click',function(){
+				var $this = $(this),
+					optSel = $this.closest('.option-select'),
+					optWrap = optSel.closest('.option-wrap'),
+					optItem = optWrap.find('.selected-option-item'),
+					sel = $this.siblings('.option-list'),
+					selHei = sel.outerHeight();
+				if(optSel.hasClass('open')){
+					optSel.removeClass('open');
+					sel.css('bottom','-350px');
+				}else{
+				console.log(selHei)
+					optSel.addClass('open');
+					optWrap.css('min-height', selHei + 'px');
+					sel.css('bottom','0');
+					fixed.css('height', selHei + 'px');
+					opt.css('height', selHei + 'px');
+				}
+			});
+			$('.sel-close').on('click',function(){
+				$(this).siblings('.option-list').css('bottom','-350px').closest('.option-select').removeClass('open');
+				fixed.css('height',optHei);
+				opt.css('height',optHei);
+			});
+
+		});
 	}); 
 </script>
 <!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->

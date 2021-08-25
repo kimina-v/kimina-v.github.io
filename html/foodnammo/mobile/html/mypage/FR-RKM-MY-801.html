@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>   
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<header id="header" class="header">
+		<div class="header-top">
+			<div class="page-title-area">
+                <a href="#" class="btn-back"><i class="ico-arrows-back"></i><span class="blind">뒤로가기</span></a>
+				<h2 class="page-title">내 정보수정</h2>
+				<!-- <div class="my-menu">
+					<ul>
+						<li><a href="#" class="btn-util-search" title="검색"><i class="ico-search-pop"></i></a></li>
+						<li><a href="#" class="btn-util-cart" title="장바구니"><span class="blind">장바구니</span><em class="count">1</em></a></li>
+					</ul>
+				</div> -->
+			</div><!-- // page-title-area  -->
+		</div><!--// header-top -->
+	</header>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">       
+		<div class="content-wrap myinfo-edit">
+            <div class="form-section-group">
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="id" class="form-label">아이디</label>
+                    </div><!--// form-head -->
+                    <div class="input-group w-full">
+                        <input type="text" id="id" class="input-text type-lg" readonly value="kyong">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="pw" class="form-label">비밀번호<i class="es2"></i></label>
+                    </div><!--// form-head -->
+                    <div class="input-group w-full">
+                        <input type="password" id="pw" class="input-text type-lg">
+                    </div>
+                    <div class="input-group w-full">
+                        <input type="password" id="pw" class="input-text type-lg">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="name" class="form-label">이름</label>
+                    </div><!--// form-head -->
+                    <div class="input-group w-full">
+                        <input type="text" id="name" class="input-text type-lg" readonly value="호구오">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="nickname" class="form-label">닉네임<i class="es2"></i></label>
+                    </div><!--// form-head -->
+                    <div class="input-group input-btn-mix w-full">
+                        <input type="text" id="nickname" class="input-text type-lg">
+                        <button type="button" class="btn-tbl btn-primary-line"><span>중복확인</span></button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="tell" class="form-label">휴대전화<i class="es2"></i></label>
+                    </div><!--// form-head -->
+                    <div class="input-group w-full">
+                        <input type="text" id="tell" class="input-text type-lg">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="email" class="form-label">이메일<i class="es2"></i></label>
+                    </div><!--// form-head -->
+                    <div class="input-group type-lg input-email-type w-full">
+                        <div class="input-group-cell">
+                            <input type="text" id="email" class="input-text type-lg">
+                        </div>
+                        <div class="input-group-cell">
+                            <select class="select">
+                                <option value="">선택</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="itme2" class="form-label">생년월일<i class="es2"></i></label>
+                    </div><!--// form-head -->
+                    <div class="input-group type-lg w-full">
+                        <div class="input-group-cell">
+                            <select class="select">
+                                <option value="">선택</option>
+                            </select>
+                        </div>
+                        <div class="input-group-cell">
+                            <select class="select">
+                                <option value="">선택</option>
+                            </select>
+                        </div>
+                        <div class="input-group-cell">
+                            <select class="select">
+                                <option value="">선택</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="item" class="form-label">성별</label>
+                    </div><!--// form-head -->
+                    <div class="input-group w-full">
+                        <div class="form-inline-list">
+                            <div class="custom-radio">
+                                <input type="radio" id="radio-1" class="radio" name="radio-item-1" checked=""><label for="radio-1">남자</label>
+                            </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="radio-2" class="radio" name="radio-item-1"><label for="radio-2">여자</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group agree-form">
+                    <div class="form-head">
+                        <label for="itme3" class="form-label">서비스 수신 동의</label>
+                    </div><!--// form-head -->
+                    <div class="agree-list-box">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" id="check-101" class="checkbox"><label for="check-101"> 이메일수신동의 <span>(선택)</span></label>
+                        </div>
+                        <div class="custom-checkbox">
+                            <input type="checkbox" id="check-102" class="checkbox"><label for="check-102"> SMS 수신동의 <span>(선택)</span></label>
+                        </div>
+                    </div>
+                    <ul class="blick-list">
+                        <li>회원정보 수정에서 언제든지 수신거부 하실 수 있습니다.</li>
+                        <li>상품 구매정보는 수신동의 여부 관계없이 받아 보실 수 있습니다.</li>
+                    </ul>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="itme5" class="form-label">추천아이디</label>
+                    </div><!--// form-head -->
+                    <div class="input-group w-full">
+                        <input type="text" id="itme5" class="input-text type-lg" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-group-flex">
+                <button type="button" class="btn-basic-lg btn-default"><span>취소</span></button>
+                <button type="button" class="btn-basic-lg btn-black"><span>수정완료</span></button>
+            </div>
+            <div class="arr-link-area">
+                <a href="#" class="btn-link-txt4"><span>회원탈퇴</span><i class="ico-arr-right"></i></a>
+            </div>
+		</div><!--// content-wrap --> 
+		<!-- ## 사이드 배너 :: side-quick-area  -->
+		<script>include.sidequick();</script>
+		<!--// ## 사이드 배너 ::  side-quick-area  -->
+        <!-- 하단 고정 메뉴 -->
+		 <script>include.bottomNav();</script>
+		 <!--// 하단 고정 메뉴 -->
+	 </section>
+	 <!--// ========== 컨텐츠 영역 :: container ========== -->
+	
+	<!-- ========== 공통 푸터 :: footer ========== -->
+	<script>include.footer();</script>
+	<!--// ========== 공통 푸터 :: footer ========== -->
+    
+</div><!--// wrap -->
+</body>
+</html>

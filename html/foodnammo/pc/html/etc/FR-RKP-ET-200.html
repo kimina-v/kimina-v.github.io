@@ -257,7 +257,7 @@
 
 		var listNum = $(el).parents('li.selected').data('list');
         var imgSrc = $(el).parents('.desc-form').siblings('.img').find('img').attr('src');
-        var imgList = '<li data-list="' + listNum + '"><img src="' + imgSrc + '" alt="제품이미지"><button type="button" class="btn-x-xs ui-compare-del"><i class="ico-x-white"></i><span class="blind">삭제</span></button></li>';
+        var imgList = '<li data-list="' + listNum + '"><img src="' + imgSrc + '" alt="제품이미지"><button type="button" class="btn-x-xs2 ui-compare-del"><i class="ico-x-white"></i><span class="blind">삭제</span></button></li>';
 
         if ( compareList.children('li').length < 3 ) {
             compareList.append(imgList);

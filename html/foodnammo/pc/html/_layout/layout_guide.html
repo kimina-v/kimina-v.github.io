@@ -8,9 +8,9 @@
 <link rel="stylesheet" type="text/css" href="../../css/common.css">
 <link rel="stylesheet" type="text/css" href="../../css/content.css">
 <script src="../../../common/js/lib/jquery-3.5.1.min.js"></script>
-<script src="../../js/lib/swiper.js"></script>
-<script src="../../js/lib/swiper.js"></script>
-<script src="../../js/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../../common/js/lib/swiper.js"></script>
+<script src="../../../common/js/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../js/pub/content_ui.js"></script>
 <!--// ======================== CSS / JS ======================== -->
 <title>랭킹닭컴</title>
 </head>  
@@ -439,6 +439,7 @@
 	<!--// ========== 컨텐츠 영역 :: container ========== -->
 
 	<!-- ========== 공통 푸터 :: footer :: include.footer() 영역  ========== -->
+	<!-- [Dev] 20210820 footer 디자인 전체 변경됨 -->
 	<footer id="footer" class="footer">
 		<div class="footer-menu">
 			<div class="frame-sm">
@@ -446,52 +447,65 @@
 					<li><a href="#">회사소개</a></li>
 					<li><a href="#">공지사항</a></li>
 					<li><a href="#">입점 &middot; 제휴문의</a></li>
-					<li><a href="#">이메일무단수집거부</a></li>
 					<li><a href="#">이용약관</a></li>
-					<li><a href="#">개인정보처리방침</a></li>
+					<li><a href="#" class="text-black2 text-md">개인정보처리방침</a></li>
 				</ul><!--// footer-menu-list -->
-				<ul class="footer-sns-list">
-					<li><a href="#" title="페이스북"><i class="ico-sns-facebook"></i><span class="blind">페이스북</span></a></li>
-					<li><a href="#" title="인스타그램"><i class="ico-sns-instagram"></i><span class="blind">인스타그램</span></a></li>
-					<li><a href="#" title="네이버블로그"><i class="ico-sns-blog"></i><span class="blind">네이버블로그</span></a></li>
-					<li><a href="#" title="네이버포스트"><i class="ico-sns-post"></i><span class="blind">네이버포스트</span></a></li>
-					<li><a href="#" title="카카오톡"><i class="ico-sns-kakaotalk"></i><span class="blind">카카오톡</span></a></li>
-					<li><a href="#" title="카카오스토리"><i class="ico-sns-kakaostory"></i><span class="blind">카카오스토리</span></a></li>
-				</ul>
+				<div class="family-select">
+					<button type="button" class="select-btn ui-togglelayer-btn"><span>패밀리사이트</span><i class="ico-arr-toggle"></i></button>
+					<div class="family-list-box ui-togglelayer-box">
+						<ul>
+							<li><a href="https://rankingdak.com/" target="_blank"><span>랭킹닭컴</span></a></li>
+							<li><a href="https://www.ggjmart.com/" target="_blank"><span>개근질마트</span></a></li>
+							<li><a href="https://www.ggjil.com/" target="_blank"><span>개근질닷컴</span></a></li>
+							<li><a href="https://pickydiet.co.kr/" target="_blank"><span>피키다이어트</span></a></li>
+							<li><a href="http://dacook.co.kr/" target="_blank"><span>다이어트전문 레시피 닭쿡</span></a></li>
+							<li><a href="http://www.studiou.co.kr/" target="_blank"><span>바디프로필 전문 스튜디오U</span></a></li>
+						</ul>
+					</div>
+				</div><!--// family-select -->
 			</div><!--// footer-info-list -->
 		</div><!--// frame-sm -->
 		<div class="footer-info">
+			<strong class="footer-logo"><span class="blind">랭킹닭컴</span></strong>
 			<div class="colum-info">
-				<strong class="footer-logo"><span class="blind">랭킹닭컴</span></strong>
-				<ul class="sep-list type4">
-					<li>㈜푸드나무</li>
+				<h5 class="blind">회사 정보</h5>
+				<ul class="footer-biz-info">
+					<li><span class="company-name">(주)푸드나무</span></li>
 					<li>대표 : 김영문</li>
-					<li>개인정보보호책임자 : 김영완</li>
-				</ul>
-				<ul class="biz-info">
+					<li>주소 : 서울특별시 마포구 월드컵북로 396, 15층(상암동, 누리꿈스퀘어 비지니스타워)</li>
+					<li>사업자등록번호 : 105-87-81968 사업자정보 확인</li>
 					<li>통신판매업신고번호 : 제2015-서울마포-1058호</li>
-					<li>사업자등록번호 : 105-87-81968 <a href="#" class="btn-link-txt4"><span>사업자정보 확인</span><i class="ico-arr-right2"></i></a></li>
-					<li>호스팅 제공 : (주)푸드나무</li>
-				</ul>
-			</div><!--// colum -->
-			<div class="colum-info">
-				<strong class="footer-tel">02-6405-8088</strong>
-				<address>서울특별시 마포구 월드컵북로 396, 15층 (상암동, 누리꿈스퀘어 비지니스타워)</address>
-				<ul class="sep-list type4">
-					<li>FAX. 02-6351-8088</li>
-					<li>E-mail. admin@foodnamoo.com</li>
+					<li>개인정보보호책임자 : 박상필</li>
 				</ul>
 				<p class="copyright">Copyright©랭킹닭컴 All rights reserved.</p>
 			</div><!--// colum -->
 			<div class="colum-info">
-				<dl class="service-txt">
-					<dt class="tit">우리은행 구매안전서비스 (채무지급보증)</dt>
-					<dd>당사는 고객님이 현금 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</dd>
-					<dd><a href="#" class="btn-link-txt4"><span>서비스 가입사실 확인</span><i class="ico-arr-right2"></i></a></dd>
-				</dl>
+				<ul class="customer-info">
+					<li class="cscenter">고객센터 <em class="footer-tel">02-6405-8088</em></li>
+					<li>FAX. 02-6351-8088</li>
+					<li>E-mail. admin@foodnamoo.com</li>
+				</ul>
+				<div class="customer-btns">
+					<a href="#"><span>고객의소리</span></a>
+					<a href="#"><span>1:1문의</span></a>
+				</div>
+				<ul class="footer-sns-list">
+					<li><a href="https://www.facebook.com/rankingdakcom" title="페이스북" target="_blank"><i class="ico-sns-facebook"></i><span class="blind">페이스북</span></a></li>
+					<li><a href="https://www.instagram.com/rankingdak/" title="인스타그램" target="_blank"><i class="ico-sns-instagram"></i><span class="blind">인스타그램</span></a></li>
+					<li><a href="https://blog.naver.com/rankingdak" title="네이버블로그" target="_blank"><i class="ico-sns-blog"></i><span class="blind">네이버블로그</span></a></li>
+					<li><a href="https://post.naver.com/my.nhn?memberNo=9267177" title="네이버포스트" target="_blank"><i class="ico-sns-post"></i><span class="blind">네이버포스트</span></a></li>
+					<li><a href="https://pf.kakao.com/_ltFRl" title="카카오톡" target="_blank"><i class="ico-sns-kakaotalk"></i><span class="blind">카카오톡</span></a></li>
+				</ul>
 			</div><!--// colum -->
 		</div><!--// footer-info -->
+		<div class="footer-bottom">
+			<ul class="service-txt">
+				<li><a href="#"><i class="ico-footer-service01"></i>정보보호 관리체계 ISMS 인증 획득</a></li>
+				<li><a href="#"><i class="ico-footer-service02"></i>우리은행 구매 안전 서비스 가입사실 확인</a></li>
+			</ul>
+		</div>
 	</footer>
+	<!--// [Dev] 20210820 footer 디자인 전체 변경됨 -->
 	<!--// ========== 공통 푸터 :: footer :: include.footer() 영역  ========== -->
 </div><!--// wrap -->
 

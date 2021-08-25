@@ -63,14 +63,14 @@
 
 			<div class="frame-sm">
 				<div class="frame-left">
-					<div class="aside-mypage">
+					<div class="aside-menu-wrap">
 						<nav class="aside-menu">
 							<ul class="menu-list">	
 								<li>
 									<a href="#" class="menu">주문관리</a>
 									<ul class="depth2">
-										<li><a href="#">주문내역</a></li><!-- 활성화될 경우 li에 addClass current  -->
-										<li class="current"><a href="#">취소/반품 내역</a></li>
+										<li class="current"><a href="#">주문내역</a></li><!-- 활성화될 경우 li에 addClass current  -->
+										<li><a href="#">취소/반품 내역</a></li>
 										<li><a href="#">재입고 알림 상품</a></li>
 									</ul>
 								</li>
@@ -108,16 +108,19 @@
 								</li>
 							</ul>
 						</nav><!--// menu-mypage -->
-					</div><!--// aside-mypage -->
+						<div class="aside-link-box">
+							<a href="#"><i class="ico-bl-speaker"></i><span>고객의 소리</span><i class="ico-arr-right"></i></a>
+						</div>
+					</div><!--// aside-menu-wrap -->
 				</div><!--// frame-left -->
 
 				<div class="frame-right">
 					<div class="frame-cnt-inner">
 						<div class="menu-title-area">
-							<h3 class="title-menu">취소/반품내역</h3>
+							<h3 class="title-menu">주문취소내역 </h3>
 							<div class="right">
 								<div class="input-group-wrap box-type">
-									<div class="input-group">
+									<div class="input-group w200">
 										<label for="item1-1" class="blind">검색</label>
 										<input type="text" id="item1-1" class="input-text" placeholder="주문 상품명 검색" />
 										<span class="input-group-btn">
@@ -246,180 +249,132 @@
 
 						<!-- 내역 없을 경우 -->
 						<div class="no-data">
-							<p class="message">최근 1개월 내에 취소/반품내역이 없습니다.  </p>
+							<p class="message">최근 3개월 내에 취소/반품 내역이 없습니다.   </p>
 						</div>
 						<!--// 내역 없을 경우 -->
 
 						<div class="order-list-area">
-							<div class="list-head">
-								<strong class="date">2020.03.24</strong>
-								<span class="order-num">20200318WB234F</span>
-								<div class="right">
-									<ul class="sep-list type5">
-										<li><a href="#"><i class="ico-btn-home"></i><span>배송지변경</span></a></li>
-										<li><a href="#"><i class="ico-btn-download"></i><span>수취확인</span></a></li>
-										<li><a href="#"><i class="ico-btn-review"></i><span class="text-primary">후기작성</span></a></li>
-										<li><a href="#"><span>상세보기</span><i class="ico-arr-right"></i></a></li>
-									</ul>
-								</div>
-							</div><!--// list-head -->
-							<ul class="order-list">
+							<ul class="order-list-inner">
+								<!-- 날짜별 항목 list -->
 								<li>
-									<div class="prd-info-area">
-										<div class="inner">
-											<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
-											<div class="column tit">
-												<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
-												<p class="desc">혼합 5팩(1팩당 3,900원)</p>
-												<ul class="price-item">
-													<li><span class="num">19,500</span>원</li>
-													<li><span class="num">1</span>개</li>
-													<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
-												</ul>
-											</div><!--// column  -->
-											<div class="column price text-left"><span class="num">19,500</span>원</div>
-											<div class="column dlv">
-												배송중 <br /><a href="#" class="btn-option btn-default"><span>배송조회</span></a>
-											</div>
+									<div class="order-list-head">
+										<strong class="date">2020.03.24</strong>
+										<a href="#" class="order-num">20200318WB234F<i class="ico-arr-right"></i></a>
+										<div class="right">
+											<a href="#" class="btn-option btn-default"><span>주문취소</span></a>
 										</div>
-									</div><!--// prd-info-area -->
-								</li>	
+									</div><!--// list-head -->
+									<div class="order-content-box">
+										<ul class="order-div-list">
+											<!-- 상품별 list 1 -->
+											<li class="order-div-item">
+												<div class="order-state-bar">
+													<em class="txt-state text-navy">취소완료</em>
+													<span class="text-guide-sm">6월 29일 취소완료</span>
+												</div><!--// state-bar -->
+												<div class="prd-info-area">
+													<div class="inner">
+														<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+														<div class="column tit">
+															<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+															<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+															<ul class="price-item">
+																<li><span class="num">19,500</span>원</li>
+																<li><span class="num">1</span>개</li>
+																<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
+															</ul>
+														</div><!--// column  -->
+														<div class="column price text-left"><span class="num">19,500</span>원</div>
+														<div class="column dlv">
+															<a href="#" class="btn-option btn-navy-line"><span>다시담기</span></a>
+														</div>
+													</div>
+												</div><!--// prd-info-area -->
+											</li><!--// order-div-item || 상품별 list 1 -->
+											<!-- 상품별 list 2 -->
+											<li class="order-div-item">
+												<div class="order-state-bar">
+													<em class="txt-state text-navy">취소완료</em>
+													<span class="text-guide-sm">6월 29일 취소완료</span>
+												</div><!--// state-bar -->
+												<div class="prd-info-area">
+													<div class="inner">
+														<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+														<div class="column tit">
+															<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+															<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+															<ul class="price-item">
+																<li><span class="num">19,500</span>원</li>
+																<li><span class="num">1</span>개</li>
+																<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
+															</ul>
+														</div><!--// column  -->
+														<div class="column price text-left"><span class="num">19,500</span>원</div>
+														<div class="column dlv">
+															<a href="#" class="btn-option btn-navy-line"><span>다시담기</span></a>
+														</div>
+													</div>
+												</div><!--// prd-info-area -->
+											</li><!--// order-div-item || 상품별 list 2 -->
+										</ul><!--// order-div-list -->
+									</div>
+								</li>
+								<!--// 날짜별 항목 list -->
+
+								<!-- 날짜별 항목 list -->
 								<li>
-									<div class="prd-info-area">
-										<div class="inner">
-											<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
-											<div class="column tit">
-												<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
-												<p class="desc">혼합 5팩(1팩당 3,900원)</p>
-												<ul class="price-item">
-													<li><span class="num">19,500</span>원</li>
-													<li><span class="num">1</span>개</li>
-													<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
-												</ul>
-											</div><!--// column  -->
-											<div class="column price text-left"><span class="num">19,500</span>원</div>
-											<div class="column dlv">
-												배송중 <br /><a href="#" class="btn-option btn-default"><span>배송조회</span></a>
-											</div>
-										</div>
-									</div><!--// prd-info-area -->
-								</li>	
+									<div class="order-list-head">
+										<strong class="date">2020.03.24</strong>
+										<a href="#" class="order-num">20200318WB234F<i class="ico-arr-right"></i></a>
+									</div><!--// list-head -->
+									<div class="order-content-box">
+										<ul class="order-div-list">
+											<!-- 상품별 list 1 -->
+											<li class="order-div-item">
+												<div class="order-state-bar">
+													<em class="txt-state text-navy">취소완료</em>
+													<span class="text-guide-sm">6월 29일 취소완료</span>
+												</div><!--// state-bar -->
+												<div class="prd-info-area">
+													<div class="inner">
+														<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+														<div class="column tit">
+															<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+															<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+															<ul class="price-item">
+																<li><span class="num">19,500</span>원</li>
+																<li><span class="num">1</span>개</li>
+																<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
+															</ul>
+														</div><!--// column  -->
+														<div class="column price text-left"><span class="num">19,500</span>원</div>
+														<div class="column dlv">
+															<a href="#" class="btn-option btn-navy-line"><span>다시담기</span></a>
+														</div>
+													</div>
+												</div><!--// prd-info-area -->
+											</li><!--// order-div-item || 상품별 list 1 -->
+										</ul><!--// order-div-list -->
+									</div>
+								</li>
+								<!--// 날짜별 항목 list -->
 							</ul>
 						</div><!--// order-list-area -->
 						
-						<div class="order-list-area">
-							<div class="list-head">
-								<strong class="date">2020.03.24</strong>
-								<span class="order-num">20200318WB234F</span>
-								<div class="right">
-									<ul class="sep-list type5">
-										<li><a href="#"><i class="ico-btn-home"></i><span>배송지변경</span></a></li>
-										<li><a href="#"><i class="ico-btn-download"></i><span>수취확인</span></a></li>
-										<li><a href="#"><i class="ico-btn-review"></i><span class="text-primary">후기작성</span></a></li>
-										<li><a href="#"><span>상세보기</span><i class="ico-arr-right"></i></a></li>
-									</ul>
-								</div>
-							</div><!--// list-head -->
-							<ul class="order-list">
-								<li>
-									<div class="prd-info-area">
-										<div class="inner">
-											<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
-											<div class="column tit">
-												<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
-												<p class="desc">혼합 5팩(1팩당 3,900원)</p>
-												<ul class="price-item">
-													<li><span class="num">19,500</span>원</li>
-													<li><span class="num">1</span>개</li>
-													<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
-												</ul>
-											</div><!--// column  -->
-											<div class="column price text-left"><span class="num">19,500</span>원</div>
-											<div class="column dlv">
-												배송중 <br /><a href="#" class="btn-option btn-default"><span>배송조회</span></a>
-											</div>
-										</div>
-									</div><!--// prd-info-area -->
-								</li>	
-								<li>
-									<div class="prd-info-area">
-										<div class="inner">
-											<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
-											<div class="column tit">
-												<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
-												<p class="desc">혼합 5팩(1팩당 3,900원)</p>
-												<ul class="price-item">
-													<li><span class="num">19,500</span>원</li>
-													<li><span class="num">1</span>개</li>
-													<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
-												</ul>
-											</div><!--// column  -->
-											<div class="column price text-left"><span class="num">19,500</span>원</div>
-											<div class="column dlv">
-												배송중 <br /><a href="#" class="btn-option btn-default"><span>배송조회</span></a>
-											</div>
-										</div>
-									</div><!--// prd-info-area -->
-								</li>	
-							</ul>
-						</div><!--// order-list-area -->
-
-						<div class="order-list-area">
-							<div class="list-head">
-								<strong class="date">2020.03.24</strong>
-								<span class="order-num">20200318WB234F</span>
-								<div class="right">
-									<ul class="sep-list type5">
-										<li><a href="#"><i class="ico-btn-home"></i><span>배송지변경</span></a></li>
-										<li><a href="#"><i class="ico-btn-download"></i><span>수취확인</span></a></li>
-										<li><a href="#"><i class="ico-btn-review"></i><span class="text-primary">후기작성</span></a></li>
-										<li><a href="#"><span>상세보기</span><i class="ico-arr-right"></i></a></li>
-									</ul>
-								</div>
-							</div><!--// list-head -->
-							<ul class="order-list">
-								<li>
-									<div class="prd-info-area">
-										<div class="inner">
-											<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
-											<div class="column tit">
-												<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
-												<p class="desc">혼합 5팩(1팩당 3,900원)</p>
-												<ul class="price-item">
-													<li><span class="num">19,500</span>원</li>
-													<li><span class="num">1</span>개</li>
-													<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
-												</ul>
-											</div><!--// column  -->
-											<div class="column price text-left"><span class="num">19,500</span>원</div>
-											<div class="column dlv">
-												배송중 <br /><a href="#" class="btn-option btn-default"><span>배송조회</span></a>
-											</div>
-										</div>
-									</div><!--// prd-info-area -->
-								</li>	
-								<li>
-									<div class="prd-info-area">
-										<div class="inner">
-											<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
-											<div class="column tit">
-												<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
-												<p class="desc">혼합 5팩(1팩당 3,900원)</p>
-												<ul class="price-item">
-													<li><span class="num">19,500</span>원</li>
-													<li><span class="num">1</span>개</li>
-													<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
-												</ul>
-											</div><!--// column  -->
-											<div class="column price text-left"><span class="num">19,500</span>원</div>
-											<div class="column dlv">
-												배송중 <br /><a href="#" class="btn-option btn-default"><span>배송조회</span></a>
-											</div>
-										</div>
-									</div><!--// prd-info-area -->
-								</li>	
-							</ul>
-						</div><!--// order-list-area -->
+						<div class="pagination">
+							<!-- <a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a> -->
+							<a href="#" class="on"><span>1</span></a>
+							<a href="#"><span>2</span></a>
+							<a href="#"><span>3</span></a>
+							<a href="#"><span>4</span></a>
+							<a href="#"><span>5</span></a>
+							<a href="#"><span>6</span></a>
+							<a href="#"><span>7</span></a>
+							<a href="#"><span>8</span></a>
+							<a href="#"><span>9</span></a>
+							<a href="#"><span>10</span></a>
+							<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
+						</div>
 					</div><!--// frame-cnt-inner -->
 				</div><!--// frame-right -->
 			</div><!--// frame-sm -->

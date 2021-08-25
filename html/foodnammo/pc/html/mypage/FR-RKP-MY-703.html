@@ -101,7 +101,12 @@
 												<li><span class="num">19,500</span>원</li>
 											</ul>
 										</div><!--// column -->
-										<div class="column price"><span class="num">19,500</span>원</div>
+										<!-- [Dev] 20210730 쿠폰적용 표시 추가(마크업 수정), w70 클래스 추가 -->
+										<div class="column price w70">
+											<div class="price-div">
+												<span class="num">19,500</span>원
+											</div>
+										</div><!--// [Dev] 20210730 쿠폰적용 표시 추가(마크업 수정), w70 클래스 추가 -->
 									</div>
 								</div><!--// prd-info-area -->
 							</li>	
@@ -233,7 +238,63 @@
 					<div class="payment-detail-wrap">
 						<!-- 랭킹페이 선택시 -->
 						<div class="payment-detail active">
+							<!-- [Dev] 20210810 수정 -->
 							<!-- 카드 등록 전 -->
+							<div class="payment-box">
+								<div class="inner">
+									<div class="empty-box">
+										<a href="#"><i class="ico-plus-bold"></i><p>카드등록/결제</p></a>
+									</div>
+									<p class="text-guide-sm">카드정보를 등록하여 간편하게 결제할 수 있습니다.</p>
+									<p class="text-grey">비밀번호만 입력하면 결제가 완료됩니다.</p>
+									
+								</div><!--// inner -->
+							</div><!--// payment-box -->
+							<!--// 카드 등록 전 -->
+
+							<!-- 카드 등록 후 -->
+							<div class="payment-box">
+								<div class="inner">
+									<div class="card-box-list swiper-container">
+										<ul class="swiper-wrapper">
+											<li class="swiper-slide">
+												<div class="card-box">
+													<img src="../../images/_samples/@sample_card_200x120.png" alt="KB국민카드" />
+													<div class="txt-div">
+														<p class="card-name">KB국민카드</p>
+														<p class="card-num">5409-****-****-8046</p>
+													</div>
+												</div>
+												<div class="btn-area">
+													<button type="button" class="btn-rud-xs btn-default"><i class="ico-btn-trash"></i><span>삭제하기</span></button>
+												</div>
+											</li><!--// swiper-slide -->
+											<li class="swiper-slide">
+												<div class="card-box">
+													<img src="../../images/_samples/@sample_card_200x120.png" alt="KB국민카드" />
+													<div class="txt-div">
+														<p class="card-name">KB국민카드</p>
+														<p class="card-num">5409-****-****-8046</p>
+													</div>
+												</div>
+												<div class="btn-area">
+													<button type="button" class="btn-rud-xs btn-default"><i class="ico-btn-trash"></i><span>삭제하기</span></button>
+												</div>
+											</li><!--// swiper-slide -->
+											<li class="swiper-slide">
+												<div class="empty-box"><!-- 등록카드 없을 경우-->
+													<a href="#"><i class="ico-plus-bold"></i><p>카드등록/결제</p></a>
+												</div>
+											</li><!--// swiper-slide -->
+										</ul><!--// swiper-wrapper -->
+									</div><!--// swiper-container -->
+								</div><!--// inner -->
+							</div><!--// payment-box -->
+							<!--// 카드 등록 후 -->
+							<!--// [Dev] 20210810 수정 -->
+
+							<!-- 카드 등록 전 -->
+							<!-- [Dev] 20210810 삭제
 							<div class="payment-box">
 								<div class="inner">
 									<div class="empty-box">
@@ -243,11 +304,12 @@
 										카드정보를 등록하여 간편하게 결제할 수 있습니다.
 										<p>비밀번호만 입력하면 결제가 완료됩니다.</p>
 									</div>
-								</div><!--// inner -->
-							</div><!--// payment-box -->
+								</div>
+							</div> -->
 							<!--// 카드 등록 전 -->
 
 							<!-- 카드 등록 후 -->
+							<!-- [Dev] 20210810 삭제
 							<div class="payment-box">
 								<div class="inner">
 									<div class="card-box">
@@ -260,8 +322,8 @@
 										</div>
 										<button type="button" class="btn-option btn-default"><span>삭제</span></button>
 									</div>
-								</div><!--// inner -->
-							</div><!--// payment-box -->
+								</div>
+							</div> -->
 							<!--// 카드 등록 후 -->
 						</div><!--// payment-detail | 랭킹페이 선택시 -->
 

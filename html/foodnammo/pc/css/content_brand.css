@@ -1,7 +1,7 @@
 /*========================================================
  브랜드관
 ========================================================*/
-.page-head{position:relative; padding-top:60px; background:#fff;}
+.page-head{position:relative; padding-top:70px; background:#fff;}
 .page-head .title-area{position:relative; text-align:center; max-width:1100px; margin:0 auto; z-index:11;}
 .page-head .title-area .tit{display:inline-block; font-size:30px; font-weight:500;}
 .page-head .title-area .right{position:absolute; bottom:0; right:0;}

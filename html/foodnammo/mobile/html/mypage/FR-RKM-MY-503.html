@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>   
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<header id="header" class="header">
+		<div class="header-top">
+			<div class="page-title-area">
+                <a href="#" class="btn-back"><i class="ico-arrows-back"></i><span class="blind">뒤로가기</span></a>
+				<h2 class="page-title">1:1문의</h2>
+				<!-- <div class="my-menu">
+					<ul>
+						<li><a href="#" class="btn-util-search" title="검색"><i class="ico-search-pop"></i></a></li>
+						<li><a href="#" class="btn-util-cart" title="장바구니"><span class="blind">장바구니</span><em class="count">1</em></a></li>
+					</ul>
+				</div> -->
+			</div><!-- // page-title-area  -->
+		</div><!--// header-top -->
+	</header>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">       
+		<div class="content-wrap inquery-content">
+            <h3 class="title">문의내역</h3>
+            <div class="board-list ui-accordion">
+                <ul class="accordion-list ui-accordion-list">
+                    <li><!-- 활성화시 addClass active -->
+                        <!-- 질문 영역 -->
+                        <a href="javascript:;" class="title-div ui-accordion-click">
+                            <div class="subject">
+                                <span class="state-done">답변완료</span>
+                                <!--
+                                    <span class="state-done">답변완료</span>
+                                    <span class="state-wait">답변대기</span>
+                                -->
+                                <span class="date">2021.03.20</span>
+                                <div class="title-area">
+                                    <span class="classify">[상품문의]</span>
+                                    <p class="txt">해동돼서 왔습니다. 해동돼서 왔습니다. 해동돼서 왔습니다.해동돼서 왔습니다.해동돼서 왔습니다.해동돼서 왔습니다.해동돼서 왔습니다.해동돼서 왔습니다.해동돼서 왔습니다.해동돼서 왔습니다.</p>
+                                </div>
+                                <div class="right">
+                                    <i class="ico-arr-toggle"></i>
+                                </div>
+                            </div>
+                        </a><!-- title-div -->
+                        <div class="ui-accordion-view hide">
+                            <div class="question">
+                                <div class="detail-div">
+                                    <p class="txt">지난 4월 3일 스팀 닭가슴살 5kg을 주문하였습니다. 오늘 4월 9일에 받아보니 해동이 되어있었습니다. 이런 경우는 어떡해야 하나요? 해동 후 재냉동 시키지 말라고 되어있는데 못먹는건가요? 교환을 해주시나요?</p>
+                                    <div class="bottom">
+                                        <span class="added-file"><i class="ico-bl-file"></i>첨부파일abcd.jpg</span>
+                                        <ul class="util-btn">
+                                            <li><a href="#">수정</a></li>
+                                            <li><a href="#">삭제</a></li>
+                                        </ul>
+                                    </div>
+                                </div><!--// detail-div -->
+                            </div><!--// question :: 질문 영역 -->
+                            <!-- 답변 영역 -->
+                            <div class="answer">
+                                <div class="info"><span class="name">닭대리</span><span class="date">2020.03.21</span></div>
+                                <p class="txt">
+                                    안녕하세요 회원님 닭가슴살 감동쇼핑 랭킹닭컴 닭대리입니다. 문의주신 특급배송은 현재 일부 지역에서만 진행중에 있는 점 안내드립니다. 현재 특급배송 가능지역을 넓히기 위해 노력중에 있사오니이점 회원님의 너그러운 양해 부탁드립니다.
+                                </p>
+                            </div><!--// answer :: 답변 영역 -->
+                        </div><!--// ui-accordion-view -->
+                    </li>
+                    <li><!-- 활성화시 addClass active -->
+                        <!-- 질문 영역 -->
+                        <a href="javascript:;" class="title-div ui-accordion-click">
+                            <div class="subject">
+                                <span class="state-wait">답변대기</span>
+                                <!--
+                                    <span class="state-done">답변완료</span>
+                                    <span class="state-wait">답변대기</span>
+                                -->
+                                <span class="date">2021.03.20</span>
+                                <div class="title-area">
+                                    <span class="classify">[상품문의]</span>
+                                    <p class="txt">해동돼서 왔습니다.</p>
+                                </div>
+                                <div class="right">
+                                    <i class="ico-arr-toggle"></i>
+                                </div>
+                            </div>
+                        </a><!-- title-div -->
+                        <div class="ui-accordion-view hide">
+                            <div class="question">
+                                <div class="detail-div">
+                                    <p class="txt">지난 4월 3일 스팀 닭가슴살 5kg을 주문하였습니다. 오늘 4월 9일에 받아보니 해동이 되어있었습니다. 이런 경우는 어떡해야 하나요? 해동 후 재냉동 시키지 말라고 되어있는데 못먹는건가요? 교환을 해주시나요?</p>
+                                    <div class="bottom">
+                                        <ul class="util-btn type3">
+                                            <li><a href="#">수정</a></li>
+                                            <li><a href="#">삭제</a></li>
+                                        </ul>
+                                    </div>
+                                </div><!--// detail-div -->
+                            </div><!--// question :: 질문 영역 -->
+                        </div><!--// ui-accordion-view -->
+                    </li>
+                    <li><!-- 활성화시 addClass active -->
+                        <!-- 질문 영역 -->
+                        <a href="javascript:void(0)" class="title-div ui-accordion-click">
+                            <div class="subject">
+                                <span class="state-done">답변완료</span>
+                                <!--
+                                    <span class="state-done">답변완료</span>
+                                    <span class="state-wait">답변대기</span>
+                                -->
+                                <span class="date">2021.03.20</span>
+                                <div class="title-area">
+                                    <span class="classify">[상품문의]</span>
+                                    <p class="txt">해동돼서 왔습니다.</p>
+                                </div>
+                                <div class="right">
+                                    <i class="ico-arr-toggle"></i>
+                                </div>
+                            </div>
+                        </a><!-- title-div -->
+                        <div class="ui-accordion-view hide">
+                            <div class="question">
+                                <div class="detail-div">
+                                    <p class="txt">지난 4월 3일 스팀 닭가슴살 5kg을 주문하였습니다. 오늘 4월 9일에 받아보니 해동이 되어있었습니다. 이런 경우는 어떡해야 하나요? 해동 후 재냉동 시키지 말라고 되어있는데 못먹는건가요? 교환을 해주시나요?</p>
+                                    <div class="bottom">
+                                        <span class="added-file"><i class="ico-bl-file"></i>첨부파일abcd.jpg</span>
+                                        <ul class="util-btn type3">
+                                            <li><a href="#">수정</a></li>
+                                            <li><a href="#">삭제</a></li>
+                                        </ul>
+                                    </div>
+                                </div><!--// detail-div -->
+                            </div><!--// question :: 질문 영역 -->
+                            <!-- 답변 영역 -->
+                            <div class="answer">
+                                <div class="info"><span class="name">닭대리</span><span class="date">2020.03.21</span></div>
+                                <p class="txt">
+                                    안녕하세요 회원님 닭가슴살 감동쇼핑 랭킹닭컴 닭대리입니다. 문의주신 특급배송은 현재 일부 지역에서만 진행중에 있는 점 안내드립니다. 현재 특급배송 가능지역을 넓히기 위해 노력중에 있사오니이점 회원님의 너그러운 양해 부탁드립니다.
+                                </p>
+                            </div><!--// answer :: 답변 영역 -->
+                        </div><!--// ui-accordion-view -->
+                    </li>
+                    <li><!-- 활성화시 addClass active -->
+                        <!-- 질문 영역 -->
+                        <a href="javascript:void(0)" class="title-div ui-accordion-click">
+                            <div class="subject">
+                                <span class="state-wait">답변대기</span>
+                                <!--
+                                    <span class="state-done">답변완료</span>
+                                    <span class="state-wait">답변대기</span>
+                                -->
+                                <span class="date">2021.03.20</span>
+                                <div class="title-area">
+                                    <span class="classify">[상품문의]</span>
+                                    <p class="txt">해동돼서 왔습니다.</p>
+                                </div>
+                                <div class="right">
+                                    <i class="ico-arr-toggle"></i>
+                                </div>
+                            </div>
+                        </a><!-- title-div -->
+                        <div class="ui-accordion-view hide">
+                            <div class="question">
+                                <div class="detail-div">
+                                    <div class="prod-box">
+                                        <figure>
+                                            <img src="../../images/_samples/@sample_135x135.png" alt="">
+                                        </figure>
+                                        <div class="prod-info">
+                                            <em class="order-num">20210930WV12KD</em>
+                                             <span class="prod-name">♥수고했어 잇메이트 소시지볶음밥 혼합 10+2 & 33%할인</span>
+                                        </div>
+                                    </div>
+                                    <p class="txt">지난 4월 3일 스팀 닭가슴살 5kg을 주문하였습니다. 오늘 4월 9일에 받아보니 해동이 되어있었습니다. 이런 경우는 어떡해야 하나요? 해동 후 재냉동 시키지 말라고 되어있는데 못먹는건가요? 교환을 해주시나요?</p>
+                                    <div class="bottom">
+                                        <ul class="util-btn type3">
+                                            <li><a href="#">수정</a></li>
+                                            <li><a href="#">삭제</a></li>
+                                        </ul>
+                                    </div>
+                                </div><!--// detail-div -->
+                            </div><!--// question :: 질문 영역 -->
+                        </div><!--// ui-accordion-view -->
+                    </li>
+                </ul>
+            </div><!--// board-accordion -->
+
+		</div><!--// content-wrap --> 
+		<!-- ## 사이드 배너 :: side-quick-area  -->
+		<script>include.sidequick();</script>
+		<!--// ## 사이드 배너 ::  side-quick-area  -->
+        <!-- 하단 고정 메뉴 -->
+		 <script>include.bottomNav();</script>
+		 <!--// 하단 고정 메뉴 -->
+	 </section>
+	 <!--// ========== 컨텐츠 영역 :: container ========== -->
+	
+	<!-- ========== 공통 푸터 :: footer ========== -->
+	<script>include.footer();</script>
+	<!--// ========== 공통 푸터 :: footer ========== -->
+    
+</div><!--// wrap -->
+</body>
+</html>

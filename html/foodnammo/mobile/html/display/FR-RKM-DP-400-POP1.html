@@ -13,14 +13,20 @@
 <script>include.scripts();</script>
 <!--// ======================== CSS / JS ======================== -->
 <script>include.title();</script>
+<script src="../../js/pub/panzoom.min.js"></script>
 </head>   
 
-<body style="overflow:hidden">
+<body>
 <div class="wrap">
 	<!-- ========== 공통 헤더 :: header ========== -->
 	<script>include.skipNav();</script>
 	<header id="header" class="header">
-		<script>include.header();</script>
+		<div class="header-top">
+			<div class="page-title-area">
+                <a href="#" class="btn-back"><i class="ico-arrows-back"></i><span class="blind">뒤로가기</span></a>
+				<h1 class="page-title">주문/결제</h1>
+			</div><!-- // page-title-area  -->
+		</div><!--// header-top -->
 	</header>
 	<!--// ========== 공통 헤더 :: header ========== -->
 
@@ -38,7 +44,7 @@
 	 <!--// ========== 컨텐츠 영역 :: container ========== -->
 	
 	<!-- ========== 공통 푸터 :: footer ========== -->
-	<script>include.footer();</script>
+	<!-- <script>include.footer();</script> -->
 	<!--// ========== 공통 푸터 :: footer ========== -->
 </div><!--// wrap -->
 
@@ -48,19 +54,69 @@
 	ex) <button type="button" data-layer="#popupSample-02" class="... ui-open-pop"> ~ </button>
 -->
 <!-- ========== 팝업 영역 ========== -->
-<div class="layer-wrap" id="popup-sample01" style="display:block"> 
-	<div class="layer-pop info-deail-pop">
-		<div class="layer-inner">			
-            <div class="layer-head">
-                <h4 class="layer-pop-title">1팩 담기 사용백과</h4>
+<div class="layer-wrap full-type img-zoom" id="img-zoom" tabindex="0" style="display:block">
+    <div class="layer-pop">
+        <div class="layer-inner">
+            <div class="title">한팩담기 사용백과</div>
+            <div class="img-zoom-layer">
+                <div class="zoom-content" id="zoom-content">
+                    <div id="zoom-target" class="zoom-target">
+                        <img src="../../images/_samples/@sample_goods_detail.png">
+                        <img src="../../images/_samples/@sample_goods_detail.png">
+                    </div>
+                </div>
+                <div class="zoom-action">
+                    <button class="plus" onclick="imgZoomAction('plus');"><span>확대</span></button>
+                    <button class="minus" onclick="imgZoomAction('minus');"><span>축소</span></button>
+                </div>
+                <button class="zoom-close"><span>닫기</span></button>
             </div>
-            <div class="info-detail-scroll">
-                <img src="../../images/img/img_onepack.jpg" alt="1팩 담기 사용백과 내용" />
+            <div class="zoom-info">
+                <p>이미지를 확대해서 보실 수 있어요</p>
             </div>
-			<button type="button" class="btn-x-md ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button>            
-		</div><!--// layer-inner -->
-	</div><!--// layer-pop  -->
-</div><!--// layer-pop-wrap #main-event -->
+            <script type="text/javascript">
+                $(function(){
+                    imgZoom()
+                });
+                        
+                function imgZoom() {
+                    var zoomLayer = document.getElementById('zoom-target');
+                    panzoomFn = panzoom(zoomLayer, {
+                        maxZoom: 4,
+                        minZoom: 1,
+                        zoomDoubleClickSpeed: 1,
+                        bounds: true,
+                        boundsPadding: 1
+                    });
+                }
+            
+                function imgZoomAction(method) {
+                    let cx = document.getElementById('zoom-content').clientWidth/2;
+                    let cy = document.getElementById('zoom-content').clientHeight/2;
+            
+                    let zoomBy = 0.5;
+                    if (method == 'plus') {
+                        zoomBy = 2;
+                    }
+                    panzoomFn.smoothZoom(cx, cy, zoomBy);
+                }
+            </script>
+            <button type="button" class="btn-x-md ui-close-pop" title="닫기"><i class="ico-x-normal"></i><span class="blind">닫기</span></button>
+        </div>
+    </div><!--// layer-pop  -->
+</div>
 <!-- ========== 팝업 영역 ========== -->
+
+<!-- ========== 확인용 ============ -->
+<script>
+    $(function(){
+        setTimeout(function(){
+            $('.zoom-info').fadeOut();
+        },2000);
+
+        $('#zoom-target img').wheelzoom();       
+    });
+</script>
+<!-- ========== //확인용 ============ -->
 </body>
 </html>

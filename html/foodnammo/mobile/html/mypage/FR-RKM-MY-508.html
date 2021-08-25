@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>   
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<header id="header" class="header">
+		<div class="header-top">
+			<div class="page-title-area">
+                <a href="#" class="btn-back"><i class="ico-arrows-back"></i><span class="blind">뒤로가기</span></a>
+				<h2 class="page-title">식단상담</h2>
+				<!-- <div class="my-menu">
+					<ul>
+						<li><a href="#" class="btn-util-search" title="검색"><i class="ico-search-pop"></i></a></li>
+						<li><a href="#" class="btn-util-cart" title="장바구니"><span class="blind">장바구니</span><em class="count">1</em></a></li>
+					</ul>
+				</div> -->
+			</div><!-- // page-title-area  -->
+		</div><!--// header-top -->
+	</header>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">       
+		<div class="content-wrap menu-advice">
+            <div class="visual" style="height:170px;text-align:center;line-height:170px;color:#fff;background:#aaa;font-weight:bold;font-size:20px">추후작업</div>
+            <div class="form-section-group">
+                <div class="title-area">
+                    <em>기보정보<i class="es2"></i></em>
+                    <span class="side">
+                        <a href="#" class="btn-link-txt4"><span>상담 리스트 보기</span><i class="ico-arr-right"></i></a>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="age" class="form-label">나이 </label>
+                    </div><!--// form-head -->
+                    <div class="input-group w-full">
+                        <select class="select" id="age">
+                            <option value="">나이</option>
+                            <option value="">나이</option>
+                            <option value="">나이</option>
+                            <option value="">나이</option>
+                            <option value="">나이</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="radio1" class="form-label">성별 </label>
+                    </div><!--// form-head -->
+                    <div class="input-group">
+                        <div class="form-inline-list">
+                            <div class="custom-radio">
+                                <input type="radio" id="radio-1" class="radio" name="radio-item-1" checked><label for="radio-1">남자</label>
+                            </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="radio-2" class="radio" name="radio-item-1"><label for="radio-2">여자</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group type2">
+                    <div class="form-sgroup">
+                        <div class="form-head">
+                            <label for="cm" class="form-label">키</label>
+                        </div><!--// form-head -->
+                        <div class="input-group w-full unit-type">
+                            <input type="text" id="cm" class="input-text" placeholder="키">
+                            <span class="unit">cm</span>
+                        </div>
+                    </div>
+                    <div class="form-sgroup">
+                        <div class="form-head">
+                            <label for="kg" class="form-label">몸무게</label>
+                        </div><!--// form-head -->
+                        <div class="input-group w-full unit-type">
+                            <input type="text" id="kg" class="input-text" placeholder="몸무게">
+                            <span class="unit">kg</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="kg2" class="form-label">체지방 </label>
+                        <div class="side">
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="check-101" class="checkbox" name="check-item-1"><label for="check-101"> 모름</label>
+                            </div>
+                        </div>
+                    </div><!--// form-head -->
+                    <div class="input-group w-full unit-type">
+                        <input type="text" id="kg2" class="input-text" placeholder="체지방">
+                        <span class="unit">kg</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="type" class="form-label">체형 </label>
+                    </div><!--// form-head -->
+                    <div class="input-group w-full">
+                        <select class="select" id="type">
+                            <option value="">체형선택</option>
+                            <option value="">체형선택</option>
+                            <option value="">체형선택</option>
+                            <option value="">체형선택</option>
+                            <option value="">체형선택</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="job" class="form-label">직업 </label>
+                    </div><!--// form-head -->
+                    <div class="input-group w-full">
+                        <select class="select" id="job">
+                            <option value="">직업선택</option>
+                            <option value="">직업선택</option>
+                            <option value="">직업선택</option>
+                            <option value="">직업선택</option>
+                            <option value="">직업선택</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="object" class="form-label">목적 </label>
+                    </div><!--// form-head -->
+                    <div class="input-group w-full">
+                        <select class="select" id="object">
+                            <option value="">목적선택</option>
+                            <option value="">목적선택</option>
+                            <option value="">목적선택</option>
+                            <option value="">목적선택</option>
+                            <option value="">목적선택</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section-group">
+                <div class="title-area">
+                    <em>운동관련 질문</em>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="helth" class="form-label">운동 </label>
+                    </div><!--// form-head -->
+                    <div class="input-group w-full">
+                        <div class="form-inline-list">
+                            <div class="custom-radio">
+                                <input type="radio" id="radio-2-1" class="radio" name="radio-item-2" checked><label for="radio-2-1">유</label>
+                            </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="radio-2-2" class="radio" name="radio-item-2"><label for="radio-2-2">무</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="doing" class="form-label">하는운동 </label>
+                    </div><!--// form-head -->
+                    <div class="input-group">
+                        <ul class="form-horiz-list">
+                            <li>
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-3-1" class="radio-btn-rud" name="radio-item-2-3" checked=""><label for="radio-3-1">헬스</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-3-2" class="radio-btn-rud" name="radio-item-2-3"><label for="radio-3-2">홈트레이닝</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-3-3" class="radio-btn-rud" name="radio-item-2-3"><label for="radio-3-3">격투기</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-3-4" class="radio-btn-rud" name="radio-item-2-3"><label for="radio-3-4">줄넘기</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-3-5" class="radio-btn-rud" name="radio-item-2-3"><label for="radio-3-5">조깅</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-3-6" class="radio-btn-rud" name="radio-item-2-3"><label for="radio-3-6">경보,빨리걷기</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-3-7" class="radio-btn-rud" name="radio-item-2-3"><label for="radio-3-7">에어로빅</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-3-8" class="radio-btn-rud" name="radio-item-2-3"><label for="radio-3-8">에어로빅</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-3-9" class="radio-btn-rud" name="radio-item-2-3"><label for="radio-3-9">수영</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-3-10" class="radio-btn-rud" name="radio-item-2-3"><label for="radio-3-10">기타(내용란에서술)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-3-11" class="radio-btn-rud" name="radio-item-2-3"><label for="radio-3-11">등산</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="doing2" class="form-label">운동량 </label>
+                    </div><!--// form-head -->
+                    <div class="input-group input-group-mix">
+                        일주일 <div class="inp-text"><input type="text" class="input-text"><span class="unit">회</span></div> / 하루 <div class="inp-text"><input type="text" class="input-text"><span class="unit">시간</span></div> 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section-group">
+                <div class="title-area">
+                    <em>식습관 질문</em>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="day" class="form-label">하루 몇 끼 </label>
+                    </div><!--// form-head -->
+                    <div class="input-group w-full">
+                        <ul class="form-horiz-list fix-type">
+                            <li>
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-4-2" class="radio-btn-rud" name="radio-item-4-3"><label for="radio-4-2">한끼</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-4-3" class="radio-btn-rud" name="radio-item-4-3"><label for="radio-4-3">두끼</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-4-4" class="radio-btn-rud" name="radio-item-4-3"><label for="radio-4-4">세끼</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-4-5" class="radio-btn-rud" name="radio-item-4-3"><label for="radio-4-5">네끼</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-4-6" class="radio-btn-rud" name="radio-item-4-3"><label for="radio-4-6">다섯끼</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="time" class="form-label">식사시간 </label>
+                    </div><!--// form-head -->
+                    <div class="input-group w-full mt15">
+                        <div class="input-group-cell">
+                            <div class="custom-radio">
+                                <input type="radio" id="radio-5-1" class="radio" name="radio-item-5" checked><label for="radio-5-1">규칙적인 식사</label>
+                            </div>
+                        </div>
+                        <div class="input-group-cell">
+                            <div class="custom-radio">
+                                <input type="radio" id="radio-5-2" class="radio" name="radio-item-5"><label for="radio-5-2">불규칙적인 식사</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="food" class="form-label">음식의 종류 </label>
+                    </div><!--// form-head -->
+                    <div class="input-group w-full">
+                        <select class="select" id="food">
+                            <option value="">음식선택</option>
+                            <option value="">음식선택</option>
+                            <option value="">음식선택</option>
+                            <option value="">음식선택</option>
+                            <option value="">음식선택</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section-group">
+                <div class="title-area">
+                    <em>기타 질문</em>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">                        
+                        <label for="txtarea" class="form-label">내용 </label>
+                    </div>
+                    <div class="textarea-box">
+                        <textarea id="txtarea" placeholder="내용을 입력하세요"></textarea>
+                    </div>
+                    <div class="attach-wrap mix-type">
+                        <div class="attach-thum-list">
+                            <div class="attach-item">
+                                <input type="file" id="file1">
+                                <label for="file1"><span class="blind">파일첨부</span></label>
+                            </div>
+                        </div>
+                        <div class="info-text">
+                            <p class="dash-text">사진 또는 인바디 검사표 <br>(보건소에서 무료측정 가능합니다.)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-box">식단문의를 통해 수집된 개인정보는 상담을 위한자료로만 사용되며 다른 목적으로 사용되지 않습니다.</div>
+            <div class="agree-area">
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="check-201" class="checkbox" name="check-item-22"><label for="check-201"> 개인정보 이용 동의합니다.</label>
+                </div>
+            </div>
+            <div class="btn-group-flex">
+                <button type="button" class="btn-basic-lg  btn-default"><span>취소</span></button>
+                <button type="button" class="btn-basic-lg  btn-black"><span>상담받기</span></button>
+            </div>
+		</div><!--// content-wrap --> 
+		<!-- ## 사이드 배너 :: side-quick-area  -->
+		<script>include.sidequick();</script>
+		<!--// ## 사이드 배너 ::  side-quick-area  -->
+        <!-- 하단 고정 메뉴 -->
+		 <script>include.bottomNav();</script>
+		 <!--// 하단 고정 메뉴 -->
+	 </section>
+	 <!--// ========== 컨텐츠 영역 :: container ========== -->
+	
+	<!-- ========== 공통 푸터 :: footer ========== -->
+	<script>include.footer();</script>
+	<!--// ========== 공통 푸터 :: footer ========== -->
+    
+</div><!--// wrap -->
+</body>
+</html>

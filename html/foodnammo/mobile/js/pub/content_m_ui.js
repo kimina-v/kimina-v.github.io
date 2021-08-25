@@ -29,6 +29,9 @@ $(function () {
     // tooltip
     if ($('.ui-tooltip').length > 0) { toolTip(); }
 
+    // tooltip click
+    if ($('.tooltip-wrap').length > 0) { clickToolTip(); }
+
     // 체크박스 모두 선택
     if ($('.ui-check-all').length > 0) { checkAll();}
 
@@ -44,6 +47,9 @@ $(function () {
 
     // 아코디언 
     if ($('.ui-accordion').length > 0) { accordionList();}
+
+    // 아코디언 단일
+    if ($('.ui-accordion-only').length > 0) { accordionInit();}
 
     // 목록, 내용 더보기
     if ($('.ui-more-list').length > 0) { moreListView(); }
@@ -62,6 +68,9 @@ $(function () {
 
     // 상품상세 탭, 옵션선택박스
     if ($('.ui-more-article').length > 0) { moreArticle(); } 
+
+    // 상품상세 번들
+    if ($('.goods-bundle-content').length > 0) { moreBundle(); } 
 
     // 브랜드관 슬라이드
     if ($('.brand-swiper-list').length > 0) { brandSwiperSlide(); }
@@ -102,6 +111,12 @@ $(function () {
 
     //카테고리 스와이퍼 탭
     if ($('.cate-tab-swiper').length > 0) { cateSwiperTab ();}
+    
+    // Datepicker
+    if ($('.datepicker-group').length > 0) { inputDatepicker(); }
+
+    // 마이페이지 후기 작성 rating
+    if ($('.star-rating').length > 0) { starRating(); }
 });
 
 
@@ -548,6 +563,40 @@ function tooltipClose ( targetTipBox ) {
 }
 
 
+/****** click tooltip ******/
+function clickToolTip () {
+    $('.tooltip-wrap').each(function(){
+        var $this = $(this),
+            myHei = $this.find('.tooltip-box').outerHeight()+10,
+            myPos = $this.find('.btn-tooltip').offset().left-10;
+            
+        $this.find('.shape').css('left',myPos+'px');
+        $this.find('.tooltip-box').css('top','-'+myHei+'px');
+        
+        // $this.find('.btn-tooltip').on('click',function(){
+        //     $this.find('.tooltip-box').show();
+        // })
+    //    $this.find('.btn-tooltip').bind('click',function(){
+    //         $this.find('.tooltip-box').show();
+    //     })
+    })
+    $('body').click(function(e){
+        if(!$(e.target).hasClass('btn-tooltip')){
+            $('.tooltip-box').hide();
+        }else{
+            $('.tooltip-box').show();
+        }
+        
+        // if(!$(e.target).is('.btn-tooltip')) {
+        //     console.log('여기')
+        //     // $this.find('.tooltip-box').show()
+        // }else{
+        //     console.log('저기')
+        //     // $this.find('.tooltip-box').hide()
+        // }
+    });
+}
+
 /****** 체크박스 모두 선택 ******/
 function checkAll () {
     var chkBtn = $('.ui-check-all');
@@ -758,12 +807,11 @@ function compareScrollFix () {
 /****** 아코디언 ******/
 function accordionList () {
     var listWrap =  $('.ui-accordion').children('.ui-accordion-list'),
-        click = listWrap.children('.ui-accordion-item').find('.ui-accordion-click');
+        click = listWrap.children('li').find('.ui-accordion-click');
 
     click.on('click', function () {
-        var accrItem = $(this).parents('.ui-accordion-item'),
-            view = accrItem.find('.ui-accordion-view'),
-            list = $(this).parents('.ui-accordion-item');
+        var view = $(this).next('.ui-accordion-view'),
+            list = $(this).parent('li');
 
         if ( !list.hasClass('active') ) {
             list.addClass('active').siblings('li').removeClass('active').find('.ui-accordion-view').addClass('hide');
@@ -775,6 +823,21 @@ function accordionList () {
     });
 }
 
+/* 아코디언 단일 */
+function accordionInit(){
+    var click = $('.ui-accordion-btn'),
+        cnt = click.closest('.basic-spec');
+
+    click.on('click',function(){
+        if(cnt.hasClass('on')){
+            click.find('span').text('보기');
+            cnt.removeClass('on');
+        }else{
+            click.find('span').text('닫기');
+            cnt.addClass('on');
+        }
+    })
+}
 
 /****** 목록, 내용 더보기 ******/
 function moreListView () {
@@ -949,6 +1012,25 @@ function optionFix () {
 /****** 상품상세 설명 전체보기 ******/
 function moreArticle() {    
     var detailContent = $('.ui-more-article'),
+        detailBtn = $('.ui-all-content')
+
+    detailBtn.on('click', function () {
+        var toggleOn = $(this).hasClass('toggle-on');
+        if ( !toggleOn ) {
+            $(this).addClass('toggle-on');
+            detailContent.addClass('active')
+            $(this).children('span').text('상품설명 접기')
+        } else if ( toggleOn ) {
+            $(this).removeClass('toggle-on');
+            detailContent.removeClass('active')
+            $(this).children('span').text('상품설명 전체보기')
+        }
+    })
+}
+
+/****** 상품상세 번들 전체 ******/
+function moreBundle() {    
+    var detailContent = $('.goods-bundle-content'),
         detailBtn = $('.ui-all-content')
 
     detailBtn.on('click', function () {
@@ -1405,6 +1487,7 @@ function bsbSelect() {
         var ui_select = document.querySelector(".ui-select");
         var bsb_l = document.querySelector(".bsb-left");
         var body = document.querySelector("body");
+        var header = document.querySelector("header");
         bsb_left.forEach(function(item,idx){
             item.addEventListener("click",function(){
                 if(tg_cls){
@@ -1445,5 +1528,43 @@ function bsbSelect() {
                 body.classList.add('lock');
             }
         })        
+
+        header.addEventListener("click",function(){
+            if(bsb_l.classList.contains('on')){
+                bsb_l.classList.remove('on');
+                tg_cls = 0;
+                bsb_dim.classList.remove("on");
+                body.classList.remove('lock');
+            }
+        }) 
+
+        bsb_dim.addEventListener("click",function(){
+            if(bsb_l.classList.contains('on')){
+                bsb_l.classList.remove('on');
+                tg_cls = 0;
+                bsb_dim.classList.remove("on");
+                body.classList.remove('lock');
+            }
+        }) 
+
     }
+}
+
+/****** Datepicker ******/
+function inputDatepicker () {
+    $('.datepicker').each(function () {
+        $(this).datepicker();
+    })
+}
+
+/****** 별점 평가 ******/
+function starRating () {
+    $("#rate").rateYo({
+		ratedFill: "#FDD346", 
+		normalFill: "#dddddd", 
+		spacing: "8px",
+		rating: 5,
+    	halfStar: true,
+		starSvg: '<svg width="42" height="40" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M41.882 15.1191C41.7456 14.7066 41.4912 14.3425 41.1499 14.0714C40.8086 13.8004 40.3952 13.634 39.9602 13.5927L27.8373 12.4981L23.0459 1.34773C22.8725 0.949081 22.586 0.609301 22.2214 0.369938C21.8568 0.130575 21.4299 0.00201243 20.9929 0C20.5559 0.00201243 20.129 0.130575 19.7644 0.369938C19.3998 0.609301 19.1133 0.949081 18.94 1.34773L14.1485 12.4944L2.02563 13.589C1.59134 13.6309 1.17872 13.7976 0.838124 14.0687C0.497528 14.3397 0.243676 14.7034 0.107549 15.1154C-0.0259384 15.5287 -0.0353677 15.9717 0.0803959 16.3902C0.19616 16.8087 0.432114 17.1847 0.75941 17.4721L9.92274 25.4579L7.22169 37.286C7.12669 37.7103 7.15832 38.1529 7.3127 38.5596C7.46708 38.9663 7.73749 39.3194 8.09082 39.5756C8.4706 39.8507 8.92829 39.9993 9.39827 40C9.80221 39.9999 10.1985 39.8905 10.5446 39.6836L21.0004 33.4736L31.4525 39.6836C31.8268 39.9074 32.2593 40.0165 32.6957 39.9973C33.1322 39.9781 33.5533 39.8314 33.9063 39.5756C34.2596 39.3194 34.53 38.9663 34.6844 38.5596C34.8388 38.1529 34.8704 37.7103 34.7754 37.286L32.0743 25.4579L41.2377 17.4721C41.5656 17.1851 41.8023 16.8093 41.9187 16.3908C42.0352 15.9722 42.0263 15.5291 41.8933 15.1154L41.882 15.1191Z" /></svg>'
+	});
 }

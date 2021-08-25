@@ -133,7 +133,7 @@ table td .title-elps{display:inline-block; vertical-align: middle; max-width:94%
 
 /* images */
 .imgbadge-dlv-exp{display:inline-block; width:75px; height:14px; background:url("../images/txt/txt_badge_dlv_m.png") 0 0; background-size:150px auto}
-.imgbadge-dlv-free{display:inline-block; width:68px; height:18px; background:url("../images/txt/txt_badge_dlv_m.png") left bottom; background-size:150px auto}
+.imgbadge-dlv-free{display:inline-block; width:68px; height:18px; background:url("../images/txt/txt_badge_dlv_m.png") left bottom; background-size:150px auto;vertical-align: top;}
 .imgbadge-dlv-exp.type-sm{width:55px; height:10px; background-position:right top}
 .imgbadge-dlv-free.type-sm{width:55px; height:12px; background-position:right bottom}
 
@@ -194,6 +194,8 @@ table td .title-elps{display:inline-block; vertical-align: middle; max-width:94%
 .mt60{margin-top:60px !important;}
 .mt70{margin-top:70px !important;}
 .mt80{margin-top:80px !important;}
+
+.mb30{margin-bottom: 30px !important;}
 
 .pt5{padding-top:5px !important;}
 .pt10{padding-top:10px !important;}
@@ -1220,6 +1222,7 @@ button{background:none; cursor:pointer; outline:none; border:0; margin:0; paddin
 [class^="ico-bl-"]{display:inline-block; background-image:url("../images/icon/ico_bullet_m.png"); background-size:75px auto}
 .ico-bl-deadline{background:none; width:26px; height:26px; vertical-align: middle;} /* 모바일용 이미지없음 */
 .ico-bl-time{background-position:left top; width:18px; height:18px; vertical-align: middle;}
+.ico-bl-time2{background-position:right -50px; width:18px; height:18px; vertical-align: middle;}
 .ico-bl-phone{background-position:center top; width:10px; height:10px; vertical-align: middle;}
 .ico-bl-coupon{background-position:left -30px; width:13px; height:10px; vertical-align: middle;}
 .ico-bl-star{background-position:left -50px; width:12px; height:12px; vertical-align: middle;}
@@ -1244,6 +1247,8 @@ button{background:none; cursor:pointer; outline:none; border:0; margin:0; paddin
 [class^="ico-img-"]{display:inline-block; background-image:url("../images/icon/ico_img_m.png"); background-size:200px auto}
 .ico-img-check{width:36px; height:40px; background-position:left top;}
 .ico-img-info{width:60px; height:40px; background-position:left -60px;}
+
+.ico-bl-file{display:inline-block;width:12px;height:13px;background:url("../images/icon/icon_file.png") no-repeat 0 0/100% auto}
 
 .rating .ico-bl-star{margin-top: -3px; margin-right: 2px;}
 .rating-point{position:relative; display:inline-block; width:80px; height:12px; background:url("../images/icon/ico_rating_m.png") 0 0;}

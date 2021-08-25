@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>   
+
+<body style="overflow:hidden">
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<header id="header" class="header">
+		<div class="header-top">
+			<div class="page-title-area">
+                <a href="#" class="btn-back"><i class="ico-arrows-back"></i><span class="blind">뒤로가기</span></a>
+				<h1 class="page-title">주문/결제</h1>
+			</div><!-- // page-title-area  -->
+		</div><!--// header-top -->
+	</header>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+       
+		<div class="content-wrap">
+			// 컨텐츠 영역
+		</div><!--// content-wrap -->
+ 
+		<!-- ## 사이드 배너 :: side-quick-area  -->
+		<!-- <script>include.sidequick();</script> -->
+		<!--// ## 사이드 배너 ::  side-quick-area  -->
+	 </section>
+	 <!--// ========== 컨텐츠 영역 :: container ========== -->
+	
+	<!-- ========== 공통 푸터 :: footer ========== -->
+	<!-- <script>include.footer();</script> -->
+	<!--// ========== 공통 푸터 :: footer ========== -->
+</div><!--// wrap -->
+
+<!--
+	* 팝업 버튼에 ui-open-pop 클래스, 팝업 ID 작성 필요
+	ex) <a href="#popupSample-01" class=".... ui-open-pop"> ~ </a>
+	ex) <button type="button" data-layer="#popupSample-02" class="... ui-open-pop"> ~ </button>
+-->
+<!-- ========== 팝업 영역 ========== -->
+<div class="layer-wrap" id="popupSample-01" tabindex="0" style="display: block;">
+	<div class="layer-pop exp-possible-area">
+		<div class="layer-inner">
+            <div class="layer-head">
+				<h4 class="layer-pop-title">특급배송 가능지역 안내</h4>
+			</div>
+			<div class="layer-body">
+                <div class="possible-area-tit">특급배송 전체 가능지역</div>
+                <div class="possible-area-txt">서울, 안양시, 부천시, 구리시, 성남시, 수원시, 광명시,<br>의정부시, 안산시, 시흥시(안산시흥 공단지역제외)</div>
+                <div class="possible-area-tit">특급배송 일부 가능지역</div>
+                <div class="possible-area-tb2">
+                    <table>
+                        <caption>특급배송 가능지역 안내</caption>
+                        <colgroup>
+                            <col style="width: 23%;">
+                            <col style="width: 23%;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3" class="pa-city">
+                                    <div>고양시</div>
+                                </td>
+                                <td class="pa-district">
+                                    <div>덕양구</div>
+                                </td>
+                                <td class="pa-dong">
+                                    <div>주교동, 성사동, 토당동, 행신동, 화정동, 도내동, 능곡동</div>
+                                </td>
+                            </tr> 
+                            <tr>
+                                <td class="pa-district">
+                                    <div>일산동구</div>
+                                </td>
+                                <td class="pa-dong">
+                                    <div>백석동, 마두동, 식사동, 중산동, 정발산동, 장항동, 풍동, 풍산동</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="pa-district">
+                                    <div>일산서구</div>
+                                </td>
+                                <td class="pa-dong">
+                                    <div>일산동, 주엽동, 탄현동, 대화동, 송산동, 덕이동, 가좌동</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="pa-city">
+                                    <div>용인시</div>
+                                </td>
+                                <td class="pa-dong">
+                                    <div>수지구 고기동, 처인구 제외 전지역</div>
+                                </td>
+                            </tr>  
+                            <tr>
+                                <td colspan="2" class="pa-city">
+                                    <div>과천시</div>
+                                </td>
+                                <td class="pa-dong">
+                                    <div>관문동 제외 전지역</div>
+                                </td>
+                            </tr>                            
+                            <tr>
+                                <td colspan="2" class="pa-city">
+                                    <div>하남시</div>
+                                </td>
+                                <td class="pa-dong">
+                                    <div>신장동, 덕풍동, 풍산동, 창우동, 위례신도시(학암동), 미사동, 망월동, 선동, 천현동, 학암동</div>
+                                </td>
+                            </tr>  
+
+                            <tr>
+                                <td colspan="2" class="pa-city">
+                                    <div>광주시</div>
+                                </td>
+                                <td class="pa-dong">
+                                    <div>고산리, 능평리, 매산리, 문형리, 양벌리, 추자리</div>
+                                </td>
+                            </tr>  
+                            <tr>
+                                <td colspan="2" class="pa-city">
+                                    <div>인천광역시</div>
+                                </td>
+                                <td class="pa-dong">
+                                    <div>미추홀구, 서구, 남동구, 연수구, 부평구, 계양구</div>
+                                </td>
+                            </tr>  
+                            <tr>
+                                <td colspan="2" class="pa-city">
+                                    <div>파주시</div>
+                                </td>
+                                <td class="pa-dong">
+                                    <div>동패동, 금촌동, 문발동, 와동동, 목동동, 야당동, 다율동</div>
+                                </td>
+                            </tr>  
+                            <tr>
+                                <td colspan="2" class="pa-city">
+                                    <div>화성시</div>
+                                </td>
+                                <td class="pa-dong">
+                                    <div>기산동, 영천동, 오산동, 능동, 동탄동, 진안동, 반송동, 청계동, 반월동, 병점동, 석우동</div>
+                                </td>
+                            </tr>  
+                            <tr>
+                                <td colspan="2" class="pa-city">
+                                    <div>의왕시</div>
+                                </td>
+                                <td class="pa-dong">
+                                    <div>포일동, 오전동, 내손동, 고천동</div>
+                                </td>
+                            </tr>  
+                            <tr>
+                                <td colspan="2" class="pa-city">
+                                    <div>군포시</div>
+                                </td>
+                                <td class="pa-dong">
+                                    <div>당동, 당정동, 산본동, 금정동, 군포1동, 군포2동, 재궁동, 오금동, 수리동, 궁내동, 광정동</div>
+                                </td>
+                            </tr>  
+                            <tr>
+                                <td colspan="2" class="pa-city">
+                                    <div>김포시</div>
+                                </td>
+                                <td class="pa-dong">
+                                    <div>양곡리(양곡택지개발지구), 고촌읍, 양촌읍, 장기동, 운양동, 감정동, 북변동, 사우동, 풍무동, 구래동, 마산동, 김포1동, 김포2동</div>
+                                </td>
+                            </tr>  
+                            <tr>
+                                <td colspan="2" class="pa-city">
+                                    <div>남양주시</div>
+                                </td>
+                                <td class="pa-dong">
+                                    <div>금곡동, 다산1동, 다산2동, 도농동, 별내동, 별내면, 와부읍, 이패동, 지금동, 진건읍, 진접읍, 퇴계원면, 평내동, 호평동</div>
+                                </td>
+                            </tr>  
+                        </tbody>
+                    </table>
+                </div>
+			</div>
+			<button type="button" class="btn-x-sm ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button>
+		</div>
+	</div><!--// layer-pop  -->
+</div>
+<!-- ========== 팝업 영역 ========== -->
+</body>
+</html>

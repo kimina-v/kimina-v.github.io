@@ -28,15 +28,24 @@
 	<section id="contents" class="container">
        
 		<div class="content-wrap">
+
+			<!--
+				[Dev] 20210820 수정사항
+				1. 브랜드 뱃지 및 브랜드명 추가
+				2. sns공유 기능 추가
+				3. 배송방법 안내 추가
+				4. 전체후기 옵션 영역 수정
+			-->
 			<div class="goods-top-wrap frame-sm">
 				<div class="goods-img-area">
 					<div class="img"><img src="../../images/_samples/@sample_480x480.png" alt="맛있닭 닭가슴살 스테이크 오리지널 100g x 50팩 이미지" ></div>
 					<div class="refrig-bnr"><a href="#popup-sample01" class="ui-open-pop"><img src="../../images/img/img_refrig_bnr01.png" alt="지금 보고 있는 이 제품은 내 냉장고에 얼마나 들어갈까?" ></a></div>
 				</div><!--// goods-img -->
 				<div class="goods-info-area">
+					<div class="brand-line"><span class="prd-badge-navy">브랜드</span> <a href="#" class="brand-link"><span>맛있닭</span><i class="ico-arr-right"></i></a></div><!--// [Dev] 20210820 브랜드명 추가 -->
 					<h2 class="goods-tit">맛있닭 닭가슴살 스테이크 오리지널 100g x 50팩(5kg)</h2>
 					<div class="rating-div">
-						<em class="rating-point-md"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
+						<em class="rating-point-md"><span class="point3-5"></span><span class="blind">별점4.5</span></em>
 						<span class="num">(1415)</span>
 					</div>
 					<!--
@@ -56,6 +65,18 @@
 						<p class="sale"><strong>28</strong>%</p>
 						<p class="price"><strong>18,000</strong>원</p>
 						<p class="origin"><span>24,000</span>원</p>
+						<!-- [Dev] 20210820 sns공유 기능 추가 -->
+						<div class="sns-share">
+							<button type="button" class="btn-icon-share ui-togglelayer-btn"><span class="blind">공유</span></button>
+							<div class="sns-share-box ui-togglelayer-box">
+								<ul>
+									<li><a href="#"><i class="ico-share-kakao"></i><span class="txt">카카오톡</span></a></li>
+									<li><a href="#"><i class="ico-share-facebook"></i><span class="txt">페이스북</span></a></li>
+									<li><a href="#"><i class="ico-share-urlcopy"></i><span class="txt">URL복사</span></a></li>
+								</ul>
+							</div>
+						</div>
+						<!--// [Dev] 20210820 sns공유 기능 추가  -->
 					</div><!--// goods-price -->
 					<div class="orange-mem-box">
 						<a href="#" class="box-head"><i class="ico-bl-orgmem"></i><strong class="text-primary">오렌지멤버스 혜택</strong><i class="ico-arr-right"></i></a>
@@ -123,6 +144,20 @@
 								</div><!--// dlv-way-box -->
 							</dd>
 						</dl><!--// dl-row -->
+
+						<!-- [Dev] 20210820 배송방법 안내 추가 -->
+						<dl class="dl-row">
+							<dt>배송방법</dt>
+							<dd>
+								<ul class="sep-list">
+									<li>2000원</li>
+									<li>150,000원 이상 무료배송</li>
+								</ul>
+								<a href="#" class="text-primary-sm"><span>배송비 아끼기</span><i class="ico-arr-right"></i></a>
+							</dd>
+						</dl><!--// dl-row -->
+						<!--// [Dev] 20210820 배송방법 안내 추가 -->
+
 						<dl class="dl-row">
 							<dt>적립혜택</dt>
 							<dd>1% 적립</dd>
@@ -145,15 +180,30 @@
 								<ul>
 									<li class="first"><a href="#">상품옵션선택</a></li>
 									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
+									
 									<!-- 품절일 경우 li에 addClass disabled, 재입고알림 신청 추가  -->
-									<!-- <li class="disabled">
+									<li class="disabled">
 										<a href="#">5팩(1팩당 3,900원) (+0)</a>
 										<a href="#" class="text-primary">재입고알림 신청</a>
-									</li> -->
-									<!--// 품절일 경우 li에 addClass disabled, 재입고알림 신청 추가  -->
+									</li><!--// 품절일 경우 li에 addClass disabled, 재입고알림 신청 추가  -->
+
+									<!-- 상품이미지 있을 경우 li에 addClass thumnail -->
+									<li class="thumnail">
+										<span class="thum-img"><img src="../../images/_samples/@sample_100x100.png" alt=""></span>
+										<a href="#">5팩(1팩당 3,900원) (+0)</a>
+									</li>
+									<li class="thumnail disabled">
+										<span class="thum-img"><img src="../../images/_samples/@sample_100x100.png" alt=""></span>
+										<a href="#">5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원) &gt;5팩(1팩당 3,900원)</a>
+										<a href="#" class="text-primary">재입고알림 신청</a>
+									</li><!--// 상품이미지 있을 경우 li에 addClass thumnail -->
+
 									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
 									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-									<li><a href="#">5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원)</a></li>
+									<li class="disabled">
+										<a href="#">5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원) >5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원)</a>
+										<a href="#" class="text-primary">재입고알림 신청</a>
+									</li>
 									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
 									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
 								</ul>
@@ -165,8 +215,21 @@
 								<ul>
 									<li class="first"><a href="#">상품옵션선택</a></li>
 									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
-									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
+										<!-- 품절일 경우 li에 addClass disabled, 재입고알림 신청 추가  -->
+										<li class="disabled">
+											<a href="#">5팩(1팩당 3,900원) (+0)</a>
+											<a href="#" class="text-primary">재입고알림 신청</a>
+										</li><!--// 품절일 경우 li에 addClass disabled, 재입고알림 신청 추가  -->
+	
+										<!-- 상품이미지 있을 경우 li에 addClass thumnail -->
+										<li class="thumnail">
+											<span class="thum-img"><img src="../../images/_samples/@sample_100x100.png" alt=""></span>
+											<a href="#">5팩(1팩당 3,900원) (+0)</a>
+										</li>
+										<li class="thumnail">
+											<span class="thum-img"><img src="../../images/_samples/@sample_100x100.png" alt=""></span>
+											<a href="#">5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원) &gt;5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원)</a>
+										</li><!--// 상품이미지 있을 경우 li에 addClass thumnail -->
 									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
 									<li><a href="#">5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원) (+0) 5팩(1팩당 3,900원)</a></li>
 									<li><a href="#">5팩(1팩당 3,900원) (+0)</a></li>
@@ -351,20 +414,20 @@
 				<a href="#" class="btn-basic-sm2 btn-default"><span>더보기</span><i class="ico-arr-right"></i></a>
 			</div><!--// best-review-area -->
 
-			<!-- <div class="slide-area frame-sm">
+			<div class="slide-area frame-sm">
 				<h3 class="goods-div-tit">다른 고객님들이 함께 본 상품</h3>
 				<div class="">
-					// slide
+					// 구글 AD
 				</div>
-			</div> -->
+			</div>
 			<!--// slide-area -->
 
 			<div class="goods-detail-wrap">
 				<div class="ui-goods-tab tab-detail">
 					<ul>
 						<li class="current"><a href="#detail-section01"><span>상품정보</span></a></li>
-						<li><a href="#detail-section02"><span>구매후기 4279</span></a></li>
-						<li><a href="#detail-section03"><span>상품문의 9</span></a></li>
+						<li><a href="#detail-section02"><span>구매후기 <em class="text-num-md">899</em></span></a></li>
+						<li><a href="#detail-section03"><span>상품문의 <em class="text-num-md">10</em></span></a></li>
 						<li><a href="#detail-section04"><span>배송안내</span></a></li>
 					</ul>
 				</div><!--//tab-detail -->
@@ -484,32 +547,68 @@
 							</div><!--// goods-detail-information || 상품정보 -->
 
 							<!-- 구매후기 -->
+							<!-- [Dev] 20210820 수정/추가 -->
 							<div id="detail-section02" class="goods-detail-review">
 								<div class="goods-detail-head">
-									<h3 class="tit">구매후기 <span class="text-primary">(899개)</span></h3>
+									<h3 class="tit">
+										전체후기 <span class="text-primary">(<span class="text-num-md">899</span>개)</span>
+										<div class="custom-checkbox">
+											<input type="checkbox" id="check-102" class="checkbox" name="check-item-1" checked=""><label for="check-102"> 포토후기만 보기</label>
+										</div>
+									</h3>
 									<div class="right">
 										<div class="sorting-list">
 											<ul class="sep-list type2">
 												<li>
 													<div class="custom-radio">
-														<input type="radio" id="radio-4-2-1" class="radio-sort" name="radio-item-4-2" checked=""><label for="radio-4-2-1">베스트순</label>
+														<input type="radio" id="radio-4-2-1" class="radio-sort type2" name="radio-item-4-2" checked=""><label for="radio-4-2-1">베스트순</label>
 													</div>
 												</li>
 												<li>
 													<div class="custom-radio">
-														<input type="radio" id="radio-4-2-2" class="radio-sort" name="radio-item-4-2"><label for="radio-4-2-2">최신순</label>
+														<input type="radio" id="radio-4-2-2" class="radio-sort type2" name="radio-item-4-2"><label for="radio-4-2-2">최신순</label>
 													</div>
 												</li>
 											</ul><!--// sep-list -->
+
+											<!-- 삭제 
 											<div class="custom-radio">
 												<input type="checkbox" id="check-2" class="radio-chk-btn" name="check-item-2" checked=""><label for="check-2"><i class="ico-btn-level"></i> 등급별</label>
 											</div>
 											<div class="custom-radio">
 												<input type="checkbox" id="check-2" class="radio-chk-btn" name="check-item-2" checked=""><label for="check-2"><i class="ico-btn-option"></i> 옵션별</label>
-											</div>
+											</div> 
+											-->
+											
 										</div><!--// sorting-list -->
 									</div><!--// right -->
 								</div><!--// goods-detail-head -->
+
+								<div class="goods-review-search">
+									<div class="select-box ui-select w420">
+										<a href="#none" title="이메일 주소" class="select-value placeholder"><span>옵션명</span></a>
+										<div class="select-list">
+											<ul>
+												<li><a href="#none"><span>list</span></a></li>
+												<li><a href="#none"><span>list</span></a></li>
+												<li><a href="#none"><span>list</span></a></li>
+											</ul>
+										</div>
+									</div><!--// select-box -->
+									<div class="select-box ui-select w225">
+										<a href="#none" title="이메일 주소" class="select-value placeholder"><span>전체등급</span></a>
+										<div class="select-list">
+											<ul>
+												<li><a href="#none"><span>list </span></a></li>
+												<li><a href="#none"><span>list</span></a></li>
+												<li><a href="#none"><span>list</span></a></li>
+											</ul>
+										</div>
+									</div><!--// select-box -->
+									<button type="button" class="btn-icon-reset" title="초기화"><span class="blind">초기화</span></button>
+									<button type="button" class="btn-basic-md2 btn-navy btn-dim"><span>조회</span></button><!-- 활성화시 removeClass btn-dim -->
+								</div><!--// goods-review-search-->
+								<!--// [Dev] 20210820 수정/추가 -->
 								
 								<div class="goods-review-list">
 									<ul>

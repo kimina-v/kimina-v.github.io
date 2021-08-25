@@ -63,7 +63,7 @@
 
 			<div class="frame-sm">
 				<div class="frame-left">
-					<div class="aside-mypage">
+					<div class="aside-menu-wrap">
 						<nav class="aside-menu">
 							<ul class="menu-list">	
 								<li>
@@ -108,7 +108,10 @@
 								</li>
 							</ul>
 						</nav><!--// menu-mypage -->
-					</div><!--// aside-mypage -->
+						<div class="aside-link-box">
+							<a href="#"><i class="ico-bl-speaker"></i><span>고객의 소리</span><i class="ico-arr-right"></i></a>
+						</div>
+					</div><!--// aside-menu-wrap -->
 				</div><!--// frame-left -->
 
 				<div class="frame-right">
@@ -125,7 +128,7 @@
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">문의 유형 <em class="es"><span class="blind">필수입력</span></em></div></th>
+										<th class="text-left" scope="row"><div class="in-tb">문의 유형 <em class="es"><span class="blind">필수입력</span></em></div></th>
 										<td class="text-left">
                                             <div class="input-group w-full">
                                                 <div class="input-group-form">
@@ -148,7 +151,7 @@
                                         </td>
 									</tr>
 									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">주문상품</div></th>
+										<th class="text-left" scope="row"><div class="in-tb">주문상품</div></th>
 										<td class="text-left">
                                             <div class="input-group w-full">
                                                 <input type="text" id="item-1" class="input-text" placeholder="문의상품을  선택해주세요.">
@@ -168,13 +171,14 @@
 															</p>
 														</div><!--// column  -->
 													</div>
-												</div>
+												</div><!--// prd-info-area -->
+												<button type="button" class="btn-x-sm" title="삭제"><i class="ico-x-grey"></i><span class="blind">삭제</span></button>
 											</div>
 											<!--// 주문상품 선택시 -->
                                         </td>
 									</tr>
                                     <tr>
-										<th class="text-left" scope="row"><div class="ib-tb">문의내용 <em class="es"><span class="blind">필수입력</span></em></div></th>
+										<th class="text-left" scope="row"><div class="in-tb">문의내용 <em class="es"><span class="blind">필수입력</span></em></div></th>
 										<td class="text-left">
                                             <div class="textarea-box h230">
                                                 <textarea id="item-5" placeholder="내용을 입력하세요"></textarea>
@@ -186,27 +190,26 @@
 										<th class="text-left" scope="row"></th>
 										<td class="text-left">
                                             <div class="file-add-boxes">
-												<button type="button" class="btn-attach-thumb"><i class="ico-plus-xlg"></i><span class="blind">파일첨부</span></button>
-												<button type="button" class="btn-attach-thumb"><i class="ico-plus-xlg"></i><span class="blind">파일첨부</span></button>
-												<button type="button" class="btn-attach-thumb"><i class="ico-plus-xlg"></i><span class="blind">파일첨부</span></button>
+												<div class="div-attach-thumb">
+													<button type="button" class="btn-attach-thumb"><i class="ico-plus-xlg"></i><span class="blind">파일첨부</span></button>
+													<!-- 이미지 첨부됐을 경우 -->
+													<div class="attach-img">
+														<img src="../../images/_samples/@sample_480x480.png" alt="첨부파일" />
+														<button type="button" class="btn-x-xs2"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+													</div>
+													<!--// 이미지 첨부됐을 경우 -->
+												</div>
+												<div class="div-attach-thumb">
+													<button type="button" class="btn-attach-thumb"><i class="ico-plus-xlg"></i><span class="blind">파일첨부</span></button>
+												</div>
+												<div class="div-attach-thumb">
+													<button type="button" class="btn-attach-thumb"><i class="ico-plus-xlg"></i><span class="blind">파일첨부</span></button>
+												</div>
 												<p class="text-guide-md ">- 최대 15MB 이하의 JPG, PNG, GIF, BMP 파일 3장까지 첨부 가능합니다.</p>
 											</div>
                                         </td>
 									</tr>
 									<!--// 첨부파일 영역 -->
-									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">답변알림</div></th>
-										<td>
-											<div class="form-inline-list">
-												<div class="custom-checkbox">
-													<input type="checkbox" id="check-102" class="checkbox" name="check-item-1" checked=""><label for="check-102">SMS</label>
-												</div>
-												<div class="custom-checkbox">
-													<input type="checkbox" id="check-102" class="checkbox" name="check-item-1" checked=""><label for="check-102">SMS</label>
-												</div>
-											</div>
-										</td>
-									</tr>
 								</tbody>
 							</table>
 						</div><!--// board-form -->

@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>   
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<header id="header" class="header">
+		<div class="header-top">
+			<div class="page-title-area">
+                <a href="#" class="btn-back"><i class="ico-arrows-back"></i><span class="blind">뒤로가기</span></a>
+				<h2 class="page-title">회원탈퇴</h2>
+				<!-- <div class="my-menu">
+					<ul>
+						<li><a href="#" class="btn-util-search" title="검색"><i class="ico-search-pop"></i></a></li>
+						<li><a href="#" class="btn-util-cart" title="장바구니"><span class="blind">장바구니</span><em class="count">1</em></a></li>
+					</ul>
+				</div> -->
+			</div><!-- // page-title-area  -->
+		</div><!--// header-top -->
+	</header>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">       
+		<div class="content-wrap member-out">
+            <div class="infomation-box">
+                <em class="title">탈퇴 유의 사항</em>
+                <ul class="dot-list">
+                    <li>탈퇴하실 경우 구매내역 확인은 물론 로그인 후 가능한 모든 기능은 사용하실 수 없습니다.</li>
+                    <li>탈퇴하신 후에 회원 정보의 복구는 불가능하며, 보유하신 쿠폰이나 적립금도 모두 무효화됩니다.</li>
+                    <li>탈퇴하신 후 동일한 이메일, 휴대폰 번호로 재 가입은 탈퇴일로부터 90일 이후 가능합니다.</li>
+                </ul>
+            </div>
+            <div class="form-section-group">
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="item" class="form-label">탈퇴사유 및 개선점</label>
+                    </div><!--// form-head -->
+                    <div class="input-group w-full">
+                        <select class="select">
+                            <option value="">선택</option>
+                            <option value="">배송이 불만이에요</option>
+                            <option value="">교환/반품/환불이 만족스럽지 않아요</option>
+                            <option value="">자주 안 찾게 돼요</option>
+                            <option value="">상품 가격이 불만이에요</option>
+                            <option value="">상품이 다양하지 않아요</option>
+                            <option value="">쇼핑 기능에 오류가 있어요</option>
+                            <option value="">다른 계정으로 가입할게요</option>
+                            <option value="">기타</option>
+                        </select>
+                    </div>
+                    <div class="textarea-box">
+                        <textarea id="item-5" placeholder="랭킹닭컴에 해주고 싶은 말씀을 자유롭게 입력해 주세요."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-group-flex">
+                <button type="button" class="btn-basic-lg btn-black"><span>확인</span></button>
+                <button type="button" class="btn-basic-lg btn-default"><span>취소</span></button>
+            </div>
+		</div><!--// content-wrap --> 
+		<!-- ## 사이드 배너 :: side-quick-area  -->
+		<script>include.sidequick();</script>
+		<!--// ## 사이드 배너 ::  side-quick-area  -->
+        <!-- 하단 고정 메뉴 -->
+		 <script>include.bottomNav();</script>
+		 <!--// 하단 고정 메뉴 -->
+	 </section>
+	 <!--// ========== 컨텐츠 영역 :: container ========== -->
+	
+	<!-- ========== 공통 푸터 :: footer ========== -->
+	<script>include.footer();</script>
+	<!--// ========== 공통 푸터 :: footer ========== -->
+    
+</div><!--// wrap -->
+</body>
+</html>

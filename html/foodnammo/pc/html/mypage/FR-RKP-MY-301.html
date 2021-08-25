@@ -63,7 +63,7 @@
 
 			<div class="frame-sm">
 				<div class="frame-left">
-					<div class="aside-mypage">
+					<div class="aside-menu-wrap">
 						<nav class="aside-menu">
 							<ul class="menu-list">	
 								<li>
@@ -108,7 +108,10 @@
 								</li>
 							</ul>
 						</nav><!--// menu-mypage -->
-					</div><!--// aside-mypage -->
+						<div class="aside-link-box">
+							<a href="#"><i class="ico-bl-speaker"></i><span>고객의 소리</span><i class="ico-arr-right"></i></a>
+						</div>
+					</div><!--// aside-menu-wrap -->
 				</div><!--// frame-left -->
 
 				<div class="frame-right">
@@ -117,59 +120,73 @@
 							<h3 class="title-menu">주문상세내역</h3>
 						</div><!--// menu-title-area -->
 
-						<div class="order-list-area">
-							<div class="list-head">
-								<strong class="date">2020.03.24</strong>
-								<span class="order-num">20200318WB234F</span>
-								<div class="right">
-									배송비 3,000원
-								</div>
-							</div><!--// list-head -->
-							<ul class="order-list">
+						<div class="order-list-area order-list-slide">
+							<ul class="order-list-inner">
+								<!-- 날짜별 항목 list -->
 								<li>
-									<div class="prd-info-area">
-										<div class="inner">
-											<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
-											<div class="column tit">
-												<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
-												<p class="desc">혼합 5팩(1팩당 3,900원)</p>
-												<ul class="price-item">
-													<li><span class="num">19,500</span>원</li>
-													<li><span class="num">1</span>개</li>
-													<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
-												</ul>
-											</div><!--// column  -->
-											<div class="column price text-left"><span class="num">19,500</span>원</div>
-											<div class="column dlv">
-												배송중 <br />
-												<a href="#" class="btn-option btn-default"><span>배송조회</span></a>
-												<a href="#" class="btn-option btn-primary-line"><span>후기작성</span></a>
-											</div>
+									<div class="order-list-head">
+										<strong class="date">2020.03.24</strong>
+										<a href="#" class="order-num">20200318WB234F<i class="ico-arr-right"></i></a>
+										<div class="right">
+											<a href="#" class="btn-option btn-default"><span>주문취소</span></a>
 										</div>
-									</div><!--// prd-info-area -->
-								</li>	
-								<li>
-									<div class="prd-info-area">
-										<div class="inner">
-											<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
-											<div class="column tit">
-												<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
-												<p class="desc">혼합 5팩(1팩당 3,900원)</p>
-												<ul class="price-item">
-													<li><span class="num">19,500</span>원</li>
-													<li><span class="num">1</span>개</li>
-													<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
-												</ul>
-											</div><!--// column  -->
-											<div class="column price text-left"><span class="num">19,500</span>원</div>
-											<div class="column dlv">
-												배송중 <br />
-												<a href="#" class="btn-option btn-default"><span>배송조회</span></a>
-												<a href="#" class="btn-option btn-primary-line"><span>후기작성</span></a>
-											</div>
-										</div>
-									</div><!--// prd-info-area -->
-								</li>	
+									</div><!--// list-head -->
+									<div class="order-content-box">
+										<ul class="order-div-list">
+											<!-- 상품별 list 1 -->
+											<li class="order-div-item">
+												<div class="order-state-bar">
+													<em class="txt-state">배송완료</em>
+													<span class="text-guide-sm">6월 29일 배송완료 </span>
+													<a href="#" class="btn-link-txt2"><u>배송조회</u></a>
+												</div><!--// state-bar -->
+												<div class="prd-info-area">
+													<div class="inner">
+														<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+														<div class="column tit">
+															<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+															<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+															<ul class="price-item">
+																<li><span class="num">19,500</span>원</li>
+																<li><span class="num">1</span>개</li>
+																<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
+															</ul>
+														</div><!--// column  -->
+														<div class="column price text-left"><span class="num">19,500</span>원</div>
+														<div class="column dlv">
+															<a href="#" class="btn-option btn-default"><span>구매확정</span></a>
+															<a href="#" class="btn-option btn-primary-line"><span>후기작성</span></a>
+														</div>
+													</div>
+												</div><!--// prd-info-area -->
+											</li><!--// order-div-item || 상품별 list 1 -->
+											<!-- 상품별 list 1 -->
+											<li class="order-div-item">
+												<div class="order-state-bar">
+													<em class="txt-state">배송완료</em>
+													<span class="text-guide-sm">6월 29일 배송완료 </span>
+													<a href="#" class="btn-link-txt2"><u>배송조회</u></a>
+												</div><!--// state-bar -->
+												<div class="prd-info-area">
+													<div class="inner">
+														<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+														<div class="column tit">
+															<p class="tit"><a href="#">랭닭 아이스팩</a></p>
+															<ul class="price-item">
+																<li><span class="num">300</span>원</li>
+																<li><span class="num">1</span>개</li>
+																<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
+															</ul>
+														</div><!--// column  -->
+														<div class="column price text-left"><span class="num">300</span>원</div>
+														<div class="column dlv"></div>
+													</div>
+												</div><!--// prd-info-area -->
+											</li><!--// order-div-item || 상품별 list 1 -->
+										</ul><!--// order-div-list -->
+									</div>
+								</li>
+								<!--// 날짜별 항목 list -->
 							</ul>
 						</div><!--// order-list-area -->
 
@@ -186,90 +203,75 @@
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">이름</div></th>
-										<td class="text-left"><div class="ib-tb">조용익</div></td>
+										<th class="text-left" scope="row"><div class="in-tb">이름</div></th>
+										<td class="text-left"><div class="in-tb">조용익</div></td>
 									</tr>
 									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">전화번호</div></th>
-										<td class="text-left"><div class="ib-tb">07044973769</div></td>
+										<th class="text-left" scope="row"><div class="in-tb">전화번호</div></th>
+										<td class="text-left"><div class="in-tb">07044973769</div></td>
 									</tr>
 									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">휴대폰번호</div></th>
-										<td class="text-left"><div class="ib-tb">01000000000</div></td>
+										<th class="text-left" scope="row"><div class="in-tb">휴대폰번호</div></th>
+										<td class="text-left"><div class="in-tb">01000000000</div></td>
 									</tr>
 									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">주소</div></th>
-										<td class="text-left"><div class="ib-tb">서울특별시 마포구 월드컵북로 396(상암동) 누리꿈스퀘어 비즈니스타워 15층</div></td>
+										<th class="text-left" scope="row"><div class="in-tb">주소</div></th>
+										<td class="text-left"><div class="in-tb">서울특별시 마포구 월드컵북로 396(상암동) 누리꿈스퀘어 비즈니스타워 15층</div></td>
 									</tr>
 									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">배송 메시지</div></th>
-										<td class="text-left"><div class="ib-tb">공동현관 출입 – 제한없음</div></td>
+										<th class="text-left" scope="row"><div class="in-tb">배송 메시지</div></th>
+										<td class="text-left"><div class="in-tb">공동현관 출입 – 제한없음 / 월요일 출고</div></td>
 									</tr>
 								</tbody>
 							</table>
 						</div><!--// board-form -->
 
 						<div class="list-title-area">
-							<h3 class="title-list">결제 정보</h3>
+							<h3 class="title-list">결제 금액</h3>
 						</div><!--// list-title-area -->
 
 						<div class="my-payment-box">
-							<div class="grid-area-span3 each-pay-info">
-								<div class="colum">
-									<dl class="pay-info">
-										<dt>주문금액</dt>
-										<dd>
-											<span class="tit">총 상품금액</span>
-											<span class="price"><em class="num">34,800</em>원</span>
-										</dd>
-										<dd>
-											<span class="tit">배송비</span>
-											<span class="price"><em class="num">3,800</em>원</span>
-										</dd>
-									</dl>
-								</div><!--// colum -->
-								<div class="colum">
-									<dl class="pay-info">
-										<dt>할인금액</dt>
-										<dd>
-											<span class="tit">포인트 사용</span>
-											<span class="price"><em class="num">-300</em>원</span>
-										</dd>
-										<dd>
-											<span class="tit">쿠폰 사용</span>
-											<span class="price"><em class="num">0</em>원</span>
-										</dd>
-									</dl>
-								</div><!--// colum -->
-								<div class="colum">
-									<dl class="pay-info">
-										<dt>
-											적립예정 포인트
-											<button type="button" class="btn-icon-mark"><i class="ico-info2"></i><span class="blind">안내</span></button>
-										</dt>
-										<dd>
-											<span class="tit">구매 적립 포인트</span>
-											<span class="price"><em class="num">-34,800P</em></span>
-										</dd>
-										<dd>
-											<span class="tit">후기 작성 포인트</span>
-											<span class="price">최대 <em class="num">400P</em></span>
-										</dd>
-									</dl>
-								</div><!--// colum -->
-							</div><!--// each-pay-info -->
-							<div class="total-pay-info">
-								<div class="inner">
-									<div class="column price"><strong class="num">34,800</strong>원</div>
-									<div class="column sign"><i class="ico-bl-plus2"><span class="blind">더하기</span></i></div>
-									<div class="column price"><strong class="num">3,000</strong>원</div>
-									<div class="column sign"><i class="ico-bl-minus2"><span class="blind">빼기</span></i></div>
-									<div class="column price"><strong class="num">300</strong>원</div>
-									<div class="column sign"><i class="ico-bl-equal2"><span class="blind">합계</span></i></div>
-									<div class="column total"><span class="txt">총 결제금액</span><strong class="num">43,500</strong>원</div>
-								</div>
-							</div><!--// total-pay-info -->
+							<dl class="colum">
+								<dt><span class="tit">주문금액</span> <span class="price"><strong class="num">34,800</strong>원</span></dt>
+								<dd>
+									<span class="tit">총 상품금액</span>
+									<span class="price"><em class="num">34,800</em>원</span>
+								</dd>
+								<dd>
+									<span class="tit">배송비</span>
+									<span class="price"><em class="num">3,800</em>원</span>
+								</dd>
+							</dl>
+							<dl class="colum">
+								<dt><span class="tit">총 할인금액</span> <span class="price"><strong class="num">-4,800</strong>원</span></dt>
+								<dd>
+									<span class="tit">포인트 사용</span>
+									<span class="price"><em class="num">-300</em>원</span>
+								</dd>
+								<dd>
+									<span class="tit">쿠폰 사용</span>
+									<span class="price"><em class="num">0</em>원</span>
+								</dd>
+								<dd>
+									<span class="tit">오렌지멤버스 할인</span>
+									<span class="price"><em class="num">0</em>원</span>
+								</dd>
+							</dl>
+							<dl class="colum">
+								<dt><span class="tit">총 결제금액</span> <span class="price"><strong class="num">-4,800</strong>원</span></dt>
+								<dd>
+									<span class="tit">구매적립예정 포인트</span>
+									<span class="price"><em class="num">-300</em>원</span>
+								</dd>
+							</dl>
 						</div><!--// my-payment-box -->
+
+						<div class="list-title-area">
+							<h3 class="title-list">결제 정보</h3>
+							<a href="#" class="btn-basic-sm2 btn-default"><span>거래확인서</span></a>
+						</div><!--// list-title-area -->
+
+						<!-- 랭킹페이/랭킹카드, 네이버페이, 토스, 스마일페이 결제일 경우 -->
 						<div class="board-form">
 							<table>
 								<caption>결제 정보</caption>
@@ -278,34 +280,160 @@
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">결제방법</div> </th>
-										<td class="text-left"><div class="ib-tb">신용카드</div> </td>
+										<th class="text-left" scope="row"><div class="in-tb">결제방법</div> </th>
+										<td class="text-left"><div class="in-tb">랭킹페이/랭킹카드</div> </td>
 									</tr>
 									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">결제금액</div> </th>
-										<td class="text-left"><div class="ib-tb">27,500원</div></td>
+										<th class="text-left" scope="row"><div class="in-tb">결제금액</div> </th>
+										<td class="text-left"><div class="in-tb">27,500원</div></td>
 									</tr>
 									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">결제 완료일시</div></th>
-										<td class="text-left"><div class="ib-tb">2020년 4월 13일 16시 48분</div></td>
+										<th class="text-left" scope="row"><div class="in-tb">결제 완료일시</div></th>
+										<td class="text-left"><div class="in-tb">2020년 4월 13일 16시 48분</div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!--// board-form || 랭킹페이/랭킹카드, 네이버페이, 토스, 스마일페이 결제일 경우 -->
+
+						<!-- 신용카드 결제일 경우 -->
+						<div class="board-form">
+							<table>
+								<caption>결제 정보</caption>
+								<colgroup>
+									<col style="width:180px"><col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="text-left" scope="row"><div class="in-tb">결제방법</div> </th>
+										<td class="text-left"><div class="in-tb">신용카드</div> </td>
 									</tr>
 									<tr>
-										<th class="text-left" scope="row"><div class="ib-tb">결제정보</div></th>
+										<th class="text-left" scope="row"><div class="in-tb">결제금액</div> </th>
+										<td class="text-left"><div class="in-tb">27,500원</div></td>
+									</tr>
+									<tr>
+										<th class="text-left" scope="row"><div class="in-tb">결제 완료일시</div></th>
+										<td class="text-left"><div class="in-tb">2020년 4월 13일 16시 48분</div></td>
+									</tr>
+									<tr>
+										<th class="text-left" scope="row"><div class="in-tb">결제정보</div></th>
 										<td class="text-left">
 											<div class="input-group type-sm inline-type">
-												<span class="input-group-txt label">현대카드</span>
+												<span class="input-group-txt label">현대카드 1002-****-****-1120</span>
 												<div class="input-group-btn">
-													<a href="#" class="btn-option btn-default"><span>결제 영수증</span></a>
-												</div>
-												<div class="input-group-btn">
-													<a href="#" class="btn-option btn-default"><span>거래확인서</span></a>
+													<a href="#" class="btn-form btn-default"><span>결제 영수증</span></a>
 												</div>
 											</div>
 										</td>
 									</tr>
 								</tbody>
 							</table>
-						</div><!--// board-form -->
+						</div><!--// board-form || 신용카드 결제일 경우 -->
+
+						<!-- 무통장입금 결제일 경우 -->
+						<div class="board-form">
+							<table>
+								<caption>결제 정보</caption>
+								<colgroup>
+									<col style="width:180px"><col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="text-left" scope="row"><div class="in-tb">결제방법</div> </th>
+										<td class="text-left"><div class="in-tb">무통장입금</div> </td>
+									</tr>
+									<tr>
+										<th class="text-left" scope="row"><div class="in-tb">입금자명</div> </th>
+										<td class="text-left"><div class="in-tb">경인혜</div> </td>
+									</tr>
+									<tr>
+										<th class="text-left" scope="row"><div class="in-tb">결제금액</div> </th>
+										<td class="text-left"><div class="in-tb">27,500원</div></td>
+									</tr>
+									<tr>
+										<th class="text-left" scope="row"><div class="in-tb">입금확인일시</div></th>
+										<td class="text-left"><div class="in-tb">2020년 4월 13일 16시 48분 / 미입금</div></td>
+									</tr>
+									<tr>
+										<th class="text-left" scope="row"><div class="in-tb">계좌번호</div></th>
+										<td class="text-left">
+											<div class="in-tb">
+												국민은행 70819012565464
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!--// board-form || 무통장입금 결제일 경우 -->
+
+						<!-- 휴대폰결제 결제일 경우 -->
+						<div class="board-form">
+							<table>
+								<caption>결제 정보</caption>
+								<colgroup>
+									<col style="width:180px"><col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="text-left" scope="row"><div class="in-tb">결제방법</div> </th>
+										<td class="text-left"><div class="in-tb">휴대폰결제</div> </td>
+									</tr>
+									<tr>
+										<th class="text-left" scope="row"><div class="in-tb">결제금액</div> </th>
+										<td class="text-left"><div class="in-tb">27,500원</div></td>
+									</tr>
+									<tr>
+										<th class="text-left" scope="row"><div class="in-tb">결제 완료일시</div></th>
+										<td class="text-left"><div class="in-tb">2020년 4월 13일 16시 48분</div></td>
+									</tr>
+									<tr>
+										<th class="text-left" scope="row"><div class="in-tb">결제정보</div></th>
+										<td class="text-left">
+											<div class="input-group type-sm inline-type">
+												<div class="input-group-btn">
+													<a href="#" class="btn-form btn-default"><span>결제 영수증</span></a>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!--// board-form || 휴대폰결제 결제일 경우 -->
+
+						<!-- 카카오페이 결제일 경우 -->
+						<div class="board-form">
+							<table>
+								<caption>결제 정보</caption>
+								<colgroup>
+									<col style="width:180px"><col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="text-left" scope="row"><div class="in-tb">결제방법</div> </th>
+										<td class="text-left"><div class="in-tb">카카오페이</div> </td>
+									</tr>
+									<tr>
+										<th class="text-left" scope="row"><div class="in-tb">결제금액</div> </th>
+										<td class="text-left"><div class="in-tb">27,500원</div></td>
+									</tr>
+									<tr>
+										<th class="text-left" scope="row"><div class="in-tb">결제 완료일시</div></th>
+										<td class="text-left"><div class="in-tb">2020년 4월 13일 16시 48분</div></td>
+									</tr>
+									<tr>
+										<th class="text-left" scope="row"><div class="in-tb">결제정보</div></th>
+										<td class="text-left">
+											<div class="input-group type-sm inline-type">
+												<span class="input-group-txt label">카카오페이</span>
+												<div class="input-group-btn">
+													<a href="#" class="btn-form btn-default"><span>결제 영수증</span></a>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!--// board-form || 카카오페이 결제일 경우 -->
 
 						<div class="btn-bottom-area">
 							<div class="left">

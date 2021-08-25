@@ -77,60 +77,60 @@
                 <h5>상품쿠폰</h5>
                 <div class="side">
                     <button type="button" class="btn-basic-sm2 btn-navy"><span>전체 받기</span></button>
-                    <!-- 전체 받기 완료 후 btn-navy ->  btn-dim 로 클래스 변경 -->
+                    <!-- 전체 받기 완료 후 disabled 추가 -->
                 </div>
             </div>
             <div class="layer-body">
                 <ul class="coupon-list">
-                    <li class="coupon-item custom-checkbox">
-                        <input type="checkbox" class="checkbox-circle" id="c01" name="c">
+                    <li class="coupon-item custom-radio">
+                        <input type="radio" class="radio-circle" id="c01" name="coupon-item">
                         <label for="c01">
                             <em class="coupon-discount">10% <span>할인</span></em>
                             <span class="coupon-name text-elps2">[뉴페이스]  맛있닭 소프트 닭 안심살카레</span>
                             <span class="coupon-terms">20,000원 이상 구매 시 사용가능</span>
                             <span class="coupon-expiration">2021.09.30 까지</span>
                         </label>
-                        <a href="#" class="coupon-down"><span>쿠폰받기</span></a>
+                        <button type="button" class="coupon-down"><span>쿠폰받기</span></button>
                     </li>
-                    <li class="coupon-item custom-checkbox complete">
-                        <input type="checkbox" class="checkbox-circle" id="c02" name="c">
+                    <li class="coupon-item custom-radio">
+                        <input type="radio" class="radio-circle" id="c02" name="coupon-item">
                         <label for="c02">
                             <em class="coupon-discount">10% <span>할인</span></em>
                             <span class="coupon-name text-elps2">[뉴페이스]  맛있닭 소프트 닭 안심살카레</span>
                             <span class="coupon-terms">20,000원 이상 구매 시 사용가능</span>
                             <span class="coupon-expiration">2021.09.30 까지</span>
                         </label>
-                        <a href="#" class="coupon-down"><span>받기완료</span></a>
+                        <button type="button" class="coupon-down"><span>쿠폰받기</span></button>
                     </li>
-                    <li class="coupon-item custom-checkbox complete">
-                        <input type="checkbox" class="checkbox-circle" id="c03" name="c">
+                    <li class="coupon-item custom-radio complete">
+                        <input type="radio" class="radio-circle" id="c03" name="coupon-item">
                         <label for="c03">
                             <em class="coupon-discount">10% <span>할인</span></em>
                             <span class="coupon-name text-elps2">[뉴페이스]  맛있닭 소프트 닭</span>
                             <span class="coupon-terms">20,000원 이상 구매 시 사용가능</span>
                             <span class="coupon-expiration">2021.09.30 까지</span>
                         </label>
-                        <a href="#" class="coupon-down"><span>받기완료</span></a>
+                        <button type="button" class="coupon-down"><span>받기완료</span></button>
                     </li>
-                    <li class="coupon-item custom-checkbox complete">
-                        <input type="checkbox" class="checkbox-circle" id="c04" name="c">
+                    <li class="coupon-item custom-radio complete">
+                        <input type="radio" class="radio-circle" id="c04" name="coupon-item">
                         <label for="c04">
                             <em class="coupon-discount">10% <span>할인</span></em>
                             <span class="coupon-name text-elps2">[뉴페이스]  맛있닭 소프트 닭</span>
                             <span class="coupon-terms">20,000원 이상 구매 시 사용가능</span>
                             <span class="coupon-expiration">2021.09.30 까지</span>
                         </label>
-                        <a href="#" class="coupon-down"><span>받기완료</span></a>
+                        <button type="button" class="coupon-down"><span>받기완료</span></button>
                     </li>
-                    <li class="coupon-item custom-checkbox complete">
-                        <input type="checkbox" class="checkbox-circle" id="c05" name="c">
+                    <li class="coupon-item custom-radio complete">
+                        <input type="radio" class="radio-circle" id="c05" name="coupon-item">
                         <label for="c05">
                             <em class="coupon-discount">10% <span>할인</span></em>
                             <span class="coupon-name text-elps2">[뉴페이스]  맛있닭 소프트 닭</span>
                             <span class="coupon-terms">20,000원 이상 구매 시 사용가능</span>
                             <span class="coupon-expiration">2021.09.30 까지</span>
                         </label>
-                        <a href="#" class="coupon-down"><span>받기완료</span></a>
+                        <button type="button" class="coupon-down"><span>받기완료</span></button>
                     </li>
                 </ul>
 			</div>
@@ -144,5 +144,30 @@
 </div>
 <!-- ========== 팝업 영역 ========== -->
 
+<!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->
+<script>
+    $(function () {
+        $('[name="coupon-item"]').on('click', function(){
+            if(!$(this).closest('.custom-radio').hasClass('complete') && !$(this).parents('.layer-inner').hasClass('on')){
+                openCouponToast(); // 쿠폰이 다운로드 되어있지 않은 경우 다운안내 토스트 팝업 노출
+            }
+        });
+    }); 
+
+    function openCouponToast() {
+        containerWrap = $('.layer-inner');
+		containerWrap.append('<div class="toast-pop type-coupon"><div class="message">적용할 쿠폰을 다운받아주세요.</div></div>')
+        
+		setTimeout(function () {
+			containerWrap.addClass('on')
+		},10)
+
+        setTimeout(function () {
+            containerWrap.removeClass('on');
+            $('.toast-pop').remove();
+        },1000)
+    }
+</script>
+<!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->
 </body>
 </html>

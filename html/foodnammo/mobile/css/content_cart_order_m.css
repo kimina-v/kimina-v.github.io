@@ -3,7 +3,7 @@
 ========================================================*/
 /**** 장바구니 ****/
 /* 장바구니 목록 */
-.page-title-area .right-option{position:absolute; right:0; bottom:0;}
+.page-title-area .right-option{position:absolute;right:0; bottom:0;}
 .page-title-area .right-option .btn-option{margin-left:3px;}
 
 .list-option-area{position:relative; min-height:30px; padding:13px 15px}
@@ -168,7 +168,7 @@
 .terms-scroll-box.active .box-head{border-bottom:1px solid #e6e6e6;}
 .terms-area .terms-scroll-box .box-head .tit{font-size:13px; color:#666; font-weight:normal;}
 .terms-area .terms-scroll-box ~ .terms-scroll-box{margin-top:5px}
-.terms-area .terms-scroll-box .inner{max-height:95px; word-break:break-all; overflow-y:au to; padding:15px; color:#666; font-size:11px; line-height: 16px}
+.terms-area .terms-scroll-box .inner{max-height:95px; word-break:break-all; overflow-y:auto; padding:15px; color:#666; font-size:11px; line-height: 16px}
 
 /* 예외(결제완료) */
 .order-payment-area.order-complete{overflow:hidden; padding:0}
@@ -602,3 +602,130 @@ height: auto; background-color: #ff6001; text-align: center; line-height: 1; bor
 .radio.type-box + label > .date{font-size:12px; color:#888; line-height:16px}
 .couponselect-pop-area .coupon-box-list  ~ .inner-flex{margin-top:40px}
 
+/* 선물하기 */
+.gift-order .order-info .list-head{border-bottom:0}
+.gift-order .order-info .lineless-table{padding-top:0}
+.gift-card-box.card-skin-default{background:url(../images/img/bg_gift_msg.png) no-repeat 0 0/ 100% auto;height:306px}
+
+.gift-card-list{margin:20px 0 30px;padding-left:15px}
+.cate-tab-swiper.gift-card-list .swiper-wrapper li{min-width:56px;width:56px;margin-right:4px;border-radius:4px;height:28px;line-height:28px}
+.cate-tab-swiper.gift-card-list .txt{margin-top:0}
+.gift-card-list li a{color:#fff;display:block}
+.gift-card-list .cate_0{background:#f0f0f0}
+.gift-card-list .cate_0 a{color:#333}
+.gift-card-list .cate_1{background:url(../images/img/gifttag01.png) repeat-x 50% 0}
+.gift-card-list .cate_2{background:url(../images/img/gifttag02.png) repeat-x 50% 0}
+.gift-card-list .cate_3{background:url(../images/img/gifttag03.png) repeat-x 50% 0}
+.gift-card-list .cate_4{background:url(../images/img/gifttag04.png) repeat-x 50% 0}
+.gift-card-list .cate_5{background:url(../images/img/gifttag05.png) repeat-x 50% 0}
+.gift-card-list li.swiper-slide-on{border:2px solid #ff6001;box-sizing:border-box}
+.cate-tab-swiper.gift-card-list li.swiper-slide-on .txt{margin-top:-2px}
+
+.gift-order-complete .prd-info-area .column.img{width:86px;height:86px}
+.gift-order-complete .prd-info-area .column.img a{display:block}
+.gift-order-complete .prd-info-area .column.tit .desc{margin-bottom:6px}
+
+.gift-order-complete .infomation-box{border-bottom:0;padding:15px 0 0}
+.gift-order-complete .infomation-box .title{font-size:13px;color:#666}
+.gift-order-complete .infomation-box  .dash-list{margin-top:3px}
+.gift-order-complete .infomation-box  .dash-list > li{padding-left:10px;line-height:20px}
+.gift-order-complete .infomation-box  .dash-list > li ~ li{margin-top:0}
+.gift-order-complete .infomation-box  .dash-list > li:before{width:4px;background:#666}
+
+.gift-order-complete .sub-list .tit{color:#888}
+.gift-order-complete .cart-total-box .inner > li .sub-list .tit,
+.gift-order-complete .cart-total-box .inner > li .sub-list .price{padding:3px 0}
+.gift-order-complete .order-info.type2 .cart-total-box{border-top:1px solid #333;margin-bottom:0}
+.gift-order-complete .cart-list-area.order-complete ~ .order-info.type2{margin-top:90px}
+.gift-order-complete .cart-list-area.order-complete ~ .order-info.type2 ~ .order-info.type2{margin-top:65px}
+.gift-order-complete .board-form table tbody td{color:#333}
+.gift-order-complete .board-form.type3 table th{font-size:13px;padding-right:10px}
+.gift-order-complete .board-form.type3 table td{padding:0 0 0 15px}
+.gift-order-complete .board-form table td .tell-num{display:inline-block;line-height:30px}
+.gift-order-complete .board-form table td .btn-form-group{float:right}
+.gift-order-complete .board-form table td .btn-form-group button{width:50px;padding:0;border-radius:0}
+.gift-order-complete .board-form table td .btn-form-group button span{font-size:12px}
+.gift-order-complete .board-form .inp-tell > input{width:calc(100% - 56px);height:30px;box-sizing:border-box;border:1px solid #ccc;border-radius:1px}
+.gift-order-complete .board-form .inp-tell > button{width:50px;border-radius:0}
+.gift-order-complete .bl-list-type1 > li{color:#666}
+
+.btn-gray2{background:#888;color:#fff}
+
+.gift-alarm{padding:24px 0 23px;text-align:center;font-size:15px}
+
+.gift-complete.frame-result-area{padding:0;background:url(../images/img/bg_gift2.png) repeat-x 0 0/65% auto;padding-top:137px;position:relative}
+.gift-complete.frame-result-area:after{content:"";width:116px;height:126px;background:url(../images/img/img_chicken4.png) no-repeat 0 0/116px auto;position:absolute;left:calc(50% - 58px);top:18px}
+.gift-complete .result-page-top{padding-bottom:0;background:#faefe2;padding:24px 0}
+.gift-complete .result-page-top:after{display:none}
+.gift-complete .result-page-top .title{font-size:20px;margin-top:0}
+.gift-order-complete .cart-list-area.order-complete{padding-top:20px;border-top:8px solid #f2f2f2}
+
+.gift-accept .lineless-table th{vertical-align:top;line-height:42px;color:#666;font-weight:600}
+.gift-accept .btn-group-flex.bnt-gift-accept{margin-top:0}
+.gift-accept .btn-group-flex.bnt-gift-accept > button:first-child{flex:0 30%}
+.gift-accept .order-info .title-list{font-size:15px}
+.gift-accept .order-info .info-text{font-size:12px;color:#999;margin-top:2px}
+.gift-accept .order-info .info-text i{vertical-align:-2px;margin-right:4px}
+.gift-accept .order-info .list-head{padding:20px 0 15px;margin:0 15px;border-color:#333}
+.gift-accept .agree-area{padding:20px 0 20px;font-weight:normal;position:relative}
+.gift-accept .agree-area .side-link{position:absolute;right:0;border-bottom:1px solid #333}
+
+.customer-info{background:#fafafa;text-align:center;padding:45px 0;margin-top:32px;color:#666;font-size:12px}
+.customer-info .tel{display:inline-block;margin-top:5px;padding-left:12px;background:url(../images/icon/icon_tel.png) no-repeat 0 1px/9px auto}
+
+.delivery-comment .form-head label{color:#666;font-size:14px;font-weight:600}
+.delivery-time{font-size:0;padding:20px 0 30px;border-bottom:1px solid #ddd}
+.delivery-time .tit{font-size:14px;color:#666;display:inline-block;width:50%;line-height:20px;vertical-align:top}
+.delivery-time .side{display:inline-block;color:#333;font-size:13px;text-align:right;width:50%;vertical-align:top}
+.delivery-time .side .custom-checkbox ~ .custom-checkbox{margin-left:20px}
+.delivery-time .custom-checkbox .checkbox-circle + label{min-height:20px;line-height:20px;padding-left:25px}
+.delivery-time .custom-checkbox .checkbox-circle + label:before{width:20px;height:20px}
+.delivery-time .custom-checkbox .checkbox-circle:checked + label:before{background-position:-1px 95%;background-size:56px auto}
+
+.frame-accept-area{height:410px;background:#ffdecc url(../images/img/bg_gift.png) repeat-x 0 0/360px auto;box-sizing:border-box;padding-top:25px}
+.accept-page-top{width:250px;height:360px;margin:0 auto;background:#fff;border-radius:6px;position:relative}
+.accept-page-top:after{content:"";width:78px;height:105px;background:url(../images/img/img_chicken.png) no-repeat 0 0/100% auto;position:absolute;left:-23px;bottom:0}
+.accept-page-top .prod-name{padding:11px 20px 9px;text-align:center;display:block;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;word-break:break-all;color:#666}
+.accept-page-top figure{display:block;width:250px;height:250px}
+.accept-page-top .gift-msg{position:relative;width:213px;margin:22px auto;text-align:center;height:28px;line-height:28px;color:#bb4343}
+.accept-page-top .gift-msg::before{width:100%;border-top:1px dashed #eee;content:"";position:absolute;left:0;top:0}
+.accept-page-top .gift-msg:after{width:100%;border-top:1px dashed #eee;content:"";position:absolute;left:0;bottom:0}
+
+.gift-accept-complete .frame-accept-area{height:320px;padding:198px 0 77px}
+.gift-accept-complete .accept-page-text{text-align:center;font-size:20px;position:relative}
+.gift-accept-complete .accept-page-text:after{content:"";width:108px;height:100px;background:url(../images/img/img_gift.png) no-repeat 0 0/100% auto;position:absolute;top:-111px;left:calc(50% - 54px)}
+.gift-accept-complete .accept-page-text span{display:block;font-size:13px;color:#666;margin-top:2px}
+.gift-accept-complete .list-head{padding:20px 0 10px;margin:0 15px}
+.gift-accept-complete .list-head .delivery-change{height:26px;line-height:26px;color:#fff;background:#ff7e32;padding:0 7px;border-radius:2px}
+.gift-accept-complete .list-head .delivery-change span{display:block;padding-right:11px;position:relative}
+.gift-accept-complete .list-head .delivery-change span:after{content:"";width:4px;height:4px;border-top:1.5px solid #fff;border-right:1.5px solid #fff;transform:rotate(45deg);position:absolute;right:2px;top:50%;margin-top:-4px}
+.gift-accept-complete .infomation-box{border-bottom:0;padding-bottom:0}
+.gift-accept-complete .infomation-box .title{font-size:13px;color:#666}
+.gift-accept-complete .infomation-box .dot-list > li{color:#666}
+.gift-accept-complete .infomation-box .dot-list > li:before{background:#666}
+.gift-accept-complete .infomation-box .dot-list > li ~ li{margin-top:0}
+
+.gift-btn-banner{margin:20px 15px;background:#f2f2f2;border-radius:5px 5px 2px 2px}
+.gift-btn-banner .visual{height:123px;padding:30px 0 0 56px;box-sizing:border-box;font-size:16px;position:relative}
+.gift-btn-banner .visual span{display:block;margin-top:10px}
+.gift-btn-banner .visual:after{content:"";width:110px;height:146px;background:url(../images/img/img_chicken3.png) no-repeat 0 0/100% auto;position:absolute;top:16px;left:calc(50% + 10px)}
+.gift-btn-banner button{width:100%;z-index:10;position:relative}
+
+.delivery-info{padding:20px 0 0;font-size:14px}
+.delivery-info .name{display:inline-block}
+.delivery-info .tel{display:inline-block}
+.delivery-info .tel:before{content:"/";display:inline-block;margin:0 5px 0 0}
+.delivery-info .addr{margin-top:8px;line-height:20px}
+
+.gift-order-none{position:absolute;top:0;right:0;bottom:0;left:0}
+.gift-order-none .inner{position:absolute;top:110px;left:50%;transform:translateX(-50%);padding-top:171px}
+.gift-order-none .inner:after{content:"";width:134px;height:148px;background:url(../images/img/gift_list_none.png) no-repeat 0 0/100% auto;position:absolute;top:0;left:calc(50% - 74px)}
+.gift-order-none b{display:block;font-size:17px;line-height:21px}
+.gift-order-none .customer-info{background:none;padding:0;margin-top:5px;white-space:nowrap}
+
+.gift-click .gift-click-visual{padding:226px 0 39px;border-bottom:8px solid #f2f2f2;text-align:center;position:relative}
+.gift-click .gift-click-visual:after{content:"";width:170px;height:170px;background:url(../images/img/img_chicken2.png) no-repeat 0 0/100% auto;position:absolute;top:40px;left:calc(50% - 85px)}
+.gift-click .gift-click-visual b{display:block;font-size:24px;}
+.gift-click .gift-click-visual p{font-size:13px;color:#666;line-height:20px;margin-top:12px}
+.gift-click .rang-event-info{padding:40px 15px 0;text-align:center;font-size:15px;line-height:25px}
+.gift-click .dot-text{margin:12px 15px 0}

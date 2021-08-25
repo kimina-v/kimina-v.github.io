@@ -98,15 +98,25 @@
 						<li><span>멤버스 할인가</span><em class="price number"><strong>12,510</strong>원</em></li>
 						<li><span>멤버스 추가적립</span><em class="number"><strong>3%</strong></em></li>
 					</ul>
-				</div><!--// orange-mem-box -->
+				</div>
+				
+				<!-- 다운 가능 쿠폰 -->
 				<a href="#" class="goods-coupon-box">
 					<span class="txt">총 5장의 쿠폰이 있습니다.</span>
 					<span class="icon-down"><i class="ico-btn-download2"></i></span>
-				</a><!--// goods-coupon-box -->
+				</a>
+				<!-- //다운 가능 쿠폰 -->
 
-				<div class="divider"></div>
+				<!-- 다운 완료 쿠폰 -->
+				<a href="#" class="goods-coupon-box complete"><!-- [Dev] 다운 완료 시 complete 추가 -->
+					<span class="txt">총 5장의 쿠폰이 있습니다.</span>
+					<span class="icon-down"><i class="ico-btn-download2"></i></span>
+				</a>
+				<!-- //다운 완료 쿠폰 -->
 
-					<div class="table-group">
+				<hr class="divider">
+
+				<div class="table-group">
 					<div class="table-item">
 						<em>판매량</em>
 						<div class="td-item"><strong>276,519</strong> 팩 구매</div>
@@ -189,9 +199,41 @@
 						<div class="td-item">추가옵션 스파클링 구매 시 개별 배송됩니다.</div>
 					</div>
 				</div>
+
+				<!-- 도서산간 + 배송비 아끼기 -->				
+				<div class="table-group">
+					<div class="table-item">
+						<em>판매량</em>
+						<div class="td-item"><strong>276,519</strong> 팩 구매</div>
+					</div>
+					<div class="table-item">
+						<em>배송방법</em>
+						<div class="td-item">2,000원 <span class="dash">/</span> 150,000원 이상 무료배송<br><a href="#" class="arr-link2">배송비 아끼기</a></div>
+					</div>
+					<div class="table-item">
+						<em>적립혜택</em>
+						<div class="td-item">1% 적립</div>
+					</div>
+					<div class="table-item">
+						<em>추가혜택</em>
+						<div class="td-item">수량 별 증정품이 상이하오니, 자세한 내용은 상세페이지 상단을 참고해 주세요</div>
+					</div>
+				</div>
+				<div class="table-group">
+					<div class="table-item">
+						<em>상품구성</em>
+						<div class="td-item">
+							<ul class="txt-list">
+								<li>10팩 당 1팩 추가 증정(맛 랜덤)</li>
+								<li>50팩 이상 구매 시, 소스 추가 증정(맛 랜덤)</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //도서산간 + 배송비 아끼기 -->
 			</div><!--// goods-info-area -->
 
-			<div class="divider"></div>
+			<hr class="divider">
 
 			<div class="best-review-area">
 				<h3 class="goods-div-tit">베스트 구매후기</h3>
@@ -327,7 +369,7 @@
 				<a href="#" class="btn-basic-sm2 btn-default"><span class="arr-link">전체후기</span></a>
 			</div><!--// best-review-area -->
 
-			<div class="divider"></div>
+			<hr class="divider">
 			
 			<div class="refrig-bnr"><a href="#popup-sample01" class="ui-open-pop"><img src="../../images/img/img_refrig_bnr02.png" alt="지금 보고 있는 이 제품은 내 냉장고에 얼마나 들어갈까?" ></a></div>
 
@@ -367,8 +409,12 @@
 									</div>
 								</div><!--// goods-article -->
 
-								<div class="divider"></div>
+							</div><!--// goods-detail-information || 상품정보 -->
 
+							<hr class="divider">
+
+							<div id="detail-section02" class="goods-detail-review">
+								
 								<div class="goods-article-sub">
 									<div class="goods-div-tit">
 										<h4 class="tit">구매 만족도</h4>
@@ -449,11 +495,7 @@
 										<button type="button" class="ui-toggle-btn toggle-on"><span>접기</span> <i class="ico-arr-toggle"></i></button>
 									</div><!--// stat-box -->
 								</div>
-							</div><!--// goods-detail-information || 상품정보 -->
-
-							<div class="divider"></div>
-
-							<div id="detail-section02" class="goods-detail-review">
+								
 								<div class="goods-detail-head">
 									<h3 class="tit">구매후기 <span>(총 899)</span></h3>
 									<div class="right">
@@ -587,7 +629,7 @@
 								</div>
 							</div><!--// goods-detail-review || 구매후기 -->
 
-							<div class="divider"></div>
+							<hr class="divider">
 
 							<!-- 상품문의 -->
 							<div id="detail-section03" class="goods-detail-qna">
@@ -680,7 +722,7 @@
 								</div>
 							</div><!--// goods-detail-qna || 상품문의 -->
 
-							<div class="divider"></div>
+							<hr class="divider">
 
 							<!-- 배송안내 -->
 							<div id="detail-section04" class="goods-detail-dlv">
@@ -707,18 +749,18 @@
 									<li>
 										<em class="tit-cell">배송 마감</em>
 										<div class="txt-cell">
-											오후 5시 (월~금요일 / 제주, 도서산간 : 목요일) <br />
-											마감시간 이전 주문·결제 시 당일 발송 <br />
-											마감시간 이후 주문·결제 시 다음날 발송 <br />
+											오후 5시 (월~금요일 / 제주, 도서산간 : 목요일) <br>
+											마감시간 이전 주문·결제 시 당일 발송 <br>
+											마감시간 이후 주문·결제 시 다음날 발송 <br>
 											(주말·공휴일 결제 시 다음 영업일에 발송)
 										</div>
 									</li>
 									<li>
 										<em class="tit-cell">주말 출고</em>
 										<div class="txt-cell">
-											- 목요일 배송 마감 시간 이후 주문은 금요일 출고되어 토요일에 배송됩니다.<br />
-											- 토요일 수령이 어려우신 고객님께서는 배송 메시지에 "월요일출고" 라고 적어주시면 월요일에 출고되어 화요일에 받아보실 수 있습니다. (공휴일인 경우 다음 영업일 출고)<br />
-											※ 야채 및 개별 출고일정을 따르는 제품은 제외<br />
+											- 목요일 배송 마감 시간 이후 주문은 금요일 출고되어 토요일에 배송됩니다.<br>
+											- 토요일 수령이 어려우신 고객님께서는 배송 메시지에 "월요일출고" 라고 적어주시면 월요일에 출고되어 화요일에 받아보실 수 있습니다. (공휴일인 경우 다음 영업일 출고)<br>
+											※ 야채 및 개별 출고일정을 따르는 제품은 제외<br>
 										</div>
 									</li>
 								</ul>
@@ -733,45 +775,45 @@
 									<li>
 										<em class="tit-cell">주의사항</em>
 										<div class="txt-cell">
-											- 본 상품은 제품 특성상 단순 변심에 의한 교환 · 반품은 불가합니다. <br />
-											- 군부대, 사서함 주소의 경우 배송이 안될 수 있으니 고객센터 확인 후 주문 바랍니다.<br />
+											- 본 상품은 제품 특성상 단순 변심에 의한 교환 · 반품은 불가합니다. <br>
+											- 군부대, 사서함 주소의 경우 배송이 안될 수 있으니 고객센터 확인 후 주문 바랍니다.<br>
 											(구매 전 제품 상세 및 배송 · 반품에 대한 내용을 확인해 주세요.)
 										</div>
 									</li>
 									<li>
 										<em class="tit-cell">교환/반품 신청</em>
 										<div class="txt-cell">
-											제품의 교환 및 반품 시 고객센터 담당자에게 교환 또는 반품 신청을 해주시기 바랍니다.<br />
-											(전화 : 02-6405-8088 / 홈페이지 고객센터)<br /><br />
+											제품의 교환 및 반품 시 고객센터 담당자에게 교환 또는 반품 신청을 해주시기 바랍니다.<br>
+											(전화 : 02-6405-8088 / 홈페이지 고객센터)<br><br>
 											
-											- 교환 및 반품은 고객센터 담당자와 협의를 통해 이루어지며, 임의로 수취거부 및 반송하는 경우 반품 처리되지 않습니다.<br />
-											- 냉동/냉장 식품의 경우 제품의 특성상 ‘단순변심’에 의한 반품 및 환불은 불가합니다.<br />
-											주문전 충분히 제품 상세페이지 및 제품 설명을 참고하시고 주문바랍니다.<br />
+											- 교환 및 반품은 고객센터 담당자와 협의를 통해 이루어지며, 임의로 수취거부 및 반송하는 경우 반품 처리되지 않습니다.<br>
+											- 냉동/냉장 식품의 경우 제품의 특성상 ‘단순변심’에 의한 반품 및 환불은 불가합니다.<br>
+											주문전 충분히 제품 상세페이지 및 제품 설명을 참고하시고 주문바랍니다.<br>
 											- N페이 결제건은 출고/반품 주소지가 상품별로 상이하여, 자동 수거 지시 기능이 불가합니다.
 										</div>
 									</li>
 									<li>
 										<em class="tit-cell">교환/반품이 가능한 경우</em>
 										<div class="txt-cell">
-											- 주문한 제품과 다르거나 판매자의 제공정보와 상이한 경우<br />
-											- 제품이 불량이거나 손상된 경우<br />
+											- 주문한 제품과 다르거나 판매자의 제공정보와 상이한 경우<br>
+											- 제품이 불량이거나 손상된 경우<br>
 											- 배송사의 귀책 사유에 따른 배송 지연 발생 및 제품이 변질 된 경우
 										</div>
 									</li>
 									<li>
 										<em class="tit-cell">교환/반품이 불가능한 경우</em>
 										<div class="txt-cell">
-											- 판매자와 교환/반품에 대한 협의 없이 임의로 폐기 처분 또는 반품/배송한 경우<br />
-											- 냉동·냉장 보관 식품 및 채소, 유통기한이 2개월 미만인 상품에 대한 단순 변심의 경우<br />
-											- 잘못된 주소나 연락처 기재로 인한 반송 또는 고객의 부재로 인해 배송이 지연되어 제품이 변질된 경우<br />
-											- 수령 후, 보관/취급 부주의로 인해 제품이 변질 또는 손상된 경우<br />
+											- 판매자와 교환/반품에 대한 협의 없이 임의로 폐기 처분 또는 반품/배송한 경우<br>
+											- 냉동·냉장 보관 식품 및 채소, 유통기한이 2개월 미만인 상품에 대한 단순 변심의 경우<br>
+											- 잘못된 주소나 연락처 기재로 인한 반송 또는 고객의 부재로 인해 배송이 지연되어 제품이 변질된 경우<br>
+											- 수령 후, 보관/취급 부주의로 인해 제품이 변질 또는 손상된 경우<br>
 											- PC 및 휴대폰의 화면과 실제 상품의 색상이나 이미지 차이 또는 개인적 취향이나 기호에 따른 교환/반품
 										</div>
 									</li>
 									<li>
 										<em class="tit-cell">교환/반품 절차</em>
 										<div class="txt-cell">
-											- 전화 및 이메일을 통해 반송처 및 교환/반품 방법을 안내해드립니다.<br />
+											- 전화 및 이메일을 통해 반송처 및 교환/반품 방법을 안내해드립니다.<br>
 											- 반품시 결제방식에 따라 카드 승인취소 또는 계좌입금 처리를 해드립니다.
 										</div>
 									</li>
@@ -797,7 +839,7 @@
 								</a>
 							</div><!--// detail-cs-bnr -->
 
-							<div class="divider"></div>
+							<hr class="divider">
 
 							<article class="frame-sm prod-recomm">
 								<div class="article-title-div">
@@ -920,72 +962,172 @@
 						</div>
 					</div>
 					<div class="option-wrap">
-						<div class="option-select">
-							<a href="#">상품옵션선택</a>
-							<ul class="option-list">
-								<li><a href="#">
-									<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
-									<strong>2,500원</strong>
-								</a></li>
-								<li><a href="#">
-									<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
-									<strong>2,500원</strong>
-								</a></li>
-								<li><a href="#">
-									<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
-									<strong>2,500원</strong>
-								</a></li>
-								<li><a href="#">
-									<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
-									<strong>2,500원</strong>
-								</a></li>
-							</ul>
-							<button type="button" class="sel-close"><span>셀렉트박스닫기</span></button>
-						</div>
-						
-						<div class="option-select">
-							<a href="#">상품옵션선택</a>
-							<ul class="option-list">
-								<li><a href="#">
-									<em>2222눈꽃달콤 아이스 꿀고구마 1팩</em>
-									<strong>2,500원</strong>
-								</a></li>
-								<li><a href="#">
-									<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
-									<strong>2,500원</strong>
-								</a></li>
-								<li><a href="#">
-									<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
-									<strong>2,500원</strong>
-								</a></li>
-								<li><a href="#">
-									<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
-									<strong>2,500원</strong>
-								</a></li>
-							</ul>
-							<button type="button" class="sel-close"><span>셀렉트박스닫기</span></button>
-						</div>
-						
-						<div class="selected-option-item">
-							<em>혼합 100g X 100팩(고추30,마늘20,탄두리50)</em>
-							<div class="option-price">
-								<div class="quantity">
-									<button type="button" class="quantity-minus">수량빼기</button>
-									<input type="text" class="quantity-counter" value="1" readonly>
-									<button type="button" class="quantity-plus">수량더하기</button>
+						<!-- scroll area -->
+						<div class="scroll-area">
+							<div class="option-select">
+								<a href="#">상품옵션선택</a>
+								<div class="option-list">
+									<ul>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li class="soldout"><a href="#"><!-- 품절-->
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<div class="restock">
+												<button type="button" class="text-primary">재입고 알림 신청</button>
+											</div>
+										</a></li>
+										<li><a href="#"><!-- 이미지 -->
+											<figure><img src="../../images/_samples/@sample_74x74.jpg" alt=""></figure>
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li class="soldout"><a href="#"><!-- 이미지 품절 -->
+											<figure><img src="../../images/_samples/@sample_74x74.jpg" alt=""></figure>
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<div class="restock">
+												<button type="button" class="text-primary">재입고 알림 신청</button>
+											</div>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+									</ul>
 								</div>
-								<div class="price-info">
-									<span class="origin-price"><del>18,200원</del></span>
-									<span class="sale-price"><strong>12,000</strong>원</span>
+								<button type="button" class="sel-close"><span>셀렉트박스닫기</span></button>
+							</div>
+						
+							<div class="option-select">
+								<a href="#">상품옵션선택</a>
+								<div class="option-list">
+									<ul>
+										<li><a href="#">
+											<em>2222눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+										<li><a href="#">
+											<em>눈꽃달콤 아이스 꿀고구마 1팩</em>
+											<strong>2,500원</strong>
+										</a></li>
+									</ul>
+								</div>
+								<button type="button" class="sel-close"><span>셀렉트박스닫기</span></button>
+							</div>
+							
+							<div class="selected-option-area">
+								<div class="selected-option-item">
+									<em>혼합 100g X 100팩(고추30,마늘20,탄두리50)</em>
+									<div class="option-price">
+										<div class="quantity">
+											<button type="button" class="quantity-minus">수량빼기</button>
+											<input type="text" class="quantity-counter" value="1" readonly>
+											<button type="button" class="quantity-plus">수량더하기</button>
+										</div>
+										<div class="price-info">
+											<span class="origin-price"><del>18,200원</del></span>
+											<span class="sale-price"><strong>12,000</strong>원</span>
+										</div>
+									</div>
+									<a herf="#" class="item-del"><span>삭제</span></a>
+								</div>
+								<div class="selected-option-item">
+									<em>혼합 100g X 100팩(고추30,마늘20,탄두리50)</em>
+									<div class="option-price">
+										<div class="quantity">
+											<button type="button" class="quantity-minus">수량빼기</button>
+											<input type="text" class="quantity-counter" value="1" readonly>
+											<button type="button" class="quantity-plus">수량더하기</button>
+										</div>
+										<div class="price-info">
+											<span class="origin-price"><del>18,200원</del></span>
+											<span class="sale-price"><strong>12,000</strong>원</span>
+										</div>
+									</div>
+									<a herf="#" class="item-del"><span>삭제</span></a>
+								</div>
+								<div class="selected-option-item">
+									<em>혼합 100g X 100팩(고추30,마늘20,탄두리50)</em>
+									<div class="option-price">
+										<div class="quantity">
+											<button type="button" class="quantity-minus">수량빼기</button>
+											<input type="text" class="quantity-counter" value="1" readonly>
+											<button type="button" class="quantity-plus">수량더하기</button>
+										</div>
+										<div class="price-info">
+											<span class="origin-price"><del>18,200원</del></span>
+											<span class="sale-price"><strong>12,000</strong>원</span>
+										</div>
+									</div>
+									<a herf="#" class="item-del"><span>삭제</span></a>
+								</div>
+								<div class="selected-option-item">
+									<em>혼합 100g X 100팩(고추30,마늘20,탄두리50)</em>
+									<div class="option-price">
+										<div class="quantity">
+											<button type="button" class="quantity-minus">수량빼기</button>
+											<input type="text" class="quantity-counter" value="1" readonly>
+											<button type="button" class="quantity-plus">수량더하기</button>
+										</div>
+										<div class="price-info">
+											<span class="origin-price"><del>18,200원</del></span>
+											<span class="sale-price"><strong>12,000</strong>원</span>
+										</div>
+									</div>
+									<a herf="#" class="item-del"><span>삭제</span></a>
 								</div>
 							</div>
-							<a herf="#" class="item-del"><span>삭제</span></a>
+						</div>
+						<!-- //scroll area -->
+						
+						<div class="price-info">
+							<div class="add-saving-point">
+								<a hef="#"><span>1500P 추가적립</span></a>
+							</div>
+							<div class="price-area">
+								<span class="total-price">총 <strong class="text-primary">48,400<span>원</span></strong></span>
+								<span class="saving-point">(500P적립)</span>
+							</div>
 						</div>
 
 						<div class="btn-group">
-							<a href="#" class="btn-cart"><span>장바구니 담기</span></a>
+							<a href="#" class="btn-cart"><span>장바구니</span></a>
 							<a href="#" class="btn-buy"><span>바로구매</span></a>
 						</div>
+						<!-- 재입고 버튼 --
+						<div class="btn-group">
+							<a href="#" class="btn-restock"><span>재입고 알림 신청</span></a>
+						</div>
+						-- //재입고 버튼 -->
 						<button class="btn-toggle"><span>닫기</span></button>
 					</div>
 				</div><!--// option-select-fix -->
@@ -1065,7 +1207,7 @@
 			optHei = opt.outerHeight(),
 			optPos = optHei - 70;
 
-			opt.css('height', optHei)
+			opt.css('min-height', optHei)
 			opt.css('bottom',-optPos+'px')
 
 		$('.btn-toggle').on('click',function(){
@@ -1077,7 +1219,7 @@
 				
 			if($this.hasClass('open')){
 				$this.removeClass('open').children('sppan').text('열기')
-				opt.css('bottom','-180px')
+				opt.css('bottom',-optPos+'px')
 				fixed.css('height','70px');
 				btn.css('bottom','0');
 			}else{
@@ -1090,18 +1232,20 @@
 			$('.option-select > a').on('click',function(){
 				var $this = $(this),
 					optSel = $this.closest('.option-select'),
-					sel = $this.siblings('.option-list');
+					optWrap = optSel.closest('.option-wrap'),
+					optItem = optWrap.find('.selected-option-item'),
+					sel = $this.siblings('.option-list'),
 					selHei = sel.outerHeight();
-
 				if(optSel.hasClass('open')){
 					optSel.removeClass('open');
 					sel.css('bottom','-350px');
-					console.log(optHei)
 				}else{
+				console.log(selHei)
 					optSel.addClass('open');
-					sel.css('bottom','10px');
-					fixed.css('height', selHei + 20 + 'px')
-					opt.css('height', selHei + 20 + 'px')
+					optWrap.css('min-height', selHei + 'px');
+					sel.css('bottom','0');
+					fixed.css('height', selHei + 'px');
+					opt.css('height', selHei + 'px');
 				}
 			});
 			$('.sel-close').on('click',function(){

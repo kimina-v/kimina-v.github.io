@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>   
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<header id="header" class="header">
+		<div class="header-top header-detail"><!-- [DEV] 상품상세 헤더-->
+			<div class="page-title-area">
+				<h1 class="page-title"><i class="head-logo"></i><span class="blind">랭킹닭컴</span></h1>
+			</div><!-- // page-title-area  -->
+		</div><!--// header-top -->
+	</header>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+       
+		<div class="content-wrap gift-accept-complete">
+			<div class="frame-accept-area">
+				<div class="accept-page-text"><b>선물 받기가 완료</b>되었습니다!<span>배송지 정보를 꼭 확인해주세요.</span></div><!--// result-page-top -->
+			</div>
+
+            <div class="order-info">
+                <div class="list-head inner-flex">
+                    <h3 class="title-list left-item1">배송지 정보</h3>
+                    <div class="right-item1">
+                        <button type="button" class="delivery-change"><span>배송지 변경</span></button>
+                    </div>
+                </div><!--// list-head -->
+
+                <div class="frame-inner">
+                    <div class="delivery-info">
+                        <p class="name">홍길동</p>
+                        <p class="tel">01012341234</p>
+                        <p class="addr">서울특별시 마포구 월드컵북로 396, 15층 (상암동, 누리꿈스퀘어 비지니스타워)</p>
+                    </div>
+                </div><!--// frame-inner -->
+            </div>
+
+            <div class="gift-btn-banner">
+                <div class="visual"><b>할인쿠폰 받고,</b><span>지인에게 고마움을<br>전하세요 :)</span></div>
+                <button type="button" class="btn-basic-lg btn-black"><span>나도 선물하러 갈래요</span></button>
+            </div>
+
+            <div class="infomation-box">
+                <em class="title">선물받기 안내사항</em>
+                <ul class="dot-list">
+                    <li>상품 출고요청 이후에는 선물 받기 취소 또는 배송지를 변경하실 수 없습니다.</li>
+                    <li>선물받기 취소 요청 시, 선물하신 분께 환불 처리됩니다.</li>
+                </ul>
+            </div>
+
+            <div class="customer-info">
+                <p>선물 관련 문의사항은 고객센터로 연락주세요</p>
+                <a href="tel:02-6405-8088" class="tel">02-6405-8088</a>
+            </div>
+		</div><!--// content-wrap -->
+	 </section>
+	 <!--// ========== 컨텐츠 영역 :: container ========== -->
+	
+	<!-- ========== 공통 푸터 :: footer ========== -->
+	<script>include.footer();</script>
+	<!--// ========== 공통 푸터 :: footer ========== -->
+</div><!--// wrap -->
+
+<!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->
+<script>
+    $(function () {
+       //
+   }); 
+</script>
+<!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->
+</body>
+</html>

@@ -32,10 +32,11 @@
 .prd-item .desc-form + .btn-blank{height:calc(100% - 40px)}
 
 .prd-item.type-sm .tit{font-size:14px;line-height:20px;  max-height:40px; height:40px; }
+.prd-item.type-sm .brand-name-txt{display: block;font-size: 11px;font-weight: 400;color: #3a4c67;margin-bottom: 3px;line-height: 14px;}
 .prd-item.type-sm .img,
 .prd-centerd-view1 .prd-item .img{border-radius:4px;}
 .prd-item.type-sm .desc-bottom{padding:0}
-.prd-item.type-sm .price{margin-bottom:5px;}
+.prd-item.type-sm .price{margin-bottom:5px;vertical-align: top;}
 .prd-item.type-sm .price > .num{font-size:16px;}
 .prd-item.type-sm .rating{margin-top:5px;}
 

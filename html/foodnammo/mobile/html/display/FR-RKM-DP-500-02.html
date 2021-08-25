@@ -30,49 +30,90 @@
                 <img class="exp-bn01" src="../../images/img/exp_bn01.png">
                 <img class="exp-bn02" src="../../images/img/exp_bn02.jpg">
             </a>
-            <div class="exp-additional-menu">
-                <a href="#">
-                    <i class="exp-ico-01"></i>
-                    <span>서비스 안내</span>
-                </a>
-                <a href="#">
-                    <i class="exp-ico-02"></i>
-                    <span>휴무일 안내</span>
-                </a>
-                <a href="#">
-                    <i class="exp-ico-03"></i>
-                    <span>배송 가능지역</span>
-                </a>
-            </div>
+            <ul class="exp-additional-menu">
+                <li>
+                    <a href="#">
+                        <i class="exp-ico-01"></i>
+                        <span>서비스 안내</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="exp-ico-02"></i>
+                        <span>휴무일 안내</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="exp-ico-03"></i>
+                        <span>배송 가능지역</span>
+                    </a>
+                </li>
+            </ul>
             <div class="exp-area-box bg-gray">
                 <div class="exp-delivery-available">
                     <span class="exp-txt">특급배송 가능 지역을 꼭 확인하세요!</span>
-                    <div class="exp-search-box">배송 가능지역 확인<i class="ico-search-type1"></i></div>
+                    <div class="exp-search-box"><input type="text" placeholder="배송가능지역확인" disabled><i class="ico-search-type1"></i></div>
                 </div>
             </div>
             <div class="exp-contents-top">
                 <div class="exp-list-menu">
-                    <div class="exp-list-box">
-                        <a href="#none">전제품</a>
-                        <a href="#none" class="on">스테이크</a>
-                        <a href="#none">훈제/프로틴</a>
-                        <a href="#none">소시지/햄</a>
-                        <a href="#none">볼/큐브</a>
-                        <a href="#none">소프트/수비드</a>
-                        <a href="#none">슬라이스/소스</a>
-                        <a href="#none">도시락/볶음밥</a>
-                        <a href="#none">즉석/간편식</a>
-                        <a href="#none">맛보기/패키지</a>
-                        <a href="#none">육류/수산</a>
-                    </div>                
+                    <ul class="exp-list-box">
+                        <li>
+                            <a href="#none">전제품</a>
+                        </li>
+                        <li>
+                            <a href="#none">스테이크</a>
+                        </li>
+                        <li>
+                            <a href="#none">훈제/프로틴</a>
+                        </li>
+                        <li>
+                            <a href="#none">소시지/햄</a>
+                        </li>
+                        <li>
+                            <a href="#none">볼/큐브</a>
+                        </li>
+                        <li>
+                            <a href="#none">소프트/수비드</a>
+                        </li>
+                        <li>
+                            <a href="#none" class="on">슬라이스/소스</a>
+                        </li>
+                        <li>
+                            <a href="#none">도시락/볶음밥</a>
+                        </li>
+                        <li>
+                            <a href="#none">즉석/간편식</a>
+                        </li>
+                        <li>
+                            <a href="#none">맛보기/패키지</a>
+                        </li>
+                        <li>
+                            <a href="#none">육류/수산</a>
+                        </li>
+                    </ul>                
                 </div>
                 <div class="exp-more-menu-btn">
-                    <i class="ico-arr-down"></i>
-                    <i class="ico-x-black"></i>
+                    <button type="button">
+                        <i class="ico-arr-down"></i>
+                    </button>
+                    <button type="button">
+                        <i class="ico-x-black"></i>
+                    </button>
                 </div>
                 <div class="exp-more-menu">
-                    <div class="route-box"></div>
-                    <div class=""></div>
+                    <ul class="route-box">
+                        <li><a class="home-ico-img" href="#"><i class="ico-menu-home"></i></a></li>
+                        <li class="route-txt">특급배송 </li>
+                        <li class="route-txt">전체</li>
+                    </ul>
+                    <ul class="exp-menu-area">
+                        <li><a href="#none">전제품</a></li>
+                        <li><a href="#none">스테이크</a></li>
+                        <li><a href="#none">훈제/프로틴</a></li>
+                        <li><a href="#none">소시지/햄</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="prod-default-wrap">
@@ -83,8 +124,8 @@
                             <option value="">추천순</option>
                         </select>
                         <div class="prod-view-type">
-                            <a href="#" class="list-type on"></a>
-                            <a href="#" class="gallery-type"></a>                            
+                            <a href="#" class="list-type"></a>
+                            <a href="#" class="gallery-type on"></a>                            
                         </div>
                     </div>
                 </div>
@@ -131,7 +172,7 @@
                             <div class="desc-bottom">
                                 <p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
                                 <span class="price"><em class="num">13,900</em>원</span>
-                                <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+                                <em class="imgbadge-dlv-free"><span class="blind">무료배송</span></em>
                                 <div class="rating">
 									<i class="ico-bl-star"></i><span class="text-guide-sm2">5점</span><span class="text-guide-sm">(1415)</span><br>                                    
 								</div>
@@ -164,10 +205,6 @@
                 </ul>
             </div>
 		</div><!--// content-wrap -->
-        <!-- ## 사이드 배너 :: side-quick-area  -->
-		<script>include.sidequick();</script>
-		<!--// ## 사이드 배너 ::  side-quick-area  -->
-
 	 </section>
 	 <!--// ========== 컨텐츠 영역 :: container ========== -->
 	
@@ -181,15 +218,25 @@
 <!-- ========== 팝업 영역 ========== -->
     <script>
         var exp_list_width = -28;
-        for(var i=0; i<$(".exp-list-menu .exp-list-box > a").length;i++){            
-            exp_list_width = exp_list_width + $(".exp-list-menu .exp-list-box > a").eq(i).width()+30;
+        for(var i=0; i<$(".exp-list-menu .exp-list-box > li").length;i++){            
+            exp_list_width = exp_list_width + $(".exp-list-menu .exp-list-box > li").eq(i).width()+30;
             $(".exp-list-box").width(exp_list_width);
         }
         $( document ).ready(function() {
             $(".exp-more-menu-btn").click(function(){
                 $(".exp-more-menu-btn").toggleClass("on");
             })
+
+            var emm = $(".exp-contents-top").offset().top;            
+            $(window).scroll(function(){
+                if($(window).scrollTop()>=emm){
+                    $(".exp-contents-top").addClass("fixed-on");
+                }else{
+                    $(".exp-contents-top").removeClass("fixed-on");
+                }
+            })
         });
     </script>
 </body>
 </html>
+
