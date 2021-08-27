@@ -1075,41 +1075,15 @@
 									</div>
 									<a herf="#" class="item-del"><span>삭제</span></a>
 								</div>
-								<div class="selected-option-item">
-									<em>혼합 100g X 100팩(고추30,마늘20,탄두리50)</em>
-									<div class="option-price">
-										<div class="quantity">
-											<button type="button" class="quantity-minus">수량빼기</button>
-											<input type="text" class="quantity-counter" value="1" readonly>
-											<button type="button" class="quantity-plus">수량더하기</button>
-										</div>
-										<div class="price-info">
-											<span class="origin-price"><del>18,200원</del></span>
-											<span class="sale-price"><strong>12,000</strong>원</span>
-										</div>
-									</div>
-									<a herf="#" class="item-del"><span>삭제</span></a>
-								</div>
-								<div class="selected-option-item">
-									<em>혼합 100g X 100팩(고추30,마늘20,탄두리50)</em>
-									<div class="option-price">
-										<div class="quantity">
-											<button type="button" class="quantity-minus">수량빼기</button>
-											<input type="text" class="quantity-counter" value="1" readonly>
-											<button type="button" class="quantity-plus">수량더하기</button>
-										</div>
-										<div class="price-info">
-											<span class="origin-price"><del>18,200원</del></span>
-											<span class="sale-price"><strong>12,000</strong>원</span>
-										</div>
-									</div>
-									<a herf="#" class="item-del"><span>삭제</span></a>
-								</div>
 							</div>
 						</div>
 						<!-- //scroll area -->
 						
 						<div class="price-info">
+							<div class="sale-apply">
+								<span class="txt">1,930원 할인 적용</span>
+								<a href="#" class="cp-change">쿠폰변경</a>
+							</div>
 							<div class="add-saving-point">
 								<a hef="#"><span>1500P 추가적립</span></a>
 							</div>
@@ -1210,6 +1184,7 @@
 			opt.css('min-height', optHei)
 			opt.css('bottom',-optPos+'px')
 
+			console.log('1 : '+optHei)
 		$('.btn-toggle').on('click',function(){
 			var $this = $(this),
 				fixed = $('.fixed-option'),
@@ -1218,14 +1193,21 @@
 				optHei = opt.outerHeight();
 				
 			if($this.hasClass('open')){
+				var optHei = opt.outerHeight(),
+					optPos = optHei - 70;
+
 				$this.removeClass('open').children('sppan').text('열기')
 				opt.css('bottom',-optPos+'px')
 				fixed.css('height','70px');
+				opt.css('min-height','70px');
 				btn.css('bottom','0');
 			}else{
+				var optHei = opt.outerHeight();
+				
 				$this.addClass('open').children('sppan').text('닫기')
 				opt.css('bottom','0')
 				fixed.css('height',optHei);
+				opt.css('min-height','auto');
 				btn.css('bottom','-70px');
 			}
 
@@ -1240,9 +1222,9 @@
 					optSel.removeClass('open');
 					sel.css('bottom','-350px');
 				}else{
-				console.log(selHei)
+				var optHei = opt.outerHeight();
 					optSel.addClass('open');
-					optWrap.css('min-height', selHei + 'px');
+					// optWrap.css('min-height', optHei + 'px');
 					sel.css('bottom','0');
 					fixed.css('height', selHei + 'px');
 					opt.css('height', selHei + 'px');
