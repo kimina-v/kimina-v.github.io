@@ -1233,7 +1233,10 @@
 			$('.sel-close').on('click',function(){
 				$(this).siblings('.option-list').css('bottom','-350px').closest('.option-select').removeClass('open');
 				fixed.css('height',optHei);
-				opt.css('height',optHei);
+				opt.css({
+					'height':'auto',
+					'min-height':'auto'
+				});
 			});
 
 		});
