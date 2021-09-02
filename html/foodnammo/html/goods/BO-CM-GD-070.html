@@ -42,643 +42,1590 @@
 				</div><!--// page-guide -->
 			</div><!--// page-title-area -->
 
-			<div class="tab-menu">
-				<ul>
+			<div class="tab-menu ui-tab"><!-- [Dev] 20210723 수정 : 클래스 추가 -->
+				<ul><!-- [Dev] 20210723 수정 : href 값과, content div의 id 값 일치해야함 -->
 					<li class="current"><a href="#tab1"><span class="txt">기준 카테고리</span></a></li><!-- [Dev] 0702 수정 -->
 					<li><a href="#tab2"><span class="txt">브랜드</span></a></li>
-					<li><a href="#tab2"><span class="txt">중량</span></a></li>
+					<li><a href="#tab3"><span class="txt">중량</span></a></li>
 				</ul>
 			</div>
-
-			<div class="searh-detail-area mt30">
-				<div class="board-form">
-					<table>
-						<caption>정보입력</caption>
-						<colgroup>
-							<col class="w-col-tit"><col /><col class="w-col-tit"><col /><!-- [Dev] 0702 수정 -->
-						</colgroup>
-						<tbody>
-							<!-- tab : 전시 카테고리 -->
-							<tr>
-								<!-- [Dev] 0702 수정: 항목 추가  -->
-								<th scope="row"><span class="in-tb">등록 사이트</span></th>
-								<td>
-									<div class="input-group">
-										<select class="select w140">
-											<option value="">랭킹닭컴</option>
-										</select>                                    
-									</div>
-								</td><!--// [Dev] 0702 수정 -->
-								<th scope="row"><span class="in-tb">기준 카테고리</span></th><!-- [Dev] 0702 수정 -->
-								<td>
-									<div class="input-group">
-										<div class="input-group-form">
-											<select class="select w200">
-												<option value="">대분류</option>
-												<option value="">대분류1</option>
-											</select>
-										</div>
-										<div class="input-group-form">
-											<select class="select w200">
-												<option value="">중분류</option>
-												<option value="">중분류 1</option>
-											</select>
-										</div>
-										<div class="input-group-form">
-											<select class="select w200">
-												<option value="">소분류</option>
-												<option value="">소분류 1</option>
-											</select>
-										</div>
-									</div><!--// input-group -->									
-								</td>
-							</tr><!--// tab : 전시 카테고리 -->
-							<!---------------
-								 브랜드/ 중량 탭 테이블 : BO-CM-GD-070-02,BO-CM-GD-070-03.html 참고 
-							----------------->
-							<!--  제외 상품 행은 3개 탭 모두 동일 -->
-							<tr>
-								<th scope="row"><span class="in-tb">제외 상품</span></th>
-								<td colspan="3"><!-- [Dev] 0702 수정 : colspan -->
-									<div class="form-inline-group">
-                                        <div class="custom-checkbox">
-                                            <input type="checkbox" id="check-201" class="checkbox" name="check-item-1" checked=""><label for="check-201">미전시 상품 제외</label>
-                                        </div>
-										<div class="custom-checkbox">
-                                            <input type="checkbox" id="check-202" class="checkbox" name="check-item-2"><label for="check-202">품절일 경우 처리 상태 숨김 상품 제외</label>
-                                        </div>
-                                    </div>
-								</td>
-							</tr><!--//  제외 상품 행은 3개 탭 모두 동일 -->
-						</tbody>
-					</table>
-				</div>
-
-				<div class="btn-area">
-					<button type="button" class="btn-basic-md btn-primary"><span>검색</span></button>
-					<button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
-				</div>
-			</div>
-
-			<!-- [Dev/Pub] 20210621 수정 : board-option, board-list, btn-area 감싸는 div 추가  -->
-			<div class="board-movable-wrap">
-				<div class="board-option fixed-box mt60"><!-- scroll시 class fixed add 됨 -->
-					<div class="left-area">
-						<div class="page-info">총 <strong class="text-primary">1,000</strong>건</div>
-					</div><!--// left-area -->
-					<div class="right-area">					
-						<div class="btn-lst">
-							<button type="button" class="btn-func btn-default move all first-row"><span>최상</span></button>
-							<div class="btn-set">
-								<button type="button" class="btn-mv-up move all up-row"><i class="ico-arr-up"></i><span class="blind">위로</span></button>
-								<div class="mv-box">
-									<input type="text" id="" name="step" value="1" class="input-text step">
-									<span class="input-group-txt txt">칸 이동</span>
-								</div>
-								<button type="button" class="btn-mv-down move all down-row"><i class="ico-arr-down"></i><span class="blind">아래로</span></button>
-							</div>
-							<button type="button" class="btn-func btn-default move all last-row"><span>최하</span></button>
+            <!-- 20210803 수정 : 각 탭 온라인 판매가, 판매가 우측정렬 -->
+			<div class="ui-tab-container tab-cnt-wrap"><!-- [Dev] 20210723 수정 : 추가 div -->
+				<!-- 기준 카테고리 -->
+				<div id="tab1" class="ui-tab-cnt active tab-content"><!-- [Dev] 20210723 수정 :  추가 div -->
+					<div class="searh-detail-area mt30">
+						<div class="board-form">
+							<table>
+								<caption>정보입력</caption>
+								<colgroup>
+									<col class="w-col-tit"><col><col class="w-col-tit"><col><!-- [Dev] 0702 수정 -->
+								</colgroup>
+								<tbody>
+									<!-- tab : 전시 카테고리 -->
+									<tr>
+										<!-- [Dev] 0702 수정: 항목 추가  -->
+										<th scope="row"><span class="in-tb">등록 사이트</span></th>
+										<td>
+											<div class="input-group">
+												<select class="select w140">
+													<option value="">랭킹닭컴</option>
+												</select>                                    
+											</div>
+										</td><!--// [Dev] 0702 수정 -->
+										<th scope="row"><span class="in-tb">기준 카테고리</span></th><!-- [Dev] 0702 수정 -->
+										<td>
+											<div class="input-group">
+												<div class="input-group-form">
+													<select class="select w200">
+														<option value="">대분류</option>
+														<option value="">대분류1</option>
+													</select>
+												</div>
+												<div class="input-group-form">
+													<select class="select w200">
+														<option value="">중분류</option>
+														<option value="">중분류 1</option>
+													</select>
+												</div>
+												<div class="input-group-form">
+													<select class="select w200">
+														<option value="">소분류</option>
+														<option value="">소분류 1</option>
+													</select>
+												</div>
+											</div><!--// input-group -->									
+										</td>
+									</tr><!--// tab : 전시 카테고리 -->
+									<!---------------
+										브랜드/ 중량 탭 테이블 : BO-CM-GD-070-02,BO-CM-GD-070-03.html 참고 
+									----------------->
+									<!--  제외 상품 행은 3개 탭 모두 동일 -->
+									<tr>
+										<th scope="row"><span class="in-tb">제외 상품</span></th>
+										<td colspan="3"><!-- [Dev] 0702 수정 : colspan -->
+											<div class="form-inline-group">
+												<div class="custom-checkbox">
+													<input type="checkbox" id="check-201" class="checkbox" name="check-item-1" checked=""><label for="check-201">미전시 상품 제외</label>
+												</div>
+												<div class="custom-checkbox">
+													<input type="checkbox" id="check-202" class="checkbox" name="check-item-2"><label for="check-202">품절일 경우 미전시 상품 제외</label><!--[Dev] 20210825 텍스트변경 -->
+												</div>
+											</div>
+										</td>
+									</tr><!--//  제외 상품 행은 3개 탭 모두 동일 -->
+								</tbody>
+							</table>
 						</div>
-						<button type="button" class="btn-func btn-default"><i class="ico-btn-xls"></i><span>엑셀 다운로드</span></button>
-					</div><!--// right-area -->
-				</div>				
-				<!---------------------- 전시카테고리 & 중량 : 목록 테이블 동일 -------------------------->
-				<div class="board-list scroll-table movable-row vm-table mt10"><!-- table 감싸는 div 에 movable-row 클래스 넣어줌 -->
-					<table>
-						<caption>목록</caption>
-						<colgroup>
-							<col style="width:100px" />
-							<col style="width:250px" />
-							<col style="width:120px" />
-							<col style="width:100px" />
-							<col style="width:80px" />
-							<col style="width:80px" />
-							<col style="width:90px" />
-							<col style="width:110px" />
-							<col style="width:180px" />
-							<col style="width:180px" />
-							<col style="width:110px" />
-							<col style="width:120px" />
-							<col style="width:160px" />
-						</colgroup>
-						<thead>
-						<tr>
-							<th scope="col"><span class="in-tb">상품 이미지</span></th>
-							<th scope="col"><span class="in-tb">상품명</span></th>
-							<th scope="col"><span class="in-tb">온라인 판매가</span></th>
-							<th scope="col"><span class="in-tb">판매가</span></th>
-							<th scope="col"><span class="in-tb">할인율</span></th>
-							<th scope="col"><span class="in-tb">적립금</span></th>
-							<th scope="col"><span class="in-tb">판매상태</span></th>
-							<th scope="col"><span class="in-tb">입점사</span></th>
-							<th scope="col"><span class="in-tb">기준 카테고리</span></th><!-- [Dev] 0702 수정 -->
-							<th scope="col"><span class="in-tb">판매정책</span></th>
-							<th scope="col"><span class="in-tb">재고</span></th>
-							<th scope="col"><span class="in-tb">배송속성</span></th>
-							<th scope="col"><span class="in-tb">등록일</span></th>
-						</tr>
-						</thead>
-						<tbody>
-							<tr class="movable" id="17">
-								<td class="text-center">
-									<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></div>
-								</td>
-								<td class="text-left"><div class="in-tb">17-잇메이트 스팀 닭가슴살 마늘맛</div></td>
-								<td class="text-center"><div class="in-tb">26,200</div></td>
-								<td class="text-center"><div class="in-tb">11,200</div></td>
-								<td class="text-center"><div class="in-tb">12%</div></td>
-								<td class="text-center"><div class="in-tb">2%</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico naver-pay">네이버페이</span>
-										<span class="txt-ico gift">선물하기</span>
-										<span class="txt-ico duty-free">면세상품</span>
-										<span class="txt-ico attached">개별판매 및 검색불가</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">999,999</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico general">일반배송</span>
-										<span class="txt-ico regular">정기배송</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
-							</tr>
-							<tr class="movable" id="16">
-								<td class="text-center">
-									<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></div>
-								</td>
-								<td class="text-left"><div class="in-tb">16-잇메이트 스팀 닭가슴살 마늘맛</div></td>
-								<td class="text-center"><div class="in-tb">26,200</div></td>
-								<td class="text-center"><div class="in-tb">11,200</div></td>
-								<td class="text-center"><div class="in-tb">12%</div></td>
-								<td class="text-center"><div class="in-tb">2%</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico naver-pay">네이버페이</span>
-										<span class="txt-ico gift">선물하기</span>
-										<span class="txt-ico duty-free">면세상품</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">999,999</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico general">일반배송</span>
-										<span class="txt-ico regular">정기배송</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
-							</tr>
-							<tr class="movable" id="15">
-								<td class="text-center">
-									<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></div>
-								</td>
-								<td class="text-left"><div class="in-tb">15-잇메이트 스팀 닭가슴살 마늘맛</div></td>
-								<td class="text-center"><div class="in-tb">26,200</div></td>
-								<td class="text-center"><div class="in-tb">11,200</div></td>
-								<td class="text-center"><div class="in-tb">12%</div></td>
-								<td class="text-center"><div class="in-tb">2%</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico naver-pay">네이버페이</span>
-										<span class="txt-ico gift">선물하기</span>
-										<span class="txt-ico duty-free">면세상품</span>
-										<span class="txt-ico attached">개별판매 및 검색불가</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">999,999</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico general">일반배송</span>
-										<span class="txt-ico regular">정기배송</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
-							</tr>
-							<tr class="movable" id="14">
-								<td class="text-center">
-									<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></div>
-								</td>
-								<td class="text-left"><div class="in-tb">14-잇메이트 스팀 닭가슴살 마늘맛</div></td>
-								<td class="text-center"><div class="in-tb">26,200</div></td>
-								<td class="text-center"><div class="in-tb">11,200</div></td>
-								<td class="text-center"><div class="in-tb">12%</div></td>
-								<td class="text-center"><div class="in-tb">2%</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico naver-pay">네이버페이</span>
-										<span class="txt-ico gift">선물하기</span>
-										<span class="txt-ico duty-free">면세상품</span>
-										<span class="txt-ico attached">개별판매 및 검색불가</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">999,999</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico general">일반배송</span>
-										<span class="txt-ico regular">정기배송</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
-							</tr>
-							<tr class="movable" id="13">
-								<td class="text-center">
-									<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></div>
-								</td>
-								<td class="text-left"><div class="in-tb">13-잇메이트 스팀 닭가슴살 마늘맛</div></td>
-								<td class="text-center"><div class="in-tb">26,200</div></td>
-								<td class="text-center"><div class="in-tb">11,200</div></td>
-								<td class="text-center"><div class="in-tb">12%</div></td>
-								<td class="text-center"><div class="in-tb">2%</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico naver-pay">네이버페이</span>
-										<span class="txt-ico gift">선물하기</span>
-										<span class="txt-ico duty-free">면세상품</span>
-										<span class="txt-ico attached">개별판매 및 검색불가</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">999,999</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico general">일반배송</span>
-										<span class="txt-ico regular">정기배송</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
-							</tr>
-							<tr class="movable" id="12">
-								<td class="text-center">
-									<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></div>
-								</td>
-								<td class="text-left"><div class="in-tb">12-잇메이트 스팀 닭가슴살 마늘맛</div></td>
-								<td class="text-center"><div class="in-tb">26,200</div></td>
-								<td class="text-center"><div class="in-tb">11,200</div></td>
-								<td class="text-center"><div class="in-tb">12%</div></td>
-								<td class="text-center"><div class="in-tb">2%</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico naver-pay">네이버페이</span>
-										<span class="txt-ico gift">선물하기</span>
-										<span class="txt-ico duty-free">면세상품</span>
-										<span class="txt-ico attached">개별판매 및 검색불가</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">999,999</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico general">일반배송</span>
-										<span class="txt-ico regular">정기배송</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
-							</tr>
-							<tr class="movable" id="11">
-								<td class="text-center">
-									<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></div>
-								</td>
-								<td class="text-left"><div class="in-tb">11-잇메이트 스팀 닭가슴살 마늘맛</div></td>
-								<td class="text-center"><div class="in-tb">26,200</div></td>
-								<td class="text-center"><div class="in-tb">11,200</div></td>
-								<td class="text-center"><div class="in-tb">12%</div></td>
-								<td class="text-center"><div class="in-tb">2%</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico naver-pay">네이버페이</span>
-										<span class="txt-ico gift">선물하기</span>
-										<span class="txt-ico duty-free">면세상품</span>
-										<span class="txt-ico attached">개별판매 및 검색불가</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">999,999</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico general">일반배송</span>
-										<span class="txt-ico regular">정기배송</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
-							</tr>
-							<tr class="movable" id="10">
-								<td class="text-center">
-									<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></div>
-								</td>
-								<td class="text-left"><div class="in-tb">10-잇메이트 스팀 닭가슴살 마늘맛</div></td>
-								<td class="text-center"><div class="in-tb">26,200</div></td>
-								<td class="text-center"><div class="in-tb">11,200</div></td>
-								<td class="text-center"><div class="in-tb">12%</div></td>
-								<td class="text-center"><div class="in-tb">2%</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico naver-pay">네이버페이</span>
-										<span class="txt-ico gift">선물하기</span>
-										<span class="txt-ico duty-free">면세상품</span>
-										<span class="txt-ico attached">개별판매 및 검색불가</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">(무제한)</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico general">일반배송</span>
-										<span class="txt-ico regular">정기배송</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
-							</tr>
-							<tr class="movable" id="9">
-								<td class="text-center">
-									<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></div>
-								</td>
-								<td class="text-left"><div class="in-tb">9-잇메이트 스팀 닭가슴살 마늘맛</div></td>
-								<td class="text-center"><div class="in-tb">26,200</div></td>
-								<td class="text-center"><div class="in-tb">11,200</div></td>
-								<td class="text-center"><div class="in-tb">12%</div></td>
-								<td class="text-center"><div class="in-tb">2%</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico naver-pay">네이버페이</span>
-										<span class="txt-ico gift">선물하기</span>
-										<span class="txt-ico duty-free">면세상품</span>
-										<span class="txt-ico attached">개별판매 및 검색불가</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">(무제한)</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico general">일반배송</span>
-										<span class="txt-ico regular">정기배송</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
-							</tr>
-							<tr class="movable" id="8">
-								<td class="text-center">
-									<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></div>
-								</td>
-								<td class="text-left"><div class="in-tb">8-잇메이트 스팀 닭가슴살 마늘맛</div></td>
-								<td class="text-center"><div class="in-tb">26,200</div></td>
-								<td class="text-center"><div class="in-tb">11,200</div></td>
-								<td class="text-center"><div class="in-tb">12%</div></td>
-								<td class="text-center"><div class="in-tb">2%</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico naver-pay">네이버페이</span>
-										<span class="txt-ico gift">선물하기</span>
-										<span class="txt-ico duty-free">면세상품</span>
-										<span class="txt-ico attached">개별판매 및 검색불가</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">(무제한)</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico general">일반배송</span>
-										<span class="txt-ico regular">정기배송</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
-							</tr>
-							<tr class="movable" id="7">
-								<td class="text-center">
-									<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></div>
-								</td>
-								<td class="text-left"><div class="in-tb">7-잇메이트 스팀 닭가슴살 마늘맛</div></td>
-								<td class="text-center"><div class="in-tb">26,200</div></td>
-								<td class="text-center"><div class="in-tb">11,200</div></td>
-								<td class="text-center"><div class="in-tb">12%</div></td>
-								<td class="text-center"><div class="in-tb">2%</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico naver-pay">네이버페이</span>
-										<span class="txt-ico gift">선물하기</span>
-										<span class="txt-ico duty-free">면세상품</span>
-										<span class="txt-ico attached">개별판매 및 검색불가</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">(무제한)</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico general">일반배송</span>
-										<span class="txt-ico regular">정기배송</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
-							</tr>
-							<tr class="movable" id="6">
-								<td class="text-center">
-									<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></div>
-								</td>
-								<td class="text-left"><div class="in-tb">6-잇메이트 스팀 닭가슴살 마늘맛</div></td>
-								<td class="text-center"><div class="in-tb">26,200</div></td>
-								<td class="text-center"><div class="in-tb">11,200</div></td>
-								<td class="text-center"><div class="in-tb">12%</div></td>
-								<td class="text-center"><div class="in-tb">2%</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico naver-pay">네이버페이</span>
-										<span class="txt-ico gift">선물하기</span>
-										<span class="txt-ico duty-free">면세상품</span>
-										<span class="txt-ico attached">개별판매 및 검색불가</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">(무제한)</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico general">일반배송</span>
-										<span class="txt-ico regular">정기배송</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
-							</tr>
-							<tr class="movable" id="5">
-								<td class="text-center">
-									<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></div>
-								</td>
-								<td class="text-left"><div class="in-tb">5-잇메이트 스팀 닭가슴살 마늘맛</div></td>
-								<td class="text-center"><div class="in-tb">26,200</div></td>
-								<td class="text-center"><div class="in-tb">11,200</div></td>
-								<td class="text-center"><div class="in-tb">12%</div></td>
-								<td class="text-center"><div class="in-tb">2%</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico naver-pay">네이버페이</span>
-										<span class="txt-ico gift">선물하기</span>
-										<span class="txt-ico duty-free">면세상품</span>
-										<span class="txt-ico attached">개별판매 및 검색불가</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">(무제한)</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico general">일반배송</span>
-										<span class="txt-ico regular">정기배송</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
-							</tr>
-							<tr class="movable" id="4">
-								<td class="text-center">
-									<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></div>
-								</td>
-								<td class="text-left"><div class="in-tb">4-잇메이트 스팀 닭가슴살 마늘맛</div></td>
-								<td class="text-center"><div class="in-tb">26,200</div></td>
-								<td class="text-center"><div class="in-tb">11,200</div></td>
-								<td class="text-center"><div class="in-tb">12%</div></td>
-								<td class="text-center"><div class="in-tb">2%</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico naver-pay">네이버페이</span>
-										<span class="txt-ico gift">선물하기</span>
-										<span class="txt-ico duty-free">면세상품</span>
-										<span class="txt-ico attached">개별판매 및 검색불가</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">(무제한)</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico general">일반배송</span>
-										<span class="txt-ico regular">정기배송</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
-							</tr>
-							<tr class="movable" id="3">
-								<td class="text-center">
-									<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></div>
-								</td>
-								<td class="text-left"><div class="in-tb">3-잇메이트 스팀 닭가슴살 마늘맛</div></td>
-								<td class="text-center"><div class="in-tb">26,200</div></td>
-								<td class="text-center"><div class="in-tb">11,200</div></td>
-								<td class="text-center"><div class="in-tb">12%</div></td>
-								<td class="text-center"><div class="in-tb">2%</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico naver-pay">네이버페이</span>
-										<span class="txt-ico gift">선물하기</span>
-										<span class="txt-ico duty-free">면세상품</span>
-										<span class="txt-ico attached">개별판매 및 검색불가</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">(무제한)</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico general">일반배송</span>
-										<span class="txt-ico regular">정기배송</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
-							</tr>
-							<tr class="movable" id="2">
-								<td class="text-center">
-									<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></div>
-								</td>
-								<td class="text-left"><div class="in-tb">2-잇메이트 스팀 닭가슴살 마늘맛</div></td>
-								<td class="text-center"><div class="in-tb">26,200</div></td>
-								<td class="text-center"><div class="in-tb">11,200</div></td>
-								<td class="text-center"><div class="in-tb">12%</div></td>
-								<td class="text-center"><div class="in-tb">2%</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico naver-pay">네이버페이</span>
-										<span class="txt-ico gift">선물하기</span>
-										<span class="txt-ico duty-free">면세상품</span>
-										<span class="txt-ico attached">개별판매 및 검색불가</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">(무제한)</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico general">일반배송</span>
-										<span class="txt-ico regular">정기배송</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
-							</tr>
-							<tr class="movable" id="1">
-								<td class="text-center">
-									<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></div>
-								</td>
-								<td class="text-left"><div class="in-tb">1-잇메이트 스팀 닭가슴살 갈릭맛</div></td>
-								<td class="text-center"><div class="in-tb">26,200</div></td>
-								<td class="text-center"><div class="in-tb">11,200</div></td>
-								<td class="text-center"><div class="in-tb">12%</div></td>
-								<td class="text-center"><div class="in-tb">2%</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico naver-pay">네이버페이</span>
-										<span class="txt-ico gift">선물하기</span>
-										<span class="txt-ico duty-free">면세상품</span>
-										<span class="txt-ico attached">개별판매 및 검색불가</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">(무제한)</div></td>
-								<td class="text-center">
-									<div class="option-lst">
-										<span class="txt-ico general">일반배송</span>
-										<span class="txt-ico regular">정기배송</span>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
-							</tr>
 
-						</tbody>
-					</table>
-				</div><!--// board-list | 목록 -->
-			</div>
-			<!--// [Dev/Pub] 20210621 수정 : board-option, board-list, btn-area 감싸는 div 추가  -->
+						<div class="btn-area">
+							<button type="button" class="btn-basic-md btn-primary"><span>검색</span></button>
+							<button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
+						</div>
+					</div>
 
+					<!-- [Dev/Pub] 20210621 수정 : board-option, board-list, btn-area 감싸는 div 추가  -->
+					<div class="board-movable-wrap">
+						<div class="board-option fixed-box mt60"><!-- scroll시 class fixed add 됨 -->
+							<div class="left-area">
+								<div class="page-info mt10">총 <strong class="text-primary">1,000</strong>건</div><!-- [Dev] 20210721 수정 : mt10 추가 -->
+							</div><!--// left-area -->
+							<div class="right-area">					
+								<div class="btn-lst">
+									<button type="button" class="btn-func btn-default move all first-row"><span>최상</span></button>
+									<div class="btn-set">
+										<button type="button" class="btn-mv-up move all up-row"><i class="ico-arr-up"></i><span class="blind">위로</span></button>
+										<div class="mv-box">
+											<input type="text" id="" name="step" value="1" class="input-text step">
+											<span class="input-group-txt txt">칸 이동</span>
+										</div>
+										<button type="button" class="btn-mv-down move all down-row"><i class="ico-arr-down"></i><span class="blind">아래로</span></button>
+									</div>
+									<button type="button" class="btn-func btn-default move all last-row"><span>최하</span></button>
+								</div>
+								<button type="button" class="btn-func btn-default"><i class="ico-btn-xls"></i><span>엑셀 다운로드</span></button>
+							</div><!--// right-area -->
+						</div>				
+						<!---------------------- 전시카테고리 & 중량 : 목록 테이블 동일 -------------------------->
+						<div class="board-list scroll-table movable-row vm-table mt10"><!-- table 감싸는 div 에 movable-row 클래스 넣어줌 -->
+							<table>
+								<caption>목록</caption>
+								<colgroup>
+									<col style="width:100px">
+									<col style="width:250px">
+									<col style="width:120px">
+									<col style="width:100px">
+									<col style="width:80px">
+									<col style="width:80px">
+									<col style="width:90px">
+									<col style="width:110px">
+									<col style="width:180px">
+									<col style="width:180px">
+									<col style="width:110px">
+									<col style="width:120px">
+									<col style="width:160px">
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col"><span class="in-tb">상품 이미지</span></th>
+									<th scope="col"><span class="in-tb">상품명</span></th>
+									<th scope="col"><span class="in-tb">온라인 판매가</span></th>
+									<th scope="col"><span class="in-tb">판매가</span></th>
+									<th scope="col"><span class="in-tb">할인율</span></th>
+									<th scope="col"><span class="in-tb">적립금</span></th>
+									<th scope="col"><span class="in-tb">판매상태</span></th>
+									<th scope="col"><span class="in-tb">입점사</span></th>
+									<th scope="col"><span class="in-tb">기준 카테고리</span></th><!-- [Dev] 0702 수정 -->
+									<th scope="col"><span class="in-tb">판매정책</span></th>
+									<th scope="col"><span class="in-tb">재고</span></th>
+									<th scope="col"><span class="in-tb">배송속성</span></th>
+									<th scope="col"><span class="in-tb">등록일</span></th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr class="movable" id="17">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">17-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">999,999</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="16">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">16-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">999,999</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="15">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">15-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">999,999</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="14">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">14-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">999,999</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="13">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">13-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">999,999</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="12">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">12-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">999,999</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="11">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">11-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">999,999</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="10">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">10-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="9">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">9-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="8">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">8-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="7">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">7-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="6">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">6-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="5">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">5-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="4">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">4-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="3">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">3-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="2">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">2-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="1">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">1-잇메이트 스팀 닭가슴살 갈릭맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
 
+								</tbody>
+							</table>
+						</div><!--// board-list | 목록 -->
+					</div>
+				</div><!-- //[Dev] 20210723 수정 : 추가 div -->
+				<!-- //기준 카테고리 -->
+				<!-- [Dev] 20210723 수정 : 추가 -->
+				<!-- 브랜드 -->
+				<div id="tab2" class="ui-tab-cnt tab-content">
+					<div class="searh-detail-area mt30">
+						<div class="board-form">
+							<table>
+								<caption>정보입력</caption>
+								<colgroup>
+									<col class="w-col-tit"><col><col class="w-col-tit"><col><!-- [Dev] 0702 수정 -->
+								</colgroup>
+								<tbody>
+									<tr>
+										<!-- [Dev] 0702 수정: 항목 추가 및 유형 변경  -->
+										<th scope="row"><span class="in-tb">등록 사이트</span></th>
+										<td>
+											<div class="input-group">
+												<select class="select w140">
+													<option value="">랭킹닭컴</option>
+												</select>                                    
+											</div>
+										</td>
+										<th scope="row"><span class="in-tb">브랜드</span></th>
+										<td>
+											<div class="input-group">
+												<input type="text" class="input-text" placeholder="">
+												<span class="input-group-btn">
+													<button type="button" class="btn-form btn-grey"><span>브랜드 검색</span></button>
+												</span>
+											</div>
+										</td><!--// [Dev] 0702 수정 -->
+									</tr> 
+									<!--  제외 상품 행은 3개 탭 모두 동일 -->
+									<tr>
+										<th scope="row"><span class="in-tb">제외 상품</span></th>
+										<td colspan="3"><!-- [Dev] 0702 수정 : colspan -->
+											<div class="form-inline-group">
+												<div class="custom-checkbox">
+													<input type="checkbox" id="check-201" class="checkbox" name="check-item-1" checked=""><label for="check-201">미전시 상품 제외</label>
+												</div>
+												<div class="custom-checkbox">
+													<input type="checkbox" id="check-202" class="checkbox" name="check-item-2"><label for="check-202">품절일 경우 미전시 상품 제외</label><!--[Dev] 20210825 텍스트변경 -->
+												</div>
+											</div>
+										</td>
+									</tr><!--//  제외 상품 행은 3개 탭 모두 동일 -->
+								</tbody>
+							</table>
+						</div>
+
+						<div class="btn-area">
+							<button type="button" class="btn-basic-md btn-primary"><span>검색</span></button>
+							<button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
+						</div>
+					</div>
+
+					<!-- [Dev/Pub] 20210621 수정 : board-option, board-list, btn-area 감싸는 div 추가  -->
+					<div class="board-movable-wrap">
+						<div class="board-option fixed-box mt60"><!-- scroll시 class fixed add 됨 --><!--[Dev] 210723 수정 : mt40 -> mt60 클래스명 변경 -->
+							<div class="left-area">
+								<div class="page-info mt10">총 <strong class="text-primary">1,000</strong>건</div><!-- [Dev] 20210721 수정 : mt10 추가 -->
+							</div><!--// left-area -->
+							<div class="right-area">					
+								<div class="btn-lst">
+									<button type="button" class="btn-func btn-default move all first-row"><span>최상</span></button>
+									<div class="btn-set">
+										<button type="button" class="btn-mv-up move all up-row"><i class="ico-arr-up"></i><span class="blind">위로</span></button>
+										<div class="mv-box">
+											<input type="text" id="" name="step" value="1" class="input-text step">
+											<span class="input-group-txt txt">칸 이동</span>
+										</div>
+										<button type="button" class="btn-mv-down move all down-row"><i class="ico-arr-down"></i><span class="blind">아래로</span></button>
+									</div>
+									<button type="button" class="btn-func btn-default move all last-row"><span>최하</span></button>
+								</div>
+								<button type="button" class="btn-func btn-default"><i class="ico-btn-xls"></i><span>엑셀 다운로드</span></button>
+							</div><!--// right-area -->
+						</div>		
+
+						<div class="board-list scroll-table movable-row vm-table mt10"><!-- table 감싸는 div 에 movable-row 클래스 넣어줌 -->
+							<table>
+								<caption>목록</caption>
+								<colgroup>
+									<col style="width:100px">
+									<col style="width:250px">
+									<col style="width:120px">
+									<col style="width:120px">
+									<col style="width:100px">
+									<col style="width:80px">
+									<col style="width:80px">
+									<col style="width:90px">
+									<col style="width:160px">
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col"><span class="in-tb">상품 이미지</span></th>
+									<th scope="col"><span class="in-tb">상품명</span></th>
+									<th scope="col"><span class="in-tb">브랜드</span></th>
+									<th scope="col"><span class="in-tb">온라인 판매가</span></th>
+									<th scope="col"><span class="in-tb">판매가</span></th>
+									<th scope="col"><span class="in-tb">할인율</span></th>
+									<th scope="col"><span class="in-tb">적립금</span></th>
+									<th scope="col"><span class="in-tb">판매상태</span></th>
+									<th scope="col"><span class="in-tb">등록일</span></th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr class="movable" id="17">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">17-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="16">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">16-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="15">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">15-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="14">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">14-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="13">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">13-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="12">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">12-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="11">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">11-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="10">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">10-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="9">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">9-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="8">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">8-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="7">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">7-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="6">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">6-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="5">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">5-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="4">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">4-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="3">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">3-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="2">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">2-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="1">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">1-잇메이트 스팀 닭가슴살 갈릭맛</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!--// board-list | 목록 -->
+					</div>
+				</div>
+				<!-- //브랜드 -->
+				<!-- 중량 -->
+				<div id="tab3" class="ui-tab-cnt tab-content">
+					<div class="searh-detail-area mt30">
+						<div class="board-form">
+							<table>
+								<caption>정보입력</caption>
+								<colgroup>
+									<col class="w-col-tit"><col><col class="w-col-tit"><col><!-- [Dev] 0702 수정 -->
+								</colgroup>
+								<tbody>
+									<tr>
+										<!-- [Dev] 0702 수정: 항목 추가 및 유형 변경  -->
+										<th scope="row"><span class="in-tb">등록 사이트</span></th>
+										<td>
+											<div class="input-group">
+												<select class="select w140">
+													<option value="">랭킹닭컴</option>
+												</select>                                    
+											</div>
+										</td>
+										<th scope="row"><span class="in-tb">중량</span></th>
+										<td>
+											<select class="select w200">
+												<option value="">중량 선택</option>
+											</select>
+										</td>
+									</tr> 
+									<!--  제외 상품 행은 3개 탭 모두 동일 -->
+									<tr>
+										<th scope="row"><span class="in-tb">제외 상품</span></th>
+										<td colspan="3"><!-- [Dev] 0702 수정 : colspan -->
+											<div class="form-inline-group">
+												<div class="custom-checkbox">
+													<input type="checkbox" id="check-201" class="checkbox" name="check-item-1" checked=""><label for="check-201">미전시 상품 제외</label>
+												</div>
+												<div class="custom-checkbox">
+													<input type="checkbox" id="check-202" class="checkbox" name="check-item-2"><label for="check-202">품절일 경우 미전시 상품 제외</label><!--[Dev] 20210825 텍스트변경 -->
+												</div>
+											</div>
+										</td>
+									</tr><!--//  제외 상품 행은 3개 탭 모두 동일 -->
+								</tbody>
+							</table>
+						</div>
+
+						<div class="btn-area">
+							<button type="button" class="btn-basic-md btn-primary"><span>검색</span></button>
+							<button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
+						</div>
+					</div>
+
+					<!-- [Dev/Pub] 20210621 수정 : board-option, board-list, btn-area 감싸는 div 추가  -->
+					<div class="board-movable-wrap">
+						<div class="board-option fixed-box mt60"><!-- scroll시 class fixed add 됨 -->
+							<div class="left-area">
+								<div class="page-info mt10">총 <strong class="text-primary">1,000</strong>건</div><!-- [Dev] 20210721 수정 : mt10 추가 -->
+							</div><!--// left-area -->
+							<div class="right-area">					
+								<div class="btn-lst">
+									<button type="button" class="btn-func btn-default move all first-row"><span>최상</span></button>
+									<div class="btn-set">
+										<button type="button" class="btn-mv-up move all up-row"><i class="ico-arr-up"></i><span class="blind">위로</span></button>
+										<div class="mv-box">
+											<input type="text" id="" name="step" value="1" class="input-text step">
+											<span class="input-group-txt txt">칸 이동</span>
+										</div>
+										<button type="button" class="btn-mv-down move all down-row"><i class="ico-arr-down"></i><span class="blind">아래로</span></button>
+									</div>
+									<button type="button" class="btn-func btn-default move all last-row"><span>최하</span></button>
+								</div>
+								<button type="button" class="btn-func btn-default"><i class="ico-btn-xls"></i><span>엑셀 다운로드</span></button>
+							</div><!--// right-area -->
+						</div>				
+						<!---------------------- 전시카테고리 & 중량 : 목록 테이블 동일 -------------------------->
+						<div class="board-list scroll-table movable-row vm-table mt10"><!-- table 감싸는 div 에 movable-row 클래스 넣어줌 -->
+							<table>
+								<caption>목록</caption>
+								<colgroup>
+									<col style="width:100px">
+									<col style="width:250px">
+									<col style="width:120px">
+									<col style="width:100px">
+									<col style="width:80px">
+									<col style="width:80px">
+									<col style="width:90px">
+									<col style="width:110px">
+									<col style="width:180px">
+									<col style="width:180px">
+									<col style="width:110px">
+									<col style="width:120px">
+									<col style="width:160px">
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col"><span class="in-tb">상품 이미지</span></th>
+									<th scope="col"><span class="in-tb">상품명</span></th>
+									<th scope="col"><span class="in-tb">온라인 판매가</span></th>
+									<th scope="col"><span class="in-tb">판매가</span></th>
+									<th scope="col"><span class="in-tb">할인율</span></th>
+									<th scope="col"><span class="in-tb">적립금</span></th>
+									<th scope="col"><span class="in-tb">판매상태</span></th>
+									<th scope="col"><span class="in-tb">입점사</span></th>
+									<th scope="col"><span class="in-tb">기준 카테고리</span></th><!-- [Dev] 0702 수정 -->
+									<th scope="col"><span class="in-tb">판매정책</span></th>
+									<th scope="col"><span class="in-tb">재고</span></th>
+									<th scope="col"><span class="in-tb">배송속성</span></th>
+									<th scope="col"><span class="in-tb">등록일</span></th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr class="movable" id="17">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">17-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">999,999</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="16">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">16-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">999,999</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="15">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">15-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">999,999</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="14">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">14-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">999,999</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="13">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">13-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">999,999</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="12">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">12-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">999,999</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="11">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">11-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">999,999</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="10">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">10-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="9">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">9-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="8">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">8-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="7">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">7-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="6">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">6-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="5">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">5-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="4">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">4-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="3">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">3-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="2">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">2-잇메이트 스팀 닭가슴살 마늘맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+									<tr class="movable" id="1">
+										<td class="text-center">
+											<div class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></div>
+										</td>
+										<td class="text-left"><div class="in-tb">1-잇메이트 스팀 닭가슴살 갈릭맛</div></td>
+										<td class="text-right"><div class="in-tb">26,200</div></td>
+										<td class="text-right"><div class="in-tb">11,200</div></td>
+										<td class="text-center"><div class="in-tb">12%</div></td>
+										<td class="text-center"><div class="in-tb">2%</div></td>
+										<td class="text-center"><div class="in-tb">정상</div></td>
+										<td class="text-center"><div class="in-tb">맛있닭</div></td>
+										<td class="text-center"><div class="in-tb">닭가슴살 > 스팀.소프트</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico naver-pay">네이버페이</span>
+												<span class="txt-ico gift">선물하기</span>
+												<span class="txt-ico duty-free">면세상품</span>
+												<span class="txt-ico attached">개별판매 및 검색불가</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">(무제한)</div></td>
+										<td class="text-center">
+											<div class="option-lst">
+												<span class="txt-ico general">일반배송</span>
+												<span class="txt-ico regular">정기배송</span>
+											</div>
+										</td>
+										<td class="text-center"><div class="in-tb">2021.04.19 17:00</div></td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div><!--// board-list | 목록 -->
+					</div>
+				</div>
+				<!-- //중량 -->
+				<!-- [Dev] 20210723 수정 : 추가 -->
+			</div><!-- //[Dev] 20210723 수정 : 추가 div -->
+            <!--// 20210803 수정 : 각 탭 온라인 판매가, 판매가 우측정렬 -->
 		</div><!--// content-area -->
 
 	</section>

@@ -365,26 +365,33 @@ function cmSelectCombo(p_option) {
  */
 function addCalendarEvent( el, p_opt ) {
 	
-	if(typeof el != "object")
-		el		= jQuery(".datepicker");
+	if (typeof el != "object") { el = $(".datepicker") };
 	
-	var _default = {
-		  dateFormat: "yy.mm.dd"
-		, showAnim:"slideDown"
-		, changeMonth: true
-		, changeYear: true
-		, showMonthAfterYear : true
-		, showOtherMonths: true
-		, selectOtherMonths: true
-		, monthNamesShort : ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']
-		, monthNames : ['1월(JAN)', '2월(FEB)', '3월(MAR)', '4월(APR)', '5월(MAY)', '6월(JUN)', '7월(JUL)', '8월(AUG)', '9월(SEP)', '10월(OCT)', '11월(NOV)', '12월(DEC)']
-		, dayNamesMin : ["일", "월", "화", "수", "목", "금", "토"]
-		, showUp : false
-		, callback : undefined
+	let _default = {
+			dateFormat: "yy.mm.dd"
+		, 	showAnim:"slideDown"
+		, 	changeMonth: true
+		, 	changeYear: true
+		, 	showMonthAfterYear : true
+		, 	showOtherMonths: true
+		, 	selectOtherMonths: true
+		, 	monthNamesShort : ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']
+		, 	monthNames : ['1월(JAN)', '2월(FEB)', '3월(MAR)', '4월(APR)', '5월(MAY)', '6월(JUN)', '7월(JUL)', '8월(AUG)', '9월(SEP)', '10월(OCT)', '11월(NOV)', '12월(DEC)']
+		, 	dayNamesMin : ["일", "월", "화", "수", "목", "금", "토"]
+		, 	showUp : false
+		, 	callback : undefined
+		,   onSelect: function(dateText, inst) {
+			if (typeof options.callback == "function")
+				options.callback(jQuery(this));
+			}
+		, 	beforeShow : function () {
+				jQuery(".div-edms iframe").hide();
+			}
+		, 	onClose : function () {
+				jQuery(".div-edms iframe").show();
+			}
 	};
-	
-	var options;
-	
+	let options;
 	if (typeof p_opt == "function") {
 		options = jQuery.extend(_default, null);
 		options.callback = p_opt;
@@ -392,34 +399,7 @@ function addCalendarEvent( el, p_opt ) {
 	else {
 		options = jQuery.extend(_default, p_opt);
 	}
-	
-	el.datepicker( {
-		dateFormat: options.dateFormat
-		, showAnim: options.showAnim
-		, changeMonth: options.changeMonth
-		, changeYear: options.changeYear
-		, showMonthAfterYear : options.showMonthAfterYear
-		, showOtherMonths: options.showOtherMonths
-		, selectOtherMonths: options.selectOtherMonths
-		, monthNames : options.monthNames
-		, monthNamesShort : options.monthNamesShort
-		, dayNamesMin : options.dayNamesMin
-		, showUp : options.showUp
-		, showOn: "both"
-		, buttonImageOnly: true
-		, buttonImage: IMG_URL+"/calendar.png"
-		, onSelect: function(dateText, inst) 
-		{
-			if (typeof options.callback == "function")
-				options.callback(jQuery(this));
-		}
-		, beforeShow : function () {
-			jQuery(".div-edms iframe").hide();
-		}
-		, onClose : function () {
-			jQuery(".div-edms iframe").show();
-		}
-	}).attr("readonly", "readonly");
+	el.datepicker(options).attr("readonly", "readonly");
 }
 
 /**

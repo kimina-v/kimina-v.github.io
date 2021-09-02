@@ -33,29 +33,11 @@ $(document).ready(function () {
 
 });
 
+function fnModalCallback(data) {
+    console.log('Modal component callback !!', data);
+}
+
 function addBtnEvent() {
-
-    // 입점사검색
-    $(".btn_partner_search").on("click", function (event) {
-        event.preventDefault();
-        $('#frm_pop input[name=type]').val('single');
-        $('#commonPartnerSearchPop').load('/common/selectPartnerPop', $('#frm_pop').serialize());
-    });
-
-    // 상품추가
-    $(".btn_prod_add").on("click", function (event) {
-        event.preventDefault();
-        const id = $(this).attr("id");
-        searchPop(id);
-    });
-
-    // 기획전검색
-    $(".btn_exhb_search").on("click", function (event) {
-        event.preventDefault();
-        $('#frm_pop input[name=type]').val('multi');
-        $('#frm_pop input[name=callbackFunction]').val('addExhibit')
-        $('#commonExhibitionSearchPop').load('/common/selectExhibitionPop', $('#frm_pop').serialize());
-    });
 
     // 리뷰검색
     $(".btn_review_search").on("click", function (event) {
@@ -67,8 +49,7 @@ function addBtnEvent() {
     $(".btn_prod_del").on("click", function (event) {
         event.preventDefault();
         const prdType = $(this).attr("id");
-        const check = $("input:checkbox[name='selectCheck" + prdType + "']:checked").closest('tr');
-        goProdDelete(check);
+        goProdDelete(prdType);
     });
 
     // 등록
@@ -88,15 +69,9 @@ function addBtnEvent() {
 }
 
 function isValidate() {
-    const sitecd = $("select[name='siteCd'] option:selected").val();
     const brandnm = $("input[name='brandnm']").val();
     const brandSubnm = $("input[name='brandSubnm']").val();
-    const category = $("select[name='category'] option:selected").val();
 
-    if(sitecd == '' || sitecd == null) {
-        alert("사이트를 선택해주세요.");
-        return false;
-    }
     if(brandnm == '' || brandnm == null) {
         alert("브랜드명을 입력해주세요.");
         return false;
@@ -105,31 +80,34 @@ function isValidate() {
         alert("브랜드 서브명을 입력해주세요.");
         return false;
     }
-    if(category == '' || category == null) {
-        alert("카테고리를 선택해주세요.");
+
+    const recommCnt = $("#recommPrd").find('tr:not(.no-data)').length;
+    if(recommCnt < 5) {
+        alert("브랜드 추천 상품을 최소 5개 등록해주세요.");
+        return false;
+    }
+
+    const popularCnt = $("#popularPrd").find('tr:not(.no-data)').length;
+    if(popularCnt < 5) {
+        alert("브랜드 인기 상품을 최소 5개 등록해주세요.");
+        return false;
+    }
+    if(popularCnt > 15) {
+        alert("브랜드 인기 상품을 최대 15개 까지만 등록해주세요.");
+        return false;
+    }
+
+    const reviewCnt = $("#reviewPrd").find('tr:not(.no-data)').length;
+    if(reviewCnt < 2) {
+        alert("후기를 최소 2개 등록해주세요.");
+        return false;
+    }
+    if(reviewCnt > 6) {
+        alert("후기를 최대 6개 까지만 등록해주세요.");
         return false;
     }
 
     return true;
-}
-
-function searchPop(target) {
-    const frm = $("#frm_pop");
-    let callback = "";
-
-    // 추천상품
-    if(target == 'recomm') {
-        callback = "addRecommPrd";
-    }
-    // 인기상품
-    else if(target == 'popular') {
-        callback = "addPopularPrd";
-    }
-
-    $("input[name='callbackFunction']").val(callback);
-    $("input[name='type']").val("multi");
-
-    $('#commonProductSearchPop').load('/common/selectProductPop', frm.serialize());
 }
 
 function addRecommPrd(prdList) {
@@ -160,7 +138,7 @@ function addRecommPrd(prdList) {
         addHtml.push('		    </div>');
         addHtml.push('		</td>');
         addHtml.push('		<td class="text-center">');
-        addHtml.push('          <input type="hidden" name="recommPrdcd" value="' + e.prdcd + '" />');
+        addHtml.push('          <div class="in-tb"><input type="hidden" name="recommPrdcd" value="' + e.prdcd + '" />');
         addHtml.push('		' + e.prdcd + '</div>');
         addHtml.push('		</td>');
         addHtml.push('		<td class="text-center">');
@@ -169,10 +147,10 @@ function addRecommPrd(prdList) {
         addHtml.push('		<td class="text-center">');
         addHtml.push('		<div class="in-tb">' + e.brandnm + '</div>');
         addHtml.push('		</td>');
-        addHtml.push('		<td class="text-center">');
+        addHtml.push('		<td class="text-left">');
         addHtml.push('		<div class="in-tb">' + e.prdnm + '</div>');
         addHtml.push('		</td>');
-        addHtml.push('		<td class="text-center">');
+        addHtml.push('		<td class="text-right">');
         addHtml.push('		<div class="in-tb">' + e.price + '</div>');
         addHtml.push('		</td>');
         addHtml.push('		<td class="text-center">');
@@ -217,7 +195,7 @@ function addPopularPrd(prdList) {
         addHtml.push('		    </div>');
         addHtml.push('		</td>');
         addHtml.push('		<td class="text-center">');
-        addHtml.push('          <input type="hidden" name="popularPrdcd" value="' + e.prdcd + '" />');
+        addHtml.push('          <div class="in-tb"><input type="hidden" name="popularPrdcd" value="' + e.prdcd + '" />');
         addHtml.push('		' + e.prdcd + '</div>');
         addHtml.push('		</td>');
         addHtml.push('		<td class="text-center">');
@@ -226,10 +204,10 @@ function addPopularPrd(prdList) {
         addHtml.push('		<td class="text-center">');
         addHtml.push('		<div class="in-tb">' + e.brandnm + '</div>');
         addHtml.push('		</td>');
-        addHtml.push('		<td class="text-center">');
+        addHtml.push('		<td class="text-left">');
         addHtml.push('		<div class="in-tb">' + e.prdnm + '</div>');
         addHtml.push('		</td>');
-        addHtml.push('		<td class="text-center">');
+        addHtml.push('		<td class="text-right">');
         addHtml.push('		<div class="in-tb">' + e.price + '</div>');
         addHtml.push('		</td>');
         addHtml.push('		<td class="text-center">');
@@ -248,10 +226,11 @@ function addPopularPrd(prdList) {
 
 function goReviewPop() {
     let arrParam = [];
-    arrParam.push('callbackFunction=parent.addReview');
+    //arrParam.push('callbackFunction=parent.addReview');
+    $("input[name='callbackFunction']").val("addReview");
 
     $("#reviewPop").show();
-    $("#reviewPop").load("/product/brand/reviewPop"+ '?' + arrParam.join('&'));
+    $("#reviewPop").load("/product/brand/reviewPop"+ '?' + arrParam.join('&') + "&callbackFunction="+$("input[name='callbackFunction']").val());
 }
 
 function addReview(prdList) {
@@ -282,17 +261,17 @@ function addReview(prdList) {
         addHtml.push('		    </div>');
         addHtml.push('		</td>');
         addHtml.push('		<td class="text-center">');
-        addHtml.push('          <input type="hidden" name="reviewPrdcd" value="' + e.prdcd + '" />');
+        addHtml.push('          <div class="in-tb"><input type="hidden" name="reviewPrdcd" value="' + e.prdcd + '" />');
         addHtml.push('		' + e.prdcd + '</div>');
         addHtml.push('		</td>');
         addHtml.push('		<td class="text-center">');
         addHtml.push('		<div class="in-tb">' + e.brandnm + '</div>');
         addHtml.push('		</td>');
-        addHtml.push('		<td class="text-center">');
+        addHtml.push('		<td class="text-left">');
         addHtml.push('		<div class="in-tb">' + e.prdnm + '</div>');
         addHtml.push('		</td>');
-        addHtml.push('		<td class="text-center">');
-        addHtml.push('          <input type="hidden" name="reviewText" value="' + e.review + '" />');
+        addHtml.push('		<td class="text-left">');
+        addHtml.push('          <div class="in-tb text-elps"><input type="hidden" name="reviewText" value="' + e.review + '" />');
         addHtml.push('		' + e.review + '</div>');
         addHtml.push('		</td>');
         addHtml.push('  </tr>');
@@ -314,7 +293,7 @@ function addExhibit(exhibitList) {
 
     $(exhibitList).each(function (i, e) {
         $("#exhibit").children('tr:not(#no_data)').each(function(i, tr) {
-            if (e.cd === $("input[name='exhibitionCd']", tr).val()) {
+            if (e.code === $("input[name='exhibitionCd']", tr).val()) {
                 alert('이미 등록된 기획전이 있습니다.');
                 isCheck = false;
                 return false;
@@ -325,11 +304,11 @@ function addExhibit(exhibitList) {
         }
 
         addHtml.push('  <tr>');
-        addHtml.push('      <input type="hidden" name="exhibitionCd" value="' + e.cd + '" />');
+        addHtml.push('      <input type="hidden" name="exhibitionCd" value="' + e.code + '" />');
         addHtml.push('		<td class="text-center">');
-        addHtml.push('		<div class="in-tb">' + e.channel + '</div>');
+        addHtml.push('		<div class="in-tb">' + e.channelNm + '</div>');
         addHtml.push('		</td>');
-        addHtml.push('		<td class="text-center">');
+        addHtml.push('		<td class="text-left">');
         addHtml.push('		<div class="in-tb">' + e.name + '</div>');
         addHtml.push('		</td>');
         addHtml.push('		<td class="text-center">');
@@ -349,8 +328,55 @@ function addExhibit(exhibitList) {
     $('#exhibit').append(addHtml.join('\n'));
 }
 
-function goProdDelete(check) {
-    check.remove();
+function goProdDelete(prdType) {
+    const flagAction = $("input[name='flagAction']").val();
+
+    if(flagAction == 'R') {
+        const check = $("input:checkbox[name='selectCheck" + prdType + "']:checked").closest('tr');
+        check.remove();
+    } else if(flagAction == 'M') {
+        const check = $("input:checkbox[name='selectCheck" + prdType + "']:checked");
+
+        if (check.length == 0) {
+            alert("삭제할 대상을 선택해주세요.");
+            return false;
+        }
+
+        const frm = $('#frm_reg');
+        $('input[name="arrPrdId"]', frm).remove();
+
+        for (let i = 0; i < check.length; i++) {
+            //let prdId = check.eq(i).val();
+            let prdId = check.eq(i).attr('id');
+
+            let arrHtml = [];
+            arrHtml.push('<input type="hidden" name="arrPrdId" value="' + prdId + '" />');
+
+            $(arrHtml.join('\n')).appendTo(frm);
+        }
+
+        $("input[name='flag']").val("PD");
+        $("#siteCd").attr("disabled", false);
+        if(confirm("삭제하시겠습니까?")) {
+            cmAjax({
+                url : "/product/brand/saveAjax"
+                , type : "POST"
+                , data : frm.serialize()
+                , dataType : "json"
+                , isModal : true
+                , isModalEnd : true
+                , success : function (data) {
+                    if (data.status == "succ") {
+                        alert("삭제되었습니다.");
+                        document.location.reload();
+                    } else {
+                        alert("fail");
+                        return false;
+                    }
+                }
+            });
+        }
+    }
 }
 
 function goSave() {
@@ -365,7 +391,7 @@ function goSave() {
     const frm = $("#frm_reg");
     if(confirm("저장하시겠습니까?")) {
         cmAjax({
-            url : "/product/brand/save"
+            url : "/product/brand/saveAjax"
             , type : "POST"
             , data : frm.serialize()
             , dataType : "json"

@@ -64,16 +64,22 @@
 				<div class="layer-body">
 					<div class="layer-content">
 						<div class="in-content">
+							<!--[Dev] 20210826 필수입력부분 추가 -->
 							<div class="board-option">
-								<div class="page-info">
-									<i class="ico-info"></i><span class="text-guide-sm">배송방법을 변경합니다.</span>
-								</div>			
+								<div class="left-area">
+									<div class="page-info">
+										<i class="ico-info"></i><span class="text-guide-sm">배송방법을 변경합니다.</span>
+									</div>
+								</div>
+								<div class="right-area">
+									<spanc class="text-guide-sm2"><i class="es"><em class="blind">필수입력</em></i>는 필수항목입니다.
+								</spanc></div>						
 							</div>
 							<div class="board-form mt10">
 								<table>
 									<caption>배송방법</caption>
 									<colgroup>
-										<col class="w-col-tit2"><col />
+										<col style="width: 150px;"><col /><!--[Dev] 20210804 width값수정 -->
 									</colgroup>
 									<tbody>
 										<tr>
@@ -99,7 +105,7 @@
 									<table>
 										<caption>결제정보</caption>
 										<colgroup>
-											<col class="w-col-tit2"><col />
+											<col style="width: 150px;"><col /><!--[Dev] 20210804 width값수정 -->
 										</colgroup>
 										<tbody>
 
@@ -115,8 +121,47 @@
 														<div class="custom-radio">
 															<input type="radio" id="radio-1-1" class="radio" name="radio-item-1" checked=""><label for="radio-1-1">적립금 지급</label>
 														</div>
-														<div class="custom-radio">
+														<div class="custom-radio payment-area-add">
 															<input type="radio" id="radio-1-2" class="radio" name="radio-item-1"><label for="radio-1-2">결제수단으로 환불</label>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div><!--// board-form -->
+							</div>
+							<!--[Dev] 20210804 환불정보 추가 -->
+							<div class="mt40 refund-information-box">
+								<h5 class="tit-cnt">환불정보</h5>
+								<div class="board-form mt10">
+									<table>
+										<caption>환불정보</caption>
+										<colgroup>
+											<col style="width: 150px;"><col /><!--[Dev] 20210804 width값수정 -->
+										</colgroup>
+										<tbody>
+
+											<tr>
+												<th scope="row"><span class="in-tb">환불 은행<i class="es"><em class="blind">필수입력</em></i></span></th><!--[Dev] 20210826 필수입력추가 -->
+												<td>
+													<div class="input-group-form">
+														<select class="select w140">
+															<option value="">선택</option>
+														</select>
+													</div>
+												</td>
+											</tr>
+
+											<tr>
+												<th scope="row"><span class="in-tb">예금주/환불계좌<i class="es"><em class="blind">필수입력</em></i></span></th><!--[Dev] 20210826 필수입력추가 -->
+												<td>
+													<div class="input-group w-full">
+														<div class="input-group-cell w140">
+															<input type="text" class="input-text" placeholder="이름 입력">
+														</div>
+														<div class="input-group-cell">
+															<input type="text" class="input-text" placeholder="‘-’없이 입력">
 														</div>
 													</div>
 												</td>
@@ -152,6 +197,15 @@
             }
             layerHeight () // 셀렉트박스 선택 후 레이어팝업의 높이값 짝수로 변환 (홀수가 될 경우 크롬브라우저에서 border등이 깨지는 버그 현상 방지)
         }); 
+		/*[Dev] 20210804 환불정보 영역 스크립트 추가*/
+		$(".custom-radio").click(function(){
+			if($(".payment-area-add input:radio").is(':checked')){
+				$(".refund-information-box").css('display','block');
+			}else{
+				$(".refund-information-box").css('display','none');
+			}
+		});
+		
     }); 
 </script>
 <!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->

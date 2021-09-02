@@ -44,75 +44,66 @@
 
 			
 
-			<!-- 상세검색영역 -->
-			<div class="searh-detail-area ui-toggle-content">
-				<div class="board-form">	
-					<table>
-						<caption>정보입력</caption>
-						<colgroup>
-							<col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
-						</colgroup>
-						<tbody>
-							<tr>
-								<th scope="row"><span class="in-tb">등록 사이트</span></th>
-								<td>
-									<div class="input-group-form">
-										<select class="select w140">
-											<option value="">랭킹닭컴</option>
-										</select>
-									</div>
-								</td>
-								<th scope="row"><span class="in-tb">베스트 상품 유형</span></th>
-								<td>
-									<div class="input-group-form">
-										<select class="select w140">
-											<option value="">판매킹</option>
-                                            <option value="">별별랭킹</option>
-                                            <option value="">알뜰킹</option>
-											<option value="" selected>성분 랭킹</option>
-										</select>
-									</div>
-								</td>
-                            </tr>	                           
-                            <tr>
-								<th scope="row"><span class="in-tb">전시 카테고리</span></th>
-								<td>
-									<div class="input-group">
-                                        <div class="input-group-cell w140">
-                                            <select class="select">
-                                                <option value="">대분류</option>
-                                            </select>
-                                        </div>
-                                        <div class="input-group-cell w140">
-                                            <select class="select" disabled>
-                                                <option value="">중분류</option>
-                                            </select>
-                                        </div>
-                                        <div class="input-group-cell w140">
-                                            <select class="select" disabled>
-                                                <option value="">소분류</option>
-                                            </select>
-                                        </div>
-                                    </div>
-								</td>
-								<th scope="row"><span class="in-tb">대상기간</span></th>
-								<td>
-									<div class="input-group-form">
-										<select class="select w140">
-											<option value="">단백질</option>
-										</select>
-									</div>
-								</td>
-                            </tr>	
-						</tbody>
-					</table>		
-				</div><!--// board-form -->
-				<div class="btn-area">
-					<button type="button" class="btn-basic-md btn-primary"><span>검색</span></button>
-					<button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
-				</div>
+			<div class="board-form">	
+				<table>
+					<caption>정보입력</caption>
+					<colgroup>
+						<col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"><span class="in-tb">등록 사이트</span></th>
+							<td>
+								<div class="input-group-form">
+									<select class="select w140">
+										<option value="">랭킹닭컴</option>
+									</select>
+								</div>
+							</td>
+							<th scope="row"><span class="in-tb">베스트 상품 유형</span></th>
+							<td>
+								<div class="input-group-form">
+									<select class="select w140">
+										<option value="">판매킹</option>
+										<option value="">별별랭킹</option>
+										<option value="">알뜰킹</option>
+										<option value="" selected>성분 랭킹</option>
+									</select>
+								</div>
+							</td>
+						</tr>	                           
+						<tr>
+                            <!-- [Dev] 20210802 수정 : th text 수정 및 위치이동 -->
+                            <th scope="row"><span class="in-tb">성분 유형</span></th>
+							<td>
+								<div class="input-group-form">
+									<select class="select w140">
+										<!--[Dev] 20210819 지방탄수화물 추가 -->
+										<option value="">단백질</option>
+										<option value="">칼로리</option>
+										<option value="">나트륨</option>
+										<option value="">탄수화물</option>
+										<option value="">지방</option>
+									</select>
+								</div>
+							</td>
+							<!-- [Dev] 20210802 수정 : 카테고리 수정 -->
+							<th scope="row"><span class="in-tb">카테고리</span></th>
+							<td>
+								<div class="input-group-form">
+									<select class="select w140">
+										<option value="">전체</option>
+									</select>
+								</div>
+							</td>
+						</tr>	
+					</tbody>
+				</table>		
+			</div><!--// board-form -->
+			<div class="btn-area mt40">
+				<button type="button" class="btn-basic-md btn-primary"><span>검색</span></button>
+				<button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
 			</div>
-			<!--// 상세검색영역 -->
 			<div class="board-movable-wrap mt60">
 				<div class="board-option">
 					<div class="left-area">
@@ -131,22 +122,30 @@
 							</div>
 							<button type="button" class="btn-func btn-default move all last-row"><span>최하</span></button>
 						</div>
+                        <!-- [Dev] 20210802 추가 : 버튼 추가 -->
+                        <button type="button" class="btn-func btn-default"><span>알뜰킹 대상 상품 등록</span></button>
 					</div><!--// right-area -->
 				</div>
 
-				<div class="board-list movable-row mt10">
+                <!-- [Dev] 20210802 수정 : 카테고리 추가 및 판매가 좌측정렬 -->
+				<!--[Dev] 20210819 목록위치변경 및 지방 탄수화물 추가 테이블스크롤변경 -->
+				<div class="board-list scroll-table movable-row mt10">
 					<table>
 						<caption>목록</caption>
 						<colgroup>
 							<col class="w-col-check">
 							<col class="w-col-num">
-                            <col style="width:120px;">
-							<col style="width:auto;">
+                            <col style="width:110px;">
+                            <col style="width:130px;">
+							
 							<col style="width:120px;">
-                            <col style="width:120px;">
-                            <col style="width:130px;">
-                            <col style="width:130px;">
-                            <col style="width:130px;">
+							<col style="width:452px;">
+                            <col style="width:110px;">
+                            <col style="width:110px;">
+                            <col style="width:110px;">
+                            <col style="width:110px;">
+							<col style="width:110px;">
+							<col style="width:110px;">
 							<col style="width:120px;">
 						</colgroup>
 						<thead>
@@ -158,12 +157,15 @@
 								</th>
 								<th scope="col" class="list-num"><span class="in-tb">순위</span></th>
                                 <th scope="col"><span class="in-tb">성분 유형</span></th>
-								<th scope="col"><span class="in-tb">상품명</span></th>
-                                <th scope="col"><span class="in-tb">브랜드</span></th>
+                                <th scope="col"><span class="in-tb">카테고리</span></th>
+								<th scope="col"><span class="in-tb">브랜드</span></th>
+								<th scope="col"><span class="in-tb">상품명</span></th>                                
 								<th scope="col"><span class="in-tb">판매가</span></th>
                                 <th scope="col"><span class="in-tb">단백질</span></th>
                                 <th scope="col"><span class="in-tb">칼로리</span></th>
                                 <th scope="col"><span class="in-tb">나트륨</span></th>
+								<th scope="col"><span class="in-tb">탄수화물</span></th>
+								<th scope="col"><span class="in-tb">지방</span></th>
 								<th scope="col"><span class="in-tb">판매</span></th>
 							</tr>
 						</thead>
@@ -176,12 +178,15 @@
 								</td>
 								<td class="list-num"><div class="in-tb">10</div></td>
                                 <td class="text-center"><div class="in-tb">단백질</div></td>
-								<td class="text-left"><div class="in-tb">맛있닭 닭가슴살 스테이크 오리지널3</div></td>
+                                <td class="text-center"><a href="#none" class="in-tb">스테이크 / 훈제</a></td>
 								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">57,542</div></td>
+								<td class="text-left"><div class="in-tb">맛있닭 닭가슴살 스테이크 오리지널3</div></td>								
+								<td class="text-right"><div class="in-tb">57,542</div></td>
 								<td class="text-center"><div class="in-tb">24g</div></td>
                                 <td class="text-center"><div class="in-tb">180kcal</div></td>
                                 <td class="text-center"><div class="in-tb">25mg</div></td>
+								<td class="text-center"><div class="in-tb">17g</div></td>
+								<td class="text-center"><div class="in-tb">5g</div></td>
 								<td class="text-center"><div class="in-tb">38,661</div></td>
 							</tr>
                             <tr class="movable" id="2">
@@ -192,15 +197,18 @@
 								</td>
 								<td class="list-num"><div class="in-tb">10</div></td>
                                 <td class="text-center"><div class="in-tb">단백질</div></td>
-								<td class="text-left"><div class="in-tb">맛있닭 닭가슴살 스테이크 오리지널2</div></td>
+                                <td class="text-center"><a href="#none" class="in-tb">스테이크 / 훈제</a></td>
 								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">57,542</div></td>
+								<td class="text-left"><div class="in-tb">맛있닭 닭가슴살 스테이크 오리지널3</div></td>								
+								<td class="text-right"><div class="in-tb">57,542</div></td>
 								<td class="text-center"><div class="in-tb">24g</div></td>
                                 <td class="text-center"><div class="in-tb">180kcal</div></td>
                                 <td class="text-center"><div class="in-tb">25mg</div></td>
+								<td class="text-center"><div class="in-tb">17g</div></td>
+								<td class="text-center"><div class="in-tb">5g</div></td>
 								<td class="text-center"><div class="in-tb">38,661</div></td>
 							</tr>
-                            <tr class="movable" id="1">
+							<tr class="movable" id="1">
 								<td class="list-check">
 									<div class="custom-checkbox single">
 										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
@@ -208,20 +216,24 @@
 								</td>
 								<td class="list-num"><div class="in-tb">10</div></td>
                                 <td class="text-center"><div class="in-tb">단백질</div></td>
-								<td class="text-left"><div class="in-tb">맛있닭 닭가슴살 스테이크 오리지널1</div></td>
+                                <td class="text-center"><a href="#none" class="in-tb">스테이크 / 훈제</a></td>
 								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-center"><div class="in-tb">57,542</div></td>
+								<td class="text-left"><div class="in-tb">맛있닭 닭가슴살 스테이크 오리지널3</div></td>								
+								<td class="text-right"><div class="in-tb">57,542</div></td>
 								<td class="text-center"><div class="in-tb">24g</div></td>
                                 <td class="text-center"><div class="in-tb">180kcal</div></td>
                                 <td class="text-center"><div class="in-tb">25mg</div></td>
+								<td class="text-center"><div class="in-tb">17g</div></td>
+								<td class="text-center"><div class="in-tb">5g</div></td>
 								<td class="text-center"><div class="in-tb">38,661</div></td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
+                <!--// [Dev] 20210802 수정 : 카테고리 추가 및 판매가 좌측정렬 -->
 				<div class="btn-area mt10">
 					<div class="left">
-						<button type="button" class="btn-option btn-default"><span>선택 삭제</span></button>
+						<button type="button" class="btn-option btn-default"><span>전체 삭제</span></button><!--[Dev] 20210819 텍스트변경 -->
 					</div>
 				</div>
 			</div>

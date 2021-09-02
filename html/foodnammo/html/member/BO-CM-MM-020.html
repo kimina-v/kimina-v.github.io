@@ -64,7 +64,7 @@
 
             <div class="board-option mt40">
 				<div class="left-area">
-					<div class="page-info">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div>
+                    <div class="page-info mt10">총 <strong class="text-primary">1,000</strong>건</div><!-- [Dev] 20210721 수정 : mt10 추가 --><!-- [Dev] 20210722 수정 : 텍스트 수정 -->
 				</div><!--// left-area -->
 				<div class="right-area">
 					<button type="button" class="btn-func btn-default"><span>등급이력조회</span></button>
@@ -75,32 +75,32 @@
                 <table>
                     <caption>목록</caption>
                     <colgroup>
-                        <col class="w-col-num">
-                        <col style="width:140px;">
-                        <col style="width:140px;">
-                        <col style="width:140px;">
-                        <col style="width:220px;">
-                        <col style="width:100px;">
-                        <col style="width:100px;">
-                        <col style="width:100px;">
-                        <col style="width:100px;">
-                        <col style="width:75px;">
-                        <col style="width:100px;">
-                        <col style="width:160px;">
-                        <col style="width:160px;">
+                        <!-- <col class="w-col-num">[Dev] 20210722 수정 : 제거 -->
+                        <col style="width:140px">
+                        <col style="width:140px">
+                        <col style="width:140px">
+                        <col style="width:220px">
+                        <col style="width:100px">
+                        <!-- <col style="width:100px"> [Dev] 20210827 제거 -->
+                        <col style="width:100px">
+                        <col style="width:100px">
+                        <!-- <col style="width:75px">[Dev] 20210722 수정 : 제거 -->
+                        <col style="width:100px">
+                        <col style="width:160px">
+                        <col style="width:160px">
                     </colgroup>
                     <thead>
                         <tr>
-                            <th scope="col" class="list-num"><span class="in-tb">번호</span></th>
+                            <!-- <th scope="col" class="list-num"><span class="in-tb">번호</span></th>[Dev] 20210722 수정 : 제거 -->
                             <th scope="col"><span class="in-tb">사이트</span></th>
                             <th scope="col"><span class="in-tb">등급</span></th>
                             <th scope="col"><span class="in-tb">회원수</span></th>
                             <th scope="col"><span class="in-tb">승급구매금액(누적결제금액)</span></th>
                             <th scope="col"><span class="in-tb">적립</span></th>
-                            <th scope="col"><span class="in-tb">할인</span></th>
+                            <!-- <th scope="col"><span class="in-tb">할인</span></th> [Dev] 20210827 -->
                             <th scope="col"><span class="in-tb">무료배송</span></th>
                             <th scope="col"><span class="in-tb">적립금</span></th>
-                            <th scope="col"><span class="in-tb">쿠폰</span></th>
+                            <!-- <th scope="col"><span class="in-tb">쿠폰</span></th> [Dev] 20210722 수정 : 제거 -->
                             <th scope="col"><span class="in-tb">상태</span></th>
                             <th scope="col"><span class="in-tb">관리자</span></th>
                             <th scope="col"><span class="in-tb">등록일</span></th>
@@ -108,31 +108,31 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="list-num"><div class="in-tb">10</div></td>
+                            <!-- <td class="list-num"><div class="in-tb">10</div></td>[Dev] 20210722 수정 : 제거 -->
                             <td class="text-center"><div class="in-tb">랭킹닭컴</div></td>
                             <td class="text-center"><a href="#none" class="in-tb">닭회장</a></td>
                             <td class="text-center"><div class="in-tb">759,000명</div></td>
                             <td class="text-center"><div class="in-tb">700만원 이상</div></td>
-                            <td class="text-center"><div class="in-tb">7%</div></td>
-                            <td class="text-center"><div class="in-tb">0%</div></td>
+                            <td class="text-right"><div class="in-tb">7%</div></td><!-- [Dev] 20210723 수정 : text-center -> text-right 클래스명 변경 -->
+                            <!-- <td class="text-right"><div class="in-tb">0%</div></td> [Dev] 20210827 --><!-- [Dev] 20210723 수정 : text-center -> text-right 클래스명 변경 -->
                             <td class="text-center"><div class="in-tb">무제한</div></td>
-                            <td class="text-center"><div class="in-tb">1,000P</div></td>
-                            <td class="text-center"><div class="in-tb">6개</div></td>
+                            <td class="text-right"><div class="in-tb">1,000P</div></td><!-- [Dev] 20210723 수정 : text-center -> text-right 클래스명 변경 -->
+                            <!-- <td class="text-center"><div class="in-tb">6개</div></td> [Dev] 20210722 수정 : 제거 -->
                             <td class="text-center"><div class="in-tb">미사용</div></td>
                             <td class="text-center"><div class="in-tb">Abcde/푸드나무</div></td>
                             <td class="text-center"><div class="in-tb">2021.05.21. 10:59</div></td>
                         </tr>
                         <tr>
-                            <td class="list-num"><div class="in-tb">10</div></td>
+                            <!-- <td class="list-num"><div class="in-tb">10</div></td>[Dev] 20210722 수정 : 제거 -->
                             <td class="text-center"><div class="in-tb">랭킹닭컴</div></td>
                             <td class="text-center"><a href="#none" class="in-tb">등급3</a></td>
                             <td class="text-center"><div class="in-tb">1,759,000명</div></td>
                             <td class="text-center"><div class="in-tb">700만원 이상</div></td>
-                            <td class="text-center"><div class="in-tb">7%</div></td>
-                            <td class="text-center"><div class="in-tb">0%</div></td>
+                            <td class="text-right"><div class="in-tb">7%</div></td><!-- [Dev] 20210723 수정 : text-center -> text-right 클래스명 변경 -->
+                            <!-- <td class="text-right"><div class="in-tb">0%</div></td> [Dev] 20210827 --><!-- [Dev] 20210723 수정 : text-center -> text-right 클래스명 변경 -->
                             <td class="text-center"><div class="in-tb">무제한</div></td>
-                            <td class="text-center"><div class="in-tb">1,000P</div></td>
-                            <td class="text-center"><div class="in-tb">6개</div></td>
+                            <td class="text-right"><div class="in-tb">1,000P</div></td><!-- [Dev] 20210723 수정 : text-center -> text-right 클래스명 변경 -->
+                            <!-- <td class="text-center"><div class="in-tb">6개</div></td> [Dev] 20210722 수정 : 제거 -->
                             <td class="text-center"><div class="in-tb">미사용</div></td>
                             <td class="text-center"><div class="in-tb">Abcde/푸드나무</div></td>
                             <td class="text-center"><div class="in-tb">2021.05.21. 10:59</div></td>
@@ -141,7 +141,7 @@
                 </table>
             </div>
 
-			<div class="pagination mt20">
+			<!-- <div class="pagination mt20">
 				<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>
 				<a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a>
 				<a href="#" class="current"><span>1</span></a>
@@ -151,7 +151,7 @@
 				<a href="#"><span>5</span></a>
 				<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
 				<a href="#" class="btn-page last" title="마지막"><span class="blind">마지막</span></a>
-			</div><!--// pagination -->
+			</div>[Dev] 20210722 수정 : 제거 -->
 		</div><!--// content-area -->
 
 		<button type="button" class="btn-gotop"><span class="blind">위로</span></button>

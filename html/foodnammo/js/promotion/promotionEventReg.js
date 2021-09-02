@@ -1,6 +1,7 @@
 const EventView = {
     formName : 'event',
     imageFormName : 'eventImage',
+    popFormName : 'eventPop',
     listFormName : 'eventList',
     formValue : {
         benefit_type : [],
@@ -11,6 +12,17 @@ const EventView = {
         EventView.fetchFormData();
         EventView.refreshEventUI(true);
         EventView.loadEditor();
+
+        addCheckboxEvent($(".all_check_grade", $eventForm), $(".select_check_grade", $eventForm));
+        addCheckboxEvent($(".all_check_group", $eventForm), $(".select_check_group", $eventForm));
+
+        // 상세설명 tab
+        $eventForm.on('click', ".tabBtn", function () {
+            $('.tabBtn').parent().removeClass('current');
+            $(this).parent().addClass('current');
+            $('.tabContent').hide();
+            $('#'+$(this).data('target')).show();
+        });
 
         //라디오 + input UI disable event
         $('input[type="radio"].radioInput').change(function(e){
@@ -60,6 +72,9 @@ const EventView = {
                     break;
                 case "vFirstComeType" : //선착순 타입 변경
                     EventView.refreshFirstComeUI();
+                    break;
+                case "vAttendPlayType" : //출석체크 참여방식 변경
+                    EventView.refreshAttendUI();
                     break;
                 case "vBenefitType" : //혜택 타입 변경
                     EventView.refreshBenefitUI($(this));
@@ -111,22 +126,24 @@ const EventView = {
                 $answerListBox.append(tagStr);
             }else if(btn.hasClass('searchPointBtn')){
                 //포인트검색
-                //TODO 팝업호출 임시로 callback trigger
-                const testData = {
-                    name: '6월 포인트 적립',
-                    code:'9999',
-                    info:'5%적립'
+                const eventPop = $("#"+EventView.popFormName);
+                $('input[name=type]', eventPop).val('single');
+                $('input[name=callbackFunction]', eventPop).val('addEventPoint');
+                $('#commonPointSearchPop').load('/common/selectPointPop', eventPop.serialize());
+
+                addEventPoint = function (point) {
+                    EventView.setBenefit(point, $(btn).closest('tr'));
                 }
-                EventView.setBenefit(testData,$(btn).closest('tr'));
             }else if(btn.hasClass('searchCouponBtn')){
                 //쿠폰검색
-                //TODO 팝업호출 임시로 callback trigger
-                const testData = {
-                    name: '6월 할인 쿠폰',
-                    code:'8888',
-                    info:'50000이상 10% 할인'
+                const eventPop = $("#"+EventView.popFormName);
+                $('input[name=type]', eventPop).val('single');
+                $('input[name=callbackFunction]', eventPop).val('addEventCoupon');
+                $('#commonCouponSearchPop').load('/common/selectCouponPop', eventPop.serialize());
+
+                addEventCoupon = function (coupon) {
+                   EventView.setBenefit(coupon, $(btn).closest('tr'));
                 }
-                EventView.setBenefit(testData,$(btn).closest('tr'));
             }
         });
 
@@ -145,7 +162,6 @@ const EventView = {
             }
 
             const noData = $("tr.no-data",$benefitTableBody);
-            const addBenefitIdx = benefitCnt > 0 ? benefitCnt : 0;
             const rowId = EventView.benefitKey++;
             let rowStr = '<tr>';
             rowStr += '<td class="list-check">';
@@ -153,7 +169,6 @@ const EventView = {
             rowStr += '<input type="checkbox" id="benefit'+rowId+'" class="checkbox" name="arrBenefitId"><label for="benefit'+rowId+'"><span class="blind">선택</span></label>';
             rowStr += '</div>';
             rowStr += '</td>';
-            rowStr += '<td class="list-num"><div class="in-tb rowCount" >'+(addBenefitIdx+1)+'</div></td>';
             rowStr += '<td class="text-center">';
             rowStr += '<select class="select w-full changeEventForm" data-name="vBenefitType">';
             rowStr += EventView.formValue.benefit_type.reduce(function (result, benefit) {
@@ -161,10 +176,6 @@ const EventView = {
                 return result;
             }, '');
             rowStr += '</select>';
-            rowStr += '</td>';
-            rowStr += '<td>';
-            rowStr += '<div id="benefitImage'+rowId+'"></div>';
-            rowStr += '<input type="hidden" data-name="vBenefitid" value="benefitImage'+rowId+'"/>';
             rowStr += '</td>';
             rowStr += '<td class="text-center benefitWrapper">';
             rowStr += '<div class="input-group w-full">';
@@ -175,17 +186,17 @@ const EventView = {
             rowStr += '</div>';
             rowStr += '</td>';
             rowStr += '<td class="text-center">';
-            rowStr += '<input type="text" class="input-text w-full" data-name="vBenefitInfo" value="" disabled>';
-            rowStr += '<input type="hidden" data-name="vBenefitCd" value="">';
+            rowStr += '<input type="text" class="input-text w-full" data-name="vBenefitCont" value="" disabled>';
+            rowStr += '<input type="hidden" data-name="vBenefitCd">';
             rowStr += '</td>';
 
             if(eventType === 'E02'){
                 //출석체크
                 rowStr += '<td class="text-center">';
-                rowStr += '<input type="text" data-name="nWinDay" class="input-text w-full text-center numberOnly" value="">';
+                rowStr += '<input type="text" data-name="nTotPlayDay" data-attend-type="100" class="input-text w-full text-center numberOnly" placeholder="숫자 입력" value="">';
                 rowStr += '</td>';
                 rowStr += '<td class="text-center">';
-                rowStr += '<input type="text" data-name="nPlayDayCnt" class="input-text w-full text-center numberOnly" value="">';
+                rowStr += '<input type="text" data-name="nContPlayDay" data-attend-type="200" class="input-text w-full text-center numberOnly" placeholder="숫자 입력" value="">';
                 rowStr += '</td>';
             }
 
@@ -198,7 +209,7 @@ const EventView = {
                 rowStr += '</div>';
                 rowStr += '</td>';
                 rowStr += '<td class="text-center">';
-                rowStr += '<select class="select w-full" data-name="vDuplicatePlayYn">';
+                rowStr += '<select class="select w-full" data-name="vDuplicateWinYn">';
                 rowStr += '<option value="Y">허용</option>';
                 rowStr += '<option value="N">불가</option>';
                 rowStr += '</select>';
@@ -227,10 +238,24 @@ const EventView = {
             EventView.deleteBenefit($('[name=arrBenefitId]:checked:not(#check-all)').closest('tr'));
         });
 
+        //복사버튼 클릭
+        $('#eventCopyBtn').click(function () {
+            const eventCd = $('input[name="vEventCd"]').val();
+            const eventNm = $('input[name="vEventNm"]').val();
+            if(confirm('['+eventNm+']' + ' 이벤트를 복사 하시겠습니까?')) {
+                $eventForm.attr('action', '/promotion/event/register?eventCd='+eventCd+'&copy=Y');
+                $eventForm.submit();
+            }
+        });
+
         //저장버튼 클릭
         $("#eventSaveBtn").click(function(){
-            const pcHtml = CKEDITOR.instances.pcHtml.getData();
-            const mobileHtml = CKEDITOR.instances.mobileHtml.getData();
+            $("#vSitecd").attr("disabled", false);
+
+            $("textarea[name='clobPc']").text(CKEDITOR.instances.pcHtml.getData());
+            $("textarea[name='clobMobile']").text(CKEDITOR.instances.mobileHtml.getData());
+            const pcHtml = $("textarea[name='clobPc']").val();
+            const mobileHtml = $("textarea[name='clobMobile']").val();
             const eventType = $('select[name="vEventType"]').val();
             const startDate = $('#eventStartDate').val();
             const startHour = $('#eventStartHour').val();
@@ -248,6 +273,14 @@ const EventView = {
             reqData.vEventSdtm = startDtm;
             reqData.vEventEdtm = endDtm;
             reqData.vWinDate = winDate ? winDate.split('.').join('') : '';
+
+            let check = 'Y';
+            const attendTypeCnt = document.getElementsByName("vAttendPlayType").length;
+            for(let i=0; i<attendTypeCnt; i++) {
+                if(document.getElementsByName("vAttendPlayType")[i].checked == false) {
+                    check = 'N';
+                }
+            }
 
             $('#event').serializeArray().forEach(function(form){
                 reqData[form.name] = encodeURIComponent(form.value);
@@ -268,6 +301,9 @@ const EventView = {
 
             reqData.targetUserOptList = getDataNameList($('.targetUserBox input[type="checkbox"]:checked').parent());
             reqData.benefitList = getDataNameList($('#benefitTableBody>tr:not(.no-data)'));
+            if(check == 'Y') {
+                reqData.vAttendPlayType = '300';
+            }
 
             //퀴즈인경우
             if(eventType === 'E04'){
@@ -322,7 +358,12 @@ const EventView = {
             , success : function (data) {
                 if(data.status == "succ"){
                     EventView.formValue = data.object;
+                } else {
+                    alert("에러가 발생하였습니다.");
                 }
+            }
+            , error : function(e) {
+                alert("에러가 발생하였습니다.");
             }
         });
     },
@@ -370,8 +411,20 @@ const EventView = {
     },
     setBenefit : function(benefit, $target){
         $target.find('[data-name=vBenefitName]').val(benefit.name);
-        $target.find('[data-name=vBenefitCd]').val(benefit.code);
-        $target.find('[data-name=vBenefitInfo]').val(benefit.info);
+        $target.find('[data-name=vBenefitCd]').val(benefit.cd);
+        if(benefit.type == '쿠폰') {
+            if(!isEmpty(benefit.price)) {
+                $target.find('[data-name=vBenefitCont]').val(benefit.price + "원 할인");
+            } else if(!isEmpty(benefit.rate)) {
+                $target.find('[data-name=vBenefitCont]').val(benefit.rate + "% 할인");
+            }
+        } else if(benefit.type == '적립금') {
+            if(!isEmpty(benefit.price)) {
+                $target.find('[data-name=vBenefitCont]').val(benefit.price + "P 적립");
+            } else if(!isEmpty(benefit.rate)) {
+                $target.find('[data-name=vBenefitCont]').val(benefit.rate + "% 적립");
+            }
+        }
     },
     refreshEventUI : function(init){
         const eventType = $('select[name="vEventType"]').val();
@@ -395,6 +448,11 @@ const EventView = {
         //퀴즈
         if(eventType === 'E04'){
             EventView.refreshQuizUI();
+        }
+
+        //출석체크
+        if(eventType === 'E02') {
+            EventView.refreshAttendUI();
         }
 
         // //댓글, 룰렛의 경우 혜택 멀티 등록 가능
@@ -461,13 +519,33 @@ const EventView = {
         EventView.enableInp($target);
         EventView.disableInp($nonTarget,true);
     },
+    refreshAttendUI : function () {
+        const playType = $('input[name="vAttendPlayType"]:checked').val();
+        const $target = $('[data-attend-type="'+playType+'"]');
+        const $nonTarget = $('[data-attend-type]').not($target);
+
+        let checkAll = "Y";
+        const typeCnt = document.getElementsByName("vAttendPlayType").length;
+        for(let i=0; i<typeCnt; i++) {
+            if(document.getElementsByName("vAttendPlayType")[i].checked == false) {
+                checkAll = "N";
+            }
+        }
+        if(checkAll == 'Y') {
+            EventView.enableInp($target);
+            EventView.enableInp($nonTarget);
+        } else {
+            EventView.enableInp($target);
+            EventView.disableInp($nonTarget,true);
+        }
+    },
     refreshBenefitUI : function($benefit){
         const benefitType = $benefit.val();
         const $benefitRow = $benefit.closest('tr');
         const $benefitWrapper = $benefitRow.find('.benefitWrapper');
         let tagStr = '';
 
-        $benefitRow.find('[data-name=vBenefitInfo],[data-name=vBenefitCd]').val('');
+        $benefitRow.find('[data-name=vBenefitCont],[data-name=vBenefitCd]').val('');
         switch (benefitType) {
             case "B01" : //쿠폰
                 tagStr += '<div class="input-group w-full">';
@@ -518,12 +596,12 @@ const EventView = {
         vEventSdtm : '[시작일시]',
         vEventEdtm : '[종료일시]',
         vEventType : '[이벤트유형]',
-        vWinType : '[당첨구분]'
+        vWinType : '[혜택지급]'
     },
     eventRequireForm : {
         vPlayType : '[참여횟수]',
         nPlayCnt : '[참여횟수]',
-        nTotAttendCnt : '[출석체크 전체 일수]',
+        vAttendPlayType : '[출석체크 참여 방식]',
         vAttendMtd : '[출석 체크 방법]',
         nPlayLimitCnt : '[참여제한수]',
         nDayLimitCnt : '[일일제한수]',
@@ -609,9 +687,9 @@ const EventView = {
     validateByEvent : {
         //출석체크
         'E02': function(reqData,setError){
-            //출석체크 전체 일수
-            if(!reqData.nTotAttendCnt){
-                setError('nTotAttendCnt');
+            //출석체크 참여방식
+            if(!reqData.vAttendPlayType){
+                setError('vAttendPlayType');
                 return;
             }
 

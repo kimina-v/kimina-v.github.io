@@ -57,7 +57,7 @@
 					</colgroup>
 					<tbody>
 						<tr>
-							<th scope="row"><span class="in-tb">등록 사이트<i class="es"><em class="blind">필수입력</em></i></span></th>
+							<th scope="row"><span class="in-tb">등록 사이트</span></th><!--[Dev] 20210825 필수입력제거 -->
 							<td colspan="3">
 								<div class="input-group-form">
 									<select class="select w200">
@@ -82,7 +82,7 @@
 							</td>
 						</tr>	
 						<tr>
-							<th scope="row"><span class="in-tb">브랜드 명<i class="es"><em class="blind">필수입력</em></i></span></th>
+							<th scope="row"><span class="in-tb">브랜드<i class="es"><em class="blind">필수입력</em></i></span></th><!--[Dev] 20210825 텍스트변경 -->
 							<td>
 								<div class="input-group w-full">
 									<input type="text" class="input-text" placeholder="브랜드 명 입력" />
@@ -110,28 +110,17 @@
 								</div><!--// input-group -->
 							</td>
 						</tr>	
+						<!--[Dev] 20210825 카테고리 제거 및 담당MD 위치변경 -->
 						<tr>
-							<th scope="row">
-								<span class="in-tb">카테고리<i class="es"><em class="blind">필수입력</em></i></span></span><!-- [Dev] 0702 수정 -->
-							</th>
+							<th scope="row"><span class="in-tb">브랜드 해시태그</span></th><!-- [Dev] 0702 수정 -->
 							<td>
-								<div class="input-group-form">
-									<select class="select w200">
-										<option value="">대분류</option>
-									</select>
-								</div>
+								<div class="input-group w-full">
+									<input type="text" class="input-text" placeholder="브랜드 해시태그 입력(#포함해서 입력)" /><!-- [Dev] 0702 수정 : placeholder -->
+								</div><!--// input-group -->
 							</td>
 							<th scope="row"><span class="in-tb">담당MD</span></th>
 							<td>
 								<div class="in-tb">담당MD 출력</div>
-							</td>
-						</tr>	
-						<tr>
-							<th scope="row"><span class="in-tb">브랜드 해시태그</span></th><!-- [Dev] 0702 수정 -->
-							<td colspan="3">
-								<div class="input-group w-full">
-									<input type="text" class="input-text" placeholder="브랜드 해시태그 입력(#포함해서 입력)" /><!-- [Dev] 0702 수정 : placeholder -->
-								</div><!--// input-group -->
 							</td>
 						</tr>	
 					</tbody>
@@ -436,7 +425,7 @@
 							</th>
 							<th scope="col"><span class="in-tb">상품코드</span></th>
 							<th scope="col"><span class="in-tb">ERP 코드</span></th>
-							<th scope="col"><span class="in-tb">브랜드 명</span></th>
+							<th scope="col"><span class="in-tb">브랜드</span></th><!--[Dev] 20210825 텍스트변경 -->
 							<th scope="col"><span class="in-tb">상품명</span></th>
 							<th scope="col"><span class="in-tb">온라인 판매가</span></th>
 							<th scope="col"><span class="in-tb">판매상태</span></th>
@@ -454,38 +443,10 @@
 								<td class="text-center"><div class="in-tb">2100324</div></td>
 								<td class="text-center"><div class="in-tb">맛있닭</div></td>
 								<td class="text-left"><div class="in-tb">스팀 닭가슴살 마늘맛3</div></td>
-								<td class="text-center"><div class="in-tb">19,900</div></td>
+								<td class="text-right"><div class="in-tb">19,900</div></td><!--[Dev] 20210825 정렬변경 -->
 								<td class="text-center"><div class="in-tb">정상</div></td>
 								<td class="text-center"><div class="in-tb">전시</div></td>
-							</tr>
-							<tr class="movable" id="2">
-								<td class="list-check">
-									<div class="custom-checkbox single">
-										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">ROM691</div></td>
-								<td class="text-center"><div class="in-tb">2100324</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-left"><div class="in-tb">스팀 닭가슴살 마늘맛2</div></td>
-								<td class="text-center"><div class="in-tb">19,900</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">전시</div></td>
-							</tr>
-							<tr class="movable" id="1">
-								<td class="list-check">
-									<div class="custom-checkbox single">
-										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">ROM691</div></td>
-								<td class="text-center"><div class="in-tb">2100324</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-left"><div class="in-tb">스팀 닭가슴살 마늘맛1</div></td>
-								<td class="text-center"><div class="in-tb">19,900</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">전시</div></td>
-							</tr>
+							</tr>							
 						</tbody>
 					</table>
 				</div>
@@ -598,7 +559,7 @@
 							</th>
 							<th scope="col"><span class="in-tb">상품코드</span></th>
 							<th scope="col"><span class="in-tb">ERP 코드</span></th>
-							<th scope="col"><span class="in-tb">브랜드 명</span></th>
+							<th scope="col"><span class="in-tb">브랜드</span></th><!--[Dev] 20210825 위치변경 -->
 							<th scope="col"><span class="in-tb">상품명</span></th>
 							<th scope="col"><span class="in-tb">온라인 판매가</span></th>
 							<th scope="col"><span class="in-tb">판매상태</span></th>
@@ -616,38 +577,10 @@
 								<td class="text-center"><div class="in-tb">2100324</div></td>
 								<td class="text-center"><div class="in-tb">맛있닭</div></td>
 								<td class="text-left"><div class="in-tb">스팀 닭가슴살 마늘맛3</div></td>
-								<td class="text-center"><div class="in-tb">19,900</div></td>
+								<td class="text-right"><div class="in-tb">19,900</div></td><!--[Dev] 20210825 정렬변경 -->
 								<td class="text-center"><div class="in-tb">정상</div></td>
 								<td class="text-center"><div class="in-tb">전시</div></td>
-							</tr>
-							<tr class="movable" id="2">
-								<td class="list-check">
-									<div class="custom-checkbox single">
-										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">ROM691</div></td>
-								<td class="text-center"><div class="in-tb">2100324</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-left"><div class="in-tb">스팀 닭가슴살 마늘맛2</div></td>
-								<td class="text-center"><div class="in-tb">19,900</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">전시</div></td>
-							</tr>
-							<tr class="movable" id="1">
-								<td class="list-check">
-									<div class="custom-checkbox single">
-										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">ROM691</div></td>
-								<td class="text-center"><div class="in-tb">2100324</div></td>
-								<td class="text-center"><div class="in-tb">맛있닭</div></td>
-								<td class="text-left"><div class="in-tb">스팀 닭가슴살 마늘맛1</div></td>
-								<td class="text-center"><div class="in-tb">19,900</div></td>
-								<td class="text-center"><div class="in-tb">정상</div></td>
-								<td class="text-center"><div class="in-tb">전시</div></td>
-							</tr>
+							</tr>							
 						</tbody>
 					</table>
 				</div>
@@ -661,7 +594,7 @@
 			
 			<!-- [Dev] 0702 수정 : 위치 변경-->
 			<div class="cnt-title-area mt60">
-				<h3 class="tit-cnt">리뷰</h3>
+				<h3 class="tit-cnt">후기</h3><!--[Dev] 20210825 텍스트변경 -->
 			</div><!--// [Dev] 0702 수정 -->
 
 
@@ -687,7 +620,7 @@
 					</div><!--// right-area -->
 				</div>
 
-				<div class="board-list movable-row mt10 vm-table">
+				<div class="board-list movable-row mt10 vm-table fix-type">
 					<table>
 						<caption>목록</caption>
 						<colgroup>
@@ -705,9 +638,9 @@
 								</div><!-- 모두 선택 addClass ui-check-all -->
 							</th>
 							<th scope="col"><span class="in-tb">상품코드</span></th>
-							<th scope="col"><span class="in-tb">브랜드 명</span></th>
+							<th scope="col"><span class="in-tb">브랜드</span></th><!--[Dev] 20210825 텍스트변경 -->
 							<th scope="col"><span class="in-tb">상품명</span></th>
-							<th scope="col"><span class="in-tb">리뷰 내용</span></th>
+							<th scope="col"><span class="in-tb">후기 내용</span></th><!--[Dev] 20210825 텍스트변경 -->
 						</tr>
 						</thead>
 						<tbody>
@@ -720,30 +653,9 @@
 								<td class="text-center"><div class="in-tb">ROM691</div></td>
 								<td class="text-center"><div class="in-tb">2100324</div></td>
 								<td class="text-left"><div class="in-tb">스팀 닭가슴살 마늘맛3</div></td>
-								<td class="text-left"><div class="in-tb">이것은 진리!!! 샐러드와 함께 곁들여 먹으면 내가 지금 하고 있는게 다이어트 식단이</div></td>
-							</tr>
-							<tr class="movable" id="2">
-								<td class="list-check">
-									<div class="custom-checkbox single">
-										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">ROM691</div></td>
-								<td class="text-center"><div class="in-tb">2100324</div></td>
-								<td class="text-left"><div class="in-tb">스팀 닭가슴살 마늘맛2</div></td>
-								<td class="text-left"><div class="in-tb">이것은 진리!!! 샐러드와 함께 곁들여 먹으면 내가 지금 하고 있는게 다이어트 식단이</div></td>
-							</tr>
-							<tr class="movable" id="1">
-								<td class="list-check">
-									<div class="custom-checkbox single">
-										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-									</div>
-								</td>
-								<td class="text-center"><div class="in-tb">ROM691</div></td>
-								<td class="text-center"><div class="in-tb">2100324</div></td>
-								<td class="text-left"><div class="in-tb">스팀 닭가슴살 마늘맛1</div></td>
-								<td class="text-left"><div class="in-tb">이것은 진리!!! 샐러드와 함께 곁들여 먹으면 내가 지금 하고 있는게 다이어트 식단이</div></td>
-							</tr>
+								<!--[Dev] 20210825 text-elps클래스 추가 -->
+								<td class="text-left"><div class="in-tb text-elps">이것은 진리!!! 샐러드와 함께 곁들여 먹으면 내가 지금 하고 있는게 다이어트 식단이</div></td>
+							</tr>							
 						</tbody>
 					</table>
 				</div>

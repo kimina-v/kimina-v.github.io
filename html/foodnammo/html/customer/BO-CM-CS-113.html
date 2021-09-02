@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+		<script>include.headTab();</script>
+		<div class="content-area">
+			<div class="top-title-area">
+				<h2 class="tit-page">장바구니 타겟 CRM<span class="tit-id-num">(ID:1108012)</span></h2>
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="check-101-11" class="checkbox-favor" name="check-item-1"><label for="check-101-11"><span class="blind">즐겨찾기</span></label>
+                </div>
+				<div class="page-guide">
+					<ol class="breadcrumb">
+						<li><a href="#" title="메인페이지 이동"><i class="ico-bl-home"></i><span class="blind">Home</span></a></li>
+						<li><span>1Depth</span></li>
+						<li><span>2Depth</span></li>
+						<li class="current"><span>현재페이지</span></li>
+					</ol>					
+				</div><!--// page-guide -->
+			</div><!--// page-title-area -->
+
+			
+
+            <div class="board-form">	
+                <table>
+                    <caption>정보입력</caption>
+                    <colgroup>
+                        <col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><span class="in-tb">사이트</span></th>
+                            <td colspan="3">
+                                <div class="input-group-form">
+                                    <select class="select w140">
+                                        <option value="">선택</option>
+                                        <option value="">랭킹닭컴</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">장바구니 상품</span></th>
+                            <td colspan="3">
+                                <div class="input-group-form">                                    
+                                    <select class="select w140">
+                                        <option value="">상품명</option>
+                                        <option value="">상품코드</option>
+                                        <option value="">판매코드</option>
+                                    </select>
+                                    <input type="text" class="input-text w571" placeholder="검색어를 입력하세요.">
+                                </div>
+                            </td>                                
+                        </tr>	
+                        <tr>
+                            <th scope="row"><span class="in-tb">장바구니 담은 기간</span></th>
+                            <td colspan="3">
+                                <div class="input-group-div">
+                                    <div class="input-group datepicker-group mr5">
+                                        <input type="text" class="input-text datepicker hasDatepicker" id="dp1626844512651">
+                                        <span class="input-group-txt">~</span>
+                                        <input type="text" class="input-text datepicker hasDatepicker" id="dp1626844512652">
+                                    </div>
+                                    <div class="input-group">                                        
+                                        <button type="button" class="btn-sq btn-default"><span>어제</span></button>
+                                        <button type="button" class="btn-sq btn-default"><span>3일</span></button>
+                                        <button type="button" class="btn-sq btn-default"><span>7일</span></button>
+                                        <button type="button" class="btn-sq btn-default"><span>15일</span></button>
+                                        <button type="button" class="btn-sq btn-default"><span>한달</span></button>
+                                    </div>
+                                </div>
+                            </td>                                
+                        </tr>							
+                        <tr>
+                            <th scope="row"><span class="in-tb">주문회원 제외 기간</span></th>
+                            <td colspan="3">
+                                <div class="input-group-div">
+                                    <div class="input-group datepicker-group mr5">
+                                        <input type="text" class="input-text datepicker hasDatepicker" id="dp1626844512651">
+                                        <span class="input-group-txt">~</span>
+                                        <input type="text" class="input-text datepicker hasDatepicker" id="dp1626844512652">
+                                    </div>
+                                    <div class="input-group">                                        
+                                        <button type="button" class="btn-sq btn-default"><span>어제</span></button>
+                                        <button type="button" class="btn-sq btn-default"><span>3일</span></button>
+                                        <button type="button" class="btn-sq btn-default"><span>7일</span></button>
+                                        <button type="button" class="btn-sq btn-default"><span>15일</span></button>
+                                        <button type="button" class="btn-sq btn-default"><span>한달</span></button>
+                                    </div>
+                                </div>
+                            </td>                                
+                        </tr>					
+                        <tr>
+                            <th scope="row"><span class="in-tb">발송이력 제외 기간</span></th>
+                            <td colspan="3">
+                                <div class="input-group-div">
+                                    <div class="input-group datepicker-group mr5">
+                                        <input type="text" class="input-text datepicker hasDatepicker" id="dp1626844512651">
+                                        <span class="input-group-txt">~</span>
+                                        <input type="text" class="input-text datepicker hasDatepicker" id="dp1626844512652">
+                                    </div>
+                                    <div class="input-group">                                        
+                                        <button type="button" class="btn-sq btn-default"><span>어제</span></button>
+                                        <button type="button" class="btn-sq btn-default"><span>3일</span></button>
+                                        <button type="button" class="btn-sq btn-default"><span>7일</span></button>
+                                        <button type="button" class="btn-sq btn-default"><span>15일</span></button>
+                                        <button type="button" class="btn-sq btn-default"><span>한달</span></button>
+                                    </div>
+                                </div>
+                            </td>                                
+                        </tr>					
+                    </tbody>
+                </table>		
+            </div><!--// board-form -->
+            <div class="btn-area mt20">
+                <button type="button" class="btn-basic-md btn-primary"><span>검색</span></button>
+                <button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
+            </div>
+
+			
+			<div class="page-info mt60">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div>
+            <div class="board-option">
+                <div class="left-area">
+                    <div class="input-group">
+                        <span class="input-group-txt"> 페이지당</span>
+                        <div class="input-group-form">
+                            <select class="select">
+                                <option value="">100</option>
+                                <option value="">item 2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div><!--// left-area -->
+                <div class="right-area">
+                    <button type="button" class="btn-func btn-default"><span>검색결과 일괄처리</span></button>
+                    <button type="button" class="btn-func btn-default"><span>일괄처리</span></button>
+                    <button type="button" class="btn-func btn-default"><i class="ico-btn-xls"></i><span>엑셀 다운로드</span></button>
+                </div><!--// right-area -->
+            </div>
+
+			<!-- 목록 -->
+			<div class="board-list fix-type mt10">
+				<table>
+					<caption>목록</caption>
+					<colgroup>
+						<col class="w-col-check" />
+                        <col class="w-col-num" />
+						<col style="width:120px" />
+                        <col style="width:120px" />
+						<col style="width:120px" />
+                        <col style="width:140px" />
+                        <col style="width:auto;" />
+                        <col style="width:160px;" />
+                        <col style="width:160px;" />
+                        <col style="width:160px;" />
+                        <col style="width:160px;" />
+					</colgroup>
+					<thead>
+					<tr>
+						<th scope="col" class="list-check">
+							<div class="custom-checkbox single">
+								<input type="checkbox" id="check-all" class="checkbox ui-check-all" name="check-item-101"><label for="check-all"><span class="blind">모두 선택</span></label>
+							</div><!-- 모두 선택 addClass ui-check-all -->
+						</th>
+                        <th scope="col"><span class="in-tb">순번</span></th>
+						<th scope="col"><span class="in-tb">사이트</span></th>
+						<th scope="col"><span class="in-tb">회원번호</span></th>                        
+                        <th scope="col"><span class="in-tb">이름</span></th>
+                        <th scope="col"><span class="in-tb">아이디</span></th>
+						<th scope="col"><span class="in-tb">상품명</span></th>
+                        <th scope="col"><span class="in-tb">장바구니 날짜</span></th>                        
+                        <th scope="col"><span class="in-tb">마지막 접속일</span></th>
+						<th scope="col"><span class="in-tb">마지막 주문일</span></th>
+                        <th scope="col"><span class="in-tb">최근 CRM 발송일</span></th>					
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="list-check">
+								<div class="custom-checkbox single">
+									<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">모두 선택</span></label>
+								</div>
+							</td>
+							<td class="text-center"><div class="in-tb">2</div></td>
+                            <td class="text-center"><div class="in-tb">피키다이어트</div></td>
+                            <td class="text-center"><div class="in-tb">999999</div></td>
+                            <td class="text-center"><a href="#" class="in-tb text-elps">홍*동</a></td>
+                            <td class="text-center"><div class="in-tb">hongg***</div></td>
+							<td class="text-left"><a href="#" class="in-tb text-elps">[맛있닭]명실상부 No.1 닭가슴살 스테이크! 추가 증정</a></td>
+							<td class="text-center"><div class="in-tb">2021.05.11</div></td>							
+							<td class="text-center"><div class="in-tb">2021.12.31</div></td>
+							<td class="text-center"><div class="in-tb">2021.05.11</div></td>							
+							<td class="text-center"><div class="in-tb">2021.12.31</div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!--// board-list | 목록 -->
+			<div class="pagination mt20">
+				<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>
+				<a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a>
+				<a href="#" class="current"><span>1</span></a>
+				<a href="#"><span>2</span></a>
+				<a href="#"><span>3</span></a>
+				<a href="#"><span>4</span></a>
+				<a href="#"><span>5</span></a>
+				<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
+				<a href="#" class="btn-page last" title="마지막"><span class="blind">마지막</span></a>
+			</div><!--// pagination -->
+
+			<!--  [Dev] 0702삭제
+			<div class="btn-area mt40">
+				<button type="button" class="btn-basic-md btn-primary"><span>저장</span></button>
+			</div>-->
+			
+		</div><!--// content-area -->
+
+		<button type="button" class="btn-gotop"><span class="blind">위로</span></button>
+		
+	</section>
+	<!--// ========== 컨텐츠 영역 :: container ========== -->
+</div><!--// wrap -->
+</body>
+</html>

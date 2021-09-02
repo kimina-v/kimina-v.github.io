@@ -138,18 +138,19 @@
 								</td>
                                 <th scope="row"><span class="in-tb">회원속성</span></th>
 								<td>
-									<div class="form-inline-group">
-                                        <div class="custom-radio">
-                                            <input type="radio" id="radio-2-1" class="radio" name="radio-item-2" checked=""><label for="radio-2-1">전체</label>
+                                    <!--[Dev] 20210727 라디오 버튼 체크박스로 변경 -->
+                                    <div class="form-inline-group">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="check-102" class="checkbox" name="check-item-1" checked=""><label for="check-102"> 전체</label>
                                         </div>
-                                        <div class="custom-radio">
-                                            <input type="radio" id="radio-2-2" class="radio" name="radio-item-2"><label for="radio-2-2">평생</label>
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="check-102" class="checkbox" name="check-item-1"><label for="check-102"> 평생</label>
                                         </div>
-                                        <div class="custom-radio">
-                                            <input type="radio" id="radio-2-3" class="radio" name="radio-item-2"><label for="radio-2-3">상담주의</label>
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="check-102" class="checkbox" name="check-item-1"><label for="check-102"> 상담주의</label>
                                         </div>
-                                        <div class="custom-radio">
-                                            <input type="radio" id="radio-2-4" class="radio" name="radio-item-2"><label for="radio-2-4">차단</label>
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="check-102" class="checkbox" name="check-item-1"><label for="check-102"> 차단</label>
                                         </div>
                                     </div>
 								</td>
@@ -461,9 +462,21 @@
                 </div><!--// left-area -->
                 <div class="right-area">
                     <button type="button" class="btn-func btn-default"><span>일괄처리</span></button>
+                    <!--  Dev] 20210824 수정 : 업/다운로드 버튼들 드롭다운박스로 그룹화함 -->
+                    <div class="btn-down-group">
+                        <button type="button" class="btn-list-down ui-btn-group"><span>다운로드</span><i class="ico-arrfill-toggle"></i></button>
+                        <ul class="btn-down-list ui-btn-box">
+                            <li><a href="#"><span>CID 다운로드</span></button></a></li>
+                            <li><a href="#"><span>SMS 다운로드</span></button></a></li>
+                            <li><a href="#"><span>이메일 다운로드</span></button></a></li>
+                        </ul>	
+                    </div><!--// btn-down-group -->
+                    <!--// [Dev] 20210824 수정 : 업/다운로드 드롭다운박스로 그룹화함 -->
+                    <!--  20210824 삭제
                     <button type="button" class="btn-func btn-default"><i class="ico-btn-down"></i><span>CID 다운로드</span></button>
                     <button type="button" class="btn-func btn-default"><i class="ico-btn-down"></i><span>SMS 다운로드</span></button>
-                    <button type="button" class="btn-func btn-default"><i class="ico-btn-down"></i><span>이메일 다운로드</span></button>                    
+                    <button type="button" class="btn-func btn-default"><i class="ico-btn-down"></i><span>이메일 다운로드</span></button>                     
+                    -->
                     <button type="button" class="btn-func btn-default"><i class="ico-btn-xls"></i><span>엑셀 다운로드</span></button>
                     <button type="button" class="btn-func btn-default"><span>발송결과</span></button>
                 </div><!--// right-area -->
@@ -544,10 +557,10 @@
                             <td class="text-center"><div class="in-tb">*</div></td>
                             <td class="text-center"><div class="in-tb">서울 마포구</div></td>
                             <td class="text-center"><div class="in-tb">*******5678</div></td>
-                            <td class="text-center"><div class="in-tb">1,000P</div></td>
+                            <td class="text-right"><div class="in-tb">1,000P</div></td><!--[Dev] 20210727 정렬 변경 -->
                             <td class="text-center"><div class="in-tb">3</div></td>
                             <td class="text-center"><div class="in-tb">10</div></td>
-                            <td class="text-center"><div class="in-tb">52,700원</div></td>
+                            <td class="text-right"><div class="in-tb">52,700원</div></td><!--[Dev] 20210727 정렬 변경 -->
                             <td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
                             <td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
                             <td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
@@ -562,7 +575,8 @@
                     <button type="button" class="btn-option btn-default"><span>탈퇴철회</span></button>
                 </div>
             </div>
-			<div class="pagination mt20">
+            <!--[Dev] 20210727 mt20제거 -->
+			<div class="pagination">
 				<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>
 				<a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a>
 				<a href="#" class="current"><span>1</span></a>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body class="intro">
+    <div class="intro-login">
+        <h1 class="logo"><a href="#">푸드나무</a></h1>
+        <div class="login-form">
+            <div class="input-box">
+                <label for="inp-vc">인증번호</label>
+                <input type="text" id="inp-vc">
+            </div>
+            <button type="button" class="btn-intro-default">확인</button>
+            <p class="error-text">인증번호를 다시 확인해 주세요.</p>
+        </div>
+    </div>
+    <!-- [Dev] 20210729 추가 -->
+    <script>
+        $(function(){
+            $('.input-box input').on('focus',function(){
+                $(this).closest('.input-box').addClass('key-up')
+            })
+            $('.input-box input').on('focusout',function(){
+                $(this).closest('.input-box').removeClass('key-up')
+            })
+        })
+    </script>
+    <!-- //[Dev] 20210729 추가 -->
+</body>
+</html>

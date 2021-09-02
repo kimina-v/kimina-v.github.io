@@ -759,14 +759,19 @@
                 <h3 class="tit-cnt">상세 설명</h3>
             </div>
 
-            <div class="sub-tab mt10">
-                <ul>
-                    <li class="current"><a href="#none"><span>상세설명(PC)</span></a></li>
-                    <li><a href="#none"><span>상세설명(Mobile)</span></a></li>
-                </ul>
-            </div>
-			<div style="width: 100%;height: 310px;background-color:#f0f0f0;box-sizing: border-box;text-align: center;padding: 100px 0;">상세설명 기재하는영역입니다.</div>
-
+            <!--[Dev] 20210723 탭추가 -->
+			<div class="ui-tab sub-tab mt10"><!-- [pub] 스크립트 불필요시 ui-tab class 삭제 -->
+				<ul>
+					<li class="current"><a href="#tab2-1"><span>상세설명(PC)</span></a></li>
+					<li><a href="#tab2-2"><span>상세설명(Mobile)</span></a></li>
+				</ul>
+			</div><!--// tab-menu -->
+			<!--[Dev] 20210726  <div class="_pb-inner-ex">제거-->
+			<div class="ui-tab-container tab-cnt-wrap">
+				<div id="tab2-1" class="ui-tab-cnt active tab-content"></div>
+				<div id="tab2-2" class="ui-tab-cnt tab-content"></div>
+			</div><!--// ui-tab-container -->
+			
 			<div class="cnt-title-area mt40">
                 <h3 class="tit-cnt">기획전 상품 그룹 등록</h3>
             </div>
@@ -819,7 +824,7 @@
 							</div>
 							<button type="button" class="btn-func btn-default move all last-row"><span>최하</span></button>
 						</div>
-						<button type="button" class="btn-func btn-default"><span>상품 그룹 등록</span></button>
+						<!-- <button type="button" class="btn-func btn-default"><span>상품 그룹 등록</span></button> [Dev] 20210830 제거 -->
 						<button type="button" class="btn-func btn-default"><span>상품 그룹 불러오기</span></button>
 					</div><!--// right-area -->
 				</div><!--// board-option -->

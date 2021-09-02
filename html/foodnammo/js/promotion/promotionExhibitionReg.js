@@ -45,9 +45,10 @@ const ExhibitionView = {
             ExhibitionView.initExhibition();
         });
 
-        $("#regPrdGroupBtn").on("click", function (event) {
+
+        $("#regPrdGroupBtn").on("click", function(event) {
             event.preventDefault();
-            $('#contents').append($('<div id="exhibitionRegPopupWrapper"></div>'));
+           // $('#contents').append($('<div id="exhibitionRegPopupWrapper"></div>'));
             $('#popupForm input[name=callbackFunction]').val("callbackProd");
             $('#popupForm input[name=flagAction]').val('R');
             $('#exhibitionRegPopupWrapper').load('/promotion/exhibition/regpopup', $('#popupForm').serialize());
@@ -55,7 +56,7 @@ const ExhibitionView = {
 
         $("#getPrdGroupBtn").on("click", function (event) {
             event.preventDefault();
-            $('#contents').append($('<div id="exhibitionPrdPopupWrapper"></div>'));
+           // $('#contents').append($('<div id="exhibitionPrdPopupWrapper"></div>'));
             $('#popupForm input[name=callbackFunction]').val("callbackGetPrdGroup");
             $('#exhibitionPrdPopupWrapper').load('/promotion/exhibition/getpopup', $('#popupForm').serialize());
         });

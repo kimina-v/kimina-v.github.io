@@ -34,3 +34,22 @@
 .event-list-wrap ~ .page-bottom{margin-top:60px;}
 .prev-list-bottom ~ .page-bottom{margin-top:30px;}
 .view-content-area ~ .prev-list-bottom{margin-top:80px;}
+
+/******* 이벤트 퀴즈 *******/
+.event-quiz{width:880px;margin:40px auto 80px}
+.event-quiz .context{padding:40px 50px 60px}
+.event-quiz .context .quiz-item{background:#fff;border-radius:10px;padding:40px}
+.event-quiz .context .q{padding-left:27px;position:relative;line-height:29px;font-size:20px}
+.event-quiz .context .q:before{content:"Q.";font-weight:bold;position:absolute;top:0;left:0;line-height:29px;font-size:18px}
+.event-quiz .context .q .hint{display:block;margin-top:6px;font-size:16px;color:#999;line-height:23px;text-align:center;padding-right:27px}
+.event-quiz .context .a{margin-top:20px;padding-left:27px;position:relative}
+.event-quiz .context .a:before{content:"A.";font-weight:bold;position:absolute;top:0;left:0;line-height:29px;font-size:18px}
+.event-quiz .context .a.text-type:before{top:0;line-height:50px}
+.event-quiz .context .a .input-text{border-radius:2px;width:590px;font-size:16px}
+.event-quiz .context .a .option-list li{text-align:center;padding-right:27px;font-size:16px;line-height:29px}
+.event-quiz .context .a .option-list li ~ li{margin-top:16px}
+.event-quiz .context .a .option-list li .custom-radio .radio + label{line-height:29px;padding-left:30px}
+.event-quiz .context .a .option-list li .custom-radio .radio + label:before{top:3px;width:24px;height:24px}
+.event-quiz .context .a .option-list li .custom-radio .radio:checked + label:after{width:11px;height:11px;top:9px;left:6.5px}
+.event-quiz .btn-group{text-align:center;margin-top:16px}
+.event-quiz .btn-group button:only-child{min-width:260px;font-size:15px}

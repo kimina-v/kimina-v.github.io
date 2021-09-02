@@ -30,11 +30,12 @@
 .goods-price .origin{display:inline-block;font-size:16px;color:#999;text-decoration:line-through}
 .goods-price .btn-util{position:absolute;top:2px;right:0;height:22px;width:65px}
 .goods-price .btn-util .btn-icon-shard{vertical-align:top}
+.goods-price .btn-util .btn-icon-share:after{width:19px;height:20px;background:url(../images/icon/icon_share.png) no-repeat 0 0/100% auto}
 
 .btn-icon-wish{display:inline-block;vertical-align:middle;margin-left:10px;height:22px}
 .btn-icon-wish input{z-index:-10;position:absolute;opacity:0}
-.btn-icon-wish label{display:block;width:25px;height:22px;background:url(../images/icon/ico_wish.png) no-repeat 0 0/25px auto;text-indent:-99999em}
-.btn-icon-wish input:checked + label{background-position:0 -22px}
+.btn-icon-wish label{display:block;width:20px;height:17px;background:url(../images/icon/ico_wish2.png) no-repeat 0 0/20px auto;text-indent:-99999em}
+.btn-icon-wish input:checked + label{background-position:0 -17px}
 
 .orange-mem-box{margin-top:14px;border:1px solid #ccc;box-sizing:border-box;border-radius:4px;padding:0 11px 0 18px}
 .orange-mem-box .box-head{height:36px;line-height:36px;font-size:14px;position:relative;display:block}
@@ -250,6 +251,9 @@
 .fixed-option .option-select .sel-close span:after{content:"";display:inline-block;width:8px;height:8px;border:2px solid #666;border-left:0;border-bottom:0;transform:rotate(135deg);transition:.2s;position:relative;top:-2px}
 .fixed-option .option-select.open .sel-close{display:block;z-index:99999}
 .fixed-option .price-info{text-align:right;padding-bottom:14px}
+.fixed-option .price-info .sale-apply{text-align:right;margin-bottom:3px}
+.fixed-option .price-info .sale-apply .txt{font-size:12px;color:#999}
+.fixed-option .price-info .sale-apply .cp-change{display:inline-block;min-width:52px;text-align:center;padding:0 5px;margin-left:6px;height:23px;line-height:23px;border:1px solid #ccc;background:#fff;box-sizing:border-box;color:#666;border-radius:3px;font-size:12px}
 .fixed-option .price-info .add-saving-point{display:inline-block;vertical-align:top}
 .fixed-option .price-info .add-saving-point a{display:block;background:#dedede;height:26px;line-height:26px;padding:0 8px;border-radius:3px;;position:relative;margin-right:16px}
 .fixed-option .price-info .add-saving-point a:after{content:"";width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:9px solid #dedede;border-right:7px solid transparent;position:absolute;right:-14px;top:7px}
@@ -345,9 +349,9 @@
 .full-btn-group button ~ button{margin-top:8px}
 
 .dash-list{font-size:12px}
-.dash-list > li{color:#666;padding-left:14px;position:relative;line-height:18px}
+.dash-list > li{color:#666;padding-left:10px;position:relative;line-height:18px}
 .dash-list > li ~ li{margin-top:7px}
-.dash-list > li:before{content:"";position:absolute;top:7px;left:0;width:6px;height:1px;background:#666}
+.dash-list > li:before{content:"";position:absolute;top:7px;left:0;width:5px;height:1px;background:#666}
 .dash-list > li.text-primary:before{background:#ff6001}
 
 .goods-detail-dlv{padding:20px}
@@ -437,22 +441,22 @@
 .popup-coupon .bottom-btn{height:90px;box-sizing:border-box;padding:12px 20px 30px;box-shadow:0 -2px 8px rgba(0,0,0,.1)}
 .popup-coupon .bottom-btn button{width:100%}
 
-.coupon-list .coupon-item{height:130px;display:flex;align-items:center;box-sizing:border-box;margin-bottom:10px}
-.coupon-list .custom-radio .radio-circle + label{border:1px solid #ccc;border-radius:4px;padding:0 70px 0 48px;height:128px;width:100%}
-.coupon-list .custom-radio .radio-circle + label:before{left:14px;top:calc(50% - 9px);width:18px;height:18px}
-.coupon-list .custom-radio .radio-circle:checked + label{border-color:#ff6001}
-.coupon-list .custom-radio .radio-circle:checked + label:before{width:18px;height:18px;background-size:46px auto}
-.coupon-list .coupon-item .coupon-down{width:68px;text-align:center;}
-.coupon-list .coupon-item .coupon-discount{display:block;line-height:22px;font-size:16px;font-weight:bold;color:#ff6001;padding-top:12px}
-.coupon-list .coupon-item .coupon-discount span{font-size:13px}
-.coupon-list .coupon-item .coupon-name{font-weight:bold;line-height:17px;height:34px;margin-top:4px}
-.coupon-list .coupon-item .coupon-terms{font-size:12px;color:#888;display:block;margin-top:8px;line-height:15px}
-.coupon-list .coupon-item .coupon-expiration{font-size:12px;color:#888;display:block;margin-top:4px;line-height:15px}
-.coupon-list .coupon-item .coupon-down{position:absolute;top:0;right:0;height:100%;border-left:1px solid #ddd}
-.coupon-list .coupon-item .coupon-down span{font-size:0}
-.coupon-list .coupon-item .coupon-down span:after{content:"";width:16px;height:17px;background:url(../images/icon/ico_btns_m.png) no-repeat -55px -75px/75px auto;display:inline-block}
-.coupon-list .coupon-item.complete .coupon-down span{font-size:12px;color:#999}
-.coupon-list .coupon-item.complete .coupon-down span:after{display:none}
+.popup-coupon .coupon-list .coupon-item{height:130px;display:flex;align-items:center;box-sizing:border-box;margin-bottom:10px}
+.popup-coupon .coupon-list .custom-radio .radio-circle + label{border:1px solid #ccc;border-radius:4px;padding:0 70px 0 48px;height:128px;width:100%}
+.popup-coupon .coupon-list .custom-radio .radio-circle + label:before{left:14px;top:calc(50% - 9px);width:18px;height:18px}
+.popup-coupon .coupon-list .custom-radio .radio-circle:checked + label{border-color:#ff6001}
+.popup-coupon .coupon-list .custom-radio .radio-circle:checked + label:before{width:18px;height:18px;background-size:46px auto}
+.popup-coupon .coupon-list .coupon-item .coupon-down{width:68px;text-align:center;}
+.popup-coupon .coupon-list .coupon-item .coupon-discount{display:block;line-height:22px;font-size:16px;font-weight:bold;color:#ff6001;padding-top:12px}
+.popup-coupon .coupon-list .coupon-item .coupon-discount span{font-size:13px}
+.popup-coupon .coupon-list .coupon-item .coupon-name{font-weight:bold;line-height:17px;height:34px;margin-top:4px}
+.popup-coupon .coupon-list .coupon-item .coupon-terms{font-size:12px;color:#888;display:block;margin-top:8px;line-height:15px}
+.popup-coupon .coupon-list .coupon-item .coupon-expiration{font-size:12px;color:#888;display:block;margin-top:4px;line-height:15px}
+.popup-coupon .coupon-list .coupon-item .coupon-down{position:absolute;top:0;right:0;height:100%;border-left:1px solid #ddd}
+.popup-coupon .coupon-list .coupon-item .coupon-down span{font-size:0}
+.popup-coupon .coupon-list .coupon-item .coupon-down span:after{content:"";width:16px;height:17px;background:url(../images/icon/ico_btns_m.png) no-repeat -55px -75px/75px auto;display:inline-block}
+.popup-coupon .coupon-list .coupon-item.complete .coupon-down span{font-size:12px;color:#999}
+.popup-coupon .coupon-list .coupon-item.complete .coupon-down span:after{display:none}
 
 .layer-inner.on .toast-pop{bottom:90px;opacity:1}
 .popup-coupon .toast-pop{position:absolute;bottom:60px;opacity:0;top:auto;left:0;transition:.2s;-webkit-transition:.2s;transform:none;width:100%;padding:15px 0;background:rgba(0, 0, 0, 0.7);border-radius:4px 4px 0 0;text-align:center;z-index:9}

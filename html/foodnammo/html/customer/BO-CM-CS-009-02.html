@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+		<script>include.headTab();</script>
+		<div class="content-area">
+			<div class="top-title-area">
+				<h2 class="tit-page">FAQ 관리<span class="tit-id-num">(ID:1108012)</span></h2>
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="check-101-11" class="checkbox-favor" name="check-item-1"><label for="check-101-11"><span class="blind">즐겨찾기</span></label>
+                </div>
+				<div class="page-guide">
+					<ol class="breadcrumb">
+						<li><a href="#" title="메인페이지 이동"><i class="ico-bl-home"></i><span class="blind">Home</span></a></li>
+						<li><span>1Depth</span></li>
+						<li><span>2Depth</span></li>
+						<li class="current"><span>현재페이지</span></li>
+					</ol>					
+				</div><!--// page-guide -->
+			</div><!--// page-title-area -->
+
+			<!-- 검색영역 -->
+			<div class="input-group-wrap search-type">
+				<fieldset>
+					<legend>검색</legend>
+					<div class="input-group w-full">
+						<div class="input-group-form">
+							<select class="select">
+								<option value="">랭킹닭컴</option>
+							</select>
+						</div>
+						<div class="input-group-form">
+							<select class="select">
+								<option value="">제목</option>
+								<option value="">이름</option>
+                                <option value="">작성자</option>
+							</select>
+						</div>
+						<label for="item1-1" class="blind">검색</label>
+						<input type="text" id="item1-1" class="input-text" placeholder="검색어를 입력하세요.">
+						<span class="input-group-btn">
+							<button type="button" class="btn-icon-search" title="검색"><span class="blind">검색</span></button>
+						</span>  
+						<span class="input-group-btn">
+							<button type="button" class="btn-search-detail"><span>상세검색</span><i class="ico-arrfill-toggle"></i></button>
+						</span>
+					</div><!--// input-group -->
+				</fieldset>
+			</div><!--// input-group-wrap | 검색영역 -->
+
+			<!-- 상세검색영역 -->
+			<div class="searh-detail-area ui-toggle-content">
+				<div class="board-form">	
+					<table>
+						<caption>정보입력</caption>
+						<colgroup>
+							<col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
+						</colgroup>
+						<tbody>
+                            <tr>
+                                <th scope="row"><span class="in-tb">분류</span></th>
+                                <td colspan="3">
+                                    <div class="form-inline-group">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="c1" class="checkbox" name="c1" checked=""><label for="c1"> 전체</label>                                            
+                                        </div>
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="c2" class="checkbox" name="c1" ><label for="c2"> 상품관련</label>                                       
+                                        </div>
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="c3" class="checkbox" name="c1" ><label for="c3"> 주문 및 결제</label>                                         
+                                        </div>
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="c4" class="checkbox" name="c1" ><label for="c4"> 배송관련</label>                                           
+                                        </div>
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="c4" class="checkbox" name="c1" ><label for="c4"> 적립금</label>                                           
+                                        </div>
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="c4" class="checkbox" name="c1" ><label for="c4"> 기타</label>                                           
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="in-tb">게시여부</span></th>
+                                <td colspan="3">
+                                    <div class="form-inline-group">
+										<div class="custom-radio">
+											<input type="radio" id="radio-1-1" class="radio" name="radio-item-1" checked=""><label for="radio-1-1">전체</label>
+										</div>
+										<div class="custom-radio">
+											<input type="radio" id="radio-1-2" class="radio" name="radio-item-1"><label for="radio-1-2">Y</label>
+										</div>
+										<div class="custom-radio">
+											<input type="radio" id="radio-1-3" class="radio" name="radio-item-1"><label for="radio-1-3">N</label>
+										</div>
+									</div>	
+                                </td>
+                            </tr>
+							<tr>
+								<th scope="row"><span class="in-tb">FAQ BEST 게시여부</span></th>
+								<td colspan="3">
+									<div class="form-inline-group">
+										<div class="custom-radio">
+											<input type="radio" id="radio-2-1" class="radio" name="radio-item-2" checked=""><label for="radio-2-1">전체</label>
+										</div>
+										<div class="custom-radio">
+											<input type="radio" id="radio-2-2" class="radio" name="radio-item-2"><label for="radio-2-2">Y</label>
+										</div>
+										<div class="custom-radio">
+											<input type="radio" id="radio-2-3" class="radio" name="radio-item-2"><label for="radio-2-3">N</label>
+										</div>
+									</div>	
+								</td>                                
+							</tr>	
+                            <tr>
+								<th scope="row"><span class="in-tb">등록기간</span></th>
+								<td colspan="3">
+									<div class="input-group datepicker-group">
+                                        <input type="text" class="input-text datepicker" id="">
+                                        <span class="input-group-txt">~</span>
+                                        <input type="text" class="input-text datepicker" id="">
+                                    </div>
+								</td>                                
+							</tr>							
+						</tbody>
+					</table>		
+				</div><!--// board-form -->
+				<div class="btn-area">
+					<button type="button" class="btn-basic-md btn-primary"><span>검색</span></button>
+					<button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
+				</div>
+			</div>
+			<!--// 상세검색영역 -->
+			
+			<div class="board-option mt60">
+                <div class="left-area">
+                    <div class="page-info">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div>
+                </div><!--// left-area -->
+                <div class="right-area">
+                    <button type="button" class="btn-func btn-default"><span>FAQ 등록</span></button>
+                </div><!--// right-area -->
+            </div>
+
+			<!-- 목록 -->
+			<div class="board-list fix-type mt10 vm-table">
+				<table>
+					<caption>목록</caption>
+					<colgroup>
+						<col style="width:73px" />
+                        <col style="width:120px" />
+                        <col style="width:120px" />
+						<col style="width:auto;" />
+						<col style="width:110px" />
+                        <col style="width:100px" />
+                        <col style="width:150px" />
+                        <col style="width:160px" />
+                        <col style="width:160px" />
+					</colgroup>
+					<thead>
+					<tr>
+                        <th scope="col"><span class="in-tb">순번</span></th>
+						<th scope="col"><span class="in-tb">사이트</span></th>
+                        <th scope="col"><span class="in-tb">분류</span></th>
+						<th scope="col"><span class="in-tb">제목</span></th>
+                        <th scope="col"><span class="in-tb">FRONT 이동</span></th>                        
+                        <th scope="col"><span class="in-tb">게시여부</span></th>
+						<th scope="col"><span class="in-tb">FAQ BEST 게시여부</span></th>
+                        <th scope="col"><span class="in-tb">작성자</span></th>					
+                        <th scope="col"><span class="in-tb">등록일시</span></th>	
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="text-center">
+                                <div class="in-tb">999</div>
+                            </td>
+                            <td class="text-center"><div class="in-tb">피키다이어트</div></td>
+                            <td class="text-center"><div class="in-tb">주문 및 결제</div></td>
+							<td class="text-left"><a href="#" class="in-tb text-elps">공지사항 제목 노출. 제목 길 경우 말줄임 처리</a></td>
+							<td class="text-center"><a href="#" class="in-tb">이동</a></td>							
+							<td class="text-center"><div class="in-tb">Y</div></td>
+							<td class="text-center"><div class="in-tb">1234</div></td>
+							<td class="text-center"><div class="in-tb">관리자ID/이름 노출</div></td>
+                            <td class="text-center"><div class="in-tb">2021.05.11 11:15</div></td>
+						</tr>
+                        <tr>
+							<td class="text-center vt-mid">
+                                <div class="in-tb">999</div>
+                            </td>
+                            <td class="text-center"><div class="in-tb">피키다이어트</div></td>
+                            <td class="text-center"><div class="in-tb">주문 및 결제</div></td>
+							<td class="text-left"><a href="#" class="in-tb text-elps">공지사항 제목 노출. 제목 길 경우 말줄임 처리</a></td>
+							<td class="text-center"><a href="#" class="in-tb">이동</a></td>							
+							<td class="text-center"><div class="in-tb">Y</div></td>
+							<td class="text-center"><div class="in-tb">Y</div></td>
+							<td class="text-center"><div class="in-tb">관리자ID/이름 노출</div></td>
+                            <td class="text-center"><div class="in-tb">2021.05.11 11:15</div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!--// board-list | 목록 -->
+			<div class="pagination mt20">
+				<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>
+				<a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a>
+				<a href="#" class="current"><span>1</span></a>
+				<a href="#"><span>2</span></a>
+				<a href="#"><span>3</span></a>
+				<a href="#"><span>4</span></a>
+				<a href="#"><span>5</span></a>
+				<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
+				<a href="#" class="btn-page last" title="마지막"><span class="blind">마지막</span></a>
+			</div><!--// pagination -->
+
+			<!--  [Dev] 0702삭제
+			<div class="btn-area mt40">
+				<button type="button" class="btn-basic-md btn-primary"><span>저장</span></button>
+			</div>-->
+			
+		</div><!--// content-area -->
+
+		<button type="button" class="btn-gotop"><span class="blind">위로</span></button>
+		
+	</section>
+	<!--// ========== 컨텐츠 영역 :: container ========== -->
+</div><!--// wrap -->
+</body>
+</html>

@@ -54,14 +54,14 @@
                     <table>
                         <caption>입력</caption>
                         <colgroup>
-                            <col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
+                            <col class="w-col-tit"><col class="w-col-cnt"><col class="w-col-tit"><col class="w-col-cnt">
                         </colgroup>
                         <tbody>
                             <tr>
                                 <th scope="row"><span class="in-tb">ERP 코드</span></th>
                                 <td colspan="3">
                                     <div class="input-group">
-										<input type="text" class="input-text w300" disabled />
+										<input type="text" class="input-text w300" disabled>
 										<span class="input-group-btn">
 											<button type="button" class="btn-form btn-grey"><span>ERP 검색</span></button>
 										</span>
@@ -113,11 +113,11 @@
                     <table>
                         <caption>입력</caption>
                         <colgroup>
-                            <col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
+                            <col class="w-col-tit"><col class="w-col-cnt"><col class="w-col-tit"><col class="w-col-cnt">
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th scope="row"><span class="in-tb">등록 사이트<i class="es"><em class="blind">필수입력</em></i></span></th>
+                                <th scope="row"><span class="in-tb">등록 사이트</span></th><!-- [Dev] 20210721 수정 : <i class="es"><em class="blind">필수입력</em></i> 제거 -->
                                 <td colspan="3">
                                     <!-- 0608 수정 : markup 변경 -->
                                     <select class="select w200">
@@ -147,6 +147,11 @@
                                         <div class="custom-radio">
                                             <input type="radio" id="radio-1-3" class="radio" name="radio-item-1"><label for="radio-1-3">사업자 전용</label>
                                         </div>
+                                        <!-- [Dev] 20210804 추가 -->
+                                        <div class="custom-radio">
+                                            <input type="radio" id="radio-1-4" class="radio" name="radio-item-1"><label for="radio-1-4">주문상품</label>
+                                        </div>
+                                        <!-- //[Dev] 20210804 추가 -->
                                     </div>
                                 </td>
                             </tr>
@@ -223,7 +228,7 @@
                               </tr>
                               <tr>
                                 <th scope="row"><span class="in-tb">연동 상품명</span></th>
-                                <td><input type="text" class="input-text w-full" placeholder="연동 상품명 입력" /></td>
+                                <td><input type="text" class="input-text w-full" placeholder="연동 상품명 입력"></td>
                                 <th scope="row"><span class="in-tb">상품전시 여부</span></th>
                                 <td>
                                     <div class="form-inline-group">
@@ -270,7 +275,7 @@
                                 <td><div class="in-tb">승인 대기</div></td>
                               </tr>
                               <tr>
-                                <th scope="row"><span class="in-tb">상품 후기 그룹화</span></th>
+                                <th scope="row"><span class="in-tb">상품 후기 그룹화<i class="es"><em class="blind">필수입력</em></i></span></th>
                                 <td>
                                     <div class="input-group">
 										<input type="text" class="input-text w300" disabled>
@@ -305,9 +310,8 @@
 									</div>
                                 </td>
                             </tr>
+                            <!-- [Dev] 20210803 수정 : 상품비교코드 위치 수정 및 교환/반품가능여부 추가 -->
                             <tr>
-                                <th scope="row"><span class="in-tb">검색 키워드</span></th>
-                                <td><input type="text" class="input-text w-full" value="" placeholder="키워드   입력(comma(,) 로 구분)" /></td><!-- [Dev] 0705 수정 : colspan 삭제 -->
                                 <th scope="row"><span class="in-tb">상품 비교 코드</span></th>
                                 <td>
                                     <div class="input-group">
@@ -317,11 +321,32 @@
 										</span>
 									</div>
                                 </td>
+                                <th scope="row"><span class="in-tb">교환가능 여부</span></th>
+                                <td>
+                                    <div class="form-inline-group">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="check-202" class="checkbox" name="check-item-2"><label for="check-202">교환가능 상품</label>
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
+                            <tr>
+                                <th scope="row"><span class="in-tb">검색 키워드</span></th>
+                                <td><input type="text" class="input-text w-full" value="" placeholder="키워드 입력(comma(,) 로 구분)"></td><!-- [Dev] 0705 수정 : colspan 삭제 -->
+                                <th scope="row"><span class="in-tb">반품가능 여부</span></th>
+                                <td>
+                                    <div class="form-inline-group">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="check-203" class="checkbox" name="check-item-3"><label for="check-203">반품가능 상품</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!--// [Dev] 20210803 수정 : 상품비교코드 위치 수정 및 교환/반품가능여부 추가 -->
                             <!--// [Dev] 0702 수정 -->
                             <tr>
                                 <th scope="row"><span class="in-tb">오픈 예정 상품</span></th>
-                                <td colspan="3">
+                                <td><!-- [Dev] 20210831  colspan="3" 제거 -->
                                     <div class="form-inline-group">
 										<div class="custom-radio">
 											<input type="radio" id="radio-5-1" class="radio" name="radio-item-5" checked=""><label for="radio-5-1">사용</label>
@@ -331,6 +356,17 @@
 										</div>
 									</div>
                                 </td>
+                                <!-- [Dev] 20210831 추가 -->
+                                <th scope="row"><span class="in-tb">추가혜택 그룹화</span></th>
+                                <td>
+                                    <div class="input-group">
+										<input type="text" class="input-text w300" disabled>
+										<span class="input-group-btn">
+											<button type="button" class="btn-form btn-grey"><span>추가혜택 그룹 검색</span></button>
+										</span>
+									</div>
+                                </td>
+                                <!-- //[Dev] 20210831 추가 -->
                               </tr>
                         </tbody>
                     </table>	
@@ -347,7 +383,7 @@
                     <table>
                         <caption>입력</caption>
                         <colgroup>
-                            <col class="w-col-tit"><col class="w-col-cnt" />
+                            <col class="w-col-tit"><col class="w-col-cnt">
                         </colgroup>
                         <tbody>
                             <tr>
@@ -356,11 +392,11 @@
                                 </th>
                                 <td>
                                     <div class="input-group">
-                                        <div class="input-group-form w30">
+                                        <!-- [Dev] 20210721 수정 : 제거 <div class="input-group-form w30">
                                             <div class="custom-radio single">
                                                 <input type="radio" id="radio-6-1" class="radio" name="radio-item-6" checked=""><label for="radio-6-1" class="blind">선택</label>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="input-group-form">
                                             <select class="select w200">
                                                 <option value="">대분류</option>
@@ -368,13 +404,13 @@
                                             </select>
                                         </div>
                                         <div class="input-group-form">
-                                            <select class="select w200">
+                                            <select class="select w200" disabled><!-- [Dev] 20210721 수정 : disabled 추가, 이전 select 선택 시 disabled 제거 -->
                                                 <option value="">중분류</option>
                                                 <option value="">중분류 1</option>
                                             </select>
                                         </div>
                                         <div class="input-group-form">
-                                            <select class="select w200">
+                                            <select class="select w200" disabled><!-- [Dev] 20210721 수정 : disabled 추가, 이전 select 선택 시 disabled 제거 -->
                                                 <option value="">소분류</option>
                                                 <option value="">소분류 1</option>
                                             </select>
@@ -388,11 +424,11 @@
                                 </th>
                                 <td>
                                     <div class="input-group">
-                                        <div class="input-group-form w30">
+                                        <!-- [Dev] 20210721 수정 : 제거 <div class="input-group-form w30">
                                             <div class="custom-radio single">
                                                 <input type="radio" id="radio-6-2" class="radio" name="radio-item-6"><label for="radio-6-2" class="blind">선택</label>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="input-group-form">
                                             <select class="select w200">
                                                 <option value="">대분류</option>
@@ -400,13 +436,13 @@
                                             </select>
                                         </div>
                                         <div class="input-group-form">
-                                            <select class="select w200">
+                                            <select class="select w200" disabled><!-- [Dev] 20210721 수정 : disabled 추가, 이전 select 선택 시 disabled 제거 -->
                                                 <option value="">중분류</option>
                                                 <option value="">중분류 1</option>
                                             </select>
                                         </div>
                                         <div class="input-group-form">
-                                            <select class="select w200">
+                                            <select class="select w200" disabled><!-- [Dev] 20210721 수정 : disabled 추가, 이전 select 선택 시 disabled 제거 -->
                                                 <option value="">소분류</option>
                                                 <option value="">소분류 1</option>
                                             </select>
@@ -417,11 +453,11 @@
                                     </div><!--// input-group -->
 
                                     <div class="input-group">
-                                        <div class="input-group-form w30">
+                                        <!-- [Dev] 20210721 수정 : 제거 <div class="input-group-form w30">
                                             <div class="custom-radio single">
                                                 <input type="radio" id="radio-6-2" class="radio" name="radio-item-6"><label for="radio-6-2" class="blind">선택</label>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="input-group-form">
                                             <select class="select w200">
                                                 <option value="">대분류</option>
@@ -429,13 +465,13 @@
                                             </select>
                                         </div>
                                         <div class="input-group-form">
-                                            <select class="select w200">
+                                            <select class="select w200" disabled><!-- [Dev] 20210721 수정 : disabled 추가, 이전 select 선택 시 disabled 제거 -->
                                                 <option value="">중분류</option>
                                                 <option value="">중분류 1</option>
                                             </select>
                                         </div>
                                         <div class="input-group-form">
-                                            <select class="select w200">
+                                            <select class="select w200" disabled><!-- [Dev] 20210721 수정 : disabled 추가, 이전 select 선택 시 disabled 제거 -->
                                                 <option value="">소분류</option>
                                                 <option value="">소분류 1</option>
                                             </select>
@@ -450,7 +486,7 @@
                                 <th scope="row"><span class="in-tb">브랜드</span></th>
                                 <td>
                                     <div class="input-group">
-										<input type="text" class="input-text w300" disabled />
+										<input type="text" class="input-text w300" disabled>
 										<span class="input-group-btn">
 											<button type="button" class="btn-form btn-grey"><span>브랜드 검색</span></button>
 										</span>
@@ -477,6 +513,119 @@
                 </fieldset>	
             </div><!--// board-form -->
 
+            <!-- [Dev] 20210721 수정 : 추가 -->
+            <!-- [Dev] 20210831 제거 
+            <div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">추가정보</h3>
+            </div>
+            <div class="board-form">	
+                <table>
+                    <caption>추가정보입력</caption>
+                    <colgroup>
+                        <col class="w-col-tit"><col class="w-col-cnt">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><span class="in-tb">추가혜택</span></th>
+                            <td><div style="height:140px;border:1px solid #ddd">에디터 영역</div></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">상품구성</span></th>
+                            <td><div style="height:140px;border:1px solid #ddd">에디터 영역</div></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">공지사항</span></th>
+                            <td>
+                                <input type="text" class="input-text w-full" value="" placeholder="공지사항 입력">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>		
+            </div>
+            -->
+            <!-- //[Dev] 20210721 수정 : 추가 -->
+
+            <!-- [Dev] 20210831 추가 -->
+            <div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">상품구성</h3>
+            </div>
+            <div class="board-form">	
+                <table>
+                    <caption>상품구성 입력</caption>
+                    <colgroup>
+                        <col class="w-col-tit"><col class="w-col-cnt">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><span class="in-tb">상품구성 1</span></th>
+                            <td><input type="text" class="input-text w-full" placeholder="상품구성1 입력"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">상품구성 2</span></th>
+                            <td><input type="text" class="input-text w-full" placeholder="상품구성2 입력"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">상품구성 3</span></th>
+                            <td><input type="text" class="input-text w-full" placeholder="상품구성3 입력"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">상품구성 4</span></th>
+                            <td><input type="text" class="input-text w-full" placeholder="상품구성4 입력"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">상품구성 5</span></th>
+                            <td><input type="text" class="input-text w-full" placeholder="상품구성5 입력"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">상품구성 6</span></th>
+                            <td><input type="text" class="input-text w-full" placeholder="상품구성6 입력"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">상품구성 7</span></th>
+                            <td><input type="text" class="input-text w-full" placeholder="상품구성7 입력"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">상품구성 8</span></th>
+                            <td><input type="text" class="input-text w-full" placeholder="상품구성8 입력"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">상품구성 9</span></th>
+                            <td><input type="text" class="input-text w-full" placeholder="상품구성9 입력"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">상품구성 10</span></th>
+                            <td><input type="text" class="input-text w-full" placeholder="상품구성10 입력"></td>
+                        </tr>
+                    </tbody>
+                </table>		
+            </div>
+            <div class="cnt-title-area mt40">
+                <h3 class="tit-cnt">공지사항</h3>
+            </div>
+            <div class="board-form">	
+                <table>
+                    <caption>공지사항 입력</caption>
+                    <colgroup>
+                        <col class="w-col-tit"><col class="w-col-cnt">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><span class="in-tb">공지사항 1</span></th>
+                            <td><input type="text" class="input-text w-full" placeholder="공지사항1 입력"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">공지사항 2</span></th>
+                            <td><input type="text" class="input-text w-full" placeholder="공지사항2 입력"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">공지사항 3</span></th>
+                            <td><input type="text" class="input-text w-full" placeholder="공지사항3 입력"></td>
+                        </tr>
+                    </tbody>
+                </table>		
+            </div>
+            <!-- //[Dev] 20210831 추가 -->
+
             <div class="cnt-title-area mt40">
                 <h3 class="tit-cnt">판매정보</h3>
                 <div class="right-info">
@@ -490,7 +639,7 @@
                     <table>
                         <caption>입력</caption>
                         <colgroup>
-                            <col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
+                            <col class="w-col-tit"><col class="w-col-cnt"><col class="w-col-tit"><col class="w-col-cnt">
                         </colgroup>
                         <tbody>
                             <tr>
@@ -514,11 +663,11 @@
                                 <td>
                                     <div class="input-group">
                                         <label for="" class="input-group-txt">할인율</label>
-                                        <input type="text" class="input-text text-right w90" placeholder="숫자 입력" />
+                                        <input type="text" class="input-text text-right w90" placeholder="숫자 입력">
                                         <span class="input-group-txt">%</span>
                                         <span class="input-group-gap"></span>
                                         <label for="" class="input-group-txt">판매가</label>
-                                        <input type="text" class="input-text text-right w90" disabled placeholder="숫자 입력" value="0" />
+                                        <input type="text" class="input-text text-right w140" disabled placeholder="숫자 입력" value="0"><!-- [Dev] 20210721 수정 : 클래스명 w90 -> w140 변경 -->
                                         <span class="input-group-txt">원</span>
                                         <span class="input-group-gap"></span>
                                         <div class="input-group-form">
@@ -640,8 +789,17 @@
                                         </div>
                                     </div>
                                 </td>
-                                <th scope="row"><span class="in-tb">가격비교 연동</span></th>
+                                <!-- [Dev] 20210831 수정 -->
+                                <th scope="row"><span class="in-tb">이벤트 문구</span></th>
                                 <td>
+                                    <input type="text" placeholder="이벤트 문구 입력" class="input-text w-full">
+                                </td>
+                                <!-- //[Dev] 20210831 수정 -->
+                            </tr>
+                            <!-- [Dev] 20210831 추가 -->
+                            <tr>
+                                <th scope="row"><span class="in-tb">가격비교 연동</span></th>
+                                <td colspan="3">
                                     <div class="form-inline-group">
                                         <div class="custom-radio">
                                             <input type="radio" id="radio-8-1" class="radio" name="radio-item-8" checked=""><label for="radio-8-1">설정</label>
@@ -652,6 +810,7 @@
                                     </div>
                                 </td>
                             </tr>
+                            <!-- //[Dev] 20210831 추가 -->
                         </tbody>
                     </table>	
                 </fieldset>	
@@ -667,7 +826,7 @@
                     <table>
                         <caption>입력</caption>
                         <colgroup>
-                            <col class="w-col-tit"><col />
+                            <col class="w-col-tit"><col>
                         </colgroup>
                         <tbody>
                             <tr>
@@ -760,8 +919,8 @@
                                         <div class="custom-radio">
                                             <input type="radio" id="radio-211-4" class="radio" name="radio-item-211"><label for="radio-211-4">개당 배송비</label>
                                         </div>
-                                        <input type="text" class="input-text text-right w140" value="" placeholder="숫자 입력">
-                                        <span class="input-group-txt">원</span>
+                                        <!-- [Dev] 20210721 수정 : 제거 <input type="text" class="input-text text-right w140" value="" placeholder="숫자 입력">
+                                        <span class="input-group-txt">원</span> -->
                                     </div>
 
                                     <div class="form-inline">
@@ -783,7 +942,7 @@
                 <h3 class="tit-cnt">필수옵션</h3>
                 <div class="right-info">
                     <button type="button" class="btn-func btn-default"><span>옵션  변경 이력</span></button>
-                    <button type="button" class="btn-func btn-default"><span>옵션 추가</span></button>
+                    <button type="button" class="btn-func btn-default"><span>필수 옵션 추가</span></button><!-- [Dev] 20210825 텍스트 수정 -->
                 </div>
             </div><!--// cnt-title-area -->
 			
@@ -793,7 +952,7 @@
                     <table>
                         <caption>입력</caption>
                         <colgroup>
-                            <col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
+                            <col class="w-col-tit"><col class="w-col-cnt"><col class="w-col-tit"><col class="w-col-cnt">
                         </colgroup>
                         <tbody>
                             <tr>
@@ -862,9 +1021,7 @@
                                             <div class="input-table-cell">
                                                 <div class="input-group">
                                                     <input type="text" class="input-text w571" placeholder="옵션명 입력">
-                                                    <span class="input-group-btn">
-                                                        <button type="button" class="btn-plus" title="추가"><i class="ico-plus-bold"></i><span class="blind">추가</span></button>
-                                                    </span>
+                                                    <!-- [Dev] 20210825 버튼 삭제 -->
                                                 </div><!--// input-group -->
                                             </div><!--// input-table-cell -->
                                         </div><!--// input-table-row -->
@@ -873,9 +1030,11 @@
                                             <div class="input-table-cell">
                                                 <div class="input-group">
                                                     <input type="text" class="input-text w571" placeholder="옵션값 입력">
+                                                    <!-- [Dev] 20210825 변경 -->
                                                     <span class="input-group-btn">
-                                                        <button type="button" class="btn-minus" title="삭제"><i class="ico-minus-bold"></i><span class="blind">삭제</span></button>
+                                                        <button type="button" class="btn-plus" title="추가"><i class="ico-plus-bold"></i><span class="blind">추가</span></button>
                                                     </span>
+                                                    <!-- //[Dev] 20210825 변경 -->
                                                 </div><!--// input-group -->
                                             </div>
                                         </div><!--// input-table-row -->
@@ -905,9 +1064,7 @@
                                             <div class="input-table-cell">
                                                 <div class="input-group">
                                                     <input type="text" class="input-text w571" placeholder="옵션명 입력">
-                                                    <span class="input-group-btn">
-                                                        <button type="button" class="btn-plus" title="추가"><i class="ico-plus-bold"></i><span class="blind">추가</span></button>
-                                                    </span>
+                                                    <!-- [Dev] 20210825 버튼 삭제 -->
                                                 </div><!--// input-group -->
                                             </div><!--// input-table-cell -->
                                         </div><!--// input-table-row -->
@@ -916,9 +1073,11 @@
                                             <div class="input-table-cell">
                                                 <div class="input-group">
                                                     <input type="text" class="input-text w571" placeholder="옵션값 입력">
+                                                    <!-- [Dev] 20210825 변경 -->
                                                     <span class="input-group-btn">
-                                                        <button type="button" class="btn-minus" title="삭제"><i class="ico-minus-bold"></i><span class="blind">삭제</span></button>
+                                                        <button type="button" class="btn-plus" title="추가"><i class="ico-plus-bold"></i><span class="blind">추가</span></button>
                                                     </span>
+                                                    <!-- //[Dev] 20210825 변경 -->
                                                 </div><!--// input-group -->
                                             </div>
                                         </div><!--// input-table-row -->
@@ -948,9 +1107,7 @@
                                             <div class="input-table-cell">
                                                 <div class="input-group">
                                                     <input type="text" class="input-text w571" placeholder="옵션명 입력">
-                                                    <span class="input-group-btn">
-                                                        <button type="button" class="btn-plus" title="추가"><i class="ico-plus-bold"></i><span class="blind">추가</span></button>
-                                                    </span>
+                                                    <!-- [Dev] 20210825 버튼 삭제 -->
                                                 </div><!--// input-group -->
                                             </div><!--// input-table-cell -->
                                         </div><!--// input-table-row -->
@@ -958,10 +1115,12 @@
                                             <label for="" class="input-table-cell input-table-txt">옵션값1</label>
                                             <div class="input-table-cell">
                                                 <div class="input-group">
-                                                    <input type="text" class="input-text w571" placeholder="마옵션값 입력늘">
+                                                    <input type="text" class="input-text w571" placeholder="옵션값 입력">
+                                                    <!-- [Dev] 20210825 변경 -->
                                                     <span class="input-group-btn">
-                                                        <button type="button" class="btn-minus" title="삭제"><i class="ico-minus-bold"></i><span class="blind">삭제</span></button>
+                                                        <button type="button" class="btn-plus" title="추가"><i class="ico-plus-bold"></i><span class="blind">추가</span></button>
                                                     </span>
+                                                    <!-- //[Dev] 20210825 변경 -->
                                                 </div><!--// input-group -->
                                             </div>
                                         </div><!--// input-table-row -->
@@ -983,28 +1142,28 @@
                             </tr>
                             <tr>
                                 <th scope="row"><span class="in-tb">텍스트 옵션1</span></th>
-                                <td colspan="3"><input type="text" class="input-text w571" placeholder="맛을 입력하세요" /></td>
+                                <td colspan="3"><input type="text" class="input-text w571" placeholder="맛을 입력하세요"></td>
                             </tr>
                             <tr>
                                 <th scope="row"><span class="in-tb">텍스트 옵션2</span></th>
-                                <td colspan="3"><input type="text" class="input-text w571" placeholder="색상을 입력하세요" /></td>
+                                <td colspan="3"><input type="text" class="input-text w571" placeholder="색상을 입력하세요"></td>
                             </tr>
                             <tr>
                                 <th scope="row"><span class="in-tb">텍스트 옵션3</span></th>
-                                <td colspan="3"><input type="text" class="input-text w571" placeholder="각인을 입력하세요" /></td>
+                                <td colspan="3"><input type="text" class="input-text w571" placeholder="각인을 입력하세요"></td>
                             </tr>
                         </tbody>
                     </table>	
                 </fieldset>	
             </div><!--// board-form -->
             <div class="btn-area mt20">
-                <button type="button" class="btn-basic-md btn-primary"><span>옵션 목록으로 적용</span></button>
+                <button type="button" class="btn-basic-md2 btn-primary"><span>옵션 목록으로 적용</span></button><!-- [Dev] 20210726 버튼 클래스 수정 -->
             </div>
            <div class="board-movable-wrap">
                 <!-- 상품연동형>옵션 목록 case -->
                 <div class="board-option mt40">
                     <div class="left-area">
-                        <div class="page-info">필수옵션 목록(총  <strong class="text-primary">1,000</strong>개)</div>
+                        <div class="page-info mt10">필수옵션 목록(총  <strong class="text-primary">1,000</strong>개)</div><!-- [Dev] 20210721 수정 : mt10 클래스 추가-->
                     </div><!--// left-area -->
                     <div class="right-area">
                         <div class="btn-lst">
@@ -1028,29 +1187,33 @@
                     1. 화면 가운데 생성된는 테이블 인 경우 세로 스크롤 필요 -> class = scroll-y-table 
                     2. tr move 관련 클래스  :  movable-row
                     -->
-                <div class="board-list movable-row scroll-y-table mt10"><!-- 0622 수정 : 클래스 추가 -->
+                <div class="board-list movable-row scroll-y-table mt10 vm-table"><!-- 0622 수정 : 클래스 추가 --><!-- [Dev] 20210825 클래스 vm-table 추가 -->
                     <table>
                         <caption>목록</caption>
                         <colgroup>
-                            <col style="width:160px" />
-                            <col style="width:160px" />
-                            <col style="width:160px" />
-                            <col style="width:120px" />
-                            <col style="width:170px" />
-                            <col style="width:170px" />
-                            <col style="width:120px" />
-                            <col style="width:270px" />
-                            <col style="width:160px" />
-                            <col style="width:80px" />
+                            <col style="width:100px"><!-- [Dev] 20210825 추가 -->
+                            <col style="width:160px">
+                            <col style="width:160px">
+                            <col style="width:160px">
+                            <col style="width:110px">
+                            <col style="width:170px">
+                            <col style="width:170px">
+                            <col style="width:120px">
+                            <col style="width:110px">
+                            <col style="width:270px">
+                            <col style="width:160px">
+                            <col style="width:80px">
                         </colgroup>
                         <thead>
                         <tr>
+                            <th scope="col"><span class="in-tb">옵션 이미지</span></th><!-- [Dev] 20210825 추가 -->
                             <th scope="col"><span class="in-tb">(옵션1)맛</span></th>
                             <th scope="col"><span class="in-tb">(옵션2)수량</span></th>
                             <th scope="col"><span class="in-tb">(옵션3)-</span></th>
                             <th scope="col"><span class="in-tb">전시 여부</span></th>
                             <th scope="col"><span class="in-tb">추가 금액</span></th>
                             <th scope="col"><span class="in-tb">옵션 재고</span></th>
+                            <th scope="col"><span class="in-tb">팩 수</span></th><!-- [Dev] 20210721 수정 : 추가 -->
                             <th scope="col"><span class="in-tb">판매상태</span></th>
                             <th scope="col"><span class="in-tb">상품 코드</span></th>
                             <th scope="col"><span class="in-tb">ERP 코드</span></th>
@@ -1058,8 +1221,10 @@
                         </tr>
                         </thead>
                         <tbody>
-                             
                             <tr class="movable" id="3">
+                                <td class="text-center">
+									<span class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></span>
+								</td><!-- [Dev] 20210825 추가 -->
                                 <td class="text-center"><div class="in-tb">오리지널</div></td>
                                 <td class="text-center"><div class="in-tb">10</div></td>
                                 <td class="text-center"><div class="in-tb">-</div></td>
@@ -1071,6 +1236,7 @@
                                 </td>
                                 <td class="text-center"><input type="text" id="" class="input-text w-full text-center" value="" placeholder="숫자 입력"></td>
                                 <td class="text-center"><input type="text" id="" class="input-text w-full text-center" value="" placeholder="숫자 입력"></td>
+                                <td class="text-center"><input type="text" id="" class="input-text w-full text-center" value="" placeholder="숫자 입력"></td><!-- [Dev] 20210721 수정 : 추가 -->
                                 <td class="text-center">
                                     <select class="select w-full">
                                         <option value="">정상</option>
@@ -1078,7 +1244,7 @@
                                 </td>
                                 <td class="text-center">
                                     <div class="input-group w-full">
-                                        <input type="text" class="input-text" disabled>
+                                        <input type="text" class="input-text text-center" disabled placeholder="상품 코드"><!-- [Dev] 20210721 수정 : text-center 클래스 추가, plabeholder 추가 -->
                                         <span class="input-group-btn">
                                             <button type="button" class="btn-form btn-grey"><span>상품 검색</span></button>
                                         </span>
@@ -1090,6 +1256,9 @@
                                 </td>
                             </tr>
                             <tr class="movable" id="2">
+                                <td class="text-center">
+									<span class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></span>
+								</td><!-- [Dev] 20210825 추가 -->
                                 <td class="text-center"><div class="in-tb">오리지널</div></td>
                                 <td class="text-center"><div class="in-tb">10</div></td>
                                 <td class="text-center"><div class="in-tb">-</div></td>
@@ -1101,6 +1270,7 @@
                                 </td>
                                 <td class="text-center"><input type="text" id="" class="input-text w-full text-center" value="" placeholder="숫자 입력"></td>
                                 <td class="text-center"><input type="text" id="" class="input-text w-full text-center" value="" placeholder="숫자 입력"></td>
+                                <td class="text-center"><input type="text" id="" class="input-text w-full text-center" value="" placeholder="숫자 입력"></td><!-- [Dev] 20210721 수정 : 추가 -->
                                 <td class="text-center">
                                     <select class="select w-full">
                                         <option value="">정상</option>
@@ -1108,7 +1278,7 @@
                                 </td>
                                 <td class="text-center">
                                     <div class="input-group w-full">
-                                        <input type="text" class="input-text" disabled>
+                                        <input type="text" class="input-text text-center" disabled placeholder="상품 코드"><!-- [Dev] 20210721 수정 : text-center 클래스 추가, plabeholder 추가 -->
                                         <span class="input-group-btn">
                                             <button type="button" class="btn-form btn-grey"><span>상품 검색</span></button>
                                         </span>
@@ -1120,6 +1290,9 @@
                                 </td>
                             </tr>
                             <tr class="movable" id="1">
+                                <td class="text-center">
+									<span class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></span>
+								</td><!-- [Dev] 20210825 추가 -->
                                 <td class="text-center"><div class="in-tb">오리지널</div></td>
                                 <td class="text-center"><div class="in-tb">10</div></td>
                                 <td class="text-center"><div class="in-tb">-</div></td>
@@ -1131,6 +1304,7 @@
                                 </td>
                                 <td class="text-center"><input type="text" id="" class="input-text w-full text-center" value="" placeholder="숫자 입력"></td>
                                 <td class="text-center"><input type="text" id="" class="input-text w-full text-center" value="" placeholder="숫자 입력"></td>
+                                <td class="text-center"><input type="text" id="" class="input-text w-full text-center" value="" placeholder="숫자 입력"></td><!-- [Dev] 20210721 수정 : 추가 -->
                                 <td class="text-center">
                                     <select class="select w-full">
                                         <option value="">정상</option>
@@ -1138,7 +1312,7 @@
                                 </td>
                                 <td class="text-center">
                                     <div class="input-group w-full">
-                                        <input type="text" class="input-text" disabled>
+                                        <input type="text" class="input-text text-center" disabled placeholder="상품 코드"><!-- [Dev] 20210721 수정 : text-center 클래스 추가, plabeholder 추가 -->
                                         <span class="input-group-btn">
                                             <button type="button" class="btn-form btn-grey"><span>상품 검색</span></button>
                                         </span>
@@ -1153,7 +1327,7 @@
                     </table>
                 </div><!--// board-list | 목록 -->
                 <div class="btn-area mt20">
-                    <button type="button" class="btn-basic-md btn-default"><span>옵션 수정</span></button>
+                    <button type="button" class="btn-basic-md2 btn-default"><span>옵션 수정</span></button><!-- [Dev] 20210726 버튼 클래스 수정 -->
                 </div>
                 <!--// 상품연동형>옵션 목록  case -->
                 <!--// 목록 : 상품등록/수정  -->
@@ -1187,17 +1361,17 @@
                 <table>
                     <caption>목록</caption>
                     <colgroup>
-						<col class="w-col-num" />
-						<col style="width:160px" />
-						<col style="width:160px" />
-						<col style="width:160px" />
-						<col style="width:100px" />
-						<col style="width:170px" />
-						<col style="width:170px" />
-						<col style="width:112px" />
-                        <col style="width:160px" />
-                        <col style="width:280px" />
-                        <col style="width:160px" />
+						<col class="w-col-num">
+						<col style="width:160px">
+						<col style="width:160px">
+						<col style="width:160px">
+						<col style="width:100px">
+						<col style="width:170px">
+						<col style="width:170px">
+						<col style="width:112px">
+                        <col style="width:160px">
+                        <col style="width:280px">
+                        <col style="width:160px">
                     </colgroup>
                     <thead>
                     <tr>
@@ -1263,7 +1437,7 @@
             <div class="cnt-title-area mt40">
                 <h3 class="tit-cnt">추가 옵션</h3>
                 <div class="right-info">
-                    <button type="button" class="btn-func btn-default"><span>옵션추가</span></button>
+                    <button type="button" class="btn-func btn-default"><span>추가 옵션 추가</span></button><!-- [Dev] 20210825 텍스트 변경 -->
                 </div>
             </div>
 
@@ -1332,14 +1506,16 @@
 				<table>
 					<caption>목록</caption>
 					<colgroup>
-						<col style="width:auto" />
-						<col style="width:120px" />
-						<col style="width:170px" />
-						<col style="width:170px" />
-						<col style="width:132px" />
-						<col style="width:160px" />
-						<col style="width:160px" />
-						<col style="width:140px" />
+                        <!-- [Dev] 20210721 수정 : 수치 변경 -->
+						<col style="width:auto">
+						<col style="width:220px">
+						<col style="width:200px">
+						<col style="width:200px">
+						<col style="width:200px">
+						<col style="width:160px">
+						<col style="width:190px">
+						<col style="width:140px">
+                        <!-- //[Dev] 20210721 수정 : 수치 변경 -->
 					</colgroup>
 					<thead>
 					<tr>
@@ -1399,11 +1575,11 @@
 				<table>
 					<caption>목록</caption>
 					<colgroup>
-						<col style="width:10%" />
-						<col />
-						<col style="width:30%" />
-						<col style="width:10%" />
-						<col style="width:10%" />
+						<col style="width:10%">
+						<col>
+						<col style="width:30%">
+						<col style="width:10%">
+						<col style="width:10%">
 					</colgroup>
 					<thead>
 					<tr>
@@ -1449,6 +1625,65 @@
                         <tr>
                             <th scope="row"><span class="in-tb">상품 이미지 1</span></th>
                             <td>
+                                <!-- [Dev] 20210721 수정 -->
+                                <div class="custom-checkbox mt5">
+                                    <input type="checkbox" id="check-900" class="checkbox"><label for="check-900">자동생성</label>
+                                </div>
+                                <div class="attach-wrap">
+                                    <div class="attach-item">
+                                        <label for="ex-filename99" class="btn-attach"><span><em>600X600</em> 사이즈 이미지</span></label> 
+                                        <div class="upload-img">
+                                            <img src="../../images/_sample/prdimg-50x50.png" alt="">
+                                        </div>
+                                        <div class="upload-name">
+                                            <span class="txt">filename.jpg</span>
+                                            <button type="button" class="btn-del-xs ui-file-delete"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+                                        </div>
+                                        <input type="file" id="ex-filename99" class="upload-hidden" value=""> 
+                                    </div>
+                                    
+                                    <div class="attach-item">
+                                        <label for="ex-filename99" class="btn-attach"><span><em>330X330</em> 사이즈 이미지</span></label> 
+                                        <div class="upload-name">
+                                            <span class="txt"></span>
+                                        </div>
+                                        <input type="file" id="ex-filename99" class="upload-hidden" value=""> 
+                                    </div>
+                                    
+                                    <div class="attach-item">
+                                        <label for="ex-filename99" class="btn-attach"><span><em>200X200</em> 사이즈 이미지</span></label> 
+                                        <div class="upload-name">
+                                            <span class="txt"></span>
+                                        </div>
+                                        <input type="file" id="ex-filename99" class="upload-hidden" value=""> 
+                                    </div>
+                                    
+                                    <div class="attach-item">
+                                        <label for="ex-filename99" class="btn-attach"><span><em>160X160</em> 사이즈 이미지</span></label> 
+                                        <div class="upload-name">
+                                            <span class="txt"></span>
+                                        </div>
+                                        <input type="file" id="ex-filename99" class="upload-hidden" value=""> 
+                                    </div>
+                                    
+                                    <div class="attach-item">
+                                        <label for="ex-filename99" class="btn-attach"><span><em>100X100</em> 사이즈 이미지</span></label> 
+                                        <div class="upload-name">
+                                            <span class="txt"></span>
+                                        </div>
+                                        <input type="file" id="ex-filename99" class="upload-hidden" value=""> 
+                                    </div>
+                                </div>
+                                <!-- //[Dev] 20210721 수정 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">상품 동영상</span></th>
+                            <td><input type="text" class="input-text w571" placeholder="URL 입력"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">상품 이미지 2</span></th>
+                            <td>
                                 <div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
 									<label for="ex-filename1" class="btn-form btn-default"><span>파일 선택</span></label> 
 									<!-- 파일 없을 경우
@@ -1457,22 +1692,6 @@
 									<div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
 									<input type="file" id="ex-filename1" class="upload-hidden" value=""> 
 								</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><span class="in-tb">상품 동영상</span></th>
-                            <td><input type="text" class="input-text w571" placeholder="URL 입력" /></td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><span class="in-tb">상품 이미지 2</span></th>
-                            <td>
-                                <div class="filebox">
-									<label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
-                                    <div class="upload-name">
-                                        <span class="txt"></span>
-                                    </div>
-                                    <input type="file" id="ex-filename2" class="upload-hidden" value=""> 
-                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -1562,27 +1781,27 @@
                                     <ul class="item">
                                         <li>
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-021" class="checkbox" name="check-item-0213" ><label for="check-021"><img src="../../images/_sample/temp-bdg.png" /></label>
+                                                <input type="checkbox" id="check-021" class="checkbox" name="check-item-0213" ><label for="check-021"><img src="../../images/_sample/temp-bdg.png"></label>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-022" class="checkbox" name="check-item-0213"><label for="check-022"><img src="../../images/_sample/temp-bdg.png" /></label>
+                                                <input type="checkbox" id="check-022" class="checkbox" name="check-item-0213"><label for="check-022"><img src="../../images/_sample/temp-bdg.png"></label>
                                             </div>   
                                         </li>  
                                         <li>                           
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-023" class="checkbox" name="check-item-0213"><label for="check-023"><img src="../../images/_sample/temp-bdg.png" /></label>
+                                                <input type="checkbox" id="check-023" class="checkbox" name="check-item-0213"><label for="check-023"><img src="../../images/_sample/temp-bdg.png"></label>
                                             </div>    
                                         </li> 
                                         <li>                          
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-024" class="checkbox" name="check-item-0213"><label for="check-024"><img src="../../images/_sample/temp-bdg.png" /></label>
+                                                <input type="checkbox" id="check-024" class="checkbox" name="check-item-0213"><label for="check-024"><img src="../../images/_sample/temp-bdg.png"></label>
                                             </div>    
                                         </li>   
                                         <li>                      
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-025" class="checkbox" name="check-item-0213"><label for="check-025"><img src="../../images/_sample/temp-bdg.png" /></label>
+                                                <input type="checkbox" id="check-025" class="checkbox" name="check-item-0213"><label for="check-025"><img src="../../images/_sample/temp-bdg.png"></label>
                                             </div>    
                                         </li>  
                                     </ul>
@@ -1593,27 +1812,27 @@
                                     <ul class="item">
                                         <li>
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-021-2" class="checkbox" name="check-item-021-2" ><label for="check-021-2"><img src="../../images/_sample/temp-bdg.png" /></label>
+                                                <input type="checkbox" id="check-021-2" class="checkbox" name="check-item-021-2" ><label for="check-021-2"><img src="../../images/_sample/temp-bdg.png"></label>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-022-2" class="checkbox" name="check-item-021-2"><label for="check-022-2"><img src="../../images/_sample/temp-bdg.png" /></label>
+                                                <input type="checkbox" id="check-022-2" class="checkbox" name="check-item-021-2"><label for="check-022-2"><img src="../../images/_sample/temp-bdg.png"></label>
                                             </div>   
                                         </li>  
                                         <li>                           
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-023-2" class="checkbox" name="check-item-021-2"><label for="check-023-2"><img src="../../images/_sample/temp-bdg.png" /></label>
+                                                <input type="checkbox" id="check-023-2" class="checkbox" name="check-item-021-2"><label for="check-023-2"><img src="../../images/_sample/temp-bdg.png"></label>
                                             </div>    
                                         </li> 
                                         <li>                          
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-024-2" class="checkbox" name="check-item-021-2"><label for="check-024-2"><img src="../../images/_sample/temp-bdg.png" /></label>
+                                                <input type="checkbox" id="check-024-2" class="checkbox" name="check-item-021-2"><label for="check-024-2"><img src="../../images/_sample/temp-bdg.png"></label>
                                             </div>    
                                         </li>   
                                         <li>                      
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-025-2" class="checkbox" name="check-item-021-2"><label for="check-025-2"><img src="../../images/_sample/temp-bdg2.png" /></label>
+                                                <input type="checkbox" id="check-025-2" class="checkbox" name="check-item-021-2"><label for="check-025-2"><img src="../../images/_sample/temp-bdg2.png"></label>
                                             </div>    
                                         </li>  
                                     </ul>
@@ -1629,27 +1848,27 @@
                                     <ul class="item">
                                         <li>
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-1021" class="checkbox" name="check-item-1021" ><label for="check-1021"><img src="../../images/_sample/temp-lst.png" /></label>
+                                                <input type="checkbox" id="check-1021" class="checkbox" name="check-item-1021" ><label for="check-1021"><img src="../../images/_sample/temp-lst.png"></label>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-1022" class="checkbox" name="check-item-1021"><label for="check-1022"><img src="../../images/_sample/temp-lst.png" /></label>
+                                                <input type="checkbox" id="check-1022" class="checkbox" name="check-item-1021"><label for="check-1022"><img src="../../images/_sample/temp-lst.png"></label>
                                             </div>   
                                         </li>  
                                         <li>                           
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-1023" class="checkbox" name="check-item-1021"><label for="check-1023"><img src="../../images/_sample/temp-lst.png" /></label>
+                                                <input type="checkbox" id="check-1023" class="checkbox" name="check-item-1021"><label for="check-1023"><img src="../../images/_sample/temp-lst.png"></label>
                                             </div>    
                                         </li> 
                                         <li>                          
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-1024" class="checkbox" name="check-item-1021"><label for="check-1024"><img src="../../images/_sample/temp-lst.png" /></label>
+                                                <input type="checkbox" id="check-1024" class="checkbox" name="check-item-1021"><label for="check-1024"><img src="../../images/_sample/temp-lst.png"></label>
                                             </div>    
                                         </li>   
                                         <li>                      
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-1025" class="checkbox" name="check-item-1021"><label for="check-1025"><img src="../../images/_sample/temp-lst.png" /></label>
+                                                <input type="checkbox" id="check-1025" class="checkbox" name="check-item-1021"><label for="check-1025"><img src="../../images/_sample/temp-lst.png"></label>
                                             </div>    
                                         </li>  
                                     </ul>
@@ -1660,27 +1879,27 @@
                                     <ul class="item">
                                         <li>
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-011" class="checkbox" name="check-item-011" ><label for="check-011"><img src="../../images/_sample/temp-lst.png" /></label>
+                                                <input type="checkbox" id="check-011" class="checkbox" name="check-item-011" ><label for="check-011"><img src="../../images/_sample/temp-lst.png"></label>
                                             </div>    
                                         </li>
                                         <li>
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-012" class="checkbox" name="check-item-011"><label for="check-012"><img src="../../images/_sample/temp-lst.png" /></label>
+                                                <input type="checkbox" id="check-012" class="checkbox" name="check-item-011"><label for="check-012"><img src="../../images/_sample/temp-lst.png"></label>
                                             </div>                                    
                                         </li>
                                         <li>
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-013" class="checkbox" name="check-item-011"><label for="check-013"><img src="../../images/_sample/temp-lst.png" /></label>
+                                                <input type="checkbox" id="check-013" class="checkbox" name="check-item-011"><label for="check-013"><img src="../../images/_sample/temp-lst.png"></label>
                                             </div>                                    
                                         </li>
                                         <li>
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-014" class="checkbox" name="check-item-011"><label for="check-014"><img src="../../images/_sample/temp-lst.png" /></label>
+                                                <input type="checkbox" id="check-014" class="checkbox" name="check-item-011"><label for="check-014"><img src="../../images/_sample/temp-lst.png"></label>
                                             </div>                                    
                                         </li>
                                         <li>
                                             <div class="custom-checkbox img">
-                                                <input type="checkbox" id="check-015" class="checkbox" name="check-item-011"><label for="check-015"><img src="../../images/_sample/temp-lst.png" /></label>
+                                                <input type="checkbox" id="check-015" class="checkbox" name="check-item-011"><label for="check-015"><img src="../../images/_sample/temp-lst.png"></label>
                                             </div>                                    
                                         </li>
                                     </ul>
@@ -1695,12 +1914,18 @@
                 <h3 class="tit-cnt">상품 상세설명</h3>
             </div>
 
-            <div class="sub-tab mt10">
-                <ul>
-                    <li class="current"><a href="#none"><span>상세설명(PC)</span></a></li>
-                    <li><a href="#none"><span>상세설명(Mobile)</span></a></li>
-                </ul>
-            </div>
+            <!--[Dev] 20210723 탭추가 -->
+			<div class="ui-tab sub-tab mt10"><!-- [pub] 스크립트 불필요시 ui-tab class 삭제 -->
+				<ul>
+					<li class="current"><a href="#tab2-1"><span>상세설명(PC)</span></a></li>
+					<li><a href="#tab2-2"><span>상세설명(Mobile)</span></a></li>
+				</ul>
+			</div><!--// tab-menu -->
+			<!--[Dev] 20210726  <div class="_pb-inner-ex">제거-->
+            <div class="ui-tab-container tab-cnt-wrap">
+                <div id="tab2-1" class="ui-tab-cnt active tab-content"></div>
+                <div id="tab2-2" class="ui-tab-cnt tab-content"></div>
+            </div><!--// ui-tab-container -->
 
             <div class="cnt-title-area mt40">
                 <h3 class="tit-cnt">상품정보고시</h3>
@@ -1713,7 +1938,7 @@
                 <table>
                     <caption>입력</caption>
                     <colgroup>
-                        <col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
+                        <col class="w-col-tit"><col class="w-col-cnt"><col class="w-col-tit"><col class="w-col-cnt">
                     </colgroup>
                     <tbody>
                         <tr>
@@ -1904,11 +2129,12 @@
                     </div>
                 </div>
 
-                <div class="board-list movable-row scroll-y-table mt10"><!-- 0622 수정 : 클래스 추가 -->
+                <div class="board-list movable-row scroll-y-table vm-table mt10"><!-- 0622 수정 : 클래스 추가 -->
+                    <!-- [Dev] 20210825 클래스 vm-table 추가  -->
                     <table>
                         <caption>관련상품 목록</caption>
                         <colgroup>
-                            <col class="w-col-num">
+                            <!-- <col class="w-col-num"> [Dev] 20210825 제거 -->
                             <col style="width:120px">
                             <col style="width:120px">
                             <col style="width:auto">
@@ -1919,9 +2145,9 @@
                         </colgroup>
                         <thead>
                         <tr>
-                            <th scope="col" class="list-num"><span class="in-tb">번호</span></th>
+                            <!-- <th scope="col" class="list-num"><span class="in-tb">번호</span></th> [Dev] 20210825 제거 -->
                             <th scope="col"><span class="in-tb">상품코드</span></th>
-                            <th scope="col"><span class="in-tb">이미지</span></th>
+                            <th scope="col"><span class="in-tb">상품 이미지</span></th><!--  [Dev] 20210825 텍스트 변경 -->
                             <th scope="col"><span class="in-tb">상품명</span></th>
                             <th scope="col"><span class="in-tb">온라인 판매가</span></th>
                             <th scope="col"><span class="in-tb">판매가</span></th>
@@ -1930,42 +2156,55 @@
                         </tr>
                         </thead>
                         <tbody>
+                            <!-- 20210802 수정 : 온라인 판매가, 판매가 우측정렬 -->
                             <tr class="movable" id="3">
-                                <td class="list-num"><div class="in-tb">3</div></td>							
+                                <!-- <td class="list-num"><div class="in-tb">3</div></td> [Dev] 20210825 제거							 -->
                                 <td class="text-center"><div class="in-tb">PROM691111</div></td>
-                                <td class="text-center"><div class="in-tb"></div></td>
+                                <!-- [Dev] 20210825 수정 -->
+                                <td class="text-center">
+									<span class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></span>
+                                </td>
+                                <!-- //[Dev] 20210825 수정 -->
                                 <td class="text-left"><div class="in-tb">상품명</div></td>
-                                <td class="text-center"><div class="in-tb">10,000</div></td>
-                                <td class="text-center"><div class="in-tb">10,000</div></td>
+                                <td class="text-right"><div class="in-tb">10,000</div></td>
+                                <td class="text-right"><div class="in-tb">10,000</div></td>
                                 <td class="text-center"><div class="in-tb">판매상태</div></td>
                                 <td class="text-center"><button type="button" class="btn-form btn-default"><span>삭제</span></button></td>
                             </tr>
                             <tr class="movable" id="2">
-                                <td class="list-num"><div class="in-tb">2</div></td>							
+                                <!-- <td class="list-num"><div class="in-tb">2</div></td> [Dev] 20210825 제거 -->
                                 <td class="text-center"><div class="in-tb">PROM691111</div></td>
-                                <td class="text-center"><div class="in-tb"></div></td>
+                                <!-- [Dev] 20210825 수정 -->
+                                <td class="text-center">
+									<span class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></span>
+                                </td>
+                                <!-- //[Dev] 20210825 수정 -->
                                 <td class="text-left"><div class="in-tb">상품명</div></td>
-                                <td class="text-center"><div class="in-tb">10,000</div></td>
-                                <td class="text-center"><div class="in-tb">10,000</div></td>
+                                <td class="text-right"><div class="in-tb">10,000</div></td>
+                                <td class="text-right"><div class="in-tb">10,000</div></td>
                                 <td class="text-center"><div class="in-tb">판매상태</div></td>
                                 <td class="text-center"><button type="button" class="btn-form btn-default"><span>삭제</span></button></td>
                             </tr>
                             <tr class="movable" id="1">
-                                <td class="list-num"><div class="in-tb">1</div></td>							
+                                <!-- <td class="list-num"><div class="in-tb">1</div></td> [Dev] 20210825 제거 -->
                                 <td class="text-center"><div class="in-tb">PROM691111</div></td>
-                                <td class="text-center"><div class="in-tb"></div></td>
+                                <!-- [Dev] 20210825 수정 -->
+                                <td class="text-center">
+									<span class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></span>
+                                </td>
+                                <!-- //[Dev] 20210825 수정 -->
                                 <td class="text-left"><div class="in-tb">상품명</div></td>
-                                <td class="text-center"><div class="in-tb">10,000</div></td>
-                                <td class="text-center"><div class="in-tb">10,000</div></td>
+                                <td class="text-right"><div class="in-tb">10,000</div></td>
+                                <td class="text-right"><div class="in-tb">10,000</div></td>
                                 <td class="text-center"><div class="in-tb">판매상태</div></td>
                                 <td class="text-center"><button type="button" class="btn-form btn-default"><span>삭제</span></button></td>
                             </tr>
-                                    <!-- 2021051 추가 : no data case -->
+                            <!-- 2021051 추가 : no data case -->
                             <tr class="no-data">
                                 <td colspan="8">
                                     <div class="message-area">
                                         <i class="ico-img-excl"></i>
-                                        <p class="txt">데이터가 존재하지 않습니다.</p>
+                                        <p class="txt">내역이 없습니다.</p><!-- [Dev] 20210825 텍스트 변경-->
                                     </div>
                                 </td>
                             </tr>
@@ -2020,7 +2259,7 @@
 				<table>
 					<caption>목록</caption>
 					<colgroup>
-						<col />
+						<col>
 						<col style="width:20%">
 						<col style="width:20%">
 					</colgroup>
@@ -2058,10 +2297,13 @@
 </div><!--// wrap -->
 <!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->
 <script>
-    $(function() {    
-        txt_cnt();    
-        
-    }); 
+	$(function () {
+        // [Dev] 20210722 수정 : 하위 스크립트 추가 
+		$('.ui-tab').find('a').on('click', function (e){
+			e.preventDefault ? e.preventDefault() : (e.returnValue = false); // a태그 클릭시 브라우저 상단 이동 방지
+		}) 
+
+	});
 </script>
 <!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->
 

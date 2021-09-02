@@ -231,9 +231,26 @@
 			
 			<div class="board-option mt60">
 				<div class="left-area">
-					<div class="page-info">총 <strong class="text-primary">1,000</strong>건 /19페이지</div>
+                    <!--[Dev] 20210826 셀렉트박스추가 -->
+                    <div class="input-group">
+                        <div class="input-group-txt">
+                            <div class="page-info">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div>
+                        </div>
+                        <div class="input-group-form">
+                            <select class="select w90">
+                                <option value="">전체</option>
+                                <option value="">등록</option>
+                                <option value="" selected>미등록</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- [Dev] 20210721 수정 : mt10 추가 -->
 				</div><!--// left-area -->
 				<div class="right-area">
+                    <!--[Dev] 20210826 버튼추가 -->
+                    <button type="button" class="btn-func btn-default"><span>운송장번호 등록</span></button>
+                    <button type="button" class="btn-func btn-default"><span>운송장 엑셀 업로드</span></button>
+                    <button type="button" class="btn-func btn-default"><span>운송장 업로드 양식 다운로드</span></button>
 					<button type="button" class="btn-func btn-default"><i class="ico-btn-xls"></i><span>엑셀 다운로드</span></button>
 				</div><!--// right-area -->
 			</div>
@@ -303,16 +320,15 @@
                             <td class="text-center"><div class="in-tb">2021.05.11<br>14:00:00</div></td>
                             <td class="text-center"><a href="#" class="in-tb">20210511V00FEC</a></td> 
                             <td class="text-center">
+                                <!--[Dev] 20210804 노출방식 변경 -->
                                 <div class="input-group mg-auto">
-                                    <div class="input-group-txt">CJ대한통운/<br>1234567891012</div>
-                                    <span class="input-group-gap"></span>
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn-form btn-default"><span>수정</span></button>
+                                        <button type="button" class="btn-form btn-default"><span>운송장번호 수정</span></button>
                                     </span>
                                 </div>
                             </td>
                             <td class="text-center"><a href="#" class="in-tb">홍길*<br>(hong3**/닭대리)</a></td>
-                            <td class="text-center"><div class="in-tb">맛있닭</div></td>
+                            <td class="text-center"><div class="in-tb">오렌지멤버스, 일반</div></td><!--[Dev] 20210804 노출방식 변경 -->
                             <td class="text-center"><div class="in-tb elps-link">맛있닭 소프트 닭 안심살</div></td>
                             <td class="text-center"><div class="in-tb">모바일</div></td>
                             <td class="text-center"><div class="in-tb">푸**</div></td>

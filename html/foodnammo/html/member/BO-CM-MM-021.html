@@ -67,100 +67,115 @@
 				</fieldset>
 			</div><!--// input-group-wrap | 검색영역 -->
 
-			<div class="tab-menu mt40">
+			<div class="tab-menu mt40 ui-tab"><!-- [Dev] 20210723 수정 : 클래스 추가 -->
 				<ul>
 					<li class="current"><a href="#tab1"><span class="txt">회원등급이력</span></a></li>
 					<li><a href="#tab2"><span class="txt">회원승급이력</span></a></li>
 				</ul>
 			</div>
-            <div class="board-option mt20">
+            <!-- <div class="board-option mt30">
 				<div class="left-area">
-					<div class="page-info">총 <strong class="text-primary">1,000</strong>건</div>
-				</div><!--// left-area -->
-			</div>
-			<!-- 회원등급이력 목록 -->
-			<div class="board-list mt10">
-                <table>
-                    <caption>목록</caption>
-                    <colgroup>
-                        <col class="w-col-num">
-                        <col />
-                        <col style="width:170px;">
-                        <col style="width:170px;">
-                        <col style="width:170px;">
-                        <col style="width:170px;">
-                        <col style="width:160px;">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th scope="col" class="list-num"><span class="in-tb">번호</span></th>
-                            <th scope="col"><span class="in-tb">사이트</span></th>
-                            <th scope="col"><span class="in-tb">패밀리</span></th>
-                            <th scope="col"><span class="in-tb">실버</span></th>
-                            <th scope="col"><span class="in-tb">골드</span></th>
-                            <th scope="col"><span class="in-tb">플래티넘</span></th>
-                            <th scope="col"><span class="in-tb">년월</span></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="list-num"><div class="in-tb">10</div></td>
-                            <td class="text-center"><div class="in-tb">피키다이어트</div></td>
-                            <td class="text-center"><div class="in-tb">759,000</div></td>
-                            <td class="text-center"><div class="in-tb">1,234</div></td>
-                            <td class="text-center"><div class="in-tb">123</div></td>
-                            <td class="text-center"><div class="in-tb">0%</div></td>
-                            <td class="text-center"><div class="in-tb">2021.05</div></td>
-                        </tr>
-                        <tr>
-                            <td class="list-num"><div class="in-tb">10</div></td>
-                            <td class="text-center"><div class="in-tb">피키다이어트</div></td>
-                            <td class="text-center"><div class="in-tb">759,000</div></td>
-                            <td class="text-center"><div class="in-tb">1,234</div></td>
-                            <td class="text-center"><div class="in-tb">123</div></td>
-                            <td class="text-center"><div class="in-tb">0%</div></td>
-                            <td class="text-center"><div class="in-tb">2021.05</div></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-			<!-- //회원등급이력 목록  -->
+					<div class="page-info mt10">총 <strong class="text-primary">1,000</strong>건</div>
+				</div>
+			</div> [Dev] 20210723 수정 : 각 탭 안으로 위치이동  -->
+			<div class="ui-tab-container tab-cnt-wrap"><!-- [Dev] 20210723 수정 : div 추가 -->
+				<!-- 회원등급이력 목록 -->
+				<div id="tab1" class="ui-tab-cnt active tab-content"><!-- [Dev] 20210723 수정 : div 추가 -->
+					<!-- [Dev] 20210723 수정 : 추가 -->
+					<div class="board-option mt30"><!-- [Dev] 20210723 수정 : mt20 -> mt30 클래스 추가 -->
+						<div class="left-area">
+							<div class="page-info mt10">총 <strong class="text-primary">1,000</strong>건</div><!-- [Dev] 20210721 수정 : mt10 추가 -->
+						</div><!--// left-area -->
+					</div>
+					<!-- //[Dev] 20210723 수정 : 추가 -->
+					<div class="board-list mt10">
+						<table>
+							<caption>목록</caption>
+							<colgroup>
+								<!-- <col class="w-col-num"> [Dev] 20210723 수정 : 제거  -->
+								<!-- [Dev] 20210723 수정 -->
+								<col style="width:calc(100% / 6)" span="6">
+								<!-- //[Dev] 20210723 수정 -->
+							</colgroup>
+							<thead>
+								<tr>
+									<!-- <th scope="col" class="list-num"><span class="in-tb">번호</span></th> [Dev] 20210723 수정 : 제거 -->
+									<th scope="col"><span class="in-tb">사이트</span></th>
+									<th scope="col"><span class="in-tb">패밀리</span></th>
+									<th scope="col"><span class="in-tb">실버</span></th>
+									<th scope="col"><span class="in-tb">골드</span></th>
+									<th scope="col"><span class="in-tb">플래티넘</span></th>
+									<th scope="col"><span class="in-tb">년월</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<!-- <td class="list-num"><div class="in-tb">10</div></td> [Dev] 20210723 수정 : 제거 -->
+									<td class="text-center"><div class="in-tb">피키다이어트</div></td>
+									<td class="text-center"><div class="in-tb">759,000</div></td>
+									<td class="text-center"><div class="in-tb">1,234</div></td>
+									<td class="text-center"><div class="in-tb">123</div></td>
+									<td class="text-center"><div class="in-tb">0%</div></td>
+									<td class="text-center"><div class="in-tb">2021.05</div></td>
+								</tr>
+								<tr>
+									<!-- <td class="list-num"><div class="in-tb">10</div></td> [Dev] 20210723 수정 : 제거 -->
+									<td class="text-center"><div class="in-tb">피키다이어트</div></td>
+									<td class="text-center"><div class="in-tb">759,000</div></td>
+									<td class="text-center"><div class="in-tb">1,234</div></td>
+									<td class="text-center"><div class="in-tb">123</div></td>
+									<td class="text-center"><div class="in-tb">0%</div></td>
+									<td class="text-center"><div class="in-tb">2021.05</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!-- //[Dev] 20210723 수정 : div 추가 -->
+				<!-- //회원등급이력 목록  -->
 
-			<!-- 회원승급이력 목록 -->
-			<div class="board-list mt10">
-				<table>
-					<caption>목록</caption>
-					<colgroup>
-						<col class="w-col-num">
-						<col />
-						<col style="width:210px;">
-						<col style="width:210px;">
-						<col style="width:210px;">
-						<col style="width:160px;">
-					</colgroup>
-					<thead>
-						<tr>
-							<th scope="col" class="list-num"><span class="in-tb">번호</span></th>
-							<th scope="col"><span class="in-tb">사이트</span></th>
-							<th scope="col"><span class="in-tb">이전등급</span></th>
-							<th scope="col"><span class="in-tb">승급등급</span></th>
-							<th scope="col"><span class="in-tb">승급수</span></th>
-							<th scope="col"><span class="in-tb">년월</span></th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="list-num"><div class="in-tb">10</div></td>
-							<td class="text-center"><div class="in-tb">피키다이어트</div></td>
-							<td class="text-center"><div class="in-tb">패밀리</div></td>
-							<td class="text-center"><div class="in-tb">실버</div></td>
-							<td class="text-center"><div class="in-tb">123</div></td>
-							<td class="text-center"><div class="in-tb">2021.05</div></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<!-- //회원승급이력 목록  -->
+				<!-- 회원승급이력 목록 -->
+				<div id="tab2" class="ui-tab-cnt tab-content"><!-- [Dev] 20210723 수정 : div 추가 -->
+					<!-- [Dev] 20210723 수정 : 추가 -->
+					<div class="board-option mt30"><!-- [Dev] 20210723 수정 : mt20 -> mt30 클래스 추가 -->
+						<div class="left-area">
+							<div class="page-info mt10">총 <strong class="text-primary">1,000</strong>건</div><!-- [Dev] 20210721 수정 : mt10 추가 -->
+						</div><!--// left-area -->
+					</div>
+					<!-- //[Dev] 20210723 수정 : 추가 -->
+					<div class="board-list mt10">
+						<table>
+							<caption>목록</caption>
+							<colgroup>
+								<!-- <col class="w-col-num"> [Dev] 20210723 수정 : 제거  -->
+								<!-- [Dev] 20210723 수정 -->
+								<col style="width:20%" span="5">
+								<!-- //[Dev] 20210723 수정 -->
+							</colgroup>
+							<thead>
+								<tr>
+									<!-- <th scope="col" class="list-num"><span class="in-tb">번호</span></th> [Dev] 20210723 수정 : 제거 -->
+									<th scope="col"><span class="in-tb">사이트</span></th>
+									<th scope="col"><span class="in-tb">이전등급</span></th>
+									<th scope="col"><span class="in-tb">승급등급</span></th>
+									<th scope="col"><span class="in-tb">승급수</span></th>
+									<th scope="col"><span class="in-tb">년월</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<!-- <td class="list-num"><div class="in-tb">10</div></td> [Dev] 20210723 수정 : 제거 -->
+									<td class="text-center"><div class="in-tb">피키다이어트</div></td>
+									<td class="text-center"><div class="in-tb">패밀리</div></td>
+									<td class="text-center"><div class="in-tb">실버</div></td>
+									<td class="text-center"><div class="in-tb">123</div></td>
+									<td class="text-center"><div class="in-tb">2021.05</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!-- //[Dev] 20210723 수정 : div 추가 -->
+				<!-- //회원승급이력 목록  -->
+			</div><!-- //[Dev] 20210723 수정 : div 추가 -->
 		
 
 		</div><!--// content-area -->

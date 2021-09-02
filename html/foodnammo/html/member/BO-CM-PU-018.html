@@ -65,7 +65,13 @@
                 <div class="layer-body">
                     <div class="layer-content">
                         <div class="in-content">
-                            <div class="board-form">
+                            <!--[Dev] 20210727 필수입력 추가 -->
+                            <div class="page-info text-right">
+                                <div class="text-guide-sm2">
+                                    <i class="es"><em class="blind">필수입력</em></i>는 필수항목입니다.
+                                </div>
+                            </div>
+                            <div class="board-form mt10"><!--[Dev] 20210727 mt10추가 -->
                                 <table>
                                     <caption>일괄처리 선택</caption>
                                     <colgroup>
@@ -130,7 +136,7 @@
                                         <th scope="col"><span class="in-tb">적립금유형</span></th>
                                         <th scope="col"><span class="in-tb">적립금코드</span></th>
                                         <th scope="col"><span class="in-tb">적립금명</span></th>
-                                        <th scope="col"><span class="in-tb">지급금액<i class="es"><em class="blind">필수입력</em></i></span></th>
+                                        <th scope="col"><span class="in-tb">지급금액</span></th><!--[Dev] 20210727 필수입력 삭제 -->
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -143,24 +149,8 @@
                                             <td class="text-center"><div class="in-tb">추천적립금</div></td>
                                             <td class="text-center"><div class="in-tb">1234567</div></td>
                                             <td class="text-left"><div class="in-tb">추천인 상품구매 기본적립금</div></td>
-                                            <td class="text-center"><div class="in-tb">2,500P</div></td>
-                                        </tr>   
-                                        <tr>
-                                            <td class="list-check">
-                                                <div class="custom-checkbox single">
-                                                    <input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-                                                </div>
-                                            </td>
-                                            <td class="text-center"><div class="in-tb">추천적립금</div></td>
-                                            <td class="text-center"><div class="in-tb">1234567</div></td>
-                                            <td class="text-left"><div class="in-tb">추천인 상품구매 기본적립금</div></td>
-                                            <td class="text-center">
-                                                <div class="input-group mg-auto">
-													<input type="text" class="input-text w90" value="" placeholder="숫자 입력">
-													<div class="input-group-txt">P</div>
-												</div>
-                                            </td>
-                                        </tr>             
+                                            <td class="text-right"><div class="in-tb">2,500P</div></td><!--[Dev] 20210727 정렬변경 -->
+                                        </tr>                                          
                                     </tbody>
                                 </table>
                             </div><!--// board-list -->    

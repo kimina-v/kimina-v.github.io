@@ -94,17 +94,17 @@
 								<th scope="row"><span class="in-tb">전체 카테고리</span></th>
 								<td>
 									<div class="input-group w-full">
-                                        <div class="input-group-cell w200">
+                                        <div class="input-group-cell"><!-- [Dev] 20210812 w200 클래스 삭제 -->
                                             <select class="select">
                                                 <option value="">대분류</option>
                                             </select>
                                         </div>
-                                        <div class="input-group-cell w200">
+                                        <div class="input-group-cell"><!-- [Dev] 20210812 w200 클래스 삭제 -->
                                             <select class="select" disabled>
                                                 <option value="">중분류</option>
                                             </select>
                                         </div>
-                                        <div class="input-group-cell w200">
+                                        <div class="input-group-cell"><!-- [Dev] 20210812 w200 클래스 삭제 -->
                                             <select class="select" disabled>
                                                 <option value="">소분류</option>
                                             </select>
@@ -183,7 +183,7 @@
 			
 			<div class="board-option mt60">
 				<div class="left-area">
-					<div class="page-info">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div>					
+					<div class="page-info mt10">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div><!-- [Dev] 20210721 수정 : mt10 추가 -->
 				</div><!--// left-area -->
 
 			</div><!--// board-option -->
@@ -195,9 +195,9 @@
 					<colgroup>
 						<col class="w-col-num" />
 						<col style="width:120px" />
-						<col style="*width:580px;" />
-						<col style="width:100px" />
-                        <col style="width:100px" />                        
+						<col style="width:100px" /><!--[Dev] 20210825 위치변경 -->
+                        <col style="width:100px" /><!--[Dev] 20210825 위치변경 -->
+						<col style="*width:580px;" />						                        
                         <col style="width:92px" />
                         <col style="width:150px" />
                         <col style="width:100px" />
@@ -207,10 +207,10 @@
 					<thead>
 					<tr>						
 						<th scope="col"><span class="in-tb">순번</span></th>
-						<th scope="col"><span class="in-tb">상품코드</span></th>
-						<th scope="col"><span class="in-tb">상품명/옵션명</span></th>
-                        <th scope="col"><span class="in-tb">브랜드 명</span></th>
-                        <th scope="col"><span class="in-tb">입점사 명</span></th>
+						<th scope="col"><span class="in-tb">상품코드</span></th>						
+                        <th scope="col"><span class="in-tb">입점사</span></th><!--[Dev] 20210825 위치.텍스트변경 -->
+						<th scope="col"><span class="in-tb">브랜드</span></th><!--[Dev] 20210825 위치,텍스트변경 -->
+						<th scope="col"><span class="in-tb">상품명/옵션명</span></th>                        
                         <th scope="col"><span class="in-tb">회원명</span></th>
                         <th scope="col"><span class="in-tb">회원ID</span></th>	
                         <th scope="col"><span class="in-tb">처리상태</span></th>
@@ -221,22 +221,21 @@
 					<tbody>
 						<tr>
 							<td class="text-center vt-mid"><div class="in-tb">5</div></td>
-							<td class="text-center vt-mid"><div class="in-tb">PROM691</div></td>
+							<td class="text-center vt-mid"><div class="in-tb">PROM691</div></td>							
+                            <td class="text-center vt-mid"><div class="in-tb">푸드나무</div></td><!--[Dev] 20210825 위치변경 -->
+							<td class="text-center vt-mid"><div class="in-tb">잇메이트</div></td><!--[Dev] 20210825 위치변경 -->
 							<td class="text-left vt-mid">
 								<div class="in-tb">
 									<div>잇메이트 스팀 닭가슴살 마늘맛</div>
 									<div class="mt5">-옵션명 표시</div>
 								</div>
-							</td>
-                            <td class="text-center vt-mid"><div class="in-tb">잇메이트</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">푸드나무</div></td>
+							</td>                            
                             <td class="text-center vt-mid"><div class="in-tb">김푸드</div></td>
                             <td class="text-center vt-mid"><div class="in-tb">foodnamoo123</div></td>
                             <td class="text-center vt-mid"><div class="in-tb">신청</div></td>
                             <td class="text-center vt-mid"><div class="in-tb">ID/명 출력</div></td>
                             <td class="text-center vt-mid"><div class="in-tb">2021.04.19 17:00</div></td>
-						</tr>
-						
+						</tr>						
 					</tbody>
 				</table>
 			</div><!--// board-list | 목록 -->

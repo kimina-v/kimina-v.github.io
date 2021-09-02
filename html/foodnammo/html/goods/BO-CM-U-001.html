@@ -65,8 +65,18 @@
 			<div class="layer-body">
 				<div class="layer-content">
 					<div class="in-content">
-                        <div class="page-info mb10">총 <strong class="text-primary">00</strong>건의 상품이 선택되었습니다.</div>
-						<div class="board-form">
+						<!-- [Dev] 20210726 수정 : 변경 및 추가 -->
+						<!-- <div class="page-info mb10">총 <strong class="text-primary">00</strong>건의 상품이 선택되었습니다.</div> -->
+						<div class="board-option">
+							<div class="left-area">
+								<div class="page-info">총 <strong class="text-primary">00</strong>건이 선택되었습니다.</div>
+							</div>
+							<div class="right-area">
+								<spanc class="text-guide-sm2"><i class="es"><em class="blind">필수입력</em></i>는 필수항목입니다.
+							</spanc></div>						
+						</div>
+						<!-- //[Dev] 20210726 수정 : 변경 및 추가 -->
+						<div class="board-form mt10"><!-- [Dev] 20210726 클래스 추가 -->
                             <table>
                                 <caption>일괄변경</caption>
                                 <colgroup>
@@ -87,7 +97,7 @@
                                     </tr>
                                     <!-- 진행기간 선택할 경우 -->
 									<tr id="period" class="ui-select-line hide">
-                                        <th scope="row"><span class="in-tb">전시기간</span></th>
+                                        <th scope="row"><span class="in-tb">전시기간<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210726 수정 : <i class="es"><em class="blind">필수입력</em></i> 추가 -->
                                         <td>
 											<div class="input-group datepicker-group">
 												<input type="text" id="" class="input-text datepicker" />

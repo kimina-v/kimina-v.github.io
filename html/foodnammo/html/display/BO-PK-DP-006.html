@@ -72,9 +72,9 @@
                     </tbody>
                 </table>		
             </div><!--// board-form -->
+            <!-- [Dev] 20210730 수정 : 초기화버튼 삭제  -->
             <div class="btn-area mt20">
                 <button type="button" class="btn-basic-md btn-primary"><span>검색</span></button>
-                <button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
             </div>
 
 			
@@ -121,7 +121,7 @@
                             </td>                            
                             <td class="text-center"><div class="in-tb">피트니스</div></td>
                             <td class="text-left"><div class="in-tb">하루하나 곤약젤리 6종</div></td>
-                            <td class="text-center"><div class="in-tb">13,900</div></td>
+                            <td class="text-right"><div class="in-tb">13,900</div></td><!-- [Dev] 20210727 클래스명 수정 -->
                          </tr>
                          <tr>
                             <td class="list-check">
@@ -134,8 +134,18 @@
                             </td>                            
                             <td class="text-center"><div class="in-tb">식단</div></td>
                             <td class="text-left"><div class="in-tb">번세척! 바로 먹을 수 있는 알뜰 데일리 샐러드 엘로우</div></td>
-                            <td class="text-center"><div class="in-tb">13,900</div></td>
+                            <td class="text-right"><div class="in-tb">13,900</div></td><!-- [Dev] 20210727 클래스명 수정 -->
                          </tr>
+                         <!-- [Dev] 20210802 추가 : no data case -->
+                         <tr class="no-data">
+							<td colspan="5">
+								<div class="message-area">
+									<i class="ico-img-excl"></i>
+									<p class="txt">검색버튼을 눌러야 검색이 됩니다.</p>
+								</div>
+							</td>
+						</tr>
+                        <!--// [Dev] 20210802 추가 : no data case -->
                     </tbody>
                 </table>
             </div>

@@ -35,7 +35,7 @@
 				<div class="page-guide">
 					<ol class="breadcrumb">
 						<li><a href="#" title="메인페이지 이동"><i class="ico-bl-home"></i><span class="blind">Home</span></a></li>
-						<li><span>매출관리</span></li>
+						<li><span>매출분석</span></li>
 						<li class="current"><span>결제수단별 분석</span></li>
 					</ol>
 				</div><!--// page-guide -->
@@ -168,28 +168,52 @@
                 <button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
             </div>
 
-            <div class="board-option">
-                <div class="left-area">
-                    <div class="page-info">총 <strong class="text-primary">1,000</strong>건</div>
-                </div><!--// left-area -->
-                <div class="right-area">
-                    <button type="button" class="btn-func btn-default"><span>엑셀 다운로드</span></button>
-                </div><!--// right-area -->
+            <ul class="list-box-type type-black">
+                <li><em>총 주문건수</em><a href="#none"><strong>100</strong>건</a></li>
+                <li><em>총 상품수량</em><a href="#none"><strong>200</strong>개</a></li>
+                <li><em>총 상품금액</em><a href="#none"><strong>1,200,000</strong>원</a></li>
+                <li><em>총 주문금액</em><a href="#none"><strong>1,200,000</strong>원</a></li>
+                <li><em>환불건수</em><a href="#none"><strong>100</strong>건</a></li>
+                <li><em>환불금액</em><a href="#none"><strong>10,000</strong>원</a></li>
+            </ul>
+
+            <ul class="list-box-type type-col4">
+                <li><em>랭킹페이</em><a href="#none"><strong>1,000,000</strong>원</a></li>
+                <li><em>랭킹카드</em><a href="#none"><strong>1,000,000</strong>원</a></li>
+                <li><em>신용카드</em><a href="#none"><strong>1,000,000</strong>원</a></li>
+                <li><em>무통장입금</em><a href="#none"><strong>1,000,000</strong>원</a></li>
+                <li><em>휴대폰결제</em><a href="#none"><strong>1,000,000</strong>원</a></li>
+                <li><em>카카오페이</em><a href="#none"><strong>1,000,000</strong>원</a></li>
+                <li><em>네이버페이</em><a href="#none"><strong>1,000,000</strong>원</a></li>
+                <li><em>토스</em><a href="#none"><strong>1,000,000</strong>원</a></li>
+                <li><em>페이코</em><a href="#none"><strong>1,000,000</strong>원</a></li>
+                <li><em>스마일페이</em><a href="#none"><strong>1,000,000</strong>원</a></li>
+                <li><em>페이나우</em><a href="#none"><strong>1,000,000</strong>원</a></li>
+                <li><em>적립금</em><a href="#none"><strong>1,000,000</strong>원</a></li>
+            </ul>
+
+            <div class="cnt-title-area mt60">
+                <h3 class="tit-cnt">카카오페이 <span>(2021.05.09 ~ 2021.09.30)</span></h3>
+                <div class="right-info">
+                    <button type="button" class="btn-func btn-default"><i class="ico-btn-xls"></i><span>엑셀 다운로드</span></button>
+                </div>
             </div>
             
-            <div class="board-list scroll-table mt10">
+            <div class="board-list scroll-table mt10 total-table">
                 <table>
                     <caption>목록</caption>
                     <colgroup>
-                        <col style="width:140px;">
-                        <col style="width:120px;">
-                        <col style="width:130px;">
-                        <col style="width:130px;">
+                        <col style="width:140px">
+                        <col style="width:160px">
+                        <col style="width:140px">
+                        <col style="width:140px">
                         <col>
-                        <col style="width:160px;">
-                        <col style="width:100px;">
-                        <col style="width:120px;">
-                        <col style="width:100px;">
+                        <col style="width:160px">
+                        <col style="width:160px">
+                        <col style="width:180px">
+                        <col style="width:180px">
+                        <col style="width:160px">
+                        <col style="width:180px">
                     </colgroup>
                     <thead>
                         <tr>
@@ -207,17 +231,14 @@
                         </tr>
                     </thead>
                     <tfoot>
-                        <tr>
-                            <th scope="row" colspan="2">합계</th>
-                            <td class="text-center"></td>
-                            <td class="text-center"></td>
-                            <td class="text-center"></td>
-                            <td class="text-center">22</td>
-                            <td class="text-center">23</td>
-                            <td class="text-right">10,000</td>
-                            <td class="text-right">10,000</td>
-                            <td class="text-center">22</td>
-                            <td class="text-right">100,000</td>
+                        <tr class="total">
+                            <th scope="row" colspan="5"><div class="in-tb">합계</div></th>
+                            <td class="text-center"><div class="in-tb">22</div></td>
+                            <td class="text-center"><div class="in-tb">23</div></td>
+                            <td class="text-right"><div class="in-tb">10,000</div></td>
+                            <td class="text-right"><div class="in-tb">10,000</div></td>
+                            <td class="text-center"><div class="in-tb">22</div></td>
+                            <td class="text-right"><div class="in-tb">100,000</div></td>
                         </tr>
                     </tfoot>
                     <tbody>

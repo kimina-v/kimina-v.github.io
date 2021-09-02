@@ -62,54 +62,11 @@
 						<span class="input-group-btn">
 							<button type="button" class="btn-icon-search" title="검색"><span class="blind">검색</span></button>
 						</span>  
-						<span class="input-group-btn">
-							<button type="button" class="btn-search-detail"><span>상세검색</span><i class="ico-arrfill-toggle"></i></button>
-						</span>
+                        <!--[Dev] 20210812 상세검색 버튼제거 -->
 					</div><!--// input-group -->
 				</fieldset>
 			</div>
-			<!-- 상세검색영역 -->
-			<div class="searh-detail-area ui-toggle-content">
-				<div class="board-form">	
-					<table>
-						<caption>정보입력</caption>
-						<colgroup>
-							<col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
-						</colgroup>
-						<tbody>
-							<tr>
-								<th scope="row"><span class="in-tb">전시 기간</span></th>
-								<td>
-									<div class="input-group datepicker-group">
-										<input type="text" class="input-text datepicker">
-										<span class="input-group-txt">~</span>
-										<input type="text" class="input-text datepicker">
-									</div>
-								</td>
-								<th scope="row"><span class="in-tb">전시 여부</span></th>
-								<td>
-									<div class="form-inline-group">
-										<div class="custom-radio">
-											<input type="radio" id="radio-1-1" class="radio" name="radio-item-1" checked=""><label for="radio-1-1">전체</label>
-										</div>
-										<div class="custom-radio">
-											<input type="radio" id="radio-1-2" class="radio" name="radio-item-1"><label for="radio-1-2">미전시</label>
-										</div>
-										<div class="custom-radio">
-											<input type="radio" id="radio-1-3" class="radio" name="radio-item-1"><label for="radio-1-3">전시</label>
-										</div>
-									</div>
-								</td>
-							</tr>	
-						</tbody>
-					</table>		
-				</div><!--// board-form -->
-            
-				<div class="btn-area">
-					<button type="button" class="btn-basic-md btn-primary"><span>검색</span></button>
-					<button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
-				</div>
-			</div>
+			<!--[Dev] 20210812 상세검색 영역제거 -->
 
 			<div class="board-movable-wrap mt60">
 				<div class="cnt-title-area">
@@ -118,7 +75,7 @@
 				</div>
                 <div class="board-option mt20">
                     <div class="left-area">
-                        <div class="page-info">총 <strong class="text-primary">1,000</strong>건</div>
+                        <div class="page-info mt10">총 <strong class="text-primary">1,000</strong>건</div><!-- [Dev] 20210721 수정 : mt10 추가 -->
                     </div><!--// left-area -->
                     <div class="right-area">
                         <div class="btn-lst">
@@ -170,6 +127,7 @@
                                 <th scope="col"><span class="in-tb">등록일</span></th>
                             </tr>
                         </thead>
+                        <!-- 20210803 수정 : 판매가 우측정렬 -->
                         <tbody>
                             <tr class="movable" id="8">
                                 <td class="list-check">
@@ -181,7 +139,7 @@
                                 <td class="text-center"><div class="in-tb">1am</div></td>
                                 <td class="text-left"><div class="in-tb">탄산수 325ml x 24병 / 0kal 스파클링 워터</div></td>
                                 <td class="text-center"><div class="in-tb">2021.05.21 17:00~2021.06.21 17:00</div></td>
-                                <td class="text-center"><div class="in-tb">13,900</div></td>
+                                <td class="text-right"><div class="in-tb">13,900</div></td>
                                 <td class="text-center"><div class="in-tb">정상</div></td>
                                 <td class="text-center"><div class="in-tb">전시</div></td>
                                 <td class="text-center"><div class="in-tb">2021.05.21 17:00</div></td>
@@ -196,7 +154,7 @@
                                 <td class="text-center"><div class="in-tb">1am</div></td>
                                 <td class="text-left"><div class="in-tb">3번세척! 바로 먹을 수 있는 알뜰 데일리 샐러드 엘로우</div></td>
                                 <td class="text-center"><div class="in-tb">2021.05.21 17:00~2021.06.21 17:00</div></td>
-                                <td class="text-center"><div class="in-tb">13,900</div></td>
+                                <td class="text-right"><div class="in-tb">13,900</div></td>
                                 <td class="text-center"><div class="in-tb">정상</div></td>
                                 <td class="text-center"><div class="in-tb">전시</div></td>
                                 <td class="text-center"><div class="in-tb">2021.05.21 17:00</div></td>
@@ -211,7 +169,7 @@
                                 <td class="text-center"><div class="in-tb">1am</div></td>
                                 <td class="text-left"><div class="in-tb">하루하나 곤약젤리 6종</div></td>
                                 <td class="text-center"><div class="in-tb">2021.05.21 17:00~2021.06.21 17:00</div></td>
-                                <td class="text-center"><div class="in-tb">13,900</div></td>
+                                <td class="text-right"><div class="in-tb">13,900</div></td>
                                 <td class="text-center"><div class="in-tb">정상</div></td>
                                 <td class="text-center"><div class="in-tb">전시</div></td>
                                 <td class="text-center"><div class="in-tb">2021.05.21 17:00</div></td>
@@ -226,7 +184,7 @@
                                 <td class="text-center"><div class="in-tb">1am</div></td>
                                 <td class="text-left"><div class="in-tb">하루하나 곤약젤리 6종</div></td>
                                 <td class="text-center"><div class="in-tb">2021.05.21 17:00~2021.06.21 17:00</div></td>
-                                <td class="text-center"><div class="in-tb">13,900</div></td>
+                                <td class="text-right"><div class="in-tb">13,900</div></td>
                                 <td class="text-center"><div class="in-tb">정상</div></td>
                                 <td class="text-center"><div class="in-tb">전시</div></td>
                                 <td class="text-center"><div class="in-tb">2021.05.21 17:00</div></td>
@@ -241,7 +199,7 @@
                                 <td class="text-center"><div class="in-tb">1am</div></td>
                                 <td class="text-left"><div class="in-tb">하루하나 곤약젤리 6종</div></td>
                                 <td class="text-center"><div class="in-tb">2021.05.21 17:00~2021.06.21 17:00</div></td>
-                                <td class="text-center"><div class="in-tb">13,900</div></td>
+                                <td class="text-right"><div class="in-tb">13,900</div></td>
                                 <td class="text-center"><div class="in-tb">정상</div></td>
                                 <td class="text-center"><div class="in-tb">전시</div></td>
                                 <td class="text-center"><div class="in-tb">2021.05.21 17:00</div></td>
@@ -256,7 +214,7 @@
                                 <td class="text-center"><div class="in-tb">1am</div></td>
                                 <td class="text-left"><div class="in-tb">하루하나 곤약젤리 6종</div></td>
                                 <td class="text-center"><div class="in-tb">2021.05.21 17:00~2021.06.21 17:00</div></td>
-                                <td class="text-center"><div class="in-tb">13,900</div></td>
+                                <td class="text-right"><div class="in-tb">13,900</div></td>
                                 <td class="text-center"><div class="in-tb">정상</div></td>
                                 <td class="text-center"><div class="in-tb">전시</div></td>
                                 <td class="text-center"><div class="in-tb">2021.05.21 17:00</div></td>
@@ -271,7 +229,7 @@
                                 <td class="text-center"><div class="in-tb">1am</div></td>
                                 <td class="text-left"><div class="in-tb">하루하나 곤약젤리 6종</div></td>
                                 <td class="text-center"><div class="in-tb">2021.05.21 17:00~2021.06.21 17:00</div></td>
-                                <td class="text-center"><div class="in-tb">13,900</div></td>
+                                <td class="text-right"><div class="in-tb">13,900</div></td>
                                 <td class="text-center"><div class="in-tb">정상</div></td>
                                 <td class="text-center"><div class="in-tb">전시</div></td>
                                 <td class="text-center"><div class="in-tb">2021.05.21 17:00</div></td>
@@ -286,12 +244,13 @@
                                 <td class="text-center"><div class="in-tb">1am</div></td>
                                 <td class="text-left"><div class="in-tb">하루하나 곤약젤리 6종</div></td>
                                 <td class="text-center"><div class="in-tb">2021.05.21 17:00~2021.06.21 17:00</div></td>
-                                <td class="text-center"><div class="in-tb">13,900</div></td>
+                                <td class="text-right"><div class="in-tb">13,900</div></td>
                                 <td class="text-center"><div class="in-tb">정상</div></td>
                                 <td class="text-center"><div class="in-tb">전시</div></td>
                                 <td class="text-center"><div class="in-tb">2021.05.21 17:00</div></td>
                             </tr>
                         </tbody>
+                        <!--// 20210803 수정 : 판매가 우측정렬 -->
                     </table>
                 </div>
 

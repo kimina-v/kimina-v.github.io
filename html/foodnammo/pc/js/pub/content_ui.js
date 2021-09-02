@@ -107,8 +107,18 @@ $(function () {
     // 상품목록 상세 검색
     if ($('.prd-search-box').length > 0) { prdDetailSearch (); }
 
+     // 쿠폰 사용정보 클릭시 레이어
+    // if ($('.ui-coupon-info').length > 0) { couponInfoLayer (); }
+
      // mCustomscrollbar
      if ($('.ui-custom-scroll').length > 0) { customScroll ();}
+
+     // 이달의 쿠폰 : 등급별 쿠폰
+     if ($('.coupon-level-list').length > 0) { couponLevelSlide(); }
+
+     if ($('.ui-coupon-info').length > 0) { openCouponInfo(); }
+
+     if ($('.coupon-wrap-box').length > 0) { moreCouponView(); }
 });
 
 
@@ -1415,4 +1425,83 @@ function customScroll () {
         
         mouseWheel:{ deltaFactor: 40 }
     });
+}
+
+
+/****** 등급별 쿠폰 couponLevelSlide ******/
+function couponLevelSlide () {
+    var couponLevelSwiper = new Swiper('.coupon-level-list', {
+        //calculateHeight:true,
+        autoHeight: true,
+        slidesPerGroup :1,
+        slidesPerView : 1,
+        spaceBetween:16, 
+        observer: true,
+        observeParents: true,
+        //watchOverflow: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+    });
+}
+
+
+/****** 쿠폰 내부 팝업 ******/
+function openCouponInfo () {
+    var btn = $('.ui-coupon-info'),
+        close = $('.btn-x-sm2');
+
+    btn.on('click', function () {
+        var wrap = $(this).parents('.card-li-inner').find('.coupon-info-card');
+        wrap.addClass('active');
+    })
+
+    close.on('click', function () {
+        $(this).parent('.coupon-info-card').removeClass('active')
+    })
+}
+
+
+/****** 쿠폰 더보기 ******/
+function moreCouponView () {
+    var wrap = $('.coupon-wrap-box'),
+        couponMoreBtn = $('.ui-coupon-more'),
+        listWrap = $('.ui-coupon-list').children('ul');
+
+    listWrap.each(function () {
+        var couponLi = $(this).children('li').length;
+
+        if ( couponLi > 4 ) {
+            $(this).parent('.ui-coupon-list').find('.ui-coupon-more').show();
+        } else {
+            $(this).parent('.ui-coupon-list').find('.ui-coupon-more').hide();
+        }
+        
+        $(this).children('li.colum').slice(0, 4).show(); 
+    })
+    
+    $('.ui-coupon-more').click(function(e){ 
+        var height = $(this).parents('.swiper-wrapper').height();
+
+        if ( !$(this).hasClass('active') ) {
+            $(this).siblings('.grid-area-span2').find('li.colum:hidden').slice(0, 4).show(); 
+            $(this).parents('.swiper-wrapper').css('height','auto')
+    
+            if( $(this).siblings('.grid-area-span2').find('li.colum:hidden').length === 0 ){ 
+                $(this).addClass('active').html('<span>닫기</span><i class="ico-arr-toggle"></i>')
+            } 
+        } else {
+            hideListItem()
+        }
+    });
+
+    wrap.find('[class^=swiper-button-]').on('click',function () {
+        hideListItem()
+    })
+
+    function hideListItem () {
+        listWrap.find('li.colum:eq(3)').nextAll('li').hide();
+        $('.ui-coupon-more').removeClass('active').html('<span>더보기</span><i class="ico-arr-toggle"></i>')
+    }
 }

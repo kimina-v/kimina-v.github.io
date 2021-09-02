@@ -45,6 +45,12 @@
 				<div class="user-icon1">
 					<img src="../../images/user_icon1.png" alt="유저아이콘">
 				</div>
+				<!-- [Dev] 20210810 추가 -->
+				<div class="member-user-site">
+					<strong>사이트 : </strong>
+					<span class="on">랭킹닭컴</span>
+				</div>
+				<!-- //[Dev] 20210810 추가 -->
 				<div class="member-user-num">
 					<strong>회원번호 : </strong>
 					<span class="on">123456</span>
@@ -65,329 +71,1335 @@
 				</div>
 			</div>
 			<!--탭-->
-			<div class="tab-menu flex mt10">
-				<ul>
-					<li class="current"><a href="#tab1-1"><span class="txt">회원상세정보</span></a></li>
-					<li><a href="#tab1-2"><span class="txt">주문내역</span></a></li>
-					<li><a href="#tab1-3"><span class="txt">쿠폰내역</span></a></li>
-					<li><a href="#tab1-3"><span class="txt">적립금내역</span></a></li>
-					<li><a href="#tab1-3"><span class="txt">1:1문의내역</span></a></li>
-					<li><a href="#tab1-3"><span class="txt">리뷰내역</span></a></li>
-					<li><a href="#tab1-3"><span class="txt">관심상품내역</span></a></li>
-					<li><a href="#tab1-3"><span class="txt">관심브랜드내역</span></a></li>
-					<li><a href="#tab1-3"><span class="txt">메세지 발송이력</span></a></li>
+			<div class="tab-menu flex mt10 ui-tab"><!-- [Dev] 20210723 수정 : 클래스 추가 -->
+				<ul><!-- [Dev] 20210723 수정 : href 값과, content div의 id 값 일치해야함 -->
+					<li class="current"><a href="#tab1"><span class="txt">회원상세정보</span></a></li>
+					<li><a href="#tab2"><span class="txt">주문내역</span></a></li>
+					<li><a href="#tab3"><span class="txt">쿠폰내역</span></a></li>
+					<li><a href="#tab4"><span class="txt">적립금내역</span></a></li>
+					<li><a href="#tab5"><span class="txt">1:1문의내역</span></a></li>
+					<li><a href="#tab6"><span class="txt">리뷰내역</span></a></li>
+					<li><a href="#tab7"><span class="txt">관심상품내역</span></a></li>
+					<li><a href="#tab8"><span class="txt">관심브랜드내역</span></a></li>
+					<li><a href="#tab9"><span class="txt">메세지 발송이력</span></a></li>
 				</ul>
 			</div>
 			<!--//탭-->
-			<!--가입정보-->
-			<div class="cnt-title-area mt30">
-				<h3 class="tit-cnt">가입정보</h3>
-				<div class="right-info">
-					<button type="button" class="btn-func btn-default"><span>휴면해제</span></button>
-				</div>
-			</div>
-			<div class="board-form mt10">
-				<table>
-					<caption>입력</caption>
-					<colgroup>
-						<col class="w-col-tit"><col class="w-col-cnt"><col class="w-col-tit"><col class="w-col-cnt">
-					</colgroup>
-					<tbody>
-						<tr>
-							<th scope="row"><span class="in-tb">이름</span></th>
-							<td>
-								<input type="text" class="input-text w140" value="">
-							</td>
-							<th scope="row"><span class="in-tb">닉네임</span></th>
-							<td>
-								<input type="text" class="input-text w140" value="">
-							</td>
-						</tr>
-						<tr>							
-							<th scope="row"><span class="in-tb">등급</span></th>
-							<td>
-								<div class="input-group-form">
-									<select class="select w140">
-										<option value="">닭부장</option>
-									</select>
-								</div>
-							</td>
-							<th scope="row"><span class="in-tb">상태/속성</span></th>
-							<td><div class="in-tb">휴면/평생</div></td>
-						</tr>
-						<tr>
-							<th scope="row"><span class="in-tb">그룹</span></th>
-							<td>
-								<div class="form-inline-group">
-									<div class="custom-checkbox">
-										<input type="checkbox" id="check-101" class="checkbox" name="check-item-1" checked=""><label for="check-101"> 일반회원</label>
-									</div>
-									<div class="custom-checkbox">
-										<input type="checkbox" id="check-102" class="checkbox" name="check-item-1"><label for="check-102"> 오렌지멤버스</label>
-									</div>
-									<div class="custom-checkbox">
-										<input type="checkbox" id="check-103" class="checkbox" name="check-item-1"><label for="check-103"> 사업자회원</label>
-									</div>
-									<div class="custom-checkbox">
-										<input type="checkbox" id="check-103" class="checkbox" name="check-item-1"><label for="check-103"> 임직원</label>
-									</div>
-									<div class="custom-checkbox">
-										<input type="checkbox" id="check-103" class="checkbox" name="check-item-1"><label for="check-103"> 특별회원</label>
-									</div>
-								</div>
-							</td>
-							<th scope="row"><span class="in-tb">오렌지멤버스 기간</span></th>
-							<td>
-								<div class="input-group">
-									<div class="input-group-txt">YYYY.MM.DD~YYYY.MM.DD</div>
-									<div class="input-group-form">
-										<select class="select w140">
-											<option value="">가입</option>
-											<option value="">만료</option>
-											<option value="">미가입</option>
-										</select>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><span class="in-tb">휴대폰</span></th>
-							<td>
-								<div class="input-group">
-									<input type="text" class="input-text w140">
-									<span class="input-group-btn">
-										<button type="button" class="btn-form btn-grey"><span>SMS발송</span></button>
-									</span>
-								</div>
-							</td>
-							<th scope="row"><span class="in-tb">생년월일</span></th>
-							<td>
-								<input type="text" class="input-text w140" value="">
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><span class="in-tb">이메일</span></th>
-							<td>
-								<div class="input-group">
-									<input type="text" class="input-text w140">
-									<span class="input-group-btn">
-										<button type="button" class="btn-form btn-grey"><span>이메일발송</span></button>
-									</span>
-								</div>
-							</td>
-							<th scope="row"><span class="in-tb">나이</span></th>
-							<td><div class="in-tb">00</div></td>
-						</tr>
-						<tr>
-							<th scope="row"><span class="in-tb">추천아이디</span></th>
-							<td>
-								<input type="text" class="input-text w140" value="">
-							</td>
-							<th scope="row"><span class="in-tb">성별</span></th>
-							<td>
-								<input type="text" class="input-text w140" value="">
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<!--//가입정보-->
-
-			<!--이용정보-->
-			<div class="cnt-title-area mt40">
-				<h3 class="tit-cnt">이용정보</h3>
-			</div>
-			<div class="board-form mt10">
-				<table>
-					<caption>이용정보</caption>
-					<colgroup>
-						<col class="w-col-tit"><col class="w-col-cnt"><col class="w-col-tit"><col class="w-col-cnt">
-					</colgroup>
-					<tbody>
-						<tr>
-							<th scope="row"><span class="in-tb">기본배송지</span></th>
-							<td><div class="in-tb">서울 마포구/특급배송 가능</div></td>
-							<th scope="row"><span class="in-tb">앱알림</span></th>
-							<td><div class="in-tb">동의(<em>일시표시 YYYY.MM.DD HH:MM</em>)</div></td>
-						</tr>
-						<tr>
-							<th scope="row"><span class="in-tb">SNS로그인</span></th>
-							<td><div class="in-tb">네이버</div></td>
-							<th scope="row"><span class="in-tb">SMS수신/이메일수신</span></th>
-							<td><div class="in-tb">동의(<em>YYYY.MM.DD HH:MM</em>)/동의(<em>YYYY.MM.DD HH:MM</em>)</div></td>
-						</tr>
-						<tr>
-							<th scope="row"><span class="in-tb">앱설치폰 OS</span></th>
-							<td><div class="in-tb">iOS</div></td>
-							<th scope="row"><span class="in-tb">앱설치폰 모델</span></th>
-							<td><div class="in-tb">모델명 출력</div></td>
-						</tr>
-						<tr>
-							<th scope="row"><span class="in-tb">최근 접속일</span></th>
-							<td><div class="in-tb">2021.05.10 04:19</div></td>
-							<th scope="row"><span class="in-tb">가입일</span></th>
-							<td><div class="in-tb">2021.05.10 04:19</div></td>
-						</tr>
-						<tr>
-							<th scope="row"><span class="in-tb">앱 최근 접속일</span></th>
-							<td><div class="in-tb">2021.05.10 04:19</div></td>
-							<th scope="row"><span class="in-tb">탈퇴</span></th>
-							<td><div class="in-tb">신청 <em>YYYY.MM.DD HH:MM</em> / 철회 <em>YYYY.MM.DD HH:MM</em> / 완료 <em>YYYY.MM.DD HH:MM</em></div></td>
-						</tr>
-						<tr>
-							<th scope="row"><span class="in-tb">휴면</span></th>
-							<td><div class="in-tb">예정 <em>YYYY.MM.DD HH:MM</em> / 복귀 <em>YYYY.MM.DD HH:MM</em> / 시작 <em>YYYY.MM.DD HH:MM</em></div></td>
-							<th scope="row"><span class="in-tb">탈퇴사유</span></th>
-							<td><div class="in-tb">탈퇴사유출력</div></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="btn-area mt20">
-				<button type="button" class="btn-basic-md btn-primary"><span>저장</span></button>
-				<button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
-			</div>
-			<!--//이용정보-->
-			<!--상담주의 / 블랙리스트 내역-->
-			<div class="cnt-title-area mt40">
-				<h3 class="tit-cnt">상담주의 / 차단회원 내역</h3>
-			</div>
-			<div class="board-option mt20">
-				<div class="left-area">
-					<div class="page-info">총 <strong class="text-primary">20</strong>건 / 2페이지</div>
-				</div><!--// left-area -->
-				<div class="right-area">
-					<button type="button" class="btn-func btn-default"><span>상담주의/차단 변경</span></button>
-				</div><!--// right-area -->
-			</div>
-			<div class="board-list mt10">
-				<table>
-					<caption>상담주의 / 차단 내역</caption>
-					<colgroup>
-						<col class="w-col-num">
-						<col style="width:100px;">
-						<col style="width:92px;">
-						<col style="width:auto;">
-						<col style="width:140px;">
-						<col style="width:220px;">
-					</colgroup>
-					<thead>
-					<tr>
-						<th scope="col" class="list-num"><span class="in-tb">순번</span></th>
-						<th scope="col"><span class="in-tb">회원상태</span></th>
-						<th scope="col"><span class="in-tb">설정</span></th>
-						<th scope="col"><span class="in-tb">변경사유</span></th>
-						<th scope="col"><span class="in-tb">관리자</span></th>
-						<th scope="col"><span class="in-tb">등록일</span></th>						
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="list-num"><div class="in-tb">10</div></td>
-							<td class="text-center"><div class="bg-block-bk">차단</div></td>
-							<td class="text-center"><div class="in-tb">해제</div></td>
-							<td class="text-left"><div class="in-tb">변경사유입니다.변경사유입니다.변경사유입니다.</div></td>							
-							<td class="text-center"><div class="in-tb">관리자ID 이름출력</div></td>
-							<td class="text-center"><div class="in-tb">YYYY.MM.DD HH:MM</div></td>
-						</tr>
-						<tr>
-							<td class="list-num"><div class="in-tb">10</div></td>
-							<td class="text-center"><div class="bg-block-red">상담주의</div></td>
-							<td class="text-center"><div class="in-tb">해제</div></td>
-							<td class="text-left"><div class="in-tb">변경사유입니다.변경사유입니다.변경사유입니다.</div></td>							
-							<td class="text-center"><div class="in-tb">관리자ID 이름출력</div></td>
-							<td class="text-center"><div class="in-tb">YYYY.MM.DD HH:MM</div></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="pagination mt40">
-				<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>
-				<a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a>
-				<a href="#" class="current"><span>1</span></a>
-				<a href="#"><span>2</span></a>
-				<a href="#"><span>3</span></a>
-				<a href="#"><span>4</span></a>
-				<a href="#"><span>5</span></a>
-				<a href="#"><span>6</span></a>
-				<a href="#"><span>7</span></a>
-				<a href="#"><span>8</span></a>
-				<a href="#"><span>9</span></a>
-				<a href="#"><span>10</span></a>
-				<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
-				<a href="#" class="btn-page last" title="마지막"><span class="blind">마지막</span></a>
-			</div>
-			<!--//상담주의 / 블랙리스트 내역-->
-			<!--접속 이력-->
-			<div class="cnt-title-area mt40">
-				<h3 class="tit-cnt">접속 이력</h3>
-			</div>
-			<div class="board-option mt20">
-				<div class="left-area">
-					<div class="input-group">
-						<div class="page-info input-group-txt">총 <strong class="text-primary">20</strong>건 / 2페이지</div>
-						<div class="input-group-form">
-							<select class="select w90">
-								<option value="">2021</option>
-								<option value="">2020</option>
-							</select>
+			<div class="ui-tab-container tab-cnt-wrap"><!-- [Dev] 20210723 수정 : div추가 -->
+				<!-- 회원상세정보 -->
+				<div id="tab1" class="ui-tab-cnt active tab-content"><!-- //[Dev] 20210723 수정 : div추가 -->
+					<!--가입정보-->
+					<div class="cnt-title-area mt30">
+						<h3 class="tit-cnt">가입정보</h3>
+						<div class="right-info">
+							<span class="text-guide-sm2 icon-pos"><i class="es"><em class="blind">필수입력</em></i>는 필수항목입니다.</span><!-- [Dev] 20210810 추가 -->
+							<button type="button" class="btn-func btn-default"><span>휴면해제</span></button>
 						</div>
 					</div>
-				</div><!--// left-area -->
-			</div>
-			<div class="board-list mt10">
-				<table>
-					<caption>접속 이력</caption>
-					<colgroup>
-						<col class="w-col-num">
-						<col style="width:200px;">
-						<col style="width:92px;">
-						<col style="width:auto;">
-					</colgroup>
-					<thead>
-					<tr>
-						<th scope="col" class="list-num"><span class="in-tb">순번</span></th>
-						<th scope="col"><span class="in-tb">접속일</span></th>
-						<th scope="col"><span class="in-tb">결과</span></th>
-						<th scope="col"><span class="in-tb">유입경로</span></th> 
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="list-num"><div class="in-tb">10</div></td>
-							<td class="text-center"><div class="in-tb">2021.05.10 04:19</div></td>
-							<td class="text-center"><div class="in-tb">정상</div></td>
-							<td class="text-center"><div class="in-tb">Mobile web</div></td>
-						</tr>
-						<tr>
-							<td class="list-num"><div class="in-tb">10</div></td>
-							<td class="text-center"><div class="in-tb">2021.05.10 04:19</div></td>
-							<td class="text-center"><div class="in-tb">정상</div></td>
-							<td class="text-center"><div class="in-tb">모바일</div></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="pagination mt40">
-				<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>
-				<a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a>
-				<a href="#" class="current"><span>1</span></a>
-				<a href="#"><span>2</span></a>
-				<a href="#"><span>3</span></a>
-				<a href="#"><span>4</span></a>
-				<a href="#"><span>5</span></a>
-				<a href="#"><span>6</span></a>
-				<a href="#"><span>7</span></a>
-				<a href="#"><span>8</span></a>
-				<a href="#"><span>9</span></a>
-				<a href="#"><span>10</span></a>
-				<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
-				<a href="#" class="btn-page last" title="마지막"><span class="blind">마지막</span></a>
-			</div>
-			<!--//접속 이력-->
-			<div class="btn-area mt40">
-				<button type="button" class="btn-basic-md btn-primary"><span>목록</span></button>
-			</div>
+					<div class="board-form mt10">
+						<table>
+							<caption>입력</caption>
+							<colgroup>
+								<col class="w-col-tit"><col class="w-col-cnt"><col class="w-col-tit"><col class="w-col-cnt">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row"><span class="in-tb">이름<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210810 <i class="es"><em class="blind">필수입력</em></i> 추가 -->
+									<td>
+										<input type="text" class="input-text w140" value="">
+									</td>
+									<th scope="row"><span class="in-tb">닉네임<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210810 <i class="es"><em class="blind">필수입력</em></i> 추가 -->
+									<td>
+										<input type="text" class="input-text w140" value="">
+									</td>
+								</tr>
+								<tr>							
+									<th scope="row"><span class="in-tb">등급</span></th>
+									<td>
+										<div class="input-group-form">
+											<select class="select w140">
+												<option value="">닭부장</option>
+											</select>
+										</div>
+									</td>
+									<th scope="row"><span class="in-tb">상태/속성</span></th>
+									<td><div class="in-tb">휴면/평생</div></td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="in-tb">그룹</span></th>
+									<td>
+										<div class="form-inline-group">
+											<div class="custom-checkbox">
+												<input type="checkbox" id="check-101" class="checkbox" name="check-item-1" checked=""><label for="check-101"> 일반회원</label>
+											</div>
+											<div class="custom-checkbox">
+												<input type="checkbox" id="check-102" class="checkbox" name="check-item-1"><label for="check-102"> 오렌지멤버스</label>
+											</div>
+											<div class="custom-checkbox">
+												<input type="checkbox" id="check-103" class="checkbox" name="check-item-1"><label for="check-103"> 사업자회원</label>
+											</div>
+											<div class="custom-checkbox">
+												<input type="checkbox" id="check-103" class="checkbox" name="check-item-1"><label for="check-103"> 임직원</label>
+											</div>
+											<div class="custom-checkbox">
+												<input type="checkbox" id="check-103" class="checkbox" name="check-item-1"><label for="check-103"> 특별회원</label>
+											</div>
+										</div>
+									</td>
+									<th scope="row"><span class="in-tb">오렌지멤버스 기간</span></th>
+									<td>
+										<div class="input-group">
+											<div class="input-group-txt">YYYY.MM.DD~YYYY.MM.DD</div>
+											<div class="input-group-form">
+												<select class="select w140">
+													<option value="">가입</option>
+													<option value="">만료</option>
+													<option value="">미가입</option>
+												</select>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="in-tb">휴대폰<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210810 <i class="es"><em class="blind">필수입력</em></i> 추가 -->
+									<td>
+										<div class="input-group">
+											<input type="text" class="input-text w140">
+											<span class="input-group-btn">
+												<button type="button" class="btn-form btn-grey"><span>SMS발송</span></button>
+											</span>
+										</div>
+									</td>
+									<th scope="row"><span class="in-tb">생년월일<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210810 <i class="es"><em class="blind">필수입력</em></i> 추가 -->
+									<td>
+										<input type="text" class="input-text w140" value="">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="in-tb">이메일<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210810 <i class="es"><em class="blind">필수입력</em></i> 추가 -->
+									<td>
+										<div class="input-group">
+											<input type="text" class="input-text w140">
+											<span class="input-group-btn">
+												<button type="button" class="btn-form btn-grey"><span>이메일발송</span></button>
+											</span>
+										</div>
+									</td>
+									<th scope="row"><span class="in-tb">나이</span></th>
+									<td><div class="in-tb">00</div></td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="in-tb">추천아이디</span></th>
+									<td>
+										<input type="text" class="input-text w140" value="">
+									</td>
+									<th scope="row"><span class="in-tb">성별</span></th>
+									<td>
+										<input type="text" class="input-text w140" value="">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!--//가입정보-->
+
+					<!--이용정보-->
+					<div class="cnt-title-area mt40">
+						<h3 class="tit-cnt">이용정보</h3>
+					</div>
+					<div class="board-form mt10">
+						<table>
+							<caption>이용정보</caption>
+							<colgroup>
+								<col class="w-col-tit"><col class="w-col-cnt"><col class="w-col-tit"><col class="w-col-cnt">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row"><span class="in-tb">기본배송지</span></th>
+									<td><div class="in-tb">서울 마포구/특급배송 가능</div></td>
+									<th scope="row"><span class="in-tb">앱알림</span></th>
+									<td><div class="in-tb">동의(<em>일시표시 YYYY.MM.DD HH:MM</em>)</div></td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="in-tb">SNS로그인</span></th>
+									<td><div class="in-tb">네이버</div></td>
+									<th scope="row"><span class="in-tb">SMS수신/이메일수신</span></th>
+									<td><div class="in-tb">동의(<em>YYYY.MM.DD HH:MM</em>)/동의(<em>YYYY.MM.DD HH:MM</em>)</div></td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="in-tb">앱설치폰 OS</span></th>
+									<td><div class="in-tb">iOS</div></td>
+									<th scope="row"><span class="in-tb">앱설치폰 모델</span></th>
+									<td><div class="in-tb">모델명 출력</div></td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="in-tb">최근 접속일</span></th>
+									<td><div class="in-tb">2021.05.10 04:19</div></td>
+									<th scope="row"><span class="in-tb">가입일</span></th>
+									<td><div class="in-tb">2021.05.10 04:19</div></td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="in-tb">앱 최근 접속일</span></th>
+									<td><div class="in-tb">2021.05.10 04:19</div></td>
+									<th scope="row"><span class="in-tb">탈퇴</span></th>
+									<td><div class="in-tb">신청 <em>YYYY.MM.DD HH:MM</em> / 철회 <em>YYYY.MM.DD HH:MM</em> / 완료 <em>YYYY.MM.DD HH:MM</em></div></td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="in-tb">휴면</span></th>
+									<td><div class="in-tb">예정 <em>YYYY.MM.DD HH:MM</em> / 복귀 <em>YYYY.MM.DD HH:MM</em> / 시작 <em>YYYY.MM.DD HH:MM</em></div></td>
+									<th scope="row"><span class="in-tb">탈퇴사유</span></th>
+									<td><div class="in-tb">탈퇴사유출력</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="btn-area mt20">
+						<button type="button" class="btn-basic-md btn-primary"><span>저장</span></button>
+						<button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
+					</div>
+					<!--//이용정보-->
+					
+					<!--상담주의 / 블랙리스트 내역-->
+					<div class="cnt-title-area mt40">
+						<h3 class="tit-cnt">상담주의 / 차단회원 내역</h3>
+					</div>
+					<div class="board-option mt20">
+						<div class="left-area">
+							<div class="page-info mt10">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div><!-- [Dev] 20210721 수정 : mt10 추가 -->
+
+						</div><!--// left-area -->
+						<div class="right-area">
+							<button type="button" class="btn-func btn-default"><span>상담주의/차단 변경</span></button>
+						</div><!--// right-area -->
+					</div>
+					<div class="board-list mt10">
+						<table>
+							<caption>상담주의 / 차단 내역</caption>
+							<colgroup>
+								<col class="w-col-num">
+								<col style="width:100px;">
+								<col style="width:92px;">
+								<col style="width:auto;">
+								<col style="width:140px;">
+								<col style="width:220px;">
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col" class="list-num"><span class="in-tb">순번</span></th>
+								<th scope="col"><span class="in-tb">회원상태</span></th>
+								<th scope="col"><span class="in-tb">설정</span></th>
+								<th scope="col"><span class="in-tb">변경사유</span></th>
+								<th scope="col"><span class="in-tb">관리자</span></th>
+								<th scope="col"><span class="in-tb">등록일</span></th>						
+							</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="list-num"><div class="in-tb">10</div></td>
+									<td class="text-center"><div class="bg-block-bk">차단</div></td>
+									<td class="text-center"><div class="in-tb">해제</div></td>
+									<td class="text-left"><div class="in-tb">변경사유입니다.변경사유입니다.변경사유입니다. <i class="ico-bl-lock"></i> <!-- [Dev] 20210830 아이콘 추가 --> </div></td>							
+									<td class="text-center"><div class="in-tb">관리자ID 이름출력</div></td>
+									<td class="text-center"><div class="in-tb">YYYY.MM.DD HH:MM</div></td>
+								</tr>
+								<tr>
+									<td class="list-num"><div class="in-tb">10</div></td>
+									<td class="text-center"><div class="bg-block-red">상담주의</div></td>
+									<td class="text-center"><div class="in-tb">해제</div></td>
+									<td class="text-left"><div class="in-tb">변경사유입니다.변경사유입니다.변경사유입니다.</div></td>							
+									<td class="text-center"><div class="in-tb">관리자ID 이름출력</div></td>
+									<td class="text-center"><div class="in-tb">YYYY.MM.DD HH:MM</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="pagination mt40">
+						<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>
+						<a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a>
+						<a href="#" class="current"><span>1</span></a>
+						<a href="#"><span>2</span></a>
+						<a href="#"><span>3</span></a>
+						<a href="#"><span>4</span></a>
+						<a href="#"><span>5</span></a>
+						<a href="#"><span>6</span></a>
+						<a href="#"><span>7</span></a>
+						<a href="#"><span>8</span></a>
+						<a href="#"><span>9</span></a>
+						<a href="#"><span>10</span></a>
+						<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
+						<a href="#" class="btn-page last" title="마지막"><span class="blind">마지막</span></a>
+					</div>
+					<!--//상담주의 / 블랙리스트 내역-->
+					<!--접속 이력-->
+					<div class="cnt-title-area mt40">
+						<h3 class="tit-cnt">접속 이력</h3>
+					</div>
+					<div class="board-option mt20">
+						<div class="left-area">
+							<div class="input-group">
+								<div class="page-info input-group-txt">총 <strong class="text-primary">20</strong>건 / 2페이지</div>
+								<div class="input-group-form">
+									<select class="select w90">
+										<option value="">2021</option>
+										<option value="">2020</option>
+									</select>
+								</div>
+							</div>
+						</div><!--// left-area -->
+					</div>
+					<div class="board-list mt10">
+						<table>
+							<caption>접속 이력</caption>
+							<colgroup>
+								<col class="w-col-num">
+								<col style="width:200px;">
+								<col style="width:92px;">
+								<col style="width:auto;">
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col" class="list-num"><span class="in-tb">순번</span></th>
+								<th scope="col"><span class="in-tb">접속일</span></th>
+								<th scope="col"><span class="in-tb">결과</span></th>
+								<th scope="col"><span class="in-tb">유입경로</span></th> 
+							</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="list-num"><div class="in-tb">10</div></td>
+									<td class="text-center"><div class="in-tb">2021.05.10 04:19</div></td>
+									<td class="text-center"><div class="in-tb">정상</div></td>
+									<td class="text-center"><div class="in-tb">Mobile web</div></td>
+								</tr>
+								<tr>
+									<td class="list-num"><div class="in-tb">10</div></td>
+									<td class="text-center"><div class="in-tb">2021.05.10 04:19</div></td>
+									<td class="text-center"><div class="in-tb">정상</div></td>
+									<td class="text-center"><div class="in-tb">모바일</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="pagination mt40">
+						<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>
+						<a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a>
+						<a href="#" class="current"><span>1</span></a>
+						<a href="#"><span>2</span></a>
+						<a href="#"><span>3</span></a>
+						<a href="#"><span>4</span></a>
+						<a href="#"><span>5</span></a>
+						<a href="#"><span>6</span></a>
+						<a href="#"><span>7</span></a>
+						<a href="#"><span>8</span></a>
+						<a href="#"><span>9</span></a>
+						<a href="#"><span>10</span></a>
+						<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
+						<a href="#" class="btn-page last" title="마지막"><span class="blind">마지막</span></a>
+					</div>
+					<!--//접속 이력-->
+					<div class="btn-area mt40">
+						<button type="button" class="btn-basic-md btn-primary"><span>목록</span></button>
+					</div>
+				</div><!-- //[Dev] 20210723 수정 : div추가 -->
+				<!-- //회원상세정보 -->
+				<!-- [Dev] 20210723 수정 : 추가 -->
+				<!-- 주문내역 -->
+				<div id="tab2" class="ui-tab-cnt tab-content">
+					<div class="cnt-title-area mt30">
+						<h3 class="tit-cnt">주문현황<span class="desc">(최근1년)</span></h3><!-- [Dev] 20210723 수정 : SPAN 영역 추가 -->
+					</div>
+		
+					<table class="member-status-table mt10">
+						<caption>주문현황</caption>
+						<colgroup>
+							<col style="width:25%"/>
+							<col style="width:25%"/>
+							<col style="width:25%"/>
+							<col style="width:25%"/>
+						</colgroup>
+						<tbody>
+							<tr>
+								<td colspan="2">
+									<div class="item-txt">총 결제금액</div>
+									<div class="item-num"><em>570,000</em>원</div>
+								</td>
+								<td colspan="2">
+									<div class="item-txt">총 주문수</div>
+									<div class="item-num"><em>51</em>건</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+		
+					<div class="tab-search-box mt30"><!-- [Dev] 20210723 수정 : mt40 -> mt30 클래스수정 -->
+						<div class="input-group">
+							<div class="input-group-form">
+								<select class="select w140">
+									<option value="">주문번호</option>
+									<option value="">상품명</option>
+								</select>
+							</div>
+							<input type="text" class="input-text" placeholder="검색어를 입력하세요.(주문번호는 comma(,)로 구분)">
+							<span class="input-group-btn">
+								<button type="button" class="btn-form btn-black"><span>검색</span></button>
+							</span>
+						</div>
+					</div>
+		
+					<div class="board-option mt40">
+						<div class="left-area">
+							<div class="input-group">                        
+								<div class="page-info input-group-txt">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div>
+								<div class="input-group-form">
+									<select class="select w140">
+										<option value="">전체</option>
+										<option value="">미입금</option>
+										<option value="">입금완료</option>
+										<option value="">상품준비중</option>
+										<option value="">배송중</option>
+										<option value="">배송완료</option>
+										<option value="">승인대기</option>
+										<option value="">취소요청</option>
+										<option value="">취소완료</option>
+										<option value="">환불요청</option>
+										<option value="">환불완료</option>
+										<option value="">반품요청</option>
+										<option value="">반품완료</option>
+										<option value="">교환요청</option>
+										<option value="">교환완료</option>
+										<option value="">재고확인중</option>
+										<option value="">승인실패</option>
+									</select>
+								</div>
+							</div>
+						</div><!--// left-area -->
+						<!--//<div class="right-area">
+							<button type="button" class="btn-func btn-default"><span>일괄처리</span></button>
+							<button type="button" class="btn-func btn-default"><i class="ico-btn-xls"></i><span>엑셀 일괄 등록</span></button>
+							<button type="button" class="btn-func btn-default"><i class="ico-btn-xls"></i><span>엑셀 다운로드</span></button>
+							<button type="button" class="btn-func btn-default"><i class="ico-btn-xls"></i><span>엑셀 양식 다운로드</span></button>
+						</div> right-area -->
+					</div>
+		
+					<div class="board-list mt10">
+						<table>
+							<caption>목록</caption>
+							<colgroup>
+								<col class="w-col-num">
+								<col style="width:84px;">
+								<col style="width:180px;">
+								<col style="width:auto;">
+								<col style="width:180px;">
+								<col style="width:130px;">
+								<col style="width:200px;">
+								<col style="width:84px;">
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col" class="list-num"><span class="in-tb">순번</span></th>
+								<th scope="col"><span class="in-tb">주문상태</span></th>
+								<th scope="col"><span class="in-tb">주문번호</span></th>
+								<th scope="col"><span class="in-tb">주문상품</span></th>
+								<th scope="col"><span class="in-tb">주문일</span></th>
+								<th scope="col"><span class="in-tb">주문금액</span></th>
+								<th scope="col"><span class="in-tb">결제수단</span></th>
+								<th scope="col"><span class="in-tb">배송</span></th>
+							</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="list-num"><div class="in-tb">10</div></td>
+									<td class="text-center"><div class="in-tb">입금완료</div></td>
+									
+									<td class="text-center"><div class="in-tb">20210504R3DD58</div></td>
+									<td class="text-left"><div class="in-tb">[자연애품] 3가지 소스로 골라먹는 닭가슴살 스테이크 외 3건</div></td>
+									<td class="text-center"><div class="in-tb">2021.05.04 17:59</div></td>
+									<td class="text-right"><div class="in-tb">117,000원</div></td><!-- [Dev] 20210723 수정 : td 클래스명 변경 -->
+									<td class="text-center"><div class="in-tb">랭킹CARD 하나카드</div></td>
+									<td class="text-center"><div class="in-tb">일반</div></td>
+								</tr>
+								<tr>
+									<td class="list-num"><div class="in-tb">10</div></td>
+									<td class="text-center"><div class="in-tb">입금완료</div></td>
+									
+									<td class="text-center"><div class="in-tb">20210504R3DD58</div></td>
+									<td class="text-left"><div class="in-tb">[자연애품] 3가지 소스로 골라먹는 닭가슴살 스테이크 외 3건</div></td>
+									<td class="text-center"><div class="in-tb">2021.05.04 17:59</div></td>
+									<td class="text-right"><div class="in-tb">117,000원</div></td><!-- [Dev] 20210723 수정 : td 클래스명 변경 -->
+									<td class="text-center"><div class="in-tb">랭킹CARD 하나카드</div></td>
+									<td class="text-center"><div class="in-tb">일반</div></td>
+								</tr>
+								<tr>
+									<td class="list-num"><div class="in-tb">10</div></td>
+									<td class="text-center"><div class="in-tb">입금완료</div></td>
+									
+									<td class="text-center"><div class="in-tb">20210504R3DD58</div></td>
+									<td class="text-left"><div class="in-tb">[자연애품] 3가지 소스로 골라먹는 닭가슴살 스테이크 외 3건</div></td>
+									<td class="text-center"><div class="in-tb">2021.05.04 17:59</div></td>
+									<td class="text-right"><div class="in-tb">117,000원</div></td><!-- [Dev] 20210723 수정 : td 클래스명 변경 -->
+									<td class="text-center"><div class="in-tb">랭킹CARD 하나카드</div></td>
+									<td class="text-center"><div class="in-tb">일반</div></td>
+								</tr>
+								<tr>
+									<td class="list-num"><div class="in-tb">10</div></td>
+									<td class="text-center"><div class="in-tb">입금완료</div></td>
+									
+									<td class="text-center"><div class="in-tb">20210504R3DD58</div></td>
+									<td class="text-left"><div class="in-tb">[자연애품] 3가지 소스로 골라먹는 닭가슴살 스테이크 외 3건</div></td>
+									<td class="text-center"><div class="in-tb">2021.05.04 17:59</div></td>
+									<td class="text-right"><div class="in-tb">117,000원</div></td><!-- [Dev] 20210723 수정 : td 클래스명 변경 -->
+									<td class="text-center"><div class="in-tb">랭킹CARD 하나카드</div></td>
+									<td class="text-center"><div class="in-tb">일반</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+		
+					<div class="pagination mt40">
+						<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>
+						<a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a>
+						<a href="#" class="current"><span>1</span></a>
+						<a href="#"><span>2</span></a>
+						<a href="#"><span>3</span></a>
+						<a href="#"><span>4</span></a>
+						<a href="#"><span>5</span></a>
+						<a href="#"><span>6</span></a>
+						<a href="#"><span>7</span></a>
+						<a href="#"><span>8</span></a>
+						<a href="#"><span>9</span></a>
+						<a href="#"><span>10</span></a>
+						<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
+						<a href="#" class="btn-page last" title="마지막"><span class="blind">마지막</span></a>
+					</div>
+					<!--//로그인 이력-->
+					<div class="btn-area mt40">
+						<button type="button" class="btn-basic-md btn-primary"><span>목록</span></button>
+					</div>
+				</div>
+				<!-- //주문내역-->
+				<!-- 쿠폰내역 -->
+				<div id="tab3" class="ui-tab-cnt tab-content">
+					<div class="tab-search-box mt30"><!-- [Dev] 20210723 수정 : mt40 -> mt30 클래스수정 -->
+						<div class="input-group">
+							<div class="input-group-form">
+								<select class="select w140">
+									<option value="">쿠폰코드</option>
+									<option value="">쿠폰명</option>
+								</select>
+							</div>
+							<input type="text" class="input-text" placeholder="검색어를 입력하세요.(주문번호는 comma(,)로 구분)">
+							<span class="input-group-btn">
+								<button type="button" class="btn-form btn-black"><span>검색</span></button>
+							</span>
+						</div>
+					</div>
+		
+					<div class="board-option mt40">
+						<div class="left-area">
+							<div class="input-group">                        
+								<div class="page-info input-group-txt">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div>
+								<div class="input-group-form">
+									<select class="select w140">
+										<option value="">전체</option>
+										<option value="">사용완료</option>
+										<option value="">미사용</option>
+										<option value="">기간만료</option>
+										<option value="">관리자회수</option>
+										<option value="">최소복원</option>
+									</select>
+								</div>
+							</div>
+						</div><!--// left-area -->
+						<div class="right-area">
+							<button type="button" class="btn-func btn-default"><span>쿠폰지급</span></button>
+							<button type="button" class="btn-func btn-default"><span>쿠폰회수</span></button>
+						</div> <!--//right-area -->
+					</div>
+		
+					<div class="board-list scroll-table mt10">
+						<table>
+							<caption>목록</caption>
+							<colgroup>
+								<col class="w-col-num">
+								<col style="width:120px;">
+								<col style="width:120px;">
+								<col style="width:120px;">
+								<col style="width:400px;">
+								<col style="width:150px;">
+								<col style="width:150px;">
+								<col style="width:150px;">
+								<col style="width:150px;">
+								<col style="width:120px;">
+								<col style="width:150px;">
+								<col style="width:360px;">
+								<col style="width:150px;">
+								<col style="width:360px;">
+								<col style="width:160px;"><!-- [Dev] 20210723 수정 : 수치 변경 -->
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" class="list-num"><span class="in-tb">순번</span></th>
+									<th scope="col"><span class="in-tb">이용상태</span></th><!-- [Dev] 20210723 수정 : 텍스트 변경 -->
+									<th scope="col"><span class="in-tb">쿠폰유형</span></th>
+									<th scope="col"><span class="in-tb">쿠폰코드</span></th>
+									<th scope="col"><span class="in-tb">쿠폰명</span></th>
+									<th scope="col"><span class="in-tb">할인금액(할인율)</span></th>
+									<th scope="col"><span class="in-tb">유효기간(잔여일)</span></th>
+									<th scope="col"><span class="in-tb">사용일</span></th>
+									<th scope="col"><span class="in-tb">사용주문</span></th>
+									<th scope="col"><span class="in-tb">결제금액</span></th>
+									<th scope="col"><span class="in-tb">발급일(지급일)</span></th>
+									<th scope="col"><span class="in-tb">지급사유</span></th>
+									<th scope="col"><span class="in-tb">회수일</span></th>
+									<th scope="col"><span class="in-tb">회수사유</span></th>
+									<th scope="col"><span class="in-tb">관리자</span></th>
+								</tr>
+							</thead>
+							<tbody><!-- [Dev] 20210723 td 전체적으로  vt-mid 클래스 제거 -->
+								<tr>
+									<td class="list-num"><div class="in-tb">1000</div></td>
+									<td class="text-center"><div class="in-tb">사용완료</div></td><!-- [Dev] 20210723 수정 : <br>(관리자지급) 제거 -->
+									<td class="text-center"><div class="in-tb">추천적립금</div></td>
+									<td class="text-center"><div class="in-tb">1234567</div></td>
+									<td class="text-left"><div class="in-tb">추천인 입력 적립금</div></td>
+									<td class="text-right"><div class="in-tb">2,500P</div></td><!-- [Dev] 20210723 수정 : text-center -> text-right 클래스 수정 -->
+									<td class="text-center"><div class="in-tb">2021.04.29(<strong class="text-primary">14</strong>일)</div></td>
+									<td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
+									<td class="text-center"><div class="in-tb">20210305R3DD58</div></td>
+									<td class="text-right"><div class="in-tb">187,000원</div></td><!-- [Dev] 20210723 수정 : text-center -> text-right 클래스 수정 -->
+									<td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
+									<td class="text-left"><div class="in-tb">지급사유입니다.지급사유입니다.지급사유입니다</div></td>
+									<td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
+									<td class="text-left"><div class="in-tb">회수사유입니다.회수사유입니다.회수사유입니다.</div></td>
+									<td class="text-center"><div class="in-tb">dhxn2ak / 이름출력</div></td><!-- [Dev] 20210723 수정 : 관리자 이름출력 추가 -->
+								</tr>
+								<tr>
+									<td class="list-num"><div class="in-tb">1000</div></td>
+									<td class="text-center"><div class="in-tb">사용완료</div></td>
+									<td class="text-center"><div class="in-tb">추천적립금</div></td>
+									<td class="text-center"><div class="in-tb">1234567</div></td>
+									<td class="text-left"><div class="in-tb">추천인 입력 적립금</div></td>
+									<td class="text-right"><div class="in-tb">2,500P</div></td><!-- [Dev] 20210723 수정 : text-center -> text-right 클래스 수정 -->
+									<td class="text-center"><div class="in-tb">2021.04.29(<strong class="text-primary">14</strong>일)</div></td>
+									<td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
+									<td class="text-center"><div class="in-tb">20210305R3DD58</div></td>
+									<td class="text-right"><div class="in-tb">187,000원</div></td><!-- [Dev] 20210723 수정 : text-center -> text-right 클래스 수정 -->
+									<td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
+									<td class="text-left"><div class="in-tb">지급사유입니다.지급사유입니다.지급사유입니다</div></td>
+									<td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
+									<td class="text-left"><div class="in-tb">회수사유입니다.회수사유입니다.회수사유입니다.</div></td>
+									<td class="text-center"><div class="in-tb">dhxn2ak / 이름출력</div></td><!-- [Dev] 20210723 수정 : 관리자 이름출력 추가 -->
+								</tr>
+							</tbody>
+						</table>
+					</div>
+		
+					<div class="pagination mt40">
+						<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>
+						<a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a>
+						<a href="#" class="current"><span>1</span></a>
+						<a href="#"><span>2</span></a>
+						<a href="#"><span>3</span></a>
+						<a href="#"><span>4</span></a>
+						<a href="#"><span>5</span></a>
+						<a href="#"><span>6</span></a>
+						<a href="#"><span>7</span></a>
+						<a href="#"><span>8</span></a>
+						<a href="#"><span>9</span></a>
+						<a href="#"><span>10</span></a>
+						<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
+						<a href="#" class="btn-page last" title="마지막"><span class="blind">마지막</span></a>
+					</div>
+					<!--//로그인 이력-->
+					<div class="btn-area mt40">
+						<button type="button" class="btn-basic-md btn-primary"><span>목록</span></button>
+					</div>
+				</div>
+				<!-- //쿠폰내역-->
+				<!-- 적립금내역 -->
+				<div id="tab4" class="ui-tab-cnt tab-content">
+					<div class="cnt-title-area mt30">
+						<h3 class="tit-cnt">적립금현황</h3>
+					</div>
+		
+					<table class="member-status-table mt10">
+						<caption>적립금현황</caption>
+						<colgroup>
+							<col style="width:25%"/>
+							<col style="width:25%"/>
+							<col style="width:25%"/>
+							<col style="width:25%"/>
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<div class="item-txt">사용가능</div>
+									<div class="item-num"><em>10,000</em>P</div>
+								</td>
+								<td>
+									<div class="item-txt">소멸예정 (30일이내)</div>
+									<div class="item-num"><em>1,227</em>P</div>
+								</td>
+								<td>
+									<div class="item-txt">누적 사용</div>
+									<div class="item-num"><em>3,700</em>P</div>
+								</td>
+								<td>
+									<div class="item-txt">누적 소멸</div>
+									<div class="item-num"><em>517</em>P</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+		
+					<div class="tab-search-box mt30"><!-- [Dev] 20210723 수정 : mt40 -> mt30 클래스수정 -->
+						<div class="input-group">
+							<div class="input-group-form">
+								<select class="select w140">
+									<option value="">적립금코드</option>
+								</select>
+							</div>
+							<input type="text" class="input-text" placeholder="검색어를 입력하세요.(적립금코드는 comma(,)로 구분)">
+							<span class="input-group-btn">
+								<button type="button" class="btn-form btn-black"><span>검색</span></button>
+							</span>
+						</div>
+					</div>
+		
+					<div class="board-option mt40">
+						<div class="left-area">
+							<div class="input-group">                        
+								<div class="page-info input-group-txt">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div>
+								<div class="input-group-form">
+									<select class="select w140">
+										<option value="">전체</option>
+										<option value="">사용완료</option>
+										<option value="">미사용</option>
+										<option value="">소멸</option>
+										<option value="">관리자회수</option>
+									</select>
+								</div>
+							</div>
+						</div><!--// left-area -->
+						<div class="right-area">
+							<button type="button" class="btn-func btn-default"><span>적립금지급</span></button>
+							<button type="button" class="btn-func btn-default"><span>적립금회수</span></button>
+						</div> <!--//right-area -->
+					</div>
+		
+					<div class="board-list scroll-table mt10">
+						<table>
+							<caption>목록</caption>
+							<colgroup>
+								<col class="w-col-num">
+								<col style="width:120px;">
+								<col style="width:120px;">
+								<col style="width:120px;">
+								<col style="width:400px;">
+								<col style="width:90px;">
+								<col style="width:150px;">
+								<col style="width:150px;">
+								<col style="width:150px;">
+								<col style="width:120px;">
+								<col style="width:150px;">
+								<col style="width:360px;">
+								<col style="width:150px;">
+								<col style="width:360px;">
+								<col style="width:160px;"><!-- [Dev] 20210723 수정 : 수치 변경 -->
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" class="list-num"><span class="in-tb">순번</span></th>
+									<th scope="col"><span class="in-tb">이용상태</span></th><!-- [Dev] 20210723 수정 : 텍스트 변경 -->
+									<th scope="col"><span class="in-tb">적립금유형</span></th>
+									<th scope="col"><span class="in-tb">적립금코드</span></th>
+									<th scope="col"><span class="in-tb">적립금명</span></th>
+									<th scope="col"><span class="in-tb">지급금액</span></th>
+									<th scope="col"><span class="in-tb">유효기간(잔여일)</span></th>
+									<th scope="col"><span class="in-tb">사용일</span></th>
+									<th scope="col"><span class="in-tb">사용주문</span></th>
+									<th scope="col"><span class="in-tb">결제금액</span></th>
+									<th scope="col"><span class="in-tb">지급일</span></th>
+									<th scope="col"><span class="in-tb">지급사유</span></th>
+									<th scope="col"><span class="in-tb">회수일</span></th>
+									<th scope="col"><span class="in-tb">회수사유</span></th>
+									<th scope="col"><span class="in-tb">관리자</span></th>
+								</tr>
+							</thead>
+							<tbody><!-- [Dev] 20210723 td 전체적으로  클래스 제거 -->
+								<tr>
+									<td class="list-num"><div class="in-tb">1000</div></td>
+									<td class="text-center"><div class="in-tb">사용완료</div></td><!-- [Dev] 20210723 수정 : <br>(관리자지급) 제거 -->
+									<td class="text-center"><div class="in-tb">추천적립금</div></td>
+									<td class="text-center"><div class="in-tb">1234567</div></td>
+									<td class="text-left"><div class="in-tb">추천인 입력 적립금</div></td>
+									<td class="text-right"><div class="in-tb">2,500P</div></td><!-- [Dev] 20210723 수정 : text-center -> text-right 클래스 수정 -->
+									<td class="text-center"><div class="in-tb">2021.04.29(<strong class="text-primary">14</strong>일)</div></td>
+									<td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
+									<td class="text-center"><div class="in-tb">20210305R3DD58</div></td>
+									<td class="text-right"><div class="in-tb">187,000원</div></td><!-- [Dev] 20210723 수정 : text-center -> text-right 클래스 수정 -->
+									<td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
+									<td class="text-left"><div class="in-tb">지급사유입니다.지급사유입니다.지급사유입니다</div></td>
+									<td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
+									<td class="text-left"><div class="in-tb">회수사유입니다.회수사유입니다.회수사유입니다.</div></td>
+									<td class="text-center"><div class="in-tb">dhxn2ak / 이름출력</div></td><!-- [Dev] 20210723 수정 : 관리자 이름출력 추가 -->
+								</tr>
+								<tr>
+									<td class="list-num"><div class="in-tb">1000</div></td>
+									<td class="text-center"><div class="in-tb">사용완료</div></td>
+									<td class="text-center"><div class="in-tb">추천적립금</div></td>
+									<td class="text-center"><div class="in-tb">1234567</div></td>
+									<td class="text-left"><div class="in-tb">추천인 입력 적립금</div></td>
+									<td class="text-right"><div class="in-tb">2,500P</div></td><!-- [Dev] 20210723 수정 : text-center -> text-right 클래스 수정 -->
+									<td class="text-center"><div class="in-tb">2021.04.29(<strong class="text-primary">14</strong>일)</div></td>
+									<td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
+									<td class="text-center"><div class="in-tb">20210305R3DD58</div></td>
+									<td class="text-right"><div class="in-tb">187,000원</div></td><!-- [Dev] 20210723 수정 : text-center -> text-right 클래스 수정 -->
+									<td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
+									<td class="text-left"><div class="in-tb">지급사유입니다.지급사유입니다.지급사유입니다</div></td>
+									<td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
+									<td class="text-left"><div class="in-tb">회수사유입니다.회수사유입니다.회수사유입니다.</div></td>
+									<td class="text-center"><div class="in-tb">dhxn2ak / 이름출력</div></td><!-- [Dev] 20210723 수정 : 관리자 이름출력 추가 -->
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+		
+					<div class="pagination mt40">
+						<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>
+						<a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a>
+						<a href="#" class="current"><span>1</span></a>
+						<a href="#"><span>2</span></a>
+						<a href="#"><span>3</span></a>
+						<a href="#"><span>4</span></a>
+						<a href="#"><span>5</span></a>
+						<a href="#"><span>6</span></a>
+						<a href="#"><span>7</span></a>
+						<a href="#"><span>8</span></a>
+						<a href="#"><span>9</span></a>
+						<a href="#"><span>10</span></a>
+						<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
+						<a href="#" class="btn-page last" title="마지막"><span class="blind">마지막</span></a>
+					</div>
+					<!--//로그인 이력-->
+					<div class="btn-area mt40">
+						<button type="button" class="btn-basic-md btn-primary"><span>목록</span></button>
+					</div>
+				</div>
+				<!-- //적립금내역-->
+				<!-- 1:1문의내역 -->
+				<div id="tab5" class="ui-tab-cnt tab-content">
+					<div class="tab-search-box mt30"><!-- [Dev] 20210723 수정 : mt40 -> mt30 클래스수정 -->
+						<div class="input-group">
+							<div class="input-group-form">
+								<select class="select w140">
+									<option value="">제목</option>
+								</select>
+							</div>
+							<input type="text" class="input-text" placeholder="검색어를 입력하세요.">
+							<span class="input-group-btn">
+								<button type="button" class="btn-form btn-black"><span>검색</span></button>
+							</span>
+						</div>
+					</div>
+		
+					<div class="board-option mt40">
+						<div class="left-area">
+							<div class="input-group">                        
+								<div class="page-info input-group-txt">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div>
+								<div class="input-group-form">
+									<select class="select w140">
+										<option value="">전체</option>
+										<option value="">미답변</option>
+										<option value="">답변완료</option>
+									</select>
+								</div>
+							</div>
+						</div><!--// left-area -->
+						<!--<div class="right-area">
+							<button type="button" class="btn-func btn-default"><span>쿠폰지급</span></button>
+							<button type="button" class="btn-func btn-default"><span>쿠폰회수</span></button>
+						</div> //right-area -->
+					</div>
+		
+					<div class="board-list mt10">
+						<table>
+							<caption>목록</caption>
+							<colgroup>
+								<col class="w-col-num">
+								<col style="width:90px">
+								<col style="width:100px">
+								<col style="width:965px">
+								<col style="width:150px">
+								<col style="width:150px">
+								<col style="width:160px;"><!-- [Dev] 20210723 수정 : 수치 변경 -->
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col" class="list-num"><span class="in-tb">순번</span></th>
+								<th scope="col"><span class="in-tb">답변여부</span></th><!-- [Dev] 20210723 수정 : 텍스트 변경 -->
+								<th scope="col"><span class="in-tb">문의유형</span></th><!-- [Dev] 20210723 수정 : 텍스트 변경 -->
+								<th scope="col"><span class="in-tb">제목</span></th>
+								<th scope="col"><span class="in-tb">등록일</span></th>
+								<th scope="col"><span class="in-tb">답변일</span></th>
+								<th scope="col"><span class="in-tb">관리자</span></th>
+							</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="list-num"><div class="in-tb">10</div></td>
+									<td class="text-center"><div class="in-tb">답변완료</div></td>
+									<td class="text-center"><div class="in-tb">주문및결제</div></td>
+									<!-- [Dev] 20210826 수정 -->
+									<td class="text-left tool-over"><a href="#" class="in-tb"><i class="ico-bl-file"></i>한끼 야식세트 주문했는데요.순대가 들어있는거 맞나요?
+										<div class="tool-cont">
+											<strong>증정품이 누락됐습니다. 어찌된건가요? 증정품이 누락됐습니다. 어찌된건가요?</strong>
+											안녕하세요 회원님 닭가슴살 감동쇼핑 랭킹닭컴 닭대리입니다.<br>먼저, 이용에 불편 드려서 죄송합니다.<br>증정품 확인 후 발송드리곘습니다.<br>랭킹닭컴을 이용해 주셔서 감사합니다.
+										</div>
+									</a></td><!-- [Dev] 20210721 수정 : <i class="ico-bl-file"></i> 텍스트 앞으로 위치 이동 -->
+									<!-- //[Dev] 20210826 수정 -->
+									<td class="text-center"><div class="in-tb">2021.05.06 10:56</div></td>
+									<td class="text-center"><div class="in-tb">2021.05.04 17:59</div></td>
+									<td class="text-center"><div class="in-tb">dhxn2ak / 이름출력</div></td><!-- [Dev] 20210723 수정 : 관리자 이름출력 추가 -->
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+		
+					<div class="pagination mt40">
+						<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>
+						<a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a>
+						<a href="#" class="current"><span>1</span></a>
+						<a href="#"><span>2</span></a>
+						<a href="#"><span>3</span></a>
+						<a href="#"><span>4</span></a>
+						<a href="#"><span>5</span></a>
+						<a href="#"><span>6</span></a>
+						<a href="#"><span>7</span></a>
+						<a href="#"><span>8</span></a>
+						<a href="#"><span>9</span></a>
+						<a href="#"><span>10</span></a>
+						<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
+						<a href="#" class="btn-page last" title="마지막"><span class="blind">마지막</span></a>
+					</div>
+					<!--//로그인 이력-->
+					<div class="btn-area mt40">
+						<button type="button" class="btn-basic-md btn-primary"><span>목록</span></button>
+					</div>
+				</div>
+				<!-- //1:1문의내역-->
+				<!-- 리뷰내역 -->
+				<div id="tab6" class="ui-tab-cnt tab-content">
+					<div class="tab-search-box mt30"><!-- [Dev] 20210723 수정 : mt40 -> mt30 클래스수정 -->
+						<div class="input-group">
+							<div class="input-group-form">
+								<select class="select w140">
+									<option value="">상품코드</option>
+									<option value="">상품명</option>
+								</select>
+							</div>
+							<input type="text" class="input-text" placeholder="검색어를 입력하세요.(주문번호는 comma(,)로 구분)">
+							<span class="input-group-btn">
+								<button type="button" class="btn-form btn-black"><span>검색</span></button>
+							</span>
+						</div>
+					</div>
+		
+					<div class="board-option mt40">
+						<div class="left-area">
+							<div class="input-group">                        
+								<div class="page-info input-group-txt">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div>
+								<div class="input-group-form">
+									<select class="select w140">
+										<option value="">전체</option>
+										<option value="">미답변</option>
+										<option value="">답변완료</option>
+									</select>
+								</div>
+							</div>
+						</div><!--// left-area -->
+						<!--<div class="right-area">
+							<button type="button" class="btn-func btn-default"><span>쿠폰지급</span></button>
+							<button type="button" class="btn-func btn-default"><span>쿠폰회수</span></button>
+						</div> //right-area -->
+					</div>
+		
+					<div class="board-list mt10 fix-type">
+						<table>
+							<caption>목록</caption>
+							<colgroup>
+								<col class="w-col-num">
+								<col style="width:90px">
+								<col style="width:100px">
+								<col style="width:auto">
+								<col style="width:320px">
+								<col style="width:150px">
+								<col style="width:150px">
+								<col style="width:150px">
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col" class="list-num"><span class="in-tb">순번</span></th>
+								<th scope="col"><span class="in-tb">답변여부</span></th><!-- [Dev] 20210723 수정 : 텍스트 변경 -->
+								<th scope="col"><span class="in-tb">고객만족도</span></th><!-- [Dev] 20210723 수정 : 텍스트 변경 -->
+								<th scope="col"><span class="in-tb">내용</span></th>
+								<th scope="col"><span class="in-tb">상품</span></th>
+								<th scope="col"><span class="in-tb">등록일</span></th>
+								<th scope="col"><span class="in-tb">답변일</span></th>
+								<th scope="col"><span class="in-tb">관리자</span></th>
+							</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="list-num vt-mid"><div class="in-tb">10</div></td>
+									<td class="text-center vt-mid"><div class="in-tb">답변완료</div></td>
+									<td class="text-center vt-mid"><div class="in-tb">5</div></td>
+									<!-- [Dev] 20210826 수정 -->
+									<td class="text-left vt-mid tool-over"><a href="#" class="in-tb"><em class="badge-primary">BEST</em>한끼 야식세트 주문했는데요.순대가 들어있는거 맞나요?
+										<div class="tool-cont">
+											<strong>증정품이 누락됐습니다. 어찌된건가요? 증정품이 누락됐습니다. 어찌된건가요?</strong>
+											안녕하세요 회원님 닭가슴살 감동쇼핑 랭킹닭컴 닭대리입니다.<br>먼저, 이용에 불편 드려서 죄송합니다.<br>증정품 확인 후 발송드리곘습니다.<br>랭킹닭컴을 이용해 주셔서 감사합니다.
+										</div>
+									</a></td>
+									<!-- //[Dev] 20210826 수정 -->
+									<td class="text-left vt-mid">
+										<div class="in-tb">
+											<div>MD2100183M</div>
+											<div class="mt5 text-elps">[맛있닭] 닭가슴살 소시지 혼합 [맛있닭] 닭가슴살 소시지 혼합</div>
+										</div>                                
+									</td>
+									<td class="text-center vt-mid"><div class="in-tb">2021.05.06 10:56</div></td>
+									<td class="text-center vt-mid"><div class="in-tb">2021.05.04 17:59</div></td>
+									<td class="text-center vt-mid"><div class="in-tb">dhxn2ak / 이름출력</div></td><!-- [Dev] 20210723 수정 : 관리자 이름출력 추가 -->
+								</tr>
+								<tr>
+									<td class="list-num vt-mid"><div class="in-tb">10</div></td>
+									<td class="text-center vt-mid"><div class="in-tb">답변완료</div></td>
+									<td class="text-center vt-mid"><div class="in-tb">10</div></td>
+									<!-- [Dev] 20210826 수정 -->
+									<td class="text-left vt-mid tool-over"><a href="#" class="in-tb"><em class="badge-sub-color">PHOTO</em>한끼 야식세트 주문했는데요.순대가 들어있는거 맞나요?									
+										<div class="tool-cont">
+											<strong>증정품이 누락됐습니다. 어찌된건가요? 증정품이 누락됐습니다. 어찌된건가요?</strong>
+											안녕하세요 회원님 닭가슴살 감동쇼핑 랭킹닭컴 닭대리입니다.<br>먼저, 이용에 불편 드려서 죄송합니다.<br>증정품 확인 후 발송드리곘습니다.<br>랭킹닭컴을 이용해 주셔서 감사합니다.
+										</div>
+									</a></td>
+									<!-- //[Dev] 20210826 수정 -->
+									<td class="text-left vt-mid">
+										<div class="in-tb">
+											<div>MD2100183M</div>
+											<div class="mt5 text-elps">[맛있닭] 닭가슴살 소시지 혼합 [맛있닭] 닭가슴살 소시지 혼합</div>
+										</div>                                
+									</td>
+									<td class="text-center vt-mid"><div class="in-tb">2021.05.06 10:56</div></td>
+									<td class="text-center vt-mid"><div class="in-tb">2021.05.04 17:59</div></td>
+									<td class="text-center vt-mid"><div class="in-tb">dhxn2ak / 이름출력</div></td><!-- [Dev] 20210723 수정 : 관리자 이름출력 추가 -->
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+		
+					<div class="pagination mt40">
+						<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>
+						<a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a>
+						<a href="#" class="current"><span>1</span></a>
+						<a href="#"><span>2</span></a>
+						<a href="#"><span>3</span></a>
+						<a href="#"><span>4</span></a>
+						<a href="#"><span>5</span></a>
+						<a href="#"><span>6</span></a>
+						<a href="#"><span>7</span></a>
+						<a href="#"><span>8</span></a>
+						<a href="#"><span>9</span></a>
+						<a href="#"><span>10</span></a>
+						<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
+						<a href="#" class="btn-page last" title="마지막"><span class="blind">마지막</span></a>
+					</div>
+					<!--//로그인 이력-->
+					<div class="btn-area mt40">
+						<button type="button" class="btn-basic-md btn-primary"><span>목록</span></button>
+					</div>
+				</div>
+				<!-- //리뷰내역-->
+				<!-- 관심상품내역 -->
+				<div id="tab7" class="ui-tab-cnt tab-content">
+					<div class="tab-search-box mt30"><!-- [Dev] 20210723 수정 : mt40 -> mt30 클래스수정 -->
+						<div class="input-group">
+							<div class="input-group-form">
+								<select class="select w140">
+									<option value="">상품코드</option>
+									<option value="">상품명</option>
+								</select>
+							</div>
+							<input type="text" class="input-text" placeholder="검색어를 입력하세요.(주문번호는 comma(,)로 구분)">
+							<span class="input-group-btn">
+								<button type="button" class="btn-form btn-black"><span>검색</span></button>
+							</span>
+						</div>
+					</div>
+		
+					<div class="board-option mt40">
+						<div class="left-area">
+							<div class="input-group">                        
+								<div class="page-info input-group-txt">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div>
+								<div class="input-group-form">
+									<select class="select w140">
+										<option value="">전체</option>
+										<option value="">정상</option>
+										<option value="">품절</option>
+										<option value="">영구정지</option>
+										<option value="">일시품절</option>
+									</select>
+								</div>
+							</div>
+						</div><!--// left-area -->
+						<!--<div class="right-area">
+							<button type="button" class="btn-func btn-default"><span>쿠폰지급</span></button>
+							<button type="button" class="btn-func btn-default"><span>쿠폰회수</span></button>
+						</div> //right-area -->
+					</div>
+		
+					<div class="board-list mt10">
+						<table>
+							<caption>목록</caption>
+							<colgroup>
+								<col class="w-col-num">
+								<col style="width:90px">
+								<col style="width:150px">
+								<col style="width:auto">
+								<col style="width:150px">
+								<col style="width:150px">
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col" class="list-num"><span class="in-tb">순번</span></th>
+								<th scope="col"><span class="in-tb">판매상태</span></th>
+								<th scope="col"><span class="in-tb">상품코드</span></th>
+								<th scope="col"><span class="in-tb">상품명</span></th>
+								<th scope="col"><span class="in-tb">판매가</span></th>
+								<th scope="col"><span class="in-tb">등록일</span></th>
+							</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="list-num"><div class="in-tb">10</div></td>
+									<td class="text-center"><div class="in-tb">정상</div></td>
+									<td class="text-center"><div class="in-tb">MD2100183M</div></td>
+									<td class="text-left"><div class="in-tb">맛있닭 닭가슴살 소시지 혼합</div></td>
+									<td class="text-right"><div class="in-tb">16,500원</div></td><!-- [Dev] 20210723 수정 : text-center -> text-right 클래스 수정 -->
+									<td class="text-center"><div class="in-tb">2021.05.04 17:59</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+		
+					<div class="pagination mt30">
+						<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>
+						<a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a>
+						<a href="#" class="current"><span>1</span></a>
+						<a href="#"><span>2</span></a>
+						<a href="#"><span>3</span></a>
+						<a href="#"><span>4</span></a>
+						<a href="#"><span>5</span></a>
+						<a href="#"><span>6</span></a>
+						<a href="#"><span>7</span></a>
+						<a href="#"><span>8</span></a>
+						<a href="#"><span>9</span></a>
+						<a href="#"><span>10</span></a>
+						<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
+						<a href="#" class="btn-page last" title="마지막"><span class="blind">마지막</span></a>
+					</div>
+					<!--//로그인 이력-->
+					<div class="btn-area mt40">
+						<button type="button" class="btn-basic-md btn-primary"><span>목록</span></button>
+					</div>
+				</div>
+				<!-- //관심상품내역-->
+				<!-- 관심브랜드내역 -->
+				<div id="tab8" class="ui-tab-cnt tab-content">
+					<div class="tab-search-box mt30"><!-- [Dev] 20210723 수정 : mt40 -> mt30 클래스수정 -->
+						<div class="input-group">
+							<div class="input-group-form">
+								<select class="select w140">
+									<option value="">브랜드코드</option>
+									<option value="">브랜드명</option>
+								</select>
+							</div>
+							<input type="text" class="input-text" placeholder="검색어를 입력하세요.(주문번호는 comma(,)로 구분)">
+							<span class="input-group-btn">
+								<button type="button" class="btn-form btn-black"><span>검색</span></button>
+							</span>
+						</div>
+					</div>
+		
+					<div class="board-option mt40">
+						<div class="left-area">
+							<div class="page-info input-group-txt">총 <strong class="text-primary">100</strong>건 / 10페이지</div>
+						</div><!--// left-area -->
+					</div>
+					<div class="board-list mt10">
+						<table>
+							<caption>관심브랜드내역</caption>
+							<colgroup>
+								<col class="w-col-num">
+								<col style="width:200px;">
+								<col style="width:auto;">
+								<col style="width:220px;">
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col" class="list-num"><span class="in-tb">순번</span></th>
+								<th scope="col"><span class="in-tb">브랜드코드</span></th>
+								<th scope="col"><span class="in-tb">브랜드명</span></th>
+								<th scope="col"><span class="in-tb">등록일</span></th> 
+							</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="list-num"><div class="in-tb">10</div></td>
+									<td class="text-center"><div class="in-tb">1234</div></td>
+									<td class="text-center"><div class="in-tb">잇메이트</div></td><!-- [Dev] 20210723 수정 : text-left -> text-center 클래스 수정 -->
+									<td class="text-center"><div class="in-tb">2021.05.10 04:19</div></td>
+								</tr>
+								<tr>
+									<td class="list-num"><div class="in-tb">10</div></td>
+									<td class="text-center"><div class="in-tb">1234</div></td>
+									<td class="text-center"><div class="in-tb">잇메이트</div></td><!-- [Dev] 20210723 수정 : text-left -> text-center 클래스 수정 -->
+									<td class="text-center"><div class="in-tb">2021.05.10 04:19</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+		
+					<div class="pagination mt40">
+						<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>
+						<a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a>
+						<a href="#" class="current"><span>1</span></a>
+						<a href="#"><span>2</span></a>
+						<a href="#"><span>3</span></a>
+						<a href="#"><span>4</span></a>
+						<a href="#"><span>5</span></a>
+						<a href="#"><span>6</span></a>
+						<a href="#"><span>7</span></a>
+						<a href="#"><span>8</span></a>
+						<a href="#"><span>9</span></a>
+						<a href="#"><span>10</span></a>
+						<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
+						<a href="#" class="btn-page last" title="마지막"><span class="blind">마지막</span></a>
+					</div>
+					<!--//로그인 이력-->
+					<div class="btn-area mt40">
+						<button type="button" class="btn-basic-md btn-primary"><span>목록</span></button>
+					</div>
+				</div>
+				<!-- //관심브랜드내역-->
+				<!-- 매세지발송이력 -->
+				<div id="tab9" class="ui-tab-cnt tab-content">
+					<div class="tab-search-box mt30"><!-- [Dev] 20210723 수정 : mt40 -> mt30 클래스수정 -->
+						<div class="input-group">
+							<div class="input-group-form">
+								<select class="select w140">
+									<option value="">내용</option>
+								</select>
+							</div>
+							<input type="text" class="input-text" placeholder="검색어를 입력하세요.">
+							<span class="input-group-btn">
+								<button type="button" class="btn-form btn-black"><span>검색</span></button>
+							</span>
+						</div>
+					</div>
+		
+					<div class="board-option mt40">
+						<div class="left-area">
+							<div class="input-group">                        
+								<div class="page-info input-group-txt">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div>
+								<div class="input-group-form">
+									<select class="select w140">
+										<option value="">전체</option>
+										<option value="">SNS</option>
+										<option value="">알림톡</option>
+										<option value="">이메일</option>
+										<option value="">APP PUSH</option>
+									</select>
+								</div>
+							</div>
+						</div><!--// left-area -->                
+					</div>
+					<div class="board-list mt10">
+						<table>
+							<caption>관심브랜드내역</caption>
+							<colgroup>
+								<col class="w-col-num">
+								<col style="width:200px;">
+								<col style="width:120px;">
+								<col style="width:120px;">
+								<col style="width:auto;">
+								<col style="width:110px;">
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col" class="list-num"><span class="in-tb">순번</span></th>
+								<th scope="col"><span class="in-tb">발송일시</span></th>
+								<th scope="col"><span class="in-tb">발송방법</span></th>
+								<th scope="col"><span class="in-tb">발송유형</span></th> 
+								<th scope="col"><span class="in-tb">내용</span></th> 
+								<th scope="col"><span class="in-tb">상태</span></th> 
+							</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="list-num vt-mid"><div class="in-tb">10</div></td>
+									<td class="text-center vt-mid"><div class="in-tb">2021-05-15 21:45:11</div></td>
+									<td class="text-center vt-mid"><div class="in-tb">APP PUSH</div></td>
+									<td class="text-center vt-mid"><div class="in-tb">생일쿠폰발송</div></td>
+									<td class="text-left vt-mid">
+										<div class="in-tb">
+										(광고)[랭킹닭컴]<br><br>
+										★ Happy Birthday Special Coupon ★<br>
+										짝짝짝! 홍길동님 다가오는 생일을<br>
+										진심으로 축하드립니다.<br><br>
+										고객님의 생일을 위해 준비한 랭킹닭컴의 특별혜택!<br>
+										▶ 인기 브랜드 5% 할인 쿠폰증정<br>
+										사용기간 : 발급일로 부터 30일<br><br>
+										쿠폰보러가기 ☞ [https://m.rankingdak.com/mypage/sccoupon_list.php]<br><br>
+										
+										무료 수신거부 : 0808708943 
+										</div>
+									</td>
+									<td class="text-center vt-mid"><div class="in-tb">발송대기</div></td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+		
+					<div class="pagination mt40">
+						<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>
+						<a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a>
+						<a href="#" class="current"><span>1</span></a>
+						<a href="#"><span>2</span></a>
+						<a href="#"><span>3</span></a>
+						<a href="#"><span>4</span></a>
+						<a href="#"><span>5</span></a>
+						<a href="#"><span>6</span></a>
+						<a href="#"><span>7</span></a>
+						<a href="#"><span>8</span></a>
+						<a href="#"><span>9</span></a>
+						<a href="#"><span>10</span></a>
+						<a href="#" class="btn-page next" title="다음"><span class="blind">다음</span></a>
+						<a href="#" class="btn-page last" title="마지막"><span class="blind">마지막</span></a>
+					</div>
+					<!--//로그인 이력-->
+					<div class="btn-area mt40">
+						<button type="button" class="btn-basic-md btn-primary"><span>목록</span></button>
+					</div>
+				</div>
+				<!-- //매세지발송이력-->
+				<!-- [Dev] 20210723 수정 : 추가 -->
+			</div><!-- //[Dev] 20210723 수정 : div추가 -->
+			<div class="tool-popup"><div class="context"></div></div><!-- [Dev] 20210826 추가 -->
 		</div><!--// content-area -->
 		<button type="button" class="btn-gotop"><span class="blind">위로</span></button>
 	</section>

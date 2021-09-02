@@ -65,8 +65,18 @@
                 <div class="layer-body">
                     <div class="layer-content">
                         <div class="in-content">
-                            <div class="page-info mb10">총 <strong class="text-primary">00</strong>건의 상품이 선택되었습니다.</div>
-                            <div class="board-form">
+                            <!-- [Dev] 20210726 수정 : 변경 및 추가 -->
+                            <!-- <div class="page-info mb10">총 <strong class="text-primary">00</strong>건의 상품이 선택되었습니다.</div> -->
+                            <div class="board-option">
+								<div class="left-area">
+									<div class="page-info">총 <strong class="text-primary">00</strong>건이 선택되었습니다.</div>
+								</div>
+								<div class="right-area">
+									<spanc class="text-guide-sm2"><i class="es"><em class="blind">필수입력</em></i>는 필수항목입니다.
+								</spanc></div>						
+							</div>
+                            <!-- //[Dev] 20210726 수정 : 변경 및 추가 -->
+                            <div class="board-form mt10"><!-- [Dev] 20210726 클래스 추가 -->
                                 <table>
                                     <caption>일괄변경</caption>
                                     <colgroup>
@@ -98,6 +108,7 @@
                                                             <option value="14">상품 후기 그룹화</option>
                                                             <option value="15">연동 상품명</option>
                                                             <option value="16">배송 그룹</option>
+                                                            <option value="17">이벤트 문구</option><!-- [Dev] 20210831 추가 -->
                                                         </select>
                                                     </div>
                                                     <!-- 판매정책 시 show -->
@@ -114,14 +125,14 @@
                                         </tr>
                                         <!-- 키워드 선택할 경우 -->
                                         <tr id="keyword" class="ui-select-line hide">
-                                            <th scope="row"><span class="in-tb">키워드 설정</span></th>
+                                            <th scope="row"><span class="in-tb">키워드 설정<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210726 수정 : <i class="es"><em class="blind">필수입력</em></i> 추가 -->
                                             <td>
                                                 <input type="text" class="input-text w-full" placeholder="키워드 입력">
                                             </td>                                        
                                         </tr><!--// 키워드 선택할 경우 -->     
                                         <!-- 전시여부 선택할 경우 -->
                                         <tr id="display" class="ui-select-line hide">
-                                            <th scope="row"><span class="in-tb">전시 여부</span></th>
+                                            <th scope="row"><span class="in-tb">전시 여부<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210726 수정 : <i class="es"><em class="blind">필수입력</em></i> 추가 -->
                                             <td>
                                                 <div class="form-inline-group">
                                                     <div class="custom-radio">
@@ -135,12 +146,12 @@
                                         </tr><!--// 전시여부 선택할 경우 -->     
                                         <!-- 전시카테고리 선택할 경우 -->
                                         <tr id="display_category" class="ui-select-line hide">
-                                            <th scope="row"><span class="in-tb">전시 카테고리 추가</span></th>
+                                            <th scope="row"><span class="in-tb">전시 카테고리 추가<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210726 수정 : <i class="es"><em class="blind">필수입력</em></i> 추가 -->
                                             <td>
-                                                <div class="input-group w-full">
+                                                <div class="input-group w-full size-fixed-type1"><!-- [Dev] 20210812 size-fixed-type1 클래스 추가 -->
                                                     <div class="input-group-cell">
                                                         <select class="select">
-                                                            <option value="">대분류</option>
+                                                            <option value="">대분류대분류대분류대분류대분류</option>
                                                         </select>
                                                     </div>
                                                     <div class="input-group-cell">
@@ -157,7 +168,7 @@
                                                         <button type="button" class="btn-plus" title="추가"><i class="ico-plus-bold"></i><span class="blind">추가</span></button>
                                                     </span>
                                                 </div>
-                                                <div class="input-group w-full">
+                                                <div class="input-group w-full size-fixed-type1"><!-- [Dev] 20210812 size-fixed-type1 클래스 추가 -->
                                                     <div class="input-group-cell">
                                                         <select class="select">
                                                             <option value="">대분류</option>
@@ -177,7 +188,7 @@
                                                         <button type="button" class="btn-minus" title="삭제"><i class="ico-minus-bold"></i><span class="blind">삭제</span></button>
                                                     </span>
                                                 </div>
-                                                <div class="input-group w-full">
+                                                <div class="input-group w-full size-fixed-type1"><!-- [Dev] 20210812 size-fixed-type1 클래스 추가 -->
                                                     <div class="input-group-cell">
                                                         <select class="select">
                                                             <option value="">대분류</option>
@@ -201,7 +212,7 @@
                                         </tr><!--// 전시카테고리 선택할 경우 -->                  
                                         <!-- 판매상태 선택할 경우 -->
                                         <tr id="sale" class="ui-select-line hide">
-                                            <th scope="row"><span class="in-tb">판매상태</span></th>
+                                            <th scope="row"><span class="in-tb">판매상태<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210726 수정 : <i class="es"><em class="blind">필수입력</em></i> 추가 -->
                                             <td>
                                                 <div class="form-inline-group">
                                                     <div class="custom-radio">
@@ -221,9 +232,9 @@
                                         </tr><!--// 판매상태 선택할 경우 -->   
                                         <!-- 전시 카테고리 제외 선택할 경우 -->
                                         <tr id="display_category02" class="ui-select-line hide">
-                                            <th scope="row"><span class="in-tb">전시 카테고리 제외</span></th>
+                                            <th scope="row"><span class="in-tb">전시 카테고리 제외<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210726 수정 : <i class="es"><em class="blind">필수입력</em></i> 추가 -->
                                             <td>
-                                                <div class="input-group w-full">
+                                                <div class="input-group w-full size-fixed-type1"><!-- [Dev] 20210812 size-fixed-type1 클래스 추가 -->
                                                     <div class="input-group-cell">
                                                         <select class="select">
                                                             <option value="">대분류</option>
@@ -243,7 +254,7 @@
                                                         <button type="button" class="btn-plus" title="추가"><i class="ico-plus-bold"></i><span class="blind">추가</span></button>
                                                     </span>
                                                 </div>
-                                                <div class="input-group w-full">
+                                                <div class="input-group w-full size-fixed-type1"><!-- [Dev] 20210812 size-fixed-type1 클래스 추가 -->
                                                     <div class="input-group-cell">
                                                         <select class="select">
                                                             <option value="">대분류</option>
@@ -263,7 +274,7 @@
                                                         <button type="button" class="btn-minus" title="삭제"><i class="ico-minus-bold"></i><span class="blind">삭제</span></button>
                                                     </span>
                                                 </div>
-                                                <div class="input-group w-full">
+                                                <div class="input-group w-full size-fixed-type1"><!-- [Dev] 20210812 size-fixed-type1 클래스 추가 -->
                                                     <div class="input-group-cell">
                                                         <select class="select">
                                                             <option value="">대분류</option>
@@ -287,7 +298,7 @@
                                         </tr><!--// 전시 카테고리 제외 선택할 경우 --> 
                                         <!-- 상품명 선택할 경우 -->                             
                                         <tr id="prd_name" class="ui-select-line hide">
-                                            <th scope="row"><span class="in-tb">상품명</span></th>
+                                            <th scope="row"><span class="in-tb">상품명<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210726 수정 : <i class="es"><em class="blind">필수입력</em></i> 추가 -->
                                             <td><input type="text" class="input-text w-full" placeholder="상품명 입력"></td>
                                         </tr><!--// 상품명 선택할 경우 -->  
                                         <!-- 적립금 선택할 경우 -->
@@ -313,7 +324,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                        </td>
+                                            </td>
                                         </tr><!--// 적립금 선택할 경우 -->   
                                         <!-- 판매정책 선택 할 경우 -->  
                                         <tr id="policy" class="ui-select-line hide">
@@ -331,7 +342,7 @@
                                         </tr><!--// 판매정책 선택 할 경우 -->
                                         <!-- 인플루언서 선택 할 경우 -->
                                         <tr id="influencer" class="ui-select-line hide">
-                                            <th><span class="in-tb">인플루언서 정산</span></th>
+                                            <th><span class="in-tb">인플루언서 정산<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210726 수정 : <i class="es"><em class="blind">필수입력</em></i> 추가 -->
                                             <td>
                                                 <div class="input-group">
                                                     <input type="text" class="input-text w140" value="숫자입력">
@@ -342,7 +353,7 @@
                                         <!--// 인플루언서 선택 할 경우 -->  
                                         <!-- 기획전 선택 할 경우 -->
                                         <tr id="event" class="ui-select-line hide">
-                                            <th><span class="in-tb">기획전</span></th>
+                                            <th><span class="in-tb">기획전<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210726 수정 : <i class="es"><em class="blind">필수입력</em></i> 추가 -->
                                             <td>
                                                 <div class="input-group w-full">
                                                     <input type="text" class="input-text">
@@ -354,7 +365,7 @@
                                         </tr>  <!--// 기획전 선택 할 경우 -->
                                         <!-- 냉장고 그룹화 선택 할 경우 -->
                                         <tr id="group1" class="ui-select-line hide">
-                                            <th><span class="in-tb">냉장고 그룹</span></th><!-- [Dev] 0702 텍스트 수정 -->
+                                            <th><span class="in-tb">냉장고 그룹<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210726 수정 : <i class="es"><em class="blind">필수입력</em></i> 추가 --><!-- [Dev] 0702 텍스트 수정 -->
                                             <td>
                                                 <div class="input-group w-full">
                                                     <input type="text" class="input-text">
@@ -391,7 +402,7 @@
                                         <!--// 냉장고 그룹화 선택 할 경우 -->
                                         <!-- 입점사 선택 할 경우 -->
                                         <tr id="store" class="ui-select-line hide">
-                                            <th><span class="in-tb">입점사</span></th>
+                                            <th><span class="in-tb">입점사<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210726 수정 : <i class="es"><em class="blind">필수입력</em></i> 추가 -->
                                             <td>
                                                 <div class="input-group w-full">
                                                     <input type="text" class="input-text">
@@ -418,7 +429,7 @@
                                         </tr> // 삭제 -->
                                         <!-- 상품후기 그룹화 선택 할 경우 -->
                                         <tr id="review-1" class="ui-select-line hide">
-                                            <th><span class="in-tb">상품후기 그룹</span></th><!--[Dev]  0702 텍스트 수정 -->
+                                            <th><span class="in-tb">상품후기 그룹<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210726 수정 : <i class="es"><em class="blind">필수입력</em></i> 추가 --><!--[Dev]  0702 텍스트 수정 -->
                                             <td>
                                                 <div class="input-group w-full">
                                                     <input type="text" class="input-text">
@@ -453,13 +464,13 @@
                                         </tr> -->
                                         <!--// 상품후기 그룹화 선택 할 경우 -->
                                         <tr id="linked" class="ui-select-line hide">
-                                            <th><span class="in-tb">연동 상품명</span></th>
+                                            <th><span class="in-tb">연동 상품명<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210726 수정 : <i class="es"><em class="blind">필수입력</em></i> 추가 -->
                                             <td>
                                                 <input type="text" class="input-text w-full" value="" placeholder="연동 상품명 입력">                                            
                                             </td>
                                         </tr><!--// 상품후기 그룹화 선택 할 경우 -->
                                         <tr id="delivery" class="ui-select-line hide">
-                                            <th><span class="in-tb">배송 그룹</span></th>
+                                            <th><span class="in-tb">배송 그룹<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210726 수정 : <i class="es"><em class="blind">필수입력</em></i> 추가 -->
                                             <td>
                                                 <div class="input-group w-full">
                                                     <input type="text" class="input-text">
@@ -468,7 +479,15 @@
                                                     </span>
                                                 </div>                                            
                                             </td>
-                                        </tr><!--// 상품후기 그룹화 선택 할 경우 -->
+                                        </tr><!--// 배송 그룹 선택 할 경우 -->
+                                        <tr id="event-text" class="ui-select-line hide">
+                                            <th><span class="in-tb">이벤트 문구<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210726 수정 : <i class="es"><em class="blind">필수입력</em></i> 추가 -->
+                                            <td>
+                                                <div class="input-group w-full">
+                                                    <input type="text" class="input-text">
+                                                </div>                                            
+                                            </td>
+                                        </tr><!--// 이벤트 문구 선택 할 경우 -->
                                     </tbody>
                                 </table>
                             </div><!--// board-form -->
@@ -558,6 +577,9 @@
                 $('#delivery').removeClass('hide').siblings('.ui-select-line').addClass('hide');
                 $('#policy-opt').removeClass('show').addClass('hide')
 
+            } else if (result === '17' ) { // [Dev] 20210831 추가
+                $('#event-text').removeClass('hide').siblings('.ui-select-line').addClass('hide'); // [Dev] 20210831 추가
+                $('#policy-opt').removeClass('show').addClass('hide') // [Dev] 20210831 추가
             } else if ( result === '' ) {
                 $('.ui-select-line').addClass('hide');
                 $('#policy-opt').removeClass('show').addClass('hide')

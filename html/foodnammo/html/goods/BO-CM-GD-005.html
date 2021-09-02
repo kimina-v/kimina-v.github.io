@@ -448,228 +448,252 @@
 			</div><!--// board-option -->
 
 			<!-- 목록 -->
-			<div class="board-list scroll-table resize-table vm-table mt10">
-				<table>
-					<caption>목록</caption>
-					<colgroup>
-						<col class="w-col-check" />
-						<col class="w-col-num" />
-						<col style="width:100px" />
-						<col style="min-width:230px" />
-						<col style="width:130px" />
-						<col style="width:110px" />
-						<col style="width:95px" />
-						<col style="width:92px" />
-						<col style="width:120px" />
-						<col style="width:130px" />
-						<col style="width:200px" />
-						<col style="width:160px" />
-						<col style="width:95px" />
-						<col style="width:120px" />
-						<col style="width:120px" />
-						<col style="width:326px" />
-						<col style="width:326px" />
-						<col style="width:140px" />
-					</colgroup>
-					<thead>
-						<tr>
-							<th scope="col" class="list-check">
-								<div class="custom-checkbox single">
-									<input type="checkbox" id="check-all" class="checkbox ui-check-all" name="check-item-101"><label for="check-all"><span class="blind">모두 선택</span></label>
-								</div><!-- 모두 선택 addClass ui-check-all -->
-							</th>
-							<th class="list-num"><span class="in-tb">순번</span></th><!--[Dev] 0702 추가 -->
-							<th scope="col"><span class="in-tb">상품 이미지</span></th>
-							<th scope="col" class="resize"><a href="#none" class="in-tb ui-th-toggle">상품명<i class="ico-arrfill-toggle"></i></a></th>
-							<th scope="col"><span class="in-tb">온라인 판매가</span></th>
-							<th scope="col"><a href="#none" class="in-tb ui-th-toggle">판매가<i class="ico-arrfill-toggle"></i></a></th>
-							<th scope="col"><span class="in-tb">할인율</span></th>
-							<th scope="col"><span class="in-tb">적립율</span></th><!-- [Dev] 0702 수정 -->
-							<th scope="col"><span class="in-tb">판매상태</span></th>
-							<th scope="col"><span class="in-tb">입점사</span></th>
-							<th scope="col"><span class="in-tb">기준 카테고리</span></th><!-- [Dev] 0702 수정 -->
-							<th scope="col"><span class="in-tb">판매정책</span></th>
-							<th scope="col"><span class="in-tb">재고</span></th>
-							<th scope="col"><span class="in-tb">배송속성</span></th>
-							<th scope="col"><span class="in-tb">전시여부</span></th>
-							<th scope="col"><span class="in-tb">전시시작일시</span></th>
-							<th scope="col"><span class="in-tb">전시종료일시</span></th>
-							<th scope="col"><a href="#none" class="in-tb ui-th-toggle">등록일<i class="ico-arrfill-toggle"></i></a></th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="list-check">
-								<div class="custom-checkbox single">
-									<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-								</div>
-							</td>
-							<td class="list-num"><div class="in-tb">2</div></td><!-- [Dev] 0702 추가 -->
-							<td class="text-center">
-								<a href="#none" class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></a>
-							</td>
-							<td class="text-center">
-								<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
-							</td>
-							<td class="text-center"><input type="text" class="input-text w-full text-center" value="26,200" /></td>
-							<td class="text-right">
-								<input type="text" class="input-text w-full text-center" value="19,900" />
-							</td>
-							<td class="text-center"><div class="in-tb">25%</div></td>
-							<td class="text-center">
-								<div class="input-group">
-									<input type="text" class="input-text w-full text-center" value="2" />
-									<div class="input-group-txt">%</div>
-								</div>
-							</td>
-							<td class="text-center"><div class="in-tb">정상</div></td>
-							<td class="text-center"><div class="in-tb">맛있닭</div></td>
-							<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
-							<td class="text-center">
-								<div class="option-lst">
-									<span class="txt-ico naver-pay">네이버페이</span>
-									<span class="txt-ico gift">선물하기</span>
-									<span class="txt-ico duty-free">면세상품</span>
-									<span class="txt-ico attached">개별판매 및 검색불가</span>
-									<span class="txt-ico fridge">냉장고</span>
-								</div>
-							</td>	
-							<td class="text-center"><a href="none" class="in-tb">(무제한)</a></td>
-							<td class="text-center">
-								<div class="option-lst">
-									<span class="txt-ico general">일반배송</span>
-									<span class="txt-ico regular">정기배송</span>
-								</div>
-							</td>
-							<td class="text-center">
-								<div class="in-tb">전시</div>
-							</td>
-							<td class="text-center">
-								<div class="input-group datepicker-group">
-									<input type="text" id="" class="input-text datepicker" />
-									<div class="input-group-form">
-										<select class="select">
-											<option value="">00</option>
-										</select>
+			<!-- 
+				[Dev] 20210824 항목 순서 변경
+				1. 전시시작일시/종료일시
+				2. 입점사, 기준카테고리, 판매정책, 재고, 배송속성
+				 - 테이블 전체 적용됨
+
+				[Dev] 20210824 테이블 스크롤 이동
+				1. 전체를 감싸는 div.scrollbar-move-area 추가
+				2. 버튼 영역 추가 div.scroll-view-btns
+				3. 컨트롤 버튼 추가
+			-->
+			<div class="scrollbar-move-area">
+				<div class="scroll-view-btns">
+					<div class="inner">
+						<button type="button" class="ui-scroll-move left btn-scroll-left"><span class="blind">왼쪽 이동</span></button>
+						<button type="button" class="ui-scroll-move right btn-scroll-right"><span class="blind">오른쪽 이동</span></button>
+					</div>
+				</div><!-- // scroll-view-btns -->
+				<button type="button" class="ui-scroll-move left pos-left"><span class="blind">왼쪽 이동</span></button>
+				<button type="button" class="ui-scroll-move right pos-right"><span class="blind">오른쪽 이동</span></button>
+				
+				<div class="board-list scroll-table resize-table vm-table mt10">
+					<table>
+						<caption>목록</caption>
+						<colgroup>
+							<col class="w-col-check" />
+							<col class="w-col-num" />
+							<col style="width:100px" />
+							<col style="min-width:230px" />
+							<col style="width:130px" />
+							<col style="width:110px" />
+							<col style="width:95px" />
+							<col style="width:92px" />
+							<col style="width:120px" /> 
+							<col style="width:326px" />
+							<col style="width:326px" /> 
+							<col style="width:120px" />
+							<col style="width:130px" /> 
+							<col style="width:200px" /> 
+							<col style="width:160px" /> 
+							<col style="width:95px" /> 
+							<col style="width:120px" /> 
+							<col style="width:140px" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-all" class="checkbox ui-check-all" name="check-item-101"><label for="check-all"><span class="blind">모두 선택</span></label>
+									</div><!-- 모두 선택 addClass ui-check-all -->
+								</th>
+								<th class="list-num"><span class="in-tb">순번</span></th><!--[Dev] 0702 추가 -->
+								<th scope="col"><span class="in-tb">상품 이미지</span></th>
+								<th scope="col" class="resize"><a href="#none" class="in-tb ui-th-toggle">상품명<i class="ico-arrfill-toggle"></i></a></th>
+								<th scope="col"><span class="in-tb">온라인 판매가</span></th>
+								<th scope="col"><a href="#none" class="in-tb ui-th-toggle">판매가<i class="ico-arrfill-toggle"></i></a></th>
+								<th scope="col"><span class="in-tb">할인율</span></th>
+								<th scope="col"><span class="in-tb">적립율</span></th><!-- [Dev] 0702 수정 -->
+								<th scope="col"><span class="in-tb">판매상태</span></th>
+								<th scope="col"><span class="in-tb">전시시작일시</span></th>
+								<th scope="col"><span class="in-tb">전시종료일시</span></th>
+								<th scope="col"><span class="in-tb">전시여부</span></th>
+								<th scope="col"><span class="in-tb">입점사</span></th>
+								<th scope="col"><span class="in-tb">기준 카테고리</span></th><!-- [Dev] 0702 수정 -->
+								<th scope="col"><span class="in-tb">판매정책</span></th>
+								<th scope="col"><span class="in-tb">재고</span></th>
+								<th scope="col"><span class="in-tb">배송속성</span></th>
+								<th scope="col"><a href="#none" class="in-tb ui-th-toggle">등록일<i class="ico-arrfill-toggle"></i></a></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
 									</div>
-									<div class="input-group-txt">시</div>
-									<div class="input-group-form">
-										<select class="select">
-											<option value="">00</option>
-										</select>
+								</td>
+								<td class="list-num"><div class="in-tb">2</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지" /></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><input type="text" class="input-text w-full text-center" value="26,200" /></td>
+								<td class="text-right">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
 									</div>
-									<div class="input-group-txt">분</div>
-								</div><!--// input-group -->		
-							</td>
-							<td class="text-center">
-								<div class="input-group datepicker-group">
-									<input type="text" id="" class="input-text datepicker" />
-									<div class="input-group-form">
-										<select class="select">
-											<option value="">00</option>
-										</select>
+								</td>
+								<td class="text-center"><div class="in-tb">정상</div></td>
+								<td class="text-center">
+									<div class="input-group datepicker-group">
+										<input type="text" id="" class="input-text datepicker" />
+										<div class="input-group-form">
+											<select class="select">
+												<option value="">00</option>
+											</select>
+										</div>
+										<div class="input-group-txt">시</div>
+										<div class="input-group-form">
+											<select class="select">
+												<option value="">00</option>
+											</select>
+										</div>
+										<div class="input-group-txt">분</div>
+									</div><!--// input-group -->		
+								</td>
+								<td class="text-center">
+									<div class="input-group datepicker-group">
+										<input type="text" id="" class="input-text datepicker" />
+										<div class="input-group-form">
+											<select class="select">
+												<option value="">00</option>
+											</select>
+										</div>
+										<div class="input-group-txt">시</div>
+										<div class="input-group-form">
+											<select class="select">
+												<option value="">00</option>
+											</select>
+										</div>
+										<div class="input-group-txt">분</div>
+									</div><!--// input-group -->		
+								</td>
+								<td class="text-center">
+									<div class="in-tb">전시</div>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
+										<span class="txt-ico gift">선물하기</span>
+										<span class="txt-ico duty-free">면세상품</span>
+										<span class="txt-ico attached">개별판매 및 검색불가</span>
+										<span class="txt-ico fridge">냉장고</span>
 									</div>
-									<div class="input-group-txt">시</div>
-									<div class="input-group-form">
-										<select class="select">
-											<option value="">00</option>
-										</select>
+								</td>	
+								<td class="text-center"><a href="none" class="in-tb">(무제한)</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico general">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
 									</div>
-									<div class="input-group-txt">분</div>
-								</div><!--// input-group -->		
-							</td>
-							<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
-						</tr>
-						<tr>
-							<td class="list-check">
-								<div class="custom-checkbox single">
-									<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-								</div>
-							</td>
-							<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
-							<td class="text-center">
-								<a href="#none" class="prdimg"></a>
-							</td>
-							<td class="text-center">
-								<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
-							</td>
-							<td class="text-center"><input type="text" class="input-text w-full text-center" value="26,200" /></td>
-							<td class="text-right">
-								<input type="text" class="input-text w-full text-center" value="19,900" />
-							</td>
-							<td class="text-center"><div class="in-tb">25%</div></td>
-							<td class="text-center">
-								<div class="input-group">
-									<input type="text" class="input-text w-full text-center" value="2" />
-									<div class="input-group-txt">%</div>
-								</div>
-							</td>
-							<td class="text-center"><div class="in-tb">정상</div></td>
-							<td class="text-center"><div class="in-tb">맛있닭</div></td>
-							<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
-							<td class="text-center">
-								<div class="option-lst">
-									<span class="txt-ico naver-pay">네이버페이</span>
-								</div>
-							</td>	
-							<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
-							<td class="text-center">
-								<div class="option-lst">
-									<span class="txt-ico geneal">일반배송</span>
-									<span class="txt-ico regular">정기배송</span>
-									<span class="txt-ico express">특급배송</span>
-								</div>
-							</td>
-							<td class="text-center">
-								<div class="in-tb">전시</div>
-							</td>
-							<td class="text-center">
-								<div class="input-group datepicker-group">
-									<input type="text" id="" class="input-text datepicker" />
-									<div class="input-group-form">
-										<select class="select">
-											<option value="">00</option>
-										</select>
+								</td>
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr>
+								<td class="list-check">
+									<div class="custom-checkbox single">
+										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
 									</div>
-									<div class="input-group-txt">시</div>
-									<div class="input-group-form">
-										<select class="select">
-											<option value="">00</option>
-										</select>
+								</td>
+								<td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 추가 -->
+								<td class="text-center">
+									<a href="#none" class="prdimg"></a>
+								</td>
+								<td class="text-center">
+									<input type="text" class="input-text w-full" value="맛있닭 소프트 닭 안심살 훈제" />
+								</td>
+								<td class="text-center"><input type="text" class="input-text w-full text-center" value="26,200" /></td>
+								<td class="text-right">
+									<input type="text" class="input-text w-full text-center" value="19,900" />
+								</td>
+								<td class="text-center"><div class="in-tb">25%</div></td>
+								<td class="text-center">
+									<div class="input-group">
+										<input type="text" class="input-text w-full text-center" value="2" />
+										<div class="input-group-txt">%</div>
 									</div>
-									<div class="input-group-txt">분</div>
-								</div><!--// input-group -->		
-							</td>
-							<td class="text-center">
-								<div class="input-group datepicker-group">
-									<input type="text" id="" class="input-text datepicker" />
-									<div class="input-group-form">
-										<select class="select">
-											<option value="">00</option>
-										</select>
+								</td>
+								<td class="text-center"><div class="in-tb">정상</div></td>
+								<td class="text-center">
+									<div class="input-group datepicker-group">
+										<input type="text" id="" class="input-text datepicker" />
+										<div class="input-group-form">
+											<select class="select">
+												<option value="">00</option>
+											</select>
+										</div>
+										<div class="input-group-txt">시</div>
+										<div class="input-group-form">
+											<select class="select">
+												<option value="">00</option>
+											</select>
+										</div>
+										<div class="input-group-txt">분</div>
+									</div><!--// input-group -->		
+								</td>
+								<td class="text-center">
+									<div class="input-group datepicker-group">
+										<input type="text" id="" class="input-text datepicker" />
+										<div class="input-group-form">
+											<select class="select">
+												<option value="">00</option>
+											</select>
+										</div>
+										<div class="input-group-txt">시</div>
+										<div class="input-group-form">
+											<select class="select">
+												<option value="">00</option>
+											</select>
+										</div>
+										<div class="input-group-txt">분</div>
+									</div><!--// input-group -->		
+								</td>
+								<td class="text-center">
+									<div class="in-tb">전시</div>
+								</td>
+								<td class="text-center"><div class="in-tb">맛있닭</div></td>
+								<td><div class="in-tb">닭가슴살 > 스팀·소프트</div></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico naver-pay">네이버페이</span>
 									</div>
-									<div class="input-group-txt">시</div>
-									<div class="input-group-form">
-										<select class="select">
-											<option value="">00</option>
-										</select>
+								</td>	
+								<td class="text-center"><a href="#none" class="in-tb">999,999</a></td>
+								<td class="text-center">
+									<div class="option-lst">
+										<span class="txt-ico geneal">일반배송</span>
+										<span class="txt-ico regular">정기배송</span>
+										<span class="txt-ico express">특급배송</span>
 									</div>
-									<div class="input-group-txt">분</div>
-								</div><!--// input-group -->		
-							</td>
-							<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
-						</tr>
-						<tr class="no-data">
-							<td colspan="18"><!-- [Dev] 0702 수정 -->
-								<div class="message-area">
-									<i class="ico-img-excl"></i>
-									<p class="txt">내역이 없습니다.</p>
-								</div>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div><!--// board-list | 목록 -->
+								</td>
+								
+								
+								<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+							</tr>
+							<tr class="no-data">
+								<td colspan="18"><!-- [Dev] 0702 수정 -->
+									<div class="message-area">
+										<i class="ico-img-excl"></i>
+										<p class="txt">내역이 없습니다.</p>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div><!--// board-list | 목록 -->
+			</div><!--// scrollbar-move-area -->
 
 			<div class="pagination mt20">
 				<a href="#" class="btn-page first" title="처음"><span class="blind">처음</span></a>

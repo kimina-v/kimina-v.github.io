@@ -508,6 +508,11 @@
 .layer-pop.order-search-pop .search-box ~ .no-data{padding:50px 0}
 .layer-pop.order-search-pop .layer-inner{height:100%}
 .layer-pop.order-search-pop .layer-inner .layer-bottom{position:fixed; bottom:0; left:0; width:100%;}
+.layer-pop.order-search-pop .select-form-list li{padding:15px 5px}
+.layer-pop.order-search-pop .select-form-list li .inner{padding:5px 0}
+.layer-pop.order-search-pop .custom-radio .radio + label{padding-left:37px}
+.layer-pop.order-search-pop .custom-radio .radio + label:before{width:24px;height:24px;top:-3px}
+.layer-pop.order-search-pop .custom-radio .radio:checked + label:after{width:11px;height:11px;left:6px;top:3px}
 .flex-box-area{display:table; width:100%; height:100%}
 .flex-box-area .bottom-cell{height:100%}
 

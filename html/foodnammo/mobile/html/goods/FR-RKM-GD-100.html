@@ -1184,7 +1184,6 @@
 			opt.css('min-height', optHei)
 			opt.css('bottom',-optPos+'px')
 
-			console.log('1 : '+optHei)
 		$('.btn-toggle').on('click',function(){
 			var $this = $(this),
 				fixed = $('.fixed-option'),
@@ -1194,7 +1193,7 @@
 				
 			if($this.hasClass('open')){
 				var optHei = opt.outerHeight(),
-					optPos = optHei - 70;
+					optPos = optHei - 70; 
 
 				$this.removeClass('open').children('sppan').text('열기')
 				opt.css('bottom',-optPos+'px')

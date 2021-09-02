@@ -79,8 +79,20 @@
 						</colgroup>
 						<tbody>
 							<tr>
-								<th scope="row"><span class="in-tb">전시 카테고리</span></th>
-								<td colspan="3">
+                                <!--[Dev] 20210726 채널구분추가 -->
+								<th scope="row"><span class="in-tb">채널 구분</span></th>
+								<td>
+									<div class="form-inline-group">
+                                        <div class="custom-radio">
+                                            <input type="radio" id="radio-1-1" class="radio" name="radio-item-1" checked=""><label for="radio-1-1">PC</label>
+                                        </div>
+                                        <div class="custom-radio">
+                                            <input type="radio" id="radio-1-1" class="radio" name="radio-item-1"><label for="radio-1-1">Mobile</label>
+                                        </div>
+                                    </div>
+								</td>   
+                                <th scope="row"><span class="in-tb">전시 카테고리</span></th>
+								<td>
 									<div class="input-group">
                                         <div class="input-group-form">
                                             <select class="select w200">
@@ -132,7 +144,7 @@
 
             <div class="board-option mt60">
                 <div class="left-area">
-                    <div class="page-info">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div>
+                    <div class="page-info mt10">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div><!-- [Dev] 20210721 수정 : mt10 추가 -->
                 </div><!--// left-area -->
                 <div class="right-area">
                     <button type="button" class="btn-func btn-default"><span>썸네일 뱃지 설정</span></button>
@@ -146,8 +158,10 @@
                         <col class="w-col-check">
                         <col class="w-col-num"><!-- [Dev] 0702 수정 -->
                         <col style="width:120px" />
+                        <!--[Dev] 20210726 채널구분추가 -->
+                        <col style="width:120px" />
                         <col style="width:150px" />
-                        <col style="*" />
+                        <col style="width: auto;" />
                         <col style="width:92px" />
                         <col style="width:92px" />
                         <col style="width:92px" />
@@ -166,6 +180,8 @@
                             </th>
                             <th scope="col" rowspan="2" class="list-num vt-mid"><span class="in-tb">순번</span></th><!-- [Dev] 0702 수정 -->
                             <th scope="col" rowspan="2" class="vt-mid"><span class="in-tb">사이트</span></th>
+                            <!--[Dev] 20210726 채널구분추가 -->
+                            <th scope="col" rowspan="2" class="vt-mid"><span class="in-tb">채널 구분</span></th>
                             <th scope="col" rowspan="2" class="vt-mid"><span class="in-tb">상품코드</span></th>
                             <th scope="col" rowspan="2" class="vt-mid"><span class="in-tb">상품명</span></th>
                             <th scope="col" colspan="4" class="tb-bd-left tb-bd-bot"><span class="in-tb">썸네일 뱃지</span></th>
@@ -193,6 +209,7 @@
                             </td>
                             <td class="list-num"><div class="in-tb">3</div></td><!-- [Dev] 0702 수정 -->
                             <td class="text-center"><div class="in-tb">랭킹닭컴</div></td><!-- [Dev] 0702 수정 : 클래스 수정 -->
+                            <td class="text-center"><div class="in-tb">PC</div></td><!--[Dev] 20210726 채널구분추가 -->
                             <td class="text-center"><div class="in-tb">PROM691</div></td><!-- [Dev] 0702 수정 : 클래스 수정 -->
                             <td class="text-left"><div class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</div></td>
                             <td class="text-center tb-bd-left"><div class="in-tb">Y</div></td>
@@ -212,6 +229,7 @@
                             </td>
                             <td class="list-num"><div class="in-tb">2</div></td><!-- [Dev] 0702 수정 -->
                             <td class="text-center"><div class="in-tb">랭킹닭컴</div></td><!-- [Dev] 0702 수정 : 클래스 수정 -->
+                            <td class="text-center"><div class="in-tb">PC</div></td><!--[Dev] 20210726 채널구분추가 -->
                             <td class="text-center"><div class="in-tb">PROM691</div></td><!-- [Dev] 0702 수정 : 클래스 수정 -->
                             <td class="text-left"><div class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</div></td>
                             <td class="text-center tb-bd-left"><div class="in-tb">Y</div></td>
@@ -231,6 +249,7 @@
                             </td>
                             <td class="list-num"><div class="in-tb">1</div></td><!-- [Dev] 0702 수정 -->
                             <td class="text-center"><div class="in-tb">랭킹닭컴</div></td><!-- [Dev] 0702 수정 : 클래스 수정 -->
+                            <td class="text-center"><div class="in-tb">PC</div></td><!--[Dev] 20210726 채널구분추가 -->
                             <td class="text-center"><div class="in-tb">PROM691</div></td><!-- [Dev] 0702 수정 : 클래스 수정 -->
                             <td class="text-left"><div class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</div></td>
                             <td class="text-center tb-bd-left"><div class="in-tb">Y</div></td>

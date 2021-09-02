@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body class="intro">
+    <div class="intro-login">
+        <h1 class="logo"><a href="#">푸드나무</a></h1>
+        <div class="login-form">
+            <div class="input-box">
+                <label for="inp-pw">새 비밀번호</label>
+                <input type="password" id="inp-pw">
+            </div>
+            <div class="input-box">
+                <label for="inp-pw2">비밀번호 확인</label>
+                <input type="password" id="inp-pw2">
+            </div>
+            <button type="button" class="btn-intro-default">저장</button>
+            <p class="bl-text-type1">영문, 숫자, 특수문자  조합  8자리 이상</p>
+            <p class="error-text">영문, 숫자, 특수문자 조합 8자리 이상으로 <br>비밀번호를 변경해 주세요.</p>
+            <ul class="dash-list">
+                <li>임시비밀번호는 사용할 수 없으므로 비밀번호를 변경해 주세요.</li>
+                <li>180일 이상 비밀번호를 변경하지 않은 경우 비밀번호를 변경해 주세요.</li>
+            </ul>
+        </div>
+    </div>
+    <!-- [Dev] 20210729 추가 -->
+    <script>
+        $(function(){
+            $('.input-box input').on('focus',function(){
+                $(this).closest('.input-box').addClass('key-up')
+            })
+            $('.input-box input').on('focusout',function(){
+                $(this).closest('.input-box').removeClass('key-up')
+            })
+        })
+    </script>
+    <!-- //[Dev] 20210729 추가 -->
+</body>
+</html>

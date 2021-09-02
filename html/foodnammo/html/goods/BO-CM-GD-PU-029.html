@@ -60,7 +60,7 @@
         <div class="layer-pop search-type">
             <div class="layer-inner layer-xlg">
                 <div class="layer-head">
-                    <h4 class="layer-title">리뷰 검색</h4>
+                    <h4 class="layer-title">후기 검색</h4><!--[Dev] 20210825 텍스트변경 -->
                 </div><!--// layer-head  -->
                 <div class="layer-body">
                     <div class="layer-content">
@@ -109,7 +109,7 @@
                             </div>
 
                             <div class="page-info mb10">총 <strong class="text-primary">1,000</strong>건</div>
-                            <div class="board-list">
+                            <div class="board-list fix-type">
                                 <table>
                                     <caption>상품검색 목록</caption>
                                     <colgroup>
@@ -118,6 +118,7 @@
                                         <col style="width: 110px;"/>
                                         <col style="width: 220px;"/>
                                         <col style="width: auto;"/>
+                                        <col style="width: 120px;"/><!--[Dev] 20210825 후기상태추가 -->
                                         <col style="width: 160px;"/>
                                     </colgroup>
                                     <thead>
@@ -128,12 +129,14 @@
                                             </div><!-- 모두 선택 addClass ui-check-all -->
                                         </th>
                                         <th scope="col"><span class="in-tb">상품코드</span></th>
-                                        <th scope="col"><span class="in-tb">브랜드 명</span></th>
+                                        <th scope="col"><span class="in-tb">브랜드</span></th><!--[Dev] 20210825 텍스트변경 -->
                                         <th scope="col"><span class="in-tb">상품명</span></th>
-                                        <th scope="col"><span class="in-tb">리뷰 내용</span></th>
+                                        <th scope="col"><span class="in-tb">후기 내용</span></th><!--[Dev] 20210825 텍스트변경 -->
+                                        <th scope="col"><span class="in-tb">후기상태</span></th><!--[Dev] 20210825 후기상태추가 -->
                                         <th scope="col"><span class="in-tb">등록일</span></th>
                                     </tr>
                                     </thead>
+                                    <!-- 20210803 수정 : 상품명 우측정렬 -->
                                     <tbody>
                                         <tr>
                                             <td class="list-check">
@@ -143,97 +146,23 @@
                                             </td>
                                             <td class="text-center"><div class="in-tb">PROM691</div></td>
                                             <td class="text-center"><div class="in-tb">맛있닭</div></td>
-                                            <td class="text-center"><div class="in-tb">맛있닭 소프트 닭 안심살 혼합</div></td>
-                                            <td class="text-center"><div class="in-tb">이것은 진리!!샐러드와 함께 곁들여 먹으면 내가</div></td>
-                                            <td class="text-center"><div class="in-tb">2021.05.21 17:00</div></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="list-check">
-                                                <div class="custom-checkbox single">
-                                                    <input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+                                            <td class="text-left"><div class="in-tb">맛있닭 소프트 닭 안심살 혼합</div></td>
+                                            <td class="text-left tool-over"><!--[Dev] 20210825 tool-over클래스추가 -->
+                                                <div class="in-tb text-elps">이것은 진리!!샐러드와 함께 곁들여 먹으면 내가
+                                                    <div class="tool-cont"><!--[Dev] 20210825 툴팁추가 -->
+                                                        <strong>닭대리 후기</strong>
+                                                        안녕하세요 랭킹닭컴 닭대리입니다. 먼저 후기합니다.
+                                                    </div>
                                                 </div>
                                             </td>
-                                            <td class="text-center"><div class="in-tb">PROM691</div></td>
-                                            <td class="text-center"><div class="in-tb">맛있닭</div></td>
-                                            <td class="text-center"><div class="in-tb">맛있닭 소프트 닭 안심살 혼합</div></td>
-                                            <td class="text-center"><div class="in-tb">이것은 진리!!샐러드와 함께 곁들여 먹으면 내가</div></td>
+                                            <td class="text-center"><div class="in-tb">블라인드</div></td><!--[Dev] 20210825 후기상태추가 -->
                                             <td class="text-center"><div class="in-tb">2021.05.21 17:00</div></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="list-check">
-                                                <div class="custom-checkbox single">
-                                                    <input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-                                                </div>
-                                            </td>
-                                            <td class="text-center"><div class="in-tb">PROM691</div></td>
-                                            <td class="text-center"><div class="in-tb">맛있닭</div></td>
-                                            <td class="text-center"><div class="in-tb">맛있닭 소프트 닭 안심살 혼합</div></td>
-                                            <td class="text-center"><div class="in-tb">이것은 진리!!샐러드와 함께 곁들여 먹으면 내가</div></td>
-                                            <td class="text-center"><div class="in-tb">2021.05.21 17:00</div></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="list-check">
-                                                <div class="custom-checkbox single">
-                                                    <input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-                                                </div>
-                                            </td>
-                                            <td class="text-center"><div class="in-tb">PROM691</div></td>
-                                            <td class="text-center"><div class="in-tb">맛있닭</div></td>
-                                            <td class="text-center"><div class="in-tb">맛있닭 소프트 닭 안심살 혼합</div></td>
-                                            <td class="text-center"><div class="in-tb">이것은 진리!!샐러드와 함께 곁들여 먹으면 내가</div></td>
-                                            <td class="text-center"><div class="in-tb">2021.05.21 17:00</div></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="list-check">
-                                                <div class="custom-checkbox single">
-                                                    <input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-                                                </div>
-                                            </td>
-                                            <td class="text-center"><div class="in-tb">PROM691</div></td>
-                                            <td class="text-center"><div class="in-tb">맛있닭</div></td>
-                                            <td class="text-center"><div class="in-tb">맛있닭 소프트 닭 안심살 혼합</div></td>
-                                            <td class="text-center"><div class="in-tb">이것은 진리!!샐러드와 함께 곁들여 먹으면 내가</div></td>
-                                            <td class="text-center"><div class="in-tb">2021.05.21 17:00</div></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="list-check">
-                                                <div class="custom-checkbox single">
-                                                    <input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-                                                </div>
-                                            </td>
-                                            <td class="text-center"><div class="in-tb">PROM691</div></td>
-                                            <td class="text-center"><div class="in-tb">맛있닭</div></td>
-                                            <td class="text-center"><div class="in-tb">맛있닭 소프트 닭 안심살 혼합</div></td>
-                                            <td class="text-center"><div class="in-tb">이것은 진리!!샐러드와 함께 곁들여 먹으면 내가</div></td>
-                                            <td class="text-center"><div class="in-tb">2021.05.21 17:00</div></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="list-check">
-                                                <div class="custom-checkbox single">
-                                                    <input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-                                                </div>
-                                            </td>
-                                            <td class="text-center"><div class="in-tb">PROM691</div></td>
-                                            <td class="text-center"><div class="in-tb">맛있닭</div></td>
-                                            <td class="text-center"><div class="in-tb">맛있닭 소프트 닭 안심살 혼합</div></td>
-                                            <td class="text-center"><div class="in-tb">이것은 진리!!샐러드와 함께 곁들여 먹으면 내가</div></td>
-                                            <td class="text-center"><div class="in-tb">2021.05.21 17:00</div></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="list-check">
-                                                <div class="custom-checkbox single">
-                                                    <input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-                                                </div>
-                                            </td>
-                                            <td class="text-center"><div class="in-tb">PROM691</div></td>
-                                            <td class="text-center"><div class="in-tb">맛있닭</div></td>
-                                            <td class="text-center"><div class="in-tb">맛있닭 소프트 닭 안심살 혼합</div></td>
-                                            <td class="text-center"><div class="in-tb">이것은 진리!!샐러드와 함께 곁들여 먹으면 내가</div></td>
-                                            <td class="text-center"><div class="in-tb">2021.05.21 17:00</div></td>
-                                        </tr>
+                                        </tr>                                        
                                     </tbody>
+                                    <!--// 20210803 수정 : 상품명 우측정렬 -->
                                 </table>
                             </div><!--// board-list -->   
+                            <div class="tool-popup" ><div class="context"></div></div><!--[Dev] 20210825 툴팁추가 -->
                             <!-- 20210608 수정 :  페이징 삭제-->  
                         </div>
                     </div><!--// layer-content -->

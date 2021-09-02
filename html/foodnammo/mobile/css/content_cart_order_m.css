@@ -233,6 +233,7 @@
 .dlv-day-tit .dlv-time > i{vertical-align:middle; margin-right:5px}
 
 .request-detail .select{width:100%;}
+
 /* 간격 */
 .inner-div .request-detail .select ~ .ui-direct-input{margin-top:5px;}
 .inner-div .request-detail .select ~ .bl-list-type1{margin-top:10px;}
@@ -605,21 +606,38 @@ height: auto; background-color: #ff6001; text-align: center; line-height: 1; bor
 /* 선물하기 */
 .gift-order .order-info .list-head{border-bottom:0}
 .gift-order .order-info .lineless-table{padding-top:0}
-.gift-card-box.card-skin-default{background:url(../images/img/bg_gift_msg.png) no-repeat 0 0/ 100% auto;height:306px}
+.gift-card-box{margin:0 15px;border-radius:5px;box-sizing:border-box;height:290px;padding:135px 15px 15px;position:relative}
+.gift-card-box.card-skin-default{background:url(../images/img/bg_gift_msg.png) no-repeat 0 0/cover}
+.gift-card-box:after{content:"";width:93px;height:85px;background:url(../images/img/img_chicken5.png) no-repeat 0 0/100% auto;position:absolute;top:17px;left:calc(50% - 46px)}
+.gift-card-box .title{font-size:16px;color:#fff;text-align:center;display:block;line-height:21px;height:21px;position:absolute;top:105px;width:calc(100% - 30px)}
+.gift-card-box .message-box{width:100%;border-radius:5px;background:#fff;height:140px;padding:12px 15px 40px;box-sizing:border-box}
+.gift-card-box .message-box textarea{width:100%;border:0;height:100%;resize:none;line-height:29px;background:url(../images/img/card_line.png) repeat 0 0/3px auto}
+.gift-card-box .message-box .count{text-align:right;font-size:12px;color:#ccc;margin-top:12px}
+.gift-card-box .message-box .count .txt{color:#666}
+.gift-card-box .message-box .author{text-align:right;font-size:12px;font-weight:bold;display:block;padding-right:6px;margin-top:11px}
 
-.gift-card-list{margin:20px 0 30px;padding-left:15px}
-.cate-tab-swiper.gift-card-list .swiper-wrapper li{min-width:56px;width:56px;margin-right:4px;border-radius:4px;height:28px;line-height:28px}
-.cate-tab-swiper.gift-card-list .txt{margin-top:0}
-.gift-card-list li a{color:#fff;display:block}
-.gift-card-list .cate_0{background:#f0f0f0}
-.gift-card-list .cate_0 a{color:#333}
-.gift-card-list .cate_1{background:url(../images/img/gifttag01.png) repeat-x 50% 0}
-.gift-card-list .cate_2{background:url(../images/img/gifttag02.png) repeat-x 50% 0}
-.gift-card-list .cate_3{background:url(../images/img/gifttag03.png) repeat-x 50% 0}
-.gift-card-list .cate_4{background:url(../images/img/gifttag04.png) repeat-x 50% 0}
-.gift-card-list .cate_5{background:url(../images/img/gifttag05.png) repeat-x 50% 0}
-.gift-card-list li.swiper-slide-on{border:2px solid #ff6001;box-sizing:border-box}
-.cate-tab-swiper.gift-card-list li.swiper-slide-on .txt{margin-top:-2px}
+.gift-accept .gift-card-box{margin-bottom:40px}
+.gift-accept .gift-card-box .message-box{padding:12px 15px 40px}
+/* .gift-accept .gift-card-box .message-box .msg-area{height:87px;overflow-y:auto}
+.gift-accept .gift-card-box .message-box .msg{background:url(../images/img/card_line.png) repeat 0 0/3px auto;line-height:29px;text-align:center} */
+.gift-accept .input-group.w-full .select{width:100%}
+.gift-accept .prd-info-area .column.img{width:86px;height:86px}
+
+.wscroll-area{overflow-x:auto}
+.wscroll-area::-webkit-scrollbar{display:none}
+.gift-card-tag{margin:20px 0 30px;padding-left:15px;white-space:nowrap}
+.gift-card-tag li{display:inline-block;width:56px;height:28px;line-height:28px;border-radius:4px;text-align:center;vertical-align:top}
+.gift-card-tag li a{color:#fff;display:block}
+.gift-card-tag li .txt{display:block;box-sizing:border-box;padding:2px 0;height:28px}
+.gift-card-tag .tag01{background:#f0f0f0}
+.gift-card-tag .tag01 a{color:#333}
+.gift-card-tag .tag02{background:url(../images/img/gifttag01.png) repeat-x 50% 0}
+.gift-card-tag .tag03{background:url(../images/img/gifttag02.png) repeat-x 50% 0}
+.gift-card-tag .tag04{background:url(../images/img/gifttag03.png) repeat-x 50% 0}
+.gift-card-tag .tag05{background:url(../images/img/gifttag04.png) repeat-x 50% 0}
+.gift-card-tag .tag06{background:url(../images/img/gifttag05.png) repeat-x 50% 0}
+.gift-card-tag li.current{border:2px solid #ff6001;box-sizing:border-box}
+.gift-card-tag li.current .txt{margin-top:-2px}
 
 .gift-order-complete .prd-info-area .column.img{width:86px;height:86px}
 .gift-order-complete .prd-info-area .column.img a{display:block}
@@ -627,10 +645,10 @@ height: auto; background-color: #ff6001; text-align: center; line-height: 1; bor
 
 .gift-order-complete .infomation-box{border-bottom:0;padding:15px 0 0}
 .gift-order-complete .infomation-box .title{font-size:13px;color:#666}
-.gift-order-complete .infomation-box  .dash-list{margin-top:3px}
-.gift-order-complete .infomation-box  .dash-list > li{padding-left:10px;line-height:20px}
-.gift-order-complete .infomation-box  .dash-list > li ~ li{margin-top:0}
-.gift-order-complete .infomation-box  .dash-list > li:before{width:4px;background:#666}
+.gift-order-complete .infomation-box .dash-list{margin-top:3px}
+.gift-order-complete .infomation-box .dash-list > li{padding-left:10px;line-height:20px}
+.gift-order-complete .infomation-box .dash-list > li ~ li{margin-top:0}
+.gift-order-complete .infomation-box .dash-list > li:before{width:4px;background:#666}
 
 .gift-order-complete .sub-list .tit{color:#888}
 .gift-order-complete .cart-total-box .inner > li .sub-list .tit,
@@ -649,26 +667,29 @@ height: auto; background-color: #ff6001; text-align: center; line-height: 1; bor
 .gift-order-complete .board-form .inp-tell > button{width:50px;border-radius:0}
 .gift-order-complete .bl-list-type1 > li{color:#666}
 
+.gift-accept .cart-list-area.order-complete{border-top:0;padding-top:0}
+.gift-accept .order-info{border-top:0;padding-top:36px}
+.gift-accept .cart-list > li:last-child{padding-bottom:15px}
+
 .btn-gray2{background:#888;color:#fff}
 
 .gift-alarm{padding:24px 0 23px;text-align:center;font-size:15px}
 
-.gift-complete.frame-result-area{padding:0;background:url(../images/img/bg_gift2.png) repeat-x 0 0/65% auto;padding-top:137px;position:relative}
-.gift-complete.frame-result-area:after{content:"";width:116px;height:126px;background:url(../images/img/img_chicken4.png) no-repeat 0 0/116px auto;position:absolute;left:calc(50% - 58px);top:18px}
-.gift-complete .result-page-top{padding-bottom:0;background:#faefe2;padding:24px 0}
+.gift-complete.frame-result-area{padding:0;background:url(../images/img/bg_gift3.png) repeat-x 0 0/100% auto;padding:120px 0 39px;position:relative}
+.gift-complete .result-page-top{padding:0}
 .gift-complete .result-page-top:after{display:none}
-.gift-complete .result-page-top .title{font-size:20px;margin-top:0}
+.gift-complete .result-page-top .title{font-size:22px;margin-top:0}
 .gift-order-complete .cart-list-area.order-complete{padding-top:20px;border-top:8px solid #f2f2f2}
 
 .gift-accept .lineless-table th{vertical-align:top;line-height:42px;color:#666;font-weight:600}
 .gift-accept .btn-group-flex.bnt-gift-accept{margin-top:0}
-.gift-accept .btn-group-flex.bnt-gift-accept > button:first-child{flex:0 30%}
 .gift-accept .order-info .title-list{font-size:15px}
 .gift-accept .order-info .info-text{font-size:12px;color:#999;margin-top:2px}
 .gift-accept .order-info .info-text i{vertical-align:-2px;margin-right:4px}
 .gift-accept .order-info .list-head{padding:20px 0 15px;margin:0 15px;border-color:#333}
 .gift-accept .agree-area{padding:20px 0 20px;font-weight:normal;position:relative}
 .gift-accept .agree-area .side-link{position:absolute;right:0;border-bottom:1px solid #333}
+.gift-accept .agree-area .rule-text{height:132px;overflow-y:auto;padding:12px;box-sizing:border-box;margin-top:8px;background:#f8f8f8;color:#666;font-size:11px;line-height:18px}
 
 .customer-info{background:#fafafa;text-align:center;padding:45px 0;margin-top:32px;color:#666;font-size:12px}
 .customer-info .tel{display:inline-block;margin-top:5px;padding-left:12px;background:url(../images/icon/icon_tel.png) no-repeat 0 1px/9px auto}
@@ -682,34 +703,28 @@ height: auto; background-color: #ff6001; text-align: center; line-height: 1; bor
 .delivery-time .custom-checkbox .checkbox-circle + label:before{width:20px;height:20px}
 .delivery-time .custom-checkbox .checkbox-circle:checked + label:before{background-position:-1px 95%;background-size:56px auto}
 
-.frame-accept-area{height:410px;background:#ffdecc url(../images/img/bg_gift.png) repeat-x 0 0/360px auto;box-sizing:border-box;padding-top:25px}
-.accept-page-top{width:250px;height:360px;margin:0 auto;background:#fff;border-radius:6px;position:relative}
-.accept-page-top:after{content:"";width:78px;height:105px;background:url(../images/img/img_chicken.png) no-repeat 0 0/100% auto;position:absolute;left:-23px;bottom:0}
-.accept-page-top .prod-name{padding:11px 20px 9px;text-align:center;display:block;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;word-break:break-all;color:#666}
-.accept-page-top figure{display:block;width:250px;height:250px}
-.accept-page-top .gift-msg{position:relative;width:213px;margin:22px auto;text-align:center;height:28px;line-height:28px;color:#bb4343}
-.accept-page-top .gift-msg::before{width:100%;border-top:1px dashed #eee;content:"";position:absolute;left:0;top:0}
-.accept-page-top .gift-msg:after{width:100%;border-top:1px dashed #eee;content:"";position:absolute;left:0;bottom:0}
-
-.gift-accept-complete .frame-accept-area{height:320px;padding:198px 0 77px}
-.gift-accept-complete .accept-page-text{text-align:center;font-size:20px;position:relative}
-.gift-accept-complete .accept-page-text:after{content:"";width:108px;height:100px;background:url(../images/img/img_gift.png) no-repeat 0 0/100% auto;position:absolute;top:-111px;left:calc(50% - 54px)}
-.gift-accept-complete .accept-page-text span{display:block;font-size:13px;color:#666;margin-top:2px}
+.gift-accept-complete .frame-accept-area{height:215px;padding:121px 0 44px;position:relative}
+.gift-accept-complete .accept-page-text{text-align:center;font-size:22px}
+.gift-accept-complete .accept-page-text:after{content:"";width:110px;height:74px;background:url(../images/img/img_gift2.png) no-repeat 0 0/100% auto;position:absolute;top:27px;left:calc(50% - 54px)}
+.gift-accept-complete .accept-page-text span{display:block;font-size:13px;color:#666;margin-top:6px}
 .gift-accept-complete .list-head{padding:20px 0 10px;margin:0 15px}
-.gift-accept-complete .list-head .delivery-change{height:26px;line-height:26px;color:#fff;background:#ff7e32;padding:0 7px;border-radius:2px}
+.gift-accept-complete .list-head button{font-weight:bold;font-size:14px}
+.gift-accept-complete .list-head button span{display:inline-block;margin-right:3px}
+/* .gift-accept-complete .list-head .delivery-change{height:26px;line-height:26px;color:#fff;background:#ff7e32;padding:0 7px;border-radius:2px} */
 .gift-accept-complete .list-head .delivery-change span{display:block;padding-right:11px;position:relative}
 .gift-accept-complete .list-head .delivery-change span:after{content:"";width:4px;height:4px;border-top:1.5px solid #fff;border-right:1.5px solid #fff;transform:rotate(45deg);position:absolute;right:2px;top:50%;margin-top:-4px}
 .gift-accept-complete .infomation-box{border-bottom:0;padding-bottom:0}
 .gift-accept-complete .infomation-box .title{font-size:13px;color:#666}
-.gift-accept-complete .infomation-box .dot-list > li{color:#666}
-.gift-accept-complete .infomation-box .dot-list > li:before{background:#666}
-.gift-accept-complete .infomation-box .dot-list > li ~ li{margin-top:0}
+.gift-accept-complete .infomation-box .dash-list{border-top:1px solid #e6e6e6;padding-top:12px}
+.gift-accept-complete .infomation-box .dash-list > li{color:#999;padding-left:10px}
+.gift-accept-complete .infomation-box .dash-list > li:before{background:#999;width:5px}
+.gift-accept-complete .infomation-box .dash-list > li ~ li{margin-top:0}
 
-.gift-btn-banner{margin:20px 15px;background:#f2f2f2;border-radius:5px 5px 2px 2px}
-.gift-btn-banner .visual{height:123px;padding:30px 0 0 56px;box-sizing:border-box;font-size:16px;position:relative}
-.gift-btn-banner .visual span{display:block;margin-top:10px}
-.gift-btn-banner .visual:after{content:"";width:110px;height:146px;background:url(../images/img/img_chicken3.png) no-repeat 0 0/100% auto;position:absolute;top:16px;left:calc(50% + 10px)}
-.gift-btn-banner button{width:100%;z-index:10;position:relative}
+.gift-btn-banner{margin:40px 15px 20px;background:#f2f2f2;border-radius:2px;padding:23px 20px 20px}
+.gift-btn-banner .visual{box-sizing:border-box;font-size:16px;position:relative;padding-left:3px;line-height:23px;margin-bottom:20px}
+.gift-btn-banner .visual span{display:block}
+.gift-btn-banner .visual:after{content:"";width:53px;height:53px;background:url(../images/img/bg_coupon.png) no-repeat 0 0/100% auto;position:absolute;top:-3px;right:12px}
+.gift-btn-banner button{width:100%;z-index:10;position:relative;border-radius:2px}
 
 .delivery-info{padding:20px 0 0;font-size:14px}
 .delivery-info .name{display:inline-block}
@@ -718,10 +733,10 @@ height: auto; background-color: #ff6001; text-align: center; line-height: 1; bor
 .delivery-info .addr{margin-top:8px;line-height:20px}
 
 .gift-order-none{position:absolute;top:0;right:0;bottom:0;left:0}
-.gift-order-none .inner{position:absolute;top:110px;left:50%;transform:translateX(-50%);padding-top:171px}
-.gift-order-none .inner:after{content:"";width:134px;height:148px;background:url(../images/img/gift_list_none.png) no-repeat 0 0/100% auto;position:absolute;top:0;left:calc(50% - 74px)}
+.gift-order-none .inner{position:absolute;top:110px;left:50%;transform:translateX(-50%);text-align:center}
 .gift-order-none b{display:block;font-size:17px;line-height:21px}
-.gift-order-none .customer-info{background:none;padding:0;margin-top:5px;white-space:nowrap}
+.gift-order-none b:before{content:"";width:80px;height:80px;display:block;margin:0 auto;background:url(../images/icon/icon_no_data.png) no-repeat 0 0/100% auto;margin-bottom:18px}
+.gift-order-none .customer-info{background:none;padding:0;margin-top:10px;white-space:nowrap} 
 
 .gift-click .gift-click-visual{padding:226px 0 39px;border-bottom:8px solid #f2f2f2;text-align:center;position:relative}
 .gift-click .gift-click-visual:after{content:"";width:170px;height:170px;background:url(../images/img/img_chicken2.png) no-repeat 0 0/100% auto;position:absolute;top:40px;left:calc(50% - 85px)}

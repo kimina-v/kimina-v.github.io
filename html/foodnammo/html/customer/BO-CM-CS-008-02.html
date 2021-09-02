@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+		<script>include.headTab();</script>
+		<div class="content-area">
+			<div class="top-title-area">
+				<h2 class="tit-page">답변템플릿 등록<span class="tit-id-num">(ID:1108012)</span></h2>
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="check-101-11" class="checkbox-favor" name="check-item-1"><label for="check-101-11"><span class="blind">즐겨찾기</span></label>
+                </div>
+				<div class="page-guide">
+					<ol class="breadcrumb">
+						<li><a href="#" title="메인페이지 이동"><i class="ico-bl-home"></i><span class="blind">Home</span></a></li>
+						<li><span>1Depth</span></li>
+						<li><span>2Depth</span></li>
+						<li class="current"><span>현재페이지</span></li>
+					</ol>					
+				</div><!--// page-guide -->
+			</div><!--// page-title-area -->
+            <div class="page-info text-right">
+                <div class="text-guide-sm2">
+                    <i class="es"><em class="blind">필수입력</em></i>는 필수항목입니다.
+                </div>
+            </div>
+            <div class="board-form mt10">	
+                <table>
+                    <caption>정보입력</caption>
+                    <colgroup>
+                        <col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><span class="in-tb">사이트<i class="es"><em class="blind">필수입력</em></i></span></th>
+                            <td>
+                                <div class="input-group-form">
+                                    <select class="select w140">
+                                        <option value="">랭킹닭컴</option>
+                                    </select>
+                                </div>
+                            </td>  
+                            <th scope="row"><span class="in-tb">문의유형<i class="es"><em class="blind">필수입력</em></i></span></th>
+                            <td>
+                                <div class="input-group-form">
+                                    <select class="select w140">
+                                        <option value="">주문/결제</option>
+                                        <option value="">취소/환불</option>
+                                        <option value="">교환/반품</option>
+                                        <option value="">이벤트/프로모션</option>
+                                        <option value="">상품관련</option>
+                                        <option value="">배송관련</option>
+                                        <option value="">적립금</option>
+                                        <option value="">회원정보</option>
+                                        <option value="">사이트관련/개선사항</option>
+                                        <option value="">기타</option>
+                                    </select>
+                                </div>
+                            </td>                               
+                        </tr>					                        
+                        <tr>
+                            <th scope="row"><span class="in-tb">사용유무<i class="es"><em class="blind">필수입력</em></i></span></th>
+                            <td colspan="3">
+                                <div class="form-inline-group">
+                                    <div class="custom-radio">
+                                        <input type="radio" id="radio-1-2" class="radio" name="radio-item-1" checked=""><label for="radio-1-2">Y</label>
+                                    </div>
+                                    <div class="custom-radio">
+                                        <input type="radio" id="radio-1-3" class="radio" name="radio-item-1"><label for="radio-1-3">N</label>
+                                    </div>
+                                </div>	
+                            </td>                                
+                        </tr>	            
+                        <tr>
+                            <th scope="row"><span class="in-tb">제목<i class="es"><em class="blind">필수입력</em></i></span></th>
+                            <td colspan="3">
+                                <input type="text" class="input-text w-full" placeholder="제목 입력" value="제품파손시">
+                            </td>                                
+                        </tr>
+                        <tr>
+                            <th scope="row"><span class="in-tb">머리글</span></th>
+                            <td colspan="3">
+                                <div class="input-group">
+                                    <input type="text" class="input-text w300" disabled value="닭대리 인사말...">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn-form btn-grey"><span>머리글 검색</span></button>
+                                    </span>
+                                </div>
+                                <div class="textarea-count-box mt5">
+                                    <textarea id="" class="textarea" placeholder="머리글 검색 화면에서 선택한 머리글이 노출됩니다.">안녕하세요 회원님 닭가슴살 감동쇼핑 랭킹닭컴 닭대리입니다.
+먼저, 이용에 불편 드려서 죄송합니다.</textarea>
+                                </div>
+                            </td>                                
+                        </tr>	
+                        <tr>
+                            <th scope="row"><span class="in-tb">답변내용<i class="es"><em class="blind">필수입력</em></i></span></th>
+                            <td colspan="3">
+                                <div class="input-group">
+                                    <input type="text" class="input-text w300" disabled value="제품파손시 답변내용...">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn-form btn-grey"><span>답변내용 검색</span></button>
+                                    </span>
+                                </div>
+                                <div class="textarea-count-box mt5">
+                                    <textarea id="" class="textarea" placeholder="답변내용 검색 화면에서 선택한 내용이 노출됩니다.">배송중 모서리 부분이 날카로워서 파손이 일어난 것 같습니다.
+새 상품은 주말이 낀 관계로 월요일 출고 진행하고, 운송장은 월요일 오후 6시 이후에 문자로 회신 드리겠습니다.</textarea>
+                                </div>
+                            </td>                                
+                        </tr>	     
+                        <tr>
+                            <th scope="row"><span class="in-tb">꼬리글</span></th>
+                            <td colspan="3">
+                                <div class="input-group">
+                                    <input type="text" class="input-text w300" disabled value="닭대리 꼬리말">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn-form btn-grey"><span>꼬리글 검색</span></button>
+                                    </span>
+                                </div>
+                                <div class="textarea-count-box mt5">
+                                    <textarea id="" class="textarea" placeholder="꼬리글 검색 화면에서 선택한 꼬리글이 노출됩니다.">추가문의사항이 있으신 경우 고객센터(02-6405-8088)으로 연락 주시거나 게시판 또는 사이트하단 오른쪽의 실시간채팅으로 문의주시면 운영시간 내에 빠르게 안내 도와드리겠습니다.
+랭킹닭컴을 이용해 주셔서 감사합니다.</textarea>
+                                </div>
+                            </td>                                
+                        </tr>    
+                        <tr>
+                            <th scope="row"><span class="in-tb">작성자</span></th>
+                            <td>
+                                <div class="in-tb">관리자ID/이름 노출</div>
+                            </td>     
+                            <th scope="row"><span class="in-tb">등록일시</span></th>
+                            <td>
+                                <div class="in-tb">2021.05.21 15:50:55</div>
+                            </td>                           
+                        </tr>   
+                        <tr>
+                            <th scope="row"><span class="in-tb">최종 수정자</span></th>
+                            <td>
+                                <div class="in-tb">관리자ID/이름 노출</div>
+                            </td>     
+                            <th scope="row"><span class="in-tb">최종 수정일시</span></th>
+                            <td>
+                                <div class="in-tb">2021.05.21 15:50:55</div>
+                            </td>                           
+                        </tr>         		
+                    </tbody>
+                </table>		
+            </div><!--// board-form -->
+            <div class="btn-area mt40">
+                <button type="button" class="btn-basic-md btn-primary"><span>등록</span></button>
+                <button type="button" class="btn-basic-md btn-default"><span>취소</span></button>
+            </div>		
+		</div><!--// content-area -->
+
+		<button type="button" class="btn-gotop"><span class="blind">위로</span></button>
+		
+	</section>
+	<!--// ========== 컨텐츠 영역 :: container ========== -->
+</div><!--// wrap -->
+</body>
+</html>

@@ -109,7 +109,7 @@
                                 <th scope="row">
 									<span class="in-tb">진행 기간<i class="es"><em class="blind">필수입력</em></i></span>
 								</th>
-                                <td colspan="3">
+                                <td><!-- [Dev] 20210830 colspan="3"제거 -->
 									<div class="input-group datepicker-group">
 										<input type="text" id="" class="input-text datepicker" />
 										<div class="input-group-form">
@@ -140,19 +140,7 @@
 										<div class="input-group-txt">분</div>
 									</div><!--// input-group -->		
 								</td>
-							</tr>
-                            <tr>
-                                <th scope="row"><span class="in-tb">전시 여부</span></th>
-                                <td>
-                                    <div class="form-inline-group">
-										<div class="custom-radio">
-											<input type="radio" id="radio-5-1" class="radio" name="radio-item-5" checked=""><label for="radio-5-1">미전시</label>
-										</div>
-										<div class="custom-radio">
-											<input type="radio" id="radio-5-2" class="radio" name="radio-item-5"><label for="radio-5-2">전시</label>
-										</div>
-									</div>
-                                </td>
+								<!-- [Dev] 20210830 추가 -->
 								<th scope="row"><span class="in-tb">종료 후 전시 처리</span></th>
 								<td>
 									<div class="form-inline-group">
@@ -164,6 +152,41 @@
 										</div>
 									</div>
 								</td>
+								<!-- //[Dev] 20210830 추가 -->
+							</tr>
+                            <tr>
+								<!-- [Dev] 20210830 추가 -->
+								<th scope="row"><span class="in-tb">VIP전문관 이벤트</span></th>
+								<td>
+                                    <div class="form-inline-group">
+										<div class="custom-checkbox">
+											<input type="checkbox" id="check-99" class="checkbox" name="check-item-99"><label for="check-99"> VIP전용관 노출</label>
+										</div>
+									</div>
+								</td>
+								<!-- //[Dev] 20210830 추가 -->
+                                <th scope="row"><span class="in-tb">전시 여부</span></th>
+                                <td>
+                                    <div class="form-inline-group">
+										<div class="custom-radio">
+											<input type="radio" id="radio-5-1" class="radio" name="radio-item-5" checked=""><label for="radio-5-1">미전시</label>
+										</div>
+										<div class="custom-radio">
+											<input type="radio" id="radio-5-2" class="radio" name="radio-item-5"><label for="radio-5-2">전시</label>
+										</div>
+									</div>
+                                </td>
+								<!-- <th scope="row"><span class="in-tb">종료 후 전시 처리</span></th>
+								<td>
+									<div class="form-inline-group">
+										<div class="custom-radio">
+											<input type="radio" id="radio-3-1" class="radio" name="radio-item-3" checked=""><label for="radio-3-1">숨김</label>
+										</div>
+										<div class="custom-radio">
+											<input type="radio" id="radio-3-2" class="radio" name="radio-item-3"><label for="radio-3-2">표시</label>
+										</div>
+									</div>
+								</td> [Dev] 20210830 제거 -->
 							</tr>
                         	<tr>
                                 <th scope="row"><span class="in-tb">대상</span></th>
@@ -215,20 +238,27 @@
 											<div class="custom-checkbox">
 												<input type="checkbox" id="check-303" class="checkbox" name="check-item-3"><label for="check-303"> 오렌지멤버스</label>
 											</div>
+											<!-- [Dev] 20210830 추가 -->
+											<div class="custom-checkbox">
+												<input type="checkbox" id="check-304" class="checkbox" name="check-item-3"><label for="check-304"> 임직원</label>
+											</div>
+											<!-- //[Dev] 20210830 추가 -->
 										</div>
 									</div><!--// 회원그룹 -->
                                 </td>
 							</tr>
 							<tr>
 								<!-- [Dev] 0716 수정 : 순서변경 -->
+								<!-- [Dev] 20210830 위치 변경 -->
+								<th scope="row"><span class="in-tb">관리자</span></th>
+								<td><div class="in-tb">관리자 명/ID 출력</div></td>
 								<th scope="row"><span class="in-tb">당첨 예정일</span></th>
 								<td>
 									<div class="datepicker-group">
 										<input type="text" id="" class="input-text datepicker" />
 									</div><!--// input-group -->		
 								</td>
-								<th scope="row"><span class="in-tb">관리자</span></th>
-								<td><div class="in-tb">관리자 명/ID 출력</div></td>
+								<!-- //[Dev] 20210830 위치 변경 -->
 								<!-- //[Dev] 0716 수정 -->
 							</tr>
                         </tbody>
@@ -1474,12 +1504,19 @@
                 <h3 class="tit-cnt">상품상세 설명</h3>
             </div>
 			
-			<div class="sub-tab mt10">
+			<!--[Dev] 20210723 탭추가 -->
+			<div class="ui-tab sub-tab mt10"><!-- [pub] 스크립트 불필요시 ui-tab class 삭제 -->
 				<ul>
 					<li class="current"><a href="#tab2-1"><span>상세설명(PC)</span></a></li>
 					<li><a href="#tab2-2"><span>상세설명(Mobile)</span></a></li>
 				</ul>
-			</div>
+			</div><!--// tab-menu -->
+			<!--[Dev] 20210726  <div class="_pb-inner-ex">제거-->
+			<div class="ui-tab-container tab-cnt-wrap">
+				<div id="tab2-1" class="ui-tab-cnt active tab-content"></div>
+				<div id="tab2-2" class="ui-tab-cnt tab-content"></div>
+			</div><!--// ui-tab-container -->
+
 			<!--// 0610 수정 -->
 
 			<div class="btn-bottom-area mt40">

@@ -32,6 +32,9 @@ $(function () {
     // tooltip click
     if ($('.tooltip-wrap').length > 0) { clickToolTip(); }
 
+    // tooltip popup
+    if( $('.tool-layer-wrap').length > 0) { toolLayer(); }
+
     // 체크박스 모두 선택
     if ($('.ui-check-all').length > 0) { checkAll();}
 
@@ -117,6 +120,13 @@ $(function () {
 
     // 마이페이지 후기 작성 rating
     if ($('.star-rating').length > 0) { starRating(); }
+
+    // 이달의 쿠폰 : 등급별 쿠폰
+    if ($('.coupon-grade-box').length > 0) { moreCouponView(); }
+    if ($('.grade-coupon-swipe').length > 0) { cpGradeSwiperSlide(); }
+    
+
+
 });
 
 
@@ -597,6 +607,23 @@ function clickToolTip () {
     });
 }
 
+/****** tooltip layer ******/
+function toolLayer () {
+    var wrap = $('.tool-layer-wrap'),
+        btn = wrap.find('.btn-layer'),
+        dimm = $('.dimm'),
+        btnClose = $('.btn-close');
+
+    btn.on('click',function(){
+        $(this).siblings('.tooltip-layer').show();
+        dimm.show();
+    })
+    btnClose.on('click',function(){
+        $(this).closest('.tooltip-layer').hide();
+        dimm.hide();
+    })
+}
+
 /****** 체크박스 모두 선택 ******/
 function checkAll () {
     var chkBtn = $('.ui-check-all');
@@ -826,9 +853,10 @@ function accordionList () {
 /* 아코디언 단일 */
 function accordionInit(){
     var click = $('.ui-accordion-btn'),
-        cnt = click.closest('.basic-spec');
+        cnt = click.closest('.ui-accordion-only');
 
-    click.on('click',function(){
+    click.on('click',function(e){
+        e.preventDefault();
         if(cnt.hasClass('on')){
             click.find('span').text('보기');
             cnt.removeClass('on');
@@ -1394,6 +1422,8 @@ function one_pack_slide () {
             loop: false,
             spaceBetween: 10,
             touchRatio: true,
+            observer: true,
+            observeParents: true,
             scrollbar: {
                 el: ".swiper-scrollbar",
                 hide: false,
@@ -1567,4 +1597,65 @@ function starRating () {
     	halfStar: true,
 		starSvg: '<svg width="42" height="40" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M41.882 15.1191C41.7456 14.7066 41.4912 14.3425 41.1499 14.0714C40.8086 13.8004 40.3952 13.634 39.9602 13.5927L27.8373 12.4981L23.0459 1.34773C22.8725 0.949081 22.586 0.609301 22.2214 0.369938C21.8568 0.130575 21.4299 0.00201243 20.9929 0C20.5559 0.00201243 20.129 0.130575 19.7644 0.369938C19.3998 0.609301 19.1133 0.949081 18.94 1.34773L14.1485 12.4944L2.02563 13.589C1.59134 13.6309 1.17872 13.7976 0.838124 14.0687C0.497528 14.3397 0.243676 14.7034 0.107549 15.1154C-0.0259384 15.5287 -0.0353677 15.9717 0.0803959 16.3902C0.19616 16.8087 0.432114 17.1847 0.75941 17.4721L9.92274 25.4579L7.22169 37.286C7.12669 37.7103 7.15832 38.1529 7.3127 38.5596C7.46708 38.9663 7.73749 39.3194 8.09082 39.5756C8.4706 39.8507 8.92829 39.9993 9.39827 40C9.80221 39.9999 10.1985 39.8905 10.5446 39.6836L21.0004 33.4736L31.4525 39.6836C31.8268 39.9074 32.2593 40.0165 32.6957 39.9973C33.1322 39.9781 33.5533 39.8314 33.9063 39.5756C34.2596 39.3194 34.53 38.9663 34.6844 38.5596C34.8388 38.1529 34.8704 37.7103 34.7754 37.286L32.0743 25.4579L41.2377 17.4721C41.5656 17.1851 41.8023 16.8093 41.9187 16.3908C42.0352 15.9722 42.0263 15.5291 41.8933 15.1154L41.882 15.1191Z" /></svg>'
 	});
+}
+
+
+/****** 이달의 쿠폰 *******/
+function cpGradeSwiperSlide(){
+    var cpGradeSwiper = new Swiper('.grade-coupon-swipe',{
+        autoHeight: true,
+        slidesPerGroup : 1,
+        slidesPerView : 1,
+        observer: true,
+        observeParents: true,
+        navigation: {
+            nextEl: '.swiper-next',
+            prevEl: '.swiper-prev',
+        }
+        
+    })
+}
+
+
+/****** 쿠폰 더보기 ******/
+function moreCouponView() {
+    var wrap = $('.coupon-grade-box'),
+        couponMoreBtn = $('.ui-coupon-more'),
+        listWrap = $('.ui-coupon-list').children('ul');
+
+    listWrap.each(function(){
+        var couponLi = $(this).children('li').length;
+        
+        $(this).children('li.coupon-item').slice(0, 4).show(); 
+        if(couponLi > 4){
+            $(this).parent('.ui-coupon-list').find('.ui-coupon-more').show();
+        }else{
+            $(this).parent('.ui-coupon-list').find('.ui-coupon-more').hide();
+        }
+    })
+    
+    couponMoreBtn.click(function(e){ 
+        var height = $(this).parents('.swiper-wrapper').height();
+        $(this).parents('.swiper-wrapper').css('height','auto');
+
+        if(!$(this).hasClass('active')){
+            $(this).siblings('.coupon-list').find('li.coupon-item:hidden').slice(0, 4).show(); 
+            $(this).parents('.swiper-wrapper').css('height','auto')
+    
+            if($(this).siblings('.coupon-list').find('li.coupon-item:hidden').length === 0 ){ 
+                $(this).addClass('active').html('<span>닫기</span>')
+            } 
+        }else{
+            hideListItem()
+        }
+    });
+
+    wrap.find('.swiper-util button').on('click',function () {
+        hideListItem()
+    })
+
+    function hideListItem () {
+        listWrap.find('li.coupon-item:eq(3)').nextAll('li').hide();
+        $('.ui-coupon-more').removeClass('active').html('<span>더보기</span>')
+    }
 }

@@ -101,7 +101,12 @@
                                         <tr>
 											<th scope="row"><span class="in-tb">메뉴 명</span></th>
 											<td colspan="3">
-												<input type="text" class="input-text w-full" placeholder="메뉴 명 입력">
+												<div class="input-group-form">
+													<!--[Dev] 20210803 select로 변경 -->
+                                                    <select class="select w140">
+                                                        <option value="">선택</option>
+                                                    </select>
+                                                </div>
 											</td>
 										</tr>
                                         <tr>
@@ -173,14 +178,19 @@
                                                             <input type="checkbox" id="check-302" class="checkbox" name="check-item-3"><label for="check-302"> 사업자</label>
                                                         </div>
                                                         <div class="custom-checkbox">
-                                                            <input type="checkbox" id="check-303" class="checkbox" name="check-item-3"><label for="check-303"> 피터팬</label>
+                                                            <input type="checkbox" id="check-303" class="checkbox" name="check-item-3"><label for="check-303"> 오렌지멤버스</label>
                                                         </div>
+														<!-- [Dev] 20210830 추가 -->
+														<div class="custom-checkbox">
+															<input type="checkbox" id="check-304" class="checkbox" name="check-item-3"><label for="check-304"> 임직원</label>
+														</div>
+														<!-- //[Dev] 20210830 추가 -->
                                                     </div>
                                                 </div><!--// 회원그룹 -->
                                             </td>
 										</tr>
                                         <tr>
-											<th scope="row"><span class="in-tb">연결정보</span></th>
+											<th scope="row"><span class="in-tb">연결정보 <i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210830 <i class="es"><em class="blind">필수입력</em></i> 추가 -->
 											<td colspan="3">
 												<input type="text" class="input-text w-full" placeholder="URL 입력">
 											</td>

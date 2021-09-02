@@ -177,3 +177,23 @@ font-weight: bold;}
 
 .title-box{width: 100%;box-sizing: border-box;padding:13px 15px;border-bottom: 1px solid #e6e6e6;}
 .title-box h5{display: block;font-size: 15px;color: #333;font-weight: 700;}
+
+/************ 퀴즈 *************/
+.event-templete{padding-bottom:50px}
+.event-templete .more-btn-box{margin-top:40px}
+.event-templete .title-area{height:50px;line-height:50px;padding:0 15px;font-size:0}
+.event-templete .title-area .title{font-size:14px;width:55%;display:inline-block}
+.event-templete .title-area .date{font-size:13px;color:#999;text-align:right;width:45%;display:inline-block}
+.event-templete .context{padding:30px 15px}
+.event-templete .context .quiz-item{background:#fff;border-radius:10px;padding:30px 20px}
+.event-templete .context .q{padding-left:25px;position:relative;line-height:20px;font-size:15px}
+.event-templete .context .q:before{content:"Q.";font-weight:bold;position:absolute;top:0;left:0;line-height:20px}
+.event-templete .context .q .hint{display:block;margin-top:8px;font-size:13px;color:#999;line-height:17px}
+.event-templete .context .a{margin-top:20px;padding-left:25px;position:relative}
+.event-templete .context .a:before{content:"A.";font-weight:bold;position:absolute;top:0;left:0;line-height:20px}
+.event-templete .context .a.text-type:before{top:10px}
+.event-templete .context .a .input-text{border-radius:2px}
+.event-templete .context .a .option-list li{text-align:center;padding-right:25px}
+.event-templete .context .a .option-list li ~ li{margin-top:8px}
+.event-templete .btn-group{text-align:center;margin-top:16px}
+.event-templete .btn-group button:only-child{min-width:162px;font-size:15px}

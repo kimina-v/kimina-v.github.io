@@ -57,7 +57,8 @@
     -->
     <!-- ========== 팝업 영역 ========== -->
     <div class="layer-wrap" id="popup-sample-01" style="display:block;">
-        <div class="layer-pop">
+        <!--[Dev] 20210721 layer-pop에 search-type추가 -->
+        <div class="layer-pop search-type">
             <div class="layer-inner layer-lg">
                 <div class="layer-head">
                     <h4 class="layer-title">입점사 검색</h4>
@@ -79,7 +80,7 @@
                                             </td>     
                                         </tr>
                                         <tr>
-                                            <th scope="row"><span class="in-tb">입점사 명</span></th>
+                                            <th scope="row"><span class="in-tb">입점사</span></th><!--[Dev] 20210825 텍스트변경 -->
                                             <td>
                                                 <input type="text" id="" class="input-text w-full" value="" placeholder="입점사 명 입력">
                                             </td>  
@@ -124,7 +125,7 @@
                                             </div><!-- 모두 선택 addClass ui-check-all -->
                                         </th>                                    
                                         <th scope="col"><span class="in-tb">입점사 코드</span></th>
-                                        <th scope="col"><span class="in-tb">입점사 명</span></th>
+                                        <th scope="col"><span class="in-tb">입점사</span></th><!--[Dev] 20210825 위치변경 -->
                                         <th scope="col"><span class="in-tb">상태</span></th>
                                     </tr>
                                     </thead>
@@ -137,97 +138,8 @@
                                             </td>                                  
                                             <td class="text-center"><div class="in-tb">11111</div></td>
                                             <td class="text-center"><div class="in-tb">네이처샵</div></td>
-                                            <td class="text-center">사용</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="list-check">
-                                                <div class="custom-checkbox single">
-                                                    <input type="checkbox" id="check-109" class="checkbox" name="check-item-101"><label for="check-109"><span class="blind">선택</span></label>
-                                                </div>
-                                            </td>                                  
-                                            <td class="text-center"><div class="in-tb">11111</div></td>
-                                            <td class="text-center"><div class="in-tb">네이처샵</div></td>
-                                            <td class="text-center">사용</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="list-check">
-                                                <div class="custom-checkbox single">
-                                                    <input type="checkbox" id="check-108" class="checkbox" name="check-item-101"><label for="check-108"><span class="blind">선택</span></label>
-                                                </div>
-                                            </td>                                  
-                                            <td class="text-center"><div class="in-tb">11111</div></td>
-                                            <td class="text-center"><div class="in-tb">네이처샵</div></td>
-                                            <td class="text-center">사용</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="list-check">
-                                                <div class="custom-checkbox single">
-                                                    <input type="checkbox" id="check-107" class="checkbox" name="check-item-101"><label for="check-107"><span class="blind">선택</span></label>
-                                                </div>
-                                            </td>                                  
-                                            <td class="text-center"><div class="in-tb">11111</div></td>
-                                            <td class="text-center"><div class="in-tb">네이처샵</div></td>
-                                            <td class="text-center">사용</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="list-check">
-                                                <div class="custom-checkbox single">
-                                                    <input type="checkbox" id="check-106" class="checkbox" name="check-item-101"><label for="check-106"><span class="blind">선택</span></label>
-                                                </div>
-                                            </td>                                  
-                                            <td class="text-center"><div class="in-tb">11111</div></td>
-                                            <td class="text-center"><div class="in-tb">네이처샵</div></td>
-                                            <td class="text-center">사용</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="list-check">
-                                                <div class="custom-checkbox single">
-                                                    <input type="checkbox" id="check-105" class="checkbox" name="check-item-101"><label for="check-105"><span class="blind">선택</span></label>
-                                                </div>
-                                            </td>                                  
-                                            <td class="text-center"><div class="in-tb">11111</div></td>
-                                            <td class="text-center"><div class="in-tb">네이처샵</div></td>
-                                            <td class="text-center">사용</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="list-check">
-                                                <div class="custom-checkbox single">
-                                                    <input type="checkbox" id="check-105" class="checkbox" name="check-item-101"><label for="check-105"><span class="blind">선택</span></label>
-                                                </div>
-                                            </td>                                  
-                                            <td class="text-center"><div class="in-tb">11111</div></td>
-                                            <td class="text-center"><div class="in-tb">네이처샵</div></td>
-                                            <td class="text-center">사용</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="list-check">
-                                                <div class="custom-checkbox single">
-                                                    <input type="checkbox" id="check-103" class="checkbox" name="check-item-101"><label for="check-103"><span class="blind">선택</span></label>
-                                                </div>
-                                            </td>                                  
-                                            <td class="text-center"><div class="in-tb">11111</div></td>
-                                            <td class="text-center"><div class="in-tb">네이처샵</div></td>
-                                            <td class="text-center">사용</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="list-check">
-                                                <div class="custom-checkbox single">
-                                                    <input type="checkbox" id="check-102" class="checkbox" name="check-item-101"><label for="check-102"><span class="blind">선택</span></label>
-                                                </div>
-                                            </td>                                  
-                                            <td class="text-center"><div class="in-tb">11111</div></td>
-                                            <td class="text-center"><div class="in-tb">네이처샵</div></td>
-                                            <td class="text-center">사용</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="list-check">
-                                                <div class="custom-checkbox single">
-                                                    <input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-                                                </div>
-                                            </td>                                  
-                                            <td class="text-center"><div class="in-tb">11111</div></td>
-                                            <td class="text-center"><div class="in-tb">네이처샵</div></td>
-                                            <td class="text-center">사용</td>
+                                            <!--[Dev] 20210721 <div class="in-tb">추가 -->
+                                            <td class="text-center"><div class="in-tb">사용</div></td>
                                         </tr>
                                     </tbody>
                                 </table>

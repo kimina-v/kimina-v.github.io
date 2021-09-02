@@ -66,21 +66,32 @@
                     <div class="layer-content">
                         <div class="in-content">
                             <div class="board-form">
+                                <!-- [Dev] 20210722 수정 : 전체 순서 및 구조 변경 -->
                                 <table>
                                     <caption>상품검색</caption>
                                     <colgroup>
-                                        <col class="w-col-tit" /><col style="width:335px;" /><col class="w-col-tit" /><col class="w-col-cnt" />
+                                        <col class="w-col-tit">
+                                        <col class="w-col-cnt">
+                                        <col class="w-col-tit">
+                                        <col class="w-col-cnt">
                                     </colgroup>
                                     <tbody>
                                         <tr>
                                             <th scope="row"><span class="in-tb">상품코드</span></th>
-                                            <td>
-                                                <div class="form-inline-group">
+                                            <td colspan="3">
+                                                <div class="input-group w-full">
+                                                    <div class="input-group-form">
+                                                        <select class="select w140">
+                                                            <option value="">대분류</option>
+                                                        </select>
+                                                    </div>
                                                     <input type="text" class="input-text w-full" placeholder="상품코드 입력">
                                                 </div>
                                             </td>
+                                        </tr>
+                                        <tr>
                                             <th scope="row"><span class="in-tb">판매상태</span></th>
-                                            <td>
+                                            <td colspan="3">
                                                 <div class="form-inline-group">
                                                     <div class="custom-radio">
                                                         <input type="radio" id="radio-1-1" class="radio" name="radio-item-1" checked=""><label for="radio-1-1">전체</label>
@@ -92,19 +103,17 @@
                                                         <input type="radio" id="radio-1-3" class="radio" name="radio-item-1"><label for="radio-1-3">품절</label>
                                                     </div>
                                                     <div class="custom-radio"><!-- 20210608 수정 : 텍스트 수정 -->
-                                                        <input type="radio" id="radio-1-4" class="radio" name="radio-item-1"><label for="radio-1-4">판매중지</label>
+                                                        <input type="radio" id="radio-1-4" class="radio" name="radio-item-1"><label for="radio-1-4">영구정지</label>
                                                     </div>
                                                     <div class="custom-radio"><!-- 20210608 수정 : 텍스트 수정 -->
-                                                        <input type="radio" id="radio-1-5" class="radio" name="radio-item-1"><label for="radio-1-5">강제품절</label>
+                                                        <input type="radio" id="radio-1-5" class="radio" name="radio-item-1"><label for="radio-1-5">일시품절</label>
                                                     </div>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row"><span class="in-tb">상품명</span></th>
-                                            <td><input type="text" class="input-text w-full" placeholder="상품명 입력"></td>
                                             <th scope="row"><span class="in-tb">전시여부</span></th>
-                                            <td>
+                                            <td colspan="3">
                                                 <div class="form-inline-group">
                                                     <div class="custom-radio">
                                                         <input type="radio" id="radio-2-1" class="radio" name="radio-item-2" checked=""><label for="radio-2-1">전체</label>
@@ -121,7 +130,7 @@
                                         <tr>
                                             <th scope="row"><span class="in-tb">전시 카테고리</span></th>
                                             <td colspan="3">
-                                                <div class="input-group w-full">
+                                                <div class="input-group w-full size-fixed"><!-- [Dev] 20210812 size-fixed 클래스 추가 -->
                                                     <div class="input-group-cell">
                                                         <select class="select">
                                                             <option value="">대분류</option>
@@ -130,6 +139,7 @@
                                                     <div class="input-group-cell">
                                                         <select class="select">
                                                             <option value="">중분류</option>
+                                                            <option value="">중분류중분류중분류중분류중분류중분류</option>
                                                         </select>
                                                     </div>
                                                     <div class="input-group-cell">
@@ -140,8 +150,48 @@
                                                 </div>
                                             </td>                                        
                                         </tr>
+                                        <tr>
+                                            <th scope="row"><span class="in-tb">입점사</span></th>
+                                            <td>
+                                                <div class="input-group">
+                                                    <input type="text" class="input-text w240" disabled="">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn-form btn-grey"><span>입점사 검색</span></button>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <th scope="row"><span class="in-tb">브랜드</span></th>
+                                            <td>
+                                                <div class="input-group">
+                                                    <input type="text" class="input-text w240" disabled="">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn-form btn-grey"><span>브랜드 검색</span></button>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><span class="in-tb">담당MD</span></th>
+                                            <td>
+                                                <div class="input-group">
+                                                    <input type="text" class="input-text w240" disabled="">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn-form btn-grey"><span>담당MD 검색</span></button>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <th scope="row"><span class="in-tb">판매정책</span></th>
+                                            <td>
+                                                <div class="form-inline-group">
+                                                    <div class="custom-checkbox">
+                                                        <input type="checkbox" id="check-201" class="checkbox" name="check-item-1"><label for="check-201"> 선물하기</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
+                                <!-- //[Dev] 20210722 수정 : 전체 순서 및 구조 변경 -->
                             </div><!--// board-form -->
 
                             <div class="btn-area mt20 mb30">
@@ -153,14 +203,14 @@
                                 <table>
                                     <caption>상품검색 목록</caption>
                                     <colgroup>
-                                        <col class="w-col-check" />
-                                        <col width="90px" />
-                                        <col width="80px" />
-                                        <col width="90px" />
-                                        <col  />
-                                        <col width="120px" />
-                                        <col width="90px" />
-                                        <col width="90px" />
+                                        <col class="w-col-check">
+                                        <col width="90px">
+                                        <col width="80px">
+                                        <col width="90px">
+                                        <col>
+                                        <col width="120px">
+                                        <col width="90px">
+                                        <col width="90px">
                                     </colgroup>
                                     <thead>
                                     <tr>
@@ -189,7 +239,7 @@
                                             <td class="text-center vt-mid"><div class="in-tb">2100324</div></td>
                                             <td class="text-center vt-mid"><div class="in-tb">맛있닭</div></td>
                                             <td class="text-left vt-mid"><div class="in-tb">맛있닭 소프트 닭 안심살 혼합</div></td>
-                                            <td class="text-center vt-mid"><div class="in-tb">19.9000</div></td>
+                                            <td class="text-right vt-mid"><div class="in-tb">19.9000</div></td><!-- [Dev] 20210722 수정 : text-center -> text-right 클래스 수정 -->
                                             <td class="text-center vt-mid"><div class="in-tb">정상</div></td>
                                             <td class="text-center vt-mid"><div class="in-tb">전시</div></td>
                                         </tr>
@@ -203,7 +253,7 @@
                                             <td class="text-center vt-mid"><div class="in-tb">2100324</div></td>
                                             <td class="text-center vt-mid"><div class="in-tb">맛있닭</div></td>
                                             <td class="text-left vt-mid"><div class="in-tb">맛있닭 소프트 닭 안심살 혼합</div></td>
-                                            <td class="text-center vt-mid"><div class="in-tb">19.9000</div></td>
+                                            <td class="text-right vt-mid"><div class="in-tb">19.9000</div></td><!-- [Dev] 20210722 수정 : text-center -> text-right 클래스 수정 -->
                                             <td class="text-center vt-mid"><div class="in-tb">정상</div></td>
                                             <td class="text-center vt-mid"><div class="in-tb">전시</div></td>
                                         </tr>
@@ -217,7 +267,7 @@
                                             <td class="text-center vt-mid"><div class="in-tb">2100324</div></td>
                                             <td class="text-center vt-mid"><div class="in-tb">맛있닭</div></td>
                                             <td class="text-left vt-mid"><div class="in-tb">맛있닭 소프트 닭 안심살 혼합</div></td>
-                                            <td class="text-center vt-mid"><div class="in-tb">19.9000</div></td>
+                                            <td class="text-right vt-mid"><div class="in-tb">19.9000</div></td><!-- [Dev] 20210722 수정 : text-center -> text-right 클래스 수정 -->
                                             <td class="text-center vt-mid"><div class="in-tb">정상</div></td>
                                             <td class="text-center vt-mid"><div class="in-tb">전시</div></td>
                                         </tr>
@@ -231,7 +281,7 @@
                                             <td class="text-center vt-mid"><div class="in-tb">2100324</div></td>
                                             <td class="text-center vt-mid"><div class="in-tb">맛있닭</div></td>
                                             <td class="text-left vt-mid"><div class="in-tb">맛있닭 소프트 닭 안심살 혼합</div></td>
-                                            <td class="text-center vt-mid"><div class="in-tb">19.9000</div></td>
+                                            <td class="text-right vt-mid"><div class="in-tb">19.9000</div></td><!-- [Dev] 20210722 수정 : text-center -> text-right 클래스 수정 -->
                                             <td class="text-center vt-mid"><div class="in-tb">정상</div></td>
                                             <td class="text-center vt-mid"><div class="in-tb">전시</div></td>
                                         </tr>
@@ -245,7 +295,7 @@
                                             <td class="text-center vt-mid"><div class="in-tb">2100324</div></td>
                                             <td class="text-center vt-mid"><div class="in-tb">맛있닭</div></td>
                                             <td class="text-left vt-mid"><div class="in-tb">맛있닭 소프트 닭 안심살 혼합</div></td>
-                                            <td class="text-center vt-mid"><div class="in-tb">19.9000</div></td>
+                                            <td class="text-right vt-mid"><div class="in-tb">19.9000</div></td><!-- [Dev] 20210722 수정 : text-center -> text-right 클래스 수정 -->
                                             <td class="text-center vt-mid"><div class="in-tb">정상</div></td>
                                             <td class="text-center vt-mid"><div class="in-tb">전시</div></td>
                                         </tr>
@@ -259,7 +309,7 @@
                                             <td class="text-center vt-mid"><div class="in-tb">2100324</div></td>
                                             <td class="text-center vt-mid"><div class="in-tb">맛있닭</div></td>
                                             <td class="text-left vt-mid"><div class="in-tb">맛있닭 소프트 닭 안심살 혼합</div></td>
-                                            <td class="text-center vt-mid"><div class="in-tb">19.9000</div></td>
+                                            <td class="text-right vt-mid"><div class="in-tb">19.9000</div></td><!-- [Dev] 20210722 수정 : text-center -> text-right 클래스 수정 -->
                                             <td class="text-center vt-mid"><div class="in-tb">정상</div></td>
                                             <td class="text-center vt-mid"><div class="in-tb">전시</div></td>
                                         </tr>
@@ -273,7 +323,7 @@
                                             <td class="text-center vt-mid"><div class="in-tb">2100324</div></td>
                                             <td class="text-center vt-mid"><div class="in-tb">맛있닭</div></td>
                                             <td class="text-left vt-mid"><div class="in-tb">맛있닭 소프트 닭 안심살 혼합</div></td>
-                                            <td class="text-center vt-mid"><div class="in-tb">19.9000</div></td>
+                                            <td class="text-right vt-mid"><div class="in-tb">19.9000</div></td><!-- [Dev] 20210722 수정 : text-center -> text-right 클래스 수정 -->
                                             <td class="text-center vt-mid"><div class="in-tb">정상</div></td>
                                             <td class="text-center vt-mid"><div class="in-tb">전시</div></td>
                                         </tr>
@@ -287,10 +337,20 @@
                                             <td class="text-center vt-mid"><div class="in-tb">2100324</div></td>
                                             <td class="text-center vt-mid"><div class="in-tb">맛있닭</div></td>
                                             <td class="text-left vt-mid"><div class="in-tb">맛있닭 소프트 닭 안심살 혼합</div></td>
-                                            <td class="text-center vt-mid"><div class="in-tb">19.9000</div></td>
+                                            <td class="text-right vt-mid"><div class="in-tb">19.9000</div></td><!-- [Dev] 20210722 수정 : text-center -> text-right 클래스 수정 -->
                                             <td class="text-center vt-mid"><div class="in-tb">정상</div></td>
                                             <td class="text-center vt-mid"><div class="in-tb">전시</div></td>
                                         </tr>
+                                        <!-- [Dev] 20210803 추가 : no data case -->
+                                        <tr class="no-data">
+                                            <td colspan="8">
+                                                <div class="message-area">
+                                                    <i class="ico-img-excl"></i>
+                                                    <p class="txt">검색버튼을 눌러야 검색이 됩니다.</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!--// [Dev] 20210803 추가 : no data case -->
                                     </tbody>
                                 </table>
                             </div><!--// board-list -->   

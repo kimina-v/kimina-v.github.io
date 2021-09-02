@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body class="dashboard"><!-- 메인일 경우 class dashboard 추가 -->
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">		
+		<script>include.headTab();</script>
+
+		<div class="content-area">
+            <div class="ui-tab">
+                <ul class="main-tab">
+                    <li class="current"><a href="#tab01">핵심지표</a></li>
+                    <li><a href="#tab02">매출분석</a></li>
+                    <li><a href="#tab03">상품분석</a></li>
+                    <li><a href="#tab04">CS분석</a></li>
+                    <li><a href="#tab05">입점사</a></li>
+                </ul>
+            </div>
+
+            <div class="ui-tab-container tab-cnt-wrap">
+                <!-- 핵심지표 -->
+                <div id="tab01" class="ui-tab-cnt tab-content active">
+                    <!-- sorting -->
+                    <div class="sorting-area">
+                        <div class="sorting-menu left-area">
+                            <div class="sorting-item">
+                                <input type="radio" id="sorting01-01" name="sorting01" checked>
+                                <label for="sorting01-01">전체</label>
+                            </div>
+                            <div class="sorting-item">
+                                <input type="radio" id="sorting01-02" name="sorting01">
+                                <label for="sorting01-02">랭킹닭컴</label>
+                            </div>
+                            <div class="sorting-item">
+                                <input type="radio" id="sorting01-03" name="sorting01">
+                                <label for="sorting01-03">피키다이어트</label>
+                            </div> 
+                        </div>
+                        <div class="date-group">
+                            <span class="year">2021년</span>
+                            <span class="month">09월</span>
+                            <span class="day">30일</span>
+                            <div class="datepicker-group">
+                                <input type="text" class="datepicker date-draw" id="c01">
+                                <label for="c01" class="btn-datepicker"><span>날짜선택하기</span></label>
+                            </div>
+                        </div>
+                        
+
+                        <div class="right-area">
+                            <div class="sorting-menu">
+                                <div class="sorting-item">
+                                    <input type="radio" id="sorting02-01" name="sorting02" checked> 
+                                    <label for="sorting02-01">주문일</label>
+                                </div>
+                                <div class="sorting-item">
+                                    <input type="radio" id="sorting02-02" name="sorting02">
+                                    <label for="sorting02-02">매출일</label>
+                                </div>
+                            </div>
+                            <div class="sorting-menu">
+                                <div class="sorting-item">
+                                    <input type="radio" id="sorting03-01" name="sorting03" checked>
+                                    <label for="sorting03-01">시간</label>
+                                </div>
+                                <div class="sorting-item">
+                                    <input type="radio" id="sorting03-02" name="sorting03">
+                                    <label for="sorting03-02">일</label>
+                                </div>
+                                <div class="sorting-item">
+                                    <input type="radio" id="sorting03-03" name="sorting03">
+                                    <label for="sorting03-03">월</label>
+                                </div> 
+                                <div class="sorting-item">
+                                    <input type="radio" id="sorting03-04" name="sorting03">
+                                    <label for="sorting03-04">년</label>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //sorting -->
+
+                    <!-- 상단 -->
+                    <div class="section-group type02">
+                        <ul class="summary-group">
+                            <li>
+                                <em>주문현황</em>
+                                <strong>95,000,000</strong>
+                                <span class="before">92,342,000</span>
+                                <span class="fluctuate type-up">3%</span>
+                            </li>
+                            <li>
+                                <em>주문건수</em>
+                                <strong>95,000,000</strong>
+                                <span class="before">92,342,000</span>
+                                <span class="fluctuate type-up">2.2%</span>
+                            </li>
+                            <li>
+                                <em>취소/환불</em>
+                                <strong>10,000,000</strong>
+                                <span class="before">19,342,000</span>
+                                <span class="fluctuate type-down">3.5%</span>
+                            </li>
+                            <li>
+                                <em>가입 합계</em>
+                                <strong>95,000,000</strong>
+                                <span class="before">92,342,000</span>
+                                <span class="fluctuate type-up">2.2%</span>
+                            </li>
+                            <li>
+                                <em>접속 합계</em>
+                                <strong>10,000,000</strong>
+                                <span class="before">19,342,000</span>
+                                <span class="fluctuate type-down">3.5%</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="board-list state-table">
+                        <table>
+                            <caption>핵심지표 요약</caption>
+                            <colgroup>
+                                <col style="width:calc(100%/13)" span="13">
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" rowspan="2" class="vt-mid"><span class="in-tb">구분</span></th>
+                                    <th scope="col" colspan="3"><span class="in-tb">주문현황(단위 : 만원)</span></th>
+                                    <th scope="col" colspan="2"><span class="in-tb">건수(단위 : 만원)</span></th>
+                                    <th scope="col" colspan="3"><span class="in-tb">가입(단위 : 만원)</span></th>
+                                    <th scope="col" colspan="4"><span class="in-tb">접속(로그인, 단위 : 만원)</span></th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">주문현황</th>
+                                    <th scope="col">주문금액</th>
+                                    <th scope="col">취소/환불</th>
+                                    <th scope="col">주문건수</th>
+                                    <th scope="col">취소/환불</th>
+                                    <th scope="col">합계</th>
+                                    <th scope="col">남성</th>
+                                    <th scope="col">여성</th>
+                                    <th scope="col">합계</th>
+                                    <th scope="col">PC</th>
+                                    <th scope="col">Mobile</th>
+                                    <th scope="col">APP</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th class="text-center vt-mid" scope="row"><div class="in-tb">전체</div></th>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-down">2.2%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-down">2.2%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-down">2.2%</span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <th class="text-center vt-mid" scope="row"><div class="in-tb">피키다이어트</div></th>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-down">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-down">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-down">2.2%</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center vt-mid" scope="row"><div class="in-tb">랭킹닭컴</div></th>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-down">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-down">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-up">2.2%</span>
+                                        <span class="ratio">40%</span>
+                                    </td>
+                                    <td class="text-right vt-mid">
+                                        <strong>76,000</strong>
+                                        <span class="before">70,000</span>
+                                        <span class="fluctuate type-down">2.2%</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //상단 -->
+
+                    <!-- 주문현황 -->
+                    <div class="section-group">
+                        <h5 class="title">주문 현황 <span>(단위 : 만원)</span></h5>
+                        <div class="left-group">
+                            <ul class="summary-group type-icon">
+                                <li>
+                                    <span class="title">합계</span>
+                                    <strong>40,500,000</strong>
+                                    <span class="ratio">30%</span>
+                                </li>
+                                <li class="ico-order">
+                                    <span class="title">주문건수</span>
+                                    <strong>40,500,000</strong>
+                                    <span class="ratio">30%</span>
+                                </li>
+                                <li class="ico-cancel">
+                                    <span class="title">취소/환불</span>
+                                    <strong>40,500,000</strong>
+                                    <span class="ratio">40%</span>
+                                </li>
+                            </ul>
+                            <div class="box-group">
+                                <div class="left-group left-size01">
+                                    <div class="div-head-scroll state-table board-list type03">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:calc(calc(100% - 17px) / 4)" span="4">
+                                                <col style="width:17px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">구분</th>
+                                                    <th scope="col">합계</th>
+                                                    <th scope="col">주문건수</th>
+                                                    <th scope="col">취소/환불</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                    <div class="state-table div-body-scroll hei-size02  board-list type03">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:25%" span="4">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">랭킹닭컴</th>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">피키다이어트</th>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">에이드</th>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="right-group graph-sm2">
+                                    <div class="graph-area">그래프 영역</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-group">
+                            <div class="graph-area">그래프 영역</div>
+                        </div>
+                        <a href="#" class="btn-more">더보기</a>
+                    </div>
+                    <!-- //주문현황 -->
+
+                    <!-- 건수현황 -->
+                    <div class="section-group">
+                        <h5 class="title">건수 현황 <span>(단위 : 만원)</span></h5>
+                        <div class="left-group">
+                            <ul class="summary-group type-icon">
+                                <li>
+                                    <span class="title">합계</span>
+                                    <strong>40,500,000</strong>
+                                    <span class="ratio">30%</span>
+                                </li>
+                                <li class="ico-order">
+                                    <span class="title">주문건수</span>
+                                    <strong>40,500,000</strong>
+                                    <span class="ratio">30%</span>
+                                </li>
+                                <li class="ico-cancel">
+                                    <span class="title">취소/환불</span>
+                                    <strong>40,500,000</strong>
+                                    <span class="ratio">40%</span>
+                                </li>
+                            </ul>
+                            <div class="box-group">
+                                <div class="left-group left-size01">
+                                    <div class="div-head-scroll state-table board-list type03">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:calc(calc(100% - 17px) / 4)" span="4">
+                                                <col style="width:17px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">구분</th>
+                                                    <th scope="col">합계</th>
+                                                    <th scope="col">주문건수</th>
+                                                    <th scope="col">취소/환불</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                    <div class="state-table div-body-scroll hei-size02  board-list type03">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:25%" span="4">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">랭킹닭컴</th>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">피키다이어트</th>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">에이드</th>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="right-group graph-sm2">
+                                    <div class="graph-area">그래프 영역</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-group">
+                            <div class="graph-area">그래프 영역</div>
+                        </div>
+                        <a href="#" class="btn-more">더보기</a>
+                    </div>
+                    <!-- //건수현황 -->
+                    
+                    <!-- 가입현황 -->
+                    <div class="section-group">
+                        <h5 class="title">가입 현황 <span>(단위 : 만원)</span></h5>
+                        <div class="left-group">
+                            <ul class="summary-group type-icon">
+                                <li>
+                                    <span class="title">합계</span>
+                                    <strong>40,500,000</strong>
+                                    <span class="ratio">30%</span>
+                                </li>
+                                <li class="ico-man">
+                                    <span class="title">남성</span>
+                                    <strong>40,500,000</strong>
+                                    <span class="ratio">30%</span>
+                                </li>
+                                <li class="ico-woman">
+                                    <span class="title">여성</span>
+                                    <strong>40,500,000</strong>
+                                    <span class="ratio">40%</span>
+                                </li>
+                            </ul>
+                            <div class="box-group">
+                                <div class="left-group left-size01">
+                                    <div class="div-head-scroll state-table board-list type03">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:calc(calc(100% - 17px) / 4)" span="4">
+                                                <col style="width:17px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">구분</th>
+                                                    <th scope="col">합계</th>
+                                                    <th scope="col">남성</th>
+                                                    <th scope="col">여성</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                    <div class="state-table div-body-scroll hei-size02  board-list type03">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:25%" span="4">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">랭킹닭컴</th>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">피키다이어트</th>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">에이드</th>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="right-group graph-sm2">
+                                    <div class="graph-area">그래프 영역</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-group">
+                            <div class="graph-area">그래프 영역</div>
+                        </div>
+                        <a href="#" class="btn-more">더보기</a>
+                    </div>
+                    <!-- //가입현황 -->
+                    
+                    <!-- 접속현황 -->
+                    <div class="section-group">
+                        <h5 class="title">접속 현황 <span>(단위 : 만원)</span></h5>
+                        <div class="left-group">
+                            <ul class="summary-group type-icon">
+                                <li>
+                                    <span class="title">합계</span>
+                                    <strong>400,500,000</strong>
+                                    <span class="ratio">30%</span>
+                                </li>
+                                <li class="ico-pc">
+                                    <span class="title">PC</span>
+                                    <strong>40,500</strong>
+                                    <span class="ratio">30%</span>
+                                </li>
+                                <li class="ico-mobile">
+                                    <span class="title">Mobile Web</span>
+                                    <strong>40,500</strong>
+                                    <span class="ratio">30%</span>
+                                </li>
+                                <li class="ico-app">
+                                    <span class="title">APP</span>
+                                    <strong>40,500</strong>
+                                    <span class="ratio">40%</span>
+                                </li>
+                            </ul>
+                            <div class="box-group">
+                                <div class="left-group left-size01">
+                                    <div class="div-head-scroll state-table board-list type03">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:calc(calc(100% - 17px) / 5)" span="5">
+                                                <col style="width:17px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">구분</th>
+                                                    <th scope="col">합계</th>
+                                                    <th scope="col">PC</th>
+                                                    <th scope="col">Mobile</th>
+                                                    <th scope="col">APP</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                    <div class="state-table div-body-scroll hei-size02  board-list type03">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:20%" span="5">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">랭킹닭컴</th>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">피키다이어트</th>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">에이드</th>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="right-group graph-sm2">
+                                    <div class="graph-area">그래프 영역</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-group">
+                            <div class="graph-area">그래프 영역</div>
+                        </div>
+                        <a href="#" class="btn-more">더보기</a>
+                    </div>
+                    <!-- //접속현황 -->
+                </div>
+                <!-- //핵심지표 -->
+                <!-- 매출분석 -->
+                <div id="tab02" class="ui-tab-cnt tab-content">
+                    <!-- sorting -->
+                    <div class="sorting-area">
+                        <div class="sorting-menu left-area">
+                            <div class="sorting-item">
+                                <input type="radio" id="sorting04-01" name="sorting04" checked>
+                                <label for="sorting04-01">전체</label>
+                            </div>
+                            <div class="sorting-item">
+                                <input type="radio" id="sorting04-02" name="sorting04">
+                                <label for="sorting04-02">랭킹닭컴</label>
+                            </div>
+                            <div class="sorting-item">
+                                <input type="radio" id="sorting04-03" name="sorting04">
+                                <label for="sorting04-03">피키다이어트</label>
+                            </div> 
+                        </div>
+                        <div class="date-group">
+                            <span class="year">2021년</span>
+                            <span class="month">09월</span>
+                            <span class="day">30일</span>
+                            <div class="datepicker-group">
+                                <input type="text" class="datepicker date-draw" id="c02">
+                                <label for="c02" class="btn-datepicker"><span>날짜선택하기</span></label>
+                            </div>
+                        </div>
+                        
+
+                        <div class="right-area">
+                            <div class="sorting-menu">
+                                <div class="sorting-item">
+                                    <input type="radio" id="sorting05-01" name="sorting05" checked> 
+                                    <label for="sorting05-01">주문일</label>
+                                </div>
+                                <div class="sorting-item">
+                                    <input type="radio" id="sorting05-02" name="sorting05">
+                                    <label for="sorting05-02">매출일</label>
+                                </div>
+                            </div>
+                            <div class="sorting-menu">
+                                <div class="sorting-item">
+                                    <input type="radio" id="sorting06-01" name="sorting06" checked>
+                                    <label for="sorting06-01">시간</label>
+                                </div>
+                                <div class="sorting-item">
+                                    <input type="radio" id="sorting06-02" name="sorting06">
+                                    <label for="sorting06-02">일</label>
+                                </div>
+                                <div class="sorting-item">
+                                    <input type="radio" id="sorting06-03" name="sorting06">
+                                    <label for="sorting06-03">월</label>
+                                </div> 
+                                <div class="sorting-item">
+                                    <input type="radio" id="sorting03-04" name="sorting03">
+                                    <label for="sorting03-04">년</label>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //sorting -->
+        
+                    <!-- 매출 현황 -->
+                    <div class="section-group">
+                        <h5 class="title">매출 현황 <span>(단위 : 만원)</span></h5>
+                        <div class="left-group">
+                            <ul class="summary-group">
+                                <li>
+                                    <em>전체매출</em>
+                                    <strong>95,000,000</strong>
+                                    <span class="before">92,342,000</span>
+                                    <span class="fluctuate type-up">3%</span>
+                                </li>
+                                <li>
+                                    <em>매출금액</em>
+                                    <strong>95,000,000</strong>
+                                    <span class="before">92,342,000</span>
+                                    <span class="fluctuate type-up">2.2%</span>
+                                </li>
+                                <li>
+                                    <em>취소/환불</em>
+                                    <strong>10,000,000</strong>
+                                    <span class="before">19,342,000</span>
+                                    <span class="fluctuate type-down">3.5%</span>
+                                </li>
+                            </ul>
+                            <div class="box-group">
+                                <div class="left-group left-size01">
+                                    <div class="div-head-scroll state-table board-list type03">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:calc(calc(100% - 17px) / 4)" span="4">
+                                                <col style="width:17px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">구분</th>
+                                                    <th scope="col">매출현황</th>
+                                                    <th scope="col">결제금액</th>
+                                                    <th scope="col">취소/환불</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                    <div class="state-table div-body-scroll board-list type03">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:25%" span="4">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">랭킹닭컴</th>
+                                                    <td class="text-right vt-mid">
+                                                        <strong>76,000</strong>
+                                                        <span class="before">70,000</span>
+                                                        <span class="fluctuate type-up">2.2%</span>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right vt-mid">
+                                                        <strong>76,000</strong>
+                                                        <span class="before">70,000</span>
+                                                        <span class="fluctuate type-up">2.2%</span>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right vt-mid">
+                                                        <strong>76,000</strong>
+                                                        <span class="before">70,000</span>
+                                                        <span class="fluctuate type-down">2.2%</span>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">피키다이어트</th>
+                                                    <td class="text-right vt-mid">
+                                                        <strong>76,000</strong>
+                                                        <span class="before">70,000</span>
+                                                        <span class="fluctuate type-up">2.2%</span>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right vt-mid">
+                                                        <strong>76,000</strong>
+                                                        <span class="before">70,000</span>
+                                                        <span class="fluctuate type-up">2.2%</span>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right vt-mid">
+                                                        <strong>76,000</strong>
+                                                        <span class="before">70,000</span>
+                                                        <span class="fluctuate type-down">2.2%</span>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">에이드</th>
+                                                    <td class="text-right vt-mid">
+                                                        <strong>76,000</strong>
+                                                        <span class="before">70,000</span>
+                                                        <span class="fluctuate type-up">2.2%</span>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right vt-mid">
+                                                        <strong>76,000</strong>
+                                                        <span class="before">70,000</span>
+                                                        <span class="fluctuate type-up">2.2%</span>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right vt-mid">
+                                                        <strong>76,000</strong>
+                                                        <span class="before">70,000</span>
+                                                        <span class="fluctuate type-down">2.2%</span>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">에이드</th>
+                                                    <td class="text-right vt-mid">
+                                                        <strong>76,000</strong>
+                                                        <span class="before">70,000</span>
+                                                        <span class="fluctuate type-up">2.2%</span>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right vt-mid">
+                                                        <strong>76,000</strong>
+                                                        <span class="before">70,000</span>
+                                                        <span class="fluctuate type-up">2.2%</span>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right vt-mid">
+                                                        <strong>76,000</strong>
+                                                        <span class="before">70,000</span>
+                                                        <span class="fluctuate type-down">2.2%</span>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="right-group graph-sm">
+                                    <div class="graph-area">그래프</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-group">
+                            <div class="graph-area">그래프</div>
+                        </div>
+                        <a href="#" class="btn-more">더보기</a>
+                    </div> 
+                    <!-- //매출 현황 -->
+        
+                    <!-- 채널별 결제 현황 -->
+                    <div class="section-group">
+                        <h5 class="title">채널별 결제 현황 <span>(단위 : 만원)</span></h5>
+                        <div class="left-group">
+                            <ul class="summary-group type-icon">
+                                <li class="ico-pc">
+                                    <span class="title">PC</span>
+                                    <strong>40,500,000</strong>
+                                    <span class="ratio">30%</span>
+                                </li>
+                                <li class="ico-mobile">
+                                    <span class="title">Mobile Web</span>
+                                    <strong>40,500,000</strong>
+                                    <span class="ratio">30%</span>
+                                </li>
+                                <li class="ico-app">
+                                    <span class="title">APP</span>
+                                    <strong>40,500,000</strong>
+                                    <span class="ratio">40%</span>
+                                </li>
+                            </ul>
+                            <div class="box-group">
+                                <div class="left-group left-size01">
+                                    <div class="div-head-scroll state-table board-list type03">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:calc(calc(100% - 17px) / 4)" span="4">
+                                                <col style="width:17px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">구분</th>
+                                                    <th scope="col">PC</th>
+                                                    <th scope="col">Mobile</th>
+                                                    <th scope="col">APP</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                    <div class="state-table div-body-scroll hei-size02  board-list type03">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:25%" span="4">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">랭킹닭컴</th>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">피키다이어트</th>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">에이드</th>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>76,000</strong>
+                                                        <span class="ratio">40%</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="right-group graph-sm2">
+                                    <div class="graph-area">그래프 영역</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-group">
+                            <div class="graph-area">그래프 영역</div>
+                        </div>
+                        <a href="#" class="btn-more">더보기</a>
+                    </div>
+                    <!-- //채널별 결제 현황 -->
+        
+                    <!-- 결제수단별 결제 현황 -->
+                    <div class="bg-type">
+                        <h5 class="title">결제수단별 결제 현황 <span>(단위 : 만원)</span></h5>
+                        <div class="section-group methods-pay-satus">
+                            <div class="graph-wrap fix-size480">
+                                <h6 class="stitle">결제수단별 비율정보</h6>
+                                <div class="graph-area">그래프 영역</div>
+                            </div>
+                            <div class="graph-wrap">
+                                <h6 class="stitle">결제수단별 매출 금액</h6>
+                                <div class="graph-area">그래프 영역</div>
+                            </div>
+                        </div>
+                        <div class="section-group size-half">
+                            <div class="graph-wrap">
+                                <h6 class="stitle">적립금 사용 정보</h6>
+                                <div class="graph-area">그래프 영역</div>
+                            </div>
+                            <div class="graph-wrap">
+                                <h6 class="stitle">쿠폰 사용 정보</h6>
+                                <div class="graph-area">그래프 영역</div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-more">더보기</a>
+                    </div>
+                    <!-- //결제수단별 결제 현황 -->
+        
+                    <!-- 회원 매출 현황 -->
+                    <h5 class="title">회원 매출 현황</h5>
+                    <div class="section-group member-sales-status">
+                        <div class="graph-wrap fix-size425">
+                            <h6 class="stitle">결제수단별 매출 금액</h6>
+                            <div class="graph-area">그래프 영역</div>
+                        </div>
+                        <div class="graph-wrap size-auto">
+                            <h6 class="stitle">회원 성별</h6>
+                            <div class="graph-area">그래프 영역</div>
+                        </div>
+                        <div class="table-wrap">
+                            <h6 class="stitle">회원 연령대</h6>
+                            <div class="board-list">
+                                <table>
+                                    <caption>회원 연령대</caption>
+                                    <colgroup>
+                                        <col style="width:12%" span="7">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"><span class="in-tb">구분</span></th>
+                                            <th scope="col"><span class="in-tb">10대</span></th>
+                                            <th scope="col"><span class="in-tb">20대</span></th>
+                                            <th scope="col"><span class="in-tb">30대</span></th>
+                                            <th scope="col"><span class="in-tb">40대</span></th>
+                                            <th scope="col"><span class="in-tb">50대</span></th>
+                                            <th scope="col"><span class="in-tb">60대</span></th>
+                                            <th scope="col"><span class="in-tb">70대 이상</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr class="total">
+                                            <th><div class="in-tb">합계</div></th>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center"><div class="in-tb">남자</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><div class="in-tb">여자 </div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-group comp-status">
+                        <div class="left-group">
+                            <h5 class="title">입점사 매출 현황 <span>(단위 : 만원)</span></h5>
+                            <div class="board-list">
+                                <table>
+                                    <caption>입점사 매출 현황</caption>
+                                    <colgroup>
+                                        <col>
+                                        <col style="width:18%" span="4">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"><span class="in-tb">입점업체</span></th>
+                                            <th scope="col"><span class="in-tb">매출금액</span></th>
+                                            <th scope="col"><span class="in-tb">결제금액</span></th>
+                                            <th scope="col"><span class="in-tb">취소/환불</span></th>
+                                            <th scope="col"><span class="in-tb">비율(%)</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-left"><div class="in-tb">입점업체 #1</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">19.2</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><div class="in-tb">입점업체 #2</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">19.2</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><div class="in-tb">입점업체 #3</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">19.2</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><div class="in-tb">입점업체 #4</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">19.2</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><div class="in-tb">입점업체 #5</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">19.2</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><div class="in-tb">입점업체 #6</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">19.2</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><div class="in-tb">입점업체 #7</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">19.2</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><div class="in-tb">입점업체 #8</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">19.2</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><div class="in-tb">입점업체 #9</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">19.2</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><div class="in-tb">입점업체 #10</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">4,500</div></td>
+                                            <td class="text-right"><div class="in-tb">19.2</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="right-group size-lg">
+                            <div class="graph-area">그래프영역</div>
+                        </div>
+                        <a href="#" class="btn-more">더보기</a>
+                    </div>
+                    <!-- //회원 매출 현황 -->
+                </div>
+                <!-- //매출분석 -->
+                <!-- 상품분석 -->
+                <div id="tab03" class="ui-tab-cnt tab-content">상품분석</div>
+                <!-- //상품분석 -->
+                <!-- CS분석 -->
+                <div id="tab04" class="ui-tab-cnt tab-content">cs분석</div>
+                <!-- //CS분석 -->
+                <!-- 입점사 -->
+                <div id="tab05" class="ui-tab-cnt tab-content">입점사</div>
+                <!-- //입점사 -->
+            </div>
+		</div><!--// content-area -->
+	</section>
+	<!--// ========== 컨텐츠 영역 :: container ========== -->
+</div><!--// wrap -->
+</body>
+</html>

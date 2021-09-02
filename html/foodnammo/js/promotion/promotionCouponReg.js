@@ -1,5 +1,7 @@
 $(document).ready(function () {
+
     addOnlyNumberEvent($(".onlyNumber"), {isComma: true});
+
     //빈 radio 첫째 값으로 초기화
     $('input[type="radio"]').each(function (i, radio) {
         if (radio.name != "vCoverageType") {
@@ -110,10 +112,34 @@ $(document).ready(function () {
         $('#commonProductSearchPop').load('/common/selectProductPop', $('#couponPopFrm').serialize());
     });
 
+    //지급급액, 지급률 관리
+    $("#nSalePrice").on('change', function (event) {
+        var nSalePrice = $("#nSalePrice").val();
+        if($('#nSaleRate').val()!= 0){
+            $('#nSaleRate').val(0);
+            alert('지급금액 또는 지급율을 입력해 주세요.');
+        }
+        if(nSalePrice.length >1){
+            $('#nSalePrice').val(nSalePrice.replace(/(^0+)/, ""));
+        }else{
+            $('#nSalePrice').val(0);
+        }
+    });
+    $("#nSaleRate").on('change', function (event) {
+        var nSaleRate = $("#nSaleRate").val();
+        if($('#nSalePrice').val()!= 0){
+            $('#nSalePrice').val(0);
+            alert('지급금액 또는 지급율을 입력해 주세요.');
+        }
+        if(nSaleRate.length >1){
+            $('#nSaleRate').val(nSaleRate.replace(/(^0+)/, ""));
+        }else{
+            $('#nSaleRate').val(0);
+        }
+    });
 });
 
 function addMultiBrand(brandList) {
-    console.log(11111);
     if (typeof (brandList) === 'undefined') {
         return false;
     }
@@ -252,7 +278,80 @@ function setCategoryShowHide(idx) {
     }
 }
 
+// 밸리데이션
 function isValidate() {
+
+    if (isEmpty($('#vCouponnm').val())) {
+        alert("쿠폰명은 필수입니다.");
+        return false;
+    }
+
+    if (isEmpty($('#vCouponType').val())) {
+        alert("쿠폰유형은 필수입니다.");
+        return false;
+    }
+
+    if ($('#vCouponType').val() == "C03") {
+        if (isEmpty($('#vCupPubCnt').val())) {
+            alert("발행 쿠폰번호는 필수입니다.(난수 쿠폰)");
+            return false;
+        }
+
+        if (isEmpty($('#vCupPubLgth').val())) {
+            alert("쿠폰 자릿수는 필수입니다.(난수 쿠폰)");
+            return false;
+        }
+    }
+
+    if ($('#vCouponType').val() == "C03") {
+        if (isEmpty($('#vCupPubCnt').val())) {
+            alert("발행 쿠폰번호는 필수입니다.(난수 쿠폰)");
+            return false;
+        }
+
+        if (isEmpty($('#vCupPubLgth').val())) {
+            alert("쿠폰 자릿수는 필수입니다.(난수 쿠폰)");
+            return false;
+        }
+    }
+
+
+    if ($("input[name^='vPrtQtyLimitYn']:checked").val() == "Y") {
+        if (isEmpty($('#nMaxPrtQty').val())||$('#nMaxPrtQty').val() == 0) {
+            alert("발행수량이 한정인 경우 수량은 필수입니다.");
+            return false;
+        }
+    }
+
+    if ($("input[name^='vDownLimitYn']:checked").val() == "Y") {
+        if (isEmpty($('#nMaxDownQty').val())||$('#nMaxDownQty').val() == 0) {
+            alert("다운로드가 한정인 경우 수량은 필수입니다.");
+            return false;
+        }
+    }
+
+    if ($("input[name^='vPrtDurType']:checked").val()=="2") {
+        if (isEmpty($('#vPrtSdtmYmd').val())||isEmpty($('#vPrtSdtmHh').val())||isEmpty($('#vPrtSdtmMi').val())||
+            isEmpty($('#vPrtSdtmYmd').val())||isEmpty($('#vPrtEdtmHh').val())||isEmpty($('#vPrtEdtmMi').val())) {
+            alert("발급기간이 한정인 경우 발급기간은 필수입니다.");
+            return false;
+        }
+    }
+
+    if ($("input[name^='vUseDurType']:checked").val() =="2") {
+        if (isEmpty($('#vUseSdtmYmd').val())||isEmpty($('#vUseSdtmHh').val())||isEmpty($('#vUseSdtmMi').val())||
+            isEmpty($('#vUseSdtmYmd').val())||isEmpty($('#vUseEdtmHh').val())||isEmpty($('#vUseEdtmMi').val())) {
+            alert("사용기간이 한정인 경우 사용기간은 필수입니다.");
+            return false;
+        }
+    }else if ($("input[name^='vUseDurType']:checked").val() =="3") {
+        if (isEmpty($('#nUseDcnt').val())){
+            alert("사용기간이 한정인 경우 사용기간은 필수입니다.");
+            return false;
+        }
+    }
+
+
     return true;
 }
 
@@ -352,7 +451,6 @@ function goSave() {
         });
     }
 }
-
 function goCopy() {
 
     const reqData = setReqData();
@@ -383,3 +481,5 @@ function goCopy() {
     }
 
 }
+
+

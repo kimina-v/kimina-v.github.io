@@ -58,6 +58,7 @@
 							<select class="select">
 								<option value="">선택</option>
 								<option value="">주문번호</option>
+                                <option value="">교환신청번호</option><!--[Dev] 20210826 텍스트변경 -->
                                 <option value="">회원ID</option>
                                 <option value="">주문자명</option>
                                 <option value="">수취인명</option>
@@ -123,26 +124,33 @@
 								<th scope="row"><span class="in-tb">진행상태</span></th>
 								<td colspan="3">
                                     <div class="form-inline-group">
+                                        <!--[Dev] 20210826 체크박스 텍스트 변경 -->
                                         <div class="custom-checkbox">
                                             <input type="checkbox" id="check-101" class="checkbox" name="check-item-1" checked=""><label for="check-101"> 전체</label>
                                         </div>
                                         <div class="custom-checkbox">
-                                            <input type="checkbox" id="check-102" class="checkbox" name="check-item-1"><label for="check-102"> 반품요청</label>
+                                            <input type="checkbox" id="check-102" class="checkbox" name="check-item-1"><label for="check-102"> 교환요청</label>
                                         </div>
                                         <div class="custom-checkbox">
-                                            <input type="checkbox" id="check-103" class="checkbox" name="check-item-1"><label for="check-103"> 반품접수</label>
+                                            <input type="checkbox" id="check-103" class="checkbox" name="check-item-1"><label for="check-103"> 교환접수</label>
                                         </div>
                                         <div class="custom-checkbox">
-                                            <input type="checkbox" id="check-104" class="checkbox" name="check-item-1"><label for="check-104"> 반품승인</label>
+                                            <input type="checkbox" id="check-104" class="checkbox" name="check-item-1"><label for="check-104"> 교환처리중</label>
                                         </div>
                                         <div class="custom-checkbox">
-                                            <input type="checkbox" id="check-105" class="checkbox" name="check-item-1"><label for="check-105"> 반품배송중</label>
+                                            <input type="checkbox" id="check-105" class="checkbox" name="check-item-1"><label for="check-105"> 교환반품수거중</label>
                                         </div>
                                         <div class="custom-checkbox">
-                                            <input type="checkbox" id="check-106" class="checkbox" name="check-item-1"><label for="check-106"> 반품완료</label>
+                                            <input type="checkbox" id="check-106" class="checkbox" name="check-item-1"><label for="check-106"> 교환반품완료</label>
                                         </div>
                                         <div class="custom-checkbox">
-                                            <input type="checkbox" id="check-107" class="checkbox" name="check-item-1"><label for="check-107"> 반품불가</label>
+                                            <input type="checkbox" id="check-107" class="checkbox" name="check-item-1"><label for="check-107"> 교환배송중</label>
+                                        </div>
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="check-107" class="checkbox" name="check-item-1"><label for="check-107"> 교환완료</label>
+                                        </div>
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="check-107" class="checkbox" name="check-item-1"><label for="check-107"> 교환불가</label>
                                         </div>
                                     </div>                   
 								</td>
@@ -283,7 +291,7 @@
 			
 			<div class="board-option mt60">
 				<div class="left-area">
-					<div class="page-info">총 <strong class="text-primary">1,000</strong>건 /19페이지</div>
+                    <div class="page-info mt10">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div><!-- [Dev] 20210721 수정 : mt10 추가 -->
 				</div><!--// left-area -->
 				<div class="right-area">
 					<button type="button" class="btn-func btn-default"><i class="ico-btn-xls"></i><span>엑셀 다운로드</span></button>
@@ -330,6 +338,7 @@
                         <th scope="col"><span class="in-tb">인플루언서</span></th>
                     </tr>
                     </thead>
+                    <!-- 20210803 수정 : 주문금액 우측정렬 -->
                     <tbody>
                         <tr>
                             <td class="text-center"><div class="in-tb">999</div></td>
@@ -338,19 +347,21 @@
                             <td class="text-center"><a href="#" class="in-tb">20210511V00FEC</a></td>
                             <td class="text-center"><div class="in-tb">20210511V00FEC</div></td>
                             <td class="text-center"><a href="#" class="in-tb">홍길*<br>(hong3**/닭대리)</a></td>
-                            <td class="text-center"><div class="in-tb">오렌지멤버스</div></td>
-                            <td class="text-center"><div class="in-tb">맛있닭</div></td>
+                            <!--[Dev] 20210804 노출방식 변경 -->
+                            <td class="text-center"><div class="in-tb">오렌지멤버스, 일반</div></td>
+                            <td class="text-center"><div class="in-tb">맛있닭 외 1</div></td>
                             <td class="text-center"><div class="in-tb elps-link">맛있닭 소프트 닭 안심살</div></td>
                             <td class="text-center"><div class="in-tb">PC</div></td>
                             <td class="text-center"><div class="in-tb">상품오배송</div></td>
-                            <td class="text-center"><div class="in-tb">2,500</div></td>
+                            <td class="text-right"><div class="in-tb">2,500</div></td>
                             <td class="text-center"><div class="in-tb">신용카드</div></td>
-                            <td class="text-center"><div class="in-tb">반품수거중</div></td>
+                            <td class="text-center"><div class="in-tb">교환처리중</div></td><!--[Dev] 20210826 텍스트변경 -->
                             <td class="text-center">
                                 <div class="in-tb">아이디</div>
                             </td>
                         </tr>
                     </tbody>
+                    <!--// 20210803 수정 : 주문금액 우측정렬 -->
                 </table>
             </div>
 

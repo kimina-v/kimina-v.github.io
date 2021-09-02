@@ -31,7 +31,9 @@
 .brand-intro-box.on{display:block;}
 
 .article-title-div{position:relative; max-width:1100px; margin:0 auto 20px;}
-.article-title-div .title{font-size:20px; font-weight:500;}
+.article-title-div .title{font-size:20px; font-weight:500; display:inline-block}
+.article-title-div .title.type2{font-size:24px;}
+.article-title-div .title + .btn-icon-mark{vertical-align:middle; margin-top:-10px}
 .article-title-div .right{position:absolute; top:50%; right:0; transform: translateY(-50%); -webkit-transform: translateY(-50%);}
 
 .sorting-result-tit{position:relative; max-width:1100px; margin:0 auto 20px; font-size:20px; font-weight:500;}
@@ -145,7 +147,7 @@
 .brand-content .sorting-search-box ~ .brand-list-wrap{margin-top:40px}
 .brand-search-wrap .search-head ~ .sorting-search-box{margin-top:60px;}
 .brand-content .page-head + .frame-slide-out{margin-top:70px;}
-.brand-content  .frame-slide-out ~ .frame-full-bar,
+.brand-content .frame-slide-out ~ .frame-full-bar,
 .brand-content .frame-sm ~ .brand-search-wrap,
 .brand-content .frame-sm ~ .frame-sm:not(.brand-list-wrap ){margin-top:120px;}
 .brand-content .frame-full-bar ~ .frame-slide-out,
@@ -153,4 +155,80 @@
 .brand-content .sorting-result-tit + .brand-list-wrap{margin-top:10px}
 
 
+/* 이달의 쿠폰 */
+.coupon-bnr{margin:0 auto; width:1100px;}
+.discount-coupon{position:relative; border:1px solid #FF7F56; text-align:left; border-radius:10px; overflow:hidden; padding-right:100px; height:210px} 
+.discount-coupon .inner{padding:25px 35px 25px 35px}
+.discount-coupon .inner .tit{display:block; color:#FF6001; font-size:20px; font-weight:500; line-height:1;}
+.discount-coupon .inner .tit .ico-bl-crown4{margin-right:6px;}
+.discount-coupon .inner .tit em{font-size:42px; font-family:'Roboto'; font-weight:700;}
+.discount-coupon .inner .prd-name{font-size:18px; font-weight:500; line-height:26px; color:#333}
+.discount-coupon .inner .desc{font-size:13px; color:#888; margin-top:5px}
+.discount-coupon .inner .ico-excl-type3{vertical-align:middle; margin-top:-3px}
+.discount-coupon .inner .text-grey2{position:absolute; bottom:25px; left:35px}
+.discount-coupon .download{position:absolute; width:100px; height:100%; top:0; right:0; background-color:#FF7F56;}
+.discount-coupon .download .btn-download-coupon{width:100%; height:100%; font-size:24px; color:#fff; font-weight:700;}
+.discount-coupon .download .ico-btn-download3{display:block; margin:0 auto 5px}
+/* 완료쿠폰 */
+.discount-coupon.done{border:1px solid #ccc;} 
+.discount-coupon.done .inner .tit{color:#666;}
+.discount-coupon.done .inner .prd-name{color:#666}
+.discount-coupon.done .download{background-color:#ccc;}
 
+/* level coupon */
+.level-coupon{position:relative; width:390px}
+.level-coupon .inner-box{width:300px; height:160px; border:1px solid #eee; border-radius:8px 12px 12px 8px; padding:25px 25px 25px 35px; text-align:left; background:#fff;}
+.level-coupon .require-box{position:absolute; top:0; right:2px; width:93px; height:160px; background:#FFEFEA; border: 1px solid #FFDFD5; border-radius:8px 12px 12px 8px;}
+.level-coupon .require-box .btn-require-coupon{display:block; width:100%; height:100%; color:#666; padding:60px 0}
+.level-coupon .inner-box .tit{display:block; color:#FF6001; font-size:15px; font-weight:400; line-height:1;}
+.level-coupon .inner-box .tit em{font-size:30px; font-family:'Roboto'; font-weight:700;}
+.level-coupon .inner-box .prd-name{font-size:16px; font-weight:400; line-height:23px; color:#333; height:46px} 
+.level-coupon .inner-box .desc{color:#888; margin-top:7px;}
+.coupon-wrap-box{background: #F8F8F8; border:1px solid #eee; border-radius:4px; padding:60px 150px; text-align:center;}
+.coupon-wrap-box .coupon-grid-list > ul > li{display:none}
+.coupon-wrap-box .coupon-grid-list > ul > li.active{display:block}
+.coupon-grid-list{text-align:center;}
+.coupon-grid-list li .card-li-inner{position:relative;}
+.coupon-grid-list li .card-li-inner .scroll-area{height:100%;}
+.coupon-grid-list ul ~ .btn-link-txt5{margin-top:25px;}
+.coupon-grid-list .ui-coupon-more{display:none;}
+
+.card-li-inner .coupon-info-card{display:none; position:absolute; top:0; left:0; width:100%; height:100%; z-index:1;  border:1px solid #ccc; background:#fff; padding:35px 25px 35px 20px; border-radius: 10px;}
+.card-li-inner .coupon-info-card.active{display:block}
+.card-li-inner .coupon-info-card.type2{padding:20px 20px 20px 10px;}
+
+.coupon-info-card .bl-list-type1{padding-left:10px}
+.coupon-info-card .bl-list-type1 li + li{margin-top:15px;}
+.coupon-info-card .btn-x-sm2{position:absolute; top:25px; right:25px}
+.coupon-info-card.type2 .btn-x-sm2{ top:15px; right:15px}
+/* 간격 */
+.content-wrap.coupon-content .page-head ~ .coupon-bnr{margin-top:30px}
+.content-wrap.coupon-content .page-head ~ .frame-sm,
+.content-wrap.coupon-content .frame-sm ~ .coupon-bnr{margin-top:60px}
+
+.coupon-wrap-box .title-guide-box{padding-left:70px; position:relative; min-height:62px; display:inline-block; text-align:left; margin-bottom:25px; overflow:hidden}
+.title-guide-box .tit{font-size:24px; color:#333;}
+.title-guide-box .tit > strong{font-weight:700;}
+.title-guide-box .desc{font-size:13px; color:#666; margin-top:5px}
+
+.coupon-wrap-box [class*="ico-cou-level"]{position:absolute; top:0; left:0}
+[class*="ico-cou-level"]{display:inline-block; width:60px; height:62px; background:url('../images/icon/ico_cou_level.png') 0 0;}
+.ico-cou-level01{background-position:0 0;}
+.ico-cou-level02{background-position:0 0;}
+.ico-cou-level03{background-position:0 0;}
+.ico-cou-level04{background-position:0 0;}
+.ico-cou-level05{background-position:0 0;}
+.ico-cou-level06{background-position:0 0;}
+
+.coupon-level-list .swiper-button-prev{top:30px; left:200px}
+.coupon-level-list .swiper-button-next{top:30px; right:200px}
+.coupon-level-list .swiper-button-prev > .ico-arr-left,
+.coupon-level-list .swiper-button-next > .ico-arr-right{width:30px; height:30px; color:#ccc}
+
+.layer-wrap .layer-pop.coupon-info-pop{background:#fff; width:460px;border-radius: 10px;}
+.layer-pop.coupon-info-pop .layer-inner {padding:30px 30px; }
+.layer-pop.coupon-info-pop .layer-inner .layer-content{padding:0}
+.layer-pop.coupon-info-pop dt{margin-bottom:20px; color:#333; font-size:18px; font-weight:500;}
+.layer-pop.coupon-info-pop dd + dd{margin-top:10px}
+
+.coupon-content .frame-sm ~ .btn-bottom-area{margin-top:60px}

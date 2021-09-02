@@ -65,7 +65,14 @@
 			<div class="layer-body">
 				<div class="layer-content">
 					<div class="in-content">
-						<div class="board-form">
+                        <!-- [Dev] 20210726 수정 : 추가 -->
+                        <div class="page-info text-right">
+                            <div class="text-guide-sm2">
+                                <i class="es"><em class="blind">필수입력</em></i>는 필수항목입니다.
+                            </div>
+                        </div>
+                        <!-- //[Dev] 20210726 수정 : 추가 -->
+						<div class="board-form mt10"><!-- [Dev] 20210726 클래스 추가 -->
                             <table>
                                 <caption>검색</caption>
                                 <colgroup>
@@ -73,7 +80,7 @@
                                 </colgroup>
                                 <tbody>
                                     <tr>
-                                        <th scope="row"><span class="in-tb">상품 그룹 명</span></th>
+                                        <th scope="row"><span class="in-tb">상품 그룹 명<i class="es"><em class="blind">필수입력</em></i></span></th><!-- [Dev] 20210726 수정 : <i class="es"><em class="blind">필수입력</em></i> 추가 -->
                                         <td>
                                             <input type="text" id="" class="input-text w300" value="" placeholder="상품 그룹 명 입력">
                                         </td>     
@@ -100,7 +107,7 @@
                         </div><!--// board-form -->
                         <div class="board-option mt30 mb10">
                             <div class="left-area">
-                                <div class="page-info">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div>
+                                <div class="page-info mt10">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div><!-- [Dev] 20210721 수정 : mt10 추가 -->
                             </div><!--// left-area -->
                             <div class="right-area">
                                 <button type="button" class="btn-func btn-default"><span>상품 추가</span></button>

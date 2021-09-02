@@ -12,8 +12,8 @@
 .header{position:relative; width:100%; z-index:20;}
 .header-top{position:relative;}
 .header-top .logo > a{display:block; width:100%; height:100%;}
-.header-top .head-logo{display:inline-block; width:71px; height:27px; background:url("../images/logo.png"); background-size:cover;}
-.header-top.header-detail .head-logo{width:82px;height:31px}
+.head-logo{display:inline-block; width:71px; height:27px; background:url("../images/logo.png"); background-size:cover;}
+.head-logo{width:82px;height:31px}
 .header-top.header-detail .page-title-area{padding:10px 0}
 .header-top.header-detail .page-title-area .btn-back{padding:23px 15px 17px}
 .header-inner{display:table; width:100%; table-layout:fixed; padding:10px 15px;}
@@ -329,6 +329,8 @@
 .login-area .inner-flex{margin-top:15px;}
 .login-area .btn-bottom-area ~ .page-guide-center{margin-top:25px;}
 .login-area .page-guide-center ~ .log-benefit-bnr{margin-top:45px;;}
+
+.join-title{}
 
 .sns-login{margin:40px 0;}
 .sns-login-list .ico-sns-loin{display:inline-block; width:52px; height:52px; overflow:hidden; background:url("../images/icon/ico_sns_login_m.png"); background-size:auto 52px;}

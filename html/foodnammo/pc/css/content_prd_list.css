@@ -9,7 +9,7 @@
 /**** Product item ****/
 .prd-item,
 .prd-item .desc-bottom{position:relative}
-.prd-item .tit{display:block; font-size:15px; line-height:26px; max-height:52px; height:52px; margin-bottom:8px;}
+.prd-item .tit{display:block; font-size:15px; line-height:26px; max-height:52px; height:52px; margin-bottom:5px;}
 .prd-item .brand-name{display:block; color:#3A4C67; font-size:13px;}
 .prd-item .price{font-size:12px;}
 .prd-item .price > .num{font-family:"Roboto"; font-size:18px; font-weight:700;}
@@ -133,7 +133,7 @@
 .prd-info-area.type-sm .column.tit .price-item > li .num{font-size:15px; color:#333; font-weight:700; }
 .prd-info-area.type-sm .column.point{width:75px; font-size:12px; color:#666}
 
-.grid-list-wrap.type-list .prd-info-area .column.tit{padding:5px 10px 0 20px;}
+.grid-list-wrap.type-list .prd-info-area .column.tit{padding:0 10px 0 20px;}
 .grid-list-wrap.type-list .prd-info-area .column.tit .tit{font-size:16px; height:48px; max-height:48px; margin-bottom:5px}
 .grid-list-wrap.type-list .prd-info-area .column.img{width:100px; height:100px; border-radius:4px;}
 .grid-list-wrap.type-list .prd-item-list > li{margin-top:40px;}

@@ -94,7 +94,7 @@
 
 			<div class="board-option">
 				<div class="left-area">
-					<div class="page-info">총 <strong class="text-primary">1,000</strong>건</div>
+					<div class="page-info mt10">총 <strong class="text-primary">1,000</strong>건</div><!-- [Dev] 20210721 수정 : mt10 추가 -->
 				</div>
 				<div class="right-area">
 					<div class="btn-group">
@@ -112,13 +112,13 @@
                     <caption>목록</caption>
                     <colgroup>
                         <col class="w-col-check">
+						<col style="width:90px;"><!--[Dev] 20210804 배송비 삭제 후 배송그룹으로 변경 -->
                         <col style="width:100px;">
                         <col style="width:100px;">
                         <col style="width:100px;">
                         <col>
                         <col style="width:70px;">
-                        <col span="2" style="width:100px;">
-                        <col style="width:90px;">
+                        <col span="2" style="width:100px;">                        
                         <col style="width:100px;">
                         <col style="width:100px;">
                         <col style="width:120px;">
@@ -131,14 +131,14 @@
 									<input type="checkbox" class="checkbox" name="check-item-300"><label for="check-all"><span class="blind">모두 선택</span></label>
 								</div><!-- 모두 선택 addClass ui-check-all -->
 							</th>
+							<th scope="col"><span class="in-tb">배송그룹</span></th><!--[Dev] 20210804 배송비 삭제 후 배송그룹으로 변경 -->
 							<th scope="col"><span class="in-tb">입점사</span></th>
 							<th scope="col"><span class="in-tb">상품코드</span></th>
 							<th scope="col"><span class="in-tb">이미지</span></th>
 							<th scope="col"><span class="in-tb">상품명/옵션</span></th>
 							<th scope="col"><span class="in-tb">수량</span></th>
 							<th scope="col"><span class="in-tb">상품금액</span></th>
-							<th scope="col"><span class="in-tb">할인금액</span></th>
-							<th scope="col"><span class="in-tb">배송비</span></th>
+							<th scope="col"><span class="in-tb">할인금액</span></th>							
 							<th scope="col"><span class="in-tb">총주문금액</span></th>
 							<th scope="col"><span class="in-tb">배송방법</span></th>
 							<th scope="col"><span class="in-tb">운송장번호</span></th>
@@ -152,6 +152,7 @@
 									<input type="checkbox" id="check-c1" class="checkbox" name="check-item-300"><label for="check-c1"><span class="blind">선택</span></label>
 								</div>
 							</td>
+							<td class="text-center"><div class="in-tb">그룹A</div></td><!--[Dev] 20210804 배송비 삭제 후 배송그룹으로 변경 -->
                             <td class="text-center"><div class="in-tb">맛있닭</div></td>
                             <td class="text-center"><div class="in-tb">KJD111</div></td>
 							<td class="text-center">
@@ -163,8 +164,7 @@
 							</td>
                             <td class="text-center"><div class="in-tb">1</div></td>
                             <td class="text-right"><div class="in-tb">20,000</div></td><!-- [Dev] 20210706 숫자 정렬 클래스 수정 -->
-                            <td class="text-right"><div class="in-tb">2,500</div></td><!-- [Dev] 20210706 숫자 정렬 클래스 수정 -->
-                            <td class="text-right"><div class="in-tb">선물<br/>2,500</div></td><!-- [Dev] 20210706 숫자 정렬 클래스 수정 -->
+                            <td class="text-right"><div class="in-tb">2,500</div></td><!-- [Dev] 20210706 숫자 정렬 클래스 수정 -->                            
                             <td class="text-right"><div class="in-tb">10,000</div></td><!-- [Dev] 20210706 숫자 정렬 클래스 수정 -->
                             <td class="text-center"><div class="in-tb">일반배송</div></td>
                             <td class="text-center"><a href="#none" class="in-tb">CJ대한통운<br>111222333</a></td>
@@ -175,27 +175,30 @@
 					    </tr>
 						<tr class="inner-table">
 							<td colspan="13" >
-								<div class="board-list">
-									<table>
-										<caption>목록</caption>
-										<colgroup>
-											<col style="width:33%"><col style="width:33%"><col>
-										</colgroup>
-										<thead>
-											<tr>
-												<th scope="col"><span class="in-tb">처리일시</span></th>
-												<th scope="col"><span class="in-tb">진행상태</span></th>
-												<th scope="col"><span class="in-tb">처리자</span></th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td class="text-center"><div class="in-tb">2021.05.11 14:00:00</div></td>
-												<td class="text-center"><div class="in-tb">승인대기</div></td>
-												<td class="text-center"><div class="in-tb">BATCH</div></td>
-											</tr>
-										</tbody>
-									</table>
+								<!--[Dev] 20210721 <div class="bg-tb-box">추가 -->
+								<div class="bg-tb-box">
+									<div class="board-list">
+										<table>
+											<caption>목록</caption>
+											<colgroup>
+												<col style="width:33%"><col style="width:33%"><col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col"><span class="in-tb">처리일시</span></th>
+													<th scope="col"><span class="in-tb">진행상태</span></th>
+													<th scope="col"><span class="in-tb">처리자</span></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="text-center"><div class="in-tb">2021.05.11 14:00:00</div></td>
+													<td class="text-center"><div class="in-tb">승인대기</div></td>
+													<td class="text-center"><div class="in-tb">BATCH</div></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 								</div>
 							</td>
 						</tr>
@@ -205,23 +208,24 @@
 									<input type="checkbox" id="check-c1" class="checkbox" name="check-item-300"><label for="check-c1"><span class="blind">선택</span></label>
 								</div>
 							</td>
+							<td class="text-center"><div class="in-tb">그룹A</div></td><!--[Dev] 20210804 배송비 삭제 후 배송그룹으로 변경 -->
                             <td class="text-center"><div class="in-tb">맛있닭</div></td>
                             <td class="text-center"><div class="in-tb">KJD111</div></td>
 							<td class="text-center">
 								<a href="#none" class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></a>
 							</td>                            
 							<td class="text-left">
-								<a href="#none"  class="in-tb">잇메이트 스위트 칠리소스 100g </a>
+								<a href="#none" class="in-tb">맛있닭 소프트 닭 안심살 </a>
+								<div>오리지널 10팩(1팩당 1,390원)</div>
 							</td>
                             <td class="text-center"><div class="in-tb">1</div></td>
-                            <td class="text-right"><div class="in-tb">20,000</div></td>
-                            <td class="text-right"><div class="in-tb">2,500</div></td>
-                            <td class="text-right"><div class="in-tb">선물<br/>2,500</div></td>
-                            <td class="text-right"><div class="in-tb">10,000</div></td>
-                            <td class="text-center"><a href="#none" class="in-tb">특급배송</a></td>
+                            <td class="text-right"><div class="in-tb">20,000</div></td><!-- [Dev] 20210706 숫자 정렬 클래스 수정 -->
+                            <td class="text-right"><div class="in-tb">2,500</div></td><!-- [Dev] 20210706 숫자 정렬 클래스 수정 -->                            
+                            <td class="text-right"><div class="in-tb">10,000</div></td><!-- [Dev] 20210706 숫자 정렬 클래스 수정 -->
+                            <td class="text-center"><div class="in-tb">일반배송</div></td>
                             <td class="text-center"><a href="#none" class="in-tb">CJ대한통운<br>111222333</a></td>
                             <td class="text-center">
-								<div>입금완료</div>
+								<div>상품준비중</div>
 								<a href="#none" class="in-tb">[변경내역 3건]</a>
 							</td>
 					    </tr>
@@ -231,20 +235,20 @@
 									<input type="checkbox" id="check-c1" class="checkbox" name="check-item-300"><label for="check-c1"><span class="blind">선택</span></label>
 								</div>
 							</td>
+							<td class="text-center"><div class="in-tb">그룹A</div></td><!--[Dev] 20210804 배송비 삭제 후 배송그룹으로 변경 -->
                             <td class="text-center"><div class="in-tb">맛있닭</div></td>
                             <td class="text-center"><div class="in-tb">KJD111</div></td>
 							<td class="text-center">
 								<a href="#none" class="prdimg"><img src="../../images/_sample/prdimg-50x50.png" alt="상품 이미지"></a>
 							</td>                            
 							<td class="text-left">
-								<a href="#none"  class="in-tb">맛있닭 소프트 닭 안심살 훈제맛있닭 소프트 닭 안심살 훈제맛있닭 소프트 닭 안심살 훈제</a>
+								<a href="#none" class="in-tb">맛있닭 소프트 닭 안심살 </a>
 								<div>오리지널 10팩(1팩당 1,390원)</div>
 							</td>
                             <td class="text-center"><div class="in-tb">1</div></td>
-                            <td class="text-right"><div class="in-tb">20,000</div></td>
-                            <td class="text-right"><div class="in-tb">2,500</div></td>
-                            <td class="text-right"><div class="in-tb">선물<br/>2,500</div></td>
-                            <td class="text-right"><div class="in-tb">10,000</div></td>
+                            <td class="text-right"><div class="in-tb">20,000</div></td><!-- [Dev] 20210706 숫자 정렬 클래스 수정 -->
+                            <td class="text-right"><div class="in-tb">2,500</div></td><!-- [Dev] 20210706 숫자 정렬 클래스 수정 -->                            
+                            <td class="text-right"><div class="in-tb">10,000</div></td><!-- [Dev] 20210706 숫자 정렬 클래스 수정 -->
                             <td class="text-center"><div class="in-tb">일반배송</div></td>
                             <td class="text-center"><a href="#none" class="in-tb">CJ대한통운<br>111222333</a></td>
                             <td class="text-center">
@@ -254,41 +258,55 @@
 					    </tr>
 						<tr class="inner-table">
 							<td colspan="13" >
-								<div class="board-list">
-									<table>
-										<caption>목록</caption>
-										<colgroup>
-											<col style="width: 33%"><col style="width: 33%"><col>
-										</colgroup>
-										<thead>
-											<tr>
-												<th scope="col"><span class="in-tb">처리일시</span></th>
-												<th scope="col"><span class="in-tb">진행상태</span></th>
-												<th scope="col"><span class="in-tb">처리자</span></th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td class="text-center"><div class="in-tb">2021.05.11 14:00:00</div></td>
-												<td class="text-center"><div class="in-tb">승인대기</div></td>
-												<td class="text-center"><div class="in-tb">BATCH</div></td>
-											</tr>
-										</tbody>
-									</table>
+								<!--[Dev] 20210721 <div class="bg-tb-box">추가 -->
+								<div class="bg-tb-box">
+									<div class="board-list">
+										<table>
+											<caption>목록</caption>
+											<colgroup>
+												<col style="width: 33%"><col style="width: 33%"><col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col"><span class="in-tb">처리일시</span></th>
+													<th scope="col"><span class="in-tb">진행상태</span></th>
+													<th scope="col"><span class="in-tb">처리자</span></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="text-center"><div class="in-tb">2021.05.11 14:00:00</div></td>
+													<td class="text-center"><div class="in-tb">승인대기</div></td>
+													<td class="text-center"><div class="in-tb">BATCH</div></td>
+												</tr>
+												<tr>
+													<td class="text-center"><div class="in-tb">2021.05.11 14:00:00</div></td>
+													<td class="text-center"><div class="in-tb">승인대기</div></td>
+													<td class="text-center"><div class="in-tb">BATCH</div></td>
+												</tr>
+												<tr>
+													<td class="text-center"><div class="in-tb">2021.05.11 14:00:00</div></td>
+													<td class="text-center"><div class="in-tb">승인대기</div></td>
+													<td class="text-center"><div class="in-tb">BATCH</div></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 								</div>
 							</td>
 						</tr>
 						<tfoot>
-							<tr class="total">
-								<th colspan="5"><div class="in-tb">합계</div></th>
+							<tr class="total total-close-bt">
+								<!--[Dev] 20210804  colspan="6" 변경 및 맨뒤에 td하나 삭제 -->
+								<th colspan="6"><div class="in-tb">합계</div></th>
 								<td><div class="in-tb text-center">2</div></td>
-								<td><div class="in-tb text-center">30,000</div></td>
-								<td><div class="in-tb text-center">5,000</div></td>
-								<td><div class="in-tb text-center">22,000</div></td>
+								<!--[Dev] 20210721 텍스트 정렬변경 -->
+								<td><div class="in-tb text-right">30,000</div></td>
+								<td><div class="in-tb text-right">5,000</div></td>
+								<td><div class="in-tb text-right">22,000</div></td>
 								<td></td>
 								<td></td>
-								<td></td>
-								<td></td>
+								<td></td>								
 							</tr>
 						<tfoot>
 				    </tbody>
@@ -316,12 +334,13 @@
 							<td><div class="in-tb">2,500원</div></td>
 						</tr>
 						<tr>
-							<th scope="row"><span class="in-tb">쿠폰할인</span></th>
+							<th scope="row"><span class="in-tb">할인금액</span></th>
 							<td>
 								<div class="in-tb"><!-- 할인금액이 다른경우 그리드 체크 -->
 									<ul class="coupon-list">
-										<li>-10,000원 / 닭가슴살 안심 10& 상품할인 쿠폰</li>
-										<li>-2,000원 / 닭가슴살 안심 10& 상품할인 쿠폰</li>
+										<!--[Dev] 20210804 <span class="txt-sidebar mt2">추가 -->
+										<li>-10,000원<span class="txt-sidebar mt2"></span>닭가슴살 안심 10& 상품할인 쿠폰</li>
+										<li>-2,000원<span class="txt-sidebar mt2"></span>닭가슴살 안심 10& 상품할인 쿠폰</li>
 									</ul>
 								</div>
 							</td>
@@ -372,7 +391,7 @@
 			<!-- 배송지 변경 전 -->
 			<div class="cnt-title-area mt40">
                 <h3 class="tit-cnt">배송지정보</h3>
-				<span class="desc">(주문상태-’배송준비중 이후 수정 불가)</span>
+				<!-- <span class="desc">(주문상태-’배송준비중 이후 수정 불가)</span> [Dev] 20210826 제거-->
 				<div class="right-info">
 					<button type="button" class="btn-func btn-default"><span>배송지변경</span></button>
 				</div>
@@ -408,7 +427,7 @@
 			<!-- 배송지 변경 시 -->
 			<div class="cnt-title-area mt40">
                 <h3 class="tit-cnt">배송지정보</h3>
-				<span class="desc">(주문상태-’상품준비중’까지 변경가능)</span>
+				<!-- <span class="desc">(주문상태-’상품준비중’까지 변경가능)</span> [Dev] 20210826 제거-->
 				<div class="right-info">
 					<!-- <button type="button" class="btn-func btn-default"><span>배송지변경</span></button> [Dev] 20210706 삭제, 필수항목 문구 삽입-->
 					<span class="text-guide-sm2"><i class="es"><em class="blind">필수입력</em></i>는 필수항목입니다.</span>
@@ -544,7 +563,7 @@
 							</td>
 						</tr>
 						<tr>
-							<th scope="row"><span class="in-tb">내용</span></th>
+							<th scope="row"><span class="in-tb">내용<i class="es"><em class="blind">필수입력</em></i></span></th><!--[Dev] 20210804 <i class="es"><em class="blind">필수입력</em></i>추가 -->
 							<td>
 								<div class="textarea-count-box">
 									<textarea id="" class="textarea" placeholder="내용입력"></textarea>

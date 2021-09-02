@@ -67,7 +67,7 @@
                                 </select>
                             </td>
                         </tr>
-                        <tr>                            
+                        <!-- <tr>                            
                             <th scope="row"><span class="in-tb">관리자</span></th>
                             <td>
                                 <div class="input-group">
@@ -88,7 +88,7 @@
                                     </div>
                                 </div>
                              </td>
-                        </tr>
+                        </tr> [Dev] 20210727 제거 -->
                     </tbody>
                 </table>		
             </div><!--// board-form -->
@@ -98,83 +98,127 @@
                 <button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
             </div>
 
-            
-            <div class="board-option mt60">
-                <div class="left-area">
-                   
-                </div><!--// left -->
-                <div class="right-area">
-                    <button type="button" class="btn-func btn-default"><span>브랜드 검색</span></button>
+            <!--[Dev] 20210819 적용여부 항목 추가, 찜위치변경 및 board-movable-wrap테이블 추가 -->
+            <div class="board-movable-wrap">
+                <div class="board-option mt60">
+                    <!-- [Dev] 20210727 추가 -->
+                    <div class="left-area">
+                        <div class="page-info">총  <strong class="text-primary">1,000</strong>건</div>
+                    </div>
+                    <!-- //[Dev] 20210727 추가 -->
+                    <div class="right-area">
+                        <!-- [Dev] 20210727 추가 -->			
+                        <div class="btn-lst vertical-t">
+                            <button type="button" class="btn-func btn-default move all first-row"><span>최상</span></button>
+                            <div class="btn-set">
+                                <button type="button" class="btn-mv-up move all up-row"><i class="ico-arr-up"></i><span class="blind">위로</span></button>
+                                <div class="mv-box">
+                                    <input type="text" class="step" name="step" value="1">
+                                    <span class="input-group-txt txt">칸 이동</span>
+                                </div>
+                                <button type="button" class="btn-mv-down move all down-row"><i class="ico-arr-down"></i><span class="blind">아래로</span></button>
+                            </div>
+                            <button type="button" class="btn-func btn-default move all last-row"><span>최하</span></button>
+                        </div>
+                        <!-- //[Dev] 20210727 추가 -->
+                        <button type="button" class="btn-func btn-default"><span>브랜드 검색</span></button>
+                    </div>
                 </div>
-            </div>
-            <div class="board-list mt10">
-                <table>
-                    <caption>목록</caption>
-                    <colgroup>
-                        <col class="w-col-check">
-                        <col style="width:260px;">
-                        <col style="width:auto;">
-                        <col style="width:250px;">
-                        <col style="width:250px;">
-                        <col style="width:350px;">
-                    </colgroup>
-                    <thead>
-                    <tr>
-                        <th scope="col" class="list-check">
-                            <div class="custom-checkbox single">
-                                <input type="checkbox" id="check-all" class="checkbox ui-check-all" name="check-item-101"><label for="check-all"><span class="blind">모두 선택</span></label>
-                            </div><!-- 모두 선택 addClass ui-check-all -->
-                        </th>
-                        <th scope="col"><span class="in-tb">브랜드 코드</span></th>
-                        <th scope="col"><span class="in-tb">브랜드 명</span></th>
-                        <th scope="col"><span class="in-tb">찜</span></th>
-                        <th scope="col"><span class="in-tb">상태</span></th>
-                        <th scope="col"><span class="in-tb">관리자</span></th>
-                    </tr>
-                    </thead>
-                    <tbody>
+                <div class="board-list movable-row mt10">
+                    <table>
+                        <caption>목록</caption>
+                        <colgroup>
+                            <col class="w-col-check">
+                            <col style="width:200px;">
+                            <col style="width:auto;">
+                            <col style="width:200px;">
+                            <col style="width:200px;">
+                            <col style="width:160px;">
+                            <col style="width:350px;">
+                        </colgroup>
+                        <thead>
                         <tr>
-                            <td class="list-check">
+                            <th scope="col" class="list-check">
                                 <div class="custom-checkbox single">
-                                    <input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-                                </div>
-                            </td>
-                            <td class="text-center"><div class="in-tb">2205</div></td>
-                            <td class="text-center"><div class="in-tb">잇메이트</div></td>
-                            <td class="text-center"><div class="in-tb">2,999</div></td>
-                            <td class="text-center"><div class="in-tb">사용</div></td>
-                            <td class="text-center"><div class="in-tb">ID/명 출력</div></td>
+                                    <input type="checkbox" id="check-all" class="checkbox ui-check-all" name="check-item-101"><label for="check-all"><span class="blind">모두 선택</span></label>
+                                </div><!-- 모두 선택 addClass ui-check-all -->
+                            </th>
+                            <th scope="col"><span class="in-tb">브랜드 코드</span></th>
+                            <th scope="col"><span class="in-tb">브랜드 명</span></th>
+                            <th scope="col"><span class="in-tb">상태</span></th>
+                            <th scope="col"><span class="in-tb">찜</span></th>
+                            <th scope="col"><span class="in-tb">적용여부</span></th>
+                            <th scope="col"><span class="in-tb">관리자</span></th>
                         </tr>
-                        <tr>
-                            <td class="list-check">
-                                <div class="custom-checkbox single">
-                                    <input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-                                </div>
-                            </td>
-                            <td class="text-center"><div class="in-tb">2205</div></td>
-                            <td class="text-center"><div class="in-tb">잇메이트</div></td>
-                            <td class="text-center"><div class="in-tb">2,999</div></td>
-                            <td class="text-center"><div class="in-tb">사용</div></td>
-                            <td class="text-center"><div class="in-tb">ID/명 출력</div></td>
-                        </tr>
-                        <tr>
-                            <td class="list-check">
-                                <div class="custom-checkbox single">
-                                    <input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
-                                </div>
-                            </td>
-                            <td class="text-center"><div class="in-tb">2205</div></td>
-                            <td class="text-center"><div class="in-tb">잇메이트</div></td>
-                            <td class="text-center"><div class="in-tb">2,999</div></td>
-                            <td class="text-center"><div class="in-tb">사용</div></td>
-                            <td class="text-center"><div class="in-tb">ID/명 출력</div></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="btn-area mt10">
-                <div class="left">
-                    <button type="button" class="btn-option btn-default"><span>선택 삭제</span></button>
+                        </thead>
+                        <tbody>
+                            <tr class="movable" id="3">
+                                <td class="list-check">
+                                    <div class="custom-checkbox single">
+                                        <input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+                                    </div>
+                                </td>
+                                <td class="text-center"><div class="in-tb">2205</div></td>
+                                <td class="text-center"><div class="in-tb">잇메이트</div></td>
+                                <td class="text-center"><div class="in-tb">사용</div></td>
+                                <td class="text-center"><div class="in-tb">2,999</div></td>
+                                <td class="text-center">
+                                    <div class="input-group-form">
+                                        <select class="select w140">
+                                            <option value="">적용</option>
+                                            <option value="">미적용</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td class="text-center"><div class="in-tb">ID/명 출력</div></td>
+                            </tr>
+                            <tr class="movable" id="2">
+                                <td class="list-check">
+                                    <div class="custom-checkbox single">
+                                        <input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+                                    </div>
+                                </td>
+                                <td class="text-center"><div class="in-tb">2205</div></td>
+                                <td class="text-center"><div class="in-tb">잇메이트</div></td>
+                                <td class="text-center"><div class="in-tb">사용</div></td>
+                                <td class="text-center"><div class="in-tb">2,999</div></td>
+                                <td class="text-center">
+                                    <div class="input-group-form">
+                                        <select class="select w140">
+                                            <option value="">적용</option>
+                                            <option value="">미적용</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td class="text-center"><div class="in-tb">ID/명 출력</div></td>
+                            </tr>
+                            <tr class="movable" id="1">
+                                <td class="list-check">
+                                    <div class="custom-checkbox single">
+                                        <input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
+                                    </div>
+                                </td>
+                                <td class="text-center"><div class="in-tb">2205</div></td>
+                                <td class="text-center"><div class="in-tb">잇메이트</div></td>
+                                <td class="text-center"><div class="in-tb">사용</div></td>
+                                <td class="text-center"><div class="in-tb">2,999</div></td>
+                                <td class="text-center">
+                                    <div class="input-group-form">
+                                        <select class="select w140">
+                                            <option value="">적용</option>
+                                            <option value="">미적용</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td class="text-center"><div class="in-tb">ID/명 출력</div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btn-area mt10">
+                    <div class="left">
+                        <button type="button" class="btn-option btn-default"><span>선택 삭제</span></button>
+                    </div>
                 </div>
             </div>
 			

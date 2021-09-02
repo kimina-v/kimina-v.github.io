@@ -44,76 +44,72 @@
 
 			
 
-			<!-- 상세검색영역 -->
-			<div class="searh-detail-area ui-toggle-content">
-				<div class="board-form">	
-					<table>
-						<caption>정보입력</caption>
-						<colgroup>
-							<col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
-						</colgroup>
-						<tbody>
-							<tr>
-								<th scope="row"><span class="in-tb">등록 사이트</span></th>
-								<td>
-									<div class="input-group-form">
-										<select class="select w140">
-											<option value="">랭킹닭컴</option>
-										</select>
+			<div class="board-form">	
+				<table>
+					<caption>정보입력</caption>
+					<colgroup>
+						<col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"><span class="in-tb">등록 사이트</span></th>
+							<td>
+								<div class="input-group-form">
+									<select class="select w140">
+										<option value="">랭킹닭컴</option>
+									</select>
+								</div>
+							</td>
+							<th scope="row"><span class="in-tb">베스트 상품 유형</span></th>
+							<td>
+								<div class="input-group-form">
+									<select class="select w140">
+										<option value="">판매킹</option>
+										<option value="" selected>별별랭킹</option>
+										<option value="">알뜰킹</option>
+										<option value="">성분 랭킹</option>
+									</select>
+								</div>
+							</td>
+						</tr>	                           
+						<tr>
+							<th scope="row"><span class="in-tb">별별랭킹 명</span></th>
+							<td>
+								<input type="text" id="" class="input-text w-full" value="" placeholder="별별랭킹 명을 입력">
+							</td>
+							<th scope="row"><span class="in-tb">관리자</span></th>
+							<td>
+								<div class="input-group">
+									<input type="text" class="input-text w300" disabled>
+									<span class="input-group-btn">
+										<button type="button" class="btn-form btn-grey"><span>관리자 검색</span></button>
+									</span>
+								</div>
+							</td>
+						</tr>	
+						<tr>
+							<th scope="row"><span class="in-tb">전시여부</span></th>
+							<td colspan="3">
+								<div class="form-inline-group">
+									<div class="custom-radio">
+										<input type="radio" id="radio-1-1" class="radio" name="radio-item-1" checked=""><label for="radio-1-1">전체</label>
 									</div>
-								</td>
-								<th scope="row"><span class="in-tb">베스트 상품 유형</span></th>
-								<td>
-									<div class="input-group-form">
-										<select class="select w140">
-											<option value="">판매킹</option>
-                                            <option value="" selected>별별랭킹</option>
-                                            <option value="">알뜰킹</option>
-											<option value="">성분 랭킹</option>
-										</select>
+									<div class="custom-radio">
+										<input type="radio" id="radio-1-2" class="radio" name="radio-item-1"><label for="radio-1-2">미전시</label>
 									</div>
-								</td>
-                            </tr>	                           
-                            <tr>
-								<th scope="row"><span class="in-tb">별별랭킹 명</span></th>
-								<td>
-									<input type="text" id="" class="input-text w-full" value="" placeholder="별별랭킹 명을 입력">
-								</td>
-								<th scope="row"><span class="in-tb">관리자</span></th>
-								<td>
-									<div class="input-group">
-										<input type="text" class="input-text w300" disabled>
-										<span class="input-group-btn">
-											<button type="button" class="btn-form btn-grey"><span>관리자 검색</span></button>
-										</span>
+									<div class="custom-radio">
+										<input type="radio" id="radio-1-3" class="radio" name="radio-item-1"><label for="radio-1-3">전시</label>
 									</div>
-								</td>
-                            </tr>	
-							<tr>
-								<th scope="row"><span class="in-tb">전시여부</span></th>
-								<td colspan="3">
-									<div class="form-inline-group">
-                                        <div class="custom-radio">
-                                            <input type="radio" id="radio-1-1" class="radio" name="radio-item-1" checked=""><label for="radio-1-1">전체</label>
-                                        </div>
-                                        <div class="custom-radio">
-                                            <input type="radio" id="radio-1-2" class="radio" name="radio-item-1"><label for="radio-1-2">미전시</label>
-                                        </div>
-                                        <div class="custom-radio">
-                                            <input type="radio" id="radio-1-3" class="radio" name="radio-item-1"><label for="radio-1-3">전시</label>
-                                        </div>
-                                    </div>
-								</td>
-                            </tr>	
-						</tbody>
-					</table>		
-				</div><!--// board-form -->
-				<div class="btn-area">
-					<button type="button" class="btn-basic-md btn-primary"><span>검색</span></button>
-					<button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
-				</div>
+								</div>
+							</td>
+						</tr>	
+					</tbody>
+				</table>		
+			</div><!--// board-form -->
+			<div class="btn-area mt40">
+				<button type="button" class="btn-basic-md btn-primary"><span>검색</span></button>
+				<button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
 			</div>
-			<!--// 상세검색영역 -->
 			<div class="board-movable-wrap mt60">
 				<div class="board-option">
 					<div class="left-area">
@@ -135,12 +131,13 @@
 						<button type="button" class="btn-func btn-default"><span>별별랭킹 등록</span></button>
 					</div><!--// right-area -->
 				</div>
-
-				<div class="board-list movable-row mt10 vm-table">
+				<!--[Dev] 20210721 board-list에 scroll-table추가 vm-table제거-->
+				<div class="board-list scroll-table movable-row mt10">
 					<table>
 						<caption>목록</caption>
 						<colgroup>
-							<col style="width:auto;">
+							<!--[Dev] 20210721 width:auto를 402px로 수정-->
+							<col style="width:402px;">
 							<col style="width:120px;">
 							<col style="width:120px;">
 							<col style="width:330px;">

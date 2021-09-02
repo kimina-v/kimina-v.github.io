@@ -107,15 +107,19 @@
             <div class="cnt-title-area mt40">
                 <h3 class="tit-cnt">내용</h3>
             </div>
-            <div class="sub-tab mt10">
-                <ul>
-                    <li class="current"><a href="#none"><span>상세설명(PC)</span></a></li>
-                    <li><a href="#none"><span>상세설명(Mobile)</span></a></li>
-                </ul>
-            </div>
-            <div class="text-editor-area">
-                에디터 영역
-            </div>
+
+			<!--[Dev] 20210723 탭추가 -->
+			<div class="ui-tab sub-tab mt10"><!-- [pub] 스크립트 불필요시 ui-tab class 삭제 -->
+				<ul>
+					<li class="current"><a href="#tab2-1"><span>상세설명(PC)</span></a></li>
+					<li><a href="#tab2-2"><span>상세설명(Mobile)</span></a></li>
+				</ul>
+			</div><!--// tab-menu -->
+			<!--[Dev] 20210726  <div class="_pb-inner-ex">제거-->
+			<div class="ui-tab-container tab-cnt-wrap">
+				<div id="tab2-1" class="ui-tab-cnt active tab-content"></div>
+				<div id="tab2-2" class="ui-tab-cnt tab-content"></div>
+			</div><!--// ui-tab-container -->
 
             <div class="btn-area mt20">
                 <button type="button" class="btn-basic-md btn-primary"><span>등록</span></button>

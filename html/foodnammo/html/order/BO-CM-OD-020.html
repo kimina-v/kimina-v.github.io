@@ -59,6 +59,7 @@
 							<select class="select">
 								<option value="">선택</option>
 								<option value="">주문번호</option>
+								<option value="">취소신청번호</option><!--[Dev] 20210826 추가 -->
 								<option value="">회원ID</option>
 								<option value="">주문자명</option>
 								<option value="">수취인명</option>
@@ -333,7 +334,8 @@
 							<th scope="col"><span class="in-tb">진행상태</span></th>
 							<th scope="col"><span class="in-tb">인플루언서</span></th>
 						</tr>
-					</thead>                    
+					</thead>   
+                    <!-- 20210803 수정 : 취소금액 우측정렬 -->                 
 					<tbody>
                         <tr>
                             <td class="list-num"><div class="in-tb">999</div></td>
@@ -342,12 +344,13 @@
                             <td class="text-center"><a href="#none" class="in-tb">20210511V00FEC</a></td>
                             <td class="text-center"><div class="in-tb">20210511V00FEC</div></td>
                             <td class="text-center"><a href="#" class="in-tb">홍길*<br/>(kimy**/닭과장)</a></td>
-                            <td class="text-center"><div class="in-tb">오렌지멤버스</div></td>
-                            <td class="text-center"><div class="in-tb">맛있닭</div></td>
+                            <!--[Dev] 20210804 노출방식 변경 -->
+                            <td class="text-center"><div class="in-tb">오렌지멤버스, 일반</div></td>
+                            <td class="text-center"><div class="in-tb">맛있닭 외 1</div></td>
                             <td class="text-left"><div class="in-tb">맛있닭 소프트 닭 안심.</div></td>
                             <td class="text-center"><div class="in-tb">PC</div></td>
                             <td class="text-center"><div class="in-tb">구매의사 없음</div></td>
-                            <td class="text-center"><div class="in-tb">2,000</div></td>
+                            <td class="text-right"><div class="in-tb">2,000</div></td>
                             <td class="text-center"><div class="in-tb">신용카드</div></td>
                             <td class="text-center"><div class="in-tb">취소완료<br />(구매자)</div></td>
                             <td class="text-center">
@@ -366,7 +369,7 @@
                             <td class="text-left"><div class="in-tb">맛있닭 소프트 닭 안심.</div></td>
                             <td class="text-center"><div class="in-tb">PC</div></td>
                             <td class="text-center"><div class="in-tb">구매의사 없음</div></td>
-                            <td class="text-center"><div class="in-tb">2,000</div></td>
+                            <td class="text-right"><div class="in-tb">2,000</div></td>
                             <td class="text-center"><div class="in-tb">신용카드</div></td>
                             <td class="text-center"><div class="in-tb">취소완료<br />(구매자)</div></td>
                             <td class="text-center">
@@ -385,7 +388,7 @@
                             <td class="text-left"><div class="in-tb">맛있닭 소프트 닭 안심.</div></td>
                             <td class="text-center"><div class="in-tb">모바일</div></td>
                             <td class="text-center"><div class="in-tb">자동취소(미입금)</div></td>
-                            <td class="text-center"><div class="in-tb">2,000</div></td>
+                            <td class="text-right"><div class="in-tb">2,000</div></td>
                             <td class="text-center"><div class="in-tb">신용카드</div></td>
                             <td class="text-center"><div class="in-tb">취소완료<br />(구매자)</div></td>
                             <td class="text-center">
@@ -393,6 +396,7 @@
 							</td>
 					    </tr>
 				    </tbody>
+                    <!--// 20210803 수정 : 취소금액 우측정렬 -->  
                 </table>
             </div>
 

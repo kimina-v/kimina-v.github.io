@@ -136,12 +136,12 @@
                         <col style="width:360px;">
                         <col style="width:150px;">
                         <col style="width:360px;">
-                        <col style="width:100px;">
+                        <col style="width:160px;"><!-- [Dev] 20210723 수정 : 수치 변경 -->
                     </colgroup>
                     <thead>
                         <tr>
                             <th scope="col" class="list-num"><span class="in-tb">순번</span></th>
-                            <th scope="col"><span class="in-tb">상태</span></th>
+                            <th scope="col"><span class="in-tb">이용상태</span></th><!-- [Dev] 20210723 수정 : 텍스트 변경 -->
                             <th scope="col"><span class="in-tb">쿠폰유형</span></th>
                             <th scope="col"><span class="in-tb">쿠폰코드</span></th>
                             <th scope="col"><span class="in-tb">쿠폰명</span></th>
@@ -157,40 +157,40 @@
                             <th scope="col"><span class="in-tb">관리자</span></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody><!-- [Dev] 20210723 td 전체적으로  vt-mid 클래스 제거 -->
                         <tr>
-                            <td class="list-num vt-mid"><div class="in-tb">1000</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">사용완료<br>(관리자지급)</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">추천적립금</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">1234567</div></td>
-                            <td class="text-left vt-mid"><div class="in-tb">추천인 입력 적립금</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">2,500P</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">2021.04.29(<strong class="text-primary">14</strong>일)</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">2021.04.14 09:30</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">20210305R3DD58</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">187,000원</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">2021.04.14 09:30</div></td>
-                            <td class="text-left vt-mid"><div class="in-tb">지급사유입니다.지급사유입니다.지급사유입니다</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">2021.04.14 09:30</div></td>
-                            <td class="text-left vt-mid"><div class="in-tb">회수사유입니다.회수사유입니다.회수사유입니다.</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">dhxn2ak</div></td>
+                            <td class="list-num"><div class="in-tb">1000</div></td>
+                            <td class="text-center"><div class="in-tb">사용완료</div></td><!-- [Dev] 20210723 수정 : <br>(관리자지급) 제거 -->
+                            <td class="text-center"><div class="in-tb">추천적립금</div></td>
+                            <td class="text-center"><div class="in-tb">1234567</div></td>
+                            <td class="text-left"><div class="in-tb">추천인 입력 적립금</div></td>
+                            <td class="text-right"><div class="in-tb">2,500P</div></td><!-- [Dev] 20210723 수정 : text-center -> text-right 클래스 수정 -->
+                            <td class="text-center"><div class="in-tb">2021.04.29(<strong class="text-primary">14</strong>일)</div></td>
+                            <td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
+                            <td class="text-center"><div class="in-tb">20210305R3DD58</div></td>
+                            <td class="text-right"><div class="in-tb">187,000원</div></td><!-- [Dev] 20210723 수정 : text-center -> text-right 클래스 수정 -->
+                            <td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
+                            <td class="text-left"><div class="in-tb">지급사유입니다.지급사유입니다.지급사유입니다</div></td>
+                            <td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
+                            <td class="text-left"><div class="in-tb">회수사유입니다.회수사유입니다.회수사유입니다.</div></td>
+                            <td class="text-center"><div class="in-tb">dhxn2ak / 이름출력</div></td><!-- [Dev] 20210723 수정 : 관리자 이름출력 추가 -->
                         </tr>
                         <tr>
-                            <td class="list-num vt-mid"><div class="in-tb">1000</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">사용완료</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">추천적립금</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">1234567</div></td>
-                            <td class="text-left vt-mid"><div class="in-tb">추천인 입력 적립금</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">2,500P</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">2021.04.29(<strong class="text-primary">14</strong>일)</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">2021.04.14 09:30</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">20210305R3DD58</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">187,000원</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">2021.04.14 09:30</div></td>
-                            <td class="text-left vt-mid"><div class="in-tb">지급사유입니다.지급사유입니다.지급사유입니다</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">2021.04.14 09:30</div></td>
-                            <td class="text-left vt-mid"><div class="in-tb">회수사유입니다.회수사유입니다.회수사유입니다.</div></td>
-                            <td class="text-center vt-mid"><div class="in-tb">dhxn2ak</div></td>
+                            <td class="list-num"><div class="in-tb">1000</div></td>
+                            <td class="text-center"><div class="in-tb">사용완료</div></td>
+                            <td class="text-center"><div class="in-tb">추천적립금</div></td>
+                            <td class="text-center"><div class="in-tb">1234567</div></td>
+                            <td class="text-left"><div class="in-tb">추천인 입력 적립금</div></td>
+                            <td class="text-right"><div class="in-tb">2,500P</div></td><!-- [Dev] 20210723 수정 : text-center -> text-right 클래스 수정 -->
+                            <td class="text-center"><div class="in-tb">2021.04.29(<strong class="text-primary">14</strong>일)</div></td>
+                            <td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
+                            <td class="text-center"><div class="in-tb">20210305R3DD58</div></td>
+                            <td class="text-right"><div class="in-tb">187,000원</div></td><!-- [Dev] 20210723 수정 : text-center -> text-right 클래스 수정 -->
+                            <td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
+                            <td class="text-left"><div class="in-tb">지급사유입니다.지급사유입니다.지급사유입니다</div></td>
+                            <td class="text-center"><div class="in-tb">2021.04.14 09:30</div></td>
+                            <td class="text-left"><div class="in-tb">회수사유입니다.회수사유입니다.회수사유입니다.</div></td>
+                            <td class="text-center"><div class="in-tb">dhxn2ak / 이름출력</div></td><!-- [Dev] 20210723 수정 : 관리자 이름출력 추가 -->
                         </tr>
                     </tbody>
                 </table>

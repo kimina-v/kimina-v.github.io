@@ -135,7 +135,7 @@
 								<div class="input-group-form">
 									<select id="selectItem" class="select w140">
 										<option value="1">1단</option>
-                                        <option value="2">2단</option>
+                                        <option value="2" selected>2단</option>
                                         <option value="3">3단</option>
                                         <option value="4">4단</option>
 									</select>
@@ -163,11 +163,44 @@
 							<td>
 								<input type="text" class="input-text w-full" placeholder="URL 입력">
 							</td>
-                        </tr>                       
+                        </tr>
+                        <!-- [Dev] 20210802 수정 : 배경 용어변경, 패턴 이미지 추가, 대체 텍스트 위치수정 -->
+                        <tr class="ui-select-line eh-img01">
+							<th scope="row"><span class="in-tb">배경(1단)</span></th>
+							<td>
+                                <div class="form-inline-group">
+									<div class="custom-radio">
+										<input type="radio" id="radio-3-1" class="radio" name="radio-item-3" checked="">
+                                        <label for="radio-3-1">BG Color</label>
+									</div>
+                                    <input type="text" class="input-text w571" placeholder="Color 입력(Color는 #000000형태로 입력해주세요.)">
+								</div>
+							</td>
+                            <td colspan="2">
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-3-2" class="radio" name="radio-item-3">
+                                    <label for="radio-3-2">패턴 이미지</label>
+                                </div>
+                                <div class="filebox on grid-wrap-inline"><!-- 기존파일 있을 경우 addClass on -->
+                                    <label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+                                    <!-- 파일 없을 경우
+                                        <div class="upload-name"><span class="txt"></span></div> 
+                                    -->
+                                    <div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+                                    <input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="ui-select-line eh-img01">
+                            <th scope="row"><span class="in-tb">대체 텍스트(1단)</span></th>
+							<td colspan="3">
+								<input type="text" class="input-text w-full" placeholder="대체 텍스트 입력">
+							</td>  
+                        </tr>
                         <!--//1단-->
 
                         <!--2단-->
-                        <tr class="ui-select-line hide eh-img02">
+                        <tr class="ui-select-line eh-img02">
                             <th scope="row"><span class="in-tb">전시 이미지(2단)</span></th>
 							<td>
 								<div class="filebox on"><!-- 기존파일 있을 경우 addClass on -->
@@ -183,6 +216,38 @@
 							<td>
 								<input type="text" class="input-text w-full" placeholder="URL 입력">
 							</td>
+                        </tr>
+                        <tr class="ui-select-line eh-img02">
+							<th scope="row"><span class="in-tb">배경(2단)</span></th>
+							<td>
+                                <div class="form-inline-group">
+									<div class="custom-radio">
+										<input type="radio" id="radio-4-1" class="radio" name="radio-item-4" checked="">
+                                        <label for="radio-3-3">BG Color</label>
+									</div>
+                                    <input type="text" class="input-text w571" placeholder="Color 입력(Color는 #000000형태로 입력해주세요.)">
+								</div>
+							</td>
+                            <td colspan="2">
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-4-2" class="radio" name="radio-item-4">
+                                    <label for="radio-3-4">패턴 이미지</label>
+                                </div>
+                                <div class="filebox on grid-wrap-inline"><!-- 기존파일 있을 경우 addClass on -->
+                                    <label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+                                    <!-- 파일 없을 경우
+                                        <div class="upload-name"><span class="txt"></span></div> 
+                                    -->
+                                    <div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+                                    <input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="ui-select-line eh-img02">
+                            <th scope="row"><span class="in-tb">대체 텍스트(2단)</span></th>
+							<td colspan="3">
+								<input type="text" class="input-text w-full" placeholder="대체 텍스트 입력">
+							</td>  
                         </tr>
                         <!--//2단-->
 
@@ -204,6 +269,38 @@
 								<input type="text" class="input-text w-full" placeholder="URL 입력">
 							</td>
                         </tr>
+                        <tr class="ui-select-line hide eh-img03">
+							<th scope="row"><span class="in-tb">배경(3단)</span></th>
+							<td>
+                                <div class="form-inline-group">
+									<div class="custom-radio">
+										<input type="radio" id="radio-5-1" class="radio" name="radio-item-5" checked="">
+                                        <label for="radio-1-5">BG Color</label>
+									</div>
+                                    <input type="text" class="input-text w571" placeholder="Color 입력(Color는 #000000형태로 입력해주세요.)">
+								</div>
+							</td>
+                            <td colspan="2">
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-5-2" class="radio" name="radio-item-5">
+                                    <label for="radio-1-6">패턴 이미지</label>
+                                </div>
+                                <div class="filebox on grid-wrap-inline"><!-- 기존파일 있을 경우 addClass on -->
+                                    <label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+                                    <!-- 파일 없을 경우
+                                        <div class="upload-name"><span class="txt"></span></div> 
+                                    -->
+                                    <div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+                                    <input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="ui-select-line hide eh-img03">
+                            <th scope="row"><span class="in-tb">대체 텍스트(3단)</span></th>
+							<td colspan="3">
+								<input type="text" class="input-text w-full" placeholder="대체 텍스트 입력">
+							</td>  
+                        </tr>
                         <!--//3단-->
 
                         <!--4단-->
@@ -224,17 +321,40 @@
 								<input type="text" class="input-text w-full" placeholder="URL 입력">
 							</td>
                         </tr>
-                        <!--//4단-->
-						<tr>
-							<th scope="row"><span class="in-tb">BG Color</span></th>
+                        <tr class="ui-select-line hide eh-img04">
+							<th scope="row"><span class="in-tb">배경(4단)</span></th>
 							<td>
-								<input type="text" class="input-text w-full" placeholder="Color 입력(Color는 #000000형태로 입력해주세요.)">
-							</td>    
-                            <th scope="row"><span class="in-tb">대체 텍스트</span></th>
-							<td>
-								<input type="text" class="input-text w-full" placeholder="대체 텍스트 입력">
-							</td>                             
+                                <div class="form-inline-group">
+									<div class="custom-radio">
+										<input type="radio" id="radio-6-1" class="radio" name="radio-item-6" checked="">
+                                        <label for="radio-1-7">BG Color</label>
+									</div>
+                                    <input type="text" class="input-text w571" placeholder="Color 입력(Color는 #000000형태로 입력해주세요.)">
+								</div>
+							</td>
+                            <td colspan="2">
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-6-2" class="radio" name="radio-item-6">
+                                    <label for="radio-1-8">패턴 이미지</label>
+                                </div>
+                                <div class="filebox on grid-wrap-inline"><!-- 기존파일 있을 경우 addClass on -->
+                                    <label for="ex-filename2" class="btn-form btn-default"><span>파일 선택</span></label> 
+                                    <!-- 파일 없을 경우
+                                        <div class="upload-name"><span class="txt"></span></div> 
+                                    -->
+                                    <div class="upload-name"><span class="txt">filename.jpg</span><button type="button" class="btn-del-xs ui-file-delete" title="삭제"><i class="ico-x-white"></i><span class="blind">삭제</span></button></div>
+                                    <input type="file" id="ex-filename2" class="upload-hidden" value=""> 
+                                </div>
+                            </td>
                         </tr>
+                        <tr class="ui-select-line hide eh-img04">
+                            <th scope="row"><span class="in-tb">대체 텍스트(4단)</span></th>
+							<td colspan="3">
+								<input type="text" class="input-text w-full" placeholder="대체 텍스트 입력">
+							</td>  
+                        </tr>
+                        <!--// [Dev] 20210802 수정 : 배경 용어변경, 패턴 이미지 추가, 대체 텍스트 위치수정 -->
+                        <!--//4단-->
                         <tr>
                             <th scope="row"><span class="in-tb">열기 형태</span></th>
 							<td>
@@ -285,16 +405,19 @@
             var result = $('#selectItem option:selected').val();
             if ( result === '1' ) {
                 $('.eh-img01').removeClass('hide');
-                $('.eh-img01').nextAll('.ui-select-line').addClass('hide');
+                $('.eh-img02').addClass('hide');
+                $('.eh-img03').addClass('hide');
+                $('.eh-img04').addClass('hide');
             } else if ( result === '2' ) {
                 $('.eh-img01').removeClass('hide');
                 $('.eh-img02').removeClass('hide');
-                $('.eh-img02').nextAll('.ui-select-line').addClass('hide');
+                $('.eh-img03').addClass('hide');
+                $('.eh-img04').addClass('hide');
             }else if ( result === '3' ) {
                 $('.eh-img01').removeClass('hide');
                 $('.eh-img02').removeClass('hide');
                 $('.eh-img03').removeClass('hide');
-                $('.eh-img03').nextAll('.ui-select-line').addClass('hide');
+                $('.eh-img04').addClass('hide');
             }else if ( result === '4' ) {
                 $('.ui-select-line').removeClass('hide');
             }

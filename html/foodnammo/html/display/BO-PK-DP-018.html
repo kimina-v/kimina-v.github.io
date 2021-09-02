@@ -69,6 +69,16 @@
                                 <col class="w-col-tit"><col class="w-col-cnt" /><col class="w-col-tit"><col class="w-col-cnt" />
                             </colgroup>
                             <tbody>
+                                <tr><!--[Dev] 20210819 사이트 항목 추가 -->
+                                    <th scope="row"><span class="in-tb">등록사이트</span></th>
+                                    <td colspan="3">
+                                        <div class="input-group-form">
+                                            <select class="select w140">
+                                                <option value="">피키다이어트</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <th scope="row"><span class="in-tb">상위 카테고리</span></th>
                                     <td>
@@ -141,7 +151,7 @@
                     </div><!--// board-form -->
 
                     <div class="cnt-title-area mt40">
-                        <h3 class="tit-cnt">접근차단 정보</h3>                        
+                        <h3 class="tit-cnt">접근대상</h3><!--[Dev] 20210819 명칭변경 -->                        
                     </div>
                     <div class="board-form mt10">	
                         <table>
@@ -153,15 +163,15 @@
                                 <tr>
                                     <th scope="row"><span class="in-tb">회원등급<i class="es"><em class="blind">필수입력</em></i></span></th>
                                     <td>
-                                        <div class="form-inline-group">
+                                        <div class="form-inline-group"><!--[Dev] 20210819 전체 추가및 닭과장 삭제 -->
                                             <div class="custom-checkbox">
-                                                <input type="checkbox" id="check-101" class="checkbox" name="check-item-1" checked=""><label for="check-101"> 패밀리</label>
+                                                <input type="checkbox" id="check-100" class="checkbox" name="check-item-1" checked=""><label for="check-100"> 전체</label>
+                                            </div>
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-101" class="checkbox" name="check-item-1"><label for="check-101"> 패밀리</label>
                                             </div>
                                             <div class="custom-checkbox">
                                                 <input type="checkbox" id="check-102" class="checkbox" name="check-item-1"><label for="check-102"> 실버</label>
-                                            </div>
-                                            <div class="custom-checkbox">
-                                                <input type="checkbox" id="check-103" class="checkbox" name="check-item-1"><label for="check-103"> 닭과장</label>
                                             </div>
                                             <div class="custom-checkbox">
                                                 <input type="checkbox" id="check-104" class="checkbox" name="check-item-1"><label for="check-104"> 골드</label>
@@ -175,9 +185,12 @@
                                 <tr>
                                     <th scope="row"><span class="in-tb">회원그룹<i class="es"><em class="blind">필수입력</em></i></span></th>
                                     <td>
-                                        <div class="form-inline-group">
+                                        <div class="form-inline-group"><!--[Dev] 20210819 전체 추가 -->
                                             <div class="custom-checkbox">
-                                                <input type="checkbox" id="check-201" class="checkbox" name="check-item-2" checked=""><label for="check-201"> 일반</label>
+                                                <input type="checkbox" id="check-200" class="checkbox" name="check-item-2" checked=""><label for="check-200"> 전체</label>
+                                            </div>
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="check-201" class="checkbox" name="check-item-2"><label for="check-201"> 일반</label>
                                             </div>
                                             <div class="custom-checkbox">
                                                 <input type="checkbox" id="check-202" class="checkbox" name="check-item-2"><label for="check-202"> 사업자</label>

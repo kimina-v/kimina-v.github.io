@@ -65,7 +65,13 @@
                 <div class="layer-body">
                     <div class="layer-content">
                         <div class="in-content">
-                            <div class="board-form">
+                            <!--[Dev] 20210727 필수입력 추가 -->
+                            <div class="page-info text-right">
+                                <div class="text-guide-sm2">
+                                    <i class="es"><em class="blind">필수입력</em></i>는 필수항목입니다.
+                                </div>
+                            </div>
+                            <div class="board-form mt10"><!--[Dev] 20210727 mt10추가 -->
                                 <table>
                                     <caption>일괄처리 선택</caption>
                                     <colgroup>
@@ -104,7 +110,8 @@
                                     </div>
                                     <input type="text" class="input-text" placeholder="검색어를 입력하세요.(적립금코드는 comma(,)로 구분)">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn-form btn-black"><span>버튼</span></button>
+                                        <!--[Dev] 20210727 텍스트변경 -->
+                                        <button type="button" class="btn-form btn-black"><span>검색</span></button>
                                     </span>
                                 </div>
                             </div>
@@ -114,33 +121,38 @@
                                 <table>
                                     <caption>적립금선택</caption>
                                     <colgroup>
+                                        <!--[Dev] 20210727 항목삭제및 추가 -->
                                         <col class="w-col-check" />
                                         <col width="100px" />
                                         <col width="100px;" />
                                         <col width="auto;" />
-                                        <col width="120px;" />
-                                        <col width="150px;" />
                                         <col width="100px;" />
-                                        <col width="160px;" />
+                                        <col width="100px;" />
+                                        <col width="100px;" />
+                                        <col width="100px;" />
+                                        <col width="100px;" />
                                     </colgroup>
                                     <thead>
                                     <tr>
+                                        <!--[Dev] 20210727 항목삭제및 추가 -->
                                         <th scope="col" class="list-check">
                                             <div class="custom-checkbox single">
                                                 <input type="checkbox" id="check-all" class="checkbox ui-check-all" name="check-item-101"><label for="check-all"><span class="blind">모두 선택</span></label>
                                             </div><!-- 모두 선택 addClass ui-check-all -->
                                         </th>
-                                        <th scope="col"><span class="in-tb">적립금유형</span></th>
+                                        <th scope="col"><span class="in-tb">적립금종류</span></th>
                                         <th scope="col"><span class="in-tb">적립금코드</span></th>
                                         <th scope="col"><span class="in-tb">적립금명</span></th>
-                                        <th scope="col"><span class="in-tb">차감금액</span></th>
-                                        <th scope="col"><span class="in-tb">남은금액/지급금액</span></th>
+                                        <th scope="col"><span class="in-tb">회원이름</span></th>
+                                        <th scope="col"><span class="in-tb">회원아이디</span></th>
+                                        <th scope="col"><span class="in-tb">지급금액</span></th>
                                         <th scope="col"><span class="in-tb">지급일</span></th>
-                                        <th scope="col"><span class="in-tb">유효기간(잔여일)</span></th>
+                                        <th scope="col"><span class="in-tb">유효일</span></th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
+                                            <!--[Dev] 20210727 항목삭제및 추가 -->
                                             <td class="list-check vt-mid">
                                                 <div class="custom-checkbox single">
                                                     <input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">선택</span></label>
@@ -148,11 +160,12 @@
                                             </td>
                                             <td class="text-center vt-mid"><div class="in-tb">추천적립금</div></td>
                                             <td class="text-center vt-mid"><div class="in-tb">1234567</div></td>
-                                            <td class="text-left vt-mid"><div class="in-tb">추천인 상품구매 기본적립금</div></td>
-                                            <td class="text-center vt-mid"><input type="text" class="input-text w-full" value="" placeholder="숫자 입력"></td>
-                                            <td class="text-center vt-mid"><div class="in-tb">2,500/2,500P</div></td>
+                                            <td class="text-left vt-mid"><div class="in-tb">추천인 상품구매 기본적립금</div></td>                                            
+                                            <td class="text-center vt-mid"><div class="in-tb">***</div></td>
+                                            <td class="text-center vt-mid"><div class="in-tb">abc***</div></td>
+                                            <td class="text-right vt-mid"><div class="in-tb">2,500P</div></td>
                                             <td class="text-center vt-mid"><div class="in-tb">2021.04.21</div></td>
-                                            <td class="text-center vt-mid"><div class="in-tb">2021.05.31(<strong class="text-primary">208</strong>일)</div></td>
+                                            <td class="text-center vt-mid"><div class="in-tb">2021.05.31</div></td>
                                         </tr>                                               
                                     </tbody>
                                 </table>

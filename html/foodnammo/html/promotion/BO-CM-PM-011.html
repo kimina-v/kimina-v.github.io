@@ -195,7 +195,7 @@
 			<div class="board-movable-wrap">
 				<div class="board-option fixed-box mt60"><!-- scroll시 class fixed add 됨 -->
 					<div class="left-area">
-						<div class="page-info">총 <strong class="text-primary">1,000</strong>건</div>
+						<div class="page-info mt10">총 <strong class="text-primary">1,000</strong>건</div><!-- [Dev] 20210721 수정 : mt10 추가 -->
 					</div><!--// left-area -->
 					<div class="right-area">
 						<div class="btn-lst">
@@ -221,21 +221,22 @@
 					<table>
 						<caption>목록</caption>
 						<colgroup>
-							<col class="w-col-check" />
-							<!--col class="w-col-num" /> 삭제 -->
-							<col style="width:130px" />
-							<col style="width:130px" />
-							<col style="width:180px" />
-							<col style="width:180px" />
-							<col style="width:180px" />
-							<col style="width:112px" />
-							<col style="width:110px" />
-							<col style="width:110px" />
-							<col style="width:110px" />
-							<col style="width:110px" />
-							<col style="width:160px" />
-							<col style="width:130px" />
-							<col style="width:100px" />
+							<col class="w-col-check">
+							<!--col class="w-col-num"> 삭제 -->
+							<!-- <col style="width:130px"> [Dev] 20210830 제거 -->
+							<col style="width:130px">
+							<col style="width:180px">
+							<col style="width:100px"><!-- [Dev] 20210830 추가 -->
+							<col style="width:180px">
+							<col style="width:180px">
+							<col style="width:112px">
+							<col style="width:110px">
+							<col style="width:110px">
+							<col style="width:110px">
+							<col style="width:110px">
+							<col style="width:160px">
+							<col style="width:130px">
+							<col style="width:100px">
 						</colgroup>
 						<thead>
 						<tr>
@@ -245,9 +246,10 @@
 								</div><!-- 모두 선택 addClass ui-check-all -->
 							</th>
 							<!-- <th scope="col"><span class="in-tb">번호</span></th>[Dev] 0705 수정  : 삭제 -->
-							<th scope="col"><span class="in-tb">사이트</span></th>
+							<!-- <th scope="col"><span class="in-tb">사이트</span></th> [Dev] 20210830 제거  -->
 							<th scope="col"><span class="in-tb">채널구분</span></th><!-- 0609 수정 : 추가 됨 -->
 							<th scope="col"><span class="in-tb">이벤트 명</span></th>
+							<th scope="col"><span class="in-tb">URL 보기</span></th><!-- [Dev] 20210830 추가 -->
 							<th scope="col"><span class="in-tb">이벤트 유형</span></th>
 							<th scope="col"><span class="in-tb">진행기간</span></th>
 							<th scope="col"><span class="in-tb">전시 여부</span></th>
@@ -268,9 +270,10 @@
 									</div>
 								</td>
 								<!--<td class="text-center"><div class="in-tb">2</div></td>[Dev] 0705 수정  : 삭제 -->
-								<td class="text-center"><div class="in-tb">랭킹닭컴</div></td>
+								<!-- <td class="text-center"><div class="in-tb">랭킹닭컴</div></td> [Dev] 20210830 제거 -->
 								<td class="text-center"><div class="in-tb">PC</div></td><!-- 0609 수정 : 추가 -->
 								<td class="text-center"><a href="#none" class="in-tb">적립금 이벤트</a></td>
+								<td class="text-center"><a href="#none" class="in-tb">보기</a></td><!-- [Dev] 20210830 추가 -->
 								<td class="text-center"><div class="in-tb">적립금</div></td>
 								<td class="text-center"><div class="in-tb">2021.05.31 17:00 ~ 2021.06.30 17:00</div></td>
 								<td class="text-center"><div class="in-tb">전시</div></td>
@@ -289,9 +292,10 @@
 									</div>
 								</td>
 								<!--<td class="text-center"><div class="in-tb">2</div></td>[Dev] 0705 수정  : 삭제 -->
-								<td class="text-center"><div class="in-tb">랭킹닭컴</div></td>
+								<!-- <td class="text-center"><div class="in-tb">랭킹닭컴</div></td> [Dev] 20210830 제거 -->
 								<td class="text-center"><div class="in-tb">PC</div></td><!-- 0609 수정 : 추가 -->
 								<td class="text-center"><a href="#none" class="in-tb">적립금 이벤트</a></td>
+								<td class="text-center"><a href="#none" class="in-tb">보기</a></td><!-- [Dev] 20210830 추가 -->
 								<td class="text-center"><div class="in-tb">적립금</div></td>
 								<td class="text-center"><div class="in-tb">2021.05.31 17:00 ~ 2021.06.30 17:00</div></td>
 								<td class="text-center"><div class="in-tb">전시</div></td>
@@ -309,9 +313,10 @@
 										<input type="checkbox" id="check-101" class="checkbox" name="check-item-101"><label for="check-101"><span class="blind">모두 선택</span></label>
 									</div>
 								</td>
-								<td class="text-center"><div class="in-tb">랭킹닭컴</div></td>
+								<!-- <td class="text-center"><div class="in-tb">랭킹닭컴</div></td> [Dev] 20210830 제거 -->
 								<td class="text-center"><div class="in-tb">PC</div></td>
 								<td class="text-center"><a href="#none" class="in-tb">숨은 그림찾기 이벤트</a></td>
+								<td class="text-center"><a href="#none" class="in-tb">보기</a></td><!-- [Dev] 20210830 추가 -->
 								<td class="text-center"><div class="in-tb">숨은 그림 찾기</div></td>
 								<td class="text-center"><div class="in-tb">2021.05.31 17:00 ~ 2021.06.30 17:00</div></td>
 								<td class="text-center"><div class="in-tb">전시</div></td>
@@ -335,6 +340,12 @@
 					</table>
 				</div><!--// board-list | 목록 -->
 			</div><!--// [Dev] 0705 수정 -->
+			<!-- [Dev] 20210726 수정 : 추가 -->
+			<div class="btn-area mt20">
+				<button type="button" class="btn-basic-md btn-primary"><span>검색</span></button>
+				<button type="button" class="btn-basic-md btn-default"><i class="ico-btn-refresh"></i><span>초기화</span></button>
+			</div>
+			<!-- //[Dev] 20210726 수정 : 추가 -->
 		</div><!--// content-area -->
 
 		<!-- [Dev] 0705 수정 : 페이징 삭제 -->

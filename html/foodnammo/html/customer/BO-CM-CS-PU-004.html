@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script type="text/javascript" src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">		
+		<script>include.headTab();</script>
+
+		<div class="content-area">
+			<div class="top-title-area">
+				<h2 class="tit-page">타이틀</h2>
+				<div class="page-guide">
+					<ol class="breadcrumb">
+						<li><a href="#" title="메인페이지 이동"><i class="ico-bl-home"></i><span class="blind">Home</span></a></li>
+						<li><span>1Depth</span></li>
+						<li><span>2Depth</span></li>
+						<li class="current"><span>현재페이지</span></li>
+					</ol>
+					<div class="custom-checkbox">
+						<input type="checkbox" id="check-101-11" class="checkbox-favor" name="check-item-1"><label for="check-101-11"><span class="blind">즐겨찾기</span></label>
+					</div>
+				</div><!--// page-guide -->
+			</div><!--// page-title-area -->
+		</div><!--// content-area -->
+
+		<div class="bottom-btn-area">
+			<div class="btn-area">
+
+			</div>
+		</div><!--// bottom-btn-area -->
+	</section>
+	<!--// ========== 컨텐츠 영역 :: container ========== -->
+
+    <!--
+        * 팝업 버튼에 ui-open-pop 클래스, 팝업 ID 작성 필요
+        ex) <a href="#popupSample-01" class=".... ui-open-pop"> ~ </a>
+        ex) <button type="button" data-layer="#popupSample-02" class="... ui-open-pop"> ~ </button>
+    -->
+    <!-- ========== 팝업 영역 ========== -->
+    <div class="layer-wrap" id="popup-sample-01" style="display:block;">
+        <div class="layer-pop">
+            <div class="layer-inner layer-md">
+                <div class="layer-head">
+                    <h4 class="layer-title">일괄 후기등급 변경</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="in-content">
+                            <div class="board-option">
+								<div class="left-area">
+									<div class="page-info">총 <strong class="text-primary">00</strong>건이 선택되었습니다.</div>
+								</div>
+								<div class="right-area">
+									<spanc class="text-guide-sm2"><i class="es"><em class="blind">필수입력</em></i>는 필수항목입니다.
+								</spanc></div>						
+							</div>
+                            <div class="board-form mt10">
+								<table>
+									<caption>입력</caption>
+									<colgroup>
+										<col style="width: 140px;"><col class="w-col-cnt">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row"><span class="in-tb">후기등급<i class="es"><em class="blind">필수입력</em></i></span></th>
+											<td>
+                                                <div class="input-group-form">
+                                                    <select class="select w140">
+                                                        <option value="">일반</option>
+                                                        <option value="">특급</option>
+                                                        <option value="">고급</option>
+                                                        <option value="">미달</option>
+                                                    </select>
+                                                </div>   
+                                            </td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+                        </div>
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn-basic-md btn-primary ui-close-pop"><span>저장</span></button>
+                            <button type="button" class="btn-basic-md btn-default"><span>취소</span></button>
+                        </div>
+                    </div>
+                </div><!--// layer-body  -->
+                <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-white"></i><span class="blind">닫기</span></button>
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample-01 -->
+</div><!--// wrap -->
+</body>
+</html>

@@ -212,20 +212,24 @@
 			<!-- 목록 -->
 			<div class="grid-page-wrap type01 mt60">
 				<div class="grid-left-area">
-					<div class="cnt-title-area">
-                        <div class="page-info">총 <strong class="text-primary">3</strong>건 / 10페이지</div>
-                        <div class="right-info">
-                            <button type="button" class="btn-func btn-default"><span>승인/반려처리</span></button>
-                        </div>
+					<!-- [Dev] 20210721 수정 -->
+                    <div class="board-option">
+                        <div class="left-area">
+                            <div class="page-info mt10">총 <strong class="text-primary">1,000</strong>건 / 10페이지</div>
+                        </div><!--// left-area -->
+                        <div class="right-area">
+							<button type="button" class="btn-func btn-default"><span>승인/반려처리</span></button>
+                        </div><!--// right-area -->
                     </div>
-					<div class="board-list scroll-y-table">
+					<!-- //[Dev] 20210721 수정 -->
+					<div class="board-list scroll-y-table mt10"><!-- [Dev] 20210721 수정 : mt10 추가 -->
 						<table>
 							<caption>목록</caption>
 							<colgroup>
 								<col class="w-col-check">
-								<col class="w-col-num">
-								<col />
-								<col style="width:90px" />
+								<col class="w-col-num"><!--[Dev] 20210825 위치변경 -->
+								<col style="width:90px" /><!--[Dev] 20210825 위치변경 -->
+								<col />								
 								<col style="width:90px" />
 								<col style="width:95px" />
 								<col style="width:150px" />
@@ -237,13 +241,13 @@
 											<input type="checkbox" id="check-all" class="checkbox ui-check-all" name="check-item-101"><label for="check-all"><span class="blind">모두 선택</span></label>
 										</div><!-- 모두 선택 addClass ui-check-all -->
 									</th>
-									<th scope="col" class="list-num"><span class="in-tb">순번</span></th>
-									<th scope="col"><span class="in-tb">상품명</span></th>
-									<th scope="col"><span class="in-tb">입점사</span></th>
+									<th scope="col" class="list-num"><span class="in-tb">순번</span></th>									
+									<th scope="col"><span class="in-tb">입점사</span></th><!--[Dev] 20210825 위치변경 -->
+									<th scope="col"><span class="in-tb">상품명</span></th><!--[Dev] 20210825 위치변경 -->
 									<th scope="col"><span class="in-tb">승인상태</span></th>
 									<th scope="col"><span class="in-tb">담당MD</span></th>
 									<th scope="col"><span class="in-tb">등록일</span></th>
-									<td></td>
+									<!-- <td></td> [Dev] 20210720 삭제-->
 								</tr>
 							</thead>
 							<tbody>
@@ -253,9 +257,9 @@
 											<input type="checkbox" id="check-item100" class="checkbox" name="check-item-101"><label for="check-item100"><span class="blind">선택</span></label>
 										</div><!-- 모두 선택 addClass ui-check-all -->
 									</td>
-									<td class="list-num"><div class="in-tb">3</div></td>								
-									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td>
-									<td class="text-center"><div class="in-tb">잇메이트</div></td>
+									<td class="list-num"><div class="in-tb">3</div></td>	
+									<td class="text-center"><div class="in-tb">잇메이트</div></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td><!--[Dev] 20210825 위치변경 -->
 									<td class="text-center"><a href="none" class="in-tb">승인대기</a></td>
 									<td class="text-center"><div class="in-tb">ID/명 출력</div></td>
 									<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
@@ -263,38 +267,12 @@
 								<tr>
 									<td class="list-check">
 										<div class="custom-checkbox single">
-											<input type="checkbox" id="check-item101" class="checkbox" name="check-item-101"><label for="check-item101"><span class="blind">선택</span></label>
-										</div><!-- 모두 선택 addClass ui-check-all -->
-									</td>	
-									<td class="list-num"><div class="in-tb">3</div></td>								
-									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td>
-									<td class="text-center"><div class="in-tb">잇메이트</div></td>
-									<td class="text-center"><a href="none" class="in-tb">승인대기</a></td>
-									<td class="text-center"><div class="in-tb">ID/명 출력</div></td>
-									<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
-								</tr>
-								<tr>
-									<td class="list-check">
-										<div class="custom-checkbox single">
-											<input type="checkbox" id="check-item102" class="checkbox" name="check-item-101"><label for="check-item102"><span class="blind">선택</span></label>
-										</div><!-- 모두 선택 addClass ui-check-all -->
-									</td>		
-									<td class="list-num"><div class="in-tb">3</div></td>								
-									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td>
-									<td class="text-center"><div class="in-tb">잇메이트</div></td>
-									<td class="text-center"><a href="none" class="in-tb">승인대기</a></td>
-									<td class="text-center"><div class="in-tb">ID/명 출력</div></td>
-									<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
-								</tr>
-								<tr>
-									<td class="list-check">
-										<div class="custom-checkbox single">
-											<input type="checkbox" id="check-item103" class="checkbox" name="check-item-101"><label for="check-item103"><span class="blind">선택</span></label>
+											<input type="checkbox" id="check-item100" class="checkbox" name="check-item-101"><label for="check-item100"><span class="blind">선택</span></label>
 										</div><!-- 모두 선택 addClass ui-check-all -->
 									</td>
-									<td class="list-num"><div class="in-tb">3</div></td>								
-									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td>
-									<td class="text-center"><div class="in-tb">잇메이트</div></td>
+									<td class="list-num"><div class="in-tb">3</div></td>	
+									<td class="text-center"><div class="in-tb">잇메이트</div></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td><!--[Dev] 20210825 위치변경 -->
 									<td class="text-center"><a href="none" class="in-tb">승인대기</a></td>
 									<td class="text-center"><div class="in-tb">ID/명 출력</div></td>
 									<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
@@ -302,12 +280,12 @@
 								<tr>
 									<td class="list-check">
 										<div class="custom-checkbox single">
-											<input type="checkbox" id="check-item104" class="checkbox" name="check-item-101"><label for="check-item104"><span class="blind">선택</span></label>
+											<input type="checkbox" id="check-item100" class="checkbox" name="check-item-101"><label for="check-item100"><span class="blind">선택</span></label>
 										</div><!-- 모두 선택 addClass ui-check-all -->
-									</td>	
-									<td class="list-num"><div class="in-tb">3</div></td>								
-									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td>
-									<td class="text-center"><div class="in-tb">잇메이트</div></td>
+									</td>
+									<td class="list-num"><div class="in-tb">3</div></td>	
+									<td class="text-center"><div class="in-tb">잇메이트</div></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td><!--[Dev] 20210825 위치변경 -->
 									<td class="text-center"><a href="none" class="in-tb">승인대기</a></td>
 									<td class="text-center"><div class="in-tb">ID/명 출력</div></td>
 									<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
@@ -315,12 +293,12 @@
 								<tr>
 									<td class="list-check">
 										<div class="custom-checkbox single">
-											<input type="checkbox" id="check-item105" class="checkbox" name="check-item-101"><label for="check-item105"><span class="blind">선택</span></label>
+											<input type="checkbox" id="check-item100" class="checkbox" name="check-item-101"><label for="check-item100"><span class="blind">선택</span></label>
 										</div><!-- 모두 선택 addClass ui-check-all -->
-									</td>	
-									<td class="list-num"><div class="in-tb">3</div></td>								
-									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td>
-									<td class="text-center"><div class="in-tb">잇메이트</div></td>
+									</td>
+									<td class="list-num"><div class="in-tb">3</div></td>	
+									<td class="text-center"><div class="in-tb">잇메이트</div></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td><!--[Dev] 20210825 위치변경 -->
 									<td class="text-center"><a href="none" class="in-tb">승인대기</a></td>
 									<td class="text-center"><div class="in-tb">ID/명 출력</div></td>
 									<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
@@ -328,12 +306,12 @@
 								<tr>
 									<td class="list-check">
 										<div class="custom-checkbox single">
-											<input type="checkbox" id="check-item106" class="checkbox" name="check-item-101"><label for="check-item106"><span class="blind">선택</span></label>
+											<input type="checkbox" id="check-item100" class="checkbox" name="check-item-101"><label for="check-item100"><span class="blind">선택</span></label>
 										</div><!-- 모두 선택 addClass ui-check-all -->
-									</td>										
-									<td class="list-num"><div class="in-tb">3</div></td>								
-									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td>
-									<td class="text-center"><div class="in-tb">잇메이트</div></td>
+									</td>
+									<td class="list-num"><div class="in-tb">3</div></td>	
+									<td class="text-center"><div class="in-tb">잇메이트</div></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td><!--[Dev] 20210825 위치변경 -->
 									<td class="text-center"><a href="none" class="in-tb">승인대기</a></td>
 									<td class="text-center"><div class="in-tb">ID/명 출력</div></td>
 									<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
@@ -341,12 +319,25 @@
 								<tr>
 									<td class="list-check">
 										<div class="custom-checkbox single">
-											<input type="checkbox" id="check-item107" class="checkbox" name="check-item-101"><label for="check-item107"><span class="blind">선택</span></label>
+											<input type="checkbox" id="check-item100" class="checkbox" name="check-item-101"><label for="check-item100"><span class="blind">선택</span></label>
 										</div><!-- 모두 선택 addClass ui-check-all -->
-									</td>	
-									<td class="list-num"><div class="in-tb">3</div></td>								
-									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td>
-									<td class="text-center"><div class="in-tb">잇메이트</div></td>
+									</td>
+									<td class="list-num"><div class="in-tb">3</div></td>	
+									<td class="text-center"><div class="in-tb">잇메이트</div></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-center"><a href="none" class="in-tb">승인대기</a></td>
+									<td class="text-center"><div class="in-tb">ID/명 출력</div></td>
+									<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+								</tr>								
+								<tr>
+									<td class="list-check">
+										<div class="custom-checkbox single">
+											<input type="checkbox" id="check-item100" class="checkbox" name="check-item-101"><label for="check-item100"><span class="blind">선택</span></label>
+										</div><!-- 모두 선택 addClass ui-check-all -->
+									</td>
+									<td class="list-num"><div class="in-tb">3</div></td>	
+									<td class="text-center"><div class="in-tb">잇메이트</div></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td><!--[Dev] 20210825 위치변경 -->
 									<td class="text-center"><a href="none" class="in-tb">승인대기</a></td>
 									<td class="text-center"><div class="in-tb">ID/명 출력</div></td>
 									<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
@@ -354,12 +345,12 @@
 								<tr>
 									<td class="list-check">
 										<div class="custom-checkbox single">
-											<input type="checkbox" id="check-item108" class="checkbox" name="check-item-101"><label for="check-item108"><span class="blind">선택</span></label>
+											<input type="checkbox" id="check-item100" class="checkbox" name="check-item-101"><label for="check-item100"><span class="blind">선택</span></label>
 										</div><!-- 모두 선택 addClass ui-check-all -->
-									</td>										
-									<td class="list-num"><div class="in-tb">3</div></td>								
-									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td>
-									<td class="text-center"><div class="in-tb">잇메이트</div></td>
+									</td>
+									<td class="list-num"><div class="in-tb">3</div></td>	
+									<td class="text-center"><div class="in-tb">잇메이트</div></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td><!--[Dev] 20210825 위치변경 -->
 									<td class="text-center"><a href="none" class="in-tb">승인대기</a></td>
 									<td class="text-center"><div class="in-tb">ID/명 출력</div></td>
 									<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
@@ -367,12 +358,77 @@
 								<tr>
 									<td class="list-check">
 										<div class="custom-checkbox single">
-											<input type="checkbox" id="check-item109" class="checkbox" name="check-item-101"><label for="check-item109"><span class="blind">선택</span></label>
+											<input type="checkbox" id="check-item100" class="checkbox" name="check-item-101"><label for="check-item100"><span class="blind">선택</span></label>
 										</div><!-- 모두 선택 addClass ui-check-all -->
-									</td>										
-									<td class="list-num"><div class="in-tb">3</div></td>								
-									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td>
-									<td class="text-center"><div class="in-tb">잇메이트</div></td>
+									</td>
+									<td class="list-num"><div class="in-tb">3</div></td>	
+									<td class="text-center"><div class="in-tb">잇메이트</div></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-center"><a href="none" class="in-tb">승인대기</a></td>
+									<td class="text-center"><div class="in-tb">ID/명 출력</div></td>
+									<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+								</tr>
+								<tr>
+									<td class="list-check">
+										<div class="custom-checkbox single">
+											<input type="checkbox" id="check-item100" class="checkbox" name="check-item-101"><label for="check-item100"><span class="blind">선택</span></label>
+										</div><!-- 모두 선택 addClass ui-check-all -->
+									</td>
+									<td class="list-num"><div class="in-tb">3</div></td>	
+									<td class="text-center"><div class="in-tb">잇메이트</div></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-center"><a href="none" class="in-tb">승인대기</a></td>
+									<td class="text-center"><div class="in-tb">ID/명 출력</div></td>
+									<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+								</tr>
+								<tr>
+									<td class="list-check">
+										<div class="custom-checkbox single">
+											<input type="checkbox" id="check-item100" class="checkbox" name="check-item-101"><label for="check-item100"><span class="blind">선택</span></label>
+										</div><!-- 모두 선택 addClass ui-check-all -->
+									</td>
+									<td class="list-num"><div class="in-tb">3</div></td>	
+									<td class="text-center"><div class="in-tb">잇메이트</div></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-center"><a href="none" class="in-tb">승인대기</a></td>
+									<td class="text-center"><div class="in-tb">ID/명 출력</div></td>
+									<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+								</tr>
+								<tr>
+									<td class="list-check">
+										<div class="custom-checkbox single">
+											<input type="checkbox" id="check-item100" class="checkbox" name="check-item-101"><label for="check-item100"><span class="blind">선택</span></label>
+										</div><!-- 모두 선택 addClass ui-check-all -->
+									</td>
+									<td class="list-num"><div class="in-tb">3</div></td>	
+									<td class="text-center"><div class="in-tb">잇메이트</div></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-center"><a href="none" class="in-tb">승인대기</a></td>
+									<td class="text-center"><div class="in-tb">ID/명 출력</div></td>
+									<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+								</tr>
+								<tr>
+									<td class="list-check">
+										<div class="custom-checkbox single">
+											<input type="checkbox" id="check-item100" class="checkbox" name="check-item-101"><label for="check-item100"><span class="blind">선택</span></label>
+										</div><!-- 모두 선택 addClass ui-check-all -->
+									</td>
+									<td class="list-num"><div class="in-tb">3</div></td>	
+									<td class="text-center"><div class="in-tb">잇메이트</div></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-center"><a href="none" class="in-tb">승인대기</a></td>
+									<td class="text-center"><div class="in-tb">ID/명 출력</div></td>
+									<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
+								</tr>
+								<tr>
+									<td class="list-check">
+										<div class="custom-checkbox single">
+											<input type="checkbox" id="check-item100" class="checkbox" name="check-item-101"><label for="check-item100"><span class="blind">선택</span></label>
+										</div><!-- 모두 선택 addClass ui-check-all -->
+									</td>
+									<td class="list-num"><div class="in-tb">3</div></td>	
+									<td class="text-center"><div class="in-tb">잇메이트</div></td><!--[Dev] 20210825 위치변경 -->
+									<td class="text-left"><a href="none" class="in-tb">잇메이트 스팀 닭가슴살 마늘맛</a></td><!--[Dev] 20210825 위치변경 -->
 									<td class="text-center"><a href="none" class="in-tb">승인대기</a></td>
 									<td class="text-center"><div class="in-tb">ID/명 출력</div></td>
 									<td class="text-center"><div class="in-tb">2021.04.21 17:00</div></td>
@@ -405,7 +461,7 @@
 					
 					<div class="scroll-frame scroll-y-table">
 						<div class="content-area">
-							<div class="cnt-title-area">
+							<!-- [Dev] 20210721 수정 : 제거 <div class="cnt-title-area">
 								<h3 class="tit-cnt">ERP 정보</h3>
 								<div class="right-info mt10">
 									<p class="ctext-notice"><i class="es"><em class="blind">필수입력표시</em></i> 는 필수항목입니다.</p>
@@ -428,7 +484,7 @@
 														<span class="input-group-btn">
 															<button type="button" class="btn-form btn-grey"><span>ERP 검색</span></button>
 														</span>
-													</div><!--// input-group -->
+													</div>
 												</td>
 											</tr>
 											<tr>
@@ -460,7 +516,7 @@
 										</tbody>
 									</table>	
 								</fieldset>	
-							</div><!--// board-form -->
+							</div> -->
 							
 							<!-- 기본정보 -->
 							<div  id="link1" class="cnt-title-area mt40">
@@ -688,10 +744,10 @@
 							</div><!--// board-form -->
 							<!--// 기본정보 -->
 
-							<!-- 카테고리 -->
-							<div class="cnt-title-area mt40">
+							<!-- 카테고리 [Dev] 20210721 수정 : 제거 -->
+							<!-- <div class="cnt-title-area mt40">
 								<h3 class="tit-cnt">카테고리</h3>
-							</div><!--// cnt-title-area -->
+							</div>
 							<div class="board-form mt20">
 								<fieldset>
 									<legend>카테고리 정보 입력</legend>	
@@ -730,7 +786,7 @@
 																<option value="">소분류 1</option>
 															</select>
 														</div>
-													</div><!--// input-group -->
+													</div>
 												</td>                            
 											</tr>
 											<tr>
@@ -765,7 +821,7 @@
 														<span class="input-group-btn">
 															<button type="button" class="btn-plus" title="추가"><i class="ico-plus-bold"></i><span class="blind">추가</span></button>
 														</span>
-													</div><!--// input-group -->
+													</div>
 				
 													<div class="input-group">
 														<div class="input-group-form w30">
@@ -794,7 +850,7 @@
 														<span class="input-group-btn">
 															<button type="button" class="btn-minus" title="삭제"><i class="ico-minus-bold"></i><span class="blind">삭제</span></button>
 														</span>
-													</div><!--// input-group -->
+													</div>
 												</td>                            
 											</tr>
 											<tr>
@@ -805,7 +861,7 @@
 														<span class="input-group-btn">
 															<button type="button" class="btn-form btn-grey"><span>브랜드 검색</span></button>
 														</span>
-													</div><!--// input-group -->
+													</div>
 												</td>
 											</tr>
 											<tr>
@@ -826,7 +882,7 @@
 										</tbody>
 									</table>	
 								</fieldset>	
-							</div><!--// board-form -->
+							</div> -->
 							<!--// 카테고리 -->
 
 							<!-- 판매정보 -->
@@ -1012,10 +1068,10 @@
 			
 							<!--// 판매정보 -->
 
-							<!-- 입점사정보 -->
-							<div class="cnt-title-area mt40">
+							<!-- 입점사정보 [Dev] 20210721 수정 : 제거 -->
+							<!-- <div class="cnt-title-area mt40">
 								<h3 class="tit-cnt">입점사 정보</h3>
-							</div><!--// cnt-title-area -->
+							</div>
 					
 							<div class="board-form mt15">
 								<fieldset>
@@ -1034,7 +1090,7 @@
 														<span class="input-group-btn">
 															<button type="button" class="btn-form btn-grey"><span>입점사 검색</span></button>
 														</span>
-													</div><!--// input-group -->
+													</div>
 												</td>
 											</tr>
 											<tr>
@@ -1049,7 +1105,7 @@
 										</tbody>
 									</table>	
 								</fieldset>	
-							</div><!--// board-form -->
+							</div>
 		
 							<div class="cnt-title-area mt40">
 								<h3 class="tit-cnt">배송정보</h3>
@@ -1133,7 +1189,8 @@
 										</tr>
 									</tbody>
 								</table>
-							</div>
+							</div> -->
+							<!-- //[Dev] 20210721 수정 : 제거 -->
 		
 							<div id="link3" class="cnt-title-area mt40">
 								<h3 class="tit-cnt">필수옵션</h3>
@@ -1745,8 +1802,9 @@
 									</tbody>
 								</table>
 							</div><!--// board-list | 목록 -->
-		
-							<div class="cnt-title-area mt40">
+							
+							<!-- [Dev] 20210721 수정 : 제거 -->
+							<!-- <div class="cnt-title-area mt40">
 								<h3 class="tit-cnt">기획전</h3>
 							</div>
 		
@@ -1768,7 +1826,7 @@
 							<div class="board-option mt30">
 								<div class="left-area">
 									<div class="page-info">총  <strong class="text-primary">3</strong>건</div>
-								</div><!--// left-area -->
+								</div>
 							</div>
 		
 							<div class="board-list mt10">
@@ -1811,7 +1869,8 @@
 										</tr>
 									</tbody>
 								</table>
-							</div><!--// board-list | 목록 -->
+							</div> -->
+							<!-- //[Dev] 20210721 수정 : 제거 -->
 				
 				
 							<div id="link4" class="cnt-title-area mt40">
@@ -1919,7 +1978,8 @@
 								</table>
 							</div>
 		
-							<div class="cnt-title-area mt40">
+							<!-- [Dev] 20210721 수정 : 제거 -->
+							<!-- <div class="cnt-title-area mt40">
 								<h3 class="tit-cnt">아이콘</h3>
 								<div class="right-info">※최대 4개까지 선택 가능합니다.</div>
 							</div>
@@ -2066,18 +2126,24 @@
 										</tr>
 									</tbody>
 								</table>
-							</div>
+							</div> -->
+							<!-- //[Dev] 20210721 수정 : 제거 -->
 		
 							<div id="link5" class="cnt-title-area mt40">
 								<h3 class="tit-cnt">상품 상세설명</h3>
 							</div>
 		
-							<div class="sub-tab mt10">
+							<div class="ui-tab sub-tab mt10"><!-- [pub] 스크립트 불필요시 ui-tab class 삭제 -->
 								<ul>
-									<li class="current"><a href="#none"><span>상세설명(PC)</span></a></li>
-									<li><a href="#none"><span>상세설명(Mobile)</span></a></li>
+									<li class="current"><a href="#tab2-1"><span>상세설명(PC)</span></a></li>
+									<li><a href="#tab2-2"><span>상세설명(Mobile)</span></a></li>
 								</ul>
-							</div>
+							</div><!--// tab-menu -->
+							<!--[Dev] 20210726  <div class="_pb-inner-ex">제거-->
+							<div class="ui-tab-container tab-cnt-wrap">
+								<div id="tab2-1" class="ui-tab-cnt active tab-content"></div>
+								<div id="tab2-2" class="ui-tab-cnt tab-content"></div>
+							</div><!--// ui-tab-container -->
 		
 							<div id="link6" class="cnt-title-area mt40">
 								<h3 class="tit-cnt">상품정보고시</h3>
@@ -2258,7 +2324,8 @@
 								</table>
 							</div><!--// board-form -->
 		
-							<div class="cnt-title-area mt40">
+							<!-- [Dev] 20210721 수정 : 제거 -->
+							<!-- <div class="cnt-title-area mt40">
 								<h3 class="tit-cnt">관련상품</h3>
 							</div>
 		
@@ -2339,7 +2406,7 @@
 												<td class="text-center"><div class="in-tb">판매상태</div></td>
 												<td class="text-center"><button type="button" class="btn-form btn-default"><span>삭제</span></button></td>
 											</tr>
-													<!-- 2021051 추가 : no data case -->
+													
 											<tr class="no-data">
 												<td colspan="8">
 													<div class="message-area">
@@ -2348,7 +2415,7 @@
 													</div>
 												</td>
 											</tr>
-											<!--// 2021051 추가 : no data case -->
+											
 										</tbody>
 									</table>
 								</div>
@@ -2376,8 +2443,8 @@
 										</tr>
 									</tbody>
 								</table>
-							</div>
-		
+							</div> -->
+							<!-- //[Dev] 20210721 수정 : 제거 -->
 						</div><!--//scroll-frame -->
 					</div><!--// content-area -->
 					
