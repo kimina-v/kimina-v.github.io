@@ -59,7 +59,7 @@
                         </div>
                     </div>
                     <div class="side">
-                        <button type="button" class="all-cp-down"><span>전체 쿠폰받기</span></button>
+                        <button type="button" class="all-cp-down ui-toast-btn"><span>전체 쿠폰받기</span></button>
                     </div>
                 </div>
                 <ul class="coupon-card-list">
@@ -70,7 +70,7 @@
                                 <em class="coupon-name">[FC서울 X 랭킹닭컴] 맛있닭 다이어트 도시락 5팩 교환권</em>
                                 <span class="coupon-desc">10만원 이상 구매 시 사용</span>
                             </div>
-                            <button type="button" class="btn-basic-md2 btn-primary-cp"><span class="txt">쿠폰받기</span><span class="cp-count"><b>2</b>장</span></button>
+                            <button type="button" class="btn-basic-md2 btn-primary-cp ui-toast-btn"><span class="txt">쿠폰받기</span><span class="cp-count"><b>2</b>장</span></button>
                             <button type="button" class="btn-card-spin"><span class="blind">내용보기</span></button>
                         </div>
                         <div class="coupon-back">
@@ -91,7 +91,7 @@
                                 <em class="coupon-name">[FC서울 X 랭킹닭컴] 맛있닭 다이어트 도시락 5팩 교환권</em>
                                 <span class="coupon-desc">90,000원 이상 구매 시 최대 5,000원 할인</span>
                             </div>
-                            <button type="button" class="btn-basic-md2 btn-primary-cp"><span class="txt">쿠폰받기</span><span class="cp-count"><b>2</b>장</span></button>
+                            <button type="button" class="btn-basic-md2 btn-primary-cp ui-toast-btn"><span class="txt">쿠폰받기</span><span class="cp-count"><b>2</b>장</span></button>
                             <button type="button" class="btn-card-spin"><span class="blind">내용보기</span></button>
                         </div>
                         <div class="coupon-back">
@@ -112,7 +112,7 @@
                                 <em class="coupon-name">[FC서울 X 랭킹닭컴] 맛있닭 다이어트 도시락 5팩 교환권</em>
                                 <span class="coupon-desc">90,000원 이상 구매 시 최대 5,000원 할인</span>
                             </div>
-                            <button type="button" class="btn-basic-md2 btn-primary-cp" disabled><span class="txt">쿠폰받기 완료</span></button>
+                            <button type="button" class="btn-basic-md2 btn-primary-cp ui-toast-btn" disabled><span class="txt">쿠폰받기 완료</span></button>
                             <button type="button" class="btn-card-spin"><span class="blind">내용보기</span></button>
                         </div>
                         <div class="coupon-back">
@@ -150,7 +150,7 @@
                         </div>
                     </div>
                     <div class="side">
-                        <button type="button" class="all-cp-down"><span>전체 쿠폰받기</span></button>
+                        <button type="button" class="all-cp-down ui-toast-btn"><span>전체 쿠폰받기</span></button>
                     </div>
                 </div>
                 <div class="coupon-grade-box">
@@ -652,7 +652,7 @@
                         </div>
                     </div>
                     <div class="side">
-                        <button type="button" class="all-cp-down"><span>전체 쿠폰받기</span></button>
+                        <button type="button" class="all-cp-down ui-toast-btn"><span>전체 쿠폰받기</span></button>
                     </div>
                 </div>
                 <ul class="coupon-card-list">
@@ -663,7 +663,7 @@
                                 <em class="coupon-name">[FC서울 X 랭킹닭컴] 맛있닭권</em>
                                 <span class="coupon-desc">10만원 이상 구매 시 사용</span>
                             </div>
-                            <button type="button" class="btn-basic-md2 btn-primary-cp"><span class="txt">쿠폰받기</span><span class="cp-count"><b>2</b>장</span></button>
+                            <button type="button" class="btn-basic-md2 btn-primary-cp ui-toast-btn"><span class="txt">쿠폰받기</span><span class="cp-count"><b>2</b>장</span></button>
                             <button type="button" class="btn-card-spin"><span class="blind">내용보기</span></button>
                         </div>
                         <div class="coupon-back">
@@ -684,7 +684,7 @@
                                 <em class="coupon-name">[FC서울 X 랭킹닭컴] 맛있닭 다이어트 도시락 5팩 교환권</em>
                                 <span class="coupon-desc">10만원 이상 구매 시 사용</span>
                             </div>
-                            <button type="button" class="btn-basic-md2 btn-primary-cp"><span class="txt">쿠폰받기</span><span class="cp-count"><b>2</b>장</span></button>
+                            <button type="button" class="btn-basic-md2 btn-primary-cp ui-toast-btn"><span class="txt">쿠폰받기</span><span class="cp-count"><b>2</b>장</span></button>
                             <button type="button" class="btn-card-spin"><span class="blind">내용보기</span></button>
                         </div>
                         <div class="coupon-back">
@@ -736,8 +736,20 @@
              $('.grade-coupon .detail-close').on('click',function(){
                  $(this).parent('.cp-detail-layer').removeClass('on');
              })
-             
-         })
+             $('.ui-toast-btn').on('click',function(){
+                downToastPop ();
+             })
+        });
+
+        function downToastPop () {
+            containerWrap = $('.wrap');
+            containerWrap.append('<div class="toast-pop"><div class="message"><p class="txt">N장 다운되었습니다</p></div></div>')
+
+            setTimeout(function () {
+                closeToastPop ()
+            },1000)
+        }
+
      </script>
     <!-- ================  //해당 페이지만 사용 되는 script  ==============-->
 
