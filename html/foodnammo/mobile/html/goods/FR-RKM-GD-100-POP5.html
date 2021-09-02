@@ -20,7 +20,18 @@
 	<!-- ========== 공통 헤더 :: header ========== -->
 	<script>include.skipNav();</script>
 	<header id="header" class="header">
-		<script>include.header();</script>
+		<div class="header-top header-detail"><!-- [DEV] 상품상세 헤더-->
+			<div class="page-title-area">
+                <a href="#" class="btn-back"><i class="ico-arrows-back"></i><span class="blind">뒤로가기</span></a>
+				<h1 class="page-title"><i class="head-logo"></i><span class="blind">랭킹닭컴</span></h1>
+				<div class="my-menu">
+					<ul>
+						<li><a href="#" class="btn-util-search" title="검색"><i class="ico-search-pop"></i></a></li>
+						<li><a href="#" class="btn-util-cart" title="장바구니"><span class="blind">장바구니</span><em class="count">1</em></a></li>
+					</ul>
+				</div>
+			</div><!-- // page-title-area  -->
+		</div><!--// header-top -->
 	</header>
 	<!--// ========== 공통 헤더 :: header ========== -->
 
@@ -42,19 +53,15 @@
 	<!--// ========== 공통 푸터 :: footer ========== -->
 </div><!--// wrap -->
 
-
 <!-- ========== 팝업 영역 ========== -->
 <div class="layer-wrap" style="display:block;">
 	<div class="layer-confirm">
 		<div class="inner">
 			<div class="message">
-				<strong class="txt">MD’s Pick! 옵션을 선택해주세요.</strong>
-				<!--
-					<strong class="txt">상품 옵션을 선택해주세요</strong>
-				-->
+				<strong class="txt">옵션을 선택해주세요</strong>
 			</div>
 			<div class="btn-area">
-				<button type="button" class="btn-basic-md btn-grey2"><span>확인</span></button>
+				<button type="button" class="btn-basic-md btn-black btn-default ui-close-pop"><span>확인</span></button>
 			</div>
 		</div><!--// inner -->
 	</div><!--// layer-confirm  -->

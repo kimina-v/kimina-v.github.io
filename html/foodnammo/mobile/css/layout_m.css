@@ -328,11 +328,13 @@
 .login-area .input-group  ~ .btn-basic-lg{margin-top:12px;}
 .login-area .inner-flex{margin-top:15px;}
 .login-area .btn-bottom-area ~ .page-guide-center{margin-top:25px;}
-.login-area .page-guide-center ~ .log-benefit-bnr{margin-top:45px;;}
+.login-area .btn-bottom-area ~ .log-benefit-bnr,
+.login-area .page-guide-center ~ .log-benefit-bnr{margin-top:45px;}
+.login-area .log-benefit-bnr + .bl-list-type3{margin-top:10px}
+.login-area fieldset ~ .btn-bottom-area{margin-top:40px}
+.join-title{font-size:24px; margin-bottom:20px; text-align:center; font-weight:500;}
 
-.join-title{}
-
-.sns-login{margin:40px 0;}
+.sns-login{margin:40px 0 0;}
 .sns-login-list .ico-sns-loin{display:inline-block; width:52px; height:52px; overflow:hidden; background:url("../images/icon/ico_sns_login_m.png"); background-size:auto 52px;}
 .sns-login-list .ico-sns-loin.naver{background-position:left top;}
 .sns-login-list .ico-sns-loin.apple{background-position:right top;}
@@ -346,7 +348,7 @@
 .terms-toggle-box .terms-inner-list{padding-top:12px;}
 .terms-toggle-box .terms-inner-list > li + li{margin-top:15px}
 .terms-toggle-box ~ .bl-list-type2{margin-top:10px; padding-bottom:10px}
-.terms-inner-list .terms-inner-box{background:#f8f8f8; padding:12px; margin-top:10px}
+.terms-inner-list .terms-inner-box{background:#f8f8f8; padding:12px; margin-top:10px; font-size:11px;}
 .btn-select-type{position:relative; display:inline-block; min-width:105px; height:50px; padding: 0 40px 0 15px; border: 1px solid #ccc; color: #666; vertical-align:middle; background: url(../images/icon/ico_btn_select.png) right center no-repeat; background-size: 28px auto;  border-radius: 0;}
 .btn-select-type > span{display: inline-block; height:100%; line-height: 3.8;}
 
@@ -383,4 +385,28 @@
 .cs-box-bnr li + li{border-top:1px solid #eee; overflow: hidden;}
 
 
+/* 비밀번호 변경 */
+.mem-guide-txt{font-size:15px; line-height:23px; text-align:center; margin-bottom:25px;}
+.mem-guide-txt.type2{padding:0 10px; word-break: keep-all;}
+.pw-guide-box{border:1px solid #eee; padding:30px 6.66%; border-radius:6px; width:90%; margin:0 auto}
+.pw-guide-box .title{text-align:center; margin-bottom:20px; font-size:16px; font-weight:500;}
+.pw-guide-box ul > li{font-size:12px; color:#666; padding-left:34px; position:relative; line-height:26px;}
+.pw-guide-box ul > li + li{margin-top:10px}
+[class*="ico-pwguide-"]{position:absolute; top:0; left:0; display:block; width:26px; height:26px; background: #F5F5F5; border-radius:50%;}
+[class*="ico-pwguide-"]::after{display:inline-block; content:''; background-image:url('../images/icon/ico_img_m.png');  width:26px; height:26px; background-size:200px auto}
+.ico-pwguide-01::after{background-position:-80px 0px;}
+.ico-pwguide-02::after{background-position:-120px 0px;}
+.ico-pwguide-03::after{background-position:-160px 0px;}
+.pw-guide-box ~ .btn-bottom-area,
+.mem-guide-txt + .btn-bottom-area{margin-top:40px}
+
+/* 비회원주문 */
+.terms-agree-area{margin-bottom:10px;}
+.terms-agree-area .title{color:#333; font-size:15px;}
+
+.terms-agree-area .terms-inner-wrap{border:1px solid #ccc; padding:15px; margin-top:10px}
+
+.terms-agree-area .terms-inner-box{background: #F8F8F8; padding:10px; margin-top:10px; height:165px; overflow-y:auto; font-size:11px; color:#666} 
+
+.terms-agree-area ~ .btn-bottom-area{margin-top:25px;}
 

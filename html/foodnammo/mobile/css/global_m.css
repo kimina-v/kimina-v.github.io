@@ -167,7 +167,7 @@ table td .title-elps{display:inline-block; vertical-align: middle; max-width:94%
 
 /* 필수체크 */
 .es:after{display:inline; content:'*'; color:#FF6001}
-.es2{width:5px; height:5px; background:#FF6001; display:inline-block; border-radius:50%;} 
+.es2{width:4px; height:4px; background:#FF6001; display:inline-block; border-radius:50%;} 
 
 /**** background Color ****/
 .bg-snowgrey{background:#f8f8f8 !important;}
@@ -392,6 +392,7 @@ textarea:-ms-input-placeholder{color:#bbb;}
 .input-group > .input-group-form:first-child + .input-group-form,
 .input-group > .input-group-form:first-child + .input-group-txt{padding:0 5px 0 0;}
 .input-group > .input-group-txt.label{padding-right:10px;}
+.input-group.w-full-fixed{width:100%; table-layout:fixed;}
 
 .form-inline-list{vertical-align:top; line-height:1;}
 .form-inline-list [class*="custom-"]{line-height:1; vertical-align:middle;}
@@ -431,17 +432,17 @@ textarea:-ms-input-placeholder{color:#bbb;}
 .input-group.type-lg .select,
 .input-group.type-lg .btn-form{height:50px;}
 /* 간격 */
-.input-group.type-lg  > .input-group-cell{display:table-cell; padding:0 2px;}
-.input-group.type-lg  > .input-group-cell:first-child{padding:0 2px 0 0;}
-.input-group.type-lg  > .input-group-cell:last-child{padding:0 0 0 2px;}
-.input-group.type-lg  > .input-group-txt{display:table-cell; position:relative; white-space:nowrap; width:1%; vertical-align:middle; padding:0 4px; text-align:center;}
+.input-group.type-lg  > .input-group-cell{display:table-cell; padding:0 3px;}
+.input-group.type-lg  > .input-group-cell:first-child{padding:0 3px 0 0;}
+.input-group.type-lg  > .input-group-cell:last-child{padding:0 0 0 3px;}
+.input-group.type-lg  > .input-group-txt{display:table-cell; position:relative; white-space:nowrap; width:1%; vertical-align:middle; padding:0 3px; text-align:center;}
 .input-group.type-lg  > .input-group-form,
-.input-group.type-lg  > .input-group-btn{display:table-cell; position:relative; white-space:nowrap; width:1%; vertical-align:middle; border:0; padding:0 2px;}
+.input-group.type-lg  > .input-group-btn{display:table-cell; position:relative; white-space:nowrap; width:1%; vertical-align:middle; border:0; padding:0 3px;}
 .input-group.type-lg  > .input-text + .input-group-form:last-child,
-.input-group.type-lg  > .input-text + .input-group-btn:last-child{padding:0 0 0 4px}
-.input-group.type-lg  > .input-group-form:not(:first-child) + .input-group-txt{padding:0 4px 0 2px}
+.input-group.type-lg  > .input-text + .input-group-btn:last-child{padding:0 0 0 6px}
+.input-group.type-lg  > .input-group-form:not(:first-child) + .input-group-txt{padding:0 6px 0 3px}
 .input-group.type-lg  > .input-group-form:first-child + .input-group-form,
-.input-group.type-lg  > .input-group-form:first-child + .input-group-txt{padding:0 4px 0 0;}
+.input-group.type-lg  > .input-group-form:first-child + .input-group-txt{padding:0 3px 0 0;}
 
 /* 유효성 체크 */
 .input-group ~ .valid,
@@ -758,7 +759,7 @@ textarea:-ms-input-placeholder{color:#bbb;}
 /* 간격 */
 .input-group-wrap ~ .textarea-box,
 .input-group ~ .input-group{margin-top:6px;}
-.input-group.type-lg ~ .input-group.type-lg{margin-top:3px;}
+.input-group.type-lg ~ .input-group.type-lg{margin-top:6px;}
 
 /**** qty group ****/
 .qty-group{position:relative; display:inline-block; overflow:hidden; width:100px; height:30px; border:1px solid #c4c4c4}
@@ -817,7 +818,7 @@ textarea:-ms-input-placeholder{color:#bbb;}
 .form-group .form-head > .form-label{display:inline-block}
 .form-group .form-tit,
 .form-group .form-label{font-size:15px; color:#333; text-align:left; font-weight:bold;}
-.form-group .form-label .es2{vertical-align:middle; margin-top:-3px; margin-left:5px;}
+.form-group .form-label .es2{vertical-align:middle; margin-top:-5px; margin-left:5px;}
 
 /* form-horiz-list */
 table td .form-horiz-list{margin:-5px 0}
@@ -863,7 +864,7 @@ button{background:none; cursor:pointer; outline:none; border:0; margin:0; paddin
 /* .btn-basic-xlg{ height:50px; padding:12px 25px}
 .btn-basic-xlg > span{font-size:18px;  font-weight:700; line-height: 1.5;} */
 
-.btn-basic-lg{height:48px; padding:12px 25px 9px}
+.btn-basic-lg{height:48px; padding:12px 0 9px} /*padding:12px 25px 9px*/
 .btn-basic-lg > span{font-size:15px; line-height:1.7}
 .btn-basic-lg > i{vertical-align:middle; margin:3px 5px 0}
 /* .btn-basic-lg2{height:50px; padding:10px 25px 11px}
@@ -1513,7 +1514,9 @@ table tbody td.vt-mid{vertical-align:middle;}
 .bl-text-type2:before,
 .bl-list-type2 > li:before{display:inline-block; content:'※'; vertical-align:middle; margin:-3px 3px 0 -15px}
 
+.bl-list-type3,
 .bl-list-type3 > li{color:#333; font-size:12px; word-break: break-word; text-align: left; padding-left:10px;}
+.bl-list-type3:before, 
 .bl-list-type3 > li:before{display: inline; content: '-'; margin:8px 7px 0 -10px}
 .bl-list-type3 > li + li{margin-top:8px;}
 
@@ -1677,13 +1680,21 @@ button.swiper-pagination-bullet{border:none;margin:0;padding:0;-webkit-box-shado
 .layer-bottom .btn-area .right > .btn{margin:0 0 0 3px;}
 
 /* confirm 팝업 */
-.layer-wrap .layer-confirm{position:absolute; top:50%; left:50%; z-index:100; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%);}
+/* .layer-wrap .layer-confirm{position:absolute; top:50%; left:50%; z-index:100; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%);}
 .layer-confirm{width:360px; overflow:hidden; border-radius:8px; background:#fff;}
 .layer-confirm .inner{position:relative; display:table; width:100%; min-height:160px; padding:45px 0 110px; text-align:center;}
 .layer-confirm .inner .message{display:table-cell; vertical-align:middle; line-height:22px;}
 .layer-confirm .inner .message .txt{font-size:15px; font-weight:400;}
 .layer-confirm .btn-area{position:absolute; bottom:20px; left:0; width:100%; text-align:center;}
-.layer-confirm .btn-area [class*="btn-basic-"]{min-width:96px;}
+.layer-confirm .btn-area [class*="btn-basic-"]{min-width:96px;} */
+
+.layer-wrap .layer-confirm{position:absolute;top:50%;left:50%;z-index:100;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%)}
+.layer-confirm{width:calc(100vw - 40px);max-width:320px;overflow:hidden;border-radius:8px;background:#fff}
+.layer-confirm .inner{position:relative;padding:50px 20px 30px;text-align:center;box-sizing:border-box}
+.layer-confirm .inner .message{text-align:center;vertical-align:middle;line-height:22px}
+.layer-confirm .inner .message .txt{font-size:18px;font-weight:500}
+.layer-confirm .btn-area{margin-top:30px;text-align:center}
+.layer-confirm .btn-area [class*="btn-basic-"]{width:100%}
 
 
 /*========================================================

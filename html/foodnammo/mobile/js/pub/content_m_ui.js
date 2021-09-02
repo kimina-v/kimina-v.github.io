@@ -106,6 +106,12 @@ $(function () {
     //추천상품
     if ($('.prod-recomm').length > 0) { recommPrdSwiperSlide();}
 
+    //기본 스와이프
+    if($('.default-swipe').length>0){defaultSwipe();}
+
+    //웰컴 기프트
+    if($('.welcome-gift-list').length>0){welcomeGiftSwipe();}
+    
     //이미지 슬라이드
     if ($('.img-slide').length > 0) { imgSwiper ();}
 
@@ -1458,6 +1464,48 @@ function recommPrdSwiperSlide () {
     });
 }
 
+// 기본 스와이프
+function defaultSwipe () {
+    var defaultSwiper = new Swiper('.default-swipe', {
+        slidesPerGroup: 1,
+        slidesPerView: 1,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-next',
+            prevEl: '.swiper-prev',
+        }
+    });
+}
+
+//웰컴 기프트
+function welcomeGiftSwipe (){
+    var welcomeGiftSwiper = new Swiper('.welcome-gift-list .swiper-container',{
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 20,
+        loop: false,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        on:{
+            activeIndexChange : function(){
+                setTimeout(function(){
+                    $('.swiper-slide').each(function(){
+                        if($(this).hasClass('swiper-slide-active')){
+                            $(this).find('input[type=radio]').prop('checked',true);
+                        }else{
+                            $(this).find('input[type=radio]').prop('checked',false);
+                        }
+                    })
+                },50)
+            }
+        }
+    });
+    
+
+    
+}
 
 //이미지 슬라이드
 function imgSwiper () {

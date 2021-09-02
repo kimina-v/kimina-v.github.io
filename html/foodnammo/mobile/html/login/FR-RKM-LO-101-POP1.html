@@ -58,47 +58,78 @@
 			<div class="layer-body">
 				<div class="frame-inner">
 					<fieldset class="form-group-area">
-						<legend>비밀번호 찾기</legend>	
-                        <div class="input-group type-lg w-full">
-                            <label for="item103" class="blind">아이디 입력</label>
-                            <input type="text" id="item103" class="input-text" placeholder="아이디 입력">
-                        </div><!--// input-group -->
-                        <div class="input-group type-lg w-full">
-                            <label for="item101" class="blind">이름 입력</label>
-                            <input type="text" id="item101" class="input-text" placeholder="이름 2자 이상 입력">
-                        </div><!--// input-group -->
-                        <div class="input-group type-lg w-full">
-                            <div class="input-group-cell">
-                                <select class="select">
-                                    <option value="">010</option>
-                                </select>
-                            </div><!--// input-group-cell -->
-                            <div class="input-group-cell">
-                                <input type="text" id="" class="input-text" title="휴대폰번호 중간자리" />
-                            </div><!--// input-group-cell -->
-                            <div class="input-group-cell">
-                                <input type="text" id="" class="input-text" title="휴대폰번호 뒷자리" />
-                            </div><!--// input-group-cell -->
-                        </div><!--// input-group -->
-
-                        <!-- 인증번호 입력 -->
-                        <div class="input-group type-lg w-full">
-                            <label for="item103" class="blind">인증번호 입력</label>
-                            <input type="text" id="item103" class="input-text" placeholder="인증번호 입력">
-                            <span class="timer">3:00</span>
-                        </div><!--// input-group -->
-                        <!--// 인증번호 입력 -->
+						<legend>비밀번호 찾기 방식 선택</legend>
+						<ul class="find-id-list">
+							<li>
+								<div class="custom-radio">
+									<input type="radio" id="radio-1" class="radio" value="phone" name="radio-item-1" checked><label for="radio-1">휴대폰번호로 찾기</label>
+								</div>
+								<div class="ui-radio-content active">
+									<div class="input-group type-lg w-full">
+										<label for="item100" class="blind">아이디 입력</label>
+										<input type="text" id="item100" class="input-text" placeholder="아이디 입력">
+									</div><!--// input-group -->
+									<div class="input-group type-lg w-full">
+										<label for="item101" class="blind">이름 입력</label>
+										<input type="text" id="item101" class="input-text" placeholder="이름 2자 이상 입력">
+									</div><!--// input-group -->
+									<div class="input-group type-lg w-full-fixed">
+										<div class="input-group-cell">
+											<select class="select">
+												<option value="">010</option>
+											</select>
+										</div><!--// input-group-cell -->
+										<div class="input-group-cell">
+											<input type="text" id="" class="input-text" title="휴대폰번호 중간자리" />
+										</div><!--// input-group-cell -->
+										<div class="input-group-cell">
+											<input type="text" id="" class="input-text" title="휴대폰번호 뒷자리" />
+										</div><!--// input-group-cell -->
+									</div><!--// input-group -->
+									<div class="input-group type-lg w-full">
+										<label for="item103" class="blind">인증번호 입력</label>
+										<input type="text" id="item103" class="input-text" placeholder="인증번호 입력">
+										<span class="timer">3:00</span>
+									</div>
+								</div><!--// ui-radio-content -->
+							</li>
+							<li>
+								<div class="custom-radio">
+									<input type="radio" id="radio-2" class="radio" value="email" name="radio-item-1"><label for="radio-2">이메일로 찾기</label>
+								</div>
+								<div class="ui-radio-content">
+									<div class="input-group type-lg w-full">
+										<label for="item200" class="blind">아이디 입력</label>
+										<input type="text" id="item200" class="input-text" placeholder="아이디 입력">
+									</div><!--// input-group -->
+									<div class="input-group type-lg w-full">
+										<label for="item201" class="blind">이름 입력</label>
+										<input type="text" id="item201" class="input-text" placeholder="이름 2자 이상 입력">
+									</div><!--// input-group -->
+									<div class="input-group type-lg w-full">
+										<input type="text" id="item202" class="input-text" placeholder="이메일 주소">
+										<div class="input-group-btn">
+											<a href="#" class="btn-select-type"><span>직접입력</span></a> 
+											<!-- 
+												클릭시 이메일주소 선택 팝업 열림 -> 선택한 이메일 주소 보여짐
+												ex) <a href="#" class="btn-select-type"><span>dreamwiz.com</span></a> 
+											-->
+										</div>
+									</div><!--// input-group -->
+								</div><!--// ui-radio-content -->
+							</li>
+						</ul>
 					</fieldset>
 
 					<div class="btn-bottom-area">
-						<button type="button" class="btn-basic-lg btn-navy"><span>인증번호 받기</span></button><!-- 활성화시 removeClass btn-dim -->
+						<button type="button" class="btn-basic-lg btn-navy"><span>인증번호 받기</span></button><!-- 비활성화 addClass btn-dim -->
 					</div><!--// btn-bottom-area -->
 
-                    <!-- 인증번호 받기 후 -->
-                    <div class="btn-bottom-area">
-						<button type="button" class="btn-basic-lg btn-primary btn-dim"><span>비밀번호 재설정 </span></button><!-- 활성화시 removeClass btn-dim -->
+					<!-- 인증받기 후 -->
+					<div class="btn-bottom-area">
+						<button type="button" class="btn-basic-lg btn-primary"><span>비밀번호 재설정 </span></button><!-- 비활성화 addClass btn-dim -->
 					</div><!--// btn-bottom-area -->
-
+					
 				</div>
 			</div><!--// layer-body -->
 			<button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button>
@@ -106,5 +137,18 @@
 	</div><!--// layer-pop  -->
 </div><!--// layer-pop-wrap #popupSample-02 -->
 <!-- ========== 팝업 영역 ========== -->
+
+<!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->
+<script>
+    $(function () {
+		$('.radio').change(function () {      
+			if(  $(this).prop('checked', true) ) {
+				$(this).parent('.custom-radio').siblings('.ui-radio-content').addClass('active');
+				$(this).parents('li').siblings().find('.ui-radio-content').removeClass('active')
+			} 
+		});
+   }); 
+</script>
+<!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->
 </body>
 </html>
