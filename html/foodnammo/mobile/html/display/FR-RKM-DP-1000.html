@@ -743,6 +743,9 @@
                 var containerWrap = $('.wrap');
                 if($(this).closest('.coupon-item').hasClass('cp-complete') || $(this).hasClass('done')){
                     containerWrap.append('<div class="toast-pop"><div class="message"><p class="txt">이미 발급받은 쿠폰입니다.<br>보유하신 쿠폰은 마이랭닭에서 확인해주세요.</p></div></div>')
+                }else if($(this).hasClass('all-cp-down')){
+                    containerWrap.append('<div class="toast-pop"><div class="message"><p class="txt">쿠폰 발급이 완료되었습니다.</p></div></div>')
+                    $(this).addClass('done').closest('.coupon-group').find('.coupon-item').addClass('cp-complete').find('.ui-toast-btn').html('<span class="txt">쿠폰받기 완료</span>')
                 }else{
                     containerWrap.append('<div class="toast-pop"><div class="message"><p class="txt">쿠폰 발급이 완료되었습니다.</p></div></div>')
                     $(this).html('<span class="txt">쿠폰받기 완료</span>').closest('.coupon-item').addClass('cp-complete');
