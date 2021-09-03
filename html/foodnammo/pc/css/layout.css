@@ -397,6 +397,8 @@
 .terms-agree-area{border-bottom:1px solid #ddd; padding-bottom:10px; margin-bottom:10px;}
 .terms-agree-area .title{color:#333; font-weight:400; border-bottom:1px solid #ddd; padding-bottom:10px; margin-bottom:10px}
 .terms-agree-area .terms-inner-box{background: #F8F8F8; padding:10px; margin-top:10px; height:165px; overflow-y:auto; font-size:11px; color:#666} 
+.terms-agree-area .terms-inner-box + .custom-checkbox{margin-top:10px}
+
 
 /*****  팝업 ****/
 .layer-wrap .layer-pop.login-certi-pop{width:375px; min-height:248px}

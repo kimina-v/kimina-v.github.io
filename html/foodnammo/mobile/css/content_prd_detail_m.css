@@ -160,8 +160,9 @@
 .eval-list > dd .num strong{font-size:16px}
 
 .goods-detail-head{position:relative}
-.goods-detail-head .tit{font-size:16px;font-weight:700}
+.goods-detail-head .tit{font-size:16px;font-weight:700;display:inline-block}
 .goods-detail-head .tit span{font-size:14px;color:#666;font-weight:normal;font-family:'Roboto'}
+.goods-detail-head .custom-checkbox{vertical-align:-1px;margin-left:12px}
 .goods-detail-head .right{position:absolute;top:50%;right:20px;transform:translateY(-50%);-webkit-transform:translateY(-50%)}
 .goods-detail-head .right .btn-basic-sm{ min-width:110px}
 .goods-detail-qna .goods-detail-head .tit{padding-left:15px}

@@ -1477,11 +1477,10 @@ function moreCouponView () {
         } else {
             $(this).parent('.ui-coupon-list').find('.ui-coupon-more').hide();
         }
-        
         $(this).children('li.colum').slice(0, 4).show(); 
     })
     
-    $('.ui-coupon-more').click(function(e){ 
+    couponMoreBtn.click(function(e){ 
         var height = $(this).parents('.swiper-wrapper').height();
 
         if ( !$(this).hasClass('active') ) {

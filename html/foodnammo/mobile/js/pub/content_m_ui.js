@@ -131,8 +131,8 @@ $(function () {
     if ($('.coupon-grade-box').length > 0) { moreCouponView(); }
     if ($('.grade-coupon-swipe').length > 0) { cpGradeSwiperSlide(); }
     
-
-
+     // 주문목록(마이페이지)
+     if ($('.order-swiper-list').length > 0) { orderSwiperSlide(); }
 });
 
 
@@ -1532,6 +1532,7 @@ function imgDefaultSlide () {
     });
 }
 
+
 /**** 카테고리 탭 *****/
 function cateSwiperTab(){
     $('.cate-tab-swiper').each(function(index, element){
@@ -1555,6 +1556,8 @@ function cateSwiperTab(){
 
     });
 }
+
+
 /*브랜드 상단 셀렉트 박스*/
 function bsbSelect() {
     var bsb = document.querySelector(".brand-sort-box");
@@ -1706,4 +1709,16 @@ function moreCouponView() {
         listWrap.find('li.coupon-item:eq(3)').nextAll('li').hide();
         $('.ui-coupon-more').removeClass('active').html('<span>더보기</span>')
     }
+}
+
+/****** 마이랭닭 주문목록 ******/
+function orderSwiperSlide () {
+    var swiper = new Swiper('.order-swiper-list', {
+        observer: true,
+        observeParents: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
 }

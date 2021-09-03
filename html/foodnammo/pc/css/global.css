@@ -763,6 +763,7 @@ textarea:-ms-input-placeholder{color:#bbb;}
 .w270{width:270px;}
 .w275{width:275px;}
 .w280{width:280px;}
+.w294{width:294px;}
 .w435{width:435px;}
 .w420{width:420px;}
 
@@ -1388,6 +1389,7 @@ table tbody td.vt-mid{vertical-align:middle;}
 .board-form table tbody tr:first-child td{border-top:0;}
 .board-form table .in-tb{padding:3px 0 4px;}
 .board-form table .input-group.type-sm > .input-group-txt{font-size:15px; color:inherit}
+.board-form table tbody .in-tb .es2{vertical-align:middle; margin-top:-5px}
 .board-form .form-verti-list{padding:20px 0}
 .board-form .form-verti-list li .custom-radio .radio + label{font-size:15px; line-height: 1.2;}
 /* type2 */
@@ -1443,6 +1445,10 @@ table tbody td.vt-mid{vertical-align:middle;}
 .bl-text-type1:before,
 .bl-list-type1 > dd:before,
 .bl-list-type1 > li:before{display:inline-block; vertical-align:middle; content:'-'; vertical-align:middle; margin:0 5px 0 -11px}
+
+.bl-list-type1 > li .es2{vertical-align:middle; margin-top:-3px; margin-right:5px;}
+
+
 .bl-text-type2,
 .bl-list-type2 > li{color:#888; font-size:12px; padding-left:15px; word-break: break-word; text-align: left;}
 .bl-text-type2:before,

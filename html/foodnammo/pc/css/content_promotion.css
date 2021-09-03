@@ -53,3 +53,12 @@
 .event-quiz .context .a .option-list li .custom-radio .radio:checked + label:after{width:11px;height:11px;top:9px;left:6.5px}
 .event-quiz .btn-group{text-align:center;margin-top:16px}
 .event-quiz .btn-group button:only-child{min-width:260px;font-size:15px}
+
+.layer-wrap .layer-pop.quiz-complete{width:330px;border-radius:10px}
+.layer-pop.quiz-complete .layer-inner .layer-content{padding:76px 0 12px;text-align:center;position:relative}
+.layer-pop.quiz-complete .layer-inner .ui-close-pop{top:15px;right:15px}
+.quiz-complete .layer-content:before{content:"";width:40px;height:40px;background:url(../images/icon/ico_quiz_complete.png) no-repeat 0 0;position:absolute;top:30px;left:calc(50% - 20px)}
+.quiz-complete .layer-content em{display:block;line-height:23px;font-size:16px}
+.quiz-complete .layer-content span{display:block;margin-top:2px;color:#666;font-size:13px}
+.quiz-complete .btn-area{margin-bottom:26px;text-align:center}
+.quiz-complete .btn-area .btn-grey2{background:#555;min-width:96px}

@@ -23,6 +23,9 @@
 /* 개인정보처리방침 팝업(배송업체/입점사) */
 .li-shipper li{padding:0 0 10px;}
 
+.terms-content-wrap .bl-list-type1  ~ .board-form{margin-top:10px}
+.terms-content-wrap .board-form td{padding: 8px 10px 8px 10px;}
+.terms-content-wrap .board-form ~ .terms-agree-area{margin-top:40px}
 
 /*========================================================
  고객센터

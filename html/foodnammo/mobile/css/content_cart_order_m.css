@@ -27,7 +27,8 @@
 .cart-list-area.order-complete{border-top:1px solid #e6e6e6; padding:40px 15px 0;}
 .cart-list-area.order-complete .list-head{padding:0 0 15px;}
 .cart-list-area.order-complete .list-head .tit{font-size:16px;}
-.order-info .dlv-guide{background: #F7F7F7; padding:12px 15px; font-size:12px;}
+.order-info .dlv-guide{background: #f4f4f4; padding:15px; font-size:12px;}
+.order-info .dlv-guide .txt{line-height:18px}
 
 /* cart-list */
 .cart-list{padding:0 15px}

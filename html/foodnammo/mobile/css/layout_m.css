@@ -290,6 +290,7 @@
 
 .page-bottom-area{position:fixed; bottom:0; left:0; width:100%; z-index:10;}
 .page-bottom-area > [class*="btn-"]:only-child{margin:0; width:100%}
+.page-bottom-area.type-myp{bottom:48px}
 
 .inner-flex{display:flex; align-items:stretch;  display:-webkit-box;  display:-webkit-flex; -webkit-align-items:stretch;}
 .inner-flex .left-item{flex-grow:1; -webkit-box-flex: 1;}

@@ -567,9 +567,9 @@ textarea:-ms-input-placeholder{color:#bbb;}
 .custom-checkbox .checkbox.disabled:checked + label:before,
 .custom-checkbox .checkbox:checked[disabled] + label:before{background-position:-50px -30px; opacity:.5;}
 /* type2 */
-.custom-checkbox .checkbox.type2 + label{padding-left:23px; min-height:16px; line-height: 1.2;}
-.custom-checkbox .checkbox.type2 + label:before{display:block; content:''; position:absolute; left:0; top:0; width:16px; height:16px; text-align:center; background:#fff; border:1px solid #333;box-sizing:border-box;} 
-.custom-checkbox .checkbox.type2:checked + label:before{background:url("../images/icon/ico_form.png") -100px -30px; width:16px; height:16px; border:1px solid #333}
+.custom-checkbox .checkbox.type2 + label{padding-left:18px; min-height:16px; line-height: 1.2;}
+.custom-checkbox .checkbox.type2 + label:before{display:block; content:''; position:absolute; left:0; top:0; width:14px; height:14px; text-align:center; background:#fff; border:1px solid #ccc;box-sizing:border-box;} 
+.custom-checkbox .checkbox.type2:checked + label:before{background:#ff6001 url("../images/icon/ico_check_m.png") -43px -43px/58px auto; width:14px; height:14px; border:1px solid #ff6001}
 /* type-sm */
 .custom-checkbox .checkbox.type-sm + label{padding-left:23px; min-height:14px; line-height: 1.1; font-size:13px;}
 .custom-checkbox .checkbox.type-sm + label:before{display:block; content:''; position:absolute; left:0; top:0; width:14px; height:14px; text-align:center; background:#fff; border:1px solid #E6E6E6; box-sizing:border-box;} 
@@ -928,6 +928,7 @@ button{background:none; cursor:pointer; outline:none; border:0; margin:0; paddin
 .btn-default{background:#fff; color:#333; border:1px solid #999;}
 .btn-default-ex{background:#fff; color:#333; border:1px solid #666;}
 .btn-navy{ color:#fff; background:#3A4C67; border:1px solid #505f7c;}
+.btn-navy-line{color:#5C6FA0; background:#fff; border:1px solid #5C6FA0;}
 .btn-black{ color:#fff; background:#333; border:1px solid #333;}
 .btn-grey{background:#F2F2F2; border:1px solid #F2F2F2; color:#666}
 .btn-grey2{background:#999; color:#fff; border:1px solid #999;}

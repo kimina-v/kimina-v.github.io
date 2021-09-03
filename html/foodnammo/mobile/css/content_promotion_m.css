@@ -197,3 +197,10 @@ font-weight: bold;}
 .event-templete .context .a .option-list li ~ li{margin-top:8px}
 .event-templete .btn-group{text-align:center;margin-top:16px}
 .event-templete .btn-group button:only-child{min-width:162px;font-size:15px}
+
+.layer-wrap .layer-pop.quiz-complete{width:calc(100vw - 30px);text-align:center;border-radius:2px}
+.layer-wrap .quiz-complete .layer-inner .ui-close-pop{top:10px;right:10px}
+.quiz-complete .layer-content{padding:106px 0 40px}
+.quiz-complete .layer-content:before{content:"";width:50px;height:50px;background:url(../images/icon/ico_quiz_complete.png) no-repeat 0 0/100% auto;position:absolute;top:40px;left:calc(50% - 25px)}
+.quiz-complete em{display:block;font-size:18px;line-height:24px}
+.quiz-complete span{display:block;font-size:15px;color:#666;margin-top:6px;line-height:22px}

@@ -89,43 +89,206 @@
 			</div><!--// tb-cell-box -->
 
 			<div class="members-bnr">
-				<a href="#"><img src="../../images/_samples/@sample_my_720x276.png" alt="" /></a>
-			</div>
+				<!-- 지급 포인트 없을 경우 이미지 배너 노출 -->
+				<div class="inner">
+					<a href="#"><img src="../../images/img/img_org_join.png" alt="오렌지 멤버스 이 모든 혜택을 누리는 방법 - 지금 바로 가입하기" /></a>
+				</div><!--// inner -->
+				
+				<!-- 지급포인트가 있을 경우 우선 노출 -->
+				<div class="point-guide-box">	
+					<div class="inner">
+						<p>지금, 후기 작성하면? <br /> 최대 <strong>999,999P</strong> 적립 가능!</p>
+						<a href="#">10일 이내 후기 작성 시, 최대 150P 적립<i class="ico-arr-right"></i></a>
+					</div>
+				</div><!--// point-guide-box -->
+			</div><!--// members-bnr -->
 
 			<h3 class="blind">최근 주문내역</h3>
-			<div class="my-prd-slide">
-				<div class="order-list-item">
-					<div class="list-head inner-flex">
-						<div class="left-item1">
-							<strong class="date">2020.03.24</strong>
-							<a href="#" class="btn-link-txt4"><span>상세보기</span><i class="ico-arr-right"></i></a>
-						</div>
-						<div class="right-item1 text-primary">입금완료</div>
-					</div><!--// list-head -->
-					<div class="list-item-wrap">
-						<div class="prd-info-area">
-							<div class="inner">
-								<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
-								<div class="column tit">
-									<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
-									<p class="desc">혼합 5팩(1팩당 3,900원)</p>
-									<ul class="price-item">
-										<li>1개</li>
-										<li><span class="num">19,500</span>원</li>
-										<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
-									</ul>
-								</div><!--// column  -->
+			<div class="order-swiper-list swiper-container">
+				<ul class="my-prd-list swiper-wrapper">
+					<li class="order-list-item swiper-slide">
+						<!-- 미입금/결제완료일때 -->
+						<div class="list-head inner-flex">
+							<div class="left-item1">
+								<strong class="date">2020.03.24</strong>
+								<a href="#" class="btn-link-txt4"><span>상세보기</span><i class="ico-arr-right"></i></a>
 							</div>
-						</div><!--// prd-info-area -->
-						<div class="list-bottom">
-							<p class="address-txt">[14686] 서울특별시 마포구 월드컵북로 396 (상암동) 누리꿈스퀘어 비즈니스타워 15층</p>
-							<div class="added-btn">
-								<a href="#" class="btn-basic-md2 btn-default"><span>배송지변경</span></a>
+							<div class="right-item1 text-primary">미입금</div>
+							<!-- 
+								<div class="right-item1 text-primary">결제완료</div>
+							-->
+						</div><!--// list-head -->
+						<div class="list-item-wrap">
+							<div class="prd-info-area">
+								<div class="inner">
+									<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+									<div class="column tit">
+										<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+										<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+										<ul class="price-item">
+											<li>1개</li>
+											<li><span class="num">19,500</span>원</li>
+											<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
+										</ul>
+									</div><!--// column  -->
+								</div>
+							</div><!--// prd-info-area -->
+							<div class="list-bottom">
+								<p class="address-txt">[14686] 서울특별시 마포구 월드컵북로 396 (상암동) 누리꿈스퀘어 비즈니스타워 15층</p>
+								<div class="added-btn">
+									<a href="#" class="btn-basic-md2 btn-default"><span>주문취소</span></a>
+									<a href="#" class="btn-basic-md2 btn-default"><span>배송지변경</span></a>
+								</div>
+							</div><!--// list-bottom -->
+						</div><!--// list-item-wrap -->
+						<!--// 미입금/결제완료일때  -->
+					</li><!--// order-list-item -->
+					<li class="order-list-item swiper-slide">
+						<!-- 상품준비중일때 -->
+						<div class="list-head inner-flex">
+							<div class="left-item1">
+								<strong class="date">2020.03.24</strong>
+								<a href="#" class="btn-link-txt4"><span>상세보기</span><i class="ico-arr-right"></i></a>
 							</div>
-						</div><!--// list-bottom -->
-					</div><!--// list-item-wrap -->
-				</div><!--// order-list-item -->
-			</div>
+							<div class="right-item1 text-primary">상품준비중</div>
+						</div><!--// list-head -->
+						<div class="list-item-wrap">
+							<div class="prd-info-area">
+								<div class="inner">
+									<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+									<div class="column tit">
+										<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+										<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+										<ul class="price-item">
+											<li>1개</li>
+											<li><span class="num">19,500</span>원</li>
+											<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
+										</ul>
+									</div><!--// column  -->
+								</div>
+							</div><!--// prd-info-area -->
+							<div class="list-bottom">
+								<p class="address-txt">[14686] 서울특별시 마포구 월드컵북로 396 (상암동) 누리꿈스퀘어 비즈니스타워 15층</p>
+								<div class="added-btn">
+									<a href="#" class="btn-basic-md2 btn-default"><span>취소요청</span></a>
+									<a href="#" class="btn-basic-md2 btn-default"><span>배송지변경</span></a>
+								</div>
+							</div><!--// list-bottom -->
+						</div><!--// list-item-wrap -->
+						<!--// 상품준비중일때  -->
+					</li><!--// order-list-item -->
+					<li class="order-list-item swiper-slide">
+						<!-- 배송준비중일때 -->
+						<div class="list-head inner-flex">
+							<div class="left-item1">
+								<strong class="date">2020.03.24</strong>
+								<a href="#" class="btn-link-txt4"><span>상세보기</span><i class="ico-arr-right"></i></a>
+							</div>
+							<div class="right-item1 text-primary">배송준비중</div>
+						</div><!--// list-head -->
+						<div class="list-item-wrap">
+							<div class="prd-info-area">
+								<div class="inner">
+									<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+									<div class="column tit">
+										<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+										<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+										<ul class="price-item">
+											<li>1개</li>
+											<li><span class="num">19,500</span>원</li>
+											<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
+										</ul>
+									</div><!--// column  -->
+								</div>
+							</div><!--// prd-info-area -->
+							<div class="list-bottom">
+								<p class="address-txt">[14686] 서울특별시 마포구 월드컵북로 396 (상암동) 누리꿈스퀘어 비즈니스타워 15층</p>
+								<div class="added-btn">
+									<a href="#" class="btn-basic-md2 btn-default"><span>취소요청</span></a>
+								</div>
+							</div><!--// list-bottom -->
+						</div><!--// list-item-wrap -->
+						<!--// 배송준비중일때  -->
+					</li><!--// order-list-item -->
+					<li class="order-list-item swiper-slide">
+						<!-- 배송중일때 -->
+						<div class="list-head inner-flex">
+							<div class="left-item1">
+								<strong class="date">2020.03.24</strong>
+								<a href="#" class="btn-link-txt4"><span>상세보기</span><i class="ico-arr-right"></i></a>
+							</div>
+							<div class="right-item1 text-primary"><a href="#">배송중</a></div>
+						</div><!--// list-head -->
+						<div class="list-item-wrap">
+							<div class="prd-info-area">
+								<div class="inner">
+									<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+									<div class="column tit">
+										<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+										<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+										<ul class="price-item">
+											<li>1개</li>
+											<li><span class="num">19,500</span>원</li>
+											<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
+										</ul>
+									</div><!--// column  -->
+								</div>
+							</div><!--// prd-info-area -->
+							<div class="list-bottom">
+								<p class="address-txt">[14686] 서울특별시 마포구 월드컵북로 396 (상암동) 누리꿈스퀘어 비즈니스타워 15층</p>
+								<div class="added-btn">
+									<a href="#" class="btn-basic-md2 btn-default"><span>구매확정</span></a>
+									<a href="#" class="btn-basic-md2 btn-primary-line"><span>후기작성</span></a>
+									<!--
+										<a href="#" class="btn-basic-md2 btn-default"><span>다시담기</span></a>
+										<a href="#" class="btn-basic-md2 btn-primary-line"><span>후기작성</span></a>
+									-->
+								</div>
+							</div><!--// list-bottom -->
+						</div><!--// list-item-wrap -->
+						<!--// 배송중일때  -->
+					</li><!--// order-list-item -->
+					<li class="order-list-item swiper-slide">
+						<!-- 배송완료일때 -->
+						<div class="list-head inner-flex">
+							<div class="left-item1">
+								<strong class="date">2020.03.24</strong>
+								<a href="#" class="btn-link-txt4"><span>상세보기</span><i class="ico-arr-right"></i></a>
+							</div>
+							<div class="right-item1 text-primary"><a href="#">배송완료</a></div>
+						</div><!--// list-head -->
+						<div class="list-item-wrap">
+							<div class="prd-info-area">
+								<div class="inner">
+									<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+									<div class="column tit">
+										<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+										<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+										<ul class="price-item">
+											<li>1개</li>
+											<li><span class="num">19,500</span>원</li>
+											<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
+										</ul>
+									</div><!--// column  -->
+								</div>
+							</div><!--// prd-info-area -->
+							<div class="list-bottom">
+								<p class="address-txt">[14686] 서울특별시 마포구 월드컵북로 396 (상암동) 누리꿈스퀘어 비즈니스타워 15층</p>
+								<div class="added-btn">
+									<a href="#" class="btn-basic-md2 btn-navy-line"><span>다시담기</span></a>
+									<a href="#" class="btn-basic-md2 btn-primary-line"><span>후기작성</span></a>
+									<!--
+										<a href="#" class="btn-basic-md2 btn-default"><span>구매확정</span></a>
+										<a href="#" class="btn-basic-md2 btn-primary-line"><span>후기작성</span></a>
+									-->
+								</div>
+							</div><!--// list-bottom -->
+						</div><!--// list-item-wrap -->
+						<!--// 배송완료일때  -->
+					</li><!--// order-list-item -->
+				</ul><!--// swiper-wrapper -->
+				<div class="swiper-pagination"></div>
+			</div><!--// swiper-container -->
 
 			<nav class="mypage-menu">
 				<ul class="menu-list">	
