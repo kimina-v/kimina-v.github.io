@@ -36,7 +36,7 @@
 
 			<div class="list-option-area">
 				<div class="custom-checkbox">
-					<input type="checkbox" id="check-all" class="checkbox all-check" checked=""><label for="check-all">전체해제</label><span class="selected-count">(3)</span>
+					<input type="checkbox" id="check-all" class="checkbox all-check" checked=""><label for="check-all">전체해제</label><span class="selected-count">3</span><!-- [Dev] 20210915 괄호() 삭제 -->
 				</div>
 				<div class="right">
 					<button type="button" class="btn-option btn-default"><span>선택삭제</span></button>
@@ -45,10 +45,10 @@
 
 			<div class="cart-list-area">
 				<div class="list-head">
-					<h2 class="list-item-tit">프레쉬홈</h2>
+					<h2 class="list-item-tit">프레쉬홈<span class="txt-guide">15,000원 이상 무료배송</span></h2><!-- [Dev] 20210915 txt-guide 추가 -->
 					<div class="right-dlv-info">
-						<i class="ico-bl-box1"></i> 
-						<p class="txt"><span class="text-guide-md">3개 상품</span></p>
+						<!-- <i class="ico-bl-box1"></i> [Dev] 20210915 삭제 -->
+						<p class="txt"><span class="text-guide-md">무료배송</span></p>
 					</div>
 				</div><!--// lsit-head -->
 				<ul class="cart-list">
@@ -65,13 +65,14 @@
 								</div>
 								<div class="column tit">
 									<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+									
 									<div class="inner-bottom">
 										<div class="qty-group">
 											<button type="button" class="btn-qty" title="빼기"><i class="ico-minus-bold"></i><span class="blind">빼기</span></button>
 											<input type="text" title="수량" class="input-qty" value="1">
 											<button type="button" class="btn-qty" title="더하기"><i class="ico-plus-bold"></i><span class="blind">더하기</span></button>
 										</div><!--// qty-group -->
-										<a href="#" class="btn-sq-sm2 btn-default"><span>쿠폰변경</span></a>
+										<!-- <a href="#" class="btn-sq-sm2 btn-default"><span>쿠폰변경</span></a> [Dev] 20210915 삭제 -->
 										<div class="floating-rb price"><span class="num">19,500</span>원</div>
 									</div><!--// div-bottom -->
 									<button type="button" class="btn-x-sm" title="삭제"><i class="ico-x-grey"></i><span class="blind">삭제</span></button>
@@ -237,7 +238,8 @@
 		checkedBtn =  $('[name="check-item-101"]:checked').not('.all-check').length;
 
 		// 전체 체크된 갯수 표시
-		allChkBtn.siblings('.selected-count').html('(' + checkedBtn + ')')
+		// allChkBtn.siblings('.selected-count').html('(' + checkedBtn + ')')
+		allChkBtn.siblings('.selected-count').html(checkedBtn) // [Dev] 20210915 수정
 
 		// 전체선택/해제 클릭시
 		allChkBtn.on('click',function () {
@@ -249,13 +251,13 @@
 				$(this).next('label').text('전체해제')
 
 				var checkedBtn =  $('[name="check-item-101"]:checked').not('.all-check').length;
-				allChkBtn.siblings('.selected-count').html('(' + checkedBtn + ')')
+				allChkBtn.siblings('.selected-count').html(checkedBtn) // [Dev] 20210915 수정
 			} else {
 				defaultChk.prop('checked',false);
 				$(this).next('label').text('전체선택')
 				
 				var checkedBtn =  $('[name="check-item-101"]:checked').not('.all-check').length;
-				allChkBtn.siblings('.selected-count').html('(' + checkedBtn + ')')
+				allChkBtn.siblings('.selected-count').html(checkedBtn) // [Dev] 20210915 수정
 			}    
 		});
 
@@ -266,10 +268,10 @@
 
 			if ( checkedBtn === allength ) {
 				allChkBtn.prop('checked',true).next('label').text('전체해제')
-				allChkBtn.siblings('.selected-count').html('(' + checkedBtn + ')')
+				allChkBtn.siblings('.selected-count').html(checkedBtn) // [Dev] 20210915 수정
 			} else {
 				allChkBtn.prop('checked',false).next('label').text('전체선택')
-				allChkBtn.siblings('.selected-count').html('(' + checkedBtn + ')')
+				allChkBtn.siblings('.selected-count').html(checkedBtn) // [Dev] 20210915 수정
 			}
 		})
    }); 

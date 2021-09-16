@@ -58,6 +58,61 @@
                     <h4 class="layer-pop-title">1:1문의</h4>
                 </div>
                 <div class="layer-body">
+                    <!-- 날짜 조회영역 -->
+                    <div class="search-box">
+                        <div class="search-head">
+                            <p class="search-period">2021.04.30 ~ 2021.05.30 <span>(최근1개월)</span></p>
+                            <button type="button" class="btn-link-txt4 ui-search-toggle"><span class="txt-change">조회설정</span><i class="ico-arr-toggle"></i></button>
+                        </div><!--// search-head -->
+                        <div class="search-detail hide">
+                            <fieldset>
+                                <legend>상세 검색</legend>
+                                <ul class="radio-list">
+                                    <li>
+                                        <div class="custom-radio">
+                                            <input type="radio" id="radio-item101" class="radio-btn-type2" name="radio-item100" checked="checked"><label for="radio-item101">1개월</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-radio">
+                                            <input type="radio" id="radio-item102" class="radio-btn-type2" name="radio-item100"><label for="radio-item102">3개월</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-radio">
+                                            <input type="radio" id="radio-item103" class="radio-btn-type2" name="radio-item100"><label for="radio-item103">6개월</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-radio">
+                                            <input type="radio" id="radio-item104" class="radio-btn-type2" name="radio-item100"><label for="radio-item104">12개월</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-radio">
+                                            <input type="radio" id="radio-item105" class="radio-btn-type2 date-setting" name="radio-item100"><label for="radio-item105">기간설정</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="period-setting hide">
+                                    <div class="datepicker-group">
+                                        <div class="inp-calendar">
+                                            <input type="text" class="datepicker">
+                                        </div>
+                                        <div class="inp-calendar">
+                                            <input type="text" class="datepicker">
+                                        </div>
+                                    </div>
+                                    <div class="added-btn">
+                                        <button type="button" class="btn-basic-md2 btn-default"><span>초기화</span></button>
+                                        <button type="button" class="btn-basic-md2 btn-black"><span>조회하기</span></button>
+                                    </div>
+                                </div><!--// period-setting -->
+                            </fieldset>
+                        </div><!--// search-detail-->
+                    </div><!--// search-box :: 날짜 조회영역 -->
+
+                    <!-- 20210903 마이페이지 조회영역 공통화 : 
                     <span class="sorting-date">2021.07.09 ~ 2021.09.30 <span>(최근1개원)</span></span>
                     <div class="date-sorting">
                         <div class="custom-radio">
@@ -89,7 +144,9 @@
                     <div class="btn-group-flex">
                         <button type="button" class="btn-basic-lg btn-default"><span>초기화</span></button>
                         <button type="button" class="btn-basic-lg btn-black"><span>조회하기</span></button>
-                    </div>
+                    </div> 
+                    -->
+
                     <ul class="ordered-prod-list">
                         <li class="custom-radio">
                             <input type="radio" id="radio-2-1" class="radio" name="radio-item-2" checked>
@@ -134,5 +191,21 @@
     </div><!--// layer-dim-area  -->
 </div><!--// layer-pop-wrap #main-event -->
 <!-- ========== 팝업 영역 ========== -->
+
+<!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->
+<script>
+    $(function () {
+        // 기간설정 선택시
+		$('[name="radio-item100"]').on('click',function () {
+			if ( $(this).hasClass('date-setting') ) {
+				$(this).parents('.radio-list').siblings('.period-setting').removeClass('hide')
+			} else if ( !$(this).hasClass('date-setting') ) {
+				$(this).parents('.radio-list').siblings('.period-setting').addClass('hide')
+			}
+		});
+   }); 
+</script>
+<!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->
+
 </body>
 </html>

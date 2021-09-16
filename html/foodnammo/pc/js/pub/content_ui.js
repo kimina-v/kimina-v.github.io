@@ -78,6 +78,10 @@ $(function () {
     if ($('.ranking-swiper-tab').length > 0) { rankTabSwiperSlide(); }
     if ($('.ranking-swiper-stab').length > 0) { rankStabSwiperSlide(); }
 
+    //선물하기 카테고리    
+    if ($('.gift-content .cate-swiper-tab').length > 0) { cateSwiperSlide(); }
+    if ($('.gift-sub-content .cate-swiper-tab').length > 0) { cateSwiperSlide2(); }
+
     // 주문목록(마이페이지)
     if ($('.order-swiper-list').length > 0) { orderSwiperSlide(); }
 
@@ -119,6 +123,18 @@ $(function () {
      if ($('.ui-coupon-info').length > 0) { openCouponInfo(); }
 
      if ($('.coupon-wrap-box').length > 0) { moreCouponView(); }
+
+     //선물하기 swiper
+     if($('.visual-slide').length>0){visualSlide();}
+     //배너 swiper
+     if($('.banner-default-swipe').length>0){bannerDefaultSwiper();}
+
+     //메시지     
+     if($('.message-swiper').length>0){messageSlide();}
+     
+     //side event     
+     if($('.side-event-area').length>0){sideEvent();}
+
 });
 
 
@@ -189,13 +205,13 @@ function sideQuickBnrPos () {
     sideQuickBnr = sideQuickArea.children('.side-quick');
        
     if ( wrap.hasClass('main') ) {
-        sideEventArea = $('.side-event-area');
-        sideEventBnr = sideEventArea.children('.side-event');
+        // sideEventArea = $('.side-event-area');
+        // sideEventBnr = sideEventArea.children('.side-event');
         mainPos = $('.container').find('.main-article').eq(0);
         mainPosTop = mainPos.position().top + 175;
 
         sideQuickBnr.css('top', mainPosTop); 
-        sideEventBnr.css('top', mainPosTop); 
+        // sideEventBnr.css('top', mainPosTop); 
     } else {
         cntPos = $('.container').children('.content-wrap');
         if ( cntPos.children('.scroll-select-bar').length > 0 ) {
@@ -214,14 +230,14 @@ function sideQuickBnrPos () {
 
         if ( wrap.hasClass('main') ) { 
             if( docScroll > mainPos.offset().top ){
-                sideEventArea.addClass('fixed');
-                sideEventBnr.removeAttr('style');
+                // sideEventArea.addClass('fixed');
+                // sideEventBnr.removeAttr('style');
                 sideQuickScroll ();
             } else {
                 sideQuickArea.removeClass('fixed')
                 sideQuickBnr.css('top', mainPosTop);
-                sideEventArea.removeClass('fixed')
-                sideEventBnr.css('top', mainPosTop);
+                // sideEventArea.removeClass('fixed')
+                // sideEventBnr.css('top', mainPosTop);
             }
         } else {
             if( docScroll > cntPos.offset().top ){
@@ -407,7 +423,11 @@ function layerPop (id) {
         
         popLayer = $(popupID);
 
-        layerOpen (popLayer);
+        if ( !btnTarget.parents('.layer-pop').length ) {
+            layerOpen (popLayer);
+        } else if ( btnTarget.parents('.layer-pop').length ) {
+            innerlayerOpen (popLayer);
+        }
     })
 
     var popupElem = $(id);
@@ -433,9 +453,25 @@ function layerOpen (id) {
     //layerHeight ( $(id) );
 }
 
+function innerlayerOpen (id) {
+    var scrollValue = $('body').scrollTop();
+
+    $('body').addClass('layer-dim').scrollTop(scrollValue);
+    $(id).show().addClass('layer-index').attr('tabIndex','0').focus;
+
+    layerHeight ()
+}
+
 function layerClose (el, btnTarget) {
     var layerWrap = $(el).parents('.layer-wrap');
-    $('body').removeAttr('style');
+
+    if ( !$(el).parents('.layer-index').length ) {
+        $('body').removeAttr('style');
+    } else if ( $(el).parents('.layer-index').length ) {
+        $('body').removeClass('layer-dim');
+    }
+   
+    $('.layer-pop').removeAttr('style');
     layerWrap.hide();
 
     if ( !layerWrap.hasClass('onload')) {
@@ -459,7 +495,7 @@ function testlayerHeight () {
 
 function layerHeight (el) {
     var layer = $(el),
-    layerHeight = layer.find('.layer-pop').Height();
+    layerHeight = layer.find('.layer-pop').height();
 
     if ( layerHeight % 2 == 0 ) {
         console.log('짝수')
@@ -548,7 +584,7 @@ function checkAll () {
           name = $(this).attr('name');
           
         if ( checked ) {
-            $('[name="'+name+'"]').prop('checked',true)
+            $('[name="'+name+'"]:not(:disabled)').prop('checked',true)
         } else {
             $('[name="'+name+'"]').prop('checked',false)
         }    
@@ -868,14 +904,27 @@ function planSwiperSlide () {
     var swiper = new Swiper('.meal-plan-list', {
         spaceBetween: 20,
         slidesPerView : 2,
+        slidesPerGroup : 1,
         centeredSlides: false,
         autoplay: false,
+        clickable: true,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
     });
-}
+
+    $('.meal-plan-list .swiper-slide').click(function(){
+        $('.meal-plan-list .swiper-slide').removeClass('swiper-slide-active');
+        $(this).addClass('swiper-slide-active');
+    })
+
+    // var mealList = $('.meal-plan-list .swiper-wrapper .swiper-slide a');
+    // mealList.click(function(){
+    //     var target = $(this).parent();
+    //     mealList.slideTo($(this).parent().index()-1)			
+    // })
+ }
 
 function orderSwiperSlide () {
     var swiper = new Swiper('.order-swiper-list', {
@@ -1064,9 +1113,17 @@ function reviewSwiperSlide () {
 /****** toggleLayer ******/
 function toggleLayer () {
     togglelayerBtn = $('.ui-togglelayer-btn');
-    togglelayerBox = $('.ui-togglelayer-box');
+  //  togglelayerBox = $('.ui-togglelayer-box');
 
     togglelayerBtn.on('click',function () {
+
+        if ( !$(this).next('.ui-togglelayer-box').length ) {
+            togglelayerBox = $(this).parent().siblings('.ui-togglelayer-box');
+        } else {
+            togglelayerBox = $(this).next('.ui-togglelayer-box');
+        }
+
+       
         if ( !togglelayerBox.hasClass('on') ) {
             $(this).addClass('toggle-on');
             togglelayerBox.addClass('on');
@@ -1307,6 +1364,73 @@ function rankStabSwiperSlide () {
     });
 }
 
+//선물하기 카테고리
+function cateSwiperSlide () {
+    var cateSwiper = new Swiper('.gift-content .cate-swiper-tab', {
+        slidesPerView: 'auto',
+        slidesPerView : 8,
+        centeredSlides: false,
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
+    });
+}
+
+//선물하기 카테고리
+function cateSwiperSlide2 () {
+    if($('.gift-sub-content .cate-swiper-tab .swiper-slide').length < 11){
+        $('.cate-menu-box').addClass('size-auto')
+    }
+    var cateSwiper2 = new Swiper('.gift-sub-content .cate-swiper-tab', {
+        slidesPerView: 'auto',
+        slidesPerView : 11,
+        centeredSlides: false,
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
+    });
+}
+
+//배너
+function bannerDefaultSwiper () {
+    var bannerDefaultSlide = new Swiper('.banner-default-swipe .swiper-container', {
+        spaceBetween: 20, 
+        slidesPerView : 1,
+        centeredSlides: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
+    });
+
+    $('.swiper-button-ctrl').on('click', function () {
+        if ( !$(this).hasClass('play') ) {
+            bannerDefaultSlide.autoplay.stop();
+            $(this).addClass('play')
+            //console.log('autoplay stop')
+        } else {
+            bannerDefaultSlide.autoplay.start(); 
+            $(this).removeClass('play')
+            //console.log('autoplay start')
+        }
+    })
+}
 
 /****** 1팩담기 ******/
 function onepackLayer (el) {
@@ -1384,46 +1508,63 @@ function eventSwiperSlide () {
 
 
 /****** 상품 목록 상세검색 ******/
-function prdDetailSearch () {
-    var list = $('.brand-check-list'),
-        listItem = list.children('li'),
-        moreBtn = list.next('.ui-more-brand'),
-        max = 12;
+function prdDetailSearch () { 
+        var list = $('.brand-check-list'),
+            listItem = list.children('li'),
+            max = 21;
 
-        moreBtn.hide();
-        listItemHidden ();
-
-    moreBtn.on('click', function () {
-        if ( !$(this).hasClass('on') ) {
-            $(this).addClass('on');
-            $(this).html('<span>닫기</span><i class="ico-arr-up"></i>')
-            listItemShow()
-        } else if ( $(this).hasClass('on') )  {
-            $(this).removeClass('on');
-            $(this).html('<span>더보기</span><i class="ico-arr-down"></i>')
-            listItemHidden ()
+        if ( listItem.length > max ) {
+            list.parent('.scroll-area').addClass('scroll-on');
+            list.parent('.scroll-area').mCustomScrollbar({
+                scrollInertia: 200, //0
+                scrollEasing: "easeOut",
+              //  alwaysShowScrollbar : 2,
+                mouseWheel:{ deltaFactor: 30 }
+            });
         }
-    })
 
-    function listItemHidden () {
-        if ( listItem.length > max + 1 ) {
-            moreBtn.show();
-        }
-        list.children('li:eq(' + max +')').nextAll('li').hide()
-    }
-
-    function listItemShow () {
-        list.children('li:eq(' + max +')').nextAll('li').show()
-    }
+            
 }
+// function prdDetailSearch () {
+//     var list = $('.brand-check-list'),
+//         listItem = list.children('li'),
+//         moreBtn = list.next('.ui-more-brand'),
+//         max = 12;
+
+//         moreBtn.hide();
+//         listItemHidden ();
+
+//     moreBtn.on('click', function () {
+//         if ( !$(this).hasClass('on') ) {
+//             $(this).addClass('on');
+//             $(this).html('<span>닫기</span><i class="ico-arr-up"></i>')
+//             listItemShow()
+//         } else if ( $(this).hasClass('on') )  {
+//             $(this).removeClass('on');
+//             $(this).html('<span>더보기</span><i class="ico-arr-down"></i>')
+//             listItemHidden ()
+//         }
+//     })
+
+//     function listItemHidden () {
+//         if ( listItem.length > max + 1 ) {
+//             moreBtn.show();
+//         }
+//         list.children('li:eq(' + max +')').nextAll('li').hide()
+//     }
+
+//     function listItemShow () {
+//         list.children('li:eq(' + max +')').nextAll('li').show()
+//     }
+// }
 
 /****** mCustomscrollbar ******/
 function customScroll () {
     $('.ui-custom-scroll').mCustomScrollbar({
         scrollInertia: 200, //0
         scrollEasing: "easeOut",
-        
-        mouseWheel:{ deltaFactor: 40 }
+      //  alwaysShowScrollbar : 2,
+        mouseWheel:{ deltaFactor: 30 }
     });
 }
 
@@ -1504,3 +1645,162 @@ function moreCouponView () {
         $('.ui-coupon-more').removeClass('active').html('<span>더보기</span><i class="ico-arr-toggle"></i>')
     }
 }
+
+//선물하기 slide
+function visualSlide(){
+    var eventSwiper = new Swiper('.visual-slide .swiper-container', {
+        slidesPerView : 1,
+        spaceBetween: 20, 
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
+    });
+}
+
+//메시지 카드
+function messageSlide(){
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 8,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+        spaceBetween: 10,
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+        swiper: galleryThumbs
+        }
+    });
+}
+
+//side event
+function sideEvent(){
+    var fired = 0;
+        
+    $(".side-event-wide .btn-close").click( function() {
+
+        var sideEventBottom = $(window).height() - ($('.side-event').offset().top - $(window).scrollTop());
+        var sideEventLeft = $('.side-event').offset().left;
+
+        $(".side-event-wide").stop().animate({
+            'margin-left':'0px',
+            'width':'0px',
+            'height':'0px',
+            'opacity':'0',
+            'bottom': sideEventBottom,
+            'left':sideEventLeft 
+        },500,function(){
+            $('.side-event').stop().animate({
+                'opacity':'1'
+            },200);
+            $('.side-event .btn-open').animate({
+                'opacity':'1'
+            },200);
+        });
+
+    });
+
+    $(".side-event .btn-open").click( function() {
+        $('.side-event').stop().animate({
+                'opacity':'0'
+            },200,function(){
+            $(".side-event-wide").stop().animate({
+                'margin-left':'-550px',
+                'width':'500px',
+                'height':'200px',
+                'opacity':'1',
+                'bottom': '0',
+                'left': '50%'
+            },200);
+            $('.side-event .btn-open').animate({
+                'opacity':'0'
+            },200);
+        });
+        
+        fired = 0;
+
+    });	
+
+    $(window).on('scroll',function(){
+        var winPos = $(this).scrollTop();
+
+        if(winPos > 500 && fired == 0){
+            $(".side-event-wide .btn-close").stop().clearQueue().trigger('click');
+            fired = 1;
+        } 
+        
+        if(winPos > 680){
+            $('.side-event-area').css({
+                'position' : 'fixed',
+                'top' : '200px'
+            })
+        } else if(winPos < 680){
+            $('.side-event-area').css({
+                'position' : 'absolute',
+                'top' : '680px'
+            })
+        }
+    });
+
+}
+
+//최근본상품
+function moveList(direction, elId, viewItemCont, scrollCont){
+    var menu = document.getElementById(elId);
+    var menuList = menu.getElementsByTagName('li');
+    var menuCount = menuList.length;
+    var startNo = 0;
+    
+    style = (typeof(style) != 'undefined') ? style : 'block';
+
+    for(var i=0;i<menuCount;i++){
+        if(menuList[i].style.display == style){
+            startNo = i;
+            break;
+        }
+    }
+    
+    if(direction == 'next'){
+        if(menuList[menuCount-1].style.display == style) return false;
+        else{
+            for(var i=0;i<menuCount;i++){
+                if(i>=startNo + scrollCont && i<startNo + scrollCont + viewItemCont){
+                    menuList[i].style.display = style;
+                    $('.btn-left-xs').removeClass('disabled');
+                    if(menuList[menuCount-1].style.display == style){
+                        $('.btn-right-xs').addClass('disabled');
+                    }
+                }else{
+                    menuList[i].style.display = 'none';
+                }
+            }
+        }
+    }else if(direction == 'prev'){
+        if(menuList[0].style.display == style) return false;
+        else{
+            for(var i=0;i<menuCount;i++){
+                if(i>=startNo - scrollCont && i<startNo - scrollCont + viewItemCont){
+                    menuList[i].style.display = style;
+                    $('.btn-right-xs').removeClass('disabled');
+                    if(menuList[0].style.display == style){
+                        $('.btn-left-xs').addClass('disabled');
+                    }
+                }else{
+                    menuList[i].style.display = 'none';
+                }
+            }
+        }
+    }
+}
+$(function(){
+    var liCount = $('#recent-prod-list li').length;
+    if(liCount<=3){
+        $('.recent-prd-item .btn-move-group .btn-right-xs').addClass('disabled')
+    }
+}) 

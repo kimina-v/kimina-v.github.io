@@ -39,6 +39,9 @@
 								<p class="greeting"><strong class="name">경탱이탱이땅땅땅</strong>님 반갑습니다.</p>
 								<ul class="sep-list type3">
 									<li>닭과장</li>
+									<!-- [Dev] 20210909 수정 : 오렌지회원일때
+									<li><i class="ico-bl-crown"></i> 오렌지닭과장</li>
+									-->
 									<li>1% 적립</li>
 								</ul>
 								<p class="level-tip">140,600원 더 구매 시, 닭차장 진급!</p>
@@ -47,15 +50,15 @@
 						</div><!--// user-info -->
 						<dl class="column order">
 							<dt>주문/배송</dt>
-							<dd><strong class="num">3</strong>건</dd>
+							<dd><a href="#"><strong class="num">3</strong>건</a></dd><!-- [Dev] 20210909 수정 : a태그 추가 -->
 						</dl><!--// order -->
 						<dl class="column coupon">
 							<dt>쿠폰</dt>
-							<dd><strong class="num">3</strong>개</dd>
+							<dd><a href="#"><strong class="num">3</strong>개</a></dd><!-- [Dev] 20210909 수정 : a태그 추가 -->
 						</dl><!--// coupon -->
 						<dl class="column point">
 							<dt>포인트</dt>
-							<dd class="text-primary"><strong class="num">3,300P</strong></dd>
+							<dd class="text-primary"><a href="#"><strong class="num">3,300P</strong></a></dd><!-- [Dev] 20210909 수정 : a태그 추가 -->
 						</dl><!--// point -->
 					</div><!--// inner -->
 				</div><!--// user-info-box -->
@@ -118,6 +121,11 @@
 					<div class="frame-cnt-inner">
 						<div class="menu-title-area">
 							<h3 class="title-menu">식단상담 내역</h3>
+							<!-- [Dev] 20210907 버튼 추가 -->
+							<div class="right">
+                                <a href="#" class="btn-option btn-default"><span>상담 신청하기</span><i class="ico-arr-right"></i></a>
+							</div>
+							<!--// [Dev] 20210907 버튼 추가 -->
 						</div><!--// menu-title-area -->
 
 						<div class="page-intro">
@@ -125,64 +133,75 @@
 							<div class="meal-plan-list swiper-container">
 								<ul class="swiper-wrapper">
 									<li class="swiper-slide">
-										<div class="plan-box active"><!-- 답변완료일 경우 addClass active -->
-											<div class="inner">
-												<span class="date">2021.05.31</span>
-												<div class="info">
-													<strong class="text-primary">목적 : 다이어트</strong>
-													<p>31세 / 남 / 176cm / 80kg</p>
+										<!-- [Dev] 20210907 plan-box 감싸는 a태그 추가 -->
+										<a href="#">
+											<div class="plan-box">
+												<div class="inner">
+													<span class="date">2021.05.31</span>
+													<div class="info">
+														<strong class="text-primary">목적 : 다이어트</strong>
+														<p>31세 / 남 / 176cm / 80kg</p>
+													</div>
 												</div>
-											</div>
-											<span class="label-primary">답변완료</span>
-										</div><!--// plan-box -->
+												<span class="label-navy">답변완료</span><!-- [Dev] 20210907 클래스 수정  -->
+											</div><!--// plan-box -->
+										</a>
 									</li>
 									<li class="swiper-slide">
-										<div class="plan-box">
-											<div class="inner">
-												<span class="date">2021.05.31</span>
-												<div class="info">
-													<strong class="text-primary">목적 : 다이어트</strong>
-													<p>31세 / 남 / 176cm / 80kg</p>
+										<a href="#">
+											<div class="plan-box">
+												<div class="inner">
+													<span class="date">2021.05.30</span>
+													<div class="info">
+														<strong class="text-primary">목적 : 다이어트</strong>
+														<p>31세 / 남 / 176cm / 80kg</p>
+													</div>
 												</div>
-											</div>
-											<span class="label-default">접수완료</span>
-										</div><!--// plan-box -->
+												<span class="label-default">접수완료</span>
+											</div><!--// plan-box -->
+										</a>
 									</li>
 									<li class="swiper-slide">
-										<div class="plan-box">
-											<div class="inner">
-												<span class="date">2021.05.31</span>
-												<div class="info">
-													<strong class="text-primary">목적 : 다이어트</strong>
-													<p>31세 / 남 / 176cm / 80kg</p>
+										<a href="#">
+											<div class="plan-box">
+												<div class="inner">
+													<span class="date">2021.05.29</span>
+													<div class="info">
+														<strong class="text-primary">목적 : 다이어트</strong>
+														<p>31세 / 남 / 176cm / 80kg</p>
+													</div>
 												</div>
-											</div>
-											<span class="label-default">접수완료</span>
-										</div><!--// plan-box -->
+												<span class="label-default">접수완료</span>
+											</div><!--// plan-box -->
+										</a>
 									</li>
 									<li class="swiper-slide">
-										<div class="plan-box">
-											<div class="inner">
-												<span class="date">2021.05.31</span>
-												<div class="info">
-													<strong class="text-primary">목적 : 다이어트</strong>
-													<p>31세 / 남 / 176cm / 80kg</p>
+										<a href="#">
+											<div class="plan-box">
+												<div class="inner">
+													<span class="date">2021.05.31</span>
+													<div class="info">
+														<strong class="text-primary">목적 : 다이어트</strong>
+														<p>31세 / 남 / 176cm / 80kg</p>
+													</div>
 												</div>
-											</div>
-											<span class="label-default">접수완료</span>
-										</div><!--// plan-box -->
+												<span class="label-default">접수완료</span>
+											</div><!--// plan-box -->
+										</a>
 									</li>
 									<li class="swiper-slide">
-										<div class="plan-box">
-											<div class="inner">
-												<span class="date">2021.05.31</span>
-												<div class="info">
-													<strong class="text-primary">목적 : 다이어트</strong>
-													<p>31세 / 남 / 176cm / 80kg</p>
+										<a href="#">
+											<div class="plan-box">
+												<div class="inner">
+													<span class="date">2021.05.31</span>
+													<div class="info">
+														<strong class="text-primary">목적 : 다이어트</strong>
+														<p>31세 / 남 / 176cm / 80kg</p>
+													</div>
 												</div>
-											</div>
-											<span class="label-default">접수완료</span>
-										</div><!--// plan-box -->
+												<span class="label-default">접수완료</span>
+											</div><!--// plan-box -->
+										</a>
 									</li>
 								</ul><!--// swiper-wrapper -->
 								<button type="button" class="swiper-button-next"><i class="ico-arr-right"></i><span class="blind">다음</span></button>

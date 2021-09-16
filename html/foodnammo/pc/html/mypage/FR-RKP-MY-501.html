@@ -39,6 +39,9 @@
 								<p class="greeting"><strong class="name">경탱이탱이땅땅땅</strong>님 반갑습니다.</p>
 								<ul class="sep-list type3">
 									<li>닭과장</li>
+									<!-- [Dev] 20210909 수정 : 오렌지회원일때
+									<li><i class="ico-bl-crown"></i> 오렌지닭과장</li>
+									-->
 									<li>1% 적립</li>
 								</ul>
 								<p class="level-tip">140,600원 더 구매 시, 닭차장 진급!</p>
@@ -47,15 +50,15 @@
 						</div><!--// user-info -->
 						<dl class="column order">
 							<dt>주문/배송</dt>
-							<dd><strong class="num">3</strong>건</dd>
+							<dd><a href="#"><strong class="num">3</strong>건</a></dd><!-- [Dev] 20210909 수정 : a태그 추가 -->
 						</dl><!--// order -->
 						<dl class="column coupon">
 							<dt>쿠폰</dt>
-							<dd><strong class="num">3</strong>개</dd>
+							<dd><a href="#"><strong class="num">3</strong>개</a></dd><!-- [Dev] 20210909 수정 : a태그 추가 -->
 						</dl><!--// coupon -->
 						<dl class="column point">
 							<dt>포인트</dt>
-							<dd class="text-primary"><strong class="num">3,300P</strong></dd>
+							<dd class="text-primary"><a href="#"><strong class="num">3,300P</strong></a></dd><!-- [Dev] 20210909 수정 : a태그 추가 -->
 						</dl><!--// point -->
 					</div><!--// inner -->
 				</div><!--// user-info-box -->
@@ -122,31 +125,25 @@
 
 						<div class="grid-list-wrap ui-compare-select">
 							<ul class="prd-item-list grid-area-span4 gap33">
-								<li class="colum" data-list="100">
-									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></div>
+								<li class="colum" data-list="1">
+									<!-- 
+										[Dev] 20210909 상품박스 공통 수정
+										1. 브랜드네임 링크 추가
+										2. 전체링크(.btn-blank) 삭제 / 이미지, 브랜드, 상품타이틀 각각 개별링크로
+										3. 별점 표시 수정
+									-->
+									<div class="prd-item type-sm2"> <!-- [Dev] 20210909 클래스명 수정 -->
+										<!-- [Dev] 20210909 수정  -->
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-												<!--
-													<em class="rating-point"><span class="point0"></span><span class="blind">별점0</span></em>
-													<em class="rating-point"><span class="point0-5"></span><span class="blind">별점0.5</span></em>
-													<em class="rating-point"><span class="point1"></span><span class="blind">별점1</span></em>
-													<em class="rating-point"><span class="point1-5"></span><span class="blind">별점1.5</span></em>
-													<em class="rating-point"><span class="point2"></span><span class="blind">별점2</span></em>
-													<em class="rating-point"><span class="point2-5"></span><span class="blind">별점2.5</span></em>
-													<em class="rating-point"><span class="point3"></span><span class="blind">별점3</span></em>
-													<em class="rating-point"><span class="point3-5"></span><span class="blind">별점3.5</span></em>
-													<em class="rating-point"><span class="point4"></span><span class="blind">별점4</span></em>
-													<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-													<em class="rating-point"><span class="point5"></span><span class="blind">별점5</span></em>
-												-->
-												<span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
+										<!--// [Dev] 20210909 수정  -->
+										
 										<div class="desc-form">
 											<ul class="btns-list">
 												<li>
@@ -160,20 +157,18 @@
 												</li>
 											</ul>
 										</div><!--// desc-form -->
-										<a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a>
+										<!-- [Dev] 20210909 삭제 <a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a> -->
 									</div><!--// prd-item -->
 								</li><!--// colum -->
-								<li class="colum" data-list="101">
-									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></div>
+								<li class="colum" data-list="2">
+									<div class="prd-item type-sm2">
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-												<span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<ul class="btns-list">
@@ -188,20 +183,17 @@
 												</li>
 											</ul>
 										</div><!--// desc-form -->
-										<a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a>
 									</div><!--// prd-item -->
 								</li><!--// colum -->
-								<li class="colum" data-list="102">
-									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></div>
+								<li class="colum" data-list="3">
+									<div class="prd-item type-sm2">
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<a href="#" class="tit text-elps2">[맛있닭] 명실상부 판매1위!</a>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-												<span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<ul class="btns-list">
@@ -216,20 +208,18 @@
 												</li>
 											</ul>
 										</div><!--// desc-form -->
-										<a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a>
+										<!-- [Dev] 20210909 삭제 <a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a> -->
 									</div><!--// prd-item -->
 								</li><!--// colum -->
-								<li class="colum" data-list="103">
-									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></div>
+								<li class="colum" data-list="4">
+									<div class="prd-item type-sm2">
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-												<span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<ul class="btns-list">
@@ -244,20 +234,18 @@
 												</li>
 											</ul>
 										</div><!--// desc-form -->
-										<a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a>
+										<!-- [Dev] 20210909 삭제 <a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a> -->
 									</div><!--// prd-item -->
 								</li><!--// colum -->
-								<li class="colum" data-list="104">
-									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></div>
+								<li class="colum" data-list="5">
+									<div class="prd-item type-sm2">
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-												<span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<ul class="btns-list">
@@ -272,20 +260,18 @@
 												</li>
 											</ul>
 										</div><!--// desc-form -->
-										<a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a>
+										<!-- [Dev] 20210909 삭제 <a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a> -->
 									</div><!--// prd-item -->
 								</li><!--// colum -->
-								<li class="colum" data-list="105">
-									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></div>
+								<li class="colum" data-list="6">
+									<div class="prd-item type-sm2">
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-												<span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<ul class="btns-list">
@@ -300,20 +286,18 @@
 												</li>
 											</ul>
 										</div><!--// desc-form -->
-										<a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a>
+										<!-- [Dev] 20210909 삭제 <a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a> -->
 									</div><!--// prd-item -->
 								</li><!--// colum -->
-								<li class="colum" data-list="106">
-									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></div>
+								<li class="colum" data-list="7">
+									<div class="prd-item type-sm2">
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<a href="#" class="tit text-elps2">[맛있닭] 명실상부 판매1위!</a>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-												<span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<ul class="btns-list">
@@ -328,20 +312,18 @@
 												</li>
 											</ul>
 										</div><!--// desc-form -->
-										<a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a>
+										<!-- [Dev] 20210909 삭제 <a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a> -->
 									</div><!--// prd-item -->
 								</li><!--// colum -->
-								<li class="colum" data-list="107">
-									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></div>
+								<li class="colum" data-list="8">
+									<div class="prd-item type-sm2">
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-												<span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<ul class="btns-list">
@@ -356,20 +338,18 @@
 												</li>
 											</ul>
 										</div><!--// desc-form -->
-										<a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a>
+										<!-- [Dev] 20210909 삭제 <a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a> -->
 									</div><!--// prd-item -->
 								</li><!--// colum -->
-								<li class="colum" data-list="108">
-									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></div>
+								<li class="colum" data-list="9">
+									<div class="prd-item type-sm2">
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-												<span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<ul class="btns-list">
@@ -384,20 +364,18 @@
 												</li>
 											</ul>
 										</div><!--// desc-form -->
-										<a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a>
+										<!-- [Dev] 20210909 삭제 <a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a> -->
 									</div><!--// prd-item -->
 								</li><!--// colum -->
-								<li class="colum" data-list="109">
-									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></div>
+								<li class="colum" data-list="10">
+									<div class="prd-item type-sm2">
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-												<span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<ul class="btns-list">
@@ -412,20 +390,18 @@
 												</li>
 											</ul>
 										</div><!--// desc-form -->
-										<a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a>
+										<!-- [Dev] 20210909 삭제 <a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a> -->
 									</div><!--// prd-item -->
 								</li><!--// colum -->
-								<li class="colum" data-list="110">
-									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></div>
+								<li class="colum" data-list="11">
+									<div class="prd-item type-sm2">
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<a href="#" class="tit text-elps2">[맛있닭] 명실상부 판매1위!</a>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-												<span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<ul class="btns-list">
@@ -440,20 +416,18 @@
 												</li>
 											</ul>
 										</div><!--// desc-form -->
-										<a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a>
+										<!-- [Dev] 20210909 삭제 <a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a> -->
 									</div><!--// prd-item -->
 								</li><!--// colum -->
-								<li class="colum" data-list="111">
-									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></div>
+								<li class="colum" data-list="12">
+									<div class="prd-item type-sm2">
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-												<span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<ul class="btns-list">
@@ -468,20 +442,18 @@
 												</li>
 											</ul>
 										</div><!--// desc-form -->
-										<a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a>
+										<!-- [Dev] 20210909 삭제 <a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a> -->
 									</div><!--// prd-item -->
 								</li><!--// colum -->
-								<li class="colum" data-list="112">
-									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></div>
+								<li class="colum" data-list="13">
+									<div class="prd-item type-sm2">
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-												<span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<ul class="btns-list">
@@ -496,20 +468,18 @@
 												</li>
 											</ul>
 										</div><!--// desc-form -->
-										<a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a>
+										<!-- [Dev] 20210909 삭제 <a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a> -->
 									</div><!--// prd-item -->
 								</li><!--// colum -->
-								<li class="colum" data-list="113">
-									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></div>
+								<li class="colum" data-list="14">
+									<div class="prd-item type-sm2">
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-												<span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<ul class="btns-list">
@@ -524,20 +494,18 @@
 												</li>
 											</ul>
 										</div><!--// desc-form -->
-										<a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a>
+										<!-- [Dev] 20210909 삭제 <a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a> -->
 									</div><!--// prd-item -->
 								</li><!--// colum -->
-								<li class="colum" data-list="114">
-									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></div>
+								<li class="colum" data-list="15">
+									<div class="prd-item type-sm2">
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<a href="#" class="tit text-elps2">[맛있닭] 명실상부 판매1위!</a>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-												<span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<ul class="btns-list">
@@ -552,20 +520,18 @@
 												</li>
 											</ul>
 										</div><!--// desc-form -->
-										<a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a>
+										<!-- [Dev] 20210909 삭제 <a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a> -->
 									</div><!--// prd-item -->
 								</li><!--// colum -->
-								<li class="colum" data-list="115">
-									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></div>
+								<li class="colum" data-list="16">
+									<div class="prd-item type-sm2">
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-												<span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<ul class="btns-list">
@@ -580,7 +546,7 @@
 												</li>
 											</ul>
 										</div><!--// desc-form -->
-										<a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a>
+										<!-- [Dev] 20210909 삭제 <a href="#" class="btn-blank"><span class="blind">상품 자세히 보기</span></a> -->
 									</div><!--// prd-item -->
 								</li><!--// colum -->
 							</ul><!--// prd-item-list -->

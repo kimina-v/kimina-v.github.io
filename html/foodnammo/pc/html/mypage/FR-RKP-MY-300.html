@@ -38,10 +38,12 @@
 							<div class="txt">							
 								<p class="greeting"><strong class="name">경탱이탱이땅땅땅</strong>님 반갑습니다.</p>
 								<ul class="sep-list type3">
-									<li>닭과장</li>
+									<li><i class="ico-bl-crown"></i> 오렌지닭과장</li> <!-- [Dev] 20210909 수정 : 오렌지회원일때 -->
+									<!-- <li>닭과장</li> -->
 									<li>1% 적립</li>
 								</ul>
-								<p class="level-tip">140,600원 더 구매 시, 닭차장 진급!</p>
+								<p class="level-tip"><a href="#">멤버십기간 2022년 04월 29일까지 <i class="ico-arr-right"></i></a></p><!-- [Dev] 20210909 수정 : 오렌지회원일때 -->
+								<!-- <p class="level-tip">140,600원 더 구매 시, 닭차장 진급!</p> -->
 							</div>
 							<a href="#" class="btn-rud-sm btn-default-ex"><span>멤버십 혜택</span></a>
 						</div><!--// user-info -->
@@ -251,7 +253,7 @@
 						</div><!--// search-box -->
 
 						<!-- 내역 없을 경우 -->
-						<div class="no-data">
+						<div class="no-data-type1"><!-- [Dev] 20210909 클래스 수정 -->
 							<p class="message">최근 1개월 내에 주문내역이 없습니다.  </p>
 						</div>
 						<!--// 내역 없을 경우 -->
@@ -599,7 +601,8 @@
 														<div class="column price text-left"><span class="num">19,500</span>원</div>
 														<div class="column dlv">
 															<a href="#" class="btn-option btn-navy-line"><span>다시담기</span></a>
-															<a href="#" class="btn-option btn-primary-line"><span>후기작성</span></a>
+															<a href="#" class="btn-option btn-default"><span>작성완료</span></a>
+															<!-- <a href="#" class="btn-option btn-primary-line"><span>후기작성</span></a> -->
 														</div>
 													</div>
 												</div><!--// prd-info-area -->
@@ -642,7 +645,8 @@
 														<div class="column price text-left"><span class="num">19,500</span>원</div>
 														<div class="column dlv">
 															<a href="#" class="btn-option btn-default"><span>구매확정</span></a>
-															<a href="#" class="btn-option btn-primary-line"><span>후기작성</span></a>
+															<em class="btn-option btn-default"><span class="text-grey3">기간만료</span></em>
+															<!-- <a href="#" class="btn-option btn-primary-line"><span>후기작성</span></a> -->
 														</div>
 													</div>
 												</div><!--// prd-info-area -->
@@ -654,6 +658,50 @@
 									</div>
 								</li>
 								<!--// 날짜별 항목 list -->
+
+								<!-- [Dev] 20210909 추가 : 선물하기일 경우 -->
+								<li>
+									<div class="order-list-head">
+										<strong class="date">2020.03.24</strong>
+										<a href="#" class="order-num">20200318WB234F<i class="ico-arr-right"></i></a><i class="ico-bl-gift"></i>
+									</div><!--// list-head -->
+									<div class="order-content-box">
+										<ul class="order-div-list">
+											<!-- 상품별 list 1 -->
+											<li class="order-div-item">
+												<div class="order-state-bar">
+													<em class="txt-state">배송완료</em>
+													<span class="text-guide-sm">6월 29일 배송완료 </span>
+													<a href="#" class="btn-link-txt2"><u>배송조회</u></a>
+												</div><!--// state-bar -->
+												<div class="prd-info-area">
+													<div class="inner">
+														<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+														<div class="column tit">
+															<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+															<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+															<ul class="price-item">
+																<li><span class="num">19,500</span>원</li>
+																<li><span class="num">1</span>개</li>
+																<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
+															</ul>
+														</div><!--// column  -->
+														<div class="column price text-left"><span class="num">19,500</span>원</div>
+														<div class="column dlv">
+															<a href="#" class="btn-option btn-default"><span>구매확정</span></a>
+															<em class="btn-option btn-default"><span class="text-grey3">기간만료</span></em>
+															<!-- <a href="#" class="btn-option btn-primary-line"><span>후기작성</span></a> -->
+														</div>
+													</div>
+												</div><!--// prd-info-area -->
+											</li><!--// order-div-item || 상품별 list 1 -->
+										</ul><!--// order-div-list -->
+										<div class="addr-info-line">
+											<p><i class="ico-bl-home2"></i> 선물하기 주문은 배송지 정보가 표시되지 않습니다.</p>
+										</div><!--// addr-info-line -->
+									</div>
+								</li>
+								<!--// [Dev] 20210909 추가 : 선물하기일 경우 -->
 							</ul>
 						</div><!--// order-list-area -->
 						

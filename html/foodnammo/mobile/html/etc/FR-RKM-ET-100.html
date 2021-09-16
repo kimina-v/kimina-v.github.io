@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>   
+
+<body style="overflow:hidden">
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<header id="header" class="header">
+		<script>include.header();</script>
+	</header>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+       
+		<div class="content-wrap">
+			// 컨텐츠 영역
+		</div><!--// content-wrap -->
+	 </section>
+	 <!--// ========== 컨텐츠 영역 :: container ========== -->
+	
+	<!-- ========== 공통 푸터 :: footer ========== -->
+	<script>include.footer();</script>
+	<!--// ========== 공통 푸터 :: footer ========== -->
+</div><!--// wrap -->
+
+<!--
+	* 팝업 버튼에 ui-open-pop 클래스, 팝업 ID 작성 필요
+	ex) <a href="#popupSample-01" class=".... ui-open-pop"> ~ </a>
+	ex) <button type="button" data-layer="#popupSample-02" class="... ui-open-pop"> ~ </button>
+-->
+<!-- ========== 팝업 영역 ========== -->
+<div class="layer-wrap full-type" id="popupSample-03" style="display:block;">
+	<div class="layer-pop search-pop">
+		<div class="layer-inner">
+			<div class="layer-head">
+				<a href="#" class="btn-back"><i class="ico-arrows-back"></i><span class="blind">닫기</span></a>
+				<div class="input-group-wrap search-type2">
+					<div class="input-group">
+						<input type="text" id="" class="input-text" placeholder="검색어를 입력해주세요">
+						<span class="input-group-btn">
+							<button type="button" class="btn-xrd-xs" title="삭제"><i class="ico-x-grey2"></i><span class="blind">검색하기</span></button>
+						</span>
+						<span class="input-group-btn">
+						
+							<button type="button" class="btn-icon-search" title="검색하기"><i class="ico-search-pop2"></i><span class="blind">검색하기</span></button>
+						</span>
+					</div><!--// input-group -->
+				</div>
+			</div><!--// layer-head -->
+			<div class="layer-body">
+				<div class="header-search">
+					<div class="search-layer" style="display:none">
+						<div class="latest-search">
+							<div class="tit">
+								<h2>최근검색어</h2>
+								<div class="side">
+									<div class="switch-btn">
+										<span class="text">검색어 저장</span>
+										<input type="checkbox" id="switch" name="switch" class="switch-inp">
+										<label for="switch" class="switch-label">
+											<span class="marble"></span>
+										</label>
+									</div>
+									<button type="button" class="srch-del"><span class="txt">전체 삭제</spa></button>
+								</div>
+							</div>
+							<!-- 검색어 있을 경우 -->
+							<ul class="srch-list">
+								<li>
+									<a href="#" class="txt">잇메이트 잇메이트 잇메이트 잇메이트 잇메이트 잇메이트 잇메이트 잇메이트 잇메이트 잇메이트</a>
+									<button type="button" class="btn-x-xs" title="삭제"><i class="ico-x-grey2"></i><span class="blind">삭제</span></button>
+								</li>
+								<li>
+									<a href="#" class="txt">단백천하</a>
+									<button type="button" class="btn-x-xs" title="삭제"><i class="ico-x-grey2"></i><span class="blind">삭제</span></button>
+								</li>
+								<li>
+									<a href="#" class="txt">스파클링</a>
+									<button type="button" class="btn-x-xs" title="삭제"><i class="ico-x-grey2"></i><span class="blind">삭제</span></button>
+								</li>
+							</ul>
+							<!--// 검색어 있을 경우 -->
+							
+							<!-- 검색어 없을 경우
+							<div class="no-data"><p class="message">최근 검색어가 없습니다.</p></div>
+							-->
+						</div><!--// search-bottom -->
+						<div class="popular-search">
+							<div class="tit"><h2>인기 검색어</h2></div>
+							<div class="search-rank">
+								<ol class="list">
+									<li>
+										<a href="#">
+											<span class="word text-elps">닭가슴살 스테이크</span>
+											<span class="state text-green">NEW</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="word text-elps">다이어트 도시락</span>
+											<span class="state">-</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="word text-elps">핫도그</span>
+											<span class="state text-green">NEW</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="word text-elps">패키지</span>
+											<span class="state text-primary"><i class="ico-arrfill-up"><span class="blind">up</span></i>4</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="word text-elps">맛있닭 스팀</span>
+											<span class="state text-blue"><i class="ico-arrfill-down"><span class="blind">down</span></i>1</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="word text-elps">맛있닭 스팀</span>
+											<span class="state text-blue"><i class="ico-arrfill-down"><span class="blind">down</span></i>1</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="word text-elps">맛있닭 스팀</span>
+											<span class="state text-blue"><i class="ico-arrfill-down"><span class="blind">down</span></i>1</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="word text-elps">맛있닭 스팀</span>
+											<span class="state text-blue"><i class="ico-arrfill-down"><span class="blind">down</span></i>1</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="word text-elps">맛있닭 스팀</span>
+											<span class="state text-blue"><i class="ico-arrfill-down"><span class="blind">down</span></i>1</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="word text-elps">맛있닭 스팀</span>
+											<span class="state text-blue"><i class="ico-arrfill-down"><span class="blind">down</span></i>1</span>
+										</a>
+									</li>
+								</ol>
+							</div><!--// search-rank -->
+						</div>
+						<div class="recommend-search">
+							<div class="tit">
+								<h2>추천검색어</h2>
+							</div>
+							<ul class="srch-list">
+								<li>
+									<div class="srch-keyword">
+										<a href="#" class="txt">잇메이트</a>
+									</div>
+								</li>
+								<li>
+									<div class="srch-keyword">
+										<a href="#" class="txt">잇메이트</a>
+									</div>
+								</li>
+								<li>
+									<div class="srch-keyword">
+										<a href="#" class="txt">단백천하</a>
+									</div>
+								</li>
+								<li>
+									<div class="srch-keyword">
+										<a href="#" class="txt">스파클링</a>
+									</div>
+								</li>
+								<li>
+									<div class="srch-keyword">
+										<a href="#" class="txt">맛있닭 스팀</a>
+									</div>
+								</li>
+								<li>
+									<div class="srch-keyword">
+										<a href="#" class="txt">다이어트 도시락</a>
+									</div>
+								</li>
+							</ul>
+						</div><!--// search-bottom -->
+					</div><!--// search-layer -->
+				</div><!--// header-search -->
+				<div class="search-result">
+					<ul class="tab-menu">
+						<li class="current"><a href="#">기획전상품 <em>4</em></a></li>
+						<li><a href="#">일반상품 <em>4</em></a></li>
+					</ul>
+					<div class="prod-default-wrap">
+						<div class="prod-sorting-area">
+							<div class="sorting-select">
+								<select class="select">
+									<option value="">추천순</option>
+								</select>
+							</div>
+							<div class="item-info-right">
+								<div class="prod-search-type">
+									<button type="button" class="detail-search-btn">
+										<i class="ico-advanced-search"></i>
+										<span>상세검색</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<ul class="prod-default-list list-type">
+							<li>
+								<div class="prd-item type-sm">
+									<div class="img"><img src="../../images/_samples/@sample_200x200.png" alt="기획전 특가 상품 이미지"></div>
+									<div class="desc-bottom">
+										<em class="prod-brand">맛있닭</em>
+										<p class="tit text-elps2">명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+										<span class="price"><em class="num">13,900</em>원</span>
+										<span class="price-detail">(1팩당 : 2,400원~3,000원)</span>
+										<div class="rating">
+											<i class="ico-bl-star"></i><span class="text-guide-sm2">5점</span><span class="text-guide-sm">(1415)</span><br>
+										</div>
+										<div class="bottom-badge-div mt10">
+											<img src="../../images/txt/badge_add.png" alt="추가증정">
+											<img src="../../images/txt/badge_sauce.png" alt="소스증정">
+										</div>
+									</div><!--// desc-bottom -->
+									<a href="#" class="btn-blank"><span class="blind">자세히 보기</span></a>
+								</div>
+							</li>
+							<li>
+								<div class="prd-item type-sm">
+									<div class="img"><img src="../../images/_samples/@sample_200x200.png" alt="기획전 특가 상품 이미지"></div>
+									<div class="desc-bottom">
+										<em class="prod-brand">맛있닭</em>
+										<p class="tit text-elps2">명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+										<span class="price"><em class="num">13,900</em>원</span>
+										<em class="imgbadge-dlv-free"><span class="blind">무료배송</span></em>
+										<div class="rating">
+											<i class="ico-bl-star"></i><span class="text-guide-sm2">5점</span><span class="text-guide-sm">(1415)</span><br>
+										</div>
+										<div class="bottom-badge-div mt10">
+											<img src="../../images/txt/badge_add.png" alt="추가증정">
+											<img src="../../images/txt/badge_sauce.png" alt="소스증정">
+										</div>
+									</div><!--// desc-bottom -->
+									<a href="#" class="btn-blank"><span class="blind">자세히 보기</span></a>
+								</div>
+							</li>
+							<li>
+								<div class="prd-item type-sm">
+									<div class="img"><img src="../../images/_samples/@sample_200x200.png" alt="기획전 특가 상품 이미지"></div>
+									<div class="desc-bottom">
+										<em class="prod-brand">맛있닭</em>
+										<p class="tit text-elps2">명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+										<span class="price"><em class="num">13,900</em>원</span>
+										<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+										<div class="rating">
+											<i class="ico-bl-star"></i><span class="text-guide-sm2">5점</span><span class="text-guide-sm">(1415)</span><br>
+										</div>
+										<div class="bottom-badge-div mt10">
+											<img src="../../images/txt/badge_add.png" alt="추가증정">
+											<img src="../../images/txt/badge_sauce.png" alt="소스증정">
+										</div>
+									</div><!--// desc-bottom -->
+									<a href="#" class="btn-blank"><span class="blind">자세히 보기</span></a>
+								</div>
+							</li>
+							<li>
+								<div class="prd-item type-sm">
+									<div class="img"><img src="../../images/_samples/@sample_200x200.png" alt="기획전 특가 상품 이미지"></div>
+									<div class="desc-bottom">
+										<em class="prod-brand">맛있닭</em>
+										<p class="tit text-elps2">명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+										<span class="price"><em class="num">13,900</em>원</span>
+										<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+										<div class="rating">
+											<i class="ico-bl-star"></i><span class="text-guide-sm2">5점</span><span class="text-guide-sm">(1415)</span><br>
+										</div>
+										<div class="bottom-badge-div mt10">
+											<img src="../../images/txt/badge_add.png" alt="추가증정">
+											<img src="../../images/txt/badge_sauce.png" alt="소스증정">
+										</div>
+									</div><!--// desc-bottom -->
+									<a href="#" class="btn-blank"><span class="blind">자세히 보기</span></a>
+								</div>
+							</li>
+							<li>
+								<div class="prd-item type-sm">
+									<div class="img"><img src="../../images/_samples/@sample_200x200.png" alt="기획전 특가 상품 이미지"></div>
+									<div class="desc-bottom">
+										<em class="prod-brand">맛있닭</em>
+										<p class="tit text-elps2">명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+										<span class="price"><em class="num">13,900</em>원</span>
+										<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+										<div class="rating">
+											<i class="ico-bl-star"></i><span class="text-guide-sm2">5점</span><span class="text-guide-sm">(1415)</span><br>
+										</div>
+										<div class="bottom-badge-div mt10">
+											<img src="../../images/txt/badge_add.png" alt="추가증정">
+											<img src="../../images/txt/badge_sauce.png" alt="소스증정">
+										</div>
+									</div><!--// desc-bottom -->
+									<a href="#" class="btn-blank"><span class="blind">자세히 보기</span></a>
+								</div>
+							</li>
+							<li>
+								<div class="prd-item type-sm">
+									<div class="img"><img src="../../images/_samples/@sample_200x200.png" alt="기획전 특가 상품 이미지"></div>
+									<div class="desc-bottom">
+										<em class="prod-brand">맛있닭</em>
+										<p class="tit text-elps2">명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+										<span class="price"><em class="num">13,900</em>원</span>
+										<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+										<div class="rating">
+											<i class="ico-bl-star"></i><span class="text-guide-sm2">5점</span><span class="text-guide-sm">(1415)</span><br>
+										</div>
+										<div class="bottom-badge-div mt10">
+											<img src="../../images/txt/badge_add.png" alt="추가증정">
+											<img src="../../images/txt/badge_sauce.png" alt="소스증정">
+										</div>
+									</div><!--// desc-bottom -->
+									<a href="#" class="btn-blank"><span class="blind">자세히 보기</span></a>
+								</div>
+							</li>
+						</ul>
+						<div class="btn-more">
+							<button type="button" class="btn-article-md"><span>더보기</span><i class="ico-arr-down"></i></button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div><!--// layer-pop  -->
+</div><!--// layer-pop-wrap #popupSample-02 -->
+<!-- 상세검색팝업 -->
+<div class="detail-search">
+	<em class="title">상세검색</em>
+	<div class="detail-seatch-content">
+		<ul class="drop-menu">
+			<li><a href="#" class="toggle-btn">배송</a>
+				<ul class="depth-menu menu-delivery">
+					<li class="custom-checkbox">
+						<input type="checkbox" class="checkbox" id="ch01">
+						<label for="ch01"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></label>
+					</li>
+					<li class="custom-checkbox">
+						<input type="checkbox" class="checkbox" id="ch02">
+						<label for="ch02"><em class="imgbadge-dlv-free"><span class="blind">무료배송</span></em></label>
+					</li>
+				</ul>
+			</li>
+			<li><a href="#" class="toggle-btn">카테고리</a>
+				<ul class="depth-menu">
+					<li><a href="#" class="toggle-btn on">닭가슴살</a>
+						<ul class="depth2-menu">
+							<li class="custom-radio">
+								<input type="radio" class="radio" name="rad1" id="rad01">
+								<label for="rad01">스테이크</label>
+							</li>
+							<li class="custom-radio">
+								<input type="radio" class="radio" name="rad1" id="rad02">
+								<label for="rad02">스테이크</label>
+							</li>
+							<li class="custom-radio">
+								<input type="radio" class="radio" name="rad1" id="rad03">
+								<label for="rad03">스테이크</label>
+							</li>
+							<li class="custom-radio">
+								<input type="radio" class="radio" name="rad1" id="rad04">
+								<label for="rad04">스테이크</label>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#" class="toggle-btn">즉석간편식</a>
+						<ul class="depth2-menu">
+							<li class="custom-radio">
+								<input type="radio" class="radio" name="rad2" id="rad2-01">
+								<label for="rad2-01">스테이크</label>
+							</li>
+							<li class="custom-radio">
+								<input type="radio" class="radio" name="rad2" id="rad2-02">
+								<label for="rad2-02">스테이크</label>
+							</li>
+							<li class="custom-radio">
+								<input type="radio" class="radio" name="rad2" id="rad2-03">
+								<label for="rad2-03">스테이크</label>
+							</li>
+							<li class="custom-radio">
+								<input type="radio" class="radio" name="rad2" id="rad2-04">
+								<label for="rad2-04">스테이크</label> 
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li><a href="#" class="toggle-btn">브랜드</a>
+				<ul class="depth-menu">
+					<li class="custom-checkbox">
+						<input type="checkbox" class="checkbox" id="ch1-01">
+						<label for="ch1-01">닭가슴살</label>
+					</li>
+					<li class="custom-checkbox">
+						<input type="checkbox" class="checkbox" id="ch1-02">
+						<label for="ch1-02">닭가슴살</label>
+					</li>
+					<li class="custom-checkbox">
+						<input type="checkbox" class="checkbox" id="ch1-03">
+						<label for="ch1-03">닭가슴살</label>
+					</li>
+					<li class="custom-checkbox">
+						<input type="checkbox" class="checkbox" id="ch1-04">
+						<label for="ch1-04">닭가슴살</label>
+					</li>
+				</ul>
+			</li>
+			<li><a href="#" class="toggle-btn">중량</a>
+				<ul class="depth-menu">
+					<li class="custom-checkbox">
+						<input type="checkbox" class="checkbox" id="ch2-01">
+						<label for="ch2-01">1kg~3kg</label>
+					</li>
+					<li class="custom-checkbox">
+						<input type="checkbox" class="checkbox" id="ch2-02">
+						<label for="ch2-02">1kg~3kg</label>
+					</li>
+					<li class="custom-checkbox">
+						<input type="checkbox" class="checkbox" id="ch2-03">
+						<label for="ch2-03">1kg~3kg</label>
+					</li>
+					<li class="custom-checkbox">
+						<input type="checkbox" class="checkbox" id="ch2-04">
+						<label for="ch2-04">1kg~3kg</label>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<button type="button" class="btn-reset">전체해제</button>
+	</div>
+	<button type="button" class="btn-close">닫기</button>
+</div>
+<div class="dimm"></div>
+<!-- //상세검색팝업 -->
+<!-- ========== 팝업 영역 ========== -->
+</body>
+</html>

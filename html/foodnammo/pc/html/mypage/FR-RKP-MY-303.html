@@ -39,6 +39,9 @@
 								<p class="greeting"><strong class="name">경탱이탱이땅땅땅</strong>님 반갑습니다.</p>
 								<ul class="sep-list type3">
 									<li>닭과장</li>
+									<!-- [Dev] 20210909 수정 : 오렌지회원일때
+									<li><i class="ico-bl-crown"></i> 오렌지닭과장</li>
+									-->
 									<li>1% 적립</li>
 								</ul>
 								<p class="level-tip">140,600원 더 구매 시, 닭차장 진급!</p>
@@ -47,15 +50,15 @@
 						</div><!--// user-info -->
 						<dl class="column order">
 							<dt>주문/배송</dt>
-							<dd><strong class="num">3</strong>건</dd>
+							<dd><a href="#"><strong class="num">3</strong>건</a></dd><!-- [Dev] 20210909 수정 : a태그 추가 -->
 						</dl><!--// order -->
 						<dl class="column coupon">
 							<dt>쿠폰</dt>
-							<dd><strong class="num">3</strong>개</dd>
+							<dd><a href="#"><strong class="num">3</strong>개</a></dd><!-- [Dev] 20210909 수정 : a태그 추가 -->
 						</dl><!--// coupon -->
 						<dl class="column point">
 							<dt>포인트</dt>
-							<dd class="text-primary"><strong class="num">3,300P</strong></dd>
+							<dd class="text-primary"><a href="#"><strong class="num">3,300P</strong></a></dd><!-- [Dev] 20210909 수정 : a태그 추가 -->
 						</dl><!--// point -->
 					</div><!--// inner -->
 				</div><!--// user-info-box -->
@@ -127,17 +130,25 @@
 						<div class="grid-list-wrap">
 							<ul class="prd-item-list grid-area-span4 gap33">
 								<li class="colum">
+									<!-- 
+										[Dev] 20210909 상품박스 공통 수정
+										1. 브랜드네임 링크 추가
+										2. 전체링크(.btn-blank) 삭제 / 이미지, 브랜드, 상품타이틀 각각 개별링크로
+										3. 별점 표시 수정
+										4. bottom-badge-div의 뱃지들(.badge-primary, .badge-default..) 이미지로 변경
+									-->
 									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></div>
+										<!-- [Dev] 20210909 수정  -->
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<div class="brand-name">햇살닭</div>
-											<p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<i class="ico-bl-star"></i><span>5점</span><span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
+										<!--// [Dev] 20210909 수정  -->
+										
 										<div class="desc-form">
 											<div class="alrm-div">
 												<span class="alrm-label-primary">2021.20.21 입고완료 </span>
@@ -147,20 +158,18 @@
 										<div class="custom-checkbox single floating-lt">
                                             <input type="checkbox" id="check-101-11" class="checkbox" name="check-item-1" checked=""><label for="check-101-11"><span class="blind">선택</span></label>
                                         </div>
-										<a href="#" class="btn-blank"><span class="blind">상품 상세보기</span></a>
+										<!-- <a href="#" class="btn-blank"><span class="blind">상품 상세보기</span></a> [Dev] 20210909 삭제 -->
 									</div><!--// prd-item -->
 								</li><!--// colum -->
 								<li class="colum">
 									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></div>
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<div class="brand-name">햇살닭</div>
-											<p class="tit text-elps2">[맛있    닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<i class="ico-bl-star"></i><span>5점</span><span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<div class="alrm-div">
@@ -168,22 +177,19 @@
 											</div><!--// alrm-div -->
 										</div>
 										<div class="custom-checkbox single floating-lt">
-                                            <input type="checkbox" id="check-101-12" class="checkbox" name="check-item-1"><label for="check-101-12"><span class="blind">선택</span></label>
+                                            <input type="checkbox" id="check-101-11" class="checkbox" name="check-item-1" checked=""><label for="check-101-11"><span class="blind">선택</span></label>
                                         </div>
-										<a href="#" class="btn-blank"><span class="blind">상품 상세보기</span></a>
 									</div><!--// prd-item -->
 								</li><!--// colum -->
 								<li class="colum">
 									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></div>
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<div class="brand-name">햇살닭</div>
-											<p class="tit text-elps2">[맛있닭] 명실상부 판매1위!</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<i class="ico-bl-star"></i><span>5점</span><span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<div class="alrm-div">
@@ -191,22 +197,19 @@
 											</div><!--// alrm-div -->
 										</div>
 										<div class="custom-checkbox single floating-lt">
-                                            <input type="checkbox" id="check-101-13" class="checkbox" name="check-item-1"><label for="check-101-13"><span class="blind">선택</span></label>
+                                            <input type="checkbox" id="check-101-11" class="checkbox" name="check-item-1" checked=""><label for="check-101-11"><span class="blind">선택</span></label>
                                         </div>
-										<a href="#" class="btn-blank"><span class="blind">상품 상세보기</span></a>
 									</div><!--// prd-item -->
 								</li><!--// colum -->
 								<li class="colum">
 									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></div>
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<div class="brand-name">햇살닭</div>
-											<p class="tit text-elps2">[맛있닭] 명실상부 판매1위!</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<i class="ico-bl-star"></i><span>5점</span><span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<div class="alrm-div">
@@ -214,22 +217,19 @@
 											</div><!--// alrm-div -->
 										</div>
 										<div class="custom-checkbox single floating-lt">
-                                            <input type="checkbox" id="check-101-14" class="checkbox" name="check-item-1"><label for="check-101-14"><span class="blind">선택</span></label>
+                                            <input type="checkbox" id="check-101-11" class="checkbox" name="check-item-1" checked=""><label for="check-101-11"><span class="blind">선택</span></label>
                                         </div>
-										<a href="#" class="btn-blank"><span class="blind">상품 상세보기</span></a>
 									</div><!--// prd-item -->
 								</li><!--// colum -->
 								<li class="colum">
 									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></div>
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<div class="brand-name">햇살닭</div>
-											<p class="tit text-elps2">[맛있닭] 명실상부 판매1위!</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<i class="ico-bl-star"></i><span>5점</span><span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<div class="alrm-div">
@@ -237,22 +237,19 @@
 											</div><!--// alrm-div -->
 										</div>
 										<div class="custom-checkbox single floating-lt">
-                                            <input type="checkbox" id="check-101-15" class="checkbox" name="check-item-1"><label for="check-101-15"><span class="blind">선택</span></label>
+                                            <input type="checkbox" id="check-101-11" class="checkbox" name="check-item-1" checked=""><label for="check-101-11"><span class="blind">선택</span></label>
                                         </div>
-										<a href="#" class="btn-blank"><span class="blind">상품 상세보기</span></a>
 									</div><!--// prd-item -->
 								</li><!--// colum -->
 								<li class="colum">
 									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></div>
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<div class="brand-name">햇살닭</div>
-											<p class="tit text-elps2">[맛있닭] 명실상부 판매1위!</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<i class="ico-bl-star"></i><span>5점</span><span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<div class="alrm-div">
@@ -260,22 +257,19 @@
 											</div><!--// alrm-div -->
 										</div>
 										<div class="custom-checkbox single floating-lt">
-                                            <input type="checkbox" id="check-101-16" class="checkbox" name="check-item-1"><label for="check-101-16"><span class="blind">선택</span></label>
+                                            <input type="checkbox" id="check-101-11" class="checkbox" name="check-item-1" checked=""><label for="check-101-11"><span class="blind">선택</span></label>
                                         </div>
-										<a href="#" class="btn-blank"><span class="blind">상품 상세보기</span></a>
 									</div><!--// prd-item -->
 								</li><!--// colum -->
 								<li class="colum">
 									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></div>
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<div class="brand-name">햇살닭</div>
-											<p class="tit text-elps2">[맛있닭] 명실상부 판매1위!</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<i class="ico-bl-star"></i><span>5점</span><span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<div class="alrm-div">
@@ -283,22 +277,19 @@
 											</div><!--// alrm-div -->
 										</div>
 										<div class="custom-checkbox single floating-lt">
-                                            <input type="checkbox" id="check-101-17" class="checkbox" name="check-item-1"><label for="check-101-17"><span class="blind">선택</span></label>
+                                            <input type="checkbox" id="check-101-11" class="checkbox" name="check-item-1" checked=""><label for="check-101-11"><span class="blind">선택</span></label>
                                         </div>
-										<a href="#" class="btn-blank"><span class="blind">상품 상세보기</span></a>
 									</div><!--// prd-item -->
 								</li><!--// colum -->
 								<li class="colum">
 									<div class="prd-item type-sm">
-										<div class="img w180"><img src="../../images/_samples/@sample_180x180.png" alt="기획전 특가 상품 이미지"></div>
+										<div class="img w180"><a href="#"><img src="../../images/_samples/@sample_190x190.png" alt="기획전 특가 상품 이미지"></a></div>
 										<div class="desc-bottom">
-											<div class="brand-name">햇살닭</div>
-											<p class="tit text-elps2">[맛있닭] 명실상부 판매1위!</p>
+											<div class="brand-name"><a href="#">햇살닭</a></div>
+											<p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
 											<span class="price"><em class="num">13,900</em>원</span>
 											<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-											<div class="rating">
-												<i class="ico-bl-star"></i><span>5점</span><span class="text-guide-sm">(1415)</span>
-											</div>
+											<div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
 										</div><!--// desc-bottom -->
 										<div class="desc-form">
 											<div class="alrm-div">
@@ -306,9 +297,8 @@
 											</div><!--// alrm-div -->
 										</div>
 										<div class="custom-checkbox single floating-lt">
-                                            <input type="checkbox" id="check-101-18" class="checkbox" name="check-item-1"><label for="check-101-18"><span class="blind">선택</span></label>
+                                            <input type="checkbox" id="check-101-11" class="checkbox" name="check-item-1" checked=""><label for="check-101-11"><span class="blind">선택</span></label>
                                         </div>
-										<a href="#" class="btn-blank"><span class="blind">상품 상세보기</span></a>
 									</div><!--// prd-item -->
 								</li><!--// colum -->
 							</ul><!--// prd-item-list -->
@@ -321,7 +311,7 @@
 						</div><!--// grid-list-wrap -->
 
                         <div class="pagination">
-                            <a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a>
+                            <!-- <a href="#" class="btn-page prev" title="이전"><span class="blind">이전</span></a> -->
                             <a href="#" class="on"><span>1</span></a>
                             <a href="#"><span>2</span></a>
                             <a href="#"><span>3</span></a>

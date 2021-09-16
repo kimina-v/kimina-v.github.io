@@ -122,3 +122,32 @@
 .main-event-list ul li a{display:block; position:relative; width:100%; height:100%; overflow:hidden;}
 .main-event-list ul li a img{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); -webkit-transform:translate(-50%, -50%); max-width:770px;}
 .layer-pop.main-visual-pop .btn-pop-close{right:-45px;}
+
+
+/* 환상의 꿀조랍 */
+
+.recoom-mix-menu{text-align:center}
+.recoom-mix-menu .swiper-wrapper{width:auto !important;text-align:center;display:inline-block}
+.recoom-mix-menu .swiper-slide{width:auto !important;display:inline-block }
+.recoom-mix-menu .swiper-slide button{display:inline-block;height:42px;line-height:40px;border:1px solid #ccc;border-radius:21px;padding:0 22px;white-space:nowrap;color:#666}
+.recoom-mix-menu .swiper-slide-thumb-active button{background:#ff6001;border-color:#ff6001;color:#fff}
+.recomm-mix-cont{margin-top:40px;font-size:0}
+.recomm-mix-cont .visual-area{display:inline-block;position:relative;width:690px;height:450px;overflow:hidden}
+.recomm-mix-cont .visual-img{display:block;width:690px;height:450px;overflow:hidden}
+.recomm-mix-cont .context{padding:22px 20px 20px;background:rgba(255,255,255,.8);border-radius:5px;position:absolute;right:18px;bottom:26px;;width:368px}
+.recomm-mix-cont .context .title{font-size:19px;font-weight:bold;display:block;letter-spacing:-0.2px}
+.recomm-mix-cont .context .text{margin-top:6px;color:#666;line-height:20px;letter-spacing:-0.2px;font-size:13px}
+.recomm-mix-cont .mix-prod-list{display:inline-block;border-top:1px solid #e6e6e6;border-right:1px solid #e6e6e6;width:410px;vertical-align:top;height:450px;box-sizing:border-box}
+.recomm-mix-cont .mix-prod-list .scroll-area{overflow-y:auto;height:405px}
+.recomm-mix-cont .mix-prod-list li{font-size:0;width:100%;padding:0 30px 0 20px;margin-top:16px}
+.recomm-mix-cont .mix-prod-list .custom-checkbox .checkbox + label{padding-left:36px}
+.recomm-mix-cont .mix-prod-list .custom-checkbox .checkbox + label:before{border-radius:0;top:30px}
+.recomm-mix-cont .mix-prod-list figure{display:inline-block;width:80px;height:80px;border-radius:2px;overflow:hidden}
+.recomm-mix-cont .mix-prod-list .prod-link{display:inline-block;width:calc(100% - 118px)}
+.recomm-mix-cont .mix-prod-list .prod-name{display:inline-block;width:calc(100% - 65px);margin-right:10px}
+.recomm-mix-cont .mix-prod-list .prod-name .dis-tbl{display:table-cell;vertical-align:middle;height:80px;font-size:14px;line-height:20px;color:#222;padding-left:12px}
+.recomm-mix-cont .mix-prod-list .prod-price{height:80px;line-height:80px;font-size:12px;display:inline-block;vertical-align:top;text-align:right}
+.recomm-mix-cont .mix-prod-list .prod-price strong{font-size:15px}
+.recomm-mix-cont .btn-group-flex{display:flex;width:calc(100% + 1px)}
+.recomm-mix-cont .btn-group-flex .btn-basic-md{height:44px}
+.recomm-mix-cont .btn-group-flex > button{flex:1}

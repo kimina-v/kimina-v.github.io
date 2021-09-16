@@ -22,3 +22,103 @@
 /* 개인정보처리방침 팝업(배송업체/입점사) */
 .li-shipper li{padding:0 20px 10px;}
 
+
+/* 고객센터 */
+.customer-main .realtime-chat{padding:15px 15px 20px;background:#fbf5f1}
+.customer-main .title-link{font-size:16px;font-weight:bold;position:relative;display:block;line-height:32px}
+.customer-main .title-link:after{content:"";width:6px;height:6px;border-top:2px solid #333;border-right:2px solid #333;transform:rotate(45deg);position:absolute;top:10px;right:1px;border-radius:2px}
+.customer-main .realtime-chat .title-link:before{content:"";display:inline-block;width:32px;height:32px;background:url(../images/icon/icon_customer.png) no-repeat -5px -203px/40px auto;vertical-align:top;margin-right:10px}
+.customer-main .realtime-chat .info-box{margin-top:14px;background:#fff;border-radius:4px;padding:17px 20px}
+.customer-main .realtime-chat .info-box ul{overflow:hidden}
+.customer-main .realtime-chat .info-box ul li{float:left;line-height:18px;font-size:15px;min-width:50%}
+.customer-main .realtime-chat .info-box ul li:nth-child(even){float:right;text-align:right}
+.customer-main .realtime-chat .info-box ul li:nth-child(2n) ~ li{margin-top:8px}
+.customer-main .realtime-chat .info-box ul li.txt-gray{color:#888}
+.customer-main .realtime-chat .info-box ul li em{font-size:14px}
+.customer-main .section-group{border-top:8px solid #f2f2f2;padding:13px 15px 20px}
+.customer-main .section-group .title{display:block;font-size:16px;line-height:28px;margin-top:7px}
+.faq-search-box .btn-list{margin-top:10px}
+.faq-search-box .btn-list > li{display:inline-block;margin-bottom:10px}
+.faq-search-box .btn-list > li ~ li{margin-left:3px}
+.faq-search-box .btn-list > li a{background:#f8f8f8;border:1px solid #f2f2f2;border-radius:4px;line-height:26px}
+.faq-search-box .btn-list > li.current a{background:#333;border-color:#333;color:#fff}
+.faq-search-box .faq-search{border:1px solid #ccc;border-radius:4px;margin-top:10px;height:40px;padding-right:40px;box-sizing:border-box;position:relative;overflow:hidden}
+.faq-search-box .faq-search input{border:0;line-height:38px;padding-left:15px;width:100%;box-sizing:border-box}
+.faq-search-box .faq-search input::placeholder{color:#ccc}
+.faq-search-box .faq-search .btn-search{width:40px;height:38px;position:absolute;top:0;right:0}
+.faq-search-box .faq-search .btn-search:after{content:"";width:18px;height:18px;background:url(../images/icon/ico_search_m.png) no-repeat -52px -26px/70px auto;position:absolute;top:calc(50% - 9px);right:15px}
+.customer-main .ranking-use-info{margin:30px -15px 0 0}
+.customer-main .ranking-use-info .title-link{margin-right:15px}
+.customer-main .ranking-use-info .use-info-list{white-space:nowrap;margin-top:9px;font-size:0}
+.customer-main .ranking-use-info .use-info-list li{text-align:center;display:inline-block;width:100px;height:88px;border:1px solid #e6e6e6;border-radius:4px;padding-top:12px;font-size:13px}
+.customer-main .ranking-use-info .use-info-list li ~ li{margin-left:10px}
+.customer-main .ranking-use-info .use-info-list li a{display:block}
+.customer-main .ranking-use-info .use-info-list li i{display:inline-block;width:44px;height:38px;background:url(../images/icon/icon_customer.png) no-repeat 0 0/44px auto}
+.customer-main .ranking-use-info .use-info-list li i.icon02{background-position:0 -38px}
+.customer-main .ranking-use-info .use-info-list li i.icon03{background-position:0 -74px}
+.customer-main .ranking-use-info .use-info-list li i.icon04{background-position:0 -112px}
+.customer-main .ranking-use-info .use-info-list li i.icon05{background-position:0 -148px}
+.customer-main .ranking-use-info .use-info-list li .txt{display:block}
+.customer-main .ranking-use-info .use-info-list li:last-child{margin-right:15px}
+.customer-main .ranking-use-info .w-scroll{width:100%;overflow-x:auto}
+.customer-main .ranking-use-info .w-scroll::-webkit-scrollbar{display:none}
+.faq-list,
+.customer-main .post-list-box{margin:12px -15px 0;border-top:1px solid #eee;padding:0 15px;width:auto}
+.faq-list .ui-toggle ~ .ui-toggle{border-top:1px solid #eee}
+.faq-list .ui-toggle .question{font-size:14px;width:100%;box-sizing:border-box;text-align:left;line-height:20px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;word-break:break-all;padding:15px 10px 15px 20px;position:relative}
+.faq-list .ui-toggle .question:before{content:"Q";font-family:"Roboto";font-size:16px;color:#ff6001;display:inline-block;margin-right:11px;font-weight:bold;position:absolute;left:0}
+.faq-list .ui-toggle .answer{background:#f8f8f8;padding:20px 25px 48px 35px;margin:0 -15px;position:relative;line-height:24px}
+.faq-list .ui-toggle .answer:before{content:"A";font-family:"Roboto";font-size:16px;font-weight:bold;position:absolute;left:17px;top:px}
+.faq-list .ui-toggle .guide-answer{background:#f8f8f8;padding:20px 25px 48px 35px;margin:0 -15px;position:relative;line-height:24px}
+.faq-list .ui-toggle .guide-answer:before{content:"";font-family:"Roboto";font-size:16px;font-weight:bold;position:absolute;left:17px;top:px}
+.faq-list .ui-toggle .guide{font-size:14px;width:100%;box-sizing:border-box;text-align:left;line-height:20px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;word-break:break-all;padding:10px 10px 25px 0px;position:relative}
+.faq-list .ui-toggle .guide:before{content:"";font-family:"Roboto";font-size:16px;font-weight:bold;position:absolute;left:17px;top:px}
+.faq-list .ui-toggle.on + .ui-toggle{border-top:0}
+.faq-list .ui-toggle.on .question{overflow:visible;white-space:normal}
+.faq-list .ui-toggle.on .guide{overflow:visible;white-space:normal}
+.customer-main .post-list-box > li{border-bottom:0}
+.customer-main .post-list-box > li ~ li{border-top:1px solid #eee}
+.customer-main .post-list-box > li:only-child{margin-bottom:-20px;padding:22px 0}
+.customer-main .customer-list{font-size:0}
+.customer-main .customer-list li{display:inline-block;width:calc(100%/3);font-size:13px;position:relative;text-align:center;padding:6px 0 0}
+.customer-main .customer-list li ~ li:after{content:"";width:1px;height:40px;background:#e6e6e6;position:absolute;top:17px;left:0}
+.customer-main .customer-list li i{display:inline-block;width:44px;height:38px;background:url(../images/icon/icon_customer.png) no-repeat 0 -184px/44px auto}
+.customer-main .customer-list li i.icon02{background-position:0 -222px}
+.customer-main .customer-list li i.icon03{background-position:0 -260px}
+.customer-main .customer-list li .txt{display:block}
+.customer-main .customer-box .info-box{border:1px solid #e6e6e6;border-radius:4px;margin-top:22px;padding:20px 30px 25px}
+.customer-main .customer-box .info-box .title{display:block;text-align:center;font-size:18px}
+.customer-main .customer-box .info-box .title a{font-size:20px;font-family:"Roboto"}
+.customer-main .customer-box .info-box .info-list{min-width:50%;margin-top:15px;overflow:hidden}
+.customer-main .customer-box .info-box .info-list li{float:left;font-size:15px;letter-spacing:-1px;min-width:50%}
+.customer-main .customer-box .info-box .info-list li em{font-size:14px}
+.customer-main .customer-box .info-box .info-list li.txt-gray{color:#888}
+.customer-main .customer-box .info-box .info-list li:nth-child(even){float:right;text-align:right}
+.customer-main .customer-box .info-box .info-list li:nth-child(2n) ~ li{margin-top:8px}
+
+.customer-faq .faq-search-box .btn-list{margin-top:20px}
+.customer-faq .section-group{padding:0 15px}
+.customer-faq .section-group ~ .section-group{border-top:9px solid #f2f2f2}
+.customer-faq .section-group:last-child{padding-bottom:50px}
+.customer-faq .faq-search-box{padding-top:20px;padding-bottom:20px}
+.customer-faq .faq-search-box .faq-search{margin-top:0}
+.customer-faq .faq-list{border-top:0;margin:0;padding:0}
+.customer-faq .faq-list > li{border-bottom:1px solid #eee;padding-top:15px}
+.customer-faq .faq-list .ui-toggle ~ .ui-toggle{border-top:0}
+.customer-faq .faq-list .sort{display:block;font-size:14px;color:#999}
+.customer-faq .faq-list .ui-toggle .question{padding:10px 40px 10px 20px;white-space:normal;overflow:visible}
+.customer-faq .faq-list .ui-toggle .question:after{content:"";width:6px;height:6px;border-right:2px solid #666;border-bottom:2px solid #666;transform:rotate(45deg);position:absolute;right:1px;top:calc(50% - 20px);border-radius:2px;transition:.4}
+.customer-faq .faq-list .ui-toggle .guide:after{content:"";width:6px;height:6px;border-right:2px solid #666;border-bottom:2px solid #666;transform:rotate(45deg);position:absolute;right:1px;top:calc(50% - 15px);border-radius:2px;transition:.4}
+.customer-faq .faq-list .ui-toggle.on .question:after{transform:rotate(-135deg);transition:.4;top:calc(50% - 16px)}
+.customer-faq .faq-list .ui-toggle.on .guide:after{transform:rotate(-135deg);transition:.4;top:calc(50% - 16px)}
+.customer-faq .faq-list .ui-toggle.on{border-bottom:0}
+.customer-faq .faq-list ~ .btn-article-md{margin-top:20px}
+
+.contain-box{padding:14px 15px;box-sizing: border-box;background-color:#f8f8f8;}
+.contain-box .txt{line-height: 32px; float: left;}
+.contain-box .chat-link{font-size:13px;position:relative;line-height:32px;left:calc(100% - 235px)}
+.contain-box .chat-link::after{content: "";width: 6px;height: 6px;border-top: 2px solid #333;border-right: 2px solid #333;transform: rotate(45deg);position: absolute;top: 3px;right: -15px; border-radius: 2px;}
+
+.inquery-form .title-box-container{text-align: center;}
+.inquery-form .title-box-container .img-qa{position: relative;display: inline-block;width:60px;height:58px;background:url(../images/icon/ico_qa.png)no-repeat;margin:20px 0 }
+.inquery-form .title-box-container .txt{font-size:15px; font-weight:400; color:#333;vertical-align:top;line-height:26px;}

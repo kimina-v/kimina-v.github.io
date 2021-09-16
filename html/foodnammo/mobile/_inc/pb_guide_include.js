@@ -13,6 +13,7 @@ var include = {
 	scripts : function(){
 		document.write('<script src="'+commURL+'js/lib/jquery-3.5.1.min.js"></script>');
 		document.write('<script src="'+commURL+'js/lib/swiper.js"></script>');
+		document.write('<script src="'+commURL+'js/lib/jquery-ui.min.js"></script>');
 		document.write('<script src="'+baseURL+'js/pub/content_m_ui.js"></script>');
 	},
 	title : function(){

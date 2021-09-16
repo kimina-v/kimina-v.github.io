@@ -14,7 +14,6 @@
 <!--// ======================== CSS / JS ======================== -->
 <title>랭킹닭컴</title>
 </head>  
-
 <body>
 <div class="wrap"><!-- [Pub/Dev] 메인페이지의 경우 addClass main -->
 
@@ -382,7 +381,43 @@
 					<div class="recent-info"><p class="txt">최근 본 <span class="num"><em>0</em><i class="ico-arr-right"></i></span></p></div>
 					<!-- 상품 목록 영역 -->
 					<div class="recent-prd-item">
-						<ul>
+						<ul id="recent-prod-list">
+							<li>
+								<a href="#">
+									<span class="img"><img src="../../images/_samples/@sample_74x74.jpg" alt="최근 본 상품" /></span>
+									<div class="detail">
+										<span class="tit text-elps">맛있닭 맛보기 set - 구매하러 가기 맛있닭 맛보기 set - 구매하러 가기</span>
+										<span class="text-primary">19,800</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="img"><img src="../../images/_samples/@sample_74x74.jpg" alt="최근 본 상품" /></span>
+									<div class="detail">
+										<span class="tit text-elps">맛있닭 맛보기 set - 구매하러 가기 맛있닭 맛보기 set - 구매하러 가기</span>
+										<span class="text-primary">19,800</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="img"><img src="../../images/_samples/@sample_74x74.jpg" alt="최근 본 상품" /></span>
+									<div class="detail">
+										<span class="tit text-elps">맛있닭 맛보기 set - 구매하러 가기 맛있닭 맛보기 set - 구매하러 가기</span>
+										<span class="text-primary">19,800</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="img"><img src="../../images/_samples/@sample_74x74.jpg" alt="최근 본 상품" /></span>
+									<div class="detail">
+										<span class="tit text-elps">맛있닭 맛보기 set - 구매하러 가기 맛있닭 맛보기 set - 구매하러 가기</span>
+										<span class="text-primary">19,800</span>
+									</div>
+								</a>
+							</li>
 							<li>
 								<a href="#">
 									<span class="img"><img src="../../images/_samples/@sample_74x74.jpg" alt="최근 본 상품" /></span>
@@ -412,10 +447,13 @@
 							</li>
 						</ul>
 						<div class="btn-move-group">
-							<button type="button" class="btn-left-xs disabled"><i class="ico-arr-left"></i><span class="blind">이전</span></button>
-							<button type="button" class="btn-right-xs"><i class="ico-arr-right"></i><span class="blind">다음</span></button>
+							<a href="#" class="btn-left-xs disabled" onclick="moveList('prev', 'recent-prod-list', 3, 3);return false;"><i class="ico-arr-left"></i><span class="blind">이전</span></a>
+							<a href="#"  class="btn-right-xs" onclick="moveList('next', 'recent-prod-list', 3, 3);return false;"><i class="ico-arr-right"></i><span class="blind">다음</span></a>
+							<!-- <button type="button" class="btn-left-xs disabled"><i class="ico-arr-left"></i><span class="blind">이전</span></button>
+							<button type="button" class="btn-right-xs"><i class="ico-arr-right"></i><span class="blind">다음</span></button> -->
 						</div>
 					</div>
+					
 					<!--// 상품 목록 영역 -->
 
 					<!-- 상품 없을 경우 -->

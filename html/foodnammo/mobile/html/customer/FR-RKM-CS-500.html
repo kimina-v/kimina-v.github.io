@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>   
+
+<body>
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<header id="header" class="header">
+		<div class="header-top">
+			<div class="page-title-area">
+                <a href="#" class="btn-back"><i class="ico-arrows-back"></i><span class="blind">뒤로가기</span></a>
+				<h2 class="page-title">고객의소리</h2>
+				<!-- <div class="my-menu">
+					<ul>
+						<li><a href="#" class="btn-util-search" title="검색"><i class="ico-search-pop"></i></a></li>
+						<li><a href="#" class="btn-util-cart" title="장바구니"><span class="blind">장바구니</span><em class="count">1</em></a></li>
+					</ul>
+				</div> -->
+			</div><!-- // page-title-area  -->
+		</div><!--// header-top -->
+	</header>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+        <div class="inquery-form">
+            <div class="title-box-container">
+                <div class="img-qa"></div>
+                <p class="txt">랭킹닭컴은 항상 고객을 먼저 생각합니다.</br>이용하시면서 느낀 불편한사항이나 바라는 점을</br>알려주세요. 더 나은 랭킹닭컴이 되겠습니다.</p>
+            </div>
+        </div>
+        <div class="contain-box">
+            <div class="txt">상품/주문/배송 관련 문의</div>
+            <a href="#" class="chat-link">1:1 문의하기</a>
+        </div>
+		<div class="content-wrap inquery-content">
+            <div class="inquery-form">
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="" class="form-label">의견유형<i class="es2"></i></label>
+                    </div><!--// form-head -->
+                    <div class="input-group w-full">
+                        <select class="select w-full">
+                            <option value="">유형선택</option>
+                            <option value="">랭킹닭컴 서비스 칭찬</option>
+                            <option value="">서비스 개선 의견</option>
+                            <option value="">상품 제안</option>
+                            <option value="">사이트 오류 문의</option>
+                            <option value="">랭킹닭컴 서비스 불편/제안</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-head">
+                        <label for="" class="form-label">내용<i class="es2"></i></label>
+                    </div><!--// form-head -->
+                    <div class="input-group w-full">
+                        <div class="textarea-box">
+                            <textarea id="item-5" placeholder="내용을 입력하세요"></textarea>
+                            <span class="text-counter"><em>0 / </em>1,000</span>
+                        </div>
+                        <div class="guide-tit mt15 mb20">
+                            <h4 class="guide-tit text-primary">※ 유의사항</h4>
+                            <ul class="bl-list-type4 mt10">
+                                <li>접수된 내용 중 안내가 필요한 내용은 1:1문의로 이동 될 수 있습니다.</li>
+                                <li>고객의소리는 제안 및 의견 접수 전용 게시판으로 별도 안내는 드리지 않고 있습니다.</li>
+                            </ul>
+                        </div>
+                        <div class="attach-wrap">
+                            <div class="attach-thum-list">
+                                <div class="attach-item">
+                                    <input type="file" id="file1">
+                                    <label for="file1"><span class="blind">파일첨부</span></label>
+                                    <div class="attach-img">
+                                        <figure><img src="../../images/_samples/@sample_330x330.png" alt=""></figure>
+                                        <button type="button" class="btn-del"><span class="blind">삭제</span></button>
+                                    </div>
+                                </div>
+                                <div class="attach-item">
+                                    <input type="file" id="file1"> 
+                                    <label for="file1"><span class="blind">파일첨부</span></label>
+                                </div>
+                                <div class="attach-item">
+                                    <input type="file" id="file1">
+                                    <label for="file1"><span class="blind">파일첨부</span></label>
+                                </div>
+                            </div>
+                            <ul class="dash-list">
+                                <li>15MB 이하의 JPG, PNG, GIF, BMP 형식의 파일 최대 3장 까지 가능합니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn-basic-lg  btn-dim"><span>취소</span></button>
+                    <button type="button" class="btn-basic-lg  btn-black"><span>보내기</span></button>
+                </div>
+            </div>
+		</div><!--// content-wrap --> 
+		<!-- ## 사이드 배너 :: side-quick-area  -->
+		<script>include.sidequick();</script>
+		<!--// ## 사이드 배너 ::  side-quick-area  -->
+        <!-- 하단 고정 메뉴 -->
+		 <script>include.bottomNav();</script>
+		 <!--// 하단 고정 메뉴 -->
+	 </section>
+	 <!--// ========== 컨텐츠 영역 :: container ========== -->
+	
+	<!-- ========== 공통 푸터 :: footer ========== -->
+	<script>include.footer();</script>
+	<!--// ========== 공통 푸터 :: footer ========== -->
+    
+</div><!--// wrap -->
+</body>
+</html>

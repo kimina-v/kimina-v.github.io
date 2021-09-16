@@ -8,18 +8,29 @@
 function fnCartInsert(cartType, arrayList, fnCallBack, influNo){
 
     //cartType 필수, arrayList 에 v_productcd 필수
-    console.log('cartType:'+cartType+' | arrayList:'+JSON.stringify(arrayList));
-    /* SAMPLE DATA
-    var arr = [{"v_productcd":"F000010533","n_qty":2,"v_optionid":"20210818000000000360","v_uproductcd":"F000010533"}
-    ,{"v_productcd":"F000010533","n_qty":2,"v_optionid":"20210818000000000361","v_uproductcd":"F000010533"}];
+    console.log('cartType:' + cartType + ' | arrayList:' + JSON.stringify(arrayList));
+    /*
+    2021-09-14
+    var arr = [
+        {"v_productcd":"3613","n_qty":2,"v_optionid":"20210914000000016376"}
+        , {"v_productcd":"3613","n_qty":2,"v_optionid":"20210914000000016377"}
+        , {"v_productcd":"3616","n_qty":2,"v_optionid":"20210914000000017947"}
+        , {"v_productcd":"3616","n_qty":2,"v_optionid":"20210914000000017948"}
+        , {"v_productcd":"3625","n_qty":2,"v_optionid":"20210914000000017956"}
+        , {"v_productcd":"3625","n_qty":2,"v_optionid":"20210914000000017957"}
+        , {"v_productcd":"3983","n_qty":2,"v_optionid":"20210914000000016498"}
+        , {"v_productcd":"3983","n_qty":2,"v_optionid":"20210914000000016497"}
+        , {"v_productcd":"4060","n_qty":2,"v_optionid":"20210914000000016552"}
+        , {"v_productcd":"4060","n_qty":2,"v_optionid":"20210914000000016553"}
+    ];
     fnCartInsert('01',arr,fnCartInsertCallBackTest,'');
      */
     cmAjax({
-        url	: '/order/cart/insertCartAjax'
-        , type : "post"
-        , data : {json: JSON.stringify(arrayList), cartType: cartType, influNo: influNo}
-        , dataType : "json"
-        , success : function (data) {
+        url: '/order/cart/insertCartAjax'
+        , type: "post"
+        , data: {json: JSON.stringify(arrayList), cartType: cartType, influNo: influNo}
+        , dataType: "json"
+        , success: function (data) {
             //console.log("data:"+JSON.stringify(data));
             if(fnCallBack != undefined){
                 fnCallBack(data.status, cartType);

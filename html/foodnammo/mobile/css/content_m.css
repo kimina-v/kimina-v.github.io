@@ -22,6 +22,9 @@
 /* 그외(고객센터, 푸터메뉴등) */
 @import url("content_etc_m.css");
 
+/* Datepicker */
+@import url("jquery-ui.css");
+
 
 /* css원본 : 20210722 이전 (현재 쓰이지 않음) */
 /* @import url("content1_m.css");

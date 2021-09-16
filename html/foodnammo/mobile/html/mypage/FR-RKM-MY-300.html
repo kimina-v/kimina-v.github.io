@@ -40,24 +40,19 @@
 	<section id="contents" class="container">
        
 		<div class="content-wrap">
-			
-			<div class="search-box ui-toggle">
+			<!-- 날짜 조회영역 -->
+			<div class="search-box fixed-type">
                 <div class="search-head">
-                    <p class="searn-period">2021.04.30 ~ 2021.05.30 <span>(최근1개월)</span></p>
-                    <button type="button" class="btn-link-txt4 ui-toggle-btn"><span>조회설정</span><i class="ico-arr-toggle"></i></button>
+                    <p class="search-period">2021.04.30 ~ 2021.05.30 <span>(최근1개월)</span></p>
+                    <button type="button" class="btn-link-txt4 ui-search-toggle"><span class="txt-change">조회설정</span><i class="ico-arr-toggle"></i></button>
                 </div><!--// search-head -->
-                <div class="search-detail hide ui-toggle-content">
+                <div class="search-detail hide">
                     <fieldset>
                         <legend>상세 검색</legend>
                         <ul class="radio-list">
                             <li>
                                 <div class="custom-radio">
-                                    <input type="radio" id="radio-item100" class="radio-btn-type2" name="radio-item100"><label for="radio-item100">2주일</label>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="custom-radio">
-                                    <input type="radio" id="radio-item101" class="radio-btn-type2" name="radio-item100"><label for="radio-item101">1개월</label>
+                                    <input type="radio" id="radio-item101" class="radio-btn-type2" name="radio-item100" checked="checked"><label for="radio-item101">1개월</label>
                                 </div>
                             </li>
                             <li>
@@ -81,12 +76,35 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="period-setting hide ui-toggle-sub">
-                            //
-                        </div><!--// period-setting -->
+                        <div class="period-setting hide">
+							<div class="datepicker-group">
+								<div class="inp-calendar">
+									<input type="text" class="datepicker">
+								</div>
+								<div class="inp-calendar">
+									<input type="text" class="datepicker">
+								</div>
+							</div>
+							<div class="added-btn">
+								<button type="button" class="btn-basic-md2 btn-default"><span>초기화</span></button>
+								<button type="button" class="btn-basic-md2 btn-black"><span>조회하기</span></button>
+							</div>
+						</div><!--// period-setting -->
                     </fieldset>
-                </div><!--// search-detail-->
-            </div><!--// search-box -->
+					<div class="searh-bottom">
+						<div class="input-group-wrap search-type3">
+							<div class="input-group">
+								<label for="item1-1" class="blind">검색</label>
+								<input type="text" id="item1-1" class="input-text" placeholder="주문 상품명 검색">
+								<span class="input-group-btn">
+									<button type="button" class="btn-search" title="검색하기"><i class="ico-search-type2"></i><span class="blind">검색하기</span></button>
+								</span>
+							</div><!--// input-group -->
+						</div><!--// input-group-wrap -->
+					</div>
+				</div><!--// search-detail-->
+				<div class="dim"></div>
+            </div><!--// search-box :: 날짜 조회영역 -->
 
 			<h3 class="blind">최근 주문내역</h3>
 			<ul class="my-prd-list">
@@ -99,7 +117,147 @@
                             <a href="#" class="btn-link-txt4"><span>상세보기</span><i class="ico-arr-right"></i></a>
                         </div>
 					</div><!--// list-head -->
-					<!-- 1 -->
+					
+					<!-- 1 : 미입금일 경우 -->
+					<div class="list-item-wrap">
+						<div class="order-state-box inner-flex">
+							<div class="left-item1">
+								<strong class="text-primary">미입금</strong> 
+							</div>
+							<!-- <div class="right-item1">
+								<a href="#" class="btn-link-txt4"><u>배송조회</u></a>
+							</div> -->
+						</div><!--// order-state-box -->
+						<div class="prd-info-area">
+							<div class="inner">
+								<div class="column img"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></div>
+								<div class="column tit">
+									<p class="tit">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</p>
+									<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+									<ul class="price-item">
+										<li>1개</li>
+										<li><span class="num">19,500</span>원</li>
+										<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
+									</ul>
+								</div><!--// column  -->
+							</div>
+							<a href="#" class="btn-blank"><span class="blind">상세보기</span></a>
+						</div><!--// prd-info-area -->
+						<div class="list-bottom">
+							<p class="address-txt">[14686] 서울특별시 마포구 월드컵북로 396 (상암동) 누리꿈스퀘어 비즈니스타워 15층</p>
+							<div class="added-btn">
+								<a href="#" class="btn-basic-md2 btn-default"><span>주문취소</span></a>
+								<a href="#" class="btn-basic-md2 btn-default"><span>배송지변경</span></a>
+							</div>
+						</div><!--// list-bottom -->
+					</div><!--// list-item-wrap -->
+					<!--// 1 : 미입금일 경우 -->
+
+					<!-- 2 : 결제완료일 경우 -->
+					<div class="list-item-wrap">
+						<div class="order-state-box inner-flex">
+							<div class="left-item1">
+								<strong class="text-primary">결제완료</strong> 7월 29일 배송예정
+							</div>
+							<!-- <div class="right-item1">
+								<a href="#" class="btn-link-txt4"><u>배송조회</u></a>
+							</div> -->
+						</div><!--// order-state-box -->
+						<div class="prd-info-area">
+							<div class="inner">
+								<div class="column img"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></div>
+								<div class="column tit">
+									<p class="tit">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</p>
+									<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+									<ul class="price-item">
+										<li>1개</li>
+										<li><span class="num">19,500</span>원</li>
+										<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
+									</ul>
+								</div><!--// column  -->
+							</div>
+							<a href="#" class="btn-blank"><span class="blind">상세보기</span></a>
+						</div><!--// prd-info-area -->
+						<div class="list-bottom">
+							<p class="address-txt">[14686] 서울특별시 마포구 월드컵북로 396 (상암동) 누리꿈스퀘어 비즈니스타워 15층</p>
+							<div class="added-btn">
+								<a href="#" class="btn-basic-md2 btn-default"><span>주문취소</span></a>
+								<a href="#" class="btn-basic-md2 btn-default"><span>배송지변경</span></a>
+							</div>
+						</div><!--// list-bottom -->
+					</div><!--// list-item-wrap -->
+					<!--// 2 : 결제완료일 경우 -->
+
+					<!-- 3 : 상품준비중일 경우 -->
+					<div class="list-item-wrap">
+						<div class="order-state-box inner-flex">
+							<div class="left-item1">
+								<strong class="text-primary">상품준비중</strong> 7월 29일 배송예정
+							</div>
+							<!-- <div class="right-item1">
+								<a href="#" class="btn-link-txt4"><u>배송조회</u></a>
+							</div> -->
+						</div><!--// order-state-box -->
+						<div class="prd-info-area">
+							<div class="inner">
+								<div class="column img"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></div>
+								<div class="column tit">
+									<p class="tit">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</p>
+									<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+									<ul class="price-item">
+										<li>1개</li>
+										<li><span class="num">19,500</span>원</li>
+										<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
+									</ul>
+								</div><!--// column  -->
+							</div>
+							<a href="#" class="btn-blank"><span class="blind">상세보기</span></a>
+						</div><!--// prd-info-area -->
+						<div class="list-bottom">
+							<p class="address-txt">[14686] 서울특별시 마포구 월드컵북로 396 (상암동) 누리꿈스퀘어 비즈니스타워 15층</p>
+							<div class="added-btn">
+								<a href="#" class="btn-basic-md2 btn-default"><span>취소요청</span></a>
+								<a href="#" class="btn-basic-md2 btn-default"><span>배송지변경</span></a>
+							</div>
+						</div><!--// list-bottom -->
+					</div><!--// list-item-wrap -->
+					<!--// 3 : 상품준비중일 경우 -->
+
+					<!-- 4 : 배송준비중 -->
+					<div class="list-item-wrap">
+						<div class="order-state-box inner-flex">
+							<div class="left-item1">
+								<strong class="text-primary">배송준비중</strong> 7월 29일 배송예정
+							</div>
+							<!-- <div class="right-item1">
+								<a href="#" class="btn-link-txt4"><u>배송조회</u></a>
+							</div> -->
+						</div><!--// order-state-box -->
+						<div class="prd-info-area">
+							<div class="inner">
+								<div class="column img"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></div>
+								<div class="column tit">
+									<p class="tit">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</p>
+									<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+									<ul class="price-item">
+										<li>1개</li>
+										<li><span class="num">19,500</span>원</li>
+										<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
+									</ul>
+								</div><!--// column  -->
+							</div>
+							<a href="#" class="btn-blank"><span class="blind">상세보기</span></a>
+						</div><!--// prd-info-area -->
+						<div class="list-bottom">
+							<p class="address-txt">[14686] 서울특별시 마포구 월드컵북로 396 (상암동) 누리꿈스퀘어 비즈니스타워 15층</p>
+							<div class="added-btn">
+								<a href="#" class="btn-basic-md2 btn-default"><span>취소요청</span></a>
+							</div>
+						</div><!--// list-bottom -->
+					</div><!--// list-item-wrap -->
+					<!--// 4 : 배송준비중 -->
+
+					<!-- 5 : 배송중 -->
 					<div class="list-item-wrap">
 						<div class="order-state-box inner-flex">
 							<div class="left-item1">
@@ -111,9 +269,9 @@
 						</div><!--// order-state-box -->
 						<div class="prd-info-area">
 							<div class="inner">
-								<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+								<div class="column img"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></div>
 								<div class="column tit">
-									<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+									<p class="tit">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</p>
 									<p class="desc">혼합 5팩(1팩당 3,900원)</p>
 									<ul class="price-item">
 										<li>1개</li>
@@ -122,20 +280,27 @@
 									</ul>
 								</div><!--// column  -->
 							</div>
+							<a href="#" class="btn-blank"><span class="blind">상세보기</span></a>
 						</div><!--// prd-info-area -->
 						<div class="list-bottom">
 							<p class="address-txt">[14686] 서울특별시 마포구 월드컵북로 396 (상암동) 누리꿈스퀘어 비즈니스타워 15층</p>
 							<div class="added-btn">
-								<a href="#" class="btn-basic-md2 btn-default"><span>배송지변경</span></a>
+								<a href="#" class="btn-basic-md2 btn-default"><span>구매확정</span></a>
+								<a href="#" class="btn-basic-md2 btn-primary-line"><span>후기작성</span></a>
+								<!--
+									<a href="#" class="btn-basic-md2 btn-navy-line"><span>다시담기</span></a>
+									<em class="btn-basic-md2 btn-default"><span class="text-grey2">기간만료</span></em>
+								-->
 							</div>
 						</div><!--// list-bottom -->
 					</div><!--// list-item-wrap -->
-					<!--// 1 -->
-					<!-- 2 -->
+					<!--// 5 : 배송중 -->
+
+					<!-- 6 : 배송완료 -->
 					<div class="list-item-wrap">
 						<div class="order-state-box inner-flex">
 							<div class="left-item1">
-								<strong class="text-primary">배송중</strong> 7월 29일 배송예정
+								<strong class="text-primary">배송완료</strong> 7월 29일 배송예정
 							</div>
 							<div class="right-item1">
 								<a href="#" class="btn-link-txt4"><u>배송조회</u></a>
@@ -143,9 +308,9 @@
 						</div><!--// order-state-box -->
 						<div class="prd-info-area">
 							<div class="inner">
-								<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+								<div class="column img"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></div>
 								<div class="column tit">
-									<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+									<p class="tit">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</p>
 									<p class="desc">혼합 5팩(1팩당 3,900원)</p>
 									<ul class="price-item">
 										<li>1개</li>
@@ -154,15 +319,22 @@
 									</ul>
 								</div><!--// column  -->
 							</div>
+							<a href="#" class="btn-blank"><span class="blind">상세보기</span></a>
 						</div><!--// prd-info-area -->
 						<div class="list-bottom">
 							<p class="address-txt">[14686] 서울특별시 마포구 월드컵북로 396 (상암동) 누리꿈스퀘어 비즈니스타워 15층</p>
 							<div class="added-btn">
-								<a href="#" class="btn-basic-md2 btn-default"><span>배송지변경</span></a>
+								<a href="#" class="btn-basic-md2 btn-navy-line"><span>다시담기</span></a>
+								<a href="#" class="btn-basic-md2 btn-default"><span>작성완료</span></a>
+								<!--
+									<a href="#" class="btn-basic-md2 btn-default"><span>구매확정</span></a>
+									<a href="#" class="btn-basic-md2 btn-primary-line"><span>후기작성</span></a>
+								-->
 							</div>
 						</div><!--// list-bottom -->
 					</div><!--// list-item-wrap -->
-					<!--// 2 -->
+					<!--// 6 : 배송완료 -->
+
 				</li><!--// order-list-item -->
                 <li class="order-list-item">
 					<div class="list-head inner-flex">
@@ -184,9 +356,9 @@
 						</div><!--// order-state-box -->
 						<div class="prd-info-area">
 							<div class="inner">
-								<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+								<div class="column img"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></div>
 								<div class="column tit">
-									<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+									<p class="tit">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</p>
 									<p class="desc">혼합 5팩(1팩당 3,900원)</p>
 									<ul class="price-item">
 										<li>1개</li>
@@ -195,6 +367,7 @@
 									</ul>
 								</div><!--// column  -->
 							</div>
+							<a href="#" class="btn-blank"><span class="blind">상세보기</span></a>
 						</div><!--// prd-info-area -->
 						<div class="list-bottom">
 							<p class="address-txt">[14686] 서울특별시 마포구 월드컵북로 396 (상암동) 누리꿈스퀘어 비즈니스타워 15층</p>
@@ -217,7 +390,7 @@
 					<div class="list-item-wrap">
 						<div class="order-state-box inner-flex">
 							<div class="left-item1">
-								<strong class="text-primary">배송완료</strong> 7월 29일 배송완료
+								<strong class="text-primary">상품준비중</strong> 7월 29일 배송예정
 							</div>
 							<div class="right-item1">
 								<a href="#" class="btn-link-txt4"><u>배송조회</u></a>
@@ -225,9 +398,9 @@
 						</div><!--// order-state-box -->
 						<div class="prd-info-area">
 							<div class="inner">
-								<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
+								<div class="column img"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></div>
 								<div class="column tit">
-									<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
+									<p class="tit">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</p>
 									<p class="desc">혼합 5팩(1팩당 3,900원)</p>
 									<ul class="price-item">
 										<li>1개</li>
@@ -236,19 +409,23 @@
 									</ul>
 								</div><!--// column  -->
 							</div>
+							<a href="#" class="btn-blank"><span class="blind">상세보기</span></a>
 						</div><!--// prd-info-area -->
 						<div class="list-bottom">
 							<p class="address-txt">[14686] 서울특별시 마포구 월드컵북로 396 (상암동) 누리꿈스퀘어 비즈니스타워 15층</p>
 							<div class="added-btn">
+								<a href="#" class="btn-basic-md2 btn-default"><span>구매확정</span></a>
 								<a href="#" class="btn-basic-md2 btn-primary-line"><span>후기작성</span></a>
 							</div>
 						</div><!--// list-bottom -->
 					</div><!--// list-item-wrap -->
 				</li><!--// order-list-item -->
 			</ul>
-
-
 		</div><!--// content-wrap -->
+
+		<!-- 하단 고정 메뉴 -->
+		<script>include.bottomNav();</script>
+		<!--// 하단 고정 메뉴 -->
 	 </section>
 	 <!--// ========== 컨텐츠 영역 :: container ========== -->
 	
@@ -263,9 +440,9 @@
         // 기간설정 선택시
 		$('[name="radio-item100"]').on('click',function () {
 			if ( $(this).hasClass('date-setting') ) {
-				$(this).parents('.radio-list').siblings('.ui-toggle-sub').removeClass('hide')
-			} else if (  !$(this).hasClass('date-setting') ) {
-				$(this).parents('.radio-list').siblings('.ui-toggle-sub').addClass('hide')
+				$(this).parents('.radio-list').siblings('.period-setting').removeClass('hide')
+			} else if ( !$(this).hasClass('date-setting') ) {
+				$(this).parents('.radio-list').siblings('.period-setting').addClass('hide')
 			}
 		});
    }); 

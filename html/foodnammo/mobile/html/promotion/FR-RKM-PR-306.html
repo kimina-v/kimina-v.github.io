@@ -42,66 +42,77 @@
 	<!-- ========== 컨텐츠 영역 :: container ========== -->
 	<section id="contents" class="container">
        
-		<div class="content-wrap event-templete">
+		<div class="content-wrap event-content"><!-- [Dev] 20210915 수정 event-content로 클래스명 수정 -->
             <div class="title-area">
-                <em class="title">12얼 4주차 퀴즈이벤트</em>
+                <em class="title">9월 출석체크 이벤트</em>
                 <span class="date">2021.08.31 ~ 2021.09.30</span>
             </div>
-            <div class="event-quiz">
-                <figure>
-                    <img src="../../images/_samples/@event_qiuz.png" alt="">
-                </figure>
-                <!-- 입력 타입 -->
-                <div class="context">
-                    <div class="quiz-item">
-                        <div class="q">
-                            <p>식단관리 계획한 날 바로 시작할 수 있게 랭킹닭컴에서 빠르게 배송되는 것은?</p>
-                            <span class="hint">힌트 : 00배송은 랭킹닭컴 오른쪽에 있어요!</span>
+
+             <!-- [Dev] 20210915 수정 div.event-templete 추가 -->
+            <div class="event-templete">
+                <div class="event-quiz">
+                    <figure>
+                        <img src="../../images/_samples/@event_qiuz.png" alt="">
+                    </figure>
+                    <!-- 입력 타입 -->
+                    <div class="context">
+                        <div class="quiz-item">
+                            <div class="q">
+                                <p>식단관리 계획한 날 바로 시작할 수 있게 랭킹닭컴에서 빠르게 배송되는 것은?</p>
+                                <span class="hint">힌트 : 00배송은 랭킹닭컴 오른쪽에 있어요!</span>
+                            </div>
+                            <div class="a text-type">
+                                <input type="text" class="input-text w-full" placeholder="정답을 입력해 주세요.">
+                            </div>
                         </div>
-                        <div class="a text-type">
-                            <input type="text" class="input-text w-full" placeholder="정답을 입력해 주세요.">
+                        <div class="btn-group">
+                            <button type="button" class="btn-basic-lg  btn-black">참여하기</button>
                         </div>
                     </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn-basic-lg  btn-black">참여하기</button>
+                    <!-- //입력 타입 -->
+                    <!-- 선택 타입 -->
+                    <div class="context">
+                        <div class="quiz-item">
+                            <div class="q">
+                                <p>포기하지 않는 식단관리 할 수 있게 랭킹닭컴에서 정기적으로 배송되는 것은?</p>
+                                <span class="hint">힌트 : 1~4주에 한번 00배송</span>
+                            </div>
+                            <div class="a type-option">
+                                <ul class="option-list">
+                                    <li>
+                                        <div class="custom-radio">
+                                            <input type="radio" id="radio-1-1" class="radio" name="radio-item-1" checked=""><label for="radio-1-1">정기배송</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-radio">
+                                            <input type="radio" id="radio-1-2" class="radio" name="radio-item-1"><label for="radio-1-2">드문배송</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-radio">
+                                            <input type="radio" id="radio-1-3" class="radio" name="radio-item-1"><label for="radio-1-3">슝슝배송</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn-basic-lg  btn-black">참여하기</button>
+                        </div>
                     </div>
+                    <!-- //선택 타입 -->
                 </div>
-                <!-- //입력 타입 -->
-                <!-- 선택 타입 -->
-                <div class="context">
-                    <div class="quiz-item">
-                        <div class="q">
-                            <p>포기하지 않는 식단관리 할 수 있게 랭킹닭컴에서 정기적으로 배송되는 것은?</p>
-                            <span class="hint">힌트 : 1~4주에 한번 00배송</span>
-                        </div>
-                        <div class="a type-option">
-                            <ul class="option-list">
-                                <li>
-                                    <div class="custom-radio">
-                                        <input type="radio" id="radio-1-1" class="radio" name="radio-item-1" checked=""><label for="radio-1-1">정기배송</label>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="custom-radio">
-                                        <input type="radio" id="radio-1-2" class="radio" name="radio-item-1"><label for="radio-1-2">드문배송</label>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="custom-radio">
-                                        <input type="radio" id="radio-1-3" class="radio" name="radio-item-1"><label for="radio-1-3">슝슝배송</label>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn-basic-lg  btn-black">참여하기</button>
-                    </div>
+                <!-- [Dev] 20210915 수정 -->
+                <div class="btn-group-flex">
+                    <button type="button" class="btn-article-md"><span>전체 이벤트 보기</span><i class="ico-arr-right"></i></button>
                 </div>
-                <!-- //선택 타입 -->
-            </div>
-            <div class="more-btn-box">
-                <button type="button" class="btn-article-md"><span>전체 이벤트 보기</span><i class="ico-arr-right"></i></button>
+                <!--// [Dev] 20210915 수정 -->
+
+                <!-- [Dev] 20210915 기존 : 삭제
+                <div class="more-btn-box">
+                    <button type="button" class="btn-article-md"><span>전체 이벤트 보기</span><i class="ico-arr-right"></i></button>
+                </div> -->
             </div>
 		</div>
 		<!-- 하단 고정 메뉴 -->

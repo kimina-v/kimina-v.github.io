@@ -41,43 +41,60 @@
        
 		<div class="content-wrap">
 
-			<div class="my-prd-list">
-				<div class="order-list-item">
-					<div class="list-head inner-flex">
+			<div class="order-list-item">
+				<div class="list-head inner-flex">
+					<div class="left-item1">
+						<strong class="date">2020.03.24</strong>
+						<span class="order-num">20200318WB234F</span>
+					</div>
+				</div><!--// list-head -->
+				<!-- 1 -->
+				<div class="list-item-wrap">
+					<div class="order-state-box inner-flex">
 						<div class="left-item1">
-							<strong class="date">2020.03.24</strong>
-							<span class="order-num">20200318WB234F</span>
+							<strong class="text-primary">취소완료</strong> 7월 31일 취소완료
 						</div>
-					</div><!--// list-head -->
-					<!-- 1 -->
-					<div class="list-item-wrap">
-						<div class="order-state-box inner-flex">
-							<div class="left-item1">
-								<strong class="text-grey">취소완료</strong>
-							</div>
-						</div><!--// order-state-box -->
-						<div class="prd-info-area">
-							<div class="inner">
-								<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
-								<div class="column tit">
-									<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
-									<p class="desc">혼합 5팩(1팩당 3,900원)</p>
-									<ul class="price-item">
-										<li>1개</li>
-										<li><span class="num">19,500</span>원</li>
-										<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
-									</ul>
-								</div><!--// column  -->
-							</div>
-						</div><!--// prd-info-area -->
-					</div><!--// list-item-wrap -->
-					<!--// 1 -->
-				</div><!--// order-list-item -->
-			</div><!--// my-prd-list-->
+						<div class="right-item1">
+							<a href="#" class="btn-link-txt4"><u>배송조회</u></a>
+						</div>
+					</div><!--// order-state-box -->
+					<div class="prd-info-area">
+						<div class="inner">
+							<div class="column img"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></div>
+							<div class="column tit">
+								<p class="tit">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</p>
+								<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+								<ul class="price-item">
+									<li>1개</li>
+									<li><span class="num">19,500</span>원</li>
+									<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
+								</ul>
+							</div><!--// column  -->
+						</div>
+						<a href="#" class="btn-blank"><span class="blind">상세보기</span></a>
+					</div><!--// prd-info-area -->
+					<div class="list-bottom">
+						<div class="added-btn">
+							<a href="#" class="btn-basic-md2 btn-navy-line"><span>다시담기</span></a>
+						</div>
+					</div><!--// list-bottom -->
+				</div><!--// list-item-wrap -->
+				<!--// 1 -->
+			</div><!--// order-list-item -->
+
+			<div class="frame-inner">
+				<dl class="order-message-info">
+					<dt class="block">구매의사가 없어요 </dt>
+					<dd>단순변심입니다아아앙단순변심입니다아아앙단순변심입니다아아앙단순변심입니다아아앙단순변심입니다아아앙단순변심입니다 단순변심입니다아아앙단순변심입니다아아앙단순변심입니다아아앙단순변심입니다아아앙아아앙</dd>
+				</dl>
+			</div>
 
 			<div class="order-info">
 				<div class="list-head type3 inner-flex">
 					<h3 class="title-list left-item1">배송지정보</h3>
+					<div class="right-item1">
+						<a href="#" class="btn-link-txt4"><span>배송지변경</span><i class="ico-arr-right"></i></a>
+					</div>
 				</div>
 				<div class="frame-inner">
 					<ul class="order-address-info">
@@ -87,7 +104,7 @@
 					</ul>
 					<dl class="order-message-info">
 						<dt>배송요청사항</dt>
-						<dd>공동현관 출입 제한없음 아이다 사실은 제한이...</dd>
+						<dd>00.월요일출고 / 공동현관 출입 제한없음 아이다 사실은 제한이...</dd>
 					</dl>
 				</div>
 			</div>
@@ -96,37 +113,77 @@
 				<div class="list-head type3 inner-flex">
 					<h3 class="title-list left-item1">주문금액 정보</h3>
 				</div>
-				<div class="cart-total-box ">
+				<div class="cart-total-box">
 					<ul class="inner">
 						<li>
 							<div class="tit">상품금액</div>
-							<div class="price text-grey2"><em class="num">30,790</em>원</div>
+							<div class="price"><em class="num">30,790</em>원</div>
 						</li>
-						<li>
-							<div class="tit">할인금액</div>
-							<div class="price text-grey2"><em class="num">2,000</em>원</div>
-							<ul class="sub-list">
+						<li class="ui-toggle">
+							<div class="tit"><a href="javascript:;" class="ui-toggle-btn">할인금액<i class="ico-arr-toggle"></i></a></div>
+							<div class="price"><em class="num">2,000</em>원</div>
+							<ul class="sub-list ui-toggle-content hide">
 								<li>
 									<div class="tit">포인트할인</div>
-									<div class="price text-grey2">-2,000원</div>
+									<div class="price">-2,000원</div>
 								</li>
 								<li>
 									<div class="tit">쿠폰할인</div>
-									<div class="price text-grey2">-2,000원</div>
+									<div class="price">-2,000원</div>
 								</li>
 								<li>
 									<div class="tit">오렌지맴버스 할인</div>
-									<div class="price text-grey2">-500원</div>
+									<div class="price">-500원</div>
 								</li>
 							</ul>
 						</li>
 						<li>
 							<div class="tit">배송비</div>
-							<div class="price"><em class="num text-grey2">-2,350</em>원</div>
+							<div class="price"><em class="num">-2,350</em>원</div>
 						</li>
 						<li class="total">
-							<div class="tit">총 주문금액</div>
-							<div class="price"><em class="num text-primary">0</em>원</div>
+							<div class="tit">총 결제금액</div>
+							<div class="price"><em class="num text-primary">32,790</em>원</div>
+						</li>
+					</ul>
+				</div><!--// cart-total-box -->
+			</div>
+
+			<div class="order-info">
+				<div class="list-head type3 inner-flex">
+					<h3 class="title-list left-item1">환불정보</h3>
+				</div>
+				<div class="cart-total-box">
+					<ul class="inner">
+						<li>
+							<div class="tit">상품금액</div>
+							<div class="price"><em class="num">30,790</em>원</div>
+						</li>
+						<li class="ui-toggle">
+							<div class="tit"><a href="javascript:;" class="ui-toggle-btn">할인금액<i class="ico-arr-toggle"></i></a></div>
+							<div class="price"><em class="num">2,000</em>원</div>
+							<ul class="sub-list ui-toggle-content hide">
+								<li>
+									<div class="tit">포인트할인</div>
+									<div class="price">-2,000원</div>
+								</li>
+								<li>
+									<div class="tit">쿠폰할인</div>
+									<div class="price">-2,000원</div>
+								</li>
+								<li>
+									<div class="tit">오렌지맴버스 할인</div>
+									<div class="price">-500원</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="tit">배송비</div>
+							<div class="price"><em class="num">-2,350</em>원</div>
+						</li>
+						<li class="total">
+							<div class="tit">최종 환불금액 </div>
+							<div class="price"><em class="num text-primary">32,790</em>원</div>
 						</li>
 					</ul>
 				</div><!--// cart-total-box -->
@@ -136,31 +193,36 @@
 				<div class="list-head type3 inner-flex">
 					<h3 class="title-list left-item1">결제정보</h3>
 					<div class="right-item1">
-						<a href="#" class="btn-option btn-default"><span>카드영수증 </span></a>
+						<a href="#" class="btn-option btn-default"><span>결제영수증</span></a>
 					</div>
 				</div>
 				<div class="cart-total-box payment-type">
 					<ul class="inner">
 						<li>
 							<div class="tit">결제방법</div>
-							<div class="price text-grey2">신용카드</div>
+							<div class="price">신용카드</div>
 						</li>
 						<li>
-							<div class="tit">할인금액</div>
-							<div class="price text-grey2">현대카드 1002-****-****-2006</div>
+							<div class="tit">카드정보</div>
+							<div class="price">현대카드 1002-****-****-2006</div>
 						</li>
 						<li>
-							<div class="tit">입금확인일</div>
-							<div class="price text-grey2">2021.07.21 22:41</div>
+							<div class="tit">결제 완료일시 </div>
+							<div class="price">2021.07.21 22:41</div>
 						</li>
 					</ul>
 				</div><!--// cart-total-box -->
 			</div>
 
-			<div class="btn-bottom-area">
-				<a href="#" class="btn-basic-md2 btn-black"><span>주문목록</span></a>
-			</div><!--// btn-bottom-area -->
+			<div class="btn-bottom-area type2">
+				<a href="#" class="btn-basic-lg btn-black w-full"><span>취소/반품 내역</span></a>
+			</div><!--// btn-bottom-area -->	
+
 		</div><!--// content-wrap -->
+
+		<!-- 하단 고정 메뉴 -->
+		<script>include.bottomNav();</script>
+		<!--// 하단 고정 메뉴 -->
 	 </section>
 	 <!--// ========== 컨텐츠 영역 :: container ========== -->
 	

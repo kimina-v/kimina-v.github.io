@@ -66,6 +66,7 @@
 .brand-list-item{position:relative;}
 .brand-list-item .img{position:relative; overflow:hidden;}
 .brand-list-item .img.w260{width:260px; height:260px; }
+.brand-list-item .img img{border-radius:4px;}
 .brand-list-item .img .brand-logo{position:absolute; top:50%; left:0; width:100%; text-align:center; transform:translateY(-50%); -webkit-transform:translateY(-50%);}
 .brand-list-item .txt-area{position:relative; width:100%; height:50px; max-height:50px; margin-top:8px;}
 .brand-list-item .txt-area .tit{color:#222; font-size:14px; font-weight:bold; width: 90%; display: block;}

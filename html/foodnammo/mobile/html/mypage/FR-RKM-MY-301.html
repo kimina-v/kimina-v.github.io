@@ -41,51 +41,46 @@
        
 		<div class="content-wrap">
 
-			<div class="my-prd-list">
-				<div class="order-list-item">
-					<div class="list-head inner-flex">
+			<div class="order-list-item">
+				<div class="list-head inner-flex">
+					<div class="left-item1">
+						<strong class="date">2020.03.24</strong>
+						<span class="order-num">20200318WB234F</span>
+					</div>
+				</div><!--// list-head -->
+				<!-- 1 -->
+				<div class="list-item-wrap">
+					<div class="order-state-box inner-flex">
 						<div class="left-item1">
-							<strong class="date">2020.03.24</strong>
-							<span class="order-num">20200318WB234F</span>
+							<strong class="text-primary">배송완료</strong> 7월 31일 배송완료
 						</div>
 						<div class="right-item1">
-                            <a href="#" class="btn-link-txt4"><span>상세보기</span><i class="ico-arr-right"></i></a>
-                        </div>
-					</div><!--// list-head -->
-					<!-- 1 -->
-					<div class="list-item-wrap">
-						<div class="order-state-box inner-flex">
-							<div class="left-item1">
-								<strong class="text-primary">배송완료</strong> 7월 31일 배송완료
-							</div>
-							<div class="right-item1">
-								<a href="#" class="btn-link-txt4"><u>배송조회</u></a>
-							</div>
-						</div><!--// order-state-box -->
-						<div class="prd-info-area">
-							<div class="inner">
-								<div class="column img"><a href="#"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></a></div>
-								<div class="column tit">
-									<p class="tit"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></p>
-									<p class="desc">혼합 5팩(1팩당 3,900원)</p>
-									<ul class="price-item">
-										<li>1개</li>
-										<li><span class="num">19,500</span>원</li>
-										<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
-									</ul>
-								</div><!--// column  -->
-							</div>
-						</div><!--// prd-info-area -->
-						<div class="list-bottom">
-							<p class="address-txt">[14686] 서울특별시 마포구 월드컵북로 396 (상암동) 누리꿈스퀘어 비즈니스타워 15층</p>
-							<div class="added-btn">
-								<a href="#" class="btn-basic-md2 btn-primary-line"><span>후기작성</span></a>
-							</div>
-						</div><!--// list-bottom -->
-					</div><!--// list-item-wrap -->
-					<!--// 1 -->
-				</div><!--// order-list-item -->
-			</div><!--// my-prd-list-->
+							<a href="#" class="btn-link-txt4"><u>배송조회</u></a>
+						</div>
+					</div><!--// order-state-box -->
+					<div class="prd-info-area">
+						<div class="inner">
+							<div class="column img"><img src="../../images/_samples/@sample_80x80.png" alt="상품이미지"></div>
+							<div class="column tit">
+								<p class="tit">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</p>
+								<p class="desc">혼합 5팩(1팩당 3,900원)</p>
+								<ul class="price-item">
+									<li>1개</li>
+									<li><span class="num">19,500</span>원</li>
+									<li class="dlv-type"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></li>
+								</ul>
+							</div><!--// column  -->
+						</div>
+						<a href="#" class="btn-blank"><span class="blind">상세보기</span></a>
+					</div><!--// prd-info-area -->
+					<div class="list-bottom">
+						<div class="added-btn">
+							<a href="#" class="btn-basic-md2 btn-primary-line"><span>후기작성</span></a>
+						</div>
+					</div><!--// list-bottom -->
+				</div><!--// list-item-wrap -->
+				<!--// 1 -->
+			</div><!--// order-list-item -->
 
 			<div class="order-info">
 				<div class="list-head type3 inner-flex">
@@ -102,7 +97,7 @@
 					</ul>
 					<dl class="order-message-info">
 						<dt>배송요청사항</dt>
-						<dd>공동현관 출입 제한없음 아이다 사실은 제한이...</dd>
+						<dd>00.월요일출고 / 공동현관 출입 제한없음 아이다 사실은 제한이...</dd>
 					</dl>
 				</div>
 			</div>
@@ -117,10 +112,10 @@
 							<div class="tit">상품금액</div>
 							<div class="price"><em class="num">30,790</em>원</div>
 						</li>
-						<li>
-							<div class="tit">할인금액</div>
+						<li class="ui-toggle">
+							<div class="tit"><a href="javascript:;" class="ui-toggle-btn">할인금액<i class="ico-arr-toggle"></i></a></div>
 							<div class="price"><em class="num">2,000</em>원</div>
-							<ul class="sub-list">
+							<ul class="sub-list ui-toggle-content hide">
 								<li>
 									<div class="tit">포인트할인</div>
 									<div class="price">-2,000원</div>
@@ -154,7 +149,7 @@
 				<div class="list-head type3 inner-flex">
 					<h3 class="title-list left-item1">결제정보</h3>
 					<div class="right-item1">
-						<a href="#" class="btn-option btn-default"><span>카드영수증 </span></a>
+						<a href="#" class="btn-option btn-default"><span>결제영수증</span></a>
 					</div>
 				</div>
 				<div class="cart-total-box payment-type">
@@ -164,21 +159,39 @@
 							<div class="price">신용카드</div>
 						</li>
 						<li>
-							<div class="tit">할인금액</div>
+							<div class="tit">카드정보</div>
 							<div class="price">현대카드 1002-****-****-2006</div>
 						</li>
 						<li>
-							<div class="tit">입금확인일</div>
+							<div class="tit">결제 완료일시 </div>
 							<div class="price">2021.07.21 22:41</div>
 						</li>
 					</ul>
 				</div><!--// cart-total-box -->
 			</div>
 
-			<div class="btn-bottom-area">
-				<a href="#" class="btn-basic-md2 btn-black"><span>주문목록</span></a>
-			</div><!--// btn-bottom-area -->
+			<div class="btn-bottom-area type2">
+				<a href="#" class="btn-basic-lg btn-black w-full"><span>주문목록</span></a>
+				<a href="#" class="btn-basic-lg btn-default w-full"><span>주문취소</span></a>
+			</div><!--// btn-bottom-area -->	
+			
+			<div class="bottom-guide">
+                <h4 class="guide-tit">주문 및 배송 안내</h4>
+                <ul class="bl-list-type3">
+                    <li>주문 완료 후 7일 이내 미 입금 시, 주문이 자동으로 취소됩니다.</li>
+					<li>상품준비중 상태인 주문은 물류사에 배송요청이 접수되어 배송지 변경 및 주문취소가 어려울 수 있습니다.</li>
+					<li>택배사의 배송완료 여부가 확인되지 않을 경우, 배송이 완료되어도 배송중 상태로 표기될 수 있습니다. (배송 6일 후 자동 배송 완료)</li>
+					<li>냉동/신선식품은 상품 특성상 고객센터 통해 배송완료 후 7일 이내 교환/반품을 신청하실 수 있습니다.</li>
+					<li>상품 상태 및 사우에 따라 교환/반품이 거절될 수 있습니다. (상품 상세정보 내 교환/반품 안내를 참고해주세요)</li>
+                </ul>
+            </div>
+
 		</div><!--// content-wrap -->
+
+		<!-- 하단 고정 메뉴 -->
+		<script>include.bottomNav();</script>
+		<!--// 하단 고정 메뉴 -->
+		
 	 </section>
 	 <!--// ========== 컨텐츠 영역 :: container ========== -->
 	

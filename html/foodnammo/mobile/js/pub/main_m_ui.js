@@ -5,6 +5,8 @@ $(function () {
     if ($('.main-item-slide').length > 0) { mainItemSlide(); }
 
     if ($('.event-item-slide').length > 0) { eventSwiperSlide(); }
+    //환상 꿀조합
+    if ($('.recomm-mix').length > 0) { recommMixSlide(); }
 });
 
 
@@ -88,3 +90,27 @@ function mainItemSlide () {
 }
 
 
+
+//환상의 꿀조합을 찾아서
+function recommMixSlide(){
+    var recommMixMenu = new Swiper('.recoom-mix-menu', {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+    });
+    var menuTarget = $('.recoom-mix-menu .swiper-slide button');
+    menuTarget.click(function(){
+        recommMixMenu.slideTo($(this).parent().index()-1)			
+    })
+    var recommMixCont = new Swiper('.recomm-mix-cont', {
+        autoHeight: true,
+        observer: true,
+        observeParents: true,
+        spaceBetween: 10,
+        thumbs: {
+            swiper: recommMixMenu
+        }
+    });
+}

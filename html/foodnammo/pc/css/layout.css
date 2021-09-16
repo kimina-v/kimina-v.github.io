@@ -124,8 +124,13 @@
 .recent-info .num .ico-arr-right:after,
 .recent-info .num .ico-arr-right:before{box-shadow:none}
 
+#recent-prod-list{height:236px}
 .recent-prd-item{position:relative; padding:10px 13px 42px;}
-.recent-prd-item ul li{width:72px; height:72px;}
+.recent-prd-item ul li{width:72px; height:72px}
+/* .recent-prd-item ul li:nth-child(3n) ~ li{display:none} */
+.recent-prd-item ul li.on{display:block}
+.recent-prd-item ul li:nth-child(3n) + li{margin-top:0}
+.recent-prd-item ul li:nth-child(3n) ~ li{display:none}
 .recent-prd-item ul li + li{margin-top:10px;}
 .recent-prd-item ul li > a{display:block; width:100%; height:100%; position:relative;}
 .recent-prd-item ul li .img{display:block;position:relative;  width:72px; height:72px; overflow:hidden; z-index:2;}
@@ -148,10 +153,15 @@
 .btn-side-func.up{background-position:-40px 0;}
 .btn-side-func.down{background-position:-80px 0;}
 
-.side-event-area{position:absolute; top:0; left:50%; z-index:1; width:100%; min-width:1100px; max-width:1440px; transform:translateX(-50%); -webkit-transform:translateX(-50%); }
-.side-event-area .side-event{position:absolute; top:0; left:0; width:100px;}
+.side-event-area{position:absolute;top:640px;left:50%;z-index:1;margin-left:-650px}
+.side-event-area .side-event{opacity:0;overflow:hidden;left:0;top:0;width:100px}
 .side-event-area.fixed{position:fixed;}
 .side-event-area.fixed > .side-event{top:60px;}
+.side-event-area .btn-open{position:absolute;top:0;right:0;width:25px;height:25px;background:url(../images/icon/btn_wide.png) no-repeat;opacity:0}
+.side-event-area .side-event-wide{overflow:hidden;position:fixed;bottom:0;left:50%;margin-left:-550px;border-radius:12px;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4)}
+.side-event-area .side-event-wide a{display:block}
+.side-event-area .side-event-wide .btn-close{position:absolute;top:10px;right:10px;width:40px;height:40px;text-indent:-9999px;background:url(../images/icon/btn_close.png);background-size:40px;cursor:pointer}
+
 
 /****** Footer ******/
 .footer-menu{width:100%; max-width:1920px; min-height:48px; padding:19px 0 20px; margin:0 auto; background-color:#F2F2F2; border-top:1px solid #ddd}
@@ -257,8 +267,9 @@
 .page-title-area ~ .scroll-fix-tab:not(.fixed){margin-top:30px;}
 .top-search-box + .board-list,
 .scroll-fix-tab ~ .swiper-container{margin-top:40px;}
-.page-title-area ~ .grid-list-wrap{margin-top:70px;}
+.page-title-area ~ .grid-list-wrap{margin-top:50px;}
 .page-head ~ .tb-list-option{margin-top:30px;}
+.list-type-wrap ~ .btn-bottom-area,
 .grid-list-wrap ~ .btn-bottom-area,
 .grid-list-wrap ~ .pagination{margin-top:60px;}
 .page-title-area.type-result ~ .grid-list-wrap{margin-top:35px}
@@ -275,14 +286,18 @@
 .search-box ~ .no-data{padding:160px 0;}
 .search-box ~ .no-data .message{color:#333; font-size:15px;}
 /* 예외 - 마이페이지 찜한 상품 */
+.board-list .no-data,
 .grid-list-wrap .no-data{padding:160px 0;}
+.board-list .no-data:before,
 .grid-list-wrap .no-data:before{display:block; content:''; margin:0 auto 10px; width:80px; height:80px; background:url("../images/icon/ico_img.png") -280px -120px;}
-.grid-list-wrap .no-data .message{color:#666; font-size:15px;}
+.grid-list-wrap .no-data .message{color:#333; font-size:15px;}
 .textarea-box ~ .filebox{margin-top:15px}
 .inner-flex:after{display:block; content:''; clear:both}
 .inner-flex .left-item1{float:left}
 .inner-flex .right-item1{float:right}
-
+.no-data-type1{text-align:center; padding:160px 0;}
+.no-data-type1 .message{color:#333; font-size:15px;}
+.order-list-slide .no-data-type1{padding:160px 0;}
 
 /*========================================================
  로그인, 회원가입
@@ -373,10 +388,10 @@
 .cs-box-bnr li + li{border-top:1px solid #eee; overflow: hidden;}
 
 .join-area .form-group{position:relative; padding-left:105px; min-height:50px;}
-.join-area .form-group .form-head{position:absolute; top:13px; left:0} 
+.join-area .form-group .form-head{position:absolute; top:12px; left:0} 
 .join-area .form-group .form-horiz-list{padding-top:10px}
 .join-area .form-group .form-horiz-list > li{margin-right:40px;}
-.join-area .form-group .form-verti-list{border-bottom:1px solid #ddd; padding-bottom:10px}
+.join-area .form-group .form-verti-list{border-bottom:1px solid #ddd; padding-bottom:10px; padding-top:13px}
 .join-area .form-group .form-verti-list + .bl-list-type2{margin-top:10px; margin-bottom:25px}
 
 /* 비밀번호 변경 */

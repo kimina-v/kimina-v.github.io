@@ -39,6 +39,9 @@
 								<p class="greeting"><strong class="name">경탱이탱이땅땅땅</strong>님 반갑습니다.</p>
 								<ul class="sep-list type3">
 									<li>닭과장</li>
+									<!-- [Dev] 20210909 수정 : 오렌지회원일때
+									<li><i class="ico-bl-crown"></i> 오렌지닭과장</li>
+									-->
 									<li>1% 적립</li>
 								</ul>
 								<p class="level-tip">140,600원 더 구매 시, 닭차장 진급!</p>
@@ -47,15 +50,15 @@
 						</div><!--// user-info -->
 						<dl class="column order">
 							<dt>주문/배송</dt>
-							<dd><strong class="num">3</strong>건</dd>
+							<dd><a href="#"><strong class="num">3</strong>건</a></dd><!-- [Dev] 20210909 수정 : a태그 추가 -->
 						</dl><!--// order -->
 						<dl class="column coupon">
 							<dt>쿠폰</dt>
-							<dd><strong class="num">3</strong>개</dd>
+							<dd><a href="#"><strong class="num">3</strong>개</a></dd><!-- [Dev] 20210909 수정 : a태그 추가 -->
 						</dl><!--// coupon -->
 						<dl class="column point">
 							<dt>포인트</dt>
-							<dd class="text-primary"><strong class="num">3,300P</strong></dd>
+							<dd class="text-primary"><a href="#"><strong class="num">3,300P</strong></a></dd><!-- [Dev] 20210909 수정 : a태그 추가 -->
 						</dl><!--// point -->
 					</div><!--// inner -->
 				</div><!--// user-info-box -->
@@ -118,6 +121,11 @@
 					<div class="frame-cnt-inner">
 						<div class="menu-title-area">
 							<h3 class="title-menu">식단상담 </h3>
+							<!-- [Dev] 20210907 버튼 추가 -->
+							<div class="right">
+                                <a href="#" class="btn-option btn-default"><span>상담 리스트 보기</span><i class="ico-arr-right"></i></a>
+							</div>
+							<!--// [Dev] 20210907 버튼 추가 -->
 						</div><!--// menu-title-area -->
 
 						<div class="page-intro">
@@ -441,11 +449,29 @@
 									<tr>
 										<th class="text-left" scope="row"><div class="in-tb">파일첨부</div></th>
 										<td class="text-left">
-                                            <div class="filebox">
+											<!-- [Dev] 20210909 수정 -->
+											<div class="file-add-boxes">
+												<div class="div-attach-thumb">
+													<button type="button" class="btn-attach-thumb"><i class="ico-plus-xlg"></i><span class="blind">파일첨부</span></button>
+													<!-- 이미지 첨부됐을 경우 -->
+													<div class="attach-img">
+														<img src="../../images/_samples/@sample_480x480.png" alt="첨부파일">
+														<button type="button" class="btn-x-xs2"><i class="ico-x-white"></i><span class="blind">삭제</span></button>
+													</div>
+													<!--// 이미지 첨부됐을 경우 -->
+												</div>
+												<div class="div-attach-thumb">
+													<button type="button" class="btn-attach-thumb"><i class="ico-plus-xlg"></i><span class="blind">파일첨부</span></button>
+												</div>
+												<p class="text-guide-md ">* 인바디 검사표</p>
+											</div>
+											<!--// [Dev] 20210909 수정 -->
+                                            <!-- 기존 삭제 
+											<div class="filebox">
                                                 <label for="ex-filename" class="btn-file-label"><span>첨부파일</span></label> 
                                                 <div class="upload-name"><span class="txt">* 인바디 검사표</span></div>
                                                 <input type="file" id="ex-filename" class="upload-hidden"> 
-                                            </div>
+                                            </div> -->
                                         </td>
 									</tr>
 								</tbody>

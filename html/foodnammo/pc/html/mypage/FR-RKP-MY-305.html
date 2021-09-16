@@ -39,6 +39,9 @@
 								<p class="greeting"><strong class="name">경탱이탱이땅땅땅</strong>님 반갑습니다.</p>
 								<ul class="sep-list type3">
 									<li>닭과장</li>
+									<!-- [Dev] 20210909 수정 : 오렌지회원일때
+									<li><i class="ico-bl-crown"></i> 오렌지닭과장</li>
+									-->
 									<li>1% 적립</li>
 								</ul>
 								<p class="level-tip">140,600원 더 구매 시, 닭차장 진급!</p>
@@ -47,15 +50,15 @@
 						</div><!--// user-info -->
 						<dl class="column order">
 							<dt>주문/배송</dt>
-							<dd><strong class="num">3</strong>건</dd>
+							<dd><a href="#"><strong class="num">3</strong>건</a></dd><!-- [Dev] 20210909 수정 : a태그 추가 -->
 						</dl><!--// order -->
 						<dl class="column coupon">
 							<dt>쿠폰</dt>
-							<dd><strong class="num">3</strong>개</dd>
+							<dd><a href="#"><strong class="num">3</strong>개</a></dd><!-- [Dev] 20210909 수정 : a태그 추가 -->
 						</dl><!--// coupon -->
 						<dl class="column point">
 							<dt>포인트</dt>
-							<dd class="text-primary"><strong class="num">3,300P</strong></dd>
+							<dd class="text-primary"><a href="#"><strong class="num">3,300P</strong></a></dd><!-- [Dev] 20210909 수정 : a태그 추가 -->
 						</dl><!--// point -->
 					</div><!--// inner -->
 				</div><!--// user-info-box -->
@@ -126,7 +129,9 @@
 								<li>
 									<div class="order-list-head">
 										<strong class="date">2020.03.24</strong>
-										<a href="#" class="order-num">20200318WB234F<i class="ico-arr-right"></i></a>
+										<span class="order-num">20200318WB234F</span><!-- [Dev] 20210909 마크업 수정 -->
+										<!-- <a href="#" class="order-num">20200318WB234F<i class="ico-arr-right"></i></a> -->
+										<i class="ico-bl-gift"></i><!-- [Dev] 20210909 선물하기일 경우 아이콘 추가 -->
 									</div><!--// list-head -->
 									<div class="order-content-box">
 										<ul class="order-div-list">
@@ -179,7 +184,7 @@
 						</div><!--// order-list-area -->
 
 						<div class="list-title-area">
-							<h3 class="title-list">취소사유선택</h3>
+							<h3 class="title-list">취소사유선택 <small class="text-primary">(필수입력)</small></h3><!-- [Dev] 20210909 필수입력 텍스트 추가 -->
 						</div><!--// list-title-area -->
 
 						<div class="board-form type3">
@@ -216,7 +221,7 @@
 						</div><!--// board-form -->
 
                         <div class="list-title-area">
-							<h3 class="title-list">환불계좌를 입력해주세요</h3>
+							<h3 class="title-list">환불계좌를 입력해주세요 <small class="text-primary">(필수입력)</small></h3><!-- [Dev] 20210909 필수입력 텍스트 추가 -->
 						</div><!--// list-title-area -->
 
                         <div class="board-form type2">

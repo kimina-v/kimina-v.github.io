@@ -37,7 +37,7 @@
 
 	<!-- ========== 컨텐츠 영역 :: container ========== -->
 	<section id="contents" class="container">       
-		<div class="content-wrap vip-content">
+		<div class="content-wrap event-content"><!-- [Dev] 20210915 클래스명 수정 -->
 			<div class="visual">
                 <img src="../../images/_samples/@vip_detail_visual.png" alt="">
             </div>
@@ -55,13 +55,19 @@
                 </div>
 				<ul class="reply-list">
 					<li>
-						<em class="author">홍길동</em>
+						<div class="inner-flex">
+                            <em class="left-item1 author">홍길동</em>
+                            <em class="right-item1 date">2021.07.23</em>
+                        </div>
 						<div class="section">
 							<div class="text">제가 추가로 궁금한 사항이 있어 질문드립니다. 운동 후 추가로 구운계란 2개를 섭취해도 괜찮을까요?</div>
 						</div>
 					</li>
 					<li>
-						<em class="author">홍길동</em>
+						<div class="inner-flex">
+                            <em class="left-item1 author">홍길동</em>
+                            <em class="right-item1 date">2021.07.23</em>
+                        </div>
 						<div class="section">
 							<div class="text">그럼, 계란 두개 먹고 식빵 하나 더 먹어도 되나요?</div>
 						</div>
@@ -73,9 +79,7 @@
                 <button type="button" class="btn-article-md"><span>더보기</span><i class="ico-arr-down"></i></button>
             </div>
 		</div><!--// content-wrap --> 
-		<!-- ## 사이드 배너 :: side-quick-area  -->
-		<script>include.sidequick();</script>
-		<!--// ## 사이드 배너 ::  side-quick-area  -->
+
         <!-- 하단 고정 메뉴 -->
 		 <script>include.bottomNav();</script>
 		 <!--// 하단 고정 메뉴 -->

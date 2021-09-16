@@ -10,6 +10,10 @@ $(function () {
 
     // 종류별 인기 상품 - 카테고리
     if ($('.category-slide').length > 0) { categorySwiperSlide(); }
+
+    //환상 꿀조합
+    if ($('.recomm-mix').length > 0) { recommMixSlide(); }
+
 });
 
 
@@ -163,6 +167,26 @@ function categorySwiperSlide () {
        
         if ( categoryMenu.length ) {
             $(this).find('.swiper-pagination-num').addClass(classType);
+        }
+    });
+}
+
+
+//환상의 꿀조합을 찾아서
+function recommMixSlide(){
+    var recommMixMenu = new Swiper('.recoom-mix-menu', {
+        spaceBetween: 10,
+        slidesPerView: 5,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+    });
+    var recommMixCont = new Swiper('.recomm-mix-cont', {
+        observer: true,
+        observeParents: true,
+        spaceBetween: 10,
+        thumbs: {
+            swiper: recommMixMenu
         }
     });
 }

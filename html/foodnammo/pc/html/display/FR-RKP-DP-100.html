@@ -38,200 +38,307 @@
 			</div>
 
             <div class="grid-list-wrap type-sorting">
+                <!-- [Dev] 20210909 수정 -->
                 <div class="sorting-head">
-                    <div class="left">
-                        <div class="custom-checkbox"><input type="checkbox" id="check-100" class="checkbox ui-check-all" name="check-item-101"><label for="check-100"><em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em></label></div>
-                    </div>
-                    <ul class="sep-list">
-                        <li>
-                            <div class="custom-radio">
-                                <input type="radio" id="radio-4-1-1" class="radio-sort-check" name="radio-item-4-1-0" checked=""><label for="radio-4-1-1">추천순</label>
+                    <p class="total"><span class="text-primary">총 187개</span> 상품이 있습니다</p>
+                    <div class="right-func-div">
+                        <div class="ui-select select-box-sm" data-value="">
+                            <a href="#none" title="선택" class="select-value"><span>추천순</span></a>
+                            <div class="select-list">
+                                <ul>
+                                    <li data-name="1"><a href="#none"><span>추천순</span></a></li>
+                                    <li data-name="2"><a href="#none"><span>list 2</span></a></li>
+                                    <li data-name="3"><a href="#none"><span>list 3</span></a></li>
+                                </ul>
                             </div>
-                        </li>
-                        <li>
-                            <div class="custom-radio">
-                                <input type="radio" id="radio-4-1-2" class="radio-sort-check" name="radio-item-4-1-0"><label for="radio-4-1-2">신상품순</label>
+                        </div><!--// select-box-sm -->
+                        <div class="ui-select select-box-sm" data-value="">
+                            <a href="#none" title="선택" class="select-value"><span>60개씩</span></a>
+                            <div class="select-list">
+                                <ul>
+                                    <li data-name="1"><a href="#none"><span>60개씩</span></a></li>
+                                    <li data-name="2"><a href="#none"><span>list 2</span></a></li>
+                                    <li data-name="3"><a href="#none"><span>list 3</span></a></li>
+                                </ul>
                             </div>
-                        </li>
-                        <li>
-                            <div class="custom-radio">
-                                <input type="radio" id="radio-4-1-3" class="radio-sort-check" name="radio-item-4-1-0"><label for="radio-4-1-3">판매량순</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="custom-radio">
-                                <input type="radio" id="radio-4-1-4" class="radio-sort-check" name="radio-item-4-1-0"><label for="radio-4-1-4">낮은가격순</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="custom-radio">
-                                <input type="radio" id="radio-4-1-5" class="radio-sort-check" name="radio-item-4-1-0"><label for="radio-4-1-5">높은가격순</label>
-                            </div>
-                        </li>
-                    </ul><!--// sep-list -->
-                </div><!--// sorting-head -->
-                <ul class="prd-item-list grid-area-span3 gap55">
-                    <li class="colum">
-                        <div class="prd-item">
-                            <div class="img w330"><img src="../../images/_samples/@sample_330x330.png" alt="기획전 특가 상품 이미지"></div>
-                            <div class="desc-bottom">
-                                <p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
-                                <span class="price"><em class="num">13,900</em>원</span>
-                                <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-                                <p class="text-guide-sm">(1팩당 : 1,490원~2,380원)</p>
-                                <div class="rating">
-                                    <em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-                                    <span class="text-guide-sm">(1415)</span>
+                        </div><!--// select-box-sm -->
+                        <div class="list-type-group">
+                            <a href="#" class="btn-icon-list type-photo on"><span class="blind">목록</span></a><!-- 활성된 된 버튼에 addClass on -->
+                            <a href="#" class="btn-icon-list type-list"><span class="blind">목록</span></a>   
+                        </div><!--// list-type-group -->
+                        <button type="button" class="btn-option-search ui-toggle-btn"><i class="ico-btn-srchlist"></i><span>상세검색</span></button><!-- 활성된 된 버튼에 addClass on -->
+                    </div><!--// right-func-div -->
+                </div>
+                <!--// [Dev] 20210909 수정 -->
+
+                <div class="list-type-wrap">
+                    <ul class="prd-item-list grid-area-span4 gap25">
+                        <li class="colum">
+                            <!-- 
+                                [Dev] 20210909 상품박스 공통 수정
+                                1. 브랜드네임 링크 추가
+                                2. 전체링크(.btn-blank) 삭제 / 이미지, 브랜드, 상품타이틀 각각 개별링크로
+                                3. 별점 표시 수정
+
+                                [Dev] 20210909 상품박스 수정
+                                1. prd-item.type-sm > type-md 클래스 수정
+                            -->
+                            <div class="prd-item type-md">
+                                <!-- [Dev] 20210705 추가 -->
+                                <div class="top-badge">
+                                    <img src="../../images/_samples/temp-bdg.png" alt="">
+                                    <img src="../../images/_samples/temp-bdg.png" alt="">
+                                    <img src="../../images/_samples/@sample_logo_66x60.png" alt="">
+                                    <img src="../../images/_samples/@sample_40x40.png" alt="">
                                 </div>
-                                <div class="bottom-badge-div">
-                                    <span class="badge-primary">MD추천</span>
-                                    <span class="badge-primary">신상품</span>
+                                <!--// [Dev] 20210705 추가 -->
+                                <div class="img w256">
+                                    <img src="../../images/_samples/@sample_256x256.png" alt="기획전 특가 상품 이미지">
                                 </div>
-                            </div><!--// desc-bottom -->
-                            <a href="#" class="btn-blank"><span class="blind">자세히보기</span></a>
-                        </div><!--// prd-item -->
-                    </li><!--// colum -->
-                    <li class="colum">
-                        <div class="prd-item">
-                            <div class="img w330"><img src="../../images/_samples/@sample_330x330.png" alt="기획전 특가 상품 이미지"></div>
-                            <div class="desc-bottom">
-                                <p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
-                                <span class="price"><em class="num">13,900</em>원</span>
-                                <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-                                <p class="text-guide-sm">(1팩당 : 1,490원~2,380원)</p>
-                                <div class="rating">
-                                    <em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-                                    <span class="text-guide-sm">(1415)</span>
+                                <div class="desc-bottom">
+                                    <div class="brand-name"><a href="#">햇살닭</a></div>
+                                    <p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
+                                    <span class="price"><em class="num">13,900</em>원</span>
+                                    <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+                                    <p class="text-guide-sm">(100g당 최저 907원)</p>
+                                    <div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div> <!-- [Dev] 20210909 수정 -->
+                                    <div class="bottom-badge-div">
+                                        <!-- [Dev] 20210705 수정 -->
+                                        <img src="../../images/txt/txt_badge_01.png" alt="신상품">
+                                        <img src="../../images/txt/txt_badge_02.png" alt="오렌지할인가">
+                                        <img src="../../images/txt/txt_badge_03.png" alt="추가증정">
+                                        <img src="../../images/txt/txt_badge_04.png" alt="소스증정">
+                                        <!-- <span class="badge-default">한정수량</span> -->
+                                    </div>
+                                </div><!--// desc-bottom -->
+                                <!-- <a href="#" class="btn-blank"><span class="blind">자세히보기</span></a> [Dev] 20210909 삭제 -->
+                            </div><!--// prd-item -->
+                        </li><!--// colum -->
+                        <li class="colum">
+                            <div class="prd-item type-md">
+                                <div class="top-badge">
+                                    <img src="../../images/_samples/temp-bdg.png" alt="">
+                                    <img src="../../images/_samples/temp-bdg.png" alt="">
                                 </div>
-                                <div class="bottom-badge-div">
-                                    <span class="badge-primary">MD추천</span>
-                                    <span class="badge-primary">신상품</span>
+                                <div class="img w256">
+                                    <img src="../../images/_samples/@sample_256x256.png" alt="기획전 특가 상품 이미지">
                                 </div>
-                            </div><!--// desc-bottom -->
-                            <a href="#" class="btn-blank"><span class="blind">자세히보기</span></a>
-                        </div><!--// prd-item -->
-                    </li><!--// colum -->
-                    <li class="colum">
-                        <div class="prd-item">
-                            <div class="img w330"><img src="../../images/_samples/@sample_330x330.png" alt="기획전 특가 상품 이미지"></div>
-                            <div class="desc-bottom">
-                                <p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
-                                <span class="price"><em class="num">13,900</em>원</span>
-                                <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-                                <p class="text-guide-sm">(1팩당 : 1,490원~2,380원)</p>
-                                <div class="rating">
-                                    <em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-                                    <span class="text-guide-sm">(1415)</span>
+                                <div class="desc-bottom">
+                                    <div class="brand-name"><a href="#">햇살닭</a></div>
+                                    <p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</a></p>
+                                    <span class="price"><em class="num">13,900</em>원</span>
+                                    <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+                                    <p class="text-guide-sm">(100g당 최저 907원)</p>
+                                    <div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
+                                    <div class="bottom-badge-div">
+                                        <img src="../../images/txt/txt_badge_01.png" alt="신상품">
+                                        <img src="../../images/txt/txt_badge_02.png" alt="오렌지할인가">
+                                    </div>
+                                </div><!--// desc-bottom -->
+                            </div><!--// prd-item -->
+                        </li><!--// colum -->
+                        <li class="colum">
+                            <div class="prd-item type-md">
+                                <div class="top-badge"></div>
+                                <div class="img w256">
+                                    <img src="../../images/_samples/@sample_256x256.png" alt="기획전 특가 상품 이미지">
                                 </div>
-                                <div class="bottom-badge-div">
-                                    <span class="badge-primary">MD추천</span>
-                                    <span class="badge-primary">신상품</span>
+                                <div class="desc-bottom">
+                                    <div class="brand-name"><a href="#">햇살닭</a></div>
+                                    <p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위!</a></p>
+                                    <span class="price"><em class="num">13,900</em>원</span>
+                                    <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+                                    <p class="text-guide-sm">(100g당 최저 907원)</p>
+                                    <div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
+                                    <div class="bottom-badge-div">
+                                        <img src="../../images/txt/txt_badge_01.png" alt="신상품">
+                                        <img src="../../images/txt/txt_badge_02.png" alt="오렌지할인가">
+                                    </div>
+                                </div><!--// desc-bottom -->
+                            </div><!--// prd-item -->
+                        </li><!--// colum -->
+                        <li class="colum">
+                            <div class="prd-item type-md">
+                                <div class="top-badge"></div>
+                                <div class="img w256">
+                                    <img src="../../images/_samples/@sample_256x256.png" alt="기획전 특가 상품 이미지">
                                 </div>
-                            </div><!--// desc-bottom -->
-                            <a href="#" class="btn-blank"><span class="blind">자세히보기</span></a>
-                        </div><!--// prd-item -->
-                    </li><!--// colum -->
-                    <li class="colum">
-                        <div class="prd-item">
-                            <div class="img w330"><img src="../../images/_samples/@sample_330x330.png" alt="기획전 특가 상품 이미지"></div>
-                            <div class="desc-bottom">
-                                <p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
-                                <span class="price"><em class="num">13,900</em>원</span>
-                                <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-                                <p class="text-guide-sm">(1팩당 : 1,490원~2,380원)</p>
-                                <div class="rating">
-                                    <em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-                                    <span class="text-guide-sm">(1415)</span>
+                                <div class="desc-bottom">
+                                    <div class="brand-name"><a href="#">햇살닭</a></div>
+                                    <p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위!</a></p>
+                                    <span class="price"><em class="num">13,900</em>원</span>
+                                    <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+                                    <p class="text-guide-sm">(100g당 최저 907원)</p>
+                                    <div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
+                                    <div class="bottom-badge-div">
+                                        <img src="../../images/txt/txt_badge_01.png" alt="신상품">
+                                        <img src="../../images/txt/txt_badge_02.png" alt="오렌지할인가">
+                                    </div>
+                                </div><!--// desc-bottom -->
+                            </div><!--// prd-item -->
+                        </li><!--// colum -->
+                        <li class="colum">
+                            <div class="prd-item type-md">
+                                <div class="top-badge"></div>
+                                <div class="img w256">
+                                    <img src="../../images/_samples/@sample_256x256.png" alt="기획전 특가 상품 이미지">
                                 </div>
-                                <div class="bottom-badge-div">
-                                    <span class="badge-primary">MD추천</span>
-                                    <span class="badge-primary">신상품</span>
+                                <div class="desc-bottom">
+                                    <div class="brand-name"><a href="#">햇살닭</a></div>
+                                    <p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위!</a></p>
+                                    <span class="price"><em class="num">13,900</em>원</span>
+                                    <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+                                    <p class="text-guide-sm">(100g당 최저 907원)</p>
+                                    <div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
+                                    <div class="bottom-badge-div">
+                                        <img src="../../images/txt/txt_badge_01.png" alt="신상품">
+                                        <img src="../../images/txt/txt_badge_02.png" alt="오렌지할인가">
+                                    </div>
+                                </div><!--// desc-bottom -->
+                            </div><!--// prd-item -->
+                        </li><!--// colum -->
+                        <li class="colum">
+                            <div class="prd-item type-md">
+                                <div class="top-badge"></div>
+                                <div class="img w256">
+                                    <img src="../../images/_samples/@sample_256x256.png" alt="기획전 특가 상품 이미지">
                                 </div>
-                            </div><!--// desc-bottom -->
-                            <a href="#" class="btn-blank"><span class="blind">자세히보기</span></a>
-                        </div><!--// prd-item -->
-                    </li><!--// colum -->
-                    <li class="colum">
-                        <div class="prd-item">
-                            <div class="img w330"><img src="../../images/_samples/@sample_330x330.png" alt="기획전 특가 상품 이미지"></div>
-                            <div class="desc-bottom">
-                                <p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
-                                <span class="price"><em class="num">13,900</em>원</span>
-                                <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-                                <p class="text-guide-sm">(1팩당 : 1,490원~2,380원)</p>
-                                <div class="rating">
-                                    <em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-                                    <span class="text-guide-sm">(1415)</span>
+                                <div class="desc-bottom">
+                                    <div class="brand-name"><a href="#">햇살닭</a></div>
+                                    <p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위!</a></p>
+                                    <span class="price"><em class="num">13,900</em>원</span>
+                                    <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+                                    <p class="text-guide-sm">(100g당 최저 907원)</p>
+                                    <div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
+                                    <div class="bottom-badge-div">
+                                        <img src="../../images/txt/txt_badge_01.png" alt="신상품">
+                                        <img src="../../images/txt/txt_badge_02.png" alt="오렌지할인가">
+                                    </div>
+                                </div><!--// desc-bottom -->
+                            </div><!--// prd-item -->
+                        </li><!--// colum -->
+                        <li class="colum">
+                            <div class="prd-item type-md">
+                                <div class="top-badge"></div>
+                                <div class="img w256">
+                                    <img src="../../images/_samples/@sample_256x256.png" alt="기획전 특가 상품 이미지">
                                 </div>
-                                <div class="bottom-badge-div">
-                                    <span class="badge-primary">MD추천</span>
-                                    <span class="badge-primary">신상품</span>
+                                <div class="desc-bottom">
+                                    <div class="brand-name"><a href="#">햇살닭</a></div>
+                                    <p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위!</a></p>
+                                    <span class="price"><em class="num">13,900</em>원</span>
+                                    <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+                                    <p class="text-guide-sm">(100g당 최저 907원)</p>
+                                    <div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
+                                    <div class="bottom-badge-div">
+                                        <img src="../../images/txt/txt_badge_01.png" alt="신상품">
+                                        <img src="../../images/txt/txt_badge_02.png" alt="오렌지할인가">
+                                    </div>
+                                </div><!--// desc-bottom -->
+                            </div><!--// prd-item -->
+                        </li><!--// colum -->
+                        <li class="colum">
+                            <div class="prd-item type-md">
+                                <div class="top-badge"></div>
+                                <div class="img w256">
+                                    <img src="../../images/_samples/@sample_256x256.png" alt="기획전 특가 상품 이미지">
                                 </div>
-                            </div><!--// desc-bottom -->
-                            <a href="#" class="btn-blank"><span class="blind">자세히보기</span></a>
-                        </div><!--// prd-item -->
-                    </li><!--// colum -->
-                    <li class="colum">
-                        <div class="prd-item">
-                            <div class="img w330"><img src="../../images/_samples/@sample_330x330.png" alt="기획전 특가 상품 이미지"></div>
-                            <div class="desc-bottom">
-                                <p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
-                                <span class="price"><em class="num">13,900</em>원</span>
-                                <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-                                <p class="text-guide-sm">(1팩당 : 1,490원~2,380원)</p>
-                                <div class="rating">
-                                    <em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-                                    <span class="text-guide-sm">(1415)</span>
+                                <div class="desc-bottom">
+                                    <div class="brand-name"><a href="#">햇살닭</a></div>
+                                    <p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위!</a></p>
+                                    <span class="price"><em class="num">13,900</em>원</span>
+                                    <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+                                    <p class="text-guide-sm">(100g당 최저 907원)</p>
+                                    <div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
+                                    <div class="bottom-badge-div">
+                                        <img src="../../images/txt/txt_badge_01.png" alt="신상품">
+                                        <img src="../../images/txt/txt_badge_02.png" alt="오렌지할인가">
+                                    </div>
+                                </div><!--// desc-bottom -->
+                            </div><!--// prd-item -->
+                        </li><!--// colum -->
+                        <li class="colum">
+                            <div class="prd-item type-md">
+                                <div class="top-badge"></div>
+                                <div class="img w256">
+                                    <img src="../../images/_samples/@sample_256x256.png" alt="기획전 특가 상품 이미지">
                                 </div>
-                                <div class="bottom-badge-div">
-                                    <span class="badge-primary">MD추천</span>
-                                    <span class="badge-primary">신상품</span>
+                                <div class="desc-bottom">
+                                    <div class="brand-name"><a href="#">햇살닭</a></div>
+                                    <p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위!</a></p>
+                                    <span class="price"><em class="num">13,900</em>원</span>
+                                    <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+                                    <p class="text-guide-sm">(100g당 최저 907원)</p>
+                                    <div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
+                                    <div class="bottom-badge-div">
+                                        <img src="../../images/txt/txt_badge_01.png" alt="신상품">
+                                        <img src="../../images/txt/txt_badge_02.png" alt="오렌지할인가">
+                                    </div>
+                                </div><!--// desc-bottom -->
+                            </div><!--// prd-item -->
+                        </li><!--// colum -->
+                        <li class="colum">
+                            <div class="prd-item type-md">
+                                <div class="top-badge"></div>
+                                <div class="img w256">
+                                    <img src="../../images/_samples/@sample_256x256.png" alt="기획전 특가 상품 이미지">
                                 </div>
-                            </div><!--// desc-bottom -->
-                            <a href="#" class="btn-blank"><span class="blind">자세히보기</span></a>
-                        </div><!--// prd-item -->
-                    </li><!--// colum -->
-                    <li class="colum">
-                        <div class="prd-item">
-                            <div class="img w330"><img src="../../images/_samples/@sample_330x330.png" alt="기획전 특가 상품 이미지"></div>
-                            <div class="desc-bottom">
-                                <p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
-                                <span class="price"><em class="num">13,900</em>원</span>
-                                <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-                                <p class="text-guide-sm">(1팩당 : 1,490원~2,380원)</p>
-                                <div class="rating">
-                                    <em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-                                    <span class="text-guide-sm">(1415)</span>
+                                <div class="desc-bottom">
+                                    <div class="brand-name"><a href="#">햇살닭</a></div>
+                                    <p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위!</a></p>
+                                    <span class="price"><em class="num">13,900</em>원</span>
+                                    <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+                                    <p class="text-guide-sm">(100g당 최저 907원)</p>
+                                    <div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
+                                    <div class="bottom-badge-div">
+                                        <img src="../../images/txt/txt_badge_01.png" alt="신상품">
+                                        <img src="../../images/txt/txt_badge_02.png" alt="오렌지할인가">
+                                    </div>
+                                </div><!--// desc-bottom -->
+                            </div><!--// prd-item -->
+                        </li><!--// colum -->
+                        <li class="colum">
+                            <div class="prd-item type-md">
+                                <div class="top-badge"></div>
+                                <div class="img w256">
+                                    <img src="../../images/_samples/@sample_256x256.png" alt="기획전 특가 상품 이미지">
                                 </div>
-                                <div class="bottom-badge-div">
-                                    <span class="badge-primary">MD추천</span>
-                                    <span class="badge-primary">신상품</span>
+                                <div class="desc-bottom">
+                                    <div class="brand-name"><a href="#">햇살닭</a></div>
+                                    <p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위!</a></p>
+                                    <span class="price"><em class="num">13,900</em>원</span>
+                                    <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+                                    <p class="text-guide-sm">(100g당 최저 907원)</p>
+                                    <div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
+                                    <div class="bottom-badge-div">
+                                        <img src="../../images/txt/txt_badge_01.png" alt="신상품">
+                                        <img src="../../images/txt/txt_badge_02.png" alt="오렌지할인가">
+                                    </div>
+                                </div><!--// desc-bottom -->
+                            </div><!--// prd-item -->
+                        </li><!--// colum -->
+                        <li class="colum">
+                            <div class="prd-item type-md">
+                                <div class="top-badge"></div>
+                                <div class="img w256">
+                                    <img src="../../images/_samples/@sample_256x256.png" alt="기획전 특가 상품 이미지">
                                 </div>
-                            </div><!--// desc-bottom -->
-                            <a href="#" class="btn-blank"><span class="blind">자세히보기</span></a>
-                        </div><!--// prd-item -->
-                    </li><!--// colum -->
-                    <li class="colum">
-                        <div class="prd-item">
-                            <div class="img w330"><img src="../../images/_samples/@sample_330x330.png" alt="기획전 특가 상품 이미지"></div>
-                            <div class="desc-bottom">
-                                <p class="tit text-elps2">[맛있닭] 명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
-                                <span class="price"><em class="num">13,900</em>원</span>
-                                <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
-                                <p class="text-guide-sm">(1팩당 : 1,490원~2,380원)</p>
-                                <div class="rating">
-                                    <em class="rating-point"><span class="point4-5"></span><span class="blind">별점4.5</span></em>
-                                    <span class="text-guide-sm">(1415)</span>
-                                </div>
-                                <div class="bottom-badge-div">
-                                    <span class="badge-primary">MD추천</span>
-                                    <span class="badge-primary">신상품</span>
-                                </div>
-                            </div><!--// desc-bottom -->
-                            <a href="#" class="btn-blank"><span class="blind">자세히보기</span></a>
-                        </div><!--// prd-item -->
-                    </li><!--// colum -->
-                </ul><!--// prd-item-list -->
+                                <div class="desc-bottom">
+                                    <div class="brand-name"><a href="#">햇살닭</a></div>
+                                    <p class="tit"><a href="#" class="text-elps2">[맛있닭] 명실상부 판매1위!</a></p>
+                                    <span class="price"><em class="num">13,900</em>원</span>
+                                    <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+                                    <p class="text-guide-sm">(100g당 최저 907원)</p>
+                                    <div class="rating-simply"><span class="score">5점</span><span class="total-num">(21,320)</span></div>
+                                    <div class="bottom-badge-div">
+                                        <img src="../../images/txt/txt_badge_01.png" alt="신상품">
+                                        <img src="../../images/txt/txt_badge_02.png" alt="오렌지할인가">
+                                    </div>
+                                </div><!--// desc-bottom -->
+                            </div><!--// prd-item -->
+                        </li><!--// colum -->
+                    </ul><!--// prd-item-list -->
+                </div>
 
                 <!-- 데이터 없을 경우 -->
                 <!-- <div class="no-data">

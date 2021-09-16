@@ -111,6 +111,9 @@ $(function () {
 
     //웰컴 기프트
     if($('.welcome-gift-list').length>0){welcomeGiftSwipe();}
+
+    //추천기획전 
+    if($('.recomm-promotion').length>0){recommPromotion();}
     
     //이미지 슬라이드
     if ($('.img-slide').length > 0) { imgSwiper ();}
@@ -133,6 +136,15 @@ $(function () {
     
      // 주문목록(마이페이지)
      if ($('.order-swiper-list').length > 0) { orderSwiperSlide(); }
+
+     // 기간 조회 (마이페이지 주문/1:1 문의 등 공통)
+     if ($('.search-box').length > 0) { periodSet(); }
+
+     //상품리스트, 특급배송 탭메뉴
+     if ($('.tab-list-menu').length > 0) { tabListMenu(); }
+
+     //상세검색 
+     if ($('.detail-search').length > 0) { detailSearch(); }
 });
 
 
@@ -385,12 +397,19 @@ function dropDownClose () {
 /****** SelectBox ******/
 function selectBox (e) {
     $(document).on('click','.select-value',function(e){
+
+        docH = $(document).height() - 100;
+
         if ( !$(this).hasClass('disabled') ) {
             if ( $(this).parent('.ui-select').hasClass('on')) {    
                 selectBoxClose ();
             } else {
                 selectBoxClose ();
                 $(this).parent('.ui-select').addClass('on');
+
+                if (  $(this).parents('.top-selection-area').length ) {
+                    selectDim (this);
+                }
             }
         
             $('body').on('click',function(e){
@@ -431,7 +450,20 @@ function selectBoxAction (el) {
 
 function selectBoxClose () {
     $('.ui-select').removeClass('on');
+    selectDimClose ()
     return false;
+}
+
+
+function selectDim (el) {
+    var dim = $(el).parent('.ui-select').siblings('.dim')
+    dim.css('height',docH)
+    bottomNavOff ()
+}
+
+function selectDimClose () {
+    $('.dim').removeAttr('style')
+    bottomNavOn ()
 }
 
 
@@ -530,11 +562,11 @@ function toolTip () {
     }
     
     function tipShowEvent (el) {
-        var offTop = $(el).position().top - $(el).outerHeight() - 15, //
+        var offTop = $(el).position().top - $(el).outerHeight() - tipbox.outerHeight(), //
         offLeft = $(el).position().left - $(el).outerWidth(),
         offRight = $(el).position().left + $(el).outerWidth() + 15, //
         offBottom = $(el).position().top + $(el).outerHeight() + 10,
-        offCenter = $(el).position().left;
+        offCenter = $(el).position().left / 2;
 
         targetTipBox = $(el).next(tipbox);
 
@@ -659,7 +691,7 @@ function toggleCnt () {
         if ( !toggleOn ) {
             $(this).addClass('toggle-on');
             $(this).parents('.ui-toggle').addClass('on');
-            $(this).children('span').text('잡기');
+            $(this).children('span').text('접기');
             toggleCnt.removeClass('hide');
 
             // 상품상세 리뷰보기 영역
@@ -1501,10 +1533,21 @@ function welcomeGiftSwipe (){
                 },50)
             }
         }
-    });
-    
+    });    
+}
 
-    
+//추천기획전
+function recommPromotion(){
+    var recommPromotionSwiper = new Swiper('.recomm-promotion .swiper-container',{
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 15,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
+    })
 }
 
 //이미지 슬라이드
@@ -1634,7 +1677,9 @@ function bsbSelect() {
 /****** Datepicker ******/
 function inputDatepicker () {
     $('.datepicker').each(function () {
-        $(this).datepicker();
+        $(this).datepicker({
+            dateFormat: 'yy.mm.dd',
+        });
     })
 }
 
@@ -1722,3 +1767,102 @@ function orderSwiperSlide () {
         },
     });
 }
+
+
+
+/****** 기간 조회 (마이페이지 주문/1:1 문의 등 공통) ******/
+function periodSet () {
+    var searchArea = $('.search-box'),
+        toggleBtn = searchArea.find('.ui-search-toggle'),
+        toggleCnt = searchArea.find('.search-detail'),
+        toggleCntSub = toggleCnt.find('.period-setting'),
+        dim = searchArea.find('.dim'),
+        docH = $(document).height();
+
+    toggleBtn.on('click', function () {
+        var toggleOn = $(this).hasClass('toggle-on')
+
+        if ( !toggleOn ) {
+            $(this).addClass('toggle-on');
+            $(this).children('span').text('접기');
+            toggleCnt.removeClass('hide');
+
+            if ( searchArea.hasClass('fixed-type') ) {
+                dim.css('height',docH);
+                bottomNavOff ()
+            }
+            
+        } else if ( toggleOn ) {
+            searchClose ()
+
+            // 조회영역 서브컨텐츠
+            if ( !toggleCntSub.hasClass('hide') ) {
+                toggleCntSub.addClass('hide')
+            }
+        }
+    })
+
+    // dim.on('click', function () {
+    //     searchClose ()
+    // })
+
+    function searchClose () {
+        toggleBtn.removeClass('toggle-on').children('span').text('조회설정');
+        toggleCnt.addClass('hide');
+        dim.removeAttr('style')
+        bottomNavOn ()
+
+        var chklist = toggleCnt.find('.radio-list');
+
+        //chklist.children('li').find('.radio-btn-type2').attr('checked', false);
+        chklist.children('li:first-child').find('.radio-btn-type2').prop('checked', true).attr('checked', true);
+    }
+}
+
+
+function bottomNavOff () {
+    $('.bottom-fixed-bar').css('z-index','1');
+}
+
+function bottomNavOn () {
+    $('.bottom-fixed-bar').removeAttr('style')
+}
+
+function tabListMenu(){
+    
+    var exp_list_width = -28;
+    for(var i=0; i<$(".tab-list-menu .tab-list-box > li").length;i++){            
+        exp_list_width = exp_list_width + $(".tab-list-menu .tab-list-box > li").eq(i).width()+30;
+        $(".tab-list-box").width(exp_list_width);
+    }
+    $(".tab-more-menu-btn").click(function(){
+        $(".tab-more-menu-btn").toggleClass("on");
+    })
+
+    var emm = $(".tab-contents-top").offset().top;            
+    $(window).scroll(function(){
+        if($(window).scrollTop()>=emm){
+            $(".tab-contents-top").addClass("fixed-on");
+        }else{
+            $(".tab-contents-top").removeClass("fixed-on");
+        }
+    })
+}
+
+//상세검색
+function detailSearch(){
+    var detailBtn = $('.detail-search-btn'),
+        detailLayer = $('.detail-search'),
+        layerClose = $('.detail-search .btn-close'),
+        toggleBtn = $('.detail-search .toggle-btn');
+    toggleBtn.on('click',function(){
+        $(this).toggleClass('on');
+    })
+    detailBtn.on('click',function(){
+        detailLayer.addClass('on')
+    })
+    layerClose.on('click',function(){
+        detailLayer.removeClass('on')
+    })
+}
+

@@ -85,6 +85,16 @@
                     <div class="coupon-box-list">
                         <ul>
                             <li class="box-item">
+                                <!-- [Dev] 20210908 적용안함 케이스 추가 -->
+                                <div class="custom-radio">
+                                    <input type="radio" id="radio-0" class="radio type-box" name="radio-item-1" checked="">
+                                    <label for="radio-0">
+                                        <span class="normal">적용안함</span>
+                                    </label>
+                                </div>
+                                <!--// [Dev] 20210908 적용안함 케이스 추가 -->
+                            </li>
+                            <li class="box-item">
                                 <div class="custom-radio">
                                     <input type="radio" id="radio-1" class="radio type-box" name="radio-item-1" checked="">
                                     <label for="radio-1">
@@ -177,6 +187,17 @@
                         <ul>
                             <li class="box-item">
                                 <div class="custom-radio">
+                                    <input type="radio" id="radio-021" class="radio type-box" name="radio-item-3" checked="">
+                                    <label for="radio-021">
+                                        <span class="sale">특급배송 무료</span>
+                                        <span class="tit">[특급배송] 배송비 무료</span>
+                                        <span class="desc">특급배송 상품 20,000원 이상 구매 시 사용가능</span>
+                                        <span class="date">2021.06.30 까지</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="box-item">
+                                <div class="custom-radio">
                                     <input type="radio" id="radio-21" class="radio type-box" name="radio-item-3" checked="">
                                     <label for="radio-21">
                                         <span class="sale">10%할인</span>
@@ -215,7 +236,9 @@
 
 			<div class="layer-bottom type-shadow">
 				<div class="btn-area">
-					<button type="button" class="btn-basic-xlg btn-primary w-full"><span>쿠폰적용</span></button>
+                    <!-- [Dev] 20210908 버튼 클래스 수정 btn-basic-lg2, 적용취소 버튼 추가 -->
+                    <button type="button" class="btn-basic-lg2 btn-grey3"><span>적용취소</span></button>
+					<button type="button" class="btn-basic-lg2 btn-primary"><span>쿠폰적용</span></button>
 				</div>
 			</div>
 
