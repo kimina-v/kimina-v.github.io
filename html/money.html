@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>자산현황</title>
+<title>M</title>
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -10,13 +10,597 @@
 
 <body>
     <style>
-        table{border-collapse:collapse;width:400px;font-size:13px}
+        table{border-collapse:collapse;font-size:13px;width:100%;margin-top:5px}
         th{border:1px solid #ddd;text-align:left;padding:8px 0 8px 20px;background:#f2f2f2}
         td{text-align:right;border:1px solid #ddd;padding:8px 20px 8px 0}
         .large{font-size:15px}
         .lGray{color:#ddd}
+        .group{margin:10px 0}
+        .group .title{padding:10px;font-weight:bold;font-size:15px;border:1px solid #eee}
+        .group .list{display:none}
+        ul,li{list-style:none;padding:0;margin:0}
+        .summary .title{font-size:16px;font-weight:bold;border-bottom:1px solid #ddd;padding-bottom:10px}
+        .summary ul{margin-top:10px}
+        .summary li{width:100%;font-size:0;line-height:22px;border-bottom:1px dotted #eee;padding:10px 0}
+        .summary li em{display:inline-block;width:50%;font-style:normal;font-size:15px}
+        .summary li span{text-align:right;font-weight:bold;width:50%;display:inline-block;font-size:15px}
+        .summary li span:only-child{width:100%}
     </style>
-    <div class="myMoney">
+    <script>
+        $(function(){
+            $('.group').each(function(){
+                $('.title').on('click',function(){
+                    $(this).next('.list').toggle();
+                })
+            })
+        })
+    </script>
+    <div class="group">
+        <div class="title">이나</div>
+        <div class="list">
+            <table>
+                <colgroup>
+                    <col style="width:50%">
+                    <col style="width:50%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>카카오 정기예금</th>
+                        <td>45,000,000 </td>
+                    </tr>
+                    <tr>
+                        <th>카카오 정기예금</th>
+                        <td>10,000,000 </td>
+                    </tr>
+                    <tr>
+                        <th>카카오 세이프</th>
+                        <td>600,000 </td>
+                    </tr>
+                    <tr>
+                        <th>농협</th>
+                        <td>3,000,000</td>
+                    </tr>
+                    <tr>
+                        <th>주택청약(21.09)</th>
+                        <td>4,330,000</td>
+                    </tr>
+                    <tr>
+                        <th>연금적금(21.09)</th>
+                        <td>30,810,000</td>
+                    </tr>
+                    <tr>
+                        <th>생활유지</th>
+                        <td>1,200,000 </td>
+                    </tr>
+                    <tr>
+                        <th>여행 적금</th>
+                        <td>2,700,000 </td>
+                    </tr>
+                    <tr>
+                        <th>기타 적금</th>
+                        <td>1,800,000 </td>
+                    </tr>
+                    <tr>
+                        <th>한국투자</th>
+                        <td>0 (주 : 10,000,000)</td>
+                    </tr>
+                    <tr>
+                        <th class="lGray">IS</th>
+                        <td class="lGray">10,000,000</td>
+                    </tr>
+                    <tr>
+                        <th>총</th>
+                        <td><b>109,440,000 / 72,960,000  ++ 10,000,000</b></td>
+                    </tr>
+                    <tr>
+                        <th class="lGray">현금</th>
+                        <td class="lGray">500,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="group">
+        <div class="title">지유</div>
+        <div class="list">
+            <table>
+                <colgroup>
+                    <col style="width:50%">
+                    <col style="width:50%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>KB증권</th>
+                        <td>15,000,000</td>
+                    </tr>
+                    <tr>
+                        <th>카카오 정기예금</th>
+                        <td>2,700,000 (21.08.13)</td>
+                    </tr>
+                    <tr>
+                        <th>카카오 정기예금</th>
+                        <td>2,000,000 (22.06.19) - 640,000 브레인나우</td>
+                    </tr>
+                    <tr>
+                        <th>우리은행</th>
+                        <td>4,087,000</td>
+                    </tr>
+                    <tr>
+                        <th>주택청약(20.10)</th>
+                        <td>1,030,000</td>
+                    </tr>
+                    <tr>
+                        <th>현금</th>
+                        <td>1,000,000</td>
+                    </tr>
+                    <tr>
+                        <th>쑥쑥적금(21.10)</th>
+                        <td>3,600,000</td>
+                    </tr>
+                    <tr>
+                        <th>총</th>
+                        <td><b>29,417,000</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="summary">
+        <div class="title">SUMMARY</div>
+        <ul>
+            <li>
+                <em>묶인</em>
+                <span>36,480,000</span>
+            </li>
+            <li>
+                <em>이나</em>
+                <span>72,960,000 (+10,000,000)</span>
+            </li>
+            <li>
+                <em>지유</em>
+                <span>29,417,000</span>
+            </li>
+            <li class="total">
+                <span>148,857,000</span>
+            </li>
+        </ul>
+    </div>
+    <div class="group">
+        <div class="title">저축</div>
+        <div class="list">
+            <table>
+                <colgroup>
+                    <col style="width:50%">
+                    <col style="width:50%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>대출 (8일)</th>
+                        <td>1,300,000</td>
+                    </tr>
+                    <tr>
+                        <th>연금 (8일)</th>
+                        <td>300,000</td>
+                    </tr>
+                    <tr>
+                        <th>청약 (25일)</th>
+                        <td>30,000</td>
+                    </tr>
+                    <tr>
+                        <th>흥국 (25일)</th>
+                        <td>100,000</td>
+                    </tr>
+                    <tr>
+                        <th>의료(카카오)</th>
+                        <td>100,000</td>
+                    </tr>
+                    <tr>
+                        <th>유지(카카오)</th>
+                        <td>150,000</td>
+                    </tr>
+                    <tr>
+                        <th>청약 (4일)</th>
+                        <td>20,000</td>
+                    </tr>
+                    <tr>
+                        <th>카카오 (5일)</th>
+                        <td>300,000</td>
+                    </tr>
+                    <tr>
+                        <th>카카오 (5일)</th>
+                        <td>300,000</td>
+                    </tr>
+                    <tr>
+                        <th>카카오 여행 (5일)</th>
+                        <td>300,000</td>
+                    </tr>
+                    <tr>
+                        <th>수협 (2일)</th>
+                        <td>100,000</td>
+                    </tr>
+                    <tr>
+                        <th>하나 지유(5일)</th>
+                        <td>200,000</td>
+                    </tr>
+                    <tr>
+                        <th>TOTAL</th>
+                        <td><b>2,900,000</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="group">
+        <div class="title">기본생활</div>
+        <div class="list">
+            <table>
+                <colgroup>
+                    <col style="width:50%">
+                    <col style="width:50%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>교원</th>
+                        <td>40,000</td>
+                    </tr>
+                    <tr>
+                        <th>핸드폰</th>
+                        <td>140,000</td>
+                    </tr>
+                    <tr>
+                        <th>관리비</th>
+                        <td>210,000</td>
+                    </tr>
+                    <tr>
+                        <th>인터넷</th>
+                        <td>23,000</td>
+                    </tr>
+                    <tr>
+                        <th>넷플리스</th>
+                        <td>12,000</td>
+                    </tr>
+                    <tr>
+                        <th>와우회원</th>
+                        <td>2,900</td>
+                    </tr>
+                    <tr>
+                        <th>정수기</th>
+                        <td>15,900</td>
+                    </tr>
+                    <tr>
+                        <th>가스비</th>
+                        <td>20,000</td>
+                    </tr>
+                    <tr>
+                        <th>주유</th>
+                        <td>230,000</td>
+                    </tr>
+                    <tr>
+                        <th>교통</th>
+                        <td>70,000</td>
+                    </tr>
+                    <tr>
+                        <th>뭉보험</th>
+                        <td>229,000</td>
+                    </tr>
+                    <tr>
+                        <th>이나보험</th>
+                        <td>82,000</td>
+                    </tr>
+                    <tr>
+                        <th>쮸보험</th>
+                        <td>100,000</td>
+                    </tr>
+                    <tr>
+                        <th>유치원</th>
+                        <td>494,000</td>
+                    </tr>
+                    <tr>
+                        <th>브레인나우</th>
+                        <td>158,000</td>
+                    </tr>
+                    <tr>
+                        <th>TOTAL</th>
+                        <td><b>1,826,800</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="group">
+        <div class="title">생활비</div>
+        <div class="list">
+            <table>
+                <colgroup>
+                    <col style="width:50%">
+                    <col style="width:50%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>뭉</th>
+                        <td>150,000</td>
+                    </tr>
+                    <tr>
+                        <th>나</th>
+                        <td>280,000</td>
+                    </tr>
+                    <tr>
+                        <th>쮸</th>
+                        <td>100,000</td>
+                    </tr>
+                    <tr>
+                        <th>도도</th>
+                        <td>100,000</td>
+                    </tr>
+                    <tr>
+                        <th>유치원</th>
+                        <td>40,000</td>
+                    </tr>
+                    <tr>
+                        <th>마트/생활비</th>
+                        <td>750,000</td>
+                    </tr>
+                    <tr>
+                        <th>외식</th>
+                        <td>150,000</td>
+                    </tr>
+                    <tr>
+                        <th>알콜</th>
+                        <td>150,000</td>
+                    </tr>
+                    <tr>
+                        <th>휴무</th>
+                        <td>300,000</td>
+                    </tr>
+                    <tr>
+                        <th>기타</th>
+                        <td>500,000</td>
+                    </tr>
+                    <tr>
+                        <th>TOTAL</th>
+                        <td><b>2,520,000</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="group">
+        <div class="title">현금</div>
+        <div class="list">
+            <table>
+                <colgroup>
+                    <col style="width:50%">
+                    <col style="width:50%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>대출 (8일)</th>
+                        <td>1,300,000</td>
+                    </tr>
+                    <tr>
+                        <th>연금 (8일)</th>
+                        <td>300,000</td>
+                    </tr>
+                    <tr>
+                        <th>청약 (25일)</th>
+                        <td>30,000</td>
+                    </tr>
+                    <tr>
+                        <th>흥국 (25일)</th>
+                        <td>100,000</td>
+                    </tr>
+                    <tr>
+                        <th>의료(카카오)</th>
+                        <td>100,000</td>
+                    </tr>
+                    <tr>
+                        <th>유지(카카오)</th>
+                        <td>150,000</td>
+                    </tr>
+                    <tr>
+                        <th>청약 (4일)</th>
+                        <td>20,000</td>
+                    </tr>
+                    <tr>
+                        <th>카카오 (5일)</th>
+                        <td>300,000</td>
+                    </tr>
+                    <tr>
+                        <th>카카오 (5일)</th>
+                        <td>300,000</td>
+                    </tr>
+                    <tr>
+                        <th>카카오 여행 (5일)</th>
+                        <td>300,000</td>
+                    </tr>
+                    <tr>
+                        <th>수협 (2일)</th>
+                        <td>100,000</td>
+                    </tr>
+                    <tr>
+                        <th>하나 지유(5일)</th>
+                        <td>200,000</td>
+                    </tr>
+                    <tr>
+                        <th>인터넷</th>
+                        <td>23,000</td>
+                    </tr>
+                    <tr>
+                        <th>가스비</th>
+                        <td>20,000</td>
+                    </tr>
+                    <tr>
+                        <th>도도</th>
+                        <td>100,000</td>
+                    </tr>
+                    <tr>
+                        <th>생필품</th>
+                        <td>250,000</td>
+                    </tr>
+                    <tr>
+                        <th>유치원</th>
+                        <td>494,000</td>
+                    </tr>
+                    <tr>
+                        <th>유치원</th>
+                        <td>40,000</td>
+                    </tr>
+                    <tr>
+                        <th>TOTAL</th>
+                        <td><b>3,827,000</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="group">
+        <div class="title">삼성카드</div>
+        <div class="list">
+            <table>
+                <colgroup>
+                    <col style="width:50%">
+                    <col style="width:50%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>교원</th>
+                        <td>40,000</td>
+                    </tr>
+                    <tr>
+                        <th>TOTAL</th>
+                        <td><b>40,000</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="group">
+        <div class="title">신한카드</div>
+        <div class="list">
+            <table>
+                <colgroup>
+                    <col style="width:50%">
+                    <col style="width:50%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>핸드폰</th>
+                        <td>140,000</td>
+                    </tr>
+                    <tr>
+                        <th>관리비</th>
+                        <td>210,000</td>
+                    </tr>
+                    <tr>
+                        <th>넷플리스</th>
+                        <td>120,000</td>
+                    </tr>
+                    <tr>
+                        <th>와우회원</th>
+                        <td>2,900</td>
+                    </tr>
+                    <tr>
+                        <th>정수기</th>
+                        <td>15,900</td>
+                    </tr>
+                    <tr>
+                        <th>주유비</th>
+                        <td>230,000</td>
+                    </tr>
+                    <tr>
+                        <th>뭉보험</th>
+                        <td>229,000</td>
+                    </tr>
+                    <tr>
+                        <th>이나보험</th>
+                        <td>82,000</td>
+                    </tr>
+                    <tr>
+                        <th>마트/생활비</th>
+                        <td>650,000</td>
+                    </tr>
+                    <tr>
+                        <th>브레인나우</th>
+                        <td>158,000</td>
+                    </tr>
+                    <tr>
+                        <th>TOTAL</th>
+                        <td><b>1,829,800</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="group">
+        <div class="title">체크카드</div>
+        <div class="list">
+            <table>
+                <colgroup>
+                    <col style="width:50%">
+                    <col style="width:50%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>뭉</th>
+                        <td>150,000</td>
+                    </tr>
+                    <tr>
+                        <th>나</th>
+                        <td>280,000</td>
+                    </tr>
+                    <tr>
+                        <th>교통</th>
+                        <td>70,000</td>
+                    </tr>
+                    <tr>
+                        <th>쮸</th>
+                        <td>100,000</td>
+                    </tr>
+                    <tr>
+                        <th>외식</th>
+                        <td>150,000 (고양페이 100,000)</td>
+                    </tr>
+                    <tr>
+                        <th>휴무</th>
+                        <td>300,000</td>
+                    </tr>
+                    <tr>
+                        <th>기타</th>
+                        <td>500,000</td>
+                    </tr>
+                    <tr>
+                        <th>TOTAL</th>
+                        <td><b>1,550,000</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="summary">
+        <div class="title">SUMMARY</div>
+        <ul>
+            <li>
+                <em>신용카드</em>
+                <span>1,869,800</span>
+            </li>
+            <li>
+                <em>저축</em>
+                <span>2,900,000</span>
+            </li>
+            <li>
+                <em>생활현금</em>
+                <span>927,000</span>
+            </li>
+            <li>
+                <em>체크카드</em>
+                <span>1,550,000</span>
+            </li>
+            <li class="total">
+                <span>7,246,800</span>
+            </li>
+        </ul>
+    </div>
+    <div class="myMoney" style="display:none">
         <table>
             <colgroup>
                 <col style="width:50%">
@@ -119,6 +703,184 @@
                 <tr>
                     <th class="lGray">현금</th>
                     <td class="lGray">500,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="myMoney" style="display:none">
+        <table>
+            <colgroup>
+                <col style="width:50%">
+                <col style="width:50%">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th colspan="2">저축</th>
+                </tr>
+                <tr>
+                    <th>대출 (8일)</th>
+                    <td>1,300,000</td>
+                </tr>
+                <tr>
+                    <th>연금 (8일)</th>
+                    <td>300,000</td>
+                </tr>
+                <tr>
+                    <th>청약 (25일)</th>
+                    <td>30,000</td>
+                </tr>
+                <tr>
+                    <th>흥국 (25일)</th>
+                    <td>100,000</td>
+                </tr>
+                <tr>
+                    <th>의료(카카오)</th>
+                    <td>100,000</td>
+                </tr>
+                <tr>
+                    <th>유지(카카오)</th>
+                    <td>150,000</td>
+                </tr>
+                <tr>
+                    <th>청약 (4일)</th>
+                    <td>20,000</td>
+                </tr>
+                <tr>
+                    <th>카카오 (5일)</th>
+                    <td>300,000</td>
+                </tr>
+                <tr>
+                    <th>카카오 (5일)</th>
+                    <td>300,000</td>
+                </tr>
+                <tr>
+                    <th>카카오 여행 (5일)</th>
+                    <td>300,000</td>
+                </tr>
+                <tr>
+                    <th>수협 (2일)</th>
+                    <td>100,000</td>
+                </tr>
+                <tr>
+                    <th>하나 지유(5일)</th>
+                    <td>200,000</td>
+                </tr>
+                <tr>
+                    <th>TOTAL</th>
+                    <td><b>2,900,000</b></td>
+                </tr>
+                <tr>
+                    <th colspan="2">기본생활</th>
+                </tr>
+                <tr>
+                    <th>교원</th>
+                    <td>40,000</td>
+                </tr>
+                <tr>
+                    <th>핸드폰</th>
+                    <td>140,000</td>
+                </tr>
+                <tr>
+                    <th>관리비</th>
+                    <td>210,000</td>
+                </tr>
+                <tr>
+                    <th>인터넷</th>
+                    <td>23,000</td>
+                </tr>
+                <tr>
+                    <th>넷플리스</th>
+                    <td>12,000</td>
+                </tr>
+                <tr>
+                    <th>정수기</th>
+                    <td>15,900</td>
+                </tr>
+                <tr>
+                    <th>가스비</th>
+                    <td>20,000</td>
+                </tr>
+                <tr>
+                    <th>주유</th>
+                    <td>230,000</td>
+                </tr>
+                <tr>
+                    <th>교통</th>
+                    <td>70,000</td>
+                </tr>
+                <tr>
+                    <th>뭉보험</th>
+                    <td>229,000</td>
+                </tr>
+                <tr>
+                    <th>이나보험</th>
+                    <td>82,000</td>
+                </tr>
+                <tr>
+                    <th>쮸보험</th>
+                    <td>100,000</td>
+                </tr>
+                <tr>
+                    <th>유치원</th>
+                    <td>494,000</td>
+                </tr>
+                <tr>
+                    <th>브레인나우</th>
+                    <td>158,000</td>
+                </tr>
+                <tr>
+                    <th>TOTAL</th>
+                    <td><b>1,823,900</b></td>
+                </tr>
+                <tr>
+                    <th colspan="2">생활비</th>
+                </tr>
+                <tr>
+                    <th>뭉</th>
+                    <td>150,000</td>
+                </tr>
+                <tr>
+                    <th>나</th>
+                    <td>280,000</td>
+                </tr>
+                <tr>
+                    <th>쮸</th>
+                    <td>100,000</td>
+                </tr>
+                <tr>
+                    <th>도도</th>
+                    <td>100,000</td>
+                </tr>
+                <tr>
+                    <th>유치원</th>
+                    <td>40,000</td>
+                </tr>
+                <tr>
+                    <th>마트/생활비</th>
+                    <td>750,000</td>
+                </tr>
+                <tr>
+                    <th>외식</th>
+                    <td>150,000</td>
+                </tr>
+                <tr>
+                    <th>알콜</th>
+                    <td>150,000</td>
+                </tr>
+                <tr>
+                    <th>휴무</th>
+                    <td>300,000</td>
+                </tr>
+                <tr>
+                    <th>기타</th>
+                    <td>500,000</td>
+                </tr>
+                <tr>
+                    <th>TOTAL</th>
+                    <td><b>2,520,000</b></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>7,243,900</b></td>
                 </tr>
             </tbody>
         </table>
