@@ -154,6 +154,7 @@ $(function () {
      
      //메시지     
      if($('.message-swiper').length>0){messageSlide();}
+     if($('.message-swiper2').length>0){messageSlide2();}
 });
 
 
@@ -1922,25 +1923,84 @@ function imgAutoSlide(){
 
 //메시지 카드
 function messageSlide(){
-    var galleryThumbs = new Swiper('.gallery-thumbs', {
+    
+    // var galleryTop = new Swiper('.gallery-top', {
+    //     spaceBetween: 15,
+    //     thumbs: {
+    //         swiper: galleryThumbs
+    //     }
+    // });
+    // var galleryThumbs = new Swiper('.gallery-thumbs', {
+    //     spaceBetween: 4,
+    //     slidesPerView: 'auto',
+    //     observer: true,
+    //     observeParents: true
+    // });
+    var galleryTop = new Swiper('.message-swiper .gallery-top', {
+        spaceBetween: 10,
+        loop: true,
+        loopedSlides: 4
+      });
+      var galleryThumbs = new Swiper('.message-swiper .gallery-thumbs', {
+        spaceBetween: 10,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        touchRatio: 0.2,
+        slideToClickedSlide: true,
+              loop: true,
+              loopedSlides: 4
+      });
+    galleryThumbs.controller.control = galleryTop;
+    galleryTop.controller.control = galleryThumbs;
+    // var $galleryThumbTarget = $('.gallery-thumbs').find('.swiper-wrapper .swiper-slide');
+    // $galleryThumbTarget.click(function(){
+    //     galleryThumbs.slideTo($(this).index() - 1)
+    // })
+    // each(function(){
+    //     if($galleryThumbTarget.hasClass('swiper-slide-thumb-active')){
+    //         galleryThumbs.slideTo($(this).index() - 1)
+    //     }
+    // })
+    
+}
+function messageSlide2(){
+    
+    var galleryThumbs = new Swiper('.message-swiper2 .gallery-thumbs', {
         spaceBetween: 4,
-        // slidesPerView: 5,
         slidesPerView: 'auto',
         observer: true,
         observeParents: true
     });
-    var galleryTop = new Swiper('.gallery-top', {
+    var galleryTop = new Swiper('.message-swiper2 .gallery-top', {
         spaceBetween: 15,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
         thumbs: {
             swiper: galleryThumbs
         }
     });
-    var $galleryThumbTarget = $('.gallery-thumbs').find('.swiper-wrapper .swiper-slide');
+    // var galleryTop = new Swiper('.gallery-top', {
+    //     spaceBetween: 10,
+    //     loop: true,
+    //     loopedSlides: 4
+    //   });
+    //   var galleryThumbs = new Swiper('.gallery-thumbs', {
+    //     spaceBetween: 10,
+    //     centeredSlides: true,
+    //     slidesPerView: 'auto',
+    //     touchRatio: 0.2,
+    //     slideToClickedSlide: true,
+    //           loop: true,
+    //           loopedSlides: 4
+    //   });
+    // galleryThumbs.controller.control = galleryTop;
+    // galleryTop.controller.control = galleryThumbs;
+    var $galleryThumbTarget = $('.message-swiper2 .gallery-thumbs').find('.swiper-wrapper .swiper-slide');
     $galleryThumbTarget.click(function(){
-        galleryThumbs.slideTo($(this).index() - 1)			
+        galleryThumbs.slideTo($(this).index() - 1)
     })
+    // each(function(){
+    //     if($galleryThumbTarget.hasClass('swiper-slide-thumb-active')){
+    //         galleryThumbs.slideTo($(this).index() - 1)
+    //     }
+    // })
+    
 }

@@ -777,6 +777,23 @@ height: auto; background-color: #ff6001; text-align: center; line-height: 1; bor
 .message-swiper .gallery-top .message-box .count .txt{color:#666}
 .message-swiper .gallery-top .message-box .author{text-align:right;font-size:12px;font-weight:bold;display:block;padding-right:6px;margin-top:11px}
 
+
+.message-swiper2 .gallery-top{padding:0 15px}
+.message-swiper2 .gallery-top .swiper-slide{height:290px;padding:135px 15px 0;box-sizing:border-box;border-radius:5px}
+.message-swiper2 .gallery-top .swiper-slide.type01{background:url(../images/img/bg_msg01.png) no-repeat 0 0/100% auto}
+.message-swiper2 .gallery-top .swiper-slide.type02{background:url(../images/img/bg_msg02.png) no-repeat 0 0/100% auto}
+.message-swiper2 .gallery-top .swiper-slide.type03{background:url(../images/img/bg_msg03.png) no-repeat 0 0/100% auto}
+.message-swiper2 .gallery-top .swiper-slide.type04{background:url(../images/img/bg_msg04.png) no-repeat 0 0/100% auto}
+.message-swiper2 .gallery-top .swiper-slide.type05{background:url(../images/img/bg_msg05.png) no-repeat 0 0/100% auto}
+.message-swiper2 .gallery-top .swiper-slide.type06{background:url(../images/img/bg_msg06.png) no-repeat 0 0/100% auto}
+.message-swiper2 .gallery-top .swiper-slide.type07{background:url(../images/img/bg_msg07.png) no-repeat 0 0/100% auto}
+.message-swiper2 .gallery-top .swiper-slide.type08{background:url(../images/img/bg_msg08.png) no-repeat 0 0/100% auto}
+.message-swiper2 .gallery-top .message-box{width:100%;border-radius:5px;background:#fff;height:140px;padding:12px 15px 40px;box-sizing:border-box}
+.message-swiper2 .gallery-top .message-box textarea{width:100%;border:0;height:100%;resize:none;line-height:29px;background:url(../images/img/card_line.png) repeat 0 0/3px auto}
+.message-swiper2 .gallery-top .message-box .count{text-align:right;font-size:12px;color:#ccc;margin-top:12px}
+.message-swiper2 .gallery-top .message-box .count .txt{color:#666}
+.message-swiper2 .gallery-top .message-box .author{text-align:right;font-size:12px;font-weight:bold;display:block;padding-right:6px;margin-top:11px}
+
 /* .gift-accept .gift-card-box{margin-bottom:40px}
 .gift-accept .gift-card-box .message-box{padding:12px 15px 40px} */
 /* .gift-accept .gift-card-box .message-box .msg-area{height:87px;overflow-y:auto}
@@ -799,8 +816,10 @@ height: auto; background-color: #ff6001; text-align: center; line-height: 1; bor
 .gift-card-type .type07{background:url(../images/img/gifttag04.png) repeat-x 50% 0}
 .gift-card-type .type08{background:url(../images/img/gifttag04.png) repeat-x 50% 0}
 /* .gift-card-type li ~ li{margin-left:4px} */
-.gift-card-type li.swiper-slide-thumb-active{border:2px solid #ff853c;box-sizing:border-box}
-.gift-card-type li.swiper-slide-thumb-active span{margin-top:-2px;color:#333}
+.message-swiper2 .gift-card-type li.swiper-slide-thumb-active{border:2px solid #ff853c;box-sizing:border-box}
+.message-swiper2 .gift-card-type li.swiper-slide-thumb-active span{margin-top:-2px;color:#333}
+.message-swiper .gift-card-type li.swiper-slide-active{border:2px solid #ff853c;box-sizing:border-box}
+.message-swiper .gift-card-type li.swiper-slide-active span{margin-top:-2px;color:#333}
 
 .gift-order-complete .prd-info-area .column.img{width:86px;height:86px}
 .gift-order-complete .prd-info-area .column.img a{display:block}
