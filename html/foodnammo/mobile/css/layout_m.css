@@ -96,6 +96,16 @@
 .latest-search .srch-list li button{position:absolute;right:8px;top:8px}
 .latest-search [class^="ico-x-"]:before, 
 .latest-search [class^="ico-x-"]:after{left:-1px}
+.search-none{text-align:center;padding:60px 0}
+.search-none:before{content:"";width:60px;height:60px;display:block;margin:0 auto 10px;background:url(../images/icon/icon_no_data.png) no-repeat 0 0/100% auto}
+.search-none .text{font-size:15px;font-weight:bold}
+.search-none .desc{display:block;margin-top:5px;font-size:14px;color:#999}
+.search-result .new-prod{border-top:8px solid #f2f2f2;padding:0 15px}
+.search-result .new-prod .swiper-container{padding-bottom:35px}
+.search-result .new-prod .title-area{overflow:hidden;text-align:right;padding:20px 0 13px}
+.search-result .new-prod .title{float:left;margin:0}
+.search-result .new-prod .prod-brand{display:block;font-size:11px;margin-bottom:4px}
+.search-result .new-prod .prod-name{height:40px;line-height:20px;font-size:14px;display:block;display:-webkit-box !important;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;word-break:break-all;margin-bottom:8px}
 /* keyword */
 .srch-keyword{display:inline-block;border:1px solid #ccc; border-radius:30px; background:#fff}
 .srch-keyword > .txt{display:inline-block; vertical-align:top; padding:6px 14px 6px 14px; font-size:13px; color:#333;}
@@ -117,7 +127,7 @@
 .search-result .prod-default-wrap .prod-sorting-area .sorting-select:after{border-right:1px solid #666;border-bottom:1px solid #666;content:"";width:6px;height:6px;transform:rotate(45deg);position:absolute;right:2px;top:calc(50% - 7px)}
 .search-result .prod-sorting-area .select{background:none;border:0}
 
-.search-result .prod-default-wrap .prod-express-area{padding: 20px 10px 5px; width:100%; display:table}
+.search-result .prod-default-wrap .prod-express-area{padding:20px 10px 5px; width:100%; display:table}
 .search-result .prod-default-wrap .prod-express-area p{font-size:18px;font-weight:bold;display:table-cell}
 .search-result .prod-default-wrap .prod-express-area span{font-size:18px;font-weight:bold;vertical-align: baseline}
 .prod-express-area .item-right{width:50%}

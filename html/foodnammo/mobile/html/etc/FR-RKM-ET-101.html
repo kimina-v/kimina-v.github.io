@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- include js 
+	 상세 html 마크업 가이드 : html/_layout/layout_guide.html 참조
+-->
+<script src="../../_inc/pb_guide_include.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>   
+
+<body style="overflow:hidden">
+<div class="wrap">
+	<!-- ========== 공통 헤더 :: header ========== -->
+	<script>include.skipNav();</script>
+	<header id="header" class="header">
+		<script>include.header();</script>
+	</header>
+	<!--// ========== 공통 헤더 :: header ========== -->
+
+	<!-- ========== 컨텐츠 영역 :: container ========== -->
+	<section id="contents" class="container">
+       
+		<div class="content-wrap">
+			// 컨텐츠 영역
+		</div><!--// content-wrap -->
+	 </section>
+	 <!--// ========== 컨텐츠 영역 :: container ========== -->
+	
+	<!-- ========== 공통 푸터 :: footer ========== -->
+	<script>include.footer();</script>
+	<!--// ========== 공통 푸터 :: footer ========== -->
+</div><!--// wrap -->
+
+<!--
+	* 팝업 버튼에 ui-open-pop 클래스, 팝업 ID 작성 필요
+	ex) <a href="#popupSample-01" class=".... ui-open-pop"> ~ </a>
+	ex) <button type="button" data-layer="#popupSample-02" class="... ui-open-pop"> ~ </button>
+-->
+<!-- ========== 팝업 영역 ========== -->
+<div class="layer-wrap full-type" id="popupSample-03" style="display:block;">
+	<div class="layer-pop search-pop">
+		<div class="layer-inner">
+			<div class="layer-head">
+				<a href="#" class="btn-back"><i class="ico-arrows-back"></i><span class="blind">닫기</span></a>
+				<div class="input-group-wrap search-type2">
+					<div class="input-group">
+						<input type="text" id="" class="input-text" placeholder="검색어를 입력해주세요">
+						<span class="input-group-btn">
+							<button type="button" class="btn-xrd-xs" title="삭제"><i class="ico-x-grey2"></i><span class="blind">검색하기</span></button>
+						</span>
+						<span class="input-group-btn">
+						
+							<button type="button" class="btn-icon-search" title="검색하기"><i class="ico-search-pop2"></i><span class="blind">검색하기</span></button>
+						</span>
+					</div><!--// input-group -->
+				</div>
+			</div><!--// layer-head -->
+			<div class="layer-body">
+				<div class="header-search">
+					<div class="search-layer" style="display:none">
+						<div class="latest-search">
+							<div class="tit">
+								<h2>최근검색어</h2>
+								<div class="side">
+									<div class="switch-btn">
+										<span class="text">검색어 저장</span>
+										<input type="checkbox" id="switch" name="switch" class="switch-inp">
+										<label for="switch" class="switch-label">
+											<span class="marble"></span>
+										</label>
+									</div>
+									<button type="button" class="srch-del"><span class="txt">전체 삭제</spa></button>
+								</div>
+							</div>
+							<!-- 검색어 있을 경우 -->
+							<ul class="srch-list">
+								<li>
+									<a href="#" class="txt">잇메이트 잇메이트 잇메이트 잇메이트 잇메이트 잇메이트 잇메이트 잇메이트 잇메이트 잇메이트</a>
+									<button type="button" class="btn-x-xs" title="삭제"><i class="ico-x-grey2"></i><span class="blind">삭제</span></button>
+								</li>
+								<li>
+									<a href="#" class="txt">단백천하</a>
+									<button type="button" class="btn-x-xs" title="삭제"><i class="ico-x-grey2"></i><span class="blind">삭제</span></button>
+								</li>
+								<li>
+									<a href="#" class="txt">스파클링</a>
+									<button type="button" class="btn-x-xs" title="삭제"><i class="ico-x-grey2"></i><span class="blind">삭제</span></button>
+								</li>
+							</ul>
+							<!--// 검색어 있을 경우 -->
+							
+							<!-- 검색어 없을 경우
+							<div class="no-data"><p class="message">최근 검색어가 없습니다.</p></div>
+							-->
+						</div><!--// search-bottom -->
+						<div class="popular-search">
+							<div class="tit"><h2>인기 검색어</h2></div>
+							<div class="search-rank">
+								<ol class="list">
+									<li>
+										<a href="#">
+											<span class="word text-elps">닭가슴살 스테이크</span>
+											<span class="state text-green">NEW</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="word text-elps">다이어트 도시락</span>
+											<span class="state">-</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="word text-elps">핫도그</span>
+											<span class="state text-green">NEW</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="word text-elps">패키지</span>
+											<span class="state text-primary"><i class="ico-arrfill-up"><span class="blind">up</span></i>4</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="word text-elps">맛있닭 스팀</span>
+											<span class="state text-blue"><i class="ico-arrfill-down"><span class="blind">down</span></i>1</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="word text-elps">맛있닭 스팀</span>
+											<span class="state text-blue"><i class="ico-arrfill-down"><span class="blind">down</span></i>1</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="word text-elps">맛있닭 스팀</span>
+											<span class="state text-blue"><i class="ico-arrfill-down"><span class="blind">down</span></i>1</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="word text-elps">맛있닭 스팀</span>
+											<span class="state text-blue"><i class="ico-arrfill-down"><span class="blind">down</span></i>1</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="word text-elps">맛있닭 스팀</span>
+											<span class="state text-blue"><i class="ico-arrfill-down"><span class="blind">down</span></i>1</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="word text-elps">맛있닭 스팀</span>
+											<span class="state text-blue"><i class="ico-arrfill-down"><span class="blind">down</span></i>1</span>
+										</a>
+									</li>
+								</ol>
+							</div><!--// search-rank -->
+						</div>
+						<div class="recommend-search">
+							<div class="tit">
+								<h2>추천검색어</h2>
+							</div>
+							<ul class="srch-list">
+								<li>
+									<div class="srch-keyword">
+										<a href="#" class="txt">잇메이트</a>
+									</div>
+								</li>
+								<li>
+									<div class="srch-keyword">
+										<a href="#" class="txt">잇메이트</a>
+									</div>
+								</li>
+								<li>
+									<div class="srch-keyword">
+										<a href="#" class="txt">단백천하</a>
+									</div>
+								</li>
+								<li>
+									<div class="srch-keyword">
+										<a href="#" class="txt">스파클링</a>
+									</div>
+								</li>
+								<li>
+									<div class="srch-keyword">
+										<a href="#" class="txt">맛있닭 스팀</a>
+									</div>
+								</li>
+								<li>
+									<div class="srch-keyword">
+										<a href="#" class="txt">다이어트 도시락</a>
+									</div>
+								</li>
+							</ul>
+						</div><!--// search-bottom -->
+					</div><!--// search-layer -->
+				</div><!--// header-search -->
+				<div class="search-result">
+                    <div class="search-none">
+                        <p class="text"><b class="text-primary">'sdfsdf'</b>에 대한 검색결과가 없습니다.</p>
+                        <span class="desc">검색어가 올바른지 확인 후, 다시 입력해주세요.</span>
+                    </div>
+                    <div class="new-prod">
+                        <div class="title-area">
+                            <h3 class="title">오늘의 신상품</h3>
+                            <div class="right-item"><a href="#" class="btn-link-txt3"><span>더보기</span><i class="ico-arr-right"></i></a></div>
+                        </div>
+                        <div class="swiper-container">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <div class="prd-item type-sm">
+                                        <div class="img"><img src="../../images/_samples/@sample_200x200.png" alt="기획전 특가 상품 이미지"></div>
+                                        <div class="desc-bottom">
+                                            <em class="prod-brand">맛있닭</em>
+                                            <p class="prod-name">명실상부 판매1위!</p>
+                                            <span class="price"><em class="num">13,900</em>원</span>
+                                            <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+                                            <div class="rating">
+                                                <i class="ico-bl-star"></i><span class="text-guide-sm2">5점</span><span class="text-guide-sm">(1415)</span><br>
+                                            </div>
+                                        </div><!--// desc-bottom -->
+                                        <a href="#" class="btn-blank"><span class="blind">자세히 보기</span></a>
+                                    </div><!--// prd-item -->
+                                </li><!--// swiper-slide -->
+                                <li class="swiper-slide">
+                                    <div class="prd-item type-sm">
+                                        <div class="img"><img src="../../images/_samples/@sample_200x200.png" alt="기획전 특가 상품 이미지"></div>
+                                        <div class="desc-bottom">
+                                            <em class="prod-brand">맛있닭</em>
+                                            <p class="prod-name">명실상부 판매1위! 닭가슴살 스테이크 &amp; 소스증정</p>
+                                            <span class="price"><em class="num">13,900</em>원</span>
+                                            <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+                                            <div class="rating">
+                                                <i class="ico-bl-star"></i><span class="text-guide-sm2">5점</span><span class="text-guide-sm">(1415)</span><br>
+                                            </div>
+                                        </div><!--// desc-bottom -->
+                                        <a href="#" class="btn-blank"><span class="blind">자세히 보기</span></a>
+                                    </div><!--// prd-item -->
+                                </li><!--// swiper-slide -->
+                                <li class="swiper-slide">
+                                    <div class="prd-item type-sm">
+                                        <div class="img"><img src="../../images/_samples/@sample_200x200.png" alt="기획전 특가 상품 이미지"></div>
+                                        <div class="desc-bottom">
+                                            <em class="prod-brand">맛있닭</em>
+                                            <p class="prod-name">명실상부 판매1위!</p>
+                                            <span class="price"><em class="num">13,900</em>원</span>
+                                            <em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+                                            <div class="rating">
+                                                <i class="ico-bl-star"></i><span class="text-guide-sm2">5점</span><span class="text-guide-sm">(1415)</span><br>
+                                            </div>
+                                        </div><!--// desc-bottom -->
+                                        <a href="#" class="btn-blank"><span class="blind">자세히 보기</span></a>
+                                    </div><!--// prd-item -->
+                                </li><!--// swiper-slide -->
+                            </ul><!--// swiper-wrapper -->
+                            <div class="swiper-pagination"></div>
+                        </div><!--// swiper-container -->
+                    </div>
+				</div>
+
+			</div>
+		</div>
+	</div><!--// layer-pop  -->
+</div><!--// layer-pop-wrap #popupSample-02 -->
+<!-- ========== 팝업 영역 ========== -->
+</body>
+</html>

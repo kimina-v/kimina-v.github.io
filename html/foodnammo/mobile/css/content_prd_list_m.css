@@ -3,8 +3,8 @@
 ========================================================*/
 /**** Banner item ****/
 .bnr-item{position:relative}
-.bnr-item .tit{display:block; font-size:17px; font-weight:700; margin-top:17px;}
-.bnr-item .desc{display:block; font-size:14px; color:#808080; margin-top:10px;}
+.bnr-item .tit{display:block; font-size:14px; font-weight:700; margin-top:12px;}
+.bnr-item .desc{display:block; font-size:13px; color:#808080; margin-top:5px;}
 
 /**** Product item ****/
 .prd-item,
@@ -30,6 +30,9 @@
 .floating-lt{position:absolute; left:0; top:0; z-index:1;}
 .floating-rb{position:absolute; bottom:5px; right:15px; z-index:1;}
 
+.prd-item .desc-bottom .rating-simply.floating-rb,
+.prd-item .desc-bottom .rating.floating-rb{position:absolute;  bottom:4px; right:15px;}
+
 .prd-item .desc-form + .btn-blank{height:calc(100% - 40px)}
 
 .prd-item.type-sm .tit{font-size:14px;line-height:20px;  max-height:40px; /*height:40px;*/ height:auto; }
@@ -40,6 +43,9 @@
 .prd-item.type-sm .price{margin-bottom:5px;vertical-align: top;}
 .prd-item.type-sm .price > .num{font-size:16px;}
 .prd-item.type-sm .rating{margin-top:5px;}
+
+.prd-item .top-badge{position:absolute; top:0; left:0;}
+.prd-item .top-badge > img{height:20px; vertical-align:top;}
 
 /* 간격 */  
 /* .prd-item .img + .timer{margin-top:18px;} */
@@ -59,27 +65,8 @@
 .prd-item-list li .btn-x-sm{position:absolute; top:7px; right:7px}
 
 .prd-info-area{position:relative;}
-.prd-info-area .prd-item-name{display:block; margin-bottom:15px; font-size:14px;  color:#333}
-.prd-info-area.option-line{position:relative; padding-left:0; padding-top:15px;}
-.prd-info-area.option-line .inner{padding-left:15px;}
-.prd-info-area.option-line:before{display:block;  content: ''; width: calc(100% - 85px); height: 1px; background: #eee; position: absolute; top: 0; right: 0;}
-.prd-info-area.option-line:after{position:absolute; top:20px; left:0; display:block; content:''; width:8px; height:8px; border:2px solid #ccc; border-top:0; border-right:0;}
-
 .prd-info-area .inner{position:relative; display:table; table-layout:fixed; width:100%;}
-.prd-info-area .inner + .inner{padding-left:70px; table-layout: auto;}
-.prd-info-area .inner + .inner:before{display:block; content:''; width:calc(100% - 85px); height:1px; background:#eee; position:absolute; top:0; right:0}
-.prd-info-area .inner .column:only-child{width:100%;}
-
 .prd-info-area .column{display:table-cell; vertical-align:top; text-align:center;}
-.prd-info-area .added-btn{padding:0 0 0; text-align:center; margin-bottom:0}
-.prd-info-area .btn-x-sm{position:absolute; top:5px; right:-10px;}
-.prd-info-area.option-line .btn-x-sm{top:-10px;}
-.prd-info-area .inner-bottom{position:relative; line-height:1; vertical-align:top;}
-.prd-info-area .inner-bottom .price{font-size:11px; font-weight:bold;}
-.prd-info-area .inner-bottom .price .num{font-size:14px;}
-.prd-info-area .inner-bottom .btn-sq-sm2{ vertical-align:top;}
-.order-item-box .prd-tab-content .added-btn{padding:0 15px 20px;}
-.added-btn .btn-basic-md{width:100%}
 
 /* column */
 .prd-info-area .column.check{width:35px; vertical-align:middle; padding:0 0 0 1px; text-align:left;}
@@ -99,6 +86,7 @@
 .prd-info-area .column.tit .tit.type2{padding-right:25px}
 .prd-info-area .column.tit .brand-name{color:#3A4C67; margin-bottom:5px; font-size:11px;}
 .prd-info-area .column.tit .desc{font-size:13px; color: #666; /*margin-bottom:15px;*/}
+.prd-info-area .column.tit .desc ~ [class*="imgbadge-dlv-"]{margin-top:7px}
 .prd-info-area .column.tit .price-item > li{font-size:14px; color:#666; display:inline-block; vertical-align:top;}
 /* .prd-info-area .column.tit .price-item > li:not(:first-child):before{display:inline-block; content:'·'; vertical-align:top; margin:2px 5px 0 3px; font-size:12px; color:#666} */
 .prd-info-area .column.tit .price-item > li.dlv-type{margin-left:5px}
@@ -117,27 +105,21 @@
 .prd-info-area .column.w110{width:110px;}
 .prd-info-area .column.w115{width:115px;}
 .prd-info-area .column.img [class^="imgbadge-dlv"]{margin-top:5px;}
-
-
-/* 삭제 예정 */
-/* .prd-info-area .column.tit .price{font-size:14px; color:#666;}
-.prd-info-area .column.tit .price .num{font-size:16px; }
-.prd-info-area .column.tit .price .ea:after{display:inline-block; content:'·'; vertical-align:top; margin:2px 0 0 5px; font-size:12px; color:#666}  */
-/* // 삭제 예정 */
-
 .prd-info-area .column.price > .num{font-size:16px; color:#333; font-weight:700;}
 .prd-info-area .column.point{font-size:15px;}
-.prd-info-area.option-line .column.img{width:56px; height:56px;}
-.prd-info-area.option-line .column.tit{position:relative; padding:0 0 15px 15px}
-.prd-info-area.option-line .column.tit .tit{font-size:14px; color:#666;}
+
+.prd-info-area .column.img .badge{display:block; position:absolute; top:4px; left:4px; width:62px; height:62px; color:#fff; background: rgba(224, 95, 95, 0.7); border-radius:100%; font-size:13px; line-height:60px}
+
+
+
 /* type-sm */
-.prd-info-area.type-sm .column.img{width:60px; height:60px; overflow:hidden;}
+/* .prd-info-area.type-sm .column.img{width:60px; height:60px; overflow:hidden;}
 .prd-info-area.type-sm .column.tit .tit{font-size:13px;}
 .prd-info-area.type-sm .column.tit .tit > .text-elps2{max-height:37px;}
 .prd-info-area.type-sm .column.tit .text-guide-sm{display:block;}
 .prd-info-area.type-sm .column.tit .price-item > li{font-size:12px; color:#333; font-weight:700;}
 .prd-info-area.type-sm .column.tit .price-item > li .num{font-size:15px; color:#333; font-weight:700; }
-.prd-info-area.type-sm .column.point{width:75px; font-size:12px; color:#666}
+.prd-info-area.type-sm .column.point{width:75px; font-size:12px; color:#666} */
 
 /* 삭제 예정 */
 /* .prd-info-area.type-sm .column.tit .price{color:#333; font-size:12px; font-weight:700;}

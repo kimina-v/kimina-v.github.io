@@ -145,6 +145,15 @@ $(function () {
 
      //상세검색 
      if ($('.detail-search').length > 0) { detailSearch(); }
+
+     //오늘의 신상품 
+     if ($('.new-prod').length > 0) { newProdSlide(); }
+
+     //이미지보기 팝업 스와이프 
+     if ($('.img-auto-slide').length > 0) { imgAutoSlide(); }
+     
+     //메시지     
+     if($('.message-swiper').length>0){messageSlide();}
 });
 
 
@@ -719,6 +728,18 @@ function toggleCnt () {
     toggleLockItem.find('.btn-close').on('click',function(){
         $(this).closest('.detail-view').addClass('hide').closest('.ui-toggle').removeClass('on').find('.ui-toggle-btn').removeClass('toggle-on');
     });
+
+    if($('.ui-toggle').hasClass('admin-memo')){
+        if($('.admin-memo li').length > 1){
+            $('.admin-memo li:first-child ~ li').addClass('ui-toggle-content hide')
+        }
+        if($('.admin-memo li').length == 1){
+            $('.admin-memo').removeClass('ui-toggle');
+        }
+        $('.text-more').on('click',function(){
+            $(this).css('display','none').closest('li').find('.text').removeClass('off')
+        })
+    }
 
 }
 
@@ -1866,3 +1887,60 @@ function detailSearch(){
     })
 }
 
+//오늘의 신상품
+function newProdSlide(){
+    var newProdSlideSwiper = new Swiper('.new-prod .swiper-container', {
+        slidesPerView : 2,
+        spaceBetween : 14,
+        slidesPerGroup : 2,
+        loop: true,
+        loopFillGroupWithBlank : true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        }
+    });
+
+}
+
+//이미지보기 슬라이드
+function imgAutoSlide(){
+    var imgAutoSwiper = new Swiper('.img-auto-slide .swiper-container', {
+        autoHeight: true,
+        spaceBetween : 1,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        }
+    })
+}
+
+
+//메시지 카드
+function messageSlide(){
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 4,
+        // slidesPerView: 5,
+        slidesPerView: 'auto',
+        observer: true,
+        observeParents: true
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+        spaceBetween: 15,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+            swiper: galleryThumbs
+        }
+    });
+    var $galleryThumbTarget = $('.gallery-thumbs').find('.swiper-wrapper .swiper-slide');
+    $galleryThumbTarget.click(function(){
+        galleryThumbs.slideTo($(this).index() - 1)			
+    })
+}

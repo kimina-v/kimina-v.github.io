@@ -34,7 +34,8 @@
 
 .prd-centerd-view1{padding:0 25px;}
 .prd-view2{padding:0 15px}
-.prd-arr-view{padding:0 15px 0 15px}
+.prd-arr-view,
+.prd-arr-view2{padding:0 15px 0 15px}
 .prd-arr-view .swiper-slide{}
 .prd-arr-view .btn-prd-more{display:block; margin:50px 0 0 20px;  width:50px; height:50px; overflow:hidden; border-radius:100%; background:#f2f2f2; text-align:center; padding:18px 0}
 .btn-prd-more .ico-slide-more{display:inline-block; width:18px; height:11px; background:#f2f2f2 url("../images/icon/ico_arrows_m.png") left bottom; background-size:25px;}

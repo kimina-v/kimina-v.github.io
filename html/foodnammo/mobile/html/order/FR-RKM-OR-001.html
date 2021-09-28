@@ -109,7 +109,7 @@
 							</table>
 						</div> -->
 						<!--// lineless-table -->
-
+						
 						<p class="info-guide">정보변경은 <span class="text-primary">마이랭닭 &gt; 회원정보수정</span>에서 가능합니다.</p>
 					</div><!--// frame-inner -->
 				</div><!--// order-info -->
@@ -132,7 +132,14 @@
 						<!-- 회원일때 -->
 						<ul class="order-address-info">
 							<li class="name">홍길동<em class="badge-point">기본배송지</em></li>
-							<li class="addr">서울특별시 동대문구 신설동 308-190 남산더힐 B동 (베르빌오피스텔) </li>
+							<li class="addr">
+								서울특별시 동대문구 신설동 308-190 남산더힐 B동 (베르빌오피스텔)
+								<em class="imgbadge-dlv-exp"><span class="blind">특급배송</span></em>
+								<!--
+									<em class="imgbadge-dlv-free"><span class="blind">무료배송</span></em>
+									<em class="imgbadge-dlv-normal"><span class="blind">일반배송</span></em>
+								-->
+							</li>
 							<li class="tel">010-1234-5678</li>
 						</ul>
 						<!--// 회원일때 -->
@@ -192,6 +199,15 @@
 							</table>
 						</div> -->
 						<!--// lineless-table -->
+
+						<div class="dlv-guide-box">
+							<div class="inner">
+								<div class="message">
+									<p class="tit"><strong>앗!</strong> 특급배송이 안되는 배송지에요. </p>
+									서비스 지역을 열심히 확장하고 있으니 조금만 더 기다려주세요.
+								</div>
+							</div>
+						</div>
 					</div><!--// frame-inner -->
 				</div><!--// order-info -->
 
@@ -204,10 +220,13 @@
 						<div class="right-item1">
 							<div class="dlv-tab radio-box-group">
 								<div class="custom-radio">
-									<input type="radio" id="radio-2-4" class="radio-box-type2" name="radio-item-2-2" checked><label for="radio-2-4"><i class="ico-txt-exp"></i><span class="blind">특급배송</span></label>
+									<input type="radio" id="radio-2-4" class="radio-box-type2" name="radio-item-2-2"><label for="radio-2-4"><i class="ico-txt-exp"></i><span class="blind">특급배송</span></label>
 								</div>
 								<div class="custom-radio">
-									<input type="radio" id="radio-2-5" class="radio-box-type2" name="radio-item-2-2"><label for="radio-2-5">일반배송</label>
+									<input type="radio" id="radio-2-5" class="radio-box-type2 ui-normal-dlv" name="radio-item-2-2" checked><label for="radio-2-5">일반배송</label>
+								</div>
+								<div class="dlv-tipbox-bottom type2">
+									<p class="txt">특급배송 신청하면 더 빨리 받아 볼 수 있어요!</p>
 								</div>
 							</div><!--// radio-box-group -->
 						</div><!--// right-item1 -->
@@ -248,15 +267,6 @@
 											<strong class="prd-item-name"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></strong>
 											<div class="inner">
 												<div class="column img"><a href="#"><img src="../../images/_samples/@sample_200x200.png" alt="상품이미지" /></a></div>
-												<div class="column tit">
-													<p class="desc">혼합 5팩(1팩당 3,900원)</p>
-													<ul class="price-item">
-														<li class="price">1,390원</li>
-														<li class="ea">수량 1개</li>
-													</ul>
-												</div><!--// column -->
-											</div><!--// inner -->
-											<div class="inner">
 												<div class="column tit">
 													<p class="desc">혼합 5팩(1팩당 3,900원)</p>
 													<ul class="price-item">
@@ -317,15 +327,6 @@
 											<strong class="prd-item-name"><a href="#">맛있닭 NEW 다이어트 도시락 5종 혼합 210g</a></strong>
 											<div class="inner">
 												<div class="column img"><a href="#"><img src="../../images/_samples/@sample_200x200.png" alt="상품이미지" /></a></div>
-												<div class="column tit">
-													<p class="desc">혼합 5팩(1팩당 3,900원)</p>
-													<ul class="price-item">
-														<li class="price">1,390원</li>
-														<li class="ea">수량 1개</li>
-													</ul>
-												</div><!--// column -->
-											</div><!--// inner -->
-											<div class="inner">
 												<div class="column tit">
 													<p class="desc">혼합 5팩(1팩당 3,900원)</p>
 													<ul class="price-item">
@@ -521,7 +522,7 @@
 
 								<ul class="bl-list-type1">
 									<li>공동현관 출입 불가 시, <span class="text-primary">공동현관 또는 경비실에 배송</span>될 수 있습니다.</li>
-									<li>분실될 우려가 있으니, 공동현관 출입 방법을 정확히 남겨주세요.</li>						
+									<li>분실될 우려가 있으니, 공동현관 출입 방법을 정확히 남겨주세요.</li>		
 									<li>공동현관 비밀번호는 배송 완료 후 안전하게 삭제됩니다.</li>
 								</ul>
 							</div><!--// request-detail -->
@@ -1361,6 +1362,33 @@ $(function () {
 	uiRadioBtn.on('click', function () {
 		uiCont.eq(uiRadioBtn.index(this)).addClass('active').siblings().removeClass('active');
 	})
+
+
+	// [Dev] 20210915 특급배송 선택시 툴팁, 토스트팝업
+	normalDlvCheck = $('.ui-normal-dlv');
+	dlvTooltip = $('.dlv-tipbox-bottom');
+
+	if ( normalDlvCheck.is(':checked') ) {
+		dlvTooltip.removeClass('hide')
+	}
+
+	$('.radio-box-group').find('.radio-box-type2').on('click', function () {
+		if ( $(this).hasClass('ui-normal-dlv') ) {
+			dlvTooltip.removeClass('hide')
+		} else {
+			dlvTooltip.addClass('hide')
+			openToastPop ()
+		}
+	});	
+	
+	function openToastPop () {
+		containerWrap = $('.container');
+		containerWrap.append('<div class="toast-pop"><div class="message"><p class="txt">특급배송으로 변경되었습니다.</p></div></div>')
+
+		setTimeout(function () {
+			closeToastPop ()
+		},1000)
+	}
 }); 
 </script>
 <!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->

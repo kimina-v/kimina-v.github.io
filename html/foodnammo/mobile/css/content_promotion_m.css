@@ -236,3 +236,8 @@ font-weight: bold;}
 .event-attend .calendar .calendar-body table tbody td span.check-on{position:relative}
 .event-attend .calendar .calendar-body table tbody td span.check-on:before{width:100%;height:100%;border-radius:50%;background:#ff7f56;position:absolute;top:0;left:0;content:""}
 .event-attend .calendar .calendar-body table tbody td span.check-on:after{content:"";width:6px;height:13px;border-right:3px solid #fff;border-bottom:3px solid #fff;transform:rotate(45deg);position:absolute;left:14px;top:8px}
+
+/*  룰렛  */
+.roulette-cont{position:relative}
+.roulette-cont .pointer{position:absolute;top:22%;left:calc(50% - 15px);width:30px;height:42px;background:url(../images/img/roulette_pointer.png) no-repeat 0 0/100% auto;z-index:99}
+.roulette-cont figure{position:absolute;width:calc(100% - 50px);left:50%;top:25%;transform:translateX(-50%)}

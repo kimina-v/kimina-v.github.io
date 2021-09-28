@@ -36,12 +36,16 @@
 						<li class="current"><a href="#"><span>성분별</span></a></li>
                     </ul>
                 </div><!--// tab-menu -->
-				<div class="swiper-container">
-					<ul class="swiper-wrapper">
-						<li><a href="#"><span>칼로리</span></a></li>
+				<div class="ranking-tab-swiper swiper-container">
+					<ul class="swiper">
+						<li class="current"><a href="#"><span>칼로리</span></a></li>
+						<li>|</li>
 						<li><a href="#"><span>단백질</span></a></li>
+						<li>|</li>
 						<li><a href="#"><span>나트륨</span></a></li>
+						<li>|</li>
 						<li><a href="#"><span>지방</span></a></li>
+						<li>|</li>
 						<li><a href="#"><span>탄수화물</span></a></li>
 					</ul>
 				</div>
@@ -187,7 +191,7 @@ $( document ).ready(function() {
 	var $ranking_tab_swiper = $('.ranking-tab-swiper .swiper-wrapper .swiper-slide a');
 		$ranking_tab_swiper.click(function(){
 			var target = $(this).parent();
-			ranking_tab_swiper.slideTo($(this).parent().index()-1)			
+			ranking_tab_swiper.slideTo($(this).parent().index()-1)
 		})
 });
 </script>

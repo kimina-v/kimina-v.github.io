@@ -122,3 +122,9 @@
 .inquery-form .title-box-container{text-align: center;}
 .inquery-form .title-box-container .img-qa{position: relative;display: inline-block;width:60px;height:58px;background:url(../images/icon/ico_qa.png)no-repeat;margin:20px 0 }
 .inquery-form .title-box-container .txt{font-size:15px; font-weight:400; color:#333;vertical-align:top;line-height:26px;}
+
+.terms-content-wrap .tab-line-type{margin:-30px -20px 0}
+.tab-line-type{display:flex}
+.tab-line-type li{flex:1;text-align:center}
+.tab-line-type li a{display:block;width:100%;height:50px;line-height:50px;box-sizing:border-box;font-size:15px;color:#999;border-bottom:2px solid #fff}
+.tab-line-type li.current a{color:#333;border-bottom-color:#333;font-weight:500}

@@ -21,7 +21,8 @@
 .goods-info-area .brand-info .flag{display:inline-block;border:1px solid #677ea0;border-radius:1px;box-sizing:border-box;height:16px;line-height:16px;padding:0 5px;font-size:10px}
 .goods-info-area .goods-tit{margin-top:4px;font-size:16px}
 .goods-info-area .rating{margin-top:20px}
-.goods-info-area .rating .text-guide-sm{color:#666;position:relative;top:-1px}
+.goods-info-area .rating .text-guide-sm{color:#666;position:relative; font-size:12px; color:#999}
+.goods-info-area .rating .score{font-size:12px; color:#555}
 
 .goods-price{position:relative}
 .goods-price .sale{display:inline-block;font-size:24px;color:#ff6001;font-family:'Roboto'}
@@ -624,7 +625,7 @@
 .gift-event-wrap .swiper-slide{text-align:center;padding:0 30px}
 .gift-event-wrap .swiper-slide figure{width:calc(100vw - 140px);margin:0 auto;border:1px solid #eee}
 .gift-event-wrap .swiper-slide .title{display:block;font-size:18px;line-height:24px;margin-top:14px}
-.gift-event-wrap .swiper-slide .title_desc{display:block;margin-top:6px;color:#666}
+.gift-event-wrap .swiper-slide .title-desc{display:block;margin-top:6px;color:#666}
 .gift-event-wrap .swiper-next{position:absolute;width:26px;height:32px;top:calc(50% - 16px);right:10px;z-index:9;box-sizing:border-box}
 .gift-event-wrap .swiper-prev{position:absolute;width:26px;height:32px;top:calc(50% - 16px);left:12px;z-index:9;box-sizing:border-box}
 .gift-event-wrap .swiper-prev:before{content:"";width:14px;height:14px;border-left:1px solid #999;border-bottom:1px solid #999;display:inline-block;transform:rotate(45deg)}

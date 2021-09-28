@@ -47,8 +47,10 @@
                 
                 <div class="star-rating-bar">
                     <h4 class="quest">상품이 고객님 마음에 쏙- 들었나요?</h4>
-                    <div id="rate" class="star-rating"></div>
-                    <p class="rating-message"><span class="num">5</span>점 최고에요</p>
+                    <!-- <div id="rate" class="star-rating"></div> -->
+                    <!-- [Dev] 20210924 수정 -->
+					<div class="rateit" id="rateit" data-rateit-value="5" data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5" data-rateit-starwidth="48" data-rateit-starheight="40"></div>
+					<p class="rating-message"><span class="num">5</span>점 최고에요</p>
                     <!--
                         message :
                         5점 최고에요 / 4점 좋아요 / 3점 보통이에요 / 2점 그저그래요 / 1점 별로에요
@@ -122,9 +124,7 @@
                 </div>
             </div>
 		</div><!--// content-wrap --> 
-		<!-- ## 사이드 배너 :: side-quick-area  -->
-		<script>include.sidequick();</script>
-		<!--// ## 사이드 배너 ::  side-quick-area  -->
+	
         <!-- 하단 고정 메뉴 -->
 		 <script>include.bottomNav();</script>
 		 <!--// 하단 고정 메뉴 -->
@@ -136,25 +136,49 @@
 	<!--// ========== 공통 푸터 :: footer ========== -->
     
 <!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->
-<script src="../../../common/js/lib/jquery.rateyo.min.js"></script>
+<!-- [Dev] 20210924 js 변경함 -->
+<!-- <script src="../../../common/js/lib/jquery.rateyo.min.js"></script> -->
+<script src="../../../common/js/lib/jquery.rateit.min.js"></script>
 <script>
 $(function () {
-	// 별점 클릭시 점수, 메세지 표시
-	$('#rate').rateYo().on('rateyo.set', function (e, data) {
-		if ( data.rating >= 4.5 ) {
-			$(this).next('.rating-message').html('<span class="num">' + data.rating + '</span>점 최고에요')	
-		} else if ( data.rating >= 3.5 ) {
-			$(this).next('.rating-message').html('<span class="num">' + data.rating + '</span>점 좋아요')	
-		} else if ( data.rating >= 2.5 ) {
-			$(this).next('.rating-message').html('<span class="num">' + data.rating + '</span>점 보통이에요')	
-		} else if ( data.rating >= 1.5 ) {
-			$(this).next('.rating-message').html('<span class="num">' + data.rating + '</span>점 그저그래요')	
-		} else if ( data.rating >= 0.5 ) {
-			$(this).next('.rating-message').html('<span class="num">' + data.rating + '</span>점 별로에요')	
-		} else if ( data.rating >= 0 ) {
-			$(this).next('.rating-message').html('<span class="num">' + data.rating + '</span>점')	
+
+    // [Dev] 20210924 수정 : 별점 클릭시 점수, 메세지 표시 (jquery.rateit)
+	$("#rateit").bind('rated', function (event, value) { 
+		if ( value >= 4.5 ) {
+			$(this).next('.rating-message').html('<span class="num">' + value + '</span>점 최고에요')	
+		} else if ( value >= 3.5 ) {
+			$(this).next('.rating-message').html('<span class="num">' + value + '</span>점 좋아요')	
+		} else if ( value >= 2.5 ) {
+			$(this).next('.rating-message').html('<span class="num">' + value + '</span>점 보통이에요')	
+		} else if ( value >= 1.5 ) {
+			$(this).next('.rating-message').html('<span class="num">' + value + '</span>점 그저그래요')	
+		} else if ( value >= 0.5 ) {
+			$(this).next('.rating-message').html('<span class="num">' + value + '</span>점 별로에요')	
+		} else if ( value >= 0 ) {
+			$(this).next('.rating-message').html('<span class="num">' + value + '</span>점')	
 		}
 	});
+
+	$("#rateit").bind('reset', function () {
+		$(this).next('.rating-message').html('<span class="num">0</span>점')
+	});
+
+	// [Dev] 20210924  삭제 :  별점 클릭시 점수, 메세지 표시
+	// $('#rate').rateYo().on('rateyo.set', function (e, data) {
+	// 	if ( data.rating >= 4.5 ) {
+	// 		$(this).next('.rating-message').html('<span class="num">' + data.rating + '</span>점 최고에요')	
+	// 	} else if ( data.rating >= 3.5 ) {
+	// 		$(this).next('.rating-message').html('<span class="num">' + data.rating + '</span>점 좋아요')	
+	// 	} else if ( data.rating >= 2.5 ) {
+	// 		$(this).next('.rating-message').html('<span class="num">' + data.rating + '</span>점 보통이에요')	
+	// 	} else if ( data.rating >= 1.5 ) {
+	// 		$(this).next('.rating-message').html('<span class="num">' + data.rating + '</span>점 그저그래요')	
+	// 	} else if ( data.rating >= 0.5 ) {
+	// 		$(this).next('.rating-message').html('<span class="num">' + data.rating + '</span>점 별로에요')	
+	// 	} else if ( data.rating >= 0 ) {
+	// 		$(this).next('.rating-message').html('<span class="num">' + data.rating + '</span>점')	
+	// 	}
+	// });
 
 });
 </script>

@@ -78,12 +78,25 @@ function mainItemSlide () {
             touchRatio: true,
         }
 
+        var slideSetArr2 = {
+            slidesPerView: 1.3,
+            loop: false,
+            spaceBetween: 10,
+            touchRatio: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+        }
+
         if ( $this.hasClass('prd-centerd-view1') ) {
             var itemSwiper = new Swiper('.item-slide' + index, slideCenterSet1)
         } else if ( $this.hasClass('prd-view2') ) {
             var itemSwiper = new Swiper('.item-slide' + index, slideSet2)
         } else if ( $this.hasClass('prd-arr-view') ) {
             var itemSwiper = new Swiper('.item-slide' + index, slideSetArr)
+        } else if ( $this.hasClass('prd-arr-view2') ) {
+            var itemSwiper = new Swiper('.item-slide' + index, slideSetArr2)
         }
         
     });
