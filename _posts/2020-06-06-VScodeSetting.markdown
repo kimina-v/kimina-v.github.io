@@ -80,6 +80,11 @@ title: VScode Setting
     <li><code class="language-plaintext highlighter-rouge">ActiveFileInStatusBar</code> 선택한 파일의 경로를 작업관리창에 표시해주는 기능</li>
     <li><code class="language-plaintext highlighter-rouge">Import Cost</code> 이 확장은 가져온 패키지의 크기를 편집기에 인라인으로 표시</li>
     <li><code class="language-plaintext highlighter-rouge">Auto Close Tag</code> 자동으로 태그 닫기</li>
+    <li><code class="language-plaintext highlighter-rouge">GitLens (Insiders)</code> git 사용시 작업자 표시</li>
+    <li><code class="language-plaintext highlighter-rouge">Path Intellisense</code> 경로</li>
+    <li><code class="language-plaintext highlighter-rouge">indend-rainbow</code> 공백 컬러</li>
+    <li><code class="language-plaintext highlighter-rouge">color highlight</code> 컬러코드 라인</li>
+    <li><code class="language-plaintext highlighter-rouge">better comments</code> 주석 컬러풀하게 (!: ?: todo:)</li>
 </ul>
 
 <div class="post-stitle">단축키</div>
