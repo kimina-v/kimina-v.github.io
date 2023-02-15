@@ -1,0 +1,871 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JYD</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <style>
+        table{border:1px solid #999;width:100%;padding:0;margin:0;border-collapse:collapse;}
+        table tr th,
+        table tr td{border-right:1px solid #ddd;border-bottom:1px solid #ddd;text-align:center;padding:10px;font-size:13px;background:#eee;}
+        table tr.lined *{border-bottom:1.5px solid #000;}
+        .top,
+        table tr.top th,
+        table tr.top td{background:#fcf3cf;}
+        .skirt,
+        table tr.skirt th,
+        table tr.skirt td{background:#fad8d8;}
+        .bottom,
+        table tr.bottom th,
+        table tr.bottom td{background:#d4efdf;}
+        .jumper,
+        table tr.jumper th,
+        table tr.jumper td{background:#fbeee6;}
+        .ops,
+        table tr.ops th,
+        table tr.ops td{background:#d7bde2;}
+        .set,
+        table tr.set th,
+        table tr.set td{background:#eaf2f8;}
+        table tr.ss th,
+        table tr.ss td{background:#d6fdff;}
+        table tr.fw th,
+        table tr.fw td{background:#fff0bd;}
+        table tr th:nth-child(2){border-right:2psolid #999}
+        table tr td:last-child{border-right:none;}
+        table tr:last-child *{border-bottom:none;}
+        .group{padding:50px;}
+        .group ~ .group{border-top:1px solid #ddd;}
+        .title{cursor:pointer;}
+        .c{color:#f09;font-weight:bold;}
+        .n{color:#f00;font-weight:bold;text-align:left;padding-left:10px;}
+        .n span{font-size:12px;color:#333;display:inline-block;margin-left:10px;}
+        .num{text-align:right;margin-top:-38px;padding-bottom:20px;}
+        .num > div, .total > div{display:inline-block;}
+        .num span, .total span{font-weight:bold;display:inline-block;margin-left:5px;}
+        .total{display:inline-block;}
+        .info-wrap{display:inline-block;margin-left:100px}
+        .info-wrap span{display:inline-block;padding:4px 8px}
+        .comp{padding:50px}
+        /* .comp table{display:none;} */
+        .fixed-group{position:fixed;top:0;left:0;width:100%;background:#fff;padding:20px 50px;box-shadow:0 5px 10px rgba(0,0,0,0.4);}
+        @media screen and (max-width: 768px) {
+            *{font-size:11px !important;}
+            .group{padding:10px;}
+            .num{margin-top:-26px;}
+        }
+        .kjy, .cloud{padding-top:80px}
+        .menu a{display:inline-block;padding:0 20px;color:#333;text-decoration:none;font-size:16px !important;font-weight:bold}
+        h1{font-size:15px !important;color:green}
+    </style>
+    <!-- 판매 -->
+    <div class="sellWrap">
+        <div class="sell group">
+            <p class="title">판매</p>
+            <div class="num s-num">
+                <div class="n-total">TOTAL:<span></span></div>
+                <div class="n-sel">SEL:<span></span></div>
+                <div class="n-no">NO:<span></span></div>
+                <div class="n-remain">REMAIN:<span></span></div>
+            </div>
+            <table class="list">
+                <colgroup>
+                    <col style="width:25%" span="4">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>캐롤 ops</th>
+                        <td>파랑</td>
+                        <td>4y</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>로디니 상하</th>
+                        <td>쥐돌이</td>
+                        <td>104</td>
+                        <td></td>
+                    </tr>
+                    <tr class="">
+                        <th>보보 니트</th>
+                        <td>체리</td>
+                        <td>4</td>
+                        <td>38,900</td>
+                    </tr>
+                    <tr class="">
+                        <th>수어플럼 블라</th>
+                        <td>깅엄체크</td>
+                        <td>6</td>
+                        <td>189,000</td>
+                    </tr> 
+                    
+                    <tr class="">
+                        <th>캐롤 ops</th>
+                        <td>보라 패딩</td>
+                        <td>6y</td>
+                        <td>115,700</td>
+                    </tr>
+
+                    <tr class="">
+                        <th>미샤 치마</th>
+                        <td>연핑</td>
+                        <td>6-7</td>
+                        <td>219,010</td>
+                    </tr>
+                    <tr>
+                        <th>보보 롱치마</th>
+                        <td>사선</td>
+                        <td>4</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>타오 치마</th>
+                        <td>데이지</td>
+                        <td>3?4?</td>
+                        <td></td>
+                    </tr>
+                    <!--
+                    <tr class="fw bottom">
+                        <th>휴고 레깅스</th>
+                        <td>라즈베리</td>
+                        <td>4y</td>
+                        <td>19,400</td>
+                    </tr>
+                    -->
+                    <!-- 
+                    <tr class="fw">
+                        <th>보보 s</th>
+                        <td>다이아</td>
+                        <td>2</td>
+                        <td>3 X</td>
+                    </tr>
+                    -->
+                </tbody>
+            </table>
+        </div>
+        <div class="comp group">
+            <p class="title">판매완료</p>
+            <div class="num cp-num">
+                <div class="cp-total">TOTAL:<span></span></div>
+            </div>
+            <table class="list">
+                <colgroup>
+                    <col style="width:25%" span="4">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>미샤 s</th>
+                        <td>니트</td>
+                        <td>4</td>
+                        <td>160,000</td>
+                    </tr>
+                    <tr>
+                        <th>캐롤</th>
+                        <td>밤비치마</td>
+                        <td>2.5</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>플럼</th>
+                        <td>발레복</td>
+                        <td>6Y</td>
+                        <td>43,200 / 3만</td>
+                    </tr>
+                    <tr>
+                        <th>미샤 치마</th>
+                        <td>파프리카</td>
+                        <td>6</td>
+                        <td>184,000 / 8만</td>
+                    </tr>
+                    <tr>
+                        <th>미샤 가디건</th>
+                        <td>나비</td>
+                        <td>4</td>
+                        <td>122,200 / 4만원</td>
+                    </tr>
+                    <tr>
+                        <th>루이스미샤 치마</th>
+                        <td>핑크멜빵</td>
+                        <td>6y</td>
+                        <td>51,800</td>
+                    </tr>
+                    <tr>
+                        <th>울프</th>
+                        <td>노랑 반바지</td>
+                        <td>6</td>
+                        <td>24,000 / 서은</td>
+                    </tr>
+                    <tr>
+                        <th>루이스미샤</th>
+                        <td>나시</td>
+                        <td>6</td>
+                        <td>서은</td>
+                    </tr>
+                    <tr>
+                        <th>루이스미샤 치마</th>
+                        <td>핑크멜빵</td>
+                        <td>6y</td>
+                        <td>51,800</td>
+                    </tr>
+                    <tr>
+                        <th>아이러브플럼</th>
+                        <td>발레치마</td>
+                        <td>6</td>
+                        <td>46,900</td>
+                    </tr>
+                    <tr>
+                        <th>루이스미샤 T</th>
+                        <td>거즈꽃</td>
+                        <td>6y</td>
+                        <td class="n">불가<span>박음선 돌아감</span>(40,000) 서은드림</td>
+                    </tr>
+                    <tr>
+                        <th>타오 치마</th>
+                        <td>크리스마스</td>
+                        <td>4Y</td>
+                        <td>82,000 <span class="n">물빠짐</span> 서은드림</td>
+                    </tr>
+                    <tr>
+                        <th>캐롤 조끼니트</th>
+                        <td>슈퍼맨</td>
+                        <td>6</td>
+                        <td class="n">불가<span>가운데 빛바램</span>(65,600) 서은드림</td>
+                    </tr>
+                    <tr>
+                        <th>보보원피스</th>
+                        <td>홍학</td>
+                        <td>2-3</td>
+                        <td>서은드림</td>
+                    </tr>
+                    <tr>
+                        <th>봉주르 bl</th>
+                        <td></td>
+                        <td>6</td>
+                        <td>102,000</td>
+                    </tr>
+                    <tr>
+                        <th>휴고 ops</th>
+                        <td>핑크</td>
+                        <td>6y</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>휴고 ops</th>
+                        <td>악어</td>
+                        <td>6y</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>헉스베이비</th>
+                        <td>트레이닝</td>
+                        <td>5Y</td>
+                        <td>63,000 (서은드림)</td>
+                    </tr>
+                    <tr>
+                        <th>타오 치마</th>
+                        <td>레드로고</td>
+                        <td>4</td>
+                        <td>34,000(택포2.5)</td>
+                    </tr>
+                    <tr>
+                        <th>타오 치마</th>
+                        <td>화이트로고</td>
+                        <td>4</td>
+                        <td>34,000(택포2)</td>
+                    </tr>
+                    <tr>
+                        <th>타오 P</th>
+                        <td>팔콘</td>
+                        <td>6Y</td>
+                        <td>27,000</td>
+                    </tr>
+                    <tr>
+                        <th>타오 반팔</th>
+                        <td>보라</td>
+                        <td>10</td>
+                        <td>33,900</td>
+                    </tr>
+                    <tr>
+                        <th>타오 반필</th>
+                        <td>오버핏 옐로우</td>
+                        <td>6</td>
+                        <td>33,000</td>
+                    </tr>
+                    <tr>
+                        <th>B.D.J</th>
+                        <td>백조바지</td>
+                        <td>8Y</td>
+                        <td>18,000</td>
+                    </tr>
+                    <tr>
+                        <th>루이스미샤</th>
+                        <td>오버롤</td>
+                        <td>4</td>
+                        <td>50,000 </td>
+                    </tr>
+                    <tr>
+                        <th>타이니P</th>
+                        <td>흑청</td>
+                        <td>4</td>
+                        <td>51,720</td>
+                    </tr>
+                    <tr>
+                        <th>보보 긴팔</th>
+                        <td>코끼리</td>
+                        <td>18</td>
+                        <td>(33,000) 2 X</td>
+                    </tr>
+                    <tr>
+                        <th>보보</th>
+                        <td>핑크 스웻</td>
+                        <td>36</td>
+                        <td>(59,400) 3.5 X</td>
+                    </tr>
+                    <tr>
+                        <th>타오 조끼</th>
+                        <td>초록</td>
+                        <td>18</td>
+                        <td class="c">완료 (27,945) 21,500</td>
+                    </tr>
+                    <tr>
+                        <th>보보 p</th>
+                        <td>청 반바지</td>
+                        <td>24</td>
+                        <td class="c">완료 (3) 35,000</td>
+                    </tr>
+                    <tr>
+                        <th>휴고 바지</th>
+                        <td>테리 무지개</td>
+                        <td>4</td>
+                        <td class="c">완료 (2) 25,700</td>
+                    </tr>
+                    <tr>
+                        <th>타오 롱치마</th>
+                        <td>물감</td>
+                        <td>4</td>
+                        <td class="c">완료 (5) 43,800</td>
+                    </tr>
+                    <tr>
+                        <th>카라멜p</th>
+                        <td>체크</td>
+                        <td>2y</td>
+                        <td class="c">완료 (3.5) (64,000)</td>
+                    </tr>
+                    <tr>
+                        <th>카라멜 p</th>
+                        <td>반바지</td>
+                        <td>2</td>
+                        <td class="c">완료 (3.5)</td>
+                    </tr>
+                    <tr>
+                        <th>보보 p</th>
+                        <td>노랑</td>
+                        <td>18</td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>보보 p</th>
+                        <td>노랑</td>
+                        <td>36</td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>보보 p</th>
+                        <td>파랑</td>
+                        <td>36</td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>보보 p</th>
+                        <td>공</td>
+                        <td>24</td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>보보 p</th>
+                        <td>주황</td>
+                        <td>24</td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>로디니 s</th>
+                        <td>드라코</td>
+                        <td>92</td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>로디니 상하</th>
+                        <td>제비</td>
+                        <td>싱104 하80</td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>타오 나시</th>
+                        <td>돛단배</td>
+                        <td>3y</td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>휴고 상하</th>
+                        <td>물고기</td>
+                        <td>상6 하4</td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>로디니 s</th>
+                        <td>야채</td>
+                        <td>104</td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>타오 모자</th>
+                        <td>벙거지</td>
+                        <td>키즈</td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>보보 T</th>
+                        <td>제인</td>
+                        <td>2y</td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>보보</th>
+                        <td>테리셋트</td>
+                        <td>1824</td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>보보</th>
+                        <td>제인롬퍼</td>
+                        <td>2436</td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>보보</th>
+                        <td>나비 가디건 블루머 양말</td>
+                        <td>2436</td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>울프</th>
+                        <td>가죽팬츠</td>
+                        <td>2</td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>로디니</th>
+                        <td>닥스훈트 스웻</td>
+                        <td>8086</td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>울프</th>
+                        <td>코트</td>
+                        <td></td>
+                        <td class="c">완료 (67,000)</td>
+                    </tr>
+                    <tr>
+                        <th>로디니</th>
+                        <td>레깅스</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>타오</th>
+                        <td>초록셔츠</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>동키</th>
+                        <td>핑크셋트</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>로디니</th>
+                        <td>스트라이프 우분 ops</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>카라멜</th>
+                        <td>원피스</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>봉통</th>
+                        <td>원피스(블라우스)</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>카라멜</th>
+                        <td>레드 B</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>울프</th>
+                        <td>브라운 B</td>
+                        <td></td>
+                        <td class="c">(40,100) 완료</td>
+                    </tr>
+                    <tr>
+                        <th>카라멜</th>
+                        <td>체크 B</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>카라멜</th>
+                        <td>멜빵 롬퍼</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>카라멜</th>
+                        <td>블루 B</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>울프</th>
+                        <td>블루머치마</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>타오</th>
+                        <td>사과롬퍼</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>울프</th>
+                        <td>멀티블루머치마</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>보보</th>
+                        <td>코끼리반팔</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>보보</th>
+                        <td>노란산반팔</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>타오</th>
+                        <td>초록토끼히포반팔</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>타인니</th>
+                        <td>가위반바지</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>봉통</th>
+                        <td>노란바지</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>수어플럼</th>
+                        <td>니트</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>보보</th>
+                        <td>레깅스</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>리틀코튼</th>
+                        <td>오버롤</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>보보</th>
+                        <td>셔틀콕 스웻</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>봉통</th>
+                        <td>블루머</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>보보</th>
+                        <td>라켓반바지</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>보보</th>
+                        <td>라켓멜빵</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>로디니</th>
+                        <td>원숭이점퍼</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>루이스미샤</th>
+                        <td>수술원피스</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                        <th>타오</th>
+                        <td>헬리롬퍼</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>플럼</th>
+                        <td>핑크발레복</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>카라멜</th>
+                        <td>꽃바지</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>로디니</th>
+                        <td>동키오버롤</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>로디니</th>
+                        <td>동키 집업반바지</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>보보</th>
+                        <td>노란원숭이</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                    <tr>
+                        <th>영솔</th>
+                        <td>브라운</td>
+                        <td></td>
+                        <td class="c">완료</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="aro group">
+            <p class="title">똘똘</p>
+            <div class="num aro-num">
+                <div class="aro-total">TOTAL:<span></span></div>
+            </div>
+            <table class="list">
+                <colgroup>
+                    <col style="width:25%" span="4">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>루이스미샤 치마</th>
+                        <td>플리워</td>
+                        <td>3Y</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>울프 BL</th>
+                        <td>화이트 프릴</td>
+                        <td>4y</td>
+                        <td></td>
+                    </tr>    
+                    <tr>
+                        <th>카라멜 BL</th>
+                        <td>플라워</td>
+                        <td>2y</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>카라멜 BL</th>
+                        <td>나시 화이트</td>
+                        <td>3y</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>토코토 B</th>
+                        <td>꽃</td>
+                        <td>3y</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>카라멜 B</th>
+                        <td>핑크</td>
+                        <td>2y</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>카라멜 ops</th>
+                        <td>체크</td>
+                        <td>2y</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>카라멜 나시</th>
+                        <td>화이트</td>
+                        <td>6Y</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>보보 롱치마</th>
+                        <td>체리</td>
+                        <td>4</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>루이스미샤</th>
+                        <td>슈트</td>
+                        <td>6</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>타오 ops</th>
+                        <td>핑크 로빈</td>
+                        <td>4</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>보보 s</th>
+                        <td>갈매기</td>
+                        <td>2y</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- //판매 -->
+
+    <!-- <div class="etc group">
+        <p class="title">기타</p>
+        <div class="num e-num">
+            <div class="n-top">TOP:<span></span></div>
+            <div class="n-bottom">BOTTOM:<span></span></div>
+            <div class="n-skirt">SKIRT:<span></span></div>
+            <div class="n-jumper">JUMPER:<span></span></div>
+            <div class="n-ops">OPS:<span></span></div>
+            <div class="n-set">SET:<span></span></div>
+        </div>
+        <ul class="list" style="color:f2f2f2">
+            <li>게스 청반바지</li>
+            <li>나이키 핑크 반바지</li>
+            <li>조던 상하 셋트 + 레깅스</li>
+            <li>자라 떙땡이 반바지</li>
+            <li>남대문 꽃롱블라우스</li>
+            <li>남대문 꽃원피스</li>
+            <li>남대문 나시원피스</li>
+            <li>남대문 꽃 나시원피스</li>
+            <li>남대문 청바지</li>
+            <li>은진 나시</li>
+            <li>성매 치마</li>
+            <li>아디다스 불꽃티</li>
+            <li>남대문 청반바지</li>
+            <li>남대문 청치마</li>
+            <li>갭 핑크멜빵치마</li>
+            <li>폴로 셔츠 (핑크/데님)</li>
+            <li>폴로 긴팔 (파랑/네이비)</li>
+            <li>폴로 반팔 네이비</li>
+            <li>자라 흰펀칭 나시/바지</li>
+        </ul>
+    </div> -->
+    <script>
+        $(function(){
+            // $('.group .title').on('click',function(){
+            //     $(this).siblings('.list').toggle();
+            // });
+
+            // var complete = $('.sell').find('.c');
+            // $(complete).closest('tr').addClass('hide');
+            // $('.hide, .etc').hide();
+            // $('.comp .title').on('click',function(){
+            //     $(this).siblings('.list').toggle();
+            // })
+
+            // num
+            $('.group').each(function(){
+                var $this = $(this);
+                var top = $this.find('.list .top').length;
+                $this.find('.num .top span').html(top);
+                var bottom = $this.find('.list .bottom').length;
+                $this.find('.num .bottom span').html(bottom);
+                var Skirt = $this.find('.list .skirt').length;
+                $this.find('.num .skirt span').html(Skirt);
+                var jumper = $this.find('.list .jumper').length;
+                $this.find('.num .jumper span').html(jumper);
+                var ops = $this.find('.list .ops').length;
+                $this.find('.num .ops span').html(ops);
+                var set = $this.find('.list .set').length;
+                $this.find('.num .set span').html(set);
+            })
+            //acc
+            $('.acc.group').each(function(){
+                var $this = $(this);
+                var shoes = $this.find('.shoes').length;
+                $this.find('.num .shoes span').html(shoes);
+                var hat = $this.find('.hat').length;
+                $this.find('.num .hat span').html(hat);
+                var bag = $this.find('.bag').length;
+                $this.find('.num .bag span').html(bag);
+                var socks = $this.find('.socks').length;
+                $this.find('.num .socks span').html(socks);
+                var belt = $this.find('.belt').length;
+                $this.find('.num .belt span').html(belt);
+                var etc = $this.find('.etc').length;
+                $this.find('.num .etc span').html(etc);
+                $this.find('.total span').html(Number(shoes+hat+bag+socks+belt+etc));
+            });
+            //sel
+            var total = $('.sell tr').length;
+            $('.s-num .n-total span').html(total);
+            var sel = $('.sell .c').length;
+            $('.s-num .n-sel span').html(sel);
+            var no = $('.sell .n').length;
+            $('.s-num .n-no span').html(no);
+            $('.s-num .n-remain span').html(Number(total-sel-no));
+
+            //complete
+            var compTotal = $('.comp tr').length;
+            $('.cp-num .cp-total span').html(compTotal);
+            //aro
+            var compTotal = $('.aro tr').length;
+            $('.aro-num .aro-total span').html(compTotal);
+        });
+    </script>
+</body>
+
+</html>
+
+
