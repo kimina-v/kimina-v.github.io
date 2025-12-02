@@ -38,109 +38,7 @@
     <div class="group">
         <div class="title">이나</div>
         <div class="list">
-            <table><template>
-  <div class="verification-container">
-    <!-- 이름 -->
-    <div class="input-block" :class="{ show: step >= 1 }">
-      <label>이름을 입력하세요</label>
-      <input
-        v-model="name"
-        type="text"
-        placeholder="홍길동"
-        @input="checkName"
-      />
-    </div>
-
-    <!-- 주민번호 -->
-    <div class="input-block" :class="{ show: step >= 2 }">
-      <label>주민등록번호를 입력하세요</label>
-      <input
-        v-model="rrn"
-        type="text"
-        placeholder="000000-0000000"
-        @input="checkRRN"
-      />
-    </div>
-
-    <!-- 전화번호 -->
-    <div class="input-block" :class="{ show: step >= 3 }">
-      <label>휴대폰 번호를 입력하세요</label>
-      <input
-        v-model="phone"
-        type="text"
-        placeholder="010-0000-0000"
-      />
-    </div>
-  </div>
-</template>
-
-<script setup>
-import { ref } from "vue";
-
-const step = ref(1);
-
-const name = ref("");
-const rrn = ref("");
-const phone = ref("");
-
-function checkName() {
-  if (name.value.trim().length >= 2) {
-    step.value = 2;
-  }
-}
-
-function checkRRN() {
-  // 아주 간단한 조건(6자리-7자리 형태)
-  const regex = /^\d{6}-?\d{7}$/;
-  if (regex.test(rrn.value)) {
-    step.value = 3;
-  }
-}
-</script>
-
-<style scoped>
-.verification-container {
-  width: 300px;
-  margin: 30px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* 기본적으로 숨김 */
-.input-block {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.35s ease;
-  pointer-events: none;
-}
-
-/* 단계 도달하면 뿅! */
-.input-block.show {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-}
-
-input {
-  width: 100%;
-  padding: 10px 12px;
-  font-size: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  outline: none;
-}
-
-input:focus {
-  border-color: #4a7dff;
-}
-</style>
+            <table>
                 <colgroup>
                     <col style="width:50%">
                     <col style="width:50%">
@@ -299,6 +197,7 @@ input:focus {
 </body>
 
 </html>
+
 
 
 
